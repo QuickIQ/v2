@@ -157,7 +157,7 @@ function Show-VersionHistory {
         
         if ($commits) {
             Write-Host "`nAvailable commits:" -ForegroundColor Cyan
-            Write-Host ("─" * 80) -ForegroundColor Gray
+            Write-Host ("-" * 80) -ForegroundColor Gray
             $index = 1
             foreach ($commit in $commits) {
                 $parts = $commit -split '\|'
@@ -167,7 +167,7 @@ function Show-VersionHistory {
                 Write-Host "[$index] $hash | $date | $message" -ForegroundColor White
                 $index++
             }
-            Write-Host ("─" * 80) -ForegroundColor Gray
+            Write-Host ("-" * 80) -ForegroundColor Gray
             return $commits
         } else {
             Write-Host "No commits found" -ForegroundColor Yellow
