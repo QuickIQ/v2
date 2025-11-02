@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try Again",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "start": "Start Test",
+    "skip": "Skip"
+  },
+  "home": {
+    "title": "QuickIQ",
+    "subtitle": "Take our comprehensive psychological tests to understand your mind better",
+    "popularTests": "Popular Tests",
+    "allTests": "All Tests",
+    "free": "Free",
+    "premium": "Premium"
+  },
+  "test": {
+    "landing": {
+      "title": "{{testName}}",
+      "description": "Find out your {{testName}} results in just 20 questions",
+      "duration": "Takes approximately 10 minutes",
+      "questions": "20 Questions",
+      "startButton": "Start Test"
+    },
+    "socialProof": {
+      "title": "Join thousands who've discovered their results",
+      "subtitle": "Over 100,000 people have taken this test",
+      "testimonial1": "This test changed how I see myself!",
+      "testimonial2": "Accurate and insightful results.",
+      "testimonial3": "Best psychological test I've ever taken."
+    },
+    "questions": {
+      "question": "Question {{current}} of {{total}}",
+      "progress": "Progress",
+      "answerRequired": "Please select an answer to continue"
+    },
+    "calculating": {
+      "title": "Calculating your results...",
+      "subtitle": "This may take a few moments",
+      "analyzing": "Analyzing your answers"
+    },
+    "emailCapture": {
+      "title": "Get Your Results",
+      "subtitle": "Enter your email to receive your detailed results",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "emailRequired": "Please enter a valid email address",
+      "continue": "Continue to Results",
+      "privacy": "We respect your privacy. We'll never share your email."
+    },
+    "payment": {
+      "title": "Unlock Your Results",
+      "subtitle": "Get full access to your detailed {{testName}} results",
+      "amount": "${{amount}}",
+      "cardNumber": "Card Number",
+      "expiry": "Expiry Date",
+      "cvv": "CVV",
+      "payButton": "Pay ${{amount}}",
+      "processing": "Processing...",
+      "success": "Payment successful!",
+      "error": "Payment failed. Please try again."
+    },
+    "results": {
+      "title": "Your Results",
+      "share": "Share Your Results",
+      "retake": "Retake Test",
+      "home": "Back to Home"
+    },
+    "iq": {
+      "score": "Your IQ Score",
+      "interpretation": "Interpretation",
+      "excellent": "Excellent",
+      "good": "Good",
+      "average": "Average",
+      "belowAverage": "Below Average"
+    },
+    "personality": {
+      "type": "Your Personality Type",
+      "description": "Description",
+      "strengths": "Strengths",
+      "weaknesses": "Weaknesses",
+      "careers": "Career Matches"
+    }
+  }
+}
+
