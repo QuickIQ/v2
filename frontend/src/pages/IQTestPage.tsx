@@ -1,18 +1,50 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Q1 from "../iqtestv2/Q1.svg";
-import A1 from "../iqtestv2/A1.svg";
-import A2 from "../iqtestv2/A2.svg";
-import A3 from "../iqtestv2/A3.svg";
-import A4 from "../iqtestv2/A4.svg";
-import A5 from "../iqtestv2/A5.svg";
-import A6 from "../iqtestv2/A6.svg";
 import { useMobile } from '../hooks/useMobile';
 
+// Import question and answer images
+import Q1Easy1 from "../iqtestv2/Visual/Q1Easy1.svg";
+import Q1A1 from "../iqtestv2/Visual/Q1A1.svg";
+import Q1A2 from "../iqtestv2/Visual/Q1A2.svg";
+import Q1A3 from "../iqtestv2/Visual/Q1A3.svg";
+import Q1A4 from "../iqtestv2/Visual/Q1A4.svg";
+import Q1A5 from "../iqtestv2/Visual/Q1A5.svg";
+import Q1A6 from "../iqtestv2/Visual/Q1A6.svg";
+
+import Q2Easy2 from "../iqtestv2/Visual/Q2Easy2.svg";
+import Q2A1 from "../iqtestv2/Visual/Q2A1.svg";
+import Q2A2 from "../iqtestv2/Visual/Q2A2.svg";
+import Q2A3 from "../iqtestv2/Visual/Q2A3.svg";
+import Q2A4 from "../iqtestv2/Visual/Q2A4.svg";
+import Q2A5 from "../iqtestv2/Visual/Q2A5.svg";
+import Q2A6 from "../iqtestv2/Visual/Q2A6.svg";
+
 function IQTestPage() {
+  const [currentQuestion, setCurrentQuestion] = useState(1); // Current question number
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(15 * 60); // 15 minutes in seconds
   const isMobile = useMobile();
+
+  // Dynamic question and answer mapping
+  const getQuestionImage = (questionNum: number) => {
+    const questionMap: { [key: number]: string } = {
+      1: Q1Easy1,
+      2: Q2Easy2,
+      // Add more questions here as they're added
+      // 3: Q3Easy1,
+    };
+    return questionMap[questionNum] || Q1Easy1;
+  };
+
+  const getAnswerImages = (questionNum: number) => {
+    const answerMap: { [key: number]: string[] } = {
+      1: [Q1A1, Q1A2, Q1A3, Q1A4, Q1A5, Q1A6],
+      2: [Q2A1, Q2A2, Q2A3, Q2A4, Q2A5, Q2A6],
+      // Add more questions here as they're added
+      // 3: [Q3A1, Q3A2, Q3A3, Q3A4, Q3A5, Q3A6],
+    };
+    return answerMap[questionNum] || [Q1A1, Q1A2, Q1A3, Q1A4, Q1A5, Q1A6];
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -35,13 +67,22 @@ function IQTestPage() {
   };
 
   const handleAnswerSelect = (answerKey: string) => {
+    // Set selected answer for visual feedback
     setSelectedAnswer(answerKey);
+    
+    // Save the answer (you can add logic to store answers here)
+    console.log(`Question ${currentQuestion} - selected:`, answerKey);
+    
+    // Automatically move to next question after a brief delay for visual feedback
+    setTimeout(() => {
+      setCurrentQuestion(prev => prev + 1);
+      setSelectedAnswer(null); // Reset selection for next question
+    }, 300); // 300ms delay to show selection feedback
   };
 
-  const handleNext = () => {
-    // Placeholder logic
-    console.log('Next question - selected:', selectedAnswer);
-  };
+  // Get current question and answer images
+  const currentQuestionImage = getQuestionImage(currentQuestion);
+  const currentAnswerImages = getAnswerImages(currentQuestion);
 
   return (
     <div style={{
@@ -58,18 +99,33 @@ function IQTestPage() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           style={{
-            textAlign: 'center',
             marginBottom: '40px',
           }}
         >
           <div style={{
-            fontSize: isMobile ? '36px' : '48px',
-            fontWeight: 'bold',
-            color: timeRemaining <= 60 ? '#e74c3c' : '#333',
-            fontFamily: 'monospace',
-            letterSpacing: '2px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '20px',
+            padding: isMobile ? '0 10px' : '0',
           }}>
-            {formatTime(timeRemaining)}
+            <div style={{
+              fontSize: isMobile ? '24px' : '32px',
+              fontWeight: '600',
+              color: '#667eea',
+            }}>
+              Question {currentQuestion} / 25
+            </div>
+            <div style={{
+              fontSize: isMobile ? '36px' : '48px',
+              fontWeight: 'bold',
+              color: timeRemaining <= 60 ? '#e74c3c' : '#333',
+              fontFamily: 'monospace',
+              letterSpacing: '2px',
+            }}>
+              {formatTime(timeRemaining)}
+            </div>
           </div>
         </motion.div>
 
@@ -97,8 +153,8 @@ function IQTestPage() {
             alignItems: 'center',
           }}>
             <img
-              src={Q1}
-              alt="Question 1"
+              src={currentQuestionImage}
+              alt={`Question ${currentQuestion}`}
               style={{
                 maxWidth: '100%',
                 height: 'auto',
@@ -119,12 +175,12 @@ function IQTestPage() {
             marginTop: isMobile ? '0' : '30px',
           }}>
             {[
-              { key: 'A', svg: A1 },
-              { key: 'B', svg: A2 },
-              { key: 'C', svg: A3 },
-              { key: 'D', svg: A4 },
-              { key: 'E', svg: A5 },
-              { key: 'F', svg: A6 },
+              { key: 'A', svg: currentAnswerImages[0] },
+              { key: 'B', svg: currentAnswerImages[1] },
+              { key: 'C', svg: currentAnswerImages[2] },
+              { key: 'D', svg: currentAnswerImages[3] },
+              { key: 'E', svg: currentAnswerImages[4] },
+              { key: 'F', svg: currentAnswerImages[5] },
             ].reduce((acc, option, index) => {
               if (index % 2 === 0) {
                 acc.push([option]);
@@ -151,11 +207,9 @@ function IQTestPage() {
                     transition={{ duration: 0.15, ease: 'easeOut' }}
                     style={{
                       flex: '1',
-                      maxWidth: isMobile ? '150px' : '200px',
+                      maxWidth: isMobile ? '110px' : '145px',
                       background: 'transparent',
-                      border: selectedAnswer === option.key
-                        ? '3px solid #667eea'
-                        : '3px solid transparent',
+                      border: 'none',
                       borderRadius: '12px',
                       padding: isMobile ? '8px' : '10px',
                       cursor: 'pointer',
@@ -180,38 +234,6 @@ function IQTestPage() {
                 ))}
               </div>
             ))}
-
-            {/* Next Button - Right below answers */}
-            <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-              marginTop: '20px',
-            }}>
-              <motion.button
-                onClick={handleNext}
-                disabled={!selectedAnswer}
-                whileHover={selectedAnswer ? { scale: 1.05 } : {}}
-                whileTap={selectedAnswer ? { scale: 0.95 } : {}}
-                style={{
-                  background: selectedAnswer
-                    ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-                    : '#e0e0e0',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '12px',
-                  padding: isMobile ? '12px 32px' : '16px 48px',
-                  fontSize: isMobile ? '16px' : '18px',
-                  fontWeight: '600',
-                  cursor: selectedAnswer ? 'pointer' : 'not-allowed',
-                  boxShadow: selectedAnswer
-                    ? '0 4px 16px rgba(102, 126, 234, 0.3)'
-                    : 'none',
-                  opacity: selectedAnswer ? 1 : 0.6,
-                }}
-              >
-                Next
-              </motion.button>
-            </div>
           </div>
         </motion.div>
       </div>

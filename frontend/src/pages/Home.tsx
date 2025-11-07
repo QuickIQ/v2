@@ -47,6 +47,111 @@ function Home() {
     fetchTests();
   }, [t]);
 
+  // Proximity-based pop-out effect for Lookmagic icon - fast grow, smooth return, with shadow
+  useEffect(() => {
+    const icon = document.querySelector('.lookmagic-icon') as HTMLElement;
+    if (!icon) return;
+
+    let curScale = 1;
+    let curShadowIntensity = 0;
+    let targetScale = 1;
+    let targetShadowIntensity = 0;
+    let isHovering = false;
+    let rafId: number | null = null;
+
+    // Base shadow that's always present
+    const baseShadow = 'drop-shadow(0 8px 24px rgba(108, 99, 255, 0.25))';
+
+    // Smooth easing for fluid animation
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+
+    function animate() {
+      // Fast on hover (0.3), smooth on leave (0.15)
+      const speed = isHovering ? 0.3 : 0.15;
+      
+      curScale = lerp(curScale, targetScale, speed);
+      curShadowIntensity = lerp(curShadowIntensity, targetShadowIntensity, speed);
+
+      // Apply transform directly - use !important to override any CSS transitions
+      icon.style.setProperty('transform', `scale(${curScale})`, 'important');
+      icon.style.setProperty('-webkit-transform', `scale(${curScale})`, 'important');
+      
+      // Combine base shadow with additional hover shadow
+      const additionalShadowBlur = 35 * curShadowIntensity;
+      const additionalShadowOpacity = 0.5 * curShadowIntensity;
+      const additionalShadow = curShadowIntensity > 0.01
+        ? ` drop-shadow(0 ${12 + curShadowIntensity * 10}px ${additionalShadowBlur}px rgba(108, 99, 255, ${additionalShadowOpacity}))`
+        : '';
+      
+      icon.style.setProperty('filter', baseShadow + additionalShadow, 'important');
+      icon.style.setProperty('-webkit-filter', baseShadow + additionalShadow, 'important');
+
+      // Continue animating until fully settled
+      if (Math.abs(curScale - targetScale) > 0.001 || Math.abs(curShadowIntensity - targetShadowIntensity) > 0.001) {
+        rafId = requestAnimationFrame(animate);
+      } else {
+        rafId = null;
+      }
+    }
+
+    function pointerMove(e: MouseEvent) {
+      const rect = icon.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = e.clientX - cx;
+      const dy = e.clientY - cy;
+
+      const dist = Math.hypot(dx, dy);
+      const maxDist = rect.width / 2;
+
+      let intensity = 1 - Math.min(dist / maxDist, 1);
+      intensity = Math.pow(intensity, 1.8); // Smoother falloff
+
+      targetScale = 1 + intensity * 0.25; // 1 → 1.25 (more dramatic)
+      targetShadowIntensity = intensity;
+
+      if (!rafId) {
+        animate();
+      }
+    }
+
+    const handlePointerEnter = (e: MouseEvent) => {
+      isHovering = true;
+      pointerMove(e); // Immediately calculate position
+      if (!rafId) animate();
+    };
+
+    const handlePointerLeave = () => {
+      isHovering = false;
+      targetScale = 1;
+      targetShadowIntensity = 0;
+      if (!rafId) animate();
+    };
+
+    // Use both mouse and pointer events for better compatibility
+    icon.addEventListener('mouseenter', handlePointerEnter as EventListener);
+    icon.addEventListener('mousemove', pointerMove);
+    icon.addEventListener('mouseleave', handlePointerLeave);
+    icon.addEventListener('pointerenter', handlePointerEnter as EventListener);
+    icon.addEventListener('pointermove', pointerMove);
+    icon.addEventListener('pointerleave', handlePointerLeave);
+
+    return () => {
+      icon.removeEventListener('mouseenter', handlePointerEnter as EventListener);
+      icon.removeEventListener('mousemove', pointerMove);
+      icon.removeEventListener('mouseleave', handlePointerLeave);
+      icon.removeEventListener('pointerenter', handlePointerEnter as EventListener);
+      icon.removeEventListener('pointermove', pointerMove);
+      icon.removeEventListener('pointerleave', handlePointerLeave);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      // Reset styles on cleanup
+      icon.style.removeProperty('transform');
+      icon.style.removeProperty('-webkit-transform');
+      icon.style.removeProperty('filter');
+      icon.style.removeProperty('-webkit-filter');
+    };
+  }, [tests, loading]); // Run after tests are loaded to ensure icon exists
+
   if (loading) {
     return <div className="loading">{t('common.loading')}</div>;
   }
@@ -85,7 +190,7 @@ function Home() {
       <AnimatedBackground />
       
       {/* Spacer for fixed header */}
-      <div style={{ height: isMobile ? '60px' : '80px' }} />
+      <div style={{ height: isMobile ? '100px' : '130px' }} />
       
       <header style={{ 
         position: 'relative',
@@ -128,191 +233,38 @@ function Home() {
               width: 'calc(100% - 40px)',
               padding: isMobile ? '0 10px' : '0 20px',
             }}
-          >
-            {t('home.subtitle')}
-          </motion.p>
-          
-          {/* IQ Test Card */}
-          {tests.find(test => test.slug === 'iqtest') && (() => {
-            const iqTest = tests.find(test => test.slug === 'iqtest')!;
-            return (
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  marginTop: '32px',
-                }}
-              >
-                <Link
-                  to="/test/iqtest"
-                  style={{ textDecoration: 'none', color: 'inherit', display: 'block', maxWidth: '400px', width: '100%' }}
-                >
-                  <motion.div
-                    className="iq-test-card"
-                    style={{
-                      cursor: 'pointer',
-                      background: 'linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%)',
-                      borderRadius: isMobile ? '16px' : '24px',
-                      padding: isMobile ? '24px' : '40px',
-                      border: '2px solid rgba(108, 99, 255, 0.15)',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                    }}
-                    transition={{ duration: 0.15, ease: 'easeOut' }}
-                    whileHover={{
-                      y: -15,
-                      scale: 1.05,
-                      boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
-                      borderColor: 'rgba(108, 99, 255, 0.4)',
-                    }}
-                  >
-                    {/* Glow Effect Background */}
-                    <motion.div
-                      style={{
-                        position: 'absolute',
-                        top: '-50%',
-                        left: '-50%',
-                        width: '200%',
-                        height: '200%',
-                        background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
-                        opacity: 0,
-                        pointerEvents: 'none',
-                        transition: 'opacity 0.15s ease',
-                      }}
-                      transition={{ duration: 0.15 }}
-                      whileHover={{ opacity: 1 }}
-                    />
-                    
-                    {/* Content */}
-                    <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
-                      <div style={{ marginBottom: '24px' }}>
-                        <h3 style={{ 
-                          fontSize: isMobile ? '24px' : '32px', 
-                          marginBottom: isMobile ? '8px' : '12px', 
-                          fontWeight: '700', 
-                          color: '#1a1a1a',
-                          background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                          backgroundClip: 'text',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: isMobile ? '8px' : '12px',
-                          flexWrap: 'wrap',
-                        }}>
-                          <motion.div
-                            animate={{ 
-                              rotate: [0, -5, 5, -5, 0],
-                              scale: [1, 1.1, 1]
-                            }}
-                            transition={{ 
-                              duration: 3,
-                              repeat: Infinity,
-                              repeatDelay: 2,
-                              ease: 'easeInOut'
-                            }}
-                          >
-                            <Brain 
-                              size={isMobile ? 28 : 36} 
-                              style={{ 
-                                color: '#6c63ff',
-                                filter: 'drop-shadow(0 2px 8px rgba(108, 99, 255, 0.3))'
-                              }} 
-                            />
-                          </motion.div>
-                          {iqTest.translated_name || iqTest.name}
-                        </h3>
-                        <p style={{ 
-                          color: '#666', 
-                          fontSize: isMobile ? '14px' : '16px', 
-                          fontWeight: '600',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: isMobile ? '6px' : '8px',
-                          flexWrap: 'wrap',
-                        }}>
-                          <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
-                          <span>25 soru</span>
-                          <span style={{ margin: '0 4px' }}>-</span>
-                          <Clock size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
-                          <span>15 dakika</span>
-                        </p>
-                      </div>
-
-                      {/* Start Test Button Container */}
-                      <div style={{ marginTop: 'auto', position: 'relative' }}>
-                        {/* Background Button - Her zaman görünür */}
-                        <motion.div
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: '50%',
-                            transform: 'translateX(-50%)',
-                            background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                            borderRadius: '14px',
-                            padding: '14px 26px',
-                            opacity: 0.15,
-                            zIndex: 0,
-                            transition: 'opacity 0.15s ease',
-                            width: 'fit-content',
-                          }}
-                          transition={{ duration: 0.15 }}
-                          whileHover={{ opacity: 0.25 }}
-                        />
-                        
-                        {/* Actual Button */}
-                        <motion.div
-                          style={{
-                            position: 'relative',
-                            zIndex: 2,
-                            background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                            borderRadius: '14px',
-                            padding: isMobile ? '12px 20px' : '14px 26px',
-                            color: 'white',
-                            fontWeight: '700',
-                            fontSize: isMobile ? '16px' : '18px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '8px',
-                            boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
-                            transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                            cursor: 'pointer',
-                            width: 'fit-content',
-                            margin: '0 auto',
-                          }}
-                          transition={{ duration: 0.15, ease: 'easeOut' }}
-                          whileHover={{
-                            y: -8,
-                            scale: 1.1,
-                            boxShadow: '0 10px 35px rgba(108, 99, 255, 0.5), 0 0 50px rgba(155, 201, 237, 0.4), 0 0 70px rgba(108, 99, 255, 0.3)',
-                          }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <span>Start Test</span>
-                          <motion.span
-                            animate={{ x: [0, 6, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                            style={{ fontSize: '20px' }}
-                          >
-                            →
-                          </motion.span>
-                        </motion.div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            );
-          })()}
+            >
+              {t('home.subtitle')}
+            </motion.p>
         </div>
       </header>
+
+      {/* Mystery Invite Section */}
+      <section id="mystery-invite">
+        <img 
+          src="/icons/Lookmagic.svg" 
+          alt="Mystery Icon" 
+          className="lookmagic-icon"
+          onClick={() => {
+            const testsSection = document.getElementById('tests-section');
+            if (testsSection) {
+              testsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          style={{ cursor: 'pointer' }}
+        />
+        <h2 
+          className="mystery-text"
+          onClick={() => {
+            const ctaCard = document.getElementById('cta-test-card');
+            if (ctaCard) {
+              ctaCard.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
+          You should see what's inside of you!
+        </h2>
+      </section>
 
       <main className="container" style={{ paddingTop: '80px', paddingBottom: '80px', position: 'relative', zIndex: 1 }}>
         {/* Stats */}
@@ -384,11 +336,198 @@ function Home() {
           ))}
         </motion.div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fill, minmax(320px, 1fr))', 
-          gap: isMobile ? '20px' : '32px' 
-        }}>
+        {/* IQ Test CTA Card */}
+        {tests.find(test => test.slug === 'iqtest') && (() => {
+          const iqTest = tests.find(test => test.slug === 'iqtest')!;
+          return (
+            <motion.div
+              id="cta-test-card"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: isMobile ? '15vh' : 'clamp(500px, 25vh, 600px)',
+                marginBottom: isMobile ? '48px' : '64px',
+              }}
+            >
+              <Link
+                to="/test/iqtest"
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block', maxWidth: '400px', width: '100%' }}
+              >
+                <motion.div
+                  className="iq-test-card"
+                  style={{
+                    cursor: 'pointer',
+                    background: 'linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%)',
+                    borderRadius: isMobile ? '16px' : '24px',
+                    padding: isMobile ? '24px' : '40px',
+                    border: '2px solid rgba(108, 99, 255, 0.15)',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  }}
+                  transition={{ duration: 0.15, ease: 'easeOut' }}
+                  whileHover={{
+                    y: -15,
+                    scale: 1.05,
+                    boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
+                    borderColor: 'rgba(108, 99, 255, 0.4)',
+                  }}
+                >
+                  {/* Glow Effect Background */}
+                  <motion.div
+                    style={{
+                      position: 'absolute',
+                      top: '-50%',
+                      left: '-50%',
+                      width: '200%',
+                      height: '200%',
+                      background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
+                      opacity: 0,
+                      pointerEvents: 'none',
+                      transition: 'opacity 0.15s ease',
+                    }}
+                    transition={{ duration: 0.15 }}
+                    whileHover={{ opacity: 1 }}
+                  />
+                  
+                  {/* Content */}
+                  <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ marginBottom: '24px' }}>
+                      <h3 style={{ 
+                        fontSize: isMobile ? '24px' : '32px', 
+                        marginBottom: isMobile ? '8px' : '12px', 
+                        fontWeight: '700', 
+                        color: '#1a1a1a',
+                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: isMobile ? '8px' : '12px',
+                        flexWrap: 'wrap',
+                      }}>
+                        <motion.div
+                          animate={{ 
+                            rotate: [0, -5, 5, -5, 0],
+                            scale: [1, 1.1, 1]
+                          }}
+                          transition={{ 
+                            duration: 3,
+                            repeat: Infinity,
+                            repeatDelay: 2,
+                            ease: 'easeInOut'
+                          }}
+                        >
+                          <Brain 
+                            size={isMobile ? 28 : 36} 
+                            style={{ 
+                              color: '#6c63ff',
+                              filter: 'drop-shadow(0 2px 8px rgba(108, 99, 255, 0.3))'
+                            }} 
+                          />
+                        </motion.div>
+                        {iqTest.translated_name || iqTest.name}
+                      </h3>
+                      <p style={{ 
+                        color: '#666', 
+                        fontSize: isMobile ? '14px' : '16px', 
+                        fontWeight: '600',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: isMobile ? '6px' : '8px',
+                        flexWrap: 'wrap',
+                      }}>
+                        <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
+                        <span>25 soru</span>
+                        <span style={{ margin: '0 4px' }}>-</span>
+                        <Clock size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
+                        <span>15 dakika</span>
+                      </p>
+                    </div>
+
+                    {/* Start Test Button Container */}
+                    <div style={{ marginTop: 'auto', position: 'relative' }}>
+                      {/* Background Button - Her zaman görünür */}
+                      <motion.div
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: '50%',
+                          transform: 'translateX(-50%)',
+                          background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                          borderRadius: '14px',
+                          padding: '14px 26px',
+                          opacity: 0.15,
+                          zIndex: 0,
+                          transition: 'opacity 0.15s ease',
+                          width: 'fit-content',
+                        }}
+                        transition={{ duration: 0.15 }}
+                        whileHover={{ opacity: 0.25 }}
+                      />
+                      
+                      {/* Actual Button */}
+                      <motion.div
+                        style={{
+                          position: 'relative',
+                          zIndex: 2,
+                          background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                          borderRadius: '14px',
+                          padding: isMobile ? '12px 20px' : '14px 26px',
+                          color: 'white',
+                          fontWeight: '700',
+                          fontSize: isMobile ? '16px' : '18px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '8px',
+                          boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
+                          transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                          cursor: 'pointer',
+                          width: 'fit-content',
+                          margin: '0 auto',
+                        }}
+                        transition={{ duration: 0.15, ease: 'easeOut' }}
+                        whileHover={{
+                          y: -8,
+                          scale: 1.1,
+                          boxShadow: '0 10px 35px rgba(108, 99, 255, 0.5), 0 0 50px rgba(155, 201, 237, 0.4), 0 0 70px rgba(108, 99, 255, 0.3)',
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <span>Start Test</span>
+                        <motion.span
+                          animate={{ x: [0, 6, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                          style={{ fontSize: '20px' }}
+                        >
+                          →
+                        </motion.span>
+                      </motion.div>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
+            </motion.div>
+          );
+        })()}
+
+        {/* Testler Section */}
+        <div 
+          id="tests-section"
+          style={{ 
+            marginTop: isMobile ? '10vh' : 'clamp(300px, 20vh, 400px)',
+            display: 'grid', 
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fill, minmax(320px, 1fr))', 
+            gap: isMobile ? '20px' : '32px' 
+          }}
+        >
           {tests.filter(test => test.slug !== 'iqtest').map((test, idx) => {
             // Normal Test Kartları
             return (
