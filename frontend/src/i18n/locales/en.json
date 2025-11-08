@@ -76,7 +76,9 @@
       "excellent": "Excellent",
       "good": "Good",
       "average": "Average",
-      "belowAverage": "Below Average"
+      "belowAverage": "Below Average",
+      "question": "Question {{current}} / {{total}}",
+      "timeRemaining": "Time Remaining"
     },
     "personality": {
       "type": "Your Personality Type",

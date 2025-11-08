@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useMobile } from '../hooks/useMobile';
+import { IqImage } from '../components/ui/IqImage';
 
 // Import question and answer images
 import Q1Easy1 from "../iqtestv2/Visual/Q1Easy1.svg";
@@ -19,19 +21,47 @@ import Q2A4 from "../iqtestv2/Visual/Q2A4.svg";
 import Q2A5 from "../iqtestv2/Visual/Q2A5.svg";
 import Q2A6 from "../iqtestv2/Visual/Q2A6.svg";
 
+import Q3Easy3 from "../iqtestv2/Visual/Q3Easy3.svg";
+import Q3A1 from "../iqtestv2/Visual/Q3A1.svg";
+import Q3A2 from "../iqtestv2/Visual/Q3A2.svg";
+import Q3A3 from "../iqtestv2/Visual/Q3A3.svg";
+import Q3A4 from "../iqtestv2/Visual/Q3A4.svg";
+import Q3A5 from "../iqtestv2/Visual/Q3A5.svg";
+import Q3A6 from "../iqtestv2/Visual/Q3A6.svg";
+
+import Q4Easy4 from "../iqtestv2/Visual/Q4Easy4.svg";
+import Q4A1 from "../iqtestv2/Visual/Q4A1.svg";
+import Q4A2 from "../iqtestv2/Visual/Q4A2.svg";
+import Q4A3 from "../iqtestv2/Visual/Q4A3.svg";
+import Q4A4 from "../iqtestv2/Visual/Q4A4.svg";
+import Q4A5 from "../iqtestv2/Visual/Q4A5.svg";
+import Q4A6 from "../iqtestv2/Visual/Q4A6.svg";
+
+import Q5Easy5 from "../iqtestv2/Visual/Q5Easy5.svg";
+import Q5A1 from "../iqtestv2/Visual/Q5A1.svg";
+import Q5A2 from "../iqtestv2/Visual/Q5A2.svg";
+import Q5A3 from "../iqtestv2/Visual/Q5A3.svg";
+import Q5A4 from "../iqtestv2/Visual/Q5A4.svg";
+import Q5A5 from "../iqtestv2/Visual/Q5A5.svg";
+import Q5A6 from "../iqtestv2/Visual/Q5A6.svg";
+
 function IQTestPage() {
-  const [currentQuestion, setCurrentQuestion] = useState(1); // Current question number
+  const { t } = useTranslation();
+  const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(15 * 60); // 15 minutes in seconds
   const isMobile = useMobile();
+  const totalQuestions = 25;
 
   // Dynamic question and answer mapping
   const getQuestionImage = (questionNum: number) => {
     const questionMap: { [key: number]: string } = {
       1: Q1Easy1,
       2: Q2Easy2,
+      3: Q3Easy3,
+      4: Q4Easy4,
+      5: Q5Easy5,
       // Add more questions here as they're added
-      // 3: Q3Easy1,
     };
     return questionMap[questionNum] || Q1Easy1;
   };
@@ -40,8 +70,10 @@ function IQTestPage() {
     const answerMap: { [key: number]: string[] } = {
       1: [Q1A1, Q1A2, Q1A3, Q1A4, Q1A5, Q1A6],
       2: [Q2A1, Q2A2, Q2A3, Q2A4, Q2A5, Q2A6],
+      3: [Q3A1, Q3A2, Q3A3, Q3A4, Q3A5, Q3A6],
+      4: [Q4A1, Q4A2, Q4A3, Q4A4, Q4A5, Q4A6],
+      5: [Q5A1, Q5A2, Q5A3, Q5A4, Q5A5, Q5A6],
       // Add more questions here as they're added
-      // 3: [Q3A1, Q3A2, Q3A3, Q3A4, Q3A5, Q3A6],
     };
     return answerMap[questionNum] || [Q1A1, Q1A2, Q1A3, Q1A4, Q1A5, Q1A6];
   };
@@ -115,7 +147,7 @@ function IQTestPage() {
               fontWeight: '600',
               color: '#667eea',
             }}>
-              Question {currentQuestion} / 25
+              {t('test.iq.question', { current: currentQuestion, total: totalQuestions })}
             </div>
             <div style={{
               fontSize: isMobile ? '36px' : '48px',
@@ -137,42 +169,37 @@ function IQTestPage() {
             display: 'flex',
             flexDirection: isMobile ? 'column' : 'row',
             gap: isMobile ? '20px' : '30px',
-            alignItems: 'flex-start',
+            alignItems: isMobile ? 'center' : 'center',
             justifyContent: 'center',
             minHeight: isMobile ? 'auto' : '500px',
             maxWidth: '1100px',
             margin: '0 auto',
           }}
         >
-          {/* Question Image - Left Side, No Background */}
+          {/* Question Image - Left Side */}
           <div style={{
-            flex: '1',
-            maxWidth: '500px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            width: isMobile ? '100%' : 'auto',
+            maxWidth: isMobile ? '80vw' : '400px',
           }}>
-            <img
+            <IqImage
               src={currentQuestionImage}
-              alt={`Question ${currentQuestion}`}
-              style={{
-                maxWidth: '100%',
-                height: 'auto',
-                borderRadius: '12px',
-              }}
+              alt={t('test.iq.question', { current: currentQuestion, total: totalQuestions })}
+              isQuestion={true}
             />
           </div>
 
-          {/* Answer Options - Right Side, 2x3 Grid */}
+          {/* Answer Options - Right Side, 3x2 Grid */}
           <div style={{
-            flex: '1',
-            maxWidth: '500px',
-            width: '100%',
             display: 'flex',
             flexDirection: 'column',
             gap: isMobile ? '12px' : '17px',
             alignItems: 'center',
-            marginTop: isMobile ? '0' : '30px',
+            justifyContent: 'center',
+            width: isMobile ? '100%' : 'auto',
+            maxWidth: isMobile ? '100%' : '400px',
           }}>
             {[
               { key: 'A', svg: currentAnswerImages[0] },
@@ -182,7 +209,7 @@ function IQTestPage() {
               { key: 'E', svg: currentAnswerImages[4] },
               { key: 'F', svg: currentAnswerImages[5] },
             ].reduce((acc, option, index) => {
-              if (index % 2 === 0) {
+              if (index % 3 === 0) {
                 acc.push([option]);
               } else {
                 acc[acc.length - 1].push(option);
@@ -206,12 +233,10 @@ function IQTestPage() {
                     whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.15, ease: 'easeOut' }}
                     style={{
-                      flex: '1',
-                      maxWidth: isMobile ? '110px' : '145px',
                       background: 'transparent',
                       border: 'none',
                       borderRadius: '12px',
-                      padding: isMobile ? '8px' : '10px',
+                      padding: isMobile ? '6px' : '8px',
                       cursor: 'pointer',
                       boxShadow: selectedAnswer === option.key
                         ? '0 8px 24px rgba(102, 126, 234, 0.3)'
@@ -222,13 +247,10 @@ function IQTestPage() {
                       justifyContent: 'center',
                     }}
                   >
-                    <img
+                    <IqImage
                       src={option.svg}
                       alt={`Answer ${option.key}`}
-                      style={{
-                        maxWidth: '100%',
-                        height: 'auto',
-                      }}
+                      isQuestion={false}
                     />
                   </motion.button>
                 ))}
@@ -242,4 +264,3 @@ function IQTestPage() {
 }
 
 export default IQTestPage;
-
