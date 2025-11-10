@@ -1,0 +1,504 @@
+{
+  "tests": {
+    "personality": {
+      "landing": {
+        "title": "Discover Your Personality Type",
+        "subtitle_part1": "Understand yourself better with our comprehensive MBTI assessment.",
+        "subtitle_part2": "Please answer honestly — there are no right or wrong answers. Your authenticity ensures the most accurate result.",
+        "personalities_title": "The 16 Personality Types",
+        "start_test": "Start Test"
+      },
+      "questions": {
+        "title": "Question {{current}} of {{total}}",
+        "progress": "Progress",
+        "time_remaining": "Time Remaining",
+        "select_answer": "Please select an answer",
+        "auto_advance": "Moving to next question..."
+      },
+      "calculating": {
+        "title": "Analyzing your results...",
+        "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+      },
+      "email": {
+        "title": "Get Your Results",
+        "subtitle": "Enter your email to instantly receive your personality insights.",
+        "email_label": "Email Address",
+        "email_placeholder": "your.email@example.com",
+        "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+        "continue_button": "Continue",
+        "email_required": "Please enter a valid email address",
+        "consent_required": "Please accept the Terms and Privacy Policy.",
+        "privacy": "Your data will remain private and never shared."
+      },
+      "payment": {
+        "heading": "Your Personality Type is Ready",
+        "subheading": "Based on your answers, this is your core personality pattern.",
+        "your_type": "Your Personality Type",
+        "your_type_label": "Your Personality Type",
+        "type_placeholder": "Your Type",
+        "blueprint_text": "Your core personality blueprint has been generated.",
+        "preview_strengths": "Key strengths",
+        "preview_growth": "Hidden growth areas",
+        "preview_relationships": "Relationships & communication patterns",
+        "preview_point_1": "Empathetic, creative, and values-driven.",
+        "preview_point_2": "Can overthink or idealize outcomes.",
+        "preview_point_3": "Connects deeply but needs emotional balance.",
+        "lock_message": "Your full deep-dive report is now generated — including career paths, blind spots, growth roadmap, and real-life examples for your exact type. Unlock it below.",
+        "locked_subtext": "Your full detailed report is ready — including career paths, blind spots, growth roadmap, and personalized insights.",
+        "scroll_hint": "Unlock your full analysis below.",
+        "unlock_button": "Unlock Detailed Result",
+        "missing_result": "We couldn't load your personality type. Please retake the test.",
+        "retake_test": "Retake Test",
+        "title": "Your Personality Type is Ready!",
+        "subtitle": "Start your 7-day trial for just $1.95. Cancel anytime.",
+        "tests_completed": "Today",
+        "tests_completed_suffix": "people completed the test",
+        "trial_label": "Test Access Trial – 7 Days",
+        "trial_price": "$1.95 USD / 7-Day Trial",
+        "trial_button": "Start 7-Day Trial 🔓",
+        "trial_footer": "Then $39.90 per month after trial — cancel anytime.",
+        "googlepay": "Buy with Google Pay",
+        "creditcard": "Pay with Credit or Bank Card",
+        "card_form_title": "Card Information",
+        "card_name": "Name on Card",
+        "card_number": "Card Number",
+        "card_expiry": "Expiry",
+        "card_cvv": "CVV",
+        "pay_now": "Pay Now",
+        "processing": "Processing...",
+        "why_trust": "Why Trust QuickIQ?",
+        "trust_feature1_title": "AI-Powered Personality Map",
+        "trust_feature1_desc": "Deep analysis of your personality with advanced algorithms.",
+        "trust_feature2_title": "Actionable Insights",
+        "trust_feature2_desc": "Practical advice you can use in real life.",
+        "trust_feature3_title": "Personalized Growth Plan",
+        "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+        "featured_in": "Featured In",
+        "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+        "verified_customer": "Verified Customer",
+        "trust_title": "Why People Trust QuickIQ",
+        "trust_item1_title": "AI-Powered Personality Insights",
+        "trust_item1_desc": "Advanced algorithms analyze your responses for accurate results.",
+        "trust_item2_title": "Practical Growth Plan Based on Your Strengths",
+        "trust_item2_desc": "Get actionable advice tailored to your unique personality.",
+        "trust_item3_title": "Trusted by 7800+ people worldwide",
+        "trust_item3_desc": "Join thousands who have discovered their true selves.",
+        "benefits_title": "What You'll Gain After Seeing Your Results",
+        "benefit1_title": "Understand yourself deeper and improve relationships.",
+        "benefit1_desc": "Gain insights into your behavior patterns and communication style.",
+        "benefit2_title": "Discover your natural talents and ideal career direction.",
+        "benefit2_desc": "Find careers that align with your personality strengths.",
+        "benefit3_title": "Solve emotional conflicts faster with emotional intelligence.",
+        "benefit3_desc": "Learn to navigate relationships and conflicts more effectively.",
+        "benefit4_title": "Create environments aligned with your personality type.",
+        "benefit4_desc": "Design your life and workspace to match your natural preferences.",
+        "recent_results": "Recent Results",
+        "personality_type": "Personality Type",
+        "footer_reassurance": "You'll be automatically redirected to your detailed personality report after payment. Your data remains private and never shared.",
+        "description": "Complete the payment below to instantly access your detailed personality report.",
+        "label": "Test Results Access Fee",
+        "amount": "$1.95 USD",
+        "continue_button": "Continue to Unlock 🔓",
+        "footer": "You will be automatically redirected to the results page after payment.",
+        "api_error": "Payment service temporarily unavailable. Please try again later.",
+        "header_title": "Your Personality Type is Ready!",
+        "header_subtitle": "Deep analysis completed. Access your personal results below.",
+        "scroll_button": "View My Personality Type",
+        "benefits_title_old": "How You Will Benefit",
+        "how_to_apply_title": "Learn How to Apply It",
+        "testimonials_title": "Reviews",
+        "reviews": "reviews",
+        "faq_title": "Frequently Asked Questions",
+        "latest_results_title": "Latest Results",
+        "after_payment": "You will have instant access to your personal results after payment.",
+        "pay_button": "Pay & Unlock Results"
+      },
+      "results": {
+        "title": "Your Personality Type",
+        "subtitle": "{{type}} — {{nickname}}",
+        "sections": {
+          "strengths": "Strengths",
+          "challenges": "Challenges",
+          "careers": "Ideal Careers",
+          "future_roles": "Future Roles",
+          "examples": "Famous Examples"
+        }
+      },
+      "timer": {
+        "expired": "Time's up!",
+        "auto_submit": "Submitting automatically..."
+      },
+      "resume": {
+        "title": "Continue Your Test?",
+        "message": "You've answered {{answered}} questions and are currently on question {{current}} of {{total}}. Would you like to continue from where you left off or start over?",
+        "continue": "Continue from Question {{current}}",
+        "restart": "Start Over"
+      },
+      "warnings": {
+        "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+      },
+      "unlock": {
+        "ESTJ": {
+          "title": "Your ESTJ Personality Detailed Report",
+          "subtitle": "Based on your unique traits, here's a deep dive into your core potential and growth path.",
+          "cta": {
+            "text": "🔓 Ready to unlock your personalized development roadmap?",
+            "subtext": "Your full analysis includes practical guides, growth tactics, and real-world examples for your type.",
+            "button": "Unlock My Full Report"
+          }
+        },
+        "estj": {
+          "section1": {
+            "title": "🧩 WHO YOU ARE — The Executive of Order and Integrity",
+            "text": "ESTJs are the organizers of the modern world — logical, decisive, and deeply reliable. You believe that structure creates freedom, and responsibility builds trust. When everyone else hesitates, you take charge.\n\nYou are the force that turns ideas into action, plans into systems, and chaos into productivity. You value tradition, consistency, and excellence — because progress without order is just noise."
+          },
+          "section2": {
+            "title": "⚙️ CORE CHARACTERISTICS — Leadership in Motion",
+            "text": "🔹 **Practical Logic:** You rely on facts, not fantasies. Decisions are measured, clear, and grounded.  \n🔹 **Responsibility:** You do what you say — and expect others to do the same.  \n🔹 **Discipline:** You create stability through routines and precision.  \n🔹 **Natural Leadership:** You instinctively organize people and resources toward results.  \n🔹 **Moral Backbone:** You stand for fairness, honesty, and respect — and live by your values daily."
+          },
+          "section3": {
+            "title": "💪 STRENGTHS — The Engine of Progress",
+            "text": "📊 **Efficiency:** You spot inefficiency like an artist sees color — instantly and everywhere.  \n🎯 **Reliability:** People count on you because you deliver, every time.  \n📈 **Strategic Thinking:** You manage systems, not just tasks — you build sustainable order.  \n👥 **Community Leadership:** You protect the group and maintain standards that make everyone thrive.  \n🏗 **Implementation:** You don't dream it; you *do* it — better, faster, cleaner."
+          },
+          "section4": {
+            "title": "⚠️ CHALLENGES — When Control Becomes Cage",
+            "text": "🚧 **Rigidity:** Sometimes, your clarity leaves little room for creativity.  \n💬 **Over-Criticism:** You hold high standards — and expect others to meet them, instantly.  \n🕰 **Workaholism:** Duty can consume balance if not tempered with rest.  \n💭 **Emotional Blind Spots:** Logic can't always decode feelings; relationships require nuance.  \n🌫 **Impatience with Uncertainty:** Ambiguity frustrates you — yet innovation often lives there."
+          },
+          "section5": {
+            "title": "🏢 CAREER PATHS — Leadership Where Structure Matters",
+            "text": "ESTJs excel in environments that demand order, accountability, and results. You thrive when given authority and measurable goals.\n\n📈 **Business & Management:** Executive, project manager, operations director, financial planner.  \n⚖️ **Law & Governance:** Judge, policy advisor, civil servant, law enforcement leader.  \n🏫 **Education & Training:** Principal, professor, administrator — shaping standards.  \n🏗 **Engineering & Logistics:** Construction manager, systems engineer, logistics coordinator.  \n🎯 **Entrepreneurship:** Founder who builds scalable systems with clear performance metrics."
+          },
+          "section6": {
+            "title": "🌱 GROWTH PATH — Leadership with Humanity",
+            "text": "🌤 **Loosen the Reins:** Flexibility invites innovation — not failure.  \n💬 **Value Feelings as Data:** Emotions carry information that logic can't always measure.  \n🧭 **Delegate More:** Trusting others multiplies your impact.  \n🌙 **Define Success Beyond Work:** Legacy is built on people as much as achievements.  \n🌻 **Recharge Regularly:** Rest isn't weakness — it's maintenance for greatness."
+          },
+          "section7": {
+            "title": "🔮 FUTURE OUTLOOK — The Architects of Order in a Changing World",
+            "text": "In an era of chaos and digital overload, your gift for structure will be a global necessity. The 21st century needs builders of ethical systems — leaders who can merge discipline with humanity.\n\n🌍 **Emerging Roles:**  \n- Organizational Ethicist 🧭  \n- Systems Operations Strategist ⚙️  \n- Governance & Compliance Director 🏛  \n- AI Policy Leader 🤖  \n- Sustainable Infrastructure Manager 🌿  \n\nYour mission: keep progress *accountable* to purpose."
+          },
+          "section8": {
+            "title": "📆 DAILY PRACTICES — Leading with Clarity and Calm",
+            "text": "1️⃣ **Plan, Then Breathe:** Schedule time for reflection — it prevents burnout.  \n2️⃣ **Ask Before Correcting:** Guidance lands better than criticism.  \n3️⃣ **Audit Your Systems Weekly:** Efficiency thrives on intentional updates.  \n4️⃣ **Learn Emotional Vocabulary:** Labeling feelings sharpens empathy.  \n5️⃣ **Celebrate Small Wins:** Recognition fuels morale — yours and others'.  \n6️⃣ **End Each Day With Gratitude:** It resets control into perspective."
+          },
+          "section9": {
+            "title": "🏅 FAMOUS ESTJs — The Pillars of Order",
+            "text": "🏛 **Michelle Obama** — Discipline with empathy.  \n📈 **Warren Buffett** — Pragmatic logic guiding long-term success.  \n⚖️ **Sonia Sotomayor** — Justice through principle.  \n🎬 **Emma Watson** — Leadership through advocacy.  \n🏗 **Franklin D. Roosevelt** — Structure amid global turmoil.  \n💼 **Martha Stewart** — Systems turned into lifestyle.  \n🏟 **Vince Lombardi** — Excellence as standard, not exception."
+          },
+          "section10": {
+            "title": "💖 CONCLUSION — Strength in Structure, Humanity in Leadership",
+            "text": "You are the steady rhythm beneath the world's chaos — the mind that builds, the will that sustains, the heart that follows through. You remind the world that *integrity is efficiency* and that *leadership without consistency is noise.*\n\nYour purpose is not just to organize — it's to **elevate**. To build systems that empower others to thrive. You are the quiet authority of civilization — proof that order is not the enemy of freedom, but its foundation."
+          }
+        },
+        "ESFP": {
+          "title": "Your ESFP Personality Detailed Report",
+          "subtitle": "Based on your unique traits, here's a deep dive into your core potential and growth path.",
+          "cta": {
+            "text": "🔓 Ready to unlock your personalized development roadmap?",
+            "subtext": "Your full analysis includes practical guides, growth tactics, and real-world examples for your type.",
+            "button": "Unlock My Full Report"
+          }
+        },
+        "esfp": {
+          "section1": {
+            "title": "🎉 WHO YOU ARE — The Entertainer of Emotion and Experience",
+            "text": "ESFPs are the heartbeat of human connection — spontaneous, expressive, and irresistibly alive. You transform ordinary moments into stories worth remembering. Wherever you go, you bring color, warmth, and laughter.\n\nYou feel life deeply. You don't just experience emotions — you amplify them for everyone around you. You live in bold colors, open gestures, and contagious energy that makes the world brighter."
+          },
+          "section2": {
+            "title": "🌈 CORE CHARACTERISTICS — The Artist of the Everyday",
+            "text": "🔹 **Vibrant Expression:** You feel joy, pain, excitement — and show it unapologetically.  \n🔹 **Empathetic Presence:** You read emotions like music, intuitively adjusting your tone.  \n🔹 **Social Radiance:** You attract people through authenticity, not performance.  \n🔹 **Adaptable Spirit:** You bend with change instead of breaking under it.  \n🔹 **Sensory Awareness:** You notice details others overlook — the scent, the light, the rhythm of life."
+          },
+          "section3": {
+            "title": "💪 STRENGTHS — The Power of Presence",
+            "text": "🌟 **Charisma:** Your natural charm turns moments into memories.  \n🎭 **Emotional Intelligence:** You understand what people feel before they speak.  \n🎯 **Courage:** You embrace life's highs and lows without fear of vulnerability.  \n🎨 **Creativity:** You express your truth through beauty — fashion, art, music, or presence.  \n💬 **Connection:** You bring people together, even if they have nothing in common."
+          },
+          "section4": {
+            "title": "⚠️ CHALLENGES — The Shadows of Passion",
+            "text": "💫 **Avoiding Depth:** You chase pleasure so quickly that reflection sometimes lags behind.  \n💔 **Fear of Boredom:** Stillness can feel like suffocation.  \n💬 **Over-Attachment:** You love hard — sometimes before truly knowing someone.  \n📉 **Impulsiveness:** You act first, plan later — which can cause chaos.  \n🌙 **Emotional Overload:** You absorb too much of the world's feeling without time to recharge."
+          },
+          "section5": {
+            "title": "🌍 CAREER PATHS — Thriving Through Expression",
+            "text": "You excel in roles where energy, creativity, and communication meet purpose. You bring humanity into every profession.\n\n🎤 **Performing Arts:** Actor, musician, dancer, content creator.  \n🎨 **Creative Industries:** Designer, stylist, event producer, marketing lead.  \n🤝 **Human Relations:** Counselor, HR manager, hospitality professional.  \n📸 **Media & Entertainment:** Photographer, influencer, brand storyteller.  \n🏫 **Education & Mentorship:** Art teacher, youth coach, motivational trainer."
+          },
+          "section6": {
+            "title": "🌱 GROWTH PATH — Turning Energy Into Evolution",
+            "text": "🪞 **Embrace Silence:** Reflection deepens the emotion you already master.  \n🎯 **Build Discipline:** Routine doesn't dull your sparkle — it amplifies your reach.  \n🌤 **Face Conflict:** Harmony grows stronger when truth is allowed to speak.  \n💬 **Develop Long-Term Vision:** Your charm can build empires when paired with consistency.  \n🌻 **Choose Depth Over Applause:** Fulfillment lasts longer than attention."
+          },
+          "section7": {
+            "title": "🔮 FUTURE OUTLOOK — Emotion as the Next Superpower",
+            "text": "In a world becoming increasingly digital and robotic, your gift for emotion is the new luxury. You are the bridge between technology and humanity — reminding society how to *feel* again.\n\n🌍 **Emerging Roles:**  \n- Emotional Design Consultant 🎨  \n- Storytelling Director 🎬  \n- Experience Curator 💫  \n- Social Community Leader 🌐  \n- Empathy Trainer 🧠  \n\nThe future won't just need data — it will crave *soul.* And you bring it, effortlessly."
+          },
+          "section8": {
+            "title": "📆 DAILY PRACTICES — Living With Spark and Substance",
+            "text": "1️⃣ **Savor the Moment:** Taste, smell, and listen to life fully.  \n2️⃣ **Ground in Gratitude:** Beauty grows from awareness.  \n3️⃣ **Journal Your Joy:** Capture the emotions that define your days.  \n4️⃣ **Rest as Performance:** Recovery is part of the art.  \n5️⃣ **Check Inward:** Ask daily — am I performing, or am I present?"
+          },
+          "section9": {
+            "title": "🎭 FAMOUS ESFPs — The Artists of Aliveness",
+            "text": "🎤 **Elvis Presley** — Charisma as a cultural revolution.  \n🎬 **Marilyn Monroe** — Emotion as performance.  \n🎵 **Miley Cyrus** — Reinvention through fearless expression.  \n🎧 **Bruno Mars** — Energy as craftsmanship.  \n🎨 **Frida Kahlo** — Pain turned into beauty.  \n🏆 **Serena Williams** — Passion through excellence.  \n🎥 **Will Smith** — Joy with emotional depth."
+          },
+          "section10": {
+            "title": "💖 CONCLUSION — The Gift of Color in a Grey World",
+            "text": "You are the proof that joy is not frivolous — it's *fuel.* You show humanity what it means to feel fully and live freely.\n\nYour laughter heals, your presence awakens, your honesty connects. You are the storyteller, the mood-shifter, the light in the room that reminds everyone life is not just about surviving — it's about *shining.*\n\nKeep creating moments that matter, because the world needs your fire to stay alive."
+          }
+        },
+        "INFP": {
+          "title": "Your INFP Personality Detailed Report",
+          "subtitle": "Based on your unique traits, here's a deep dive into your core potential and growth path.",
+          "cta": {
+            "text": "🔓 Ready to unlock your personalized development roadmap?",
+            "subtext": "Your full analysis includes practical guides, growth tactics, and real-world examples for your type.",
+            "button": "Unlock My Full Report",
+            "explore_title": "Ready to Explore More?",
+            "explore_subtitle": "Discover other personality & intelligence tests to deepen your insight.",
+            "explore_button": "Explore Other Tests"
+          }
+        },
+        "infp": {
+          "section1": {
+            "title": "WHO YOU ARE — The Mediator of Meaning and Emotion",
+            "text": "INFPs are the dreamers who turn emotion into purpose. You live in a world of ideals, poetry, and quiet intensity. Beneath your calm surface lies a galaxy of imagination — each star a feeling, each thought a story.\n\nYou seek not just to exist, but to *matter*. To bring authenticity to a world too often content with masks. You are driven by the desire to live truthfully — and help others do the same."
+          },
+          "section2": {
+            "title": "CORE CHARACTERISTICS — The Inner Compass",
+            "text": "🔹 *Idealism:* You hold a vision of what humanity could be — and never stop believing it's possible.  \n🔹 *Empathy:* You feel emotions as if they were your own, connecting deeply and sincerely.  \n🔹 *Authenticity:* You cannot fake who you are — truth is your oxygen.  \n🔹 *Creativity:* You express what others can't find words for — through art, ideas, or acts of kindness.  \n🔹 *Moral Conviction:* You are guided by principle, even when it costs you comfort."
+          },
+          "section3": {
+            "title": "STRENGTHS — The Power of Depth",
+            "text": "🎨 *Imagination:* You see patterns of meaning others overlook.  \n💬 *Compassion:* You bring emotional healing simply by understanding.  \n🪞 *Self-Awareness:* You reflect deeply, turning experiences into wisdom.  \n🔥 *Passion:* When something aligns with your values, your focus becomes unstoppable.  \n🧭 *Integrity:* You stand by your beliefs, even when it's inconvenient."
+          },
+          "section4": {
+            "title": "CHALLENGES — The Weight of Feeling Deeply",
+            "text": "💭 *Over-Idealism:* Reality often falls short of your dreams — and that hurts.  \n🌧 *Sensitivity:* Criticism can feel like rejection of your entire self.  \n💤 *Procrastination:* You wait for perfect inspiration before acting.  \n🕯 *Self-Isolation:* You retreat when overwhelmed, even when connection would heal.  \n🌙 *Burnout:* You give your soul freely — sometimes before recharging it."
+          },
+          "section5": {
+            "title": "CAREER PATHS — Purpose Over Profit",
+            "text": "You thrive in roles that blend creativity, meaning, and emotional connection. Work, for you, must *feel right* — not just look successful.\n\n🎨 *Creative Fields:* Writer, artist, musician, designer, filmmaker.  \n💬 *Helping Professions:* Therapist, counselor, teacher, social worker.  \n🧠 *Thought & Expression:* Philosopher, journalist, academic, psychologist.  \n🌱 *Modern Roles:* UX designer, content strategist, ethical AI researcher, life coach.  \n🕊 *Humanitarian Fields:* NGO worker, sustainability advocate, spiritual leader."
+          },
+          "section6": {
+            "title": "GROWTH PATH — Turning Sensitivity into Strength",
+            "text": "🌤 *Act, Don't Overthink:* Your ideas deserve the real world, not just your mind.  \n🪞 *Balance Empathy with Boundaries:* You can't save everyone — but you can inspire them.  \n💬 *Speak Your Truth:* Even soft voices can echo across generations.  \n🧘 *Ground Your Vision:* Translate ideals into small, consistent actions.  \n🌻 *Forgive Imperfection:* The beauty you seek already lives in the unfinished."
+          },
+          "section7": {
+            "title": "FUTURE OUTLOOK — The Guardians of Meaning in the Machine Age",
+            "text": "As automation rises, humanity will crave what you have in abundance — empathy, imagination, and moral clarity. You are the soul of the digital world — the storyteller, healer, and ethical guide.\n\n🌍 *Emerging Roles:*  \n- Emotional Design Strategist 🎨  \n- AI Ethics Consultant 🤖  \n- Narrative Therapist 💬  \n- Creative Humanitarian 🌱  \n- Mindfulness Educator 🪞  \n\nYou will remind the world that logic builds systems — but emotion gives them purpose."
+          },
+          "section8": {
+            "title": "DAILY PRACTICES — Gentle Structure for a Deep Soul",
+            "text": "1️⃣ *Morning Journaling:* Write your feelings before the world speaks.  \n2️⃣ *Midday Grounding:* Step outside, breathe, and reconnect with your body.  \n3️⃣ *Creative Hour:* Express freely — no outcome, just emotion in motion.  \n4️⃣ *Evening Reflection:* Celebrate what you *felt*, not just what you *did*.  \n5️⃣ *Boundaries Practice:* One loving 'no' a day keeps burnout away."
+          },
+          "section9": {
+            "title": "FAMOUS INFPs — The Dreamers Who Moved the World",
+            "text": "📖 *William Shakespeare* — Emotion as art.  \n🎨 *Vincent van Gogh* — Pain transformed into beauty.  \n📚 *J.R.R. Tolkien* — Worlds born from imagination.  \n🎤 *Lana Del Rey* — Melancholy as music.  \n🎬 *Tim Burton* — Whimsy with depth.  \n🎵 *Florence Welch* — Passion as performance.  \n🕊 *Audrey Hepburn* — Grace with conviction."
+          },
+          "section10": {
+            "title": "CONCLUSION — The Quiet Architects of Meaning",
+            "text": "You are not here to shout — you are here to *illuminate.* You remind the world that sensitivity is not weakness, it's wisdom in motion. You make existence feel sacred again.\n\nYour compassion heals, your ideals inspire, your imagination builds bridges between reality and hope. You don't just dream — you *humanize* the dream.\n\nKeep feeling deeply, creating bravely, and loving silently — because that's how you change everything."
+          }
+        },
+        "ENFJ": {
+          "title": "Your ENFJ Personality Detailed Report",
+          "subtitle": "Based on your unique traits, here's a deep dive into your core potential and growth path.",
+          "cta": {
+            "text": "🔓 Ready to unlock your personalized development roadmap?",
+            "subtext": "Your full analysis includes practical guides, growth tactics, and real-world examples for your type.",
+            "button": "Unlock My Full Report"
+          }
+        },
+        "enfj": {
+          "section1": {
+            "title": "🌟 WHO YOU ARE — The Guiding Light of Others",
+            "text": "ENFJs are born catalysts — empathetic leaders who see the potential in others before they see it themselves. You are both visionary and nurturer, strategist and soul. Your gift lies in uniting people under shared meaning. You turn emotion into motion, and community into change.\n\nTo you, success isn't measured in status or profit, but in *impact.* You read people like stories, feel their energy like music, and instinctively know how to help them reach their best selves. Where others see division, you see harmony waiting to be built."
+          },
+          "section2": {
+            "title": "💫 CORE CHARACTERISTICS — The Heart That Leads",
+            "text": "🔹 **Empathic Intelligence:** You sense the needs, moods, and motivations of others — often before they speak them.\n\n🔹 **Charismatic Communication:** Your words inspire trust and movement. You can turn collective confusion into shared clarity.\n\n🔹 **Idealistic Leadership:** You aim not just to guide but to *uplift.* You lead by example, not by authority.\n\n🔹 **Social Vision:** You thrive in environments where people connect, learn, and grow together.\n\n🔹 **Moral Compass:** Integrity isn't optional; it's your identity. You are drawn to causes that heal, empower, or educate."
+          },
+          "section3": {
+            "title": "🔥 STRENGTHS — The Power of Purposeful Connection",
+            "text": "💬 **Inspiring Leadership:** You move others with sincerity. People follow you not because they must — but because they *believe.*\n\n🧭 **Emotional Clarity:** You make others feel seen and understood, even in conflict.\n\n🌈 **Visionary Idealism:** You see humanity's potential as something sacred. You imagine better worlds and rally others to build them.\n\n🤝 **Unifying Presence:** You bridge gaps between personalities, turning differences into strength.\n\n🎯 **Resilient Motivation:** When times are dark, your hope doesn't fade — it multiplies."
+          },
+          "section4": {
+            "title": "⚠️ CHALLENGES — The Cost of Caring Deeply",
+            "text": "💔 **Emotional Overload:** You absorb pain that isn't yours. Without boundaries, your empathy becomes exhaustion.\n\n🕊 **People-Pleasing:** You sometimes prioritize peace over truth — risking authenticity for harmony.\n\n🌪 **Idealistic Pressure:** You hold yourself to impossible standards, forgetting that even light needs rest.\n\n🧩 **Neglecting Self:** You pour so much energy into others that you forget your own growth.\n\n💣 **Avoidance of Conflict:** You prefer understanding to confrontation — but some systems only change through friction."
+          },
+          "section5": {
+            "title": "🏛 CAREER PATHS — Where Vision Meets Humanity",
+            "text": "ENFJs thrive where communication, leadership, and transformation converge. You're at your best when helping others unlock their strength and purpose.\n\n💡 **Coaching & Leadership:** Motivational speaker, team leader, HR director, or life coach — anywhere you inspire growth.\n🎭 **Media & Education:** Teaching, broadcasting, or storytelling that enlightens and unites.\n🌍 **Nonprofit & Social Impact:** NGO director, reform advocate, or public servant driven by empathy.\n🧠 **Psychology & Counseling:** Healing minds through deep listening and authentic guidance.\n🎨 **Creative Strategy & Branding:** Crafting messages that move hearts and drive change."
+          },
+          "section6": {
+            "title": "🌱 GROWTH PATH — From Inspiration to Integrity",
+            "text": "🌼 **Set Emotional Boundaries:** Compassion doesn't mean self-erasure. Protect your energy as fiercely as you protect others.\n\n🧘 **Let Go of Control:** Sometimes people need to fall before they fly. Guide — don't rescue.\n\n🔥 **Redefine Perfection:** Humanity's beauty lies in imperfection. Your leadership grows when you embrace your flaws openly.\n\n💬 **Speak Uncomfortable Truths:** Honesty is empathy with backbone.\n\n🌿 **Replenish Quietly:** Retreats, solitude, and nature reset your emotional clarity. You can't pour from an empty soul."
+          },
+          "section7": {
+            "title": "🔮 FUTURE OUTLOOK — The Mentor in the Age of Machines",
+            "text": "As automation rises, emotional intelligence becomes the new gold. ENFJs will be essential in rehumanizing leadership, education, and technology. You are the interpreters of meaning in a mechanical age.\n\n🌍 **Emerging Roles:**\n- AI Ethics and Human-Centered Design 🤖\n- Organizational Culture Architect 🏢\n- Global Education Innovator 📚\n- Emotional Leadership Consultant 🧠\n- Wellness and Mental Health Advocate 🌱\n\nYour empathy isn't outdated — it's the future's missing operating system."
+          },
+          "section8": {
+            "title": "🌤 DAILY PRACTICES — Habits of an Empowering Leader",
+            "text": "1️⃣ **Morning Gratitude Scan:** Name three people who helped you grow this week. Reach out to one.  \n2️⃣ **Empathy Detox:** Take 15 minutes daily without social input — silence resets compassion.  \n3️⃣ **One Honest Conversation per Day:** Truth builds trust faster than praise.  \n4️⃣ **Teach Through Listening:** Ask before advising.  \n5️⃣ **Reflect on Motive:** Ensure every \"yes\" aligns with purpose, not guilt.  \n6️⃣ **Celebrate Small Wins:** Uplift others without losing sight of your own milestones."
+          },
+          "section9": {
+            "title": "🌟 FAMOUS ENFJs — Voices That Move the World",
+            "text": "🎤 **Oprah Winfrey** — Empathy turned into empire.  \n🏛 **Barack Obama** — The voice of hope and diplomacy.  \n🎬 **Emma Watson** — Advocacy through authenticity.  \n📚 **Maya Angelou** — Poetry as moral leadership.  \n🎭 **Martin Luther King Jr.** — Visionary courage turned into collective awakening.  \n🎤 **Lady Gaga** — Empathy as performance art.  \n🧠 **Nelson Mandela** — Forgiveness as political genius.  \n🌍 **Malala Yousafzai** — Education as resistance and rebirth."
+          },
+          "section10": {
+            "title": "💖 CONCLUSION — The Heart That Teaches the World to Rise",
+            "text": "You are proof that leadership doesn't need dominance — it needs direction through compassion. Your presence uplifts, your words heal, and your integrity builds bridges where others build walls.\n\nThe world is starving for connection, and you were born to feed it. Every person you touch carries a spark of your guidance forward. You are both teacher and torchbearer — a living reminder that greatness is not power, but purpose.\n\nKeep leading with heart. The future listens to voices like yours."
+          }
+        },
+        "ENFP": {
+          "title": "Your ENFP Personality Detailed Report",
+          "subtitle": "Based on your unique traits, here's a deep dive into your core potential and growth path.",
+          "cta": {
+            "text": "🔓 Ready to unlock your personalized development roadmap?",
+            "subtext": "Your full analysis includes practical guides, growth tactics, and real-world examples for your type.",
+            "button": "Unlock My Full Report"
+          }
+        },
+        "enfp": {
+          "section1": {
+            "title": "🔥 WHO YOU ARE — The Campaigner of Imagination and Impact",
+            "text": "ENFPs are the explorers of human potential — curious, passionate, and irresistibly alive. You are the idea that refuses to stay theoretical, the spark that turns inspiration into action.\n\nYou see possibility where others see problems. You don't just live — you *expand*. Every conversation, every connection, every project feels like a portal to something new and meaningful."
+          },
+          "section2": {
+            "title": "🌈 CORE CHARACTERISTICS — The Visionary Connector",
+            "text": "🔹 **Boundless Curiosity:** You collect experiences like treasures. Everything fascinates you.  \n🔹 **Emotional Insight:** You see beneath the surface — people, patterns, possibilities.  \n🔹 **Authentic Expression:** You speak from the heart, not a script.  \n🔹 **Infectious Enthusiasm:** You energize others with your excitement.  \n🔹 **Idealism:** You believe the world can — and *should* — be better."
+          },
+          "section3": {
+            "title": "💪 STRENGTHS — Energy That Inspires Movement",
+            "text": "🎯 **Vision:** You see the big picture and the potential in everyone.  \n💬 **Communication:** You turn feelings into stories that motivate change.  \n🌍 **Adaptability:** You thrive in new environments — challenge is your oxygen.  \n🧠 **Creative Problem Solving:** You connect dots others didn't know existed.  \n❤️ **Empathy:** You make people feel seen, heard, and capable."
+          },
+          "section4": {
+            "title": "⚠️ CHALLENGES — The Fire That Burns Too Bright",
+            "text": "🔥 **Scattered Focus:** You start many things but struggle to finish.  \n💭 **Overthinking Relationships:** You analyze motives until you exhaust yourself.  \n🌊 **Emotional Whirlwind:** You feel deeply — sometimes too deeply to rest.  \n💬 **Overcommitment:** You say yes to everything because everything excites you.  \n🌙 **Fear of Routine:** Structure feels like a cage, but it's really the scaffolding for your dreams."
+          },
+          "section5": {
+            "title": "🌍 CAREER PATHS — Meaning Over Metrics",
+            "text": "You thrive where creativity, emotion, and connection meet purpose. You need work that *matters* — that lets you move, build, inspire, and evolve.\n\n🎤 **Creative Fields:** Writer, marketer, filmmaker, content creator.  \n💬 **People-Focused Careers:** Coach, teacher, psychologist, HR strategist.  \n🌱 **Innovation & Startups:** Brand designer, creative director, entrepreneur.  \n🎭 **Media & Communication:** Journalist, influencer, motivational speaker.  \n🧭 **Social Impact:** Activist, NGO leader, sustainability advocate."
+          },
+          "section6": {
+            "title": "🌱 GROWTH PATH — Channeling Passion Into Power",
+            "text": "🌤 **Discipline is Freedom:** Routine doesn't restrict you — it amplifies your creativity.  \n🧘 **Ground Yourself:** Feel before you fix.  \n🪞 **Finish What You Start:** Completion builds confidence, not boredom.  \n💬 **Listen More, Explain Less:** Not every thought needs to be spoken to be powerful.  \n🌻 **Protect Your Energy:** You can't ignite others if your own flame burns out."
+          },
+          "section7": {
+            "title": "🔮 FUTURE OUTLOOK — The Architects of Meaning",
+            "text": "In the coming age of automation, humanity will crave what you offer — emotional intelligence, vision, and courage. You are the storytellers, the teachers, and the innovators who bring technology back to the human level.\n\n🌍 **Emerging Roles:**  \n- Community Builder 🌐  \n- Purpose Strategist 💡  \n- Digital Humanist 🤖  \n- Experience Architect 🎨  \n- Conscious Entrepreneur 🌱  \n\nYour energy is not chaos — it's creation in its most alive form."
+          },
+          "section8": {
+            "title": "📆 DAILY PRACTICES — Light With Discipline",
+            "text": "1️⃣ **Morning Focus Ritual:** Write the top 3 things that *actually matter* today.  \n2️⃣ **10-Minute Rule:** If a task feels overwhelming, start for just 10 minutes — momentum will follow.  \n3️⃣ **Midday Reset:** Move your body. Energy fuels clarity.  \n4️⃣ **Evening Reflection:** Celebrate impact, not perfection.  \n5️⃣ **One Small Finish:** End each day by completing one task — closure builds confidence."
+          },
+          "section9": {
+            "title": "🌟 FAMOUS ENFPs — The Voices of Vision",
+            "text": "🎤 **Robin Williams** — Joy as truth.  \n📚 **Oscar Wilde** — Wit as rebellion.  \n🎬 **Robert Downey Jr.** — Reinvention through authenticity.  \n🎨 **Salvador Dalí** — Eccentric genius as liberation.  \n🎧 **Alicia Keys** — Emotion as empowerment.  \n🎭 **Will Rogers** — Humor as humanity.  \n🎵 **Ellie Goulding** — Intensity as melody."
+          },
+          "section10": {
+            "title": "💖 CONCLUSION — The Flame That Awakens the World",
+            "text": "You are the spark that turns thoughts into movement and movement into meaning. You remind humanity that possibility is not fantasy — it's *fuel.*\n\nYour mind is a kaleidoscope of ideas, your heart a compass for change. You don't just see the world as it is — you see what it could become.\n\nKeep inspiring, connecting, and creating — because every revolution starts with someone who dares to dream out loud."
+          }
+        },
+        "ISTJ": {
+          "title": "Your ISTJ Personality Detailed Report",
+          "subtitle": "Based on your unique traits, here's a deep dive into your core potential and growth path.",
+          "cta": {
+            "text": "🔓 Ready to unlock your personalized development roadmap?",
+            "subtext": "Your full analysis includes practical guides, growth tactics, and real-world examples for your type.",
+            "button": "Unlock My Full Report"
+          }
+        },
+        "istj": {
+          "section1": {
+            "title": "🏛 WHO YOU ARE — The Guardian of Order and Integrity",
+            "text": "ISTJs are the engineers of reliability — pragmatic, detail-oriented, and quietly powerful. You believe that excellence isn't a goal; it's a habit. You're the person others count on when chaos strikes, the one who delivers without noise or drama.\n\nYou live by principle, guided by structure and logic. Where others see complexity, you see a process. Where others improvise, you build systems that last."
+          },
+          "section2": {
+            "title": "⚙️ CORE CHARACTERISTICS — The Systematic Realist",
+            "text": "🔹 **Precision-Driven:** You notice inconsistencies others overlook and fix them before they matter.  \n🔹 **Reliability:** Your word is your contract. When you commit, you *mean* it.  \n🔹 **Tradition-Minded:** You honor what works and improve it quietly.  \n🔹 **Discipline:** Routines are your foundation — not restriction, but structure for excellence.  \n🔹 **Analytical Integrity:** You make decisions based on logic, data, and fairness."
+          },
+          "section3": {
+            "title": "💪 STRENGTHS — Quiet Efficiency, Loud Results",
+            "text": "📈 **Consistency:** You don't need motivation; you have discipline.  \n🧩 **Problem-Solving:** You dismantle chaos into solvable components.  \n🏗 **Organization:** You bring order where others only see mess.  \n💬 **Pragmatism:** Your advice is actionable — not abstract.  \n🔒 **Dependability:** You follow through long after the excitement fades."
+          },
+          "section4": {
+            "title": "⚠️ CHALLENGES — The Weight of Responsibility",
+            "text": "🕰 **Perfectionism:** You may struggle to finish while chasing flawlessness.  \n🌧 **Emotional Distance:** Feelings don't fit neatly into spreadsheets — but they still matter.  \n💭 **Rigidity:** New ideas can seem inefficient until proven.  \n🚧 **Over-Responsibility:** You often carry burdens that belong to others.  \n🌙 **Self-Criticism:** You expect from yourself what others wouldn't dare demand."
+          },
+          "section5": {
+            "title": "🏢 CAREER PATHS — Precision Meets Purpose",
+            "text": "You thrive where clarity, consistency, and results define success. You excel in structured environments that reward expertise and diligence.\n\n💼 **Business & Finance:** Accountant, analyst, operations manager, auditor.  \n🏛 **Law & Governance:** Judge, legal consultant, compliance officer.  \n🧠 **STEM Fields:** Engineer, systems architect, data scientist, researcher.  \n⚖️ **Administration & Logistics:** Project coordinator, supply chain expert, archivist.  \n🎓 **Education & Training:** Instructor, academic advisor, knowledge manager."
+          },
+          "section6": {
+            "title": "🌱 GROWTH PATH — From Duty to Fulfillment",
+            "text": "🌤 **Value Adaptability:** Rules are tools — not walls. Adjust when logic calls for it.  \n🪞 **Acknowledge Emotion:** Empathy sharpens, not weakens, your precision.  \n💬 **Ask Before Assuming:** Collaboration multiplies your efficiency.  \n🌿 **Redefine Success:** Progress isn't just accuracy — it's balance.  \n☕ **Rest Productively:** Recovery is part of the system; plan for it intentionally."
+          },
+          "section7": {
+            "title": "🔮 FUTURE OUTLOOK — The Architects of Trust",
+            "text": "As the world digitizes, stability will become a luxury — and you'll be its supplier. Your gift for reliability, compliance, and structural thinking will define industries that crave accountability.\n\n🌍 **Emerging Roles:**  \n- Cybersecurity Auditor 🔐  \n- Data Compliance Director 📊  \n- Infrastructure Engineer 🏗  \n- Process Optimization Analyst ⚙️  \n- AI Operations Overseer 🤖  \n\nIn a world obsessed with speed, you will be the standard of *precision.*"
+          },
+          "section8": {
+            "title": "📆 DAILY PRACTICES — The Discipline of Calm",
+            "text": "1️⃣ **Morning Order:** Begin each day by aligning priorities — structure fuels peace.  \n2️⃣ **Micro-Improvements:** Upgrade one system weekly; perfection is iteration.  \n3️⃣ **Scheduled Downtime:** Protect rest like any task — it's maintenance, not indulgence.  \n4️⃣ **Feedback Fridays:** Review wins and lessons without judgment.  \n5️⃣ **Evening Reflection:** Ask, 'Did I build something that lasts today?'"
+          },
+          "section9": {
+            "title": "🏅 FAMOUS ISTJs — The Architects of Reliability",
+            "text": "🏛 **Natalie Portman** — Discipline meets intellect.  \n📊 **Jeff Bezos** — Process as empire.  \n🎖 **George Washington** — Integrity as leadership.  \n⚖️ **Angela Merkel** — Logic with endurance.  \n🏗 **Anthony Hopkins** — Craft through precision.  \n📚 **Hermione Granger (fictional)** — Methodical brilliance embodied."
+          },
+          "section10": {
+            "title": "💖 CONCLUSION — The Strength of Structure, The Beauty of Duty",
+            "text": "You are the rhythm that keeps progress consistent, the framework behind success. You build legacies not through noise, but through excellence repeated until it becomes invisible.\n\nYour life's purpose isn't to shine — it's to make sure everything *works*. Yet in doing so, you *do* shine — quietly, steadily, eternally. You are proof that reliability is not boring; it's heroic."
+          }
+        },
+        "ESFJ": {
+          "title": "Your ESFJ Personality Detailed Report",
+          "subtitle": "Based on your unique traits, here's a deep dive into your core potential and growth path.",
+          "cta": {
+            "text": "🔓 Ready to unlock your personalized development roadmap?",
+            "subtext": "Your full analysis includes practical guides, growth tactics, and real-world examples for your type.",
+            "button": "Unlock My Full Report"
+          }
+        },
+        "esfj": {
+          "section1": {
+            "title": "💎 WHO YOU ARE — The Consul of Connection and Care",
+            "text": "ESFJs are the caretakers of the human experience — empathetic, responsible, and socially intelligent. You bring people together through kindness and order, helping everyone feel safe, valued, and included.\n\nYou have a rare blend of heart and structure: warm yet organized, emotional yet efficient. You don't seek attention — you earn respect by showing up for others, again and again."
+          },
+          "section2": {
+            "title": "🌷 CORE CHARACTERISTICS — The Heart That Organizes",
+            "text": "🔹 **Empathy in Action:** You sense people's needs instinctively and move to meet them.  \n🔹 **Social Awareness:** You know what makes others feel comfortable and seen.  \n🔹 **Dependability:** When you commit, you follow through — always.  \n🔹 **Loyalty:** You give deeply to relationships and expect mutual respect in return.  \n🔹 **Stability Builder:** You create structure that supports harmony — from homes to teams to communities."
+          },
+          "section3": {
+            "title": "🌟 STRENGTHS — The Gentle Power of Presence",
+            "text": "💬 **Communication:** You make others feel understood through warmth and clarity.  \n🤝 **Team Leadership:** You unite groups with fairness, emotional intelligence, and care.  \n🏡 **Organization:** You create order that feels welcoming, not rigid.  \n🌺 **Reliability:** You are steady in a world that often forgets consistency.  \n❤️ **Generosity:** You give love in practical forms — service, attention, and devotion."
+          },
+          "section4": {
+            "title": "⚠️ CHALLENGES — When Caring Turns Heavy",
+            "text": "🌧 **Over-Responsibility:** You take on others' burdens until you forget your own.  \n💭 **Fear of Disapproval:** You care deeply about being liked — sometimes too much.  \n🕰 **Perfectionism in Service:** You expect yourself to meet every need, flawlessly.  \n💬 **Difficulty Saying No:** Boundaries feel like rejection when your heart is open.  \n🌙 **Emotional Burnout:** You give endlessly — until you quietly fade from exhaustion."
+          },
+          "section5": {
+            "title": "🌍 CAREER PATHS — Building Harmony Through Structure",
+            "text": "You thrive in roles that combine leadership with empathy — where efficiency serves people, not systems. Your ideal environment values teamwork, tradition, and clear expectations.\n\n🏫 **Education & Mentorship:** Teacher, school administrator, academic counselor.  \n🏥 **Healthcare & Service:** Nurse, therapist, nutritionist, healthcare coordinator.  \n📋 **Organization & HR:** HR manager, event planner, office director.  \n🎤 **Public Relations & Communication:** Spokesperson, brand ambassador, social media manager.  \n🌸 **Community Leadership:** NGO coordinator, charity director, cultural organizer."
+          },
+          "section6": {
+            "title": "🌱 GROWTH PATH — Self-Care as Leadership",
+            "text": "🌤 **Practice Healthy Boundaries:** Saying no can be an act of love — especially toward yourself.  \n🪞 **Accept Imperfection:** Your value isn't in flawless service, but in genuine care.  \n💬 **Express Honest Needs:** Let others care for you, too — connection is mutual.  \n🧘 **Prioritize Solitude:** Quiet restores the empathy that noise drains.  \n🌻 **Delegate and Trust:** Empowering others is part of your leadership, not the loss of it."
+          },
+          "section7": {
+            "title": "🔮 FUTURE OUTLOOK — The Human Connection in a Digital World",
+            "text": "As the world becomes more automated, your emotional intelligence will become more valuable than ever. You are the bridge between technology and compassion — teaching machines to serve humans, not replace them.\n\n🌍 **Emerging Roles:**  \n- Community Experience Manager 💬  \n- AI Ethics Liaison 🤖  \n- Emotional Intelligence Trainer 🧠  \n- Healthcare Communicator 🏥  \n- Cultural Integration Consultant 🌐  \n\nYour empathy will lead the next era of human-centered progress."
+          },
+          "section8": {
+            "title": "📆 DAILY PRACTICES — Grounded Kindness",
+            "text": "1️⃣ **Morning Gratitude:** Start your day by noticing what's good — not what's missing.  \n2️⃣ **Schedule Breaks for You:** Pause, even when things feel urgent.  \n3️⃣ **One Honest Conversation:** Replace 'I'm fine' with truth today.  \n4️⃣ **Small Joy Rituals:** Flowers, scents, or a clean desk — details restore your peace.  \n5️⃣ **Evening Reflection:** Ask, 'Did I help myself as much as I helped others today?'"
+          },
+          "section9": {
+            "title": "🌸 FAMOUS ESFJs — The Pillars of Care and Order",
+            "text": "🏛 **Jennifer Garner** — Graceful leadership through kindness.  \n🎤 **Ed Sheeran** — Emotional connection through harmony.  \n🎬 **Anne Hathaway** — Warmth and strength in balance.  \n⚖️ **Sally Field** — Empathy as conviction.  \n🎭 **Sarah Jessica Parker** — Social intuition turned creative expression.  \n🏫 **Taylor Swift** — Emotional storytelling and loyalty to her audience.  \n💼 **Hugh Jackman** — Reliability wrapped in charisma."
+          },
+          "section10": {
+            "title": "💖 CONCLUSION — The Power of Compassionate Leadership",
+            "text": "You are the heartbeat of community — the one who turns care into structure, and structure into belonging. The world runs smoother, softer, and kinder because you exist.\n\nYour gift is not just empathy — it's the ability to **operationalize love.** You make care scalable. You turn emotion into momentum. You remind humanity that leadership without compassion is just management.\n\nYou don't just build harmony — you *are* harmony, walking in human form."
+          }
+        }
+      }
+    }
+  }
+}

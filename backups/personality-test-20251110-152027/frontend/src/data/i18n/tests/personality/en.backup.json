@@ -1,0 +1,64 @@
+{
+  "tests": {
+    "personality": {
+      "landing": {
+        "title": "Discover Your Personality Type",
+        "subtitle_part1": "Understand yourself better with our comprehensive MBTI assessment.",
+        "subtitle_part2": "Please answer honestly — there are no right or wrong answers. Your authenticity ensures the most accurate result.",
+        "personalities_title": "The 16 Personality Types",
+        "start_test": "Start Test"
+      },
+      "questions": {
+        "title": "Question {{current}} of {{total}}",
+        "progress": "Progress",
+        "time_remaining": "Time Remaining",
+        "select_answer": "Please select an answer",
+        "auto_advance": "Moving to next question..."
+      },
+      "calculating": {
+        "title": "Analyzing your results...",
+        "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+      },
+      "email": {
+        "title": "Get Your Results",
+        "subtitle": "Enter your email to instantly receive your personality insights.",
+        "email_label": "Email Address",
+        "email_placeholder": "your.email@example.com",
+        "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+        "continue_button": "Continue",
+        "email_required": "Please enter a valid email address",
+        "consent_required": "Please accept the Terms and Privacy Policy.",
+        "privacy": "Your data will remain private and never shared."
+      },
+      "payment": {
+        "title": "Unlock Your Full Results",
+        "amount": "$1.95",
+        "description": "Access your detailed report instantly after payment."
+      },
+      "results": {
+        "title": "Your Personality Type",
+        "subtitle": "{{type}} — {{nickname}}",
+        "sections": {
+          "strengths": "Strengths",
+          "challenges": "Challenges",
+          "careers": "Ideal Careers",
+          "future_roles": "Future Roles",
+          "examples": "Famous Examples"
+        }
+      },
+      "timer": {
+        "expired": "Time's up!",
+        "auto_submit": "Submitting automatically..."
+      },
+      "resume": {
+        "title": "Continue Your Test?",
+        "message": "You've answered {{answered}} questions and are currently on question {{current}} of {{total}}. Would you like to continue from where you left off or start over?",
+        "continue": "Continue from Question {{current}}",
+        "restart": "Start Over"
+      },
+      "warnings": {
+        "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+      }
+    }
+  }
+}

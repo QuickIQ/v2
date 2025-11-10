@@ -8,67 +8,67 @@ interface Props {
 
 const personalityDescriptions: Record<string, any> = {
   INTJ: {
-    name: 'The Architect',
+    name: 'Architect',
     description: 'Imaginative and strategic thinkers, with a plan for everything.',
   },
   INTP: {
-    name: 'The Thinker',
+    name: 'Logician',
     description: 'Innovative inventors with an unquenchable thirst for knowledge.',
   },
   ENTJ: {
-    name: 'The Commander',
+    name: 'Commander',
     description: 'Bold, imaginative and strong-willed leaders.',
   },
   ENTP: {
-    name: 'The Debater',
+    name: 'Debater',
     description: 'Smart and curious thinkers who cannot resist an intellectual challenge.',
   },
   INFJ: {
-    name: 'The Advocate',
+    name: 'Advocate',
     description: 'Creative and insightful, inspired and independent perfectionists.',
   },
   INFP: {
-    name: 'The Mediator',
+    name: 'Mediator',
     description: 'Poetic, kind and altruistic people, always eager to help a good cause.',
   },
   ENFJ: {
-    name: 'The Protagonist',
+    name: 'Protagonist',
     description: 'Charismatic and inspiring leaders, able to mesmerize their listeners.',
   },
   ENFP: {
-    name: 'The Campaigner',
+    name: 'Campaigner',
     description: 'Enthusiastic, creative and sociable free spirits.',
   },
   ISTJ: {
-    name: 'The Logistician',
+    name: 'Logistician',
     description: 'Practical and fact-minded, reliable and responsible.',
   },
   ISFJ: {
-    name: 'The Protector',
+    name: 'Defender',
     description: 'Very dedicated and warm protectors, always ready to defend their loved ones.',
   },
   ESTJ: {
-    name: 'The Executive',
+    name: 'Executive',
     description: 'Excellent administrators, unsurpassed at managing things or people.',
   },
   ESFJ: {
-    name: 'The Consul',
+    name: 'Consul',
     description: 'Extraordinarily caring, social and popular people, always eager to help.',
   },
   ISTP: {
-    name: 'The Virtuoso',
+    name: 'Virtuoso',
     description: 'Bold and practical experimenters, masters of all kinds of tools.',
   },
   ISFP: {
-    name: 'The Adventurer',
+    name: 'Adventurer',
     description: 'Flexible and charming artists, always ready to explore new possibilities.',
   },
   ESTP: {
-    name: 'The Entrepreneur',
+    name: 'Entrepreneur',
     description: 'Smart, energetic and perceptive people, true to the moment.',
   },
   ESFP: {
-    name: 'The Entertainer',
+    name: 'Entertainer',
     description: 'Spontaneous, energetic and enthusiastic people – life is never boring around them.',
   },
 };

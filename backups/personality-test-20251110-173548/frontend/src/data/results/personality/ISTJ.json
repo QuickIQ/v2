@@ -1,0 +1,45 @@
+{
+  "title": "ISTJ — Logistician",
+  "subtitle": "The Practical and Reliable",
+  "core_characteristics": [
+    "Practical and fact-minded",
+    "Reliable and responsible",
+    "Organized and systematic",
+    "Honest and direct",
+    "Loyal and committed"
+  ],
+  "strengths": [
+    "Strong sense of duty and responsibility",
+    "Excellent organizational skills",
+    "Reliable and trustworthy",
+    "Detail-oriented and thorough",
+    "Practical problem-solving"
+  ],
+  "challenges": [
+    "Can be inflexible",
+    "May resist change",
+    "Tendency to be overly critical",
+    "Can struggle with abstract concepts",
+    "May seem unemotional"
+  ],
+  "ideal_careers": {
+    "administrative": ["Accountant", "Administrator", "Manager", "Auditor", "Operations Manager"],
+    "technical": ["Engineer", "IT Specialist", "Quality Assurance", "Systems Analyst", "Project Manager"],
+    "professional": ["Lawyer", "Judge", "Military Officer", "Banker", "Insurance Agent"]
+  },
+  "future_roles": [
+    "Data Integrity Specialist",
+    "Process Optimization Manager",
+    "Compliance Director",
+    "Quality Systems Architect",
+    "Reliability Engineer"
+  ],
+  "famous_examples": [
+    "Warren Buffett",
+    "Angela Merkel",
+    "Jeff Bezos",
+    "Hillary Clinton",
+    "Natalie Portman"
+  ],
+  "closing_quote": "ISTJs are the foundation of stability, bringing order and reliability to every system. Your dedication isn't rigidity—it's the structure that allows innovation to flourish."
+}

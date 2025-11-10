@@ -17,16 +17,6 @@ export const IqImage: React.FC<IqImageProps> = ({ src, alt, isQuestion = false, 
       src={src}
       alt={alt}
       className={combinedClasses}
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        objectFit: 'contain',
-        width: isQuestion ? '360px' : '120px',
-        height: isQuestion ? '360px' : '120px',
-        maxWidth: '100%',
-        maxHeight: '100%',
-      }}
     />
   );
 };

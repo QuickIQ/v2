@@ -1,0 +1,23 @@
+Personality Test Backup
+=======================
+Date: $(date)
+Backup Location: $BACKUP_DIR
+
+This backup contains:
+- All Personality Test components (PersonalityIntro, PersonalityQuestionsPage, etc.)
+- All 16 Personality Unlock pages (PersonalityUnlock_[TYPE].tsx)
+- PersonalityUnlockTemplate.tsx (reusable template with hover effects)
+- PersonalityTestPage.tsx (main test page)
+- personalityTestStore.ts (Zustand store)
+- Translation files (en.json, tr.json)
+- Questions data (questions.json)
+- Result data (16 MBTI type JSON files)
+- personalityContent.ts (new scalable content structure)
+
+Recent Changes:
+- Upgraded to scalable personalityContent.ts structure
+- Added hover effects to section cards (scale + glow on hover)
+- Hero section (title) has hover disabled
+- Updated INFP and ENFP content with new detailed sections
+- CTA section with hardcoded "Ready to Explore More?" text
+- Free scrolling after cards are revealed

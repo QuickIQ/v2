@@ -1,0 +1,45 @@
+{
+  "title": "INTP — Logician",
+  "subtitle": "Your unique personality profile",
+  "core_characteristics": [
+    "Characteristic 1",
+    "Characteristic 2",
+    "Characteristic 3",
+    "Characteristic 4",
+    "Characteristic 5"
+  ],
+  "strengths": [
+    "Strength 1",
+    "Strength 2",
+    "Strength 3",
+    "Strength 4",
+    "Strength 5"
+  ],
+  "challenges": [
+    "Challenge 1",
+    "Challenge 2",
+    "Challenge 3",
+    "Challenge 4",
+    "Challenge 5"
+  ],
+  "ideal_careers": {
+    "primary": ["Career 1", "Career 2", "Career 3"],
+    "secondary": ["Career 4", "Career 5"],
+    "alternative": ["Career 6", "Career 7"]
+  },
+  "future_roles": [
+    "Future Role 1",
+    "Future Role 2",
+    "Future Role 3",
+    "Future Role 4",
+    "Future Role 5"
+  ],
+  "famous_examples": [
+    "Example 1",
+    "Example 2",
+    "Example 3",
+    "Example 4",
+    "Example 5"
+  ],
+  "closing_quote": "Your INTP personality brings unique strengths to the world. Embrace your authentic self and use your natural talents to make a meaningful impact."
+}

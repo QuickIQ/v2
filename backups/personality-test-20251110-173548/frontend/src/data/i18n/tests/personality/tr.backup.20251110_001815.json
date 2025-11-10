@@ -1,0 +1,80 @@
+{
+  "tests": {
+    "personality": {
+      "landing": {
+        "title": "Kişilik Tipi Testi",
+        "subtitle_part1": "Kendinizi daha iyi tanıyın — 16 benzersiz kişilik tipinden hangisisiniz?",
+        "subtitle_part2": "Lütfen her soruyu dürüstçe cevaplayın. Doğru ya da yanlış cevap yoktur — dürüstlüğünüz en doğru sonucu sağlar.",
+        "personalities_title": "16 Kişilik Tipi",
+        "start_test": "Teste Başla"
+      },
+      "questions": {
+        "title": "Soru {{current}} / {{total}}",
+        "progress": "İlerleme",
+        "time_remaining": "Kalan Süre",
+        "select_answer": "Lütfen bir cevap seçin",
+        "auto_advance": "Sonraki soruya geçiliyor..."
+      },
+      "calculating": {
+        "title": "Sonuçlarınız analiz ediliyor...",
+        "subtitle": "Yapay zekamız yanıtlarınızı değerlendiriyor. Bu işlem birkaç saniye sürecektir..."
+      },
+      "email": {
+        "title": "Sonuçlarınızı Alın",
+        "subtitle": "Kişilik analizinizi anında almak için e-posta adresinizi girin.",
+        "email_label": "E-posta Adresi",
+        "email_placeholder": "ornek@email.com",
+        "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikasını kabul ediyorum.",
+        "continue_button": "Devam Et",
+        "email_required": "Lütfen geçerli bir e-posta adresi girin",
+        "consent_required": "Lütfen Hizmet Şartları ve Gizlilik Politikasını kabul edin.",
+        "privacy": "Verileriniz gizli tutulur, üçüncü kişilerle paylaşılmaz."
+      },
+      "payment": {
+        "title": "Kişilik Tipiniz Hazır",
+        "description": "Aşağıdaki ödeme işlemini tamamlayarak detaylı kişilik raporunuza hemen ulaşabilirsiniz.",
+        "label": "Test Sonuçları Erişim Ücreti",
+        "amount": "₺59,00",
+        "continue_button": "Ödemeyi Tamamla ve Aç 🔓",
+        "footer": "Ödeme sonrası sonuç sayfasına otomatik yönlendirileceksiniz.",
+        "api_error": "Ödeme servisi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+        "header_title": "Kişilik Tipiniz Hazır!",
+        "header_subtitle": "Derin analiz tamamlandı. Aşağıdan kişisel sonuçlarınıza ulaşabilirsiniz.",
+        "scroll_button": "Kişilik Tipimi Gör",
+        "benefits_title": "Nasıl Faydalanacaksınız",
+        "how_to_apply_title": "Nasıl Yapılacağını Öğrenin",
+        "testimonials_title": "Yorumlar",
+        "reviews": "değerlendirme",
+        "faq_title": "Sık Sorulan Sorular",
+        "latest_results_title": "Güncel Sonuçlar",
+        "after_payment": "Ödemeden sonra kişisel sonuçlarınıza anında erişim sağlanacaktır.",
+        "pay_button": "Öde ve Sonuçları Aç"
+      },
+      "results": {
+        "title": "Kişilik Tipiniz",
+        "subtitle": "{{type}} — {{nickname}}",
+        "sections": {
+          "strengths": "Güçlü Yönler",
+          "challenges": "Zorluklar",
+          "careers": "Uygun Kariyerler",
+          "future_roles": "Gelecekteki Rolleri",
+          "examples": "Ünlü Örnekler"
+        }
+      },
+      "timer": {
+        "expired": "Süre doldu!",
+        "auto_submit": "Cevaplar otomatik olarak gönderiliyor..."
+      },
+      "resume": {
+        "title": "Testinize Devam Etmek İster misiniz?",
+        "message": "{{answered}} soru cevapladınız ve şu anda {{current}} / {{total}}. sorudasınız. Kaldığınız yerden devam etmek mi yoksa baştan başlamak mı istersiniz?",
+        "continue": "{{current}}. Sorudan Devam Et",
+        "restart": "Baştan Başla"
+      },
+      "warnings": {
+        "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+      }
+    }
+  }
+}
+

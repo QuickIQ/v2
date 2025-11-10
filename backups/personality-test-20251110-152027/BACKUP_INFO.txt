@@ -1,0 +1,20 @@
+Personality Test Backup
+=======================
+Date: $(date)
+Backup Location: $BACKUP_DIR
+
+This backup contains:
+- All Personality Test components (PersonalityIntro, PersonalityQuestionsPage, etc.)
+- All 16 Personality Unlock pages (PersonalityUnlock_[TYPE].tsx)
+- PersonalityUnlockTemplate.tsx (reusable template)
+- PersonalityTestPage.tsx (main test page)
+- personalityTestStore.ts (Zustand store)
+- Translation files (en.json, tr.json)
+- Questions data (questions.json)
+- Result data (16 MBTI type JSON files)
+
+Recent Changes:
+- Scroll snap removed for free scrolling
+- FadeInCard component optimized for smooth animations
+- Cards animate once on first view, then stay static
+- Scroll is completely free after all cards are revealed

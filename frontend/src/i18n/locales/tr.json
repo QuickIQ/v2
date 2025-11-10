@@ -1,0 +1,217 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "tryAgain": "Tekrar Dene",
+    "continue": "Devam Et",
+    "back": "Geri",
+    "next": "İleri",
+    "submit": "Gönder",
+    "start": "Teste Başla",
+    "skip": "Atla"
+  },
+  "home": {
+    "title": "QuickIQ",
+    "subtitle": "Zihninizi daha iyi anlamak için kapsamlı psikolojik testlerimizi yapın",
+    "popularTests": "Popüler Testler",
+    "allTests": "Tüm Testler",
+    "free": "Ücretsiz",
+    "premium": "Premium"
+  },
+  "test": {
+    "landing": {
+      "title": "{{testName}}",
+      "description": "Sadece 20 soruda {{testName}} sonuçlarınızı öğrenin",
+      "duration": "Yaklaşık 10 dakika sürer",
+      "questions": "20 Soru",
+      "startButton": "Teste Başla"
+    },
+    "socialProof": {
+      "title": "Sonuçlarını keşfeden binlerce kişiye katıl",
+      "subtitle": "100.000'den fazla kişi bu testi yaptı",
+      "testimonial1": "Bu test kendimi nasıl gördüğümü değiştirdi!",
+      "testimonial2": "Doğru ve içgörülü sonuçlar.",
+      "testimonial3": "Şimdiye kadar aldığım en iyi psikolojik test."
+    },
+    "questions": {
+      "question": "Soru {{current}} / {{total}}",
+      "progress": "İlerleme",
+      "answerRequired": "Devam etmek için lütfen bir cevap seçin",
+      "answer": "Cevap"
+    },
+    "calculating": {
+      "title": "Sonuçlarınız hesaplanıyor...",
+      "subtitle": "Bu birkaç dakika sürebilir",
+      "analyzing": "Cevaplarınız analiz ediliyor"
+    },
+    "emailCapture": {
+      "title": "Sonuçlarınızı Alın",
+      "subtitle": "Detaylı sonuçlarınızı almak için e-posta adresinizi girin",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "ornek@email.com",
+      "emailRequired": "Lütfen geçerli bir e-posta adresi girin",
+      "continue": "Sonuçlara Devam",
+      "privacy": "Gizliliğinize saygı duyuyoruz. E-posta adresinizi asla paylaşmayız."
+    },
+    "payment": {
+      "title": "Sonuçlarınızın Kilidini Açın",
+      "subtitle": "Detaylı {{testName}} sonuçlarınıza tam erişim sağlayın",
+      "amount": "₺{{amount}}",
+      "cardNumber": "Kart Numarası",
+      "expiry": "Son Kullanma Tarihi",
+      "cvv": "CVV",
+      "payButton": "₺{{amount}} Öde",
+      "processing": "İşleniyor...",
+      "success": "Ödeme başarılı!",
+      "error": "Ödeme başarısız. Lütfen tekrar deneyin."
+    },
+    "results": {
+      "title": "Sonuçlarınız",
+      "share": "Sonuçlarınızı Paylaşın",
+      "retake": "Testi Tekrar Yap",
+      "home": "Ana Sayfaya Dön"
+    },
+    "iq": {
+      "score": "IQ Skorunuz",
+      "interpretation": "Yorumlama",
+      "excellent": "Mükemmel",
+      "good": "İyi",
+      "average": "Ortalama",
+      "belowAverage": "Ortalamanın Altında",
+      "question": "Soru {{current}} / {{total}}",
+      "timeRemaining": "Kalan Süre"
+    },
+    "personality": {
+      "type": "Kişilik Tipiniz",
+      "description": "Açıklama",
+      "strengths": "Güçlü Yönler",
+      "weaknesses": "Zayıf Yönler",
+      "careers": "Kariyer Eşleşmeleri"
+    },
+    "tests": {
+      "personality": {
+        "title": "Kişilik Tipi Testi",
+        "subtitle": "Gerçek Benliğinizi Keşfedin",
+        "description": "MBTI tipinizi keşfetmek ve güçlü yönleriniz, kariyer eşleşmeleriniz ve gelecek potansiyeliniz hakkında içgörüler kazanmak için kapsamlı kişilik değerlendirmemizi yapın.",
+        "cta_start": "Teste Başla",
+        "duration": "15 dakika",
+        "questions_count": "25 Soru",
+        "landing": {
+          "title": "Kişilik Tipi Testi",
+          "subtitle_part1": "Kendinizi daha iyi tanıyın — 16 benzersiz kişilik tipinden hangisisiniz?",
+          "subtitle_part2": "Lütfen her soruyu dürüstçe cevaplayın. Doğru ya da yanlış cevap yoktur — dürüstlüğünüz en doğru sonucu sağlar.",
+          "personalities_title": "16 Kişilik Tipi",
+          "start_test": "Teste Başla",
+          "features": {
+            "accurate": "Doğru MBTI Değerlendirmesi",
+            "detailed": "Detaylı Kişilik İçgörüleri",
+            "careers": "Kariyer Önerileri",
+            "future": "Gelecek Rol Tahminleri"
+          },
+          "start_button": "Kişilik Testine Başla"
+        },
+        "social_proof": {
+          "title": "Kişilik tipini keşfeden binlerce kişiye katıl",
+          "subtitle": "500.000'den fazla kişi bu testi yaptı",
+          "testimonial1": "Bu test kendimi çok daha iyi anlamama yardımcı oldu!",
+          "testimonial2": "Kariyer önerileri tam isabetliydi.",
+          "testimonial3": "Sonunda mantıklı bir kişilik testi."
+        },
+        "notice": {
+          "title": "Başlamadan Önce",
+          "points": [
+            "Bu test yaklaşık 15 dakika sürer",
+            "En doğru sonuçlar için dürüstçe cevaplayın",
+            "Doğru ya da yanlış cevap yoktur",
+            "İlerlemeniz otomatik olarak kaydedilecektir"
+          ],
+          "understand_button": "Anladım, Başlayalım"
+        },
+        "questions": {
+          "title": "Soru {{current}} / {{total}}",
+          "progress": "İlerleme",
+          "time_remaining": "Kalan Süre",
+          "select_answer": "Lütfen bir cevap seçin",
+          "auto_advance": "Otomatik olarak bir sonraki soruya geçiliyor..."
+        },
+        "calculating": {
+          "title": "Sonuçlar Hesaplanıyor",
+          "subtitle": "Yanıtlarınız analiz ediliyor...",
+          "message": "Bu birkaç dakika sürebilir"
+        },
+        "email": {
+          "title": "Sonuçlarınızı Alın",
+          "subtitle": "Ayrıntılı kişilik raporunuzu almak için e-posta adresinizi girin",
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen geçerli bir e-posta adresi girin",
+          "continue_button": "Ödemeye Geç",
+          "privacy": "Gizliliğinize saygı duyuyoruz. E-posta adresinizi asla paylaşmayız."
+        },
+        "payment": {
+          "title": "Sonuçlara Erişim",
+          "subtitle": "Detaylı kişilik raporunuza tam erişim sağlayın",
+          "amount": "₺59,00",
+          "description": "Ödemeden hemen sonra detaylı kişilik raporunuza erişebilirsiniz.",
+          "features": [
+            "Tam kişilik tipi analizi",
+            "Detaylı güçlü yönler ve zorluklar",
+            "İdeal kariyer eşleşmeleri",
+            "Gelecek rol tahminleri",
+            "Tipinizin ünlü örnekleri"
+          ],
+          "pay_button": "Öde ve Sonuçları Aç",
+          "processing": "Ödeme işleniyor...",
+          "success": "Ödeme başarılı!",
+          "error": "Ödeme başarısız. Lütfen tekrar deneyin."
+        },
+        "results": {
+          "title": "Kişilik Tipiniz",
+          "subtitle": "{{type}} — {{nickname}}",
+          "sections": {
+            "core_characteristics": "Temel Özellikler",
+            "strengths": "Güçlü Yönler",
+            "challenges": "Zorluklar",
+            "ideal_careers": "Uygun Kariyerler",
+            "future_roles": "Gelecekteki Rolleri",
+            "famous_examples": "Ünlü Örnekler",
+            "examples": "Ünlü Örnekler",
+            "closing_quote": "Son Düşünceler"
+          },
+          "share": {
+            "title": "Sonuçlarınızı Paylaşın",
+            "twitter": "Twitter'da Paylaş",
+            "instagram": "Instagram'da Paylaş",
+            "copy_link": "Bağlantıyı Kopyala",
+            "link_copied": "Bağlantı panoya kopyalandı!"
+          },
+          "actions": {
+            "retake": "Testi Tekrar Yap",
+            "home": "Ana Sayfaya Dön"
+          }
+        },
+        "timer": {
+          "expired": "Süre doldu!",
+          "auto_submit": "Cevaplar otomatik olarak gönderiliyor..."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "save_progress": "İlerleme kaydedilemedi.",
+          "submit": "Test gönderilemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "flow": {
+          "start_test": "Teste Başla",
+          "analyzing_text": "Sonuçlarınız analiz ediliyor...",
+          "email_label": "E-posta Adresi",
+          "accept_terms": "Şartları ve Koşulları kabul ediyorum",
+          "accept_privacy": "Gizlilik Politikasını kabul ediyorum",
+          "accept_both": "Lütfen hem Şartları ve Koşulları hem de Gizlilik Politikasını kabul edin",
+          "continue_payment": "Ödemeye Geç",
+          "payment_amount": "₺59,00"
+        }
+      }
+    }
+  }
+}
+

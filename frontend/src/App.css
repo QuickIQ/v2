@@ -2,13 +2,20 @@
   min-height: 100vh;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling - removed to prevent scroll blocking */
 html {
-  scroll-behavior: smooth;
+  overflow-anchor: none;
+}
+
+body {
+  overflow-anchor: none;
 }
 
 * {
-  scroll-behavior: smooth;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -312,6 +319,17 @@ html {
   }
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 768px) {
   .lookmagic-icon {
     width: 80px;
@@ -332,28 +350,68 @@ html {
 }
 
 .iq-image.question {
-  width: 360px;
-  height: 360px;
-  transform: scale(1.0);
+  width: 500px;
+  height: 500px;
+  transform: scale(1.25);
+  max-width: 100%;
 }
 
 .iq-image.answer {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
+  max-width: 100%;
 }
 
 /* Responsive adjustments for IQ images */
 @media (max-width: 768px) {
   .iq-image.question {
-    width: 80vw;
-    max-width: 360px;
+    width: 90vw;
+    max-width: 500px;
     height: auto;
     aspect-ratio: 1;
+    transform: scale(1.1);
   }
 
   .iq-image.answer {
-    width: 100px;
-    height: 100px;
+    width: 30vw;
+    min-width: 100px;
+    max-width: 160px;
+    height: auto;
+    aspect-ratio: 1;
   }
+}
+
+/* Personality Type Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-emoji {
+  animation: float 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease-out;
 }
 

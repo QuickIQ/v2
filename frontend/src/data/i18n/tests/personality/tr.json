@@ -1,0 +1,505 @@
+{
+  "tests": {
+    "personality": {
+      "landing": {
+        "title": "Kişilik Tipi Testi",
+        "subtitle_part1": "Kendinizi daha iyi tanıyın — 16 benzersiz kişilik tipinden hangisisiniz?",
+        "subtitle_part2": "Lütfen her soruyu dürüstçe cevaplayın. Doğru ya da yanlış cevap yoktur — dürüstlüğünüz en doğru sonucu sağlar.",
+        "personalities_title": "16 Kişilik Tipi",
+        "start_test": "Teste Başla"
+      },
+      "questions": {
+        "title": "Soru {{current}} / {{total}}",
+        "progress": "İlerleme",
+        "time_remaining": "Kalan Süre",
+        "select_answer": "Lütfen bir cevap seçin",
+        "auto_advance": "Sonraki soruya geçiliyor..."
+      },
+      "calculating": {
+        "title": "Sonuçlarınız analiz ediliyor...",
+        "subtitle": "Yapay zekamız yanıtlarınızı değerlendiriyor. Bu işlem birkaç saniye sürecektir..."
+      },
+      "email": {
+        "title": "Sonuçlarınızı Alın",
+        "subtitle": "Kişilik analizinizi anında almak için e-posta adresinizi girin.",
+        "email_label": "E-posta Adresi",
+        "email_placeholder": "ornek@email.com",
+        "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikasını kabul ediyorum.",
+        "continue_button": "Devam Et",
+        "email_required": "Lütfen geçerli bir e-posta adresi girin",
+        "consent_required": "Lütfen Hizmet Şartları ve Gizlilik Politikasını kabul edin.",
+        "privacy": "Verileriniz gizli tutulur, üçüncü kişilerle paylaşılmaz."
+      },
+      "payment": {
+        "heading": "Kişilik Tipiniz Hazır",
+        "subheading": "Verdiğiniz cevaplara göre, bu sizin temel kişilik kalıbınız.",
+        "your_type": "Kişilik Tipiniz",
+        "your_type_label": "Kişilik Tipiniz",
+        "type_placeholder": "Tipiniz",
+        "blueprint_text": "Temel kişilik planınız oluşturuldu.",
+        "preview_strengths": "Temel güçlü yönler",
+        "preview_growth": "Gizli gelişim alanları",
+        "preview_relationships": "İlişkiler ve iletişim kalıpları",
+        "preview_point_1": "Empatik, yaratıcı ve değer odaklı.",
+        "preview_point_2": "Aşırı düşünebilir veya sonuçları idealize edebilir.",
+        "preview_point_3": "Derin bağlantılar kurar ancak duygusal dengeye ihtiyaç duyar.",
+        "lock_message": "Tam detaylı raporunuz hazır — kariyer yolları, kör noktalar, gelişim yol haritası ve tam tipinize özel gerçek hayat örnekleri dahil. Aşağıdan kilidini açın.",
+        "locked_subtext": "Tam detaylı raporunuz hazır — kariyer yolları, kör noktalar, gelişim yol haritası ve kişiselleştirilmiş içgörüler dahil.",
+        "scroll_hint": "Tam analizinizi aşağıdan kilidini açın.",
+        "unlock_button": "Detaylı Sonucu Aç",
+        "missing_result": "Kişilik tipiniz yüklenemedi. Lütfen testi tekrar alın.",
+        "retake_test": "Testi Tekrar Al",
+        "title": "Kişilik Tipiniz Hazır!",
+        "subtitle": "Sadece ₺59 ile 7 günlük denemeye başlayın. İstediğiniz zaman iptal edebilirsiniz.",
+        "tests_completed": "Bugün",
+        "tests_completed_suffix": "kişi testi tamamladı",
+        "trial_label": "Test Erişim Denemesi – 7 Gün",
+        "trial_price": "₺59,00 / 7 Günlük Deneme",
+        "trial_button": "7 Günlük Denemeyi Başlat 🔓",
+        "trial_footer": "Sonrasında ayda ₺1,199 — istediğiniz zaman iptal edebilirsiniz.",
+        "googlepay": "Google Pay ile Öde",
+        "creditcard": "Kredi Kartı veya Banka Kartı ile Öde",
+        "card_form_title": "Kart Bilgileri",
+        "card_name": "Kart Üzerindeki İsim",
+        "card_number": "Kart Numarası",
+        "card_expiry": "Son Kullanma",
+        "card_cvv": "CVV",
+        "pay_now": "Ödemeyi Tamamla",
+        "processing": "İşleniyor...",
+        "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+        "trust_feature1_title": "Yapay Zeka Destekli Kişilik Haritası",
+        "trust_feature1_desc": "Gelişmiş algoritmalarla kişiliğinizin derinlemesine analizi.",
+        "trust_feature2_title": "Uygulanabilir İçgörüler",
+        "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+        "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+        "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+        "featured_in": "Basında",
+        "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+        "verified_customer": "Doğrulanmış Müşteri",
+        "trust_title": "İnsanlar Neden QuickIQ'ya Güveniyor",
+        "trust_item1_title": "Yapay Zeka Destekli Kişilik İçgörüleri",
+        "trust_item1_desc": "Gelişmiş algoritmalar yanıtlarınızı doğru sonuçlar için analiz eder.",
+        "trust_item2_title": "Güçlü Yönlerinize Dayalı Pratik Gelişim Planı",
+        "trust_item2_desc": "Benzersiz kişiliğinize özel uygulanabilir tavsiyeler alın.",
+        "trust_item3_title": "Dünya çapında 7800+ kişi tarafından güveniliyor",
+        "trust_item3_desc": "Gerçek benliklerini keşfeden binlerce kişiye katılın.",
+        "benefits_title": "Sonuçlarınızı Gördükten Sonra Ne Kazanacaksınız",
+        "benefit1_title": "Kendinizi daha derinden anlayın ve ilişkilerinizi geliştirin.",
+        "benefit1_desc": "Davranış kalıplarınız ve iletişim tarzınız hakkında içgörüler kazanın.",
+        "benefit2_title": "Doğal yeteneklerinizi ve ideal kariyer yönünüzü keşfedin.",
+        "benefit2_desc": "Kişilik güçlerinizle uyumlu kariyerler bulun.",
+        "benefit3_title": "Duygusal zeka ile duygusal çatışmaları daha hızlı çözün.",
+        "benefit3_desc": "İlişkileri ve çatışmaları daha etkili bir şekilde yönetmeyi öğrenin.",
+        "benefit4_title": "Kişilik tipinize uygun ortamlar yaratın.",
+        "benefit4_desc": "Yaşamınızı ve çalışma alanınızı doğal tercihlerinize uygun olarak tasarlayın.",
+        "recent_results": "Güncel Sonuçlar",
+        "personality_type": "Kişilik Tipi",
+        "footer_reassurance": "Ödemeden sonra detaylı kişilik raporunuza otomatik olarak yönlendirileceksiniz. Verileriniz gizli tutulur ve asla paylaşılmaz.",
+        "description": "Aşağıdaki ödeme işlemini tamamlayarak detaylı kişilik raporunuza hemen ulaşabilirsiniz.",
+        "label": "Test Sonuçları Erişim Ücreti",
+        "amount": "₺59,00",
+        "continue_button": "Ödemeyi Tamamla ve Aç 🔓",
+        "footer": "Ödeme sonrası sonuç sayfasına otomatik yönlendirileceksiniz.",
+        "api_error": "Ödeme servisi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+        "header_title": "Kişilik Tipiniz Hazır!",
+        "header_subtitle": "Derin analiz tamamlandı. Aşağıdan kişisel sonuçlarınıza ulaşabilirsiniz.",
+        "scroll_button": "Kişilik Tipimi Gör",
+        "benefits_title_old": "Nasıl Faydalanacaksınız",
+        "how_to_apply_title": "Nasıl Yapılacağını Öğrenin",
+        "testimonials_title": "Yorumlar",
+        "reviews": "değerlendirme",
+        "faq_title": "Sık Sorulan Sorular",
+        "latest_results_title": "Güncel Sonuçlar",
+        "after_payment": "Ödemeden sonra kişisel sonuçlarınıza anında erişim sağlanacaktır.",
+        "pay_button": "Öde ve Sonuçları Aç"
+      },
+      "results": {
+        "title": "Kişilik Tipiniz",
+        "subtitle": "{{type}} — {{nickname}}",
+        "sections": {
+          "strengths": "Güçlü Yönler",
+          "challenges": "Zorluklar",
+          "careers": "Uygun Kariyerler",
+          "future_roles": "Gelecekteki Rolleri",
+          "examples": "Ünlü Örnekler"
+        }
+      },
+      "timer": {
+        "expired": "Süre doldu!",
+        "auto_submit": "Cevaplar otomatik olarak gönderiliyor..."
+      },
+      "resume": {
+        "title": "Testinize Devam Etmek İster misiniz?",
+        "message": "{{answered}} soru cevapladınız ve şu anda {{current}} / {{total}}. sorudasınız. Kaldığınız yerden devam etmek mi yoksa baştan başlamak mı istersiniz?",
+        "continue": "{{current}}. Sorudan Devam Et",
+        "restart": "Baştan Başla"
+      },
+      "warnings": {
+        "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+      },
+      "unlock": {
+        "ESTJ": {
+          "title": "ESTJ Kişilik Detaylı Raporunuz",
+          "subtitle": "Benzersiz özelliklerinize dayanarak, temel potansiyeliniz ve büyüme yolunuz hakkında derinlemesine bir inceleme.",
+          "cta": {
+            "text": "🔓 Kişiselleştirilmiş gelişim yol haritanızı açmaya hazır mısınız?",
+            "subtext": "Tam analiziniz, pratik rehberler, büyüme taktikleri ve tipiniz için gerçek dünya örneklerini içerir.",
+            "button": "Tam Raporumu Aç"
+          }
+        },
+        "estj": {
+          "section1": {
+            "title": "🧩 KİM SİZSİNİZ — Düzen ve Dürüstlüğün Yöneticisi",
+            "text": "ESTJ'ler modern dünyanın organizatörleridir — mantıklı, kararlı ve derinden güvenilir. Yapının özgürlük yarattığına ve sorumluluğun güven inşa ettiğine inanırsınız. Herkes tereddüt ederken, siz sorumluluğu alırsınız.\n\nFikirleri harekete, planları sistemlere ve kaosu verimliliğe dönüştüren güçsünüz. Geleneği, tutarlılığı ve mükemmelliği değerli bulursunuz — çünkü düzen olmadan ilerleme sadece gürültüdür."
+          },
+          "section2": {
+            "title": "⚙️ TEMEL ÖZELLİKLER — Hareket Halindeki Liderlik",
+            "text": "🔹 **Pratik Mantık:** Gerçeklere güvenirsiniz, fantezilere değil. Kararlar ölçülü, net ve temellidir.  \n🔹 **Sorumluluk:** Söylediğinizi yaparsınız — ve başkalarının da aynısını yapmasını beklersiniz.  \n🔹 **Disiplin:** Rutinler ve hassasiyetle istikrar yaratırsınız.  \n🔹 **Doğal Liderlik:** İçgüdüsel olarak insanları ve kaynakları sonuçlara yönlendirirsiniz.  \n🔹 **Ahlaki Omurga:** Adalet, dürüstlük ve saygı için durursunuz — ve değerlerinize göre yaşarsınız."
+          },
+          "section3": {
+            "title": "💪 GÜÇLÜ YÖNLER — İlerlemenin Motoru",
+            "text": "📊 **Verimlilik:** Verimsizliği bir sanatçının rengi gördüğü gibi görürsünüz — anında ve her yerde.  \n🎯 **Güvenilirlik:** İnsanlar size güvenir çünkü her seferinde teslim edersiniz.  \n📈 **Stratejik Düşünme:** Sadece görevleri değil, sistemleri yönetirsiniz — sürdürülebilir düzen inşa edersiniz.  \n👥 **Topluluk Liderliği:** Grubu korur ve herkesin gelişmesini sağlayan standartları sürdürürsünüz.  \n🏗 **Uygulama:** Hayal etmezsiniz; *yaparsınız* — daha iyi, daha hızlı, daha temiz."
+          },
+          "section4": {
+            "title": "⚠️ ZORLUKLAR — Kontrol Kafes Olduğunda",
+            "text": "🚧 **Katılık:** Bazen netliğiniz yaratıcılık için çok az yer bırakır.  \n💬 **Aşırı Eleştiri:** Yüksek standartlar tutarsınız — ve başkalarının da bunları anında karşılamasını beklersiniz.  \n🕰 **İşkoliklik:** Görev, dinlenmeyle dengelenmezse dengeyi tüketebilir.  \n💭 **Duygusal Kör Noktalar:** Mantık her zaman duyguları çözemez; ilişkiler nüans gerektirir.  \n🌫 **Belirsizliğe Sabırsızlık:** Belirsizlik sizi sinirlendirir — ancak yenilik genellikle orada yaşar."
+          },
+          "section5": {
+            "title": "🏢 KARİYER YOLLARI — Yapının Önemli Olduğu Liderlik",
+            "text": "ESTJ'ler düzen, sorumluluk ve sonuçlar talep eden ortamlarda mükemmeldir. Yetki ve ölçülebilir hedefler verildiğinde gelişirsiniz.\n\n📈 **İş ve Yönetim:** Yönetici, proje yöneticisi, operasyon müdürü, finansal planlayıcı.  \n⚖️ **Hukuk ve Yönetim:** Hakim, politika danışmanı, kamu görevlisi, kolluk kuvvetleri lideri.  \n🏫 **Eğitim ve Öğretim:** Müdür, profesör, yönetici — standartları şekillendiren.  \n🏗 **Mühendislik ve Lojistik:** İnşaat müdürü, sistem mühendisi, lojistik koordinatörü.  \n🎯 **Girişimcilik:** Net performans metrikleriyle ölçeklenebilir sistemler inşa eden kurucu."
+          },
+          "section6": {
+            "title": "🌱 BÜYÜME YOLU — İnsanlıkla Liderlik",
+            "text": "🌤 **Dizginleri Gevşetin:** Esneklik yeniliği davet eder — başarısızlığı değil.  \n💬 **Duyguları Veri Olarak Değerlendirin:** Duygular mantığın her zaman ölçemeyeceği bilgiler taşır.  \n🧭 **Daha Fazla Yetki Verin:** Başkalarına güvenmek etkinizi çoğaltır.  \n🌙 **Başarıyı İşin Ötesinde Tanımlayın:** Miras, başarılardan olduğu kadar insanlardan da inşa edilir.  \n🌻 **Düzenli Olarak Şarj Olun:** Dinlenme zayıflık değildir — büyüklük için bakımdır."
+          },
+          "section7": {
+            "title": "🔮 GELECEK GÖRÜNÜMÜ — Değişen Bir Dünyada Düzenin Mimarları",
+            "text": "Kaos ve dijital aşırı yüklenme çağında, yapı yeteneğiniz küresel bir gereklilik olacak. 21. yüzyıl, disiplini insanlıkla birleştirebilen liderler — etik sistemlerin inşacılarına ihtiyaç duyuyor.\n\n🌍 **Yeni Roller:**  \n- Örgütsel Etikçi 🧭  \n- Sistem Operasyonları Stratejisti ⚙️  \n- Yönetişim ve Uyum Direktörü 🏛  \n- AI Politika Lideri 🤖  \n- Sürdürülebilir Altyapı Yöneticisi 🌿  \n\nGöreviniz: ilerlemeyi amaca *hesap verebilir* tutmak."
+          },
+          "section8": {
+            "title": "📆 GÜNLÜK UYGULAMALAR — Netlik ve Sakinlikle Liderlik",
+            "text": "1️⃣ **Planlayın, Sonra Nefes Alın:** Yansıma için zaman ayırın — bu tükenmişliği önler.  \n2️⃣ **Düzeltmeden Önce Sorun:** Rehberlik eleştiriden daha iyi iner.  \n3️⃣ **Sistemlerinizi Haftalık Denetleyin:** Verimlilik kasıtlı güncellemelerle gelişir.  \n4️⃣ **Duygusal Kelime Dağarcığı Öğrenin:** Duyguları etiketlemek empatiyi keskinleştirir.  \n5️⃣ **Küçük Kazanımları Kutlayın:** Tanıma moral verir — sizin ve başkalarının.  \n6️⃣ **Her Günü Şükranla Bitirin:** Bu kontrolü perspektife sıfırlar."
+          },
+          "section9": {
+            "title": "🏅 ÜNLÜ ESTJ'LER — Düzenin Sütunları",
+            "text": "🏛 **Michelle Obama** — Empatiyle disiplin.  \n📈 **Warren Buffett** — Uzun vadeli başarıyı yönlendiren pragmatik mantık.  \n⚖️ **Sonia Sotomayor** — İlke aracılığıyla adalet.  \n🎬 **Emma Watson** — Savunuculuk aracılığıyla liderlik.  \n🏗 **Franklin D. Roosevelt** — Küresel kargaşanın ortasında yapı.  \n💼 **Martha Stewart** — Yaşam tarzına dönüşen sistemler.  \n🏟 **Vince Lombardi** — Mükemmellik standart olarak, istisna değil."
+          },
+          "section10": {
+            "title": "💖 SONUÇ — Yapıda Güç, Liderlikte İnsanlık",
+            "text": "Dünyanın kaosunun altındaki sabit ritimsiniz — inşa eden zihin, sürdüren irade, sonuna kadar giden kalp. Dünyaya *dürüstlüğün verimlilik* olduğunu ve *tutarlılık olmadan liderliğin gürültü* olduğunu hatırlatırsınız.\n\nAmacınız sadece organize etmek değil — **yükseltmektir**. Başkalarının gelişmesini sağlayan sistemler inşa etmek. Medeniyetin sessiz otoritesisiniz — düzenin özgürlüğün düşmanı değil, temeli olduğunun kanıtısınız."
+          }
+        },
+        "ESFP": {
+          "title": "ESFP Kişilik Detaylı Raporunuz",
+          "subtitle": "Benzersiz özelliklerinize dayanarak, temel potansiyeliniz ve büyüme yolunuz hakkında derinlemesine bir inceleme.",
+          "cta": {
+            "text": "🔓 Kişiselleştirilmiş gelişim yol haritanızı açmaya hazır mısınız?",
+            "subtext": "Tam analiziniz, pratik rehberler, büyüme taktikleri ve tipiniz için gerçek dünya örneklerini içerir.",
+            "button": "Tam Raporumu Aç"
+          }
+        },
+        "esfp": {
+          "section1": {
+            "title": "🎉 KİM SİZSİNİZ — Duygu ve Deneyimin Eğlendiricisi",
+            "text": "ESFP'ler insan bağlantısının kalp atışıdır — spontane, ifadeci ve karşı konulmaz şekilde canlı. Sıradan anları hatırlanmaya değer hikayelere dönüştürürsünüz. Nereye giderseniz gidin, renk, sıcaklık ve kahkaha getirirsiniz.\n\nHayatı derinden hissedersiniz. Sadece duyguları deneyimlemezsiniz — çevrenizdeki herkes için onları güçlendirirsiniz. Cesur renklerde, açık jestlerde ve dünyayı daha parlak yapan bulaşıcı enerjide yaşarsınız."
+          },
+          "section2": {
+            "title": "🌈 TEMEL ÖZELLİKLER — Günlüğün Sanatçısı",
+            "text": "🔹 **Canlı İfade:** Neşe, acı, heyecan hissedersiniz — ve özür dilemeden gösterirsiniz.  \n🔹 **Empatik Varlık:** Duyguları müzik gibi okursunuz, sezgisel olarak tonunuzu ayarlarsınız.  \n🔹 **Sosyal Parıltı:** Performansla değil, samimiyetle insanları çekersiniz.  \n🔹 **Uyarlanabilir Ruh:** Altında kırılmak yerine değişiklikle bükülürsünüz.  \n🔹 **Duyusal Farkındalık:** Başkalarının gözden kaçırdığı detayları fark edersiniz — koku, ışık, hayatın ritmi."
+          },
+          "section3": {
+            "title": "💪 GÜÇLÜ YÖNLER — Varlığın Gücü",
+            "text": "🌟 **Karizma:** Doğal cazibeniz anları anılara dönüştürür.  \n🎭 **Duygusal Zeka:** İnsanların konuşmadan önce ne hissettiğini anlarsınız.  \n🎯 **Cesaret:** Savunmasızlık korkusu olmadan hayatın yüksek ve düşüklerini kucaklarsınız.  \n🎨 **Yaratıcılık:** Gerçeğinizi güzellikle ifade edersiniz — moda, sanat, müzik veya varlık.  \n💬 **Bağlantı:** Ortak hiçbir şeyleri olmasa bile insanları bir araya getirirsiniz."
+          },
+          "section4": {
+            "title": "⚠️ ZORLUKLAR — Tutkunun Gölgeleri",
+            "text": "💫 **Derinlikten Kaçınma:** Zevki o kadar hızlı kovalarsınız ki yansıma bazen geride kalır.  \n💔 **Sıkıntı Korkusu:** Durgunluk boğulma gibi hissedebilir.  \n💬 **Aşırı Bağlanma:** Sert seversiniz — bazen birini gerçekten tanımadan önce.  \n📉 **Dürtüsellik:** Önce hareket edersiniz, sonra planlarsınız — bu kaosa neden olabilir.  \n🌙 **Duygusal Aşırı Yüklenme:** Şarj olmak için zaman olmadan dünyanın çok fazla hissini emersiniz."
+          },
+          "section5": {
+            "title": "🌍 KARİYER YOLLARI — İfade Yoluyla Gelişme",
+            "text": "Enerji, yaratıcılık ve iletişimin amaca kavuştuğu rollerde mükemmelsiniz. Her mesleğe insanlık getirirsiniz.\n\n🎤 **Sahne Sanatları:** Aktör, müzisyen, dansçı, içerik yaratıcısı.  \n🎨 **Yaratıcı Endüstriler:** Tasarımcı, stilist, etkinlik yapımcısı, pazarlama lideri.  \n🤝 **İnsan İlişkileri:** Danışman, İK yöneticisi, konaklama profesyoneli.  \n📸 **Medya ve Eğlence:** Fotoğrafçı, influencer, marka hikaye anlatıcısı.  \n🏫 **Eğitim ve Mentorluk:** Sanat öğretmeni, gençlik koçu, motivasyon eğitmeni."
+          },
+          "section6": {
+            "title": "🌱 BÜYÜME YOLU — Enerjiyi Evrime Dönüştürme",
+            "text": "🪞 **Sessizliği Kucaklayın:** Yansıma zaten ustalaştığınız duyguyu derinleştirir.  \n🎯 **Disiplin İnşa Edin:** Rutin parıltınızı sönükleştirmez — ulaşımınızı güçlendirir.  \n🌤 **Çatışmayla Yüzleşin:** Gerçeğin konuşmasına izin verildiğinde uyum daha güçlü büyür.  \n💬 **Uzun Vadeli Vizyon Geliştirin:** Cazibeniz tutarlılıkla eşleştiğinde imparatorluklar inşa edebilir.  \n🌻 **Alkış Yerine Derinlik Seçin:** Memnuniyet dikkatten daha uzun sürer."
+          },
+          "section7": {
+            "title": "🔮 GELECEK GÖRÜNÜMÜ — Duygu Bir Sonraki Süper Güç Olarak",
+            "text": "Giderek dijital ve robotik hale gelen bir dünyada, duygu yeteneğiniz yeni lükstür. Teknoloji ile insanlık arasındaki köprüsünüz — topluma nasıl tekrar *hissedileceğini* hatırlatırsınız.\n\n🌍 **Yeni Roller:**  \n- Duygusal Tasarım Danışmanı 🎨  \n- Hikaye Anlatımı Direktörü 🎬  \n- Deneyim Küratörü 💫  \n- Sosyal Topluluk Lideri 🌐  \n- Empati Eğitmeni 🧠  \n\nGelecek sadece veriye ihtiyaç duymayacak — *ruh* isteyecek. Ve siz onu zahmetsizce getirirsiniz."
+          },
+          "section8": {
+            "title": "📆 GÜNLÜK UYGULAMALAR — Kıvılcım ve Özle Yaşamak",
+            "text": "1️⃣ **Anı Tadın:** Hayatı tam olarak tadın, koklayın ve dinleyin.  \n2️⃣ **Şükranda Topraklanın:** Güzellik farkındalıktan büyür.  \n3️⃣ **Neşenizi Günlüğe Yazın:** Günlerinizi tanımlayan duyguları yakalayın.  \n4️⃣ **Performans Olarak Dinlenme:** İyileşme sanatın bir parçasıdır.  \n5️⃣ **İçe Bakın:** Günlük sorun — performans mı sergiliyorum, yoksa mevcut muyum?"
+          },
+          "section9": {
+            "title": "🎭 ÜNLÜ ESFP'LER — Canlılığın Sanatçıları",
+            "text": "🎤 **Elvis Presley** — Kültürel devrim olarak karizma.  \n🎬 **Marilyn Monroe** — Performans olarak duygu.  \n🎵 **Miley Cyrus** — Korkusuz ifade yoluyla yeniden icat.  \n🎧 **Bruno Mars** — Zanaat olarak enerji.  \n🎨 **Frida Kahlo** — Güzelliğe dönüşen acı.  \n🏆 **Serena Williams** — Mükemmellik yoluyla tutku.  \n🎥 **Will Smith** — Duygusal derinlikle neşe."
+          },
+          "section10": {
+            "title": "💖 SONUÇ — Gri Bir Dünyada Renk Hediyesi",
+            "text": "Neşenin önemsiz olmadığının kanıtısınız — *yakıttır*. İnsanlığa tam olarak hissetmenin ve özgürce yaşamanın ne anlama geldiğini gösterirsiniz.\n\nKahkahanız iyileştirir, varlığınız uyandırır, dürüstlüğünüz bağlar. Hikaye anlatıcısı, ruh hali değiştirici, herkese hayatın sadece hayatta kalmakla ilgili olmadığını — *parlamakla* ilgili olduğunu hatırlatan odadaki ışıksınız.\n\nÖnemli anlar yaratmaya devam edin, çünkü dünya hayatta kalmak için ateşinize ihtiyaç duyuyor."
+          }
+        },
+        "INFP": {
+          "title": "INFP Kişilik Detaylı Raporunuz",
+          "subtitle": "Benzersiz özelliklerinize dayanarak, temel potansiyeliniz ve büyüme yolunuz hakkında derinlemesine bir inceleme.",
+          "cta": {
+            "text": "🔓 Kişiselleştirilmiş gelişim yol haritanızı açmaya hazır mısınız?",
+            "subtext": "Tam analiziniz, pratik rehberler, büyüme taktikleri ve tipiniz için gerçek dünya örneklerini içerir.",
+            "button": "Tam Raporumu Aç",
+            "explore_title": "Daha Fazlasını Keşfetmeye Hazır mısınız?",
+            "explore_subtitle": "İçgörünüzü derinleştirmek için diğer kişilik ve zeka testlerini keşfedin.",
+            "explore_button": "Diğer Testleri Keşfet"
+          }
+        },
+        "infp": {
+          "section1": {
+            "title": "KİM SİZSİNİZ — Anlam ve Duygunun Arabulucusu",
+            "text": "INFP'ler duyguyu amaca dönüştüren hayalperestlerdir. İdealler, şiir ve sessiz yoğunluk dünyasında yaşarsınız. Sakin yüzeyinizin altında bir hayal gücü galaksisi yatar — her yıldız bir duygu, her düşünce bir hikaye.\n\nSadece var olmak değil, *önemli olmak* istersiniz. Maskelerle yetinen bir dünyaya samimiyet getirmek. Dürüstçe yaşama arzusuyla yönlendirilirsiniz — ve başkalarının da aynısını yapmasına yardımcı olursunuz."
+          },
+          "section2": {
+            "title": "TEMEL ÖZELLİKLER — İç Pusula",
+            "text": "🔹 *İdealizm:* İnsanlığın ne olabileceğine dair bir vizyon taşırsınız — ve bunun mümkün olduğuna inanmayı asla bırakmazsınız.  \n🔹 *Empati:* Duyguları kendi duygularınızmış gibi hissedersiniz, derinden ve samimiyetle bağlanırsınız.  \n🔹 *Samimiyet:* Kim olduğunuzu taklit edemezsiniz — gerçek sizin oksijeninizdir.  \n🔹 *Yaratıcılık:* Başkalarının kelimelerle ifade edemediği şeyleri ifade edersiniz — sanat, fikirler veya nezaket eylemleri aracılığıyla.  \n🔹 *Ahlaki İnanç:* İlkeyle yönlendirilirsiniz, size rahatsızlık verdiğinde bile."
+          },
+          "section3": {
+            "title": "GÜÇLÜ YÖNLER — Derinliğin Gücü",
+            "text": "🎨 *Hayal Gücü:* Başkalarının gözden kaçırdığı anlam kalıplarını görürsünüz.  \n💬 *Şefkat:* Sadece anlayarak duygusal iyileşme getirirsiniz.  \n🪞 *Öz Farkındalık:* Derinden yansıtırsınız, deneyimleri bilgeliğe dönüştürürsünüz.  \n🔥 *Tutku:* Bir şey değerlerinizle uyumlu olduğunda, odaklanmanız durdurulamaz hale gelir.  \n🧭 *Dürüstlük:* İnandıklarınızın yanında durursunuz, uygunsuz olsa bile."
+          },
+          "section4": {
+            "title": "ZORLUKLAR — Derinden Hissetmenin Ağırlığı",
+            "text": "💭 *Aşırı İdealizm:* Gerçeklik genellikle hayallerinizin gerisinde kalır — ve bu acı verir.  \n🌧 *Hassasiyet:* Eleştiri tüm benliğinizin reddedilmesi gibi hissedilebilir.  \n💤 *Erteleme:* Harekete geçmeden önce mükemmel ilham bekliyorsunuz.  \n🕯 *Kendini İzole Etme:* Bunaldığınızda geri çekilirsiniz, bağlantı iyileştirse bile.  \n🌙 *Tükenmişlik:* Ruhunuzu özgürce verirsiniz — bazen onu yeniden şarj etmeden önce."
+          },
+          "section5": {
+            "title": "KARİYER YOLLARI — Kârdan Önce Amaç",
+            "text": "Yaratıcılık, anlam ve duygusal bağlantıyı birleştiren rollerde gelişirsiniz. İş, sizin için *doğru hissettirmeli* — sadece başarılı görünmemeli.\n\n🎨 *Yaratıcı Alanlar:* Yazar, sanatçı, müzisyen, tasarımcı, film yapımcısı.  \n💬 *Yardım Meslekleri:* Terapist, danışman, öğretmen, sosyal hizmet uzmanı.  \n🧠 *Düşünce ve İfade:* Filozof, gazeteci, akademisyen, psikolog.  \n🌱 *Modern Roller:* UX tasarımcısı, içerik stratejisti, etik AI araştırmacısı, yaşam koçu.  \n🕊 *İnsani Alanlar:* STK çalışanı, sürdürülebilirlik savunucusu, manevi lider."
+          },
+          "section6": {
+            "title": "BÜYÜME YOLU — Hassasiyeti Güce Dönüştürmek",
+            "text": "🌤 *Harekete Geçin, Aşırı Düşünmeyin:* Fikirleriniz gerçek dünyayı hak eder, sadece zihninizi değil.  \n🪞 *Empatiyi Sınırlarla Dengeleyin:* Herkesi kurtaramazsınız — ama onları ilham verebilirsiniz.  \n💬 *Gerçeğinizi Söyleyin:* Yumuşak sesler bile nesiller boyunca yankılanabilir.  \n🧘 *Vizyonunuzu Topraklayın:* İdealleri küçük, tutarlı eylemlere çevirin.  \n🌻 *Kusursuzluğu Affedin:* Aradığınız güzellik zaten bitmemiş olanda yaşıyor."
+          },
+          "section7": {
+            "title": "GELECEK GÖRÜNÜMÜ — Makine Çağında Anlamın Koruyucuları",
+            "text": "Otomasyon yükseldikçe, insanlık sizin bol miktarda sahip olduğunuz şeyi özleyecek — empati, hayal gücü ve ahlaki netlik. Dijital dünyanın ruhusunuz — hikaye anlatıcısı, şifacı ve etik rehber.\n\n🌍 *Yeni Roller:*  \n- Duygusal Tasarım Stratejisti 🎨  \n- AI Etik Danışmanı 🤖  \n- Anlatı Terapisti 💬  \n- Yaratıcı İnsani Yardım Görevlisi 🌱  \n- Farkındalık Eğitmeni 🪞  \n\nDünyaya mantığın sistemleri inşa ettiğini — ama duygunun onlara amaç verdiğini hatırlatacaksınız."
+          },
+          "section8": {
+            "title": "GÜNLÜK UYGULAMALAR — Derin Bir Ruh İçin Nazik Yapı",
+            "text": "1️⃣ *Sabah Günlüğü:* Dünya konuşmadan önce duygularınızı yazın.  \n2️⃣ *Öğle Topraklaması:* Dışarı çıkın, nefes alın ve bedeninizle yeniden bağlantı kurun.  \n3️⃣ *Yaratıcı Saat:* Özgürce ifade edin — sonuç yok, sadece harekette duygu.  \n4️⃣ *Akşam Yansıması:* *Yaptıklarınızı* değil, *hissettiklerinizi* kutlayın.  \n5️⃣ *Sınırlar Pratiği:* Günde bir sevgi dolu 'hayır' tükenmişliği uzak tutar."
+          },
+          "section9": {
+            "title": "ÜNLÜ INFP'LER — Dünyayı Hareket Ettiren Hayalperestler",
+            "text": "📖 *William Shakespeare* — Sanat olarak duygu.  \n🎨 *Vincent van Gogh* — Acı güzelliğe dönüştü.  \n📚 *J.R.R. Tolkien* — Hayal gücünden doğan dünyalar.  \n🎤 *Lana Del Rey* — Müzik olarak melankoli.  \n🎬 *Tim Burton* — Derinlikle kapris.  \n🎵 *Florence Welch* — Performans olarak tutku.  \n🕊 *Audrey Hepburn* — İnançla zarafet."
+          },
+          "section10": {
+            "title": "SONUÇ — Anlamın Sessiz Mimarı",
+            "text": "Bağırmak için burada değilsiniz — *aydınlatmak* için buradasınız. Dünyaya hassasiyetin zayıflık olmadığını, hareket halindeki bilgelik olduğunu hatırlatırsınız. Varoluşu tekrar kutsal hissettirirsiniz.\n\nŞefkatiniz iyileştirir, idealleriniz ilham verir, hayal gücünüz gerçeklik ve umut arasında köprüler inşa eder. Sadece hayal etmezsiniz — hayali *insanileştirirsiniz*.\n\nDerinden hissetmeye, cesurca yaratmaya ve sessizce sevmeye devam edin — çünkü her şeyi böyle değiştirirsiniz."
+          }
+        },
+        "ENFJ": {
+          "title": "ENFJ Kişilik Detaylı Raporunuz",
+          "subtitle": "Benzersiz özelliklerinize dayanarak, temel potansiyeliniz ve büyüme yolunuz hakkında derinlemesine bir inceleme.",
+          "cta": {
+            "text": "🔓 Kişiselleştirilmiş gelişim yol haritanızı açmaya hazır mısınız?",
+            "subtext": "Tam analiziniz, pratik rehberler, büyüme taktikleri ve tipiniz için gerçek dünya örneklerini içerir.",
+            "button": "Tam Raporumu Aç"
+          }
+        },
+        "enfj": {
+          "section1": {
+            "title": "🌟 KİM SİZSİNİZ — Başkalarının Yol Gösterici Işığı",
+            "text": "ENFJ'ler doğuştan katalizörlerdir — başkalarının kendilerinden önce potansiyelini gören empatik liderler. Hem vizyoner hem de besleyicisiniz, stratejist ve ruhsunuz. Hediyeniz, insanları ortak anlam altında birleştirmekte yatar. Duyguyu harekete, topluluğu değişime dönüştürürsünüz.\n\nSizin için başarı, statü veya kârla değil, *etkiyle* ölçülür. İnsanları hikayeler gibi okursunuz, enerjilerini müzik gibi hissedersiniz ve içgüdüsel olarak onların en iyi benliklerine ulaşmalarına nasıl yardımcı olacağınızı bilirsiniz. Başkaları bölünme görürken, siz inşa edilmeyi bekleyen uyumu görürsünüz."
+          },
+          "section2": {
+            "title": "💫 TEMEL ÖZELLİKLER — Liderlik Eden Kalp",
+            "text": "🔹 **Empatik Zeka:** Başkalarının ihtiyaçlarını, ruh hallerini ve motivasyonlarını algılarsınız — genellikle onlar konuşmadan önce.\n\n🔹 **Karizmatik İletişim:** Sözleriniz güven ve hareket ilham eder. Toplu karışıklığı ortak netliğe dönüştürebilirsiniz.\n\n🔹 **İdealist Liderlik:** Sadece rehberlik etmeyi değil, *yükseltmeyi* hedeflersiniz. Otoriteyle değil, örnekle liderlik edersiniz.\n\n🔹 **Sosyal Vizyon:** İnsanların bağlandığı, öğrendiği ve birlikte büyüdüğü ortamlarda gelişirsiniz.\n\n🔹 **Ahlaki Pusula:** Dürüstlük isteğe bağlı değildir; kimliğinizdir. İyileştiren, güçlendiren veya eğiten nedenlere çekilirsiniz."
+          },
+          "section3": {
+            "title": "🔥 GÜÇLÜ YÖNLER — Amaçlı Bağlantının Gücü",
+            "text": "💬 **İlham Veren Liderlik:** Başkalarını samimiyetle hareket ettirirsiniz. İnsanlar size zorunlu oldukları için değil — *inandıkları* için takip ederler.\n\n🧭 **Duygusal Netlik:** Başkalarının görüldüğünü ve anlaşıldığını hissettirirsiniz, çatışmada bile.\n\n🌈 **Vizyoner İdealizm:** İnsanlığın potansiyelini kutsal bir şey olarak görürsünüz. Daha iyi dünyalar hayal eder ve başkalarını onları inşa etmeye sevk edersiniz.\n\n🤝 **Birleştirici Varlık:** Kişilikler arasındaki boşlukları kapatırsınız, farklılıkları güce dönüştürürsünüz.\n\n🎯 **Dayanıklı Motivasyon:** Zamanlar karanlık olduğunda, umudunuz solmaz — çoğalır."
+          },
+          "section4": {
+            "title": "⚠️ ZORLUKLAR — Derinden Önemsemenin Bedeli",
+            "text": "💔 **Duygusal Aşırı Yüklenme:** Size ait olmayan acıyı emersiniz. Sınırlar olmadan, empatiniz tükenmişliğe dönüşür.\n\n🕊 **İnsanları Memnun Etme:** Bazen gerçek yerine barışı önceliklendirirsiniz — uyum için samimiyeti riske atarsınız.\n\n🌪 **İdealist Baskı:** Kendinizi imkansız standartlara tutarsınız, ışığın bile dinlenmeye ihtiyacı olduğunu unutursunuz.\n\n🧩 **Kendini İhmal Etme:** Başkalarına o kadar çok enerji dökersiniz ki kendi büyümenizi unutursunuz.\n\n💣 **Çatışmadan Kaçınma:** Yüzleşme yerine anlayışı tercih edersiniz — ancak bazı sistemler sadece sürtünme yoluyla değişir."
+          },
+          "section5": {
+            "title": "🏛 KARİYER YOLLARI — Vizyonun İnsanlıkla Buluştuğu Yer",
+            "text": "ENFJ'ler iletişim, liderlik ve dönüşümün birleştiği yerlerde gelişir. Başkalarının güçlerini ve amaçlarını açmalarına yardımcı olduğunuzda en iyi halinizdesiniz.\n\n💡 **Koçluk ve Liderlik:** Motivasyon konuşmacısı, takım lideri, İK direktörü veya yaşam koçu — büyümeyi ilham ettiğiniz her yer.\n🎭 **Medya ve Eğitim:** Aydınlatan ve birleştiren öğretim, yayıncılık veya hikaye anlatımı.\n🌍 **Sivil Toplum ve Sosyal Etki:** Empatiyle yönlendirilen STK direktörü, reform savunucusu veya kamu görevlisi.\n🧠 **Psikoloji ve Danışmanlık:** Derin dinleme ve samimi rehberlikle zihinleri iyileştirme.\n🎨 **Yaratıcı Strateji ve Markalama:** Kalpleri hareket ettiren ve değişimi sürükleyen mesajlar oluşturma."
+          },
+          "section6": {
+            "title": "🌱 BÜYÜME YOLU — İlhamdan Dürüstlüğe",
+            "text": "🌼 **Duygusal Sınırlar Belirleyin:** Şefkat kendini silme anlamına gelmez. Enerjinizi başkalarını koruduğunuz kadar şiddetle koruyun.\n\n🧘 **Kontrolü Bırakın:** Bazen insanlar uçmadan önce düşmeye ihtiyaç duyar. Rehberlik edin — kurtarmayın.\n\n🔥 **Mükemmelliği Yeniden Tanımlayın:** İnsanlığın güzelliği kusurlulukta yatar. Kusurlarınızı açıkça kucakladığınızda liderliğiniz büyür.\n\n💬 **Rahatsız Edici Gerçekleri Konuşun:** Dürüstlük omurgalı empatidir.\n\n🌿 **Sessizce Yenileyin:** İnzivalar, yalnızlık ve doğa duygusal netliğinizi sıfırlar. Boş bir ruhtan dökemezsiniz."
+          },
+          "section7": {
+            "title": "🔮 GELECEK GÖRÜNÜMÜ — Makineler Çağında Mentor",
+            "text": "Otomasyon yükseldikçe, duygusal zeka yeni altın olur. ENFJ'ler liderliği, eğitimi ve teknolojiyi yeniden insanileştirmede vazgeçilmez olacak. Mekanik çağda anlamın yorumlayıcılarısınız.\n\n🌍 **Yeni Roller:**\n- AI Etik ve İnsan Odaklı Tasarım 🤖\n- Örgütsel Kültür Mimarı 🏢\n- Küresel Eğitim Yenilikçisi 📚\n- Duygusal Liderlik Danışmanı 🧠\n- Sağlık ve Ruh Sağlığı Savunucusu 🌱\n\nEmpatiniz modası geçmiş değil — geleceğin eksik işletim sistemidir."
+          },
+          "section8": {
+            "title": "🌤 GÜNLÜK UYGULAMALAR — Güçlendirici Liderin Alışkanlıkları",
+            "text": "1️⃣ **Sabah Şükran Taraması:** Bu hafta büyümenize yardımcı olan üç kişiyi adlandırın. Birine ulaşın.  \n2️⃣ **Empati Detoksu:** Günlük 15 dakika sosyal girdi olmadan geçirin — sessizlik şefkati sıfırlar.  \n3️⃣ **Günde Bir Dürüst Konuşma:** Gerçek övgüden daha hızlı güven inşa eder.  \n4️⃣ **Dinleyerek Öğretin:** Tavsiye vermeden önce sorun.  \n5️⃣ **Motifi Yansıtın:** Her \"evet\"in amaca, suçluluğa değil uyumlu olduğundan emin olun.  \n6️⃣ **Küçük Kazanımları Kutlayın:** Kendi kilometre taşlarınızı gözden kaçırmadan başkalarını yükseltin."
+          },
+          "section9": {
+            "title": "🌟 ÜNLÜ ENFJ'LER — Dünyayı Hareket Ettiren Sesler",
+            "text": "🎤 **Oprah Winfrey** — Empati imparatorluğa dönüştü.  \n🏛 **Barack Obama** — Umut ve diplomasinin sesi.  \n🎬 **Emma Watson** — Samimiyet aracılığıyla savunuculuk.  \n📚 **Maya Angelou** — Ahlaki liderlik olarak şiir.  \n🎭 **Martin Luther King Jr.** — Vizyoner cesaret toplu uyanışa dönüştü.  \n🎤 **Lady Gaga** — Performans sanatı olarak empati.  \n🧠 **Nelson Mandela** — Siyasi deha olarak bağışlama.  \n🌍 **Malala Yousafzai** — Direniş ve yeniden doğuş olarak eğitim."
+          },
+          "section10": {
+            "title": "💖 SONUÇ — Dünyaya Yükselmeyi Öğreten Kalp",
+            "text": "Liderliğin hakimiyet gerektirmediğinin kanıtısınız — şefkat yoluyla yön gerektirir. Varlığınız yükseltir, sözleriniz iyileştirir ve dürüstlüğünüz başkaları duvar inşa ederken köprüler inşa eder.\n\nDünya bağlantı için aç ve siz onu beslemek için doğdunuz. Dokunduğunuz her kişi rehberliğinizin bir kıvılcımını ileriye taşır. Hem öğretmen hem de meşale taşıyıcısısınız — büyüklüğün güç değil, amaç olduğunun yaşayan hatırlatıcısı.\n\nKalple liderlik etmeye devam edin. Gelecek sizin gibi sesleri dinler."
+          }
+        },
+        "ENFP": {
+          "title": "ENFP Kişilik Detaylı Raporunuz",
+          "subtitle": "Benzersiz özelliklerinize dayanarak, temel potansiyeliniz ve büyüme yolunuz hakkında derinlemesine bir inceleme.",
+          "cta": {
+            "text": "🔓 Kişiselleştirilmiş gelişim yol haritanızı açmaya hazır mısınız?",
+            "subtext": "Tam analiziniz, pratik rehberler, büyüme taktikleri ve tipiniz için gerçek dünya örneklerini içerir.",
+            "button": "Tam Raporumu Aç"
+          }
+        },
+        "enfp": {
+          "section1": {
+            "title": "🔥 KİM SİZSİNİZ — Hayal Gücü ve Etkinin Kampanyacısı",
+            "text": "ENFP'ler insan potansiyelinin kaşifleridir — meraklı, tutkulu ve karşı konulmaz şekilde canlı. Teoride kalmayı reddeden fikirsiz, ilhamı harekete dönüştüren kıvılcımsınız.\n\nBaşkaları problem görürken siz olasılık görürsünüz. Sadece yaşamazsınız — *genişlersiniz*. Her konuşma, her bağlantı, her proje yeni ve anlamlı bir şeye açılan bir portal gibi hissettirir."
+          },
+          "section2": {
+            "title": "🌈 TEMEL ÖZELLİKLER — Vizyoner Bağlantıcı",
+            "text": "🔹 **Sınırsız Merak:** Deneyimleri hazine gibi toplarsınız. Her şey sizi büyüler.  \n🔹 **Duygusal İçgörü:** Yüzeyin altını görürsünüz — insanlar, kalıplar, olasılıklar.  \n🔹 **Samimi İfade:** Kalpten konuşursunuz, bir senaryodan değil.  \n🔹 **Bulaşıcı Coşku:** Heyecanınızla başkalarını enerjilendirirsiniz.  \n🔹 **İdealizm:** Dünyanın daha iyi olabileceğine — ve *olması gerektiğine* inanırsınız."
+          },
+          "section3": {
+            "title": "💪 GÜÇLÜ YÖNLER — Hareketi İlham Eden Enerji",
+            "text": "🎯 **Vizyon:** Büyük resmi ve herkesteki potansiyeli görürsünüz.  \n💬 **İletişim:** Duyguları değişimi motive eden hikayelere dönüştürürsünüz.  \n🌍 **Uyarlanabilirlik:** Yeni ortamlarda gelişirsiniz — meydan okuma sizin oksijeninizdir.  \n🧠 **Yaratıcı Problem Çözme:** Başkalarının var olduğunu bilmediği noktaları birleştirirsiniz.  \n❤️ **Empati:** İnsanların görüldüğünü, duyulduğunu ve yetenekli olduklarını hissettirirsiniz."
+          },
+          "section4": {
+            "title": "⚠️ ZORLUKLAR — Çok Parlak Yanan Ateş",
+            "text": "🔥 **Dağınık Odak:** Birçok şeye başlarsınız ama bitirmekte zorlanırsınız.  \n💭 **İlişkileri Aşırı Düşünme:** Kendinizi tüketene kadar güdüleri analiz edersiniz.  \n🌊 **Duygusal Kasırga:** Derinden hissedersiniz — bazen dinlenmek için çok derinden.  \n💬 **Aşırı Taahhüt:** Her şeye evet dersiniz çünkü her şey sizi heyecanlandırır.  \n🌙 **Rutin Korkusu:** Yapı bir kafes gibi hissettirir, ama aslında hayallerinizin iskelesidir."
+          },
+          "section5": {
+            "title": "🌍 KARİYER YOLLARI — Metriklerden Önce Anlam",
+            "text": "Yaratıcılık, duygu ve bağlantının amaçla buluştuğu yerlerde gelişirsiniz. *Önemli* olan işe ihtiyacınız var — hareket etmenize, inşa etmenize, ilham vermenize ve gelişmenize izin veren.\n\n🎤 **Yaratıcı Alanlar:** Yazar, pazarlamacı, film yapımcısı, içerik yaratıcısı.  \n💬 **İnsan Odaklı Kariyerler:** Koç, öğretmen, psikolog, İK stratejisti.  \n🌱 **İnovasyon ve Startuplar:** Marka tasarımcısı, yaratıcı direktör, girişimci.  \n🎭 **Medya ve İletişim:** Gazeteci, influencer, motivasyonel konuşmacı.  \n🧭 **Sosyal Etki:** Aktivist, STK lideri, sürdürülebilirlik savunucusu."
+          },
+          "section6": {
+            "title": "🌱 BÜYÜME YOLU — Tutkuyu Güce Dönüştürmek",
+            "text": "🌤 **Disiplin Özgürlüktür:** Rutin sizi kısıtlamaz — yaratıcılığınızı güçlendirir.  \n🧘 **Kendinizi Topraklayın:** Düzeltmeden önce hissedin.  \n🪞 **Başladığınızı Bitirin:** Tamamlama güven inşa eder, sıkıntı değil.  \n💬 **Daha Fazla Dinleyin, Daha Az Açıklayın:** Her düşünce güçlü olmak için söylenmek zorunda değildir.  \n🌻 **Enerjinizi Koruyun:** Kendi aleviniz sönerse başkalarını tutuşturamazsınız."
+          },
+          "section7": {
+            "title": "🔮 GELECEK GÖRÜNÜMÜ — Anlamın Mimarı",
+            "text": "Yaklaşan otomasyon çağında, insanlık sizin sunduğunuz şeyi özleyecek — duygusal zeka, vizyon ve cesaret. Teknolojinin insan seviyesine geri getiren hikaye anlatıcıları, öğretmenler ve yenilikçilersiniz.\n\n🌍 **Yeni Roller:**  \n- Topluluk İnşacısı 🌐  \n- Amaç Stratejisti 💡  \n- Dijital Hümanist 🤖  \n- Deneyim Mimarı 🎨  \n- Bilinçli Girişimci 🌱  \n\nEnerjiniz kaos değil — en canlı biçiminde yaratımdır."
+          },
+          "section8": {
+            "title": "📆 GÜNLÜK UYGULAMALAR — Disiplinle Işık",
+            "text": "1️⃣ **Sabah Odak Ritüeli:** Bugün *gerçekten önemli* olan ilk 3 şeyi yazın.  \n2️⃣ **10 Dakika Kuralı:** Bir görev bunaltıcı geliyorsa, sadece 10 dakika başlayın — momentum takip edecektir.  \n3️⃣ **Öğle Sıfırlama:** Bedeninizi hareket ettirin. Enerji netliği besler.  \n4️⃣ **Akşam Yansıması:** Mükemmelliği değil, etkiyi kutlayın.  \n5️⃣ **Bir Küçük Bitirme:** Her günü bir görevi tamamlayarak bitirin — kapanış güven inşa eder."
+          },
+          "section9": {
+            "title": "🌟 ÜNLÜ ENFP'LER — Vizyonun Sesleri",
+            "text": "🎤 **Robin Williams** — Gerçek olarak neşe.  \n📚 **Oscar Wilde** — İsyan olarak zeka.  \n🎬 **Robert Downey Jr.** — Samimiyet aracılığıyla yeniden icat.  \n🎨 **Salvador Dalí** — Özgürlük olarak eksantrik deha.  \n🎧 **Alicia Keys** — Güçlendirme olarak duygu.  \n🎭 **Will Rogers** — İnsanlık olarak mizah.  \n🎵 **Ellie Goulding** — Melodi olarak yoğunluk."
+          },
+          "section10": {
+            "title": "💖 SONUÇ — Dünyayı Uyandıran Alev",
+            "text": "Düşünceleri harekete, hareketi anlama dönüştüren kıvılcımsınız. İnsanlığa olasılığın fantezi olmadığını — *yakıt* olduğunu hatırlatırsınız.\n\nZihniniz fikirlerin bir kaleydoskopu, kalbiniz değişim için bir pusula. Dünyayı sadece olduğu gibi görmezsiniz — ne olabileceğini görürsünüz.\n\nİlham vermeye, bağlanmaya ve yaratmaya devam edin — çünkü her devrim yüksek sesle hayal etmeye cesaret eden biriyle başlar."
+          }
+        },
+        "ISTJ": {
+          "title": "ISTJ Kişilik Detaylı Raporunuz",
+          "subtitle": "Benzersiz özelliklerinize dayanarak, temel potansiyeliniz ve büyüme yolunuz hakkında derinlemesine bir inceleme.",
+          "cta": {
+            "text": "🔓 Kişiselleştirilmiş gelişim yol haritanızı açmaya hazır mısınız?",
+            "subtext": "Tam analiziniz, pratik rehberler, büyüme taktikleri ve tipiniz için gerçek dünya örneklerini içerir.",
+            "button": "Tam Raporumu Aç"
+          }
+        },
+        "istj": {
+          "section1": {
+            "title": "🏛 KİM SİZSİNİZ — Düzen ve Dürüstlüğün Koruyucusu",
+            "text": "ISTJ'ler güvenilirliğin mühendisleridir — pragmatik, detay odaklı ve sessizce güçlü. Mükemmelliğin bir hedef değil, bir alışkanlık olduğuna inanırsınız. Kaos çıktığında başkalarının güvendiği kişisiniz, gürültü veya dram olmadan teslim eden.\n\nİlkeye göre yaşarsınız, yapı ve mantıkla yönlendirilirsiniz. Başkaları karmaşıklık görürken, siz bir süreç görürsünüz. Başkaları doğaçlama yaparken, siz kalıcı sistemler inşa edersiniz."
+          },
+          "section2": {
+            "title": "⚙️ TEMEL ÖZELLİKLER — Sistematik Gerçekçi",
+            "text": "🔹 **Hassasiyet Odaklı:** Başkalarının gözden kaçırdığı tutarsızlıkları fark edersiniz ve önemli olmadan önce düzeltirsiniz.  \n🔹 **Güvenilirlik:** Sözünüz sözleşmenizdir. Taahhüt ettiğinizde, *ciddi* anlamına gelir.  \n🔹 **Geleneksel Düşünce:** İşe yarayan şeyi onurlandırır ve sessizce geliştirirsiniz.  \n🔹 **Disiplin:** Rutinler temelinizdir — kısıtlama değil, mükemmellik için yapı.  \n🔹 **Analitik Dürüstlük:** Mantık, veri ve adalete dayalı kararlar verirsiniz."
+          },
+          "section3": {
+            "title": "💪 GÜÇLÜ YÖNLER — Sessiz Verimlilik, Yüksek Sonuçlar",
+            "text": "📈 **Tutarlılık:** Motivasyona ihtiyacınız yok; disiplininiz var.  \n🧩 **Problem Çözme:** Kaosu çözülebilir bileşenlere ayırırsınız.  \n🏗 **Organizasyon:** Başkaları sadece karmaşa görürken, siz düzen getirirsiniz.  \n💬 **Pragmatizm:** Tavsiyeniz uygulanabilir — soyut değil.  \n🔒 **Güvenilirlik:** Heyecan söndükten çok sonra bile devam edersiniz."
+          },
+          "section4": {
+            "title": "⚠️ ZORLUKLAR — Sorumluluğun Ağırlığı",
+            "text": "🕰 **Mükemmeliyetçilik:** Kusursuzluğu kovalarken bitirmekte zorlanabilirsiniz.  \n🌧 **Duygusal Mesafe:** Duygular elektronik tablolara düzgün sığmaz — ama yine de önemlidir.  \n💭 **Katılık:** Yeni fikirler kanıtlanana kadar verimsiz görünebilir.  \n🚧 **Aşırı Sorumluluk:** Genellikle başkalarına ait yükleri taşırsınız.  \n🌙 **Öz Eleştiri:** Kendinizden başkalarının talep etmeye cesaret edemeyeceği şeyleri beklersiniz."
+          },
+          "section5": {
+            "title": "🏢 KARİYER YOLLARI — Hassasiyet Amaçla Buluşuyor",
+            "text": "Netlik, tutarlılık ve sonuçların başarıyı tanımladığı yerlerde gelişirsiniz. Uzmanlık ve özenin ödüllendirildiği yapılandırılmış ortamlarda mükemmelleşirsiniz.\n\n💼 **İş ve Finans:** Muhasebeci, analist, operasyon yöneticisi, denetçi.  \n🏛 **Hukuk ve Yönetişim:** Hakim, hukuk danışmanı, uyum görevlisi.  \n🧠 **STEM Alanları:** Mühendis, sistem mimarı, veri bilimci, araştırmacı.  \n⚖️ **Yönetim ve Lojistik:** Proje koordinatörü, tedarik zinciri uzmanı, arşivci.  \n🎓 **Eğitim ve Öğretim:** Eğitmen, akademik danışman, bilgi yöneticisi."
+          },
+          "section6": {
+            "title": "🌱 BÜYÜME YOLU — Görevden Memnuniyete",
+            "text": "🌤 **Uyarlanabilirliği Değer Verin:** Kurallar araçlardır — duvarlar değil. Mantık gerektirdiğinde ayarlayın.  \n🪞 **Duyguyu Kabul Edin:** Empati hassasiyetinizi keskinleştirir, zayıflatmaz.  \n💬 **Varsaymadan Önce Sorun:** İşbirliği verimliliğinizi çoğaltır.  \n🌿 **Başarıyı Yeniden Tanımlayın:** İlerleme sadece doğruluk değil — dengedir.  \n☕ **Üretken Dinlenme:** İyileşme sistemin bir parçasıdır; kasıtlı olarak planlayın."
+          },
+          "section7": {
+            "title": "🔮 GELECEK GÖRÜNÜMÜ — Güvenin Mimarı",
+            "text": "Dünya dijitalleştikçe, istikrar bir lüks haline gelecek — ve siz onun tedarikçisi olacaksınız. Güvenilirlik, uyum ve yapısal düşünme hediyeniz, hesap verebilirlik arayan endüstrileri tanımlayacak.\n\n🌍 **Yeni Roller:**  \n- Siber Güvenlik Denetçisi 🔐  \n- Veri Uyum Direktörü 📊  \n- Altyapı Mühendisi 🏗  \n- Süreç Optimizasyon Analisti ⚙️  \n- AI Operasyon Denetçisi 🤖  \n\nHızla takıntılı bir dünyada, siz *hassasiyetin* standardı olacaksınız."
+          },
+          "section8": {
+            "title": "📆 GÜNLÜK UYGULAMALAR — Sakinliğin Disiplini",
+            "text": "1️⃣ **Sabah Düzeni:** Her güne öncelikleri hizalayarak başlayın — yapı huzur sağlar.  \n2️⃣ **Mikro İyileştirmeler:** Haftada bir sistemi yükseltin; mükemmellik yinelemedir.  \n3️⃣ **Planlanmış Dinlenme:** Dinlenmeyi herhangi bir görev gibi koruyun — bakımdır, lüks değil.  \n4️⃣ **Geri Bildirim Cuma Günleri:** Yargılamadan kazanımları ve dersleri gözden geçirin.  \n5️⃣ **Akşam Yansıması:** Sorun, 'Bugün kalıcı bir şey inşa ettim mi?'"
+          },
+          "section9": {
+            "title": "🏅 ÜNLÜ ISTJ'LER — Güvenilirliğin Mimarı",
+            "text": "🏛 **Natalie Portman** — Disiplin zeka ile buluşuyor.  \n📊 **Jeff Bezos** — Süreç imparatorluk olarak.  \n🎖 **George Washington** — Liderlik olarak dürüstlük.  \n⚖️ **Angela Merkel** — Dayanıklılıkla mantık.  \n🏗 **Anthony Hopkins** — Hassasiyet aracılığıyla zanaat.  \n📚 **Hermione Granger (kurgusal)** — Metodik parlaklık somutlaştırıldı."
+          },
+          "section10": {
+            "title": "💖 SONUÇ — Yapının Gücü, Görevin Güzelliği",
+            "text": "İlerlemeyi tutarlı tutan ritimsiniz, başarının arkasındaki çerçeve. Mirasları gürültüyle değil, görünmez hale gelene kadar tekrarlanan mükemmellikle inşa edersiniz.\n\nHayatınızın amacı parlamak değil — her şeyin *çalıştığından* emin olmaktır. Yine de bunu yaparken, *parlarsınız* — sessizce, istikrarlı bir şekilde, sonsuza kadar. Güvenilirliğin sıkıcı olmadığının kanıtısınız; kahramanca."
+          }
+        },
+        "ESFJ": {
+          "title": "ESFJ Kişilik Detaylı Raporunuz",
+          "subtitle": "Benzersiz özelliklerinize dayanarak, temel potansiyeliniz ve büyüme yolunuz hakkında derinlemesine bir inceleme.",
+          "cta": {
+            "text": "🔓 Kişiselleştirilmiş gelişim yol haritanızı açmaya hazır mısınız?",
+            "subtext": "Tam analiziniz, pratik rehberler, büyüme taktikleri ve tipiniz için gerçek dünya örneklerini içerir.",
+            "button": "Tam Raporumu Aç"
+          }
+        },
+        "esfj": {
+          "section1": {
+            "title": "💎 KİM SİZSİNİZ — Bağlantı ve Bakımın Konsolosu",
+            "text": "ESFJ'ler insan deneyiminin bakıcılarıdır — empatik, sorumlu ve sosyal olarak zeki. İnsanları nezaket ve düzen aracılığıyla bir araya getirir, herkesin güvende, değerli ve dahil edilmiş hissetmesine yardımcı olursunuz.\n\nNadir bir kalp ve yapı karışımına sahipsiniz: sıcak ama organize, duygusal ama verimli. Dikkat aramazsınız — başkaları için tekrar tekrar ortaya çıkarak saygı kazanırsınız."
+          },
+          "section2": {
+            "title": "🌷 TEMEL ÖZELLİKLER — Organize Eden Kalp",
+            "text": "🔹 **Harekette Empati:** İnsanların ihtiyaçlarını içgüdüsel olarak algılarsınız ve onları karşılamak için hareket edersiniz.  \n🔹 **Sosyal Farkındalık:** Başkalarının kendilerini rahat ve görülmüş hissetmelerini sağlayan şeyi bilirsiniz.  \n🔹 **Güvenilirlik:** Taahhüt ettiğinizde, her zaman sonuna kadar gidersiniz.  \n🔹 **Sadakat:** İlişkilere derinden verirsiniz ve karşılığında karşılıklı saygı beklersiniz.  \n🔹 **İstikrar İnşacısı:** Uyumu destekleyen yapı yaratırsınız — evlerden takımlara topluluklara."
+          },
+          "section3": {
+            "title": "🌟 GÜÇLÜ YÖNLER — Varlığın Nazik Gücü",
+            "text": "💬 **İletişim:** Başkalarının sıcaklık ve netlik aracılığıyla anlaşıldığını hissettirirsiniz.  \n🤝 **Takım Liderliği:** Grupları adalet, duygusal zeka ve özenle birleştirirsiniz.  \n🏡 **Organizasyon:** Katı değil, davetkar hissettiren düzen yaratırsınız.  \n🌺 **Güvenilirlik:** Tutarlılığı sık sık unutan bir dünyada sabitsiniz.  \n❤️ **Cömertlik:** Sevgiyi pratik biçimlerde verirsiniz — hizmet, dikkat ve bağlılık."
+          },
+          "section4": {
+            "title": "⚠️ ZORLUKLAR — Önemseme Ağırlaştığında",
+            "text": "🌧 **Aşırı Sorumluluk:** Kendinizi unutana kadar başkalarının yüklerini üstlenirsiniz.  \n💭 **Onaylanmama Korkusu:** Beğenilmek konusunda derinden endişelenirsiniz — bazen çok fazla.  \n🕰 **Hizmette Mükemmeliyetçilik:** Her ihtiyacı kusursuz bir şekilde karşılamayı kendinizden beklersiniz.  \n💬 **Hayır Demede Zorluk:** Kalbiniz açıkken sınırlar reddedilme gibi hissettirir.  \n🌙 **Duygusal Tükenmişlik:** Sonsuza kadar verirsiniz — ta ki tükenmişlikten sessizce solana kadar."
+          },
+          "section5": {
+            "title": "🌍 KARİYER YOLLARI — Yapı Aracılığıyla Uyum İnşa Etme",
+            "text": "Liderliği empatiyle birleştiren rollerde gelişirsiniz — verimliliğin sistemlere değil, insanlara hizmet ettiği yerlerde. İdeal ortamınız takım çalışmasını, geleneği ve net beklentileri değerli bulur.\n\n🏫 **Eğitim ve Mentorluk:** Öğretmen, okul yöneticisi, akademik danışman.  \n🏥 **Sağlık ve Hizmet:** Hemşire, terapist, beslenme uzmanı, sağlık koordinatörü.  \n📋 **Organizasyon ve İK:** İK yöneticisi, etkinlik planlayıcısı, ofis direktörü.  \n🎤 **Halkla İlişkiler ve İletişim:** Sözcü, marka elçisi, sosyal medya yöneticisi.  \n🌸 **Topluluk Liderliği:** STK koordinatörü, hayır kurumu direktörü, kültürel organizatör."
+          },
+          "section6": {
+            "title": "🌱 BÜYÜME YOLU — Liderlik Olarak Öz Bakım",
+            "text": "🌤 **Sağlıklı Sınırlar Uygulayın:** Hayır demek bir sevgi eylemi olabilir — özellikle kendinize karşı.  \n🪞 **Kusursuzluğu Kabul Edin:** Değeriniz kusursuz hizmette değil, samimi bakımda.  \n💬 **Dürüst İhtiyaçları İfade Edin:** Başkalarının da size bakmasına izin verin — bağlantı karşılıklıdır.  \n🧘 **Yalnızlığı Önceliklendirin:** Sessizlik, gürültünün tükettiği empatiyi geri yükler.  \n🌻 **Yetki Verin ve Güvenin:** Başkalarını güçlendirmek liderliğinizin bir parçasıdır, kaybı değil."
+          },
+          "section7": {
+            "title": "🔮 GELECEK GÖRÜNÜMÜ — Dijital Dünyada İnsan Bağlantısı",
+            "text": "Dünya daha otomatik hale geldikçe, duygusal zekanız hiç olmadığı kadar değerli olacak. Teknoloji ile şefkat arasındaki köprüsünüz — makinelere insanları değiştirmek yerine onlara hizmet etmeyi öğretirsiniz.\n\n🌍 **Yeni Roller:**  \n- Topluluk Deneyim Yöneticisi 💬  \n- AI Etik İrtibat Görevlisi 🤖  \n- Duygusal Zeka Eğitmeni 🧠  \n- Sağlık İletişimcisi 🏥  \n- Kültürel Entegrasyon Danışmanı 🌐  \n\nEmpatiniz insan odaklı ilerlemenin bir sonraki çağını yönetecek."
+          },
+          "section8": {
+            "title": "📆 GÜNLÜK UYGULAMALAR — Topraklanmış Nezaket",
+            "text": "1️⃣ **Sabah Şükranı:** Gününüze iyi olan şeyleri fark ederek başlayın — eksik olanları değil.  \n2️⃣ **Kendiniz İçin Mola Zamanlayın:** İşler acil hissettirse bile duraklayın.  \n3️⃣ **Bir Dürüst Konuşma:** Bugün 'İyiyim' yerine gerçeği koyun.  \n4️⃣ **Küçük Neşe Ritüelleri:** Çiçekler, kokular veya temiz bir masa — detaylar huzurunuzu geri yükler.  \n5️⃣ **Akşam Yansıması:** Sorun, 'Bugün başkalarına yardım ettiğim kadar kendime de yardım ettim mi?'"
+          },
+          "section9": {
+            "title": "🌸 ÜNLÜ ESFJ'LER — Bakım ve Düzenin Sütunları",
+            "text": "🏛 **Jennifer Garner** — Nezaket aracılığıyla zarif liderlik.  \n🎤 **Ed Sheeran** — Uyum aracılığıyla duygusal bağlantı.  \n🎬 **Anne Hathaway** — Dengede sıcaklık ve güç.  \n⚖️ **Sally Field** — İnanç olarak empati.  \n🎭 **Sarah Jessica Parker** — Yaratıcı ifadeye dönüşen sosyal sezgi.  \n🏫 **Taylor Swift** — Duygusal hikaye anlatımı ve izleyicisine sadakati.  \n💼 **Hugh Jackman** — Karizma ile sarılmış güvenilirlik."
+          },
+          "section10": {
+            "title": "💖 SONUÇ — Şefkatli Liderliğin Gücü",
+            "text": "Topluluğun kalp atışısınız — bakımı yapıya, yapıyı aidiyete dönüştüren. Dünya sizin varlığınız nedeniyle daha pürüzsüz, daha yumuşak ve daha nazik çalışır.\n\nHediyeniz sadece empati değil — **sevgiyi işletmeye koyma** yeteneğidir. Bakımı ölçeklenebilir hale getirirsiniz. Duyguyu momentuma dönüştürürsünüz. İnsanlığa şefkat olmadan liderliğin sadece yönetim olduğunu hatırlatırsınız.\n\nSadece uyum inşa etmezsiniz — siz *uyumsunuz*, insan formunda yürüyen."
+          }
+        }
+      }
+    }
+  }
+}
+

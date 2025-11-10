@@ -36,7 +36,8 @@
     "questions": {
       "question": "Question {{current}} of {{total}}",
       "progress": "Progress",
-      "answerRequired": "Please select an answer to continue"
+      "answerRequired": "Please select an answer to continue",
+      "answer": "Answer"
     },
     "calculating": {
       "title": "Calculating your results...",
@@ -86,6 +87,130 @@
       "strengths": "Strengths",
       "weaknesses": "Weaknesses",
       "careers": "Career Matches"
+    },
+    "tests": {
+      "personality": {
+        "title": "Personality Type Test",
+        "subtitle": "Discover Your True Self",
+        "description": "Take our comprehensive personality assessment to discover your MBTI type and unlock insights about your strengths, career matches, and future potential.",
+        "cta_start": "Start Test",
+        "duration": "15 minutes",
+        "questions_count": "25 Questions",
+        "landing": {
+          "title": "Discover Your Personality Type",
+          "subtitle_part1": "Understand yourself better with our comprehensive MBTI assessment.",
+          "subtitle_part2": "Please answer honestly — there are no right or wrong answers. Your authenticity ensures the most accurate result.",
+          "personalities_title": "The 16 Personality Types",
+          "start_test": "Start Test",
+          "features": {
+            "accurate": "Accurate MBTI Assessment",
+            "detailed": "Detailed Personality Insights",
+            "careers": "Career Recommendations",
+            "future": "Future Role Predictions"
+          },
+          "start_button": "Start Personality Test"
+        },
+        "social_proof": {
+          "title": "Join thousands discovering their personality type",
+          "subtitle": "Over 500,000 people have taken this test",
+          "testimonial1": "This test helped me understand myself so much better!",
+          "testimonial2": "The career recommendations were spot-on.",
+          "testimonial3": "Finally, a personality test that makes sense."
+        },
+        "notice": {
+          "title": "Before You Begin",
+          "points": [
+            "This test takes approximately 15 minutes",
+            "Answer honestly for the most accurate results",
+            "There are no right or wrong answers",
+            "Your progress will be saved automatically"
+          ],
+          "understand_button": "I Understand, Let's Begin"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}",
+          "progress": "Progress",
+          "time_remaining": "Time Remaining",
+          "select_answer": "Please select an answer",
+          "auto_advance": "Automatically advancing to next question..."
+        },
+        "calculating": {
+          "title": "Calculating Your Personality Type",
+          "subtitle": "Analyzing your responses...",
+          "message": "This may take a few moments"
+        },
+        "email": {
+          "title": "Get Your Results",
+          "subtitle": "Enter your email to receive your detailed personality report",
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter a valid email address",
+          "continue_button": "Continue to Payment",
+          "privacy": "We respect your privacy. We'll never share your email."
+        },
+        "payment": {
+          "title": "Unlock Your Full Results",
+          "subtitle": "Get complete access to your detailed personality report",
+          "amount": "$1.95",
+          "description": "Access your detailed report instantly after payment.",
+          "features": [
+            "Complete personality type analysis",
+            "Detailed strengths and challenges",
+            "Ideal career matches",
+            "Future role predictions",
+            "Famous examples of your type"
+          ],
+          "pay_button": "Pay & Unlock Results",
+          "processing": "Processing payment...",
+          "success": "Payment successful!",
+          "error": "Payment failed. Please try again."
+        },
+        "results": {
+          "title": "Your Personality Type",
+          "subtitle": "{{type}} — {{nickname}}",
+          "sections": {
+            "core_characteristics": "Core Characteristics",
+            "strengths": "Strengths",
+            "challenges": "Challenges",
+            "ideal_careers": "Ideal Careers",
+            "future_roles": "Future Roles",
+            "famous_examples": "Famous Examples",
+            "examples": "Famous Examples",
+            "closing_quote": "Final Thoughts"
+          },
+          "share": {
+            "title": "Share Your Results",
+            "twitter": "Share on Twitter",
+            "instagram": "Share on Instagram",
+            "copy_link": "Copy Link",
+            "link_copied": "Link copied to clipboard!"
+          },
+          "actions": {
+            "retake": "Retake Test",
+            "home": "Back to Home"
+          }
+        },
+        "timer": {
+          "expired": "Time's up!",
+          "auto_submit": "Submitting automatically..."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "save_progress": "Failed to save progress.",
+          "submit": "Failed to submit test. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "flow": {
+          "start_test": "Start Test",
+          "analyzing_text": "Analyzing your results...",
+          "email_label": "Email Address",
+          "accept_terms": "I accept the Terms and Conditions",
+          "accept_privacy": "I agree to the Privacy Policy",
+          "accept_both": "Please accept both Terms and Conditions and Privacy Policy",
+          "continue_payment": "Continue to Payment",
+          "payment_amount": "$1.95"
+        }
+      }
     }
   }
 }

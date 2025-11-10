@@ -1,0 +1,278 @@
+[
+  {
+    "id": 1,
+    "text": "You prefer to work...",
+    "options": [
+      { "text": "With others in a lively environment", "axis": "E" },
+      { "text": "Alone in a quiet space", "axis": "I" },
+      { "text": "In small groups with close colleagues", "axis": "E" },
+      { "text": "Independently with minimal interaction", "axis": "I" },
+      { "text": "It depends on the project", "axis": "E" }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "When making decisions, you rely more on...",
+    "options": [
+      { "text": "Logic and objective analysis", "axis": "T" },
+      { "text": "Personal values and how it affects people", "axis": "F" },
+      { "text": "A combination of both", "axis": "T" },
+      { "text": "What feels right in the moment", "axis": "F" },
+      { "text": "Data and proven methods", "axis": "T" }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "You prefer information that is...",
+    "options": [
+      { "text": "Concrete, factual, and practical", "axis": "S" },
+      { "text": "Abstract, theoretical, and conceptual", "axis": "N" },
+      { "text": "Based on real-world examples", "axis": "S" },
+      { "text": "Focused on possibilities and patterns", "axis": "N" },
+      { "text": "A mix of concrete and abstract", "axis": "S" }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Your ideal weekend involves...",
+    "options": [
+      { "text": "A detailed plan with scheduled activities", "axis": "J" },
+      { "text": "Spontaneous adventures and flexibility", "axis": "P" },
+      { "text": "A rough outline with room for changes", "axis": "J" },
+      { "text": "Going with the flow completely", "axis": "P" },
+      { "text": "Some structure but open to surprises", "axis": "P" }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "In social situations, you...",
+    "options": [
+      { "text": "Feel energized and enjoy meeting new people", "axis": "E" },
+      { "text": "Prefer deep conversations with a few close friends", "axis": "I" },
+      { "text": "Can adapt but need alone time afterward", "axis": "I" },
+      { "text": "Thrive in large gatherings and parties", "axis": "E" },
+      { "text": "Enjoy both but in moderation", "axis": "E" }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "When someone is upset, you tend to...",
+    "options": [
+      { "text": "Offer logical solutions to their problem", "axis": "T" },
+      { "text": "Provide emotional support and understanding", "axis": "F" },
+      { "text": "Listen and help them process their feelings", "axis": "F" },
+      { "text": "Analyze the situation objectively", "axis": "T" },
+      { "text": "Combine empathy with practical advice", "axis": "F" }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "You learn best when...",
+    "options": [
+      { "text": "Following step-by-step instructions", "axis": "S" },
+      { "text": "Exploring concepts and making connections", "axis": "N" },
+      { "text": "Seeing practical applications immediately", "axis": "S" },
+      { "text": "Understanding the big picture first", "axis": "N" },
+      { "text": "Hands-on experience with guidance", "axis": "S" }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Your workspace is typically...",
+    "options": [
+      { "text": "Organized and everything has its place", "axis": "J" },
+      { "text": "Creative chaos that makes sense to you", "axis": "P" },
+      { "text": "Mostly organized with some creative mess", "axis": "J" },
+      { "text": "Flexible and adaptable to current needs", "axis": "P" },
+      { "text": "Organized when needed, relaxed otherwise", "axis": "P" }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "After a long day, you recharge by...",
+    "options": [
+      { "text": "Spending time with friends or family", "axis": "E" },
+      { "text": "Having quiet time alone", "axis": "I" },
+      { "text": "Engaging in a hobby or activity", "axis": "E" },
+      { "text": "Reading, meditating, or reflecting", "axis": "I" },
+      { "text": "A mix of social and alone time", "axis": "I" }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "When evaluating a job offer, you prioritize...",
+    "options": [
+      { "text": "Salary, benefits, and career growth", "axis": "T" },
+      { "text": "Company culture and alignment with values", "axis": "F" },
+      { "text": "Work-life balance and team dynamics", "axis": "F" },
+      { "text": "Opportunities for advancement and challenge", "axis": "T" },
+      { "text": "A combination of practical and personal factors", "axis": "F" }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "You prefer stories that...",
+    "options": [
+      { "text": "Focus on real events and factual accounts", "axis": "S" },
+      { "text": "Explore imaginative worlds and possibilities", "axis": "N" },
+      { "text": "Tell true stories with practical lessons", "axis": "S" },
+      { "text": "Challenge reality and explore what-ifs", "axis": "N" },
+      { "text": "Blend reality with creative elements", "axis": "N" }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "When planning a vacation, you...",
+    "options": [
+      { "text": "Create a detailed itinerary with reservations", "axis": "J" },
+      { "text": "Keep it flexible and see what happens", "axis": "P" },
+      { "text": "Plan key activities but leave room for spontaneity", "axis": "J" },
+      { "text": "Book flights and figure out the rest there", "axis": "P" },
+      { "text": "Have a rough plan but stay adaptable", "axis": "P" }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "In group discussions, you...",
+    "options": [
+      { "text": "Share ideas freely and think out loud", "axis": "E" },
+      { "text": "Listen first, then share well-thought-out points", "axis": "I" },
+      { "text": "Contribute actively and build on others' ideas", "axis": "E" },
+      { "text": "Process internally before speaking", "axis": "I" },
+      { "text": "Participate when you have something valuable to add", "axis": "I" }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "When giving feedback, you focus on...",
+    "options": [
+      { "text": "What needs improvement and how to fix it", "axis": "T" },
+      { "text": "How it affects people and their feelings", "axis": "F" },
+      { "text": "Being honest but considerate of emotions", "axis": "F" },
+      { "text": "Objective facts and measurable outcomes", "axis": "T" },
+      { "text": "Balancing truth with sensitivity", "axis": "F" }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "You trust information that is...",
+    "options": [
+      { "text": "Proven through experience and testing", "axis": "S" },
+      { "text": "Based on theories and future possibilities", "axis": "N" },
+      { "text": "Supported by concrete evidence", "axis": "S" },
+      { "text": "Innovative and forward-thinking", "axis": "N" },
+      { "text": "A combination of proven and innovative", "axis": "S" }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "Your approach to deadlines is...",
+    "options": [
+      { "text": "Finish early and have time to review", "axis": "J" },
+      { "text": "Work best under pressure near the deadline", "axis": "P" },
+      { "text": "Plan to finish early but sometimes cut it close", "axis": "J" },
+      { "text": "Thrive on last-minute energy and creativity", "axis": "P" },
+      { "text": "Adapt based on the project's importance", "axis": "P" }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "At parties, you...",
+    "options": [
+      { "text": "Enjoy mingling and meeting everyone", "axis": "E" },
+      { "text": "Prefer deep conversations with a few people", "axis": "I" },
+      { "text": "Start social but may need breaks", "axis": "E" },
+      { "text": "Feel drained and need alone time afterward", "axis": "I" },
+      { "text": "Enjoy it but in smaller doses", "axis": "I" }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "When solving problems, you...",
+    "options": [
+      { "text": "Analyze systematically and logically", "axis": "T" },
+      { "text": "Consider how solutions affect everyone involved", "axis": "F" },
+      { "text": "Look for the most efficient solution", "axis": "T" },
+      { "text": "Prioritize harmony and people's well-being", "axis": "F" },
+      { "text": "Balance logic with human impact", "axis": "F" }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "You're more interested in...",
+    "options": [
+      { "text": "What is real and currently happening", "axis": "S" },
+      { "text": "What could be and future possibilities", "axis": "N" },
+      { "text": "Practical applications and current trends", "axis": "S" },
+      { "text": "Innovation and potential breakthroughs", "axis": "N" },
+      { "text": "Both present reality and future potential", "axis": "N" }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "Your ideal work schedule is...",
+    "options": [
+      { "text": "Structured with clear routines", "axis": "J" },
+      { "text": "Flexible and adaptable to your energy", "axis": "P" },
+      { "text": "Mostly structured with some flexibility", "axis": "J" },
+      { "text": "Completely open and self-directed", "axis": "P" },
+      { "text": "Structure when needed, freedom when possible", "axis": "P" }
+    ]
+  },
+  {
+    "id": 21,
+    "text": "When learning something new, you prefer...",
+    "options": [
+      { "text": "Hands-on practice and immediate application", "axis": "S" },
+      { "text": "Understanding concepts and exploring ideas", "axis": "N" },
+      { "text": "Step-by-step tutorials with examples", "axis": "S" },
+      { "text": "Big picture understanding first", "axis": "N" },
+      { "text": "A mix of theory and practice", "axis": "S" }
+    ]
+  },
+  {
+    "id": 22,
+    "text": "You make decisions by...",
+    "options": [
+      { "text": "Weighing pros and cons carefully", "axis": "T" },
+      { "text": "Considering values and personal impact", "axis": "F" },
+      { "text": "Analyzing data and outcomes", "axis": "T" },
+      { "text": "Following your heart and intuition", "axis": "F" },
+      { "text": "Combining analysis with values", "axis": "F" }
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Your energy comes from...",
+    "options": [
+      { "text": "Interacting with others and external activities", "axis": "E" },
+      { "text": "Quiet reflection and internal processing", "axis": "I" },
+      { "text": "A balance of social and solo activities", "axis": "E" },
+      { "text": "Deep work and focused concentration", "axis": "I" },
+      { "text": "Meaningful connections and personal time", "axis": "I" }
+    ]
+  },
+  {
+    "id": 24,
+    "text": "You prefer tasks that are...",
+    "options": [
+      { "text": "Clearly defined with specific steps", "axis": "J" },
+      { "text": "Open-ended with creative freedom", "axis": "P" },
+      { "text": "Structured but allow for innovation", "axis": "J" },
+      { "text": "Flexible and adaptable to change", "axis": "P" },
+      { "text": "A mix of structure and flexibility", "axis": "P" }
+    ]
+  },
+  {
+    "id": 25,
+    "text": "When facing uncertainty, you...",
+    "options": [
+      { "text": "Seek concrete information and facts", "axis": "S" },
+      { "text": "Explore possibilities and potential outcomes", "axis": "N" },
+      { "text": "Look for proven solutions and patterns", "axis": "S" },
+      { "text": "Imagine various scenarios and what-ifs", "axis": "N" },
+      { "text": "Combine research with creative thinking", "axis": "N" }
+    ]
+  }
+]
+

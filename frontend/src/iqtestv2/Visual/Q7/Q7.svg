@@ -1,0 +1,33 @@
+<svg width="580" height="478" viewBox="0 0 580 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="50.5" y="0.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="50.5" y="50.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="100.5" y="50.5" width="49" height="49" fill="black" stroke="black"/>
+<rect x="100.5" y="0.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="150.5" y="0.5" width="49" height="49" fill="black" stroke="black"/>
+<rect x="380.5" y="0.5" width="49" height="49" fill="black" stroke="black"/>
+<rect x="430.5" y="0.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="430.5" y="50.5" width="49" height="49" fill="black" stroke="black"/>
+<rect x="480.5" y="50.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="480.5" y="0.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="530.5" y="0.5" width="49" height="49" fill="#D9D9D9" stroke="black"/>
+<rect x="529.5" y="135.5" width="49" height="49" transform="rotate(90 529.5 135.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="529.5" y="185.5" width="49" height="49" transform="rotate(90 529.5 185.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="479.5" y="185.5" width="49" height="49" transform="rotate(90 479.5 185.5)" fill="black" stroke="black"/>
+<rect x="479.5" y="235.5" width="49" height="49" transform="rotate(90 479.5 235.5)" fill="black" stroke="black"/>
+<rect x="529.5" y="235.5" width="49" height="49" transform="rotate(90 529.5 235.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="529.5" y="285.5" width="49" height="49" transform="rotate(90 529.5 285.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="199.5" y="469.5" width="49" height="49" transform="rotate(180 199.5 469.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="149.5" y="469.5" width="49" height="49" transform="rotate(180 149.5 469.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="149.5" y="419.5" width="49" height="49" transform="rotate(180 149.5 419.5)" fill="black" stroke="black"/>
+<rect x="99.5" y="419.5" width="49" height="49" transform="rotate(180 99.5 419.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="99.5" y="469.5" width="49" height="49" transform="rotate(180 99.5 469.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="49.5" y="469.5" width="49" height="49" transform="rotate(180 49.5 469.5)" fill="black" stroke="black"/>
+<rect x="50.5" y="334.5" width="49" height="49" transform="rotate(-90 50.5 334.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="50.5" y="284.5" width="49" height="49" transform="rotate(-90 50.5 284.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="100.5" y="284.5" width="49" height="49" transform="rotate(-90 100.5 284.5)" fill="black" stroke="black"/>
+<rect x="100.5" y="234.5" width="49" height="49" transform="rotate(-90 100.5 234.5)" fill="black" stroke="black"/>
+<rect x="50.5" y="234.5" width="49" height="49" transform="rotate(-90 50.5 234.5)" fill="#D9D9D9" stroke="black"/>
+<rect x="50.5" y="184.5" width="49" height="49" transform="rotate(-90 50.5 184.5)" fill="#D9D9D9" stroke="black"/>
+<path d="M473.864 435.364V434.955C473.909 430.614 474.364 427.159 475.227 424.591C476.091 422.023 477.318 419.943 478.909 418.352C480.5 416.761 482.409 415.295 484.636 413.955C485.977 413.136 487.182 412.17 488.25 411.057C489.318 409.92 490.159 408.614 490.773 407.136C491.409 405.659 491.727 404.023 491.727 402.227C491.727 400 491.205 398.068 490.159 396.432C489.114 394.795 487.716 393.534 485.966 392.648C484.216 391.761 482.273 391.318 480.136 391.318C478.273 391.318 476.477 391.705 474.75 392.477C473.023 393.25 471.58 394.466 470.42 396.125C469.261 397.784 468.591 399.955 468.409 402.636H459.818C460 398.773 461 395.466 462.818 392.716C464.659 389.966 467.08 387.864 470.08 386.409C473.102 384.955 476.455 384.227 480.136 384.227C484.136 384.227 487.614 385.023 490.568 386.614C493.545 388.205 495.841 390.386 497.455 393.159C499.091 395.932 499.909 399.091 499.909 402.636C499.909 405.136 499.523 407.398 498.75 409.42C498 411.443 496.909 413.25 495.477 414.841C494.068 416.432 492.364 417.841 490.364 419.068C488.364 420.318 486.761 421.636 485.557 423.023C484.352 424.386 483.477 426.011 482.932 427.898C482.386 429.784 482.091 432.136 482.045 434.955V435.364H473.864ZM478.227 455.545C476.545 455.545 475.102 454.943 473.898 453.739C472.693 452.534 472.091 451.091 472.091 449.409C472.091 447.727 472.693 446.284 473.898 445.08C475.102 443.875 476.545 443.273 478.227 443.273C479.909 443.273 481.352 443.875 482.557 445.08C483.761 446.284 484.364 447.727 484.364 449.409C484.364 450.523 484.08 451.545 483.511 452.477C482.966 453.409 482.227 454.159 481.295 454.727C480.386 455.273 479.364 455.545 478.227 455.545Z" fill="#3A506B"/>
+</svg>

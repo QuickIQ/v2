@@ -6,8 +6,9 @@ import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
-import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap } from 'lucide-react';
+import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, UserCircle, Heart } from 'lucide-react';
 import { useMobile } from '../hooks/useMobile';
+import { usePersonalityTestStore } from '../store/personalityTestStore';
 import '../App.css';
 
 function Home() {
@@ -36,7 +37,21 @@ function Home() {
           translated_name: 'IQ Test',
         };
         
-        setTests([iqTest, ...data]);
+        // Add Personality Test card
+        const personalityTest: Test = {
+          id: 999998, // Temporary ID for personality test
+          name: 'Personality Type Test',
+          slug: 'personality',
+          category: 'Personality',
+          enabled: true,
+          default_language: 'en',
+          is_premium: false,
+          price_cents: 0,
+          test_type: 'personality',
+          translated_name: 'Personality Type Test',
+        };
+        
+        setTests([iqTest, personalityTest, ...data]);
       } catch (err: any) {
         setError(err.message || t('common.error'));
       } finally {
@@ -267,6 +282,133 @@ function Home() {
       </section>
 
       <main className="container" style={{ paddingTop: '80px', paddingBottom: '80px', position: 'relative', zIndex: 1 }}>
+        {/* Developer Control Panel - TEMPORARY */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          style={{
+            background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)',
+            borderRadius: '16px',
+            padding: isMobile ? '20px' : '32px',
+            marginBottom: isMobile ? '32px' : '48px',
+            boxShadow: '0 8px 32px rgba(255, 107, 107, 0.3)',
+            border: '2px solid rgba(255, 255, 255, 0.2)',
+          }}
+        >
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            marginBottom: '20px',
+          }}>
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.2)',
+              borderRadius: '8px',
+              padding: '8px 12px',
+              fontSize: '12px',
+              fontWeight: '700',
+              color: 'white',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+            }}>
+              🔧 Developer Only
+            </div>
+            <h2 style={{
+              fontSize: isMobile ? '20px' : '24px',
+              fontWeight: '700',
+              color: 'white',
+              margin: 0,
+            }}>
+              Personality Unlock Pages Control Panel
+            </h2>
+          </div>
+          <p style={{
+            fontSize: isMobile ? '13px' : '14px',
+            color: 'rgba(255, 255, 255, 0.9)',
+            marginBottom: '24px',
+            lineHeight: '1.6',
+          }}>
+            Click any personality type below to view its unlock page. This panel will be removed before production.
+          </p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)',
+            gap: '12px',
+          }}>
+            {[
+              { type: 'INFP', name: 'Mediator', emoji: '🌸' },
+              { type: 'ENFP', name: 'Campaigner', emoji: '🔥' },
+              { type: 'INFJ', name: 'Advocate', emoji: '🌙' },
+              { type: 'ENFJ', name: 'Protagonist', emoji: '🌻' },
+              { type: 'INTJ', name: 'Architect', emoji: '🧠' },
+              { type: 'ENTJ', name: 'Commander', emoji: '⚔️' },
+              { type: 'INTP', name: 'Logician', emoji: '💭' },
+              { type: 'ENTP', name: 'Debater', emoji: '⚡' },
+              { type: 'ISFP', name: 'Adventurer', emoji: '🎨' },
+              { type: 'ESFP', name: 'Entertainer', emoji: '💃' },
+              { type: 'ISFJ', name: 'Defender', emoji: '🌿' },
+              { type: 'ESFJ', name: 'Consul', emoji: '🤝' },
+              { type: 'ISTP', name: 'Virtuoso', emoji: '🛠️' },
+              { type: 'ESTP', name: 'Entrepreneur', emoji: '🚀' },
+              { type: 'ISTJ', name: 'Logistician', emoji: '📘' },
+              { type: 'ESTJ', name: 'Executive', emoji: '🧩' },
+            ].map((personality) => (
+              <Link
+                key={personality.type}
+                to={`/test/personality/unlock?type=${personality.type}`}
+                onClick={() => {
+                  // Set personality type in localStorage for UnlockPage to read
+                  localStorage.setItem('personality_result', JSON.stringify({
+                    typeCode: personality.type,
+                    typeName: personality.name,
+                  }));
+                  // Also set in Zustand store
+                  usePersonalityTestStore.getState().setPersonalityType(personality.type);
+                }}
+                style={{ textDecoration: 'none' }}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.95)',
+                    borderRadius: '12px',
+                    padding: isMobile ? '16px 12px' : '20px 16px',
+                    textAlign: 'center',
+                    cursor: 'pointer',
+                    border: '2px solid rgba(255, 255, 255, 0.3)',
+                    transition: 'all 0.2s ease',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                  }}
+                >
+                  <div style={{
+                    fontSize: isMobile ? '24px' : '32px',
+                    marginBottom: '8px',
+                  }}>
+                    {personality.emoji}
+                  </div>
+                  <div style={{
+                    fontSize: isMobile ? '14px' : '16px',
+                    fontWeight: '700',
+                    color: '#1a1a1a',
+                    marginBottom: '4px',
+                  }}>
+                    {personality.type}
+                  </div>
+                  <div style={{
+                    fontSize: isMobile ? '11px' : '12px',
+                    color: '#666',
+                    fontWeight: '500',
+                  }}>
+                    {personality.name}
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Stats */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -336,9 +478,10 @@ function Home() {
           ))}
         </motion.div>
 
-        {/* IQ Test CTA Card */}
-        {tests.find(test => test.slug === 'iqtest') && (() => {
+        {/* IQ Test & Personality Test CTA Cards */}
+        {tests.find(test => test.slug === 'iqtest') && tests.find(test => test.slug === 'personality') && (() => {
           const iqTest = tests.find(test => test.slug === 'iqtest')!;
+          const personalityTest = tests.find(test => test.slug === 'personality')!;
           return (
             <motion.div
               id="cta-test-card"
@@ -348,13 +491,17 @@ function Home() {
               style={{
                 display: 'flex',
                 justifyContent: 'center',
+                gap: isMobile ? '20px' : '32px',
+                flexWrap: 'wrap',
                 marginTop: isMobile ? '15vh' : 'clamp(500px, 25vh, 600px)',
                 marginBottom: isMobile ? '48px' : '64px',
+                padding: isMobile ? '0 20px' : '0',
               }}
             >
+              {/* IQ Test Card */}
               <Link
                 to="/test/iqtest"
-                style={{ textDecoration: 'none', color: 'inherit', display: 'block', maxWidth: '400px', width: '100%' }}
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block', maxWidth: '400px', width: isMobile ? '100%' : 'calc(50% - 16px)', minWidth: isMobile ? '100%' : '320px' }}
               >
                 <motion.div
                   className="iq-test-card"
@@ -514,6 +661,171 @@ function Home() {
                   </div>
                 </motion.div>
               </Link>
+
+              {/* Personality Test Card */}
+              <Link
+                to="/test/personality"
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block', maxWidth: '400px', width: isMobile ? '100%' : 'calc(50% - 16px)', minWidth: isMobile ? '100%' : '320px' }}
+              >
+                <motion.div
+                  className="personality-test-card"
+                  style={{
+                    cursor: 'pointer',
+                    background: 'linear-gradient(135deg, #ffffff 0%, #fff5f8 100%)',
+                    borderRadius: isMobile ? '16px' : '24px',
+                    padding: isMobile ? '24px' : '40px',
+                    border: '2px solid rgba(236, 72, 153, 0.15)',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  }}
+                  transition={{ duration: 0.15, ease: 'easeOut' }}
+                  whileHover={{
+                    y: -15,
+                    scale: 1.05,
+                    boxShadow: '0 24px 60px rgba(236, 72, 153, 0.35), 0 0 0 1px rgba(236, 72, 153, 0.25), 0 0 80px rgba(251, 146, 60, 0.3)',
+                    borderColor: 'rgba(236, 72, 153, 0.4)',
+                  }}
+                >
+                  {/* Glow Effect Background */}
+                  <motion.div
+                    style={{
+                      position: 'absolute',
+                      top: '-50%',
+                      left: '-50%',
+                      width: '200%',
+                      height: '200%',
+                      background: 'radial-gradient(circle, rgba(236, 72, 153, 0.18) 0%, transparent 70%)',
+                      opacity: 0,
+                      pointerEvents: 'none',
+                      transition: 'opacity 0.15s ease',
+                    }}
+                    transition={{ duration: 0.15 }}
+                    whileHover={{ opacity: 1 }}
+                  />
+                  
+                  {/* Content */}
+                  <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ marginBottom: '24px' }}>
+                      <h3 style={{ 
+                        fontSize: isMobile ? '24px' : '32px', 
+                        marginBottom: isMobile ? '8px' : '12px', 
+                        fontWeight: '700', 
+                        color: '#1a1a1a',
+                        background: 'linear-gradient(135deg, #ec4899 0%, #fb923c 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: isMobile ? '8px' : '12px',
+                        flexWrap: 'wrap',
+                      }}>
+                        <motion.div
+                          animate={{ 
+                            rotate: [0, 5, -5, 5, 0],
+                            scale: [1, 1.1, 1]
+                          }}
+                          transition={{ 
+                            duration: 3,
+                            repeat: Infinity,
+                            repeatDelay: 2,
+                            ease: 'easeInOut'
+                          }}
+                        >
+                          <Heart 
+                            size={isMobile ? 28 : 36} 
+                            style={{ 
+                              color: '#ec4899',
+                              filter: 'drop-shadow(0 2px 8px rgba(236, 72, 153, 0.3))',
+                              fill: 'rgba(236, 72, 153, 0.2)'
+                            }} 
+                          />
+                        </motion.div>
+                        {personalityTest.translated_name || personalityTest.name}
+                      </h3>
+                      <p style={{ 
+                        color: '#666', 
+                        fontSize: isMobile ? '14px' : '16px', 
+                        fontWeight: '600',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: isMobile ? '6px' : '8px',
+                        flexWrap: 'wrap',
+                      }}>
+                        <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#ec4899' }} />
+                        <span>25 soru</span>
+                        <span style={{ margin: '0 4px' }}>-</span>
+                        <Clock size={isMobile ? 16 : 18} style={{ color: '#ec4899' }} />
+                        <span>15 dakika</span>
+                      </p>
+                    </div>
+
+                    {/* Start Test Button Container */}
+                    <div style={{ marginTop: 'auto', position: 'relative' }}>
+                      {/* Background Button */}
+                      <motion.div
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: '50%',
+                          transform: 'translateX(-50%)',
+                          background: 'linear-gradient(135deg, #ec4899 0%, #fb923c 100%)',
+                          borderRadius: '14px',
+                          padding: '14px 26px',
+                          opacity: 0.15,
+                          zIndex: 0,
+                          transition: 'opacity 0.15s ease',
+                          width: 'fit-content',
+                        }}
+                        transition={{ duration: 0.15 }}
+                        whileHover={{ opacity: 0.25 }}
+                      />
+                      
+                      {/* Actual Button */}
+                      <motion.div
+                        style={{
+                          position: 'relative',
+                          zIndex: 2,
+                          background: 'linear-gradient(135deg, #ec4899 0%, #fb923c 100%)',
+                          borderRadius: '14px',
+                          padding: isMobile ? '12px 20px' : '14px 26px',
+                          color: 'white',
+                          fontWeight: '700',
+                          fontSize: isMobile ? '16px' : '18px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '8px',
+                          boxShadow: '0 4px 20px rgba(236, 72, 153, 0.3)',
+                          transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                          cursor: 'pointer',
+                          width: 'fit-content',
+                          margin: '0 auto',
+                        }}
+                        transition={{ duration: 0.15, ease: 'easeOut' }}
+                        whileHover={{
+                          y: -8,
+                          scale: 1.1,
+                          boxShadow: '0 10px 35px rgba(236, 72, 153, 0.5), 0 0 50px rgba(251, 146, 60, 0.4), 0 0 70px rgba(236, 72, 153, 0.3)',
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <span>Start Test</span>
+                        <motion.span
+                          animate={{ x: [0, 6, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                          style={{ fontSize: '20px' }}
+                        >
+                          →
+                        </motion.span>
+                      </motion.div>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
             </motion.div>
           );
         })()}
@@ -528,7 +840,7 @@ function Home() {
             gap: isMobile ? '20px' : '32px' 
           }}
         >
-          {tests.filter(test => test.slug !== 'iqtest').map((test, idx) => {
+          {tests.filter(test => test.slug !== 'iqtest' && test.slug !== 'personality').map((test, idx) => {
             // Normal Test Kartları
             return (
               <motion.div
