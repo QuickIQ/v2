@@ -160,11 +160,46 @@ function PersonalityTestPage() {
   };
 
   const handleQuestionsComplete = async () => {
-    if (answers.length < questions.length) {
+    // Small delay to ensure store has been updated after the last answer
+    await new Promise(resolve => setTimeout(resolve, 100));
+    
+    // Get the latest values directly from the store to avoid stale closure issues
+    const store = usePersonalityTestStore.getState();
+    const currentAnswers = store.answers;
+    const currentQuestions = store.questions;
+    
+    console.log('🔍 Validating answers:', {
+      answersCount: currentAnswers.length,
+      questionsCount: currentQuestions.length,
+      answers: currentAnswers.map(a => ({ q: a.question_id, opt: a.option_index }))
+    });
+    
+    // Check if we have answers for all questions
+    if (currentAnswers.length < currentQuestions.length) {
+      console.warn('⚠️ Not all questions answered:', {
+        answered: currentAnswers.length,
+        total: currentQuestions.length
+      });
+      setError('Please answer all questions');
+      return;
+    }
+    
+    // Additional check: ensure each question has an answer
+    const answeredQuestionIds = new Set(currentAnswers.map(a => a.question_id));
+    const allQuestionIds = new Set(currentQuestions.map(q => q.id));
+    
+    if (answeredQuestionIds.size !== allQuestionIds.size) {
+      console.warn('⚠️ Some questions are missing answers:', {
+        answeredIds: Array.from(answeredQuestionIds),
+        allIds: Array.from(allQuestionIds),
+        missingIds: Array.from(allQuestionIds).filter(id => !answeredQuestionIds.has(id))
+      });
       setError('Please answer all questions');
       return;
     }
 
+    console.log('✅ All questions answered, proceeding to analyzing...');
+    setError(null); // Clear any previous errors
     calculatePersonalityType();
     setStep('analyzing');
   };

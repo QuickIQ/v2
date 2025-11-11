@@ -6,7 +6,7 @@ import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
-import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, UserCircle, Heart } from 'lucide-react';
+import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, UserCircle, Heart, Lock, Database, Activity } from 'lucide-react';
 import { useMobile } from '../hooks/useMobile';
 import { usePersonalityTestStore } from '../store/personalityTestStore';
 import '../App.css';
@@ -40,7 +40,7 @@ function Home() {
         // Add Personality Test card
         const personalityTest: Test = {
           id: 999998, // Temporary ID for personality test
-          name: 'Personality Type Test',
+          name: 'Personality Test',
           slug: 'personality',
           category: 'Personality',
           enabled: true,
@@ -48,7 +48,7 @@ function Home() {
           is_premium: false,
           price_cents: 0,
           test_type: 'personality',
-          translated_name: 'Personality Type Test',
+          translated_name: 'Personality Test',
         };
         
         setTests([iqTest, personalityTest, ...data]);
@@ -478,7 +478,7 @@ function Home() {
           ))}
         </motion.div>
 
-        {/* IQ Test & Personality Test CTA Cards */}
+        {/* Test Cards - 3 cards in a row */}
         {tests.find(test => test.slug === 'iqtest') && tests.find(test => test.slug === 'personality') && (() => {
           const iqTest = tests.find(test => test.slug === 'iqtest')!;
           const personalityTest = tests.find(test => test.slug === 'personality')!;
@@ -489,19 +489,20 @@ function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               style={{
-                display: 'flex',
-                justifyContent: 'center',
-                gap: isMobile ? '20px' : '32px',
-                flexWrap: 'wrap',
+                display: 'grid',
+                gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+                gap: isMobile ? '20px' : '10px',
+                maxWidth: 'none',
+                margin: '0 auto',
                 marginTop: isMobile ? '15vh' : 'clamp(500px, 25vh, 600px)',
                 marginBottom: isMobile ? '48px' : '64px',
-                padding: isMobile ? '0 20px' : '0',
+                padding: isMobile ? '0 20px' : '0 20px',
               }}
             >
               {/* IQ Test Card */}
               <Link
                 to="/test/iqtest"
-                style={{ textDecoration: 'none', color: 'inherit', display: 'block', maxWidth: '400px', width: isMobile ? '100%' : 'calc(50% - 16px)', minWidth: isMobile ? '100%' : '320px' }}
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
               >
                 <motion.div
                   className="iq-test-card"
@@ -509,11 +510,15 @@ function Home() {
                     cursor: 'pointer',
                     background: 'linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%)',
                     borderRadius: isMobile ? '16px' : '24px',
-                    padding: isMobile ? '24px' : '40px',
+                    padding: isMobile ? '24px' : '32px',
                     border: '2px solid rgba(108, 99, 255, 0.15)',
                     position: 'relative',
                     overflow: 'hidden',
                     transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                    height: '100%',
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
                   }}
                   transition={{ duration: 0.15, ease: 'easeOut' }}
                   whileHover={{
@@ -541,10 +546,10 @@ function Home() {
                   />
                   
                   {/* Content */}
-                  <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
                     <div style={{ marginBottom: '24px' }}>
                       <h3 style={{ 
-                        fontSize: isMobile ? '24px' : '32px', 
+                        fontSize: isMobile ? '22.8px' : '30.4px', 
                         marginBottom: isMobile ? '8px' : '12px', 
                         fontWeight: '700', 
                         color: '#1a1a1a',
@@ -665,7 +670,7 @@ function Home() {
               {/* Personality Test Card */}
               <Link
                 to="/test/personality"
-                style={{ textDecoration: 'none', color: 'inherit', display: 'block', maxWidth: '400px', width: isMobile ? '100%' : 'calc(50% - 16px)', minWidth: isMobile ? '100%' : '320px' }}
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
               >
                 <motion.div
                   className="personality-test-card"
@@ -673,11 +678,15 @@ function Home() {
                     cursor: 'pointer',
                     background: 'linear-gradient(135deg, #ffffff 0%, #fff5f8 100%)',
                     borderRadius: isMobile ? '16px' : '24px',
-                    padding: isMobile ? '24px' : '40px',
+                    padding: isMobile ? '24px' : '32px',
                     border: '2px solid rgba(236, 72, 153, 0.15)',
                     position: 'relative',
                     overflow: 'hidden',
                     transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                    height: '100%',
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
                   }}
                   transition={{ duration: 0.15, ease: 'easeOut' }}
                   whileHover={{
@@ -705,10 +714,10 @@ function Home() {
                   />
                   
                   {/* Content */}
-                  <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
                     <div style={{ marginBottom: '24px' }}>
                       <h3 style={{ 
-                        fontSize: isMobile ? '24px' : '32px', 
+                        fontSize: isMobile ? '22.8px' : '30.4px', 
                         marginBottom: isMobile ? '8px' : '12px', 
                         fontWeight: '700', 
                         color: '#1a1a1a',
@@ -756,7 +765,7 @@ function Home() {
                         flexWrap: 'wrap',
                       }}>
                         <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#ec4899' }} />
-                        <span>25 soru</span>
+                        <span>30 soru</span>
                         <span style={{ margin: '0 4px' }}>-</span>
                         <Clock size={isMobile ? 16 : 18} style={{ color: '#ec4899' }} />
                         <span>15 dakika</span>
@@ -826,6 +835,278 @@ function Home() {
                   </div>
                 </motion.div>
               </Link>
+
+              {/* Memory Test Card - Coming Soon */}
+              <motion.div
+                className="memory-test-card"
+                style={{
+                  cursor: 'not-allowed',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(59, 130, 246, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  width: '100%',
+                  aspectRatio: '1.295',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  opacity: 0.8,
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -5,
+                  scale: 1.02,
+                }}
+              >
+                {/* Overlay for coming soon */}
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(255, 255, 255, 0.7)',
+                  backdropFilter: 'blur(2px)',
+                  zIndex: 10,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: isMobile ? '16px' : '24px',
+                }}>
+                  <div style={{
+                    background: 'linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)',
+                    color: 'white',
+                    padding: '8px 20px',
+                    borderRadius: '20px',
+                    fontWeight: '700',
+                    fontSize: '14px',
+                    boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)',
+                  }}>
+                    Open Soon
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <h3 style={{ 
+                      fontSize: isMobile ? '24px' : '32px', 
+                      marginBottom: isMobile ? '8px' : '12px', 
+                      fontWeight: '700', 
+                      color: '#1a1a1a',
+                      background: 'linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      flexWrap: 'wrap',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                      >
+                        <Database 
+                          size={isMobile ? 28 : 36} 
+                          style={{ 
+                            color: '#3b82f6',
+                            filter: 'drop-shadow(0 2px 8px rgba(59, 130, 246, 0.3))'
+                          }} 
+                        />
+                      </motion.div>
+                      Memory Test
+                    </h3>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#3b82f6' }} />
+                      <span>Coming soon</span>
+                    </p>
+                  </div>
+
+                  {/* Locked Button */}
+                  <div style={{ marginTop: 'auto', position: 'relative' }}>
+                    <motion.div
+                      style={{
+                        position: 'relative',
+                        zIndex: 2,
+                        background: 'linear-gradient(135deg, #94a3b8 0%, #cbd5e1 100%)',
+                        borderRadius: '14px',
+                        padding: isMobile ? '12px 20px' : '14px 26px',
+                        color: 'white',
+                        fontWeight: '700',
+                        fontSize: isMobile ? '16px' : '18px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px',
+                        boxShadow: '0 4px 20px rgba(148, 163, 184, 0.3)',
+                        cursor: 'not-allowed',
+                        width: 'fit-content',
+                        margin: '0 auto',
+                      }}
+                    >
+                      <Lock size={18} />
+                      <span>Coming Soon</span>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* ADHD Test Card - Coming Soon */}
+              <motion.div
+                className="adhd-test-card"
+                style={{
+                  cursor: 'not-allowed',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #fef3c7 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(234, 179, 8, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  width: '100%',
+                  aspectRatio: '1.295',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  opacity: 0.8,
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -5,
+                  scale: 1.02,
+                }}
+              >
+                {/* Overlay for coming soon */}
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(255, 255, 255, 0.7)',
+                  backdropFilter: 'blur(2px)',
+                  zIndex: 10,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: isMobile ? '16px' : '24px',
+                }}>
+                  <div style={{
+                    background: 'linear-gradient(135deg, #eab308 0%, #fbbf24 100%)',
+                    color: 'white',
+                    padding: '8px 20px',
+                    borderRadius: '20px',
+                    fontWeight: '700',
+                    fontSize: '14px',
+                    boxShadow: '0 4px 12px rgba(234, 179, 8, 0.3)',
+                  }}>
+                    Open Soon
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <h3 style={{ 
+                      fontSize: isMobile ? '24px' : '32px', 
+                      marginBottom: isMobile ? '8px' : '12px', 
+                      fontWeight: '700', 
+                      color: '#1a1a1a',
+                      background: 'linear-gradient(135deg, #eab308 0%, #fbbf24 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      flexWrap: 'wrap',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, 5, -5, 5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                      >
+                        <Activity 
+                          size={isMobile ? 28 : 36} 
+                          style={{ 
+                            color: '#eab308',
+                            filter: 'drop-shadow(0 2px 8px rgba(234, 179, 8, 0.3))'
+                          }} 
+                        />
+                      </motion.div>
+                      ADHD Test
+                    </h3>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#eab308' }} />
+                      <span>Coming soon</span>
+                    </p>
+                  </div>
+
+                  {/* Locked Button */}
+                  <div style={{ marginTop: 'auto', position: 'relative' }}>
+                    <motion.div
+                      style={{
+                        position: 'relative',
+                        zIndex: 2,
+                        background: 'linear-gradient(135deg, #94a3b8 0%, #cbd5e1 100%)',
+                        borderRadius: '14px',
+                        padding: isMobile ? '12px 20px' : '14px 26px',
+                        color: 'white',
+                        fontWeight: '700',
+                        fontSize: isMobile ? '16px' : '18px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px',
+                        boxShadow: '0 4px 20px rgba(148, 163, 184, 0.3)',
+                        cursor: 'not-allowed',
+                        width: 'fit-content',
+                        margin: '0 auto',
+                      }}
+                    >
+                      <Lock size={18} />
+                      <span>Coming Soon</span>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           );
         })()}
@@ -836,7 +1117,7 @@ function Home() {
           style={{ 
             marginTop: isMobile ? '10vh' : 'clamp(300px, 20vh, 400px)',
             display: 'grid', 
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fill, minmax(320px, 1fr))', 
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', 
             gap: isMobile ? '20px' : '32px' 
           }}
         >
@@ -866,6 +1147,7 @@ function Home() {
                       border: '1px solid rgba(102, 126, 234, 0.1)',
                       transition: 'all 0.3s ease',
                       height: '100%',
+                      width: '130%',
                       display: 'flex',
                       flexDirection: 'column',
                     }}

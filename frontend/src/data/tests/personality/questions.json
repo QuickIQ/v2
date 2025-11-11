@@ -40,7 +40,7 @@
       { "text": "Spontaneous adventures and flexibility", "axis": "P" },
       { "text": "A rough outline with room for changes", "axis": "J" },
       { "text": "Going with the flow completely", "axis": "P" },
-      { "text": "Some structure but open to surprises", "axis": "P" }
+      { "text": "Some structure but open to surprises", "axis": "J" }
     ]
   },
   {
@@ -62,7 +62,7 @@
       { "text": "Provide emotional support and understanding", "axis": "F" },
       { "text": "Listen and help them process their feelings", "axis": "F" },
       { "text": "Analyze the situation objectively", "axis": "T" },
-      { "text": "Combine empathy with practical advice", "axis": "F" }
+      { "text": "Combine empathy with practical advice", "axis": "T" }
     ]
   },
   {
@@ -84,7 +84,7 @@
       { "text": "Creative chaos that makes sense to you", "axis": "P" },
       { "text": "Mostly organized with some creative mess", "axis": "J" },
       { "text": "Flexible and adaptable to current needs", "axis": "P" },
-      { "text": "Organized when needed, relaxed otherwise", "axis": "P" }
+      { "text": "Organized when needed, relaxed otherwise", "axis": "J" }
     ]
   },
   {
@@ -106,7 +106,7 @@
       { "text": "Company culture and alignment with values", "axis": "F" },
       { "text": "Work-life balance and team dynamics", "axis": "F" },
       { "text": "Opportunities for advancement and challenge", "axis": "T" },
-      { "text": "A combination of practical and personal factors", "axis": "F" }
+      { "text": "A combination of practical and personal factors", "axis": "T" }
     ]
   },
   {
@@ -128,7 +128,7 @@
       { "text": "Keep it flexible and see what happens", "axis": "P" },
       { "text": "Plan key activities but leave room for spontaneity", "axis": "J" },
       { "text": "Book flights and figure out the rest there", "axis": "P" },
-      { "text": "Have a rough plan but stay adaptable", "axis": "P" }
+      { "text": "Have a rough plan but stay adaptable", "axis": "J" }
     ]
   },
   {
@@ -150,7 +150,7 @@
       { "text": "How it affects people and their feelings", "axis": "F" },
       { "text": "Being honest but considerate of emotions", "axis": "F" },
       { "text": "Objective facts and measurable outcomes", "axis": "T" },
-      { "text": "Balancing truth with sensitivity", "axis": "F" }
+      { "text": "Balancing truth with sensitivity", "axis": "T" }
     ]
   },
   {
@@ -172,7 +172,7 @@
       { "text": "Work best under pressure near the deadline", "axis": "P" },
       { "text": "Plan to finish early but sometimes cut it close", "axis": "J" },
       { "text": "Thrive on last-minute energy and creativity", "axis": "P" },
-      { "text": "Adapt based on the project's importance", "axis": "P" }
+      { "text": "Adapt based on the project's importance", "axis": "J" }
     ]
   },
   {
@@ -194,7 +194,7 @@
       { "text": "Consider how solutions affect everyone involved", "axis": "F" },
       { "text": "Look for the most efficient solution", "axis": "T" },
       { "text": "Prioritize harmony and people's well-being", "axis": "F" },
-      { "text": "Balance logic with human impact", "axis": "F" }
+      { "text": "Balance logic with human impact", "axis": "T" }
     ]
   },
   {
@@ -216,7 +216,7 @@
       { "text": "Flexible and adaptable to your energy", "axis": "P" },
       { "text": "Mostly structured with some flexibility", "axis": "J" },
       { "text": "Completely open and self-directed", "axis": "P" },
-      { "text": "Structure when needed, freedom when possible", "axis": "P" }
+      { "text": "Structure when needed, freedom when possible", "axis": "J" }
     ]
   },
   {
@@ -238,7 +238,7 @@
       { "text": "Considering values and personal impact", "axis": "F" },
       { "text": "Analyzing data and outcomes", "axis": "T" },
       { "text": "Following your heart and intuition", "axis": "F" },
-      { "text": "Combining analysis with values", "axis": "F" }
+      { "text": "Combining analysis with values", "axis": "T" }
     ]
   },
   {
@@ -260,7 +260,7 @@
       { "text": "Open-ended with creative freedom", "axis": "P" },
       { "text": "Structured but allow for innovation", "axis": "J" },
       { "text": "Flexible and adaptable to change", "axis": "P" },
-      { "text": "A mix of structure and flexibility", "axis": "P" }
+      { "text": "A mix of structure and flexibility", "axis": "J" }
     ]
   },
   {
@@ -272,6 +272,61 @@
       { "text": "Look for proven solutions and patterns", "axis": "S" },
       { "text": "Imagine various scenarios and what-ifs", "axis": "N" },
       { "text": "Combine research with creative thinking", "axis": "N" }
+    ]
+  },
+  {
+    "id": 26,
+    "text": "When you have a problem, you prefer to...",
+    "options": [
+      { "text": "Talk it through with others to process", "axis": "E" },
+      { "text": "Think it through alone first", "axis": "I" },
+      { "text": "Discuss with a trusted friend", "axis": "E" },
+      { "text": "Reflect privately before sharing", "axis": "I" },
+      { "text": "Both, depending on the problem", "axis": "E" }
+    ]
+  },
+  {
+    "id": 27,
+    "text": "You're more drawn to...",
+    "options": [
+      { "text": "Facts, details, and what's proven", "axis": "S" },
+      { "text": "Ideas, theories, and what's possible", "axis": "N" },
+      { "text": "Practical applications and results", "axis": "S" },
+      { "text": "Innovation and future potential", "axis": "N" },
+      { "text": "A balance of both approaches", "axis": "S" }
+    ]
+  },
+  {
+    "id": 28,
+    "text": "In conflicts, you prioritize...",
+    "options": [
+      { "text": "Finding the most logical solution", "axis": "T" },
+      { "text": "Maintaining relationships and harmony", "axis": "F" },
+      { "text": "Objective fairness and justice", "axis": "T" },
+      { "text": "Everyone's feelings and needs", "axis": "F" },
+      { "text": "Both fairness and empathy", "axis": "T" }
+    ]
+  },
+  {
+    "id": 29,
+    "text": "When starting a new project, you...",
+    "options": [
+      { "text": "Create a detailed plan before beginning", "axis": "J" },
+      { "text": "Start exploring and adapt as you go", "axis": "P" },
+      { "text": "Outline key steps but stay flexible", "axis": "J" },
+      { "text": "Dive in and figure it out along the way", "axis": "P" },
+      { "text": "Plan some, improvise some", "axis": "J" }
+    ]
+  },
+  {
+    "id": 30,
+    "text": "Your ideal learning environment is...",
+    "options": [
+      { "text": "Structured classes with clear objectives", "axis": "J" },
+      { "text": "Self-directed exploration and discovery", "axis": "P" },
+      { "text": "Interactive group discussions", "axis": "E" },
+      { "text": "Quiet study with minimal distractions", "axis": "I" },
+      { "text": "A mix that adapts to the subject", "axis": "E" }
     ]
   }
 ]

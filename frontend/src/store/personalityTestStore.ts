@@ -124,14 +124,14 @@ export const usePersonalityTestStore = create<PersonalityTestState>()(
         const scores = get().mbtiScores;
         let type = '';
         
-        // E vs I
-        type += scores.E >= scores.I ? 'E' : 'I';
-        // S vs N
-        type += scores.S >= scores.N ? 'S' : 'N';
-        // T vs F
-        type += scores.T >= scores.F ? 'T' : 'F';
-        // J vs P
-        type += scores.J >= scores.P ? 'J' : 'P';
+        // E vs I - Eşitlik durumunda E seçilir (daha yaygın)
+        type += scores.E > scores.I ? 'E' : (scores.I > scores.E ? 'I' : 'E');
+        // S vs N - Eşitlik durumunda S seçilir (daha yaygın)
+        type += scores.S > scores.N ? 'S' : (scores.N > scores.S ? 'N' : 'S');
+        // T vs F - Eşitlik durumunda T seçilir (daha yaygın)
+        type += scores.T > scores.F ? 'T' : (scores.F > scores.T ? 'F' : 'T');
+        // J vs P - Eşitlik durumunda J seçilir (daha yaygın)
+        type += scores.J > scores.P ? 'J' : (scores.P > scores.J ? 'P' : 'J');
         
         set({ personalityType: type });
       },
