@@ -9,10 +9,16 @@ import TestFlow from './pages/TestFlow';
 import IQTestPage from './pages/IQTestPage';
 import PersonalityTestPage from './pages/PersonalityTestPage';
 import CreativeThinkingTestPage from './pages/CreativeThinkingTestPage';
+import AutismTestPage from './pages/AutismTestPage';
+import DisorderTestPage from './pages/DisorderTestPage';
 import PaymentPage from './tests/personality/PaymentPage';
 import UnlockPage from './tests/personality/UnlockPage';
 import CreativeThinkingPaymentPage from './tests/iq/creative-thinking/CreativeThinkingPaymentPage';
 import CreativeThinkingUnlockPage from './tests/iq/creative-thinking/CreativeThinkingUnlockPage';
+import AutismPaymentPage from './tests/iq/autism/AutismPaymentPage';
+import AutismUnlockPage from './tests/iq/autism/AutismUnlockPage';
+import DisorderPaymentPage from './tests/iq/disorder/DisorderPaymentPage';
+import DisorderUnlockPage from './tests/iq/disorder/DisorderUnlockPage';
 import { useDynamicTestTranslations } from './hooks/useDynamicTestTranslations';
 import './App.css';
 
@@ -36,6 +42,14 @@ function AppContent() {
         <Route path="/test/creative-thinking/payment" element={<CreativeThinkingPaymentPage />} />
         <Route path="/test/creative-thinking/unlock/:level" element={<CreativeThinkingUnlockPage />} />
         <Route path="/test/creative-thinking/unlock" element={<CreativeThinkingUnlockPage />} />
+        <Route path="/test/autism" element={<AutismTestPage />} />
+        <Route path="/test/autism/payment" element={<AutismPaymentPage />} />
+        <Route path="/test/autism/unlock/:level" element={<AutismUnlockPage />} />
+        <Route path="/test/autism/unlock" element={<AutismUnlockPage />} />
+        <Route path="/test/disorder" element={<DisorderTestPage />} />
+        <Route path="/test/disorder/payment" element={<DisorderPaymentPage />} />
+        <Route path="/test/disorder/unlock/:level" element={<DisorderUnlockPage />} />
+        <Route path="/test/disorder/unlock" element={<DisorderUnlockPage />} />
       </Routes>
     </>
   );
