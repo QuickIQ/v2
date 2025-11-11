@@ -8,8 +8,11 @@ import Home from './pages/Home';
 import TestFlow from './pages/TestFlow';
 import IQTestPage from './pages/IQTestPage';
 import PersonalityTestPage from './pages/PersonalityTestPage';
+import CreativeThinkingTestPage from './pages/CreativeThinkingTestPage';
 import PaymentPage from './tests/personality/PaymentPage';
 import UnlockPage from './tests/personality/UnlockPage';
+import CreativeThinkingPaymentPage from './tests/iq/creative-thinking/CreativeThinkingPaymentPage';
+import CreativeThinkingUnlockPage from './tests/iq/creative-thinking/CreativeThinkingUnlockPage';
 import { useDynamicTestTranslations } from './hooks/useDynamicTestTranslations';
 import './App.css';
 
@@ -29,6 +32,10 @@ function AppContent() {
         <Route path="/test/personality" element={<PersonalityTestPage />} />
         <Route path="/test/personality/payment" element={<PaymentPage />} />
         <Route path="/test/personality/unlock" element={<UnlockPage />} />
+        <Route path="/test/creative-thinking" element={<CreativeThinkingTestPage />} />
+        <Route path="/test/creative-thinking/payment" element={<CreativeThinkingPaymentPage />} />
+        <Route path="/test/creative-thinking/unlock/:level" element={<CreativeThinkingUnlockPage />} />
+        <Route path="/test/creative-thinking/unlock" element={<CreativeThinkingUnlockPage />} />
       </Routes>
     </>
   );

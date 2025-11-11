@@ -6,7 +6,7 @@ import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
-import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, UserCircle, Heart, Lock, Database, Activity } from 'lucide-react';
+import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, Heart, Lock, Database, Activity, Lightbulb } from 'lucide-react';
 import { useMobile } from '../hooks/useMobile';
 import { usePersonalityTestStore } from '../store/personalityTestStore';
 import '../App.css';
@@ -1111,6 +1111,220 @@ function Home() {
           );
         })()}
 
+        {/* Zihinsel & Bilişsel Testler Section */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          style={{
+            marginTop: isMobile ? '10vh' : 'clamp(300px, 20vh, 400px)',
+            marginBottom: isMobile ? '48px' : '64px',
+          }}
+        >
+          {/* Category Header */}
+          <h2 style={{
+            fontSize: isMobile ? '24px' : '32px',
+            fontWeight: '700',
+            color: '#1a1a1a',
+            marginBottom: isMobile ? '24px' : '32px',
+            textAlign: 'center',
+            background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}>
+            {t('home.categories.mental_cognitive') || 'Zihinsel & Bilişsel Testler'}
+          </h2>
+
+          {/* Creative Thinking Test Card */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+            gap: isMobile ? '20px' : '10px',
+            maxWidth: 'none',
+            margin: '0 auto',
+            padding: isMobile ? '0 20px' : '0 20px',
+          }}>
+            <Link
+              to="/test/creative-thinking"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="creative-thinking-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(108, 99, 255, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
+                  borderColor: 'rgba(108, 99, 255, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <h3 style={{ 
+                      fontSize: isMobile ? '22.8px' : '30.4px', 
+                      marginBottom: isMobile ? '8px' : '12px', 
+                      fontWeight: '700', 
+                      color: '#1a1a1a',
+                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      flexWrap: 'wrap',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                      >
+                        <Lightbulb 
+                          size={isMobile ? 28 : 36} 
+                          style={{ 
+                            color: '#6c63ff',
+                            filter: 'drop-shadow(0 2px 8px rgba(108, 99, 255, 0.3))'
+                          }} 
+                        />
+                      </motion.div>
+                      Creativity Test
+                    </h3>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                    }}>
+                      yaratıcılığın sınırlarını ne kadar zorlayabiliyorsun?
+                    </p>
+                  </div>
+
+                  {/* Start Test Button Container */}
+                  <div style={{ marginTop: 'auto', position: 'relative' }}>
+                    <motion.div
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                        borderRadius: '14px',
+                        padding: '14px 26px',
+                        opacity: 0.15,
+                        zIndex: 0,
+                        transition: 'opacity 0.15s ease',
+                        width: 'fit-content',
+                      }}
+                      transition={{ duration: 0.15 }}
+                      whileHover={{ opacity: 0.25 }}
+                    />
+                    
+                    <motion.div
+                      style={{
+                        position: 'relative',
+                        zIndex: 2,
+                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                        borderRadius: '14px',
+                        padding: isMobile ? '12px 20px' : '14px 26px',
+                        color: 'white',
+                        fontWeight: '700',
+                        fontSize: isMobile ? '16px' : '18px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px',
+                        boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
+                        transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        cursor: 'pointer',
+                        width: 'fit-content',
+                        margin: '0 auto',
+                      }}
+                      transition={{ duration: 0.15, ease: 'easeOut' }}
+                      whileHover={{
+                        y: -8,
+                        scale: 1.1,
+                        boxShadow: '0 10px 35px rgba(108, 99, 255, 0.5), 0 0 50px rgba(155, 201, 237, 0.4), 0 0 70px rgba(108, 99, 255, 0.3)',
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <span>Start Test</span>
+                      <motion.span
+                        animate={{ x: [0, 6, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                        style={{ fontSize: '20px' }}
+                      >
+                        →
+                      </motion.span>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
+          </div>
+        </motion.div>
+
         {/* Testler Section */}
         <div 
           id="tests-section"
@@ -1222,6 +1436,163 @@ function Home() {
               No tests available at the moment.
             </p>
           </div>
+        )}
+
+        {/* Developer Result Shortcuts - Only visible in development */}
+        {((import.meta as any).env?.DEV || (import.meta as any).env?.MODE === 'development') && (
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              marginTop: '64px',
+              padding: isMobile ? '24px' : '32px',
+              borderRadius: '16px',
+              background: 'linear-gradient(180deg, #faf8ff, #ffffff)',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
+              border: '1px dashed rgba(108, 99, 255, 0.3)',
+            }}
+          >
+            <h3 style={{
+              fontSize: isMobile ? '16px' : '18px',
+              fontWeight: '700',
+              color: '#6C63FF',
+              marginBottom: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}>
+              🧠 Developer Result Shortcuts
+            </h3>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: '24px',
+            }}>
+              {/* Creative Thinking Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(108, 99, 255, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Creative Thinking Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/creative-thinking/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#6C63FF',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#5b56f0';
+                          e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#6C63FF';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Personality Test - if you want to add it later */}
+              {/* 
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(108, 99, 255, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Personality Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <Link
+                        to={`/test/personality/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#6C63FF',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#5b56f0';
+                          e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#6C63FF';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              */}
+            </div>
+          </motion.section>
         )}
       </main>
     </div>

@@ -23,10 +23,10 @@ export function useDynamicTestTranslations() {
       const testName = pathSegments[testIndex + 1];
       
       // List of valid test names
-      const validTests = ['personality', 'iq', 'iqtest', 'focus', 'memory'];
+      const validTests = ['personality', 'iq', 'iqtest', 'focus', 'memory', 'creative-thinking'];
       
       if (validTests.includes(testName)) {
-        // Normalize test name (e.g., 'iqtest' -> 'iq')
+        // Normalize test name (e.g., 'iqtest' -> 'iq', 'creative-thinking' -> 'creative-thinking')
         const normalizedTestName = testName === 'iqtest' ? 'iq' : testName;
         loadTestTranslations(normalizedTestName, lng);
       }

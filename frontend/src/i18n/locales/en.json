@@ -63,7 +63,12 @@
       "payButton": "Pay ${{amount}}",
       "processing": "Processing...",
       "success": "Payment successful!",
-      "error": "Payment failed. Please try again."
+      "error": "Payment failed. Please try again.",
+      "resultBanner": {
+        "title": "Your personalized insights are ready!",
+        "subtitle": "Unlock your full results, crafted by our AI based on your unique answers.",
+        "button": "See My Result ↓"
+      }
     },
     "results": {
       "title": "Your Results",
@@ -210,7 +215,70 @@
           "continue_payment": "Continue to Payment",
           "payment_amount": "$1.95"
         }
+      },
+      "creativeThinking": {
+        "card": {
+          "title": "Creative Thinking Test",
+          "subtitle": "yaratıcılığın sınırlarını ne kadar zorlayabiliyorsun?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your results...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "Creative Thinker – The Innovative Mind",
+            "summary": "Your creative thinking abilities are exceptional. You consistently push boundaries, see connections others miss, and transform abstract ideas into innovative solutions.",
+            "insights": [
+              "You excel at connecting disparate concepts to generate novel solutions",
+              "Your ability to see beyond immediate constraints fuels breakthrough innovation",
+              "You naturally challenge assumptions and explore unconventional paths"
+            ]
+          },
+          "good": {
+            "title": "Creative Thinker – The Adaptive Innovator",
+            "summary": "You have strong creative thinking skills with room for growth. You can generate original ideas and see alternative perspectives, though you sometimes default to familiar patterns.",
+            "insights": [
+              "You demonstrate solid creative problem-solving abilities",
+              "Expanding your comfort zone will unlock greater creative potential",
+              "You benefit from seeking diverse perspectives to enhance your ideas"
+            ]
+          },
+          "developing": {
+            "title": "Creative Thinker – The Emerging Innovator",
+            "summary": "Your creative thinking is developing. You may tend toward practical, proven solutions rather than exploring novel approaches. This isn't a limitation—it's an opportunity.",
+            "insights": [
+              "Focus on generating multiple solutions before choosing one",
+              "Practice seeing problems from completely different angles",
+              "Embrace experimentation and view failures as learning opportunities"
+            ]
+          }
+        }
       }
+    }
+  },
+  "home": {
+    "categories": {
+      "mental_cognitive": "Zihinsel & Bilişsel Testler"
     }
   }
 }
