@@ -212,50 +212,236 @@ export default function CreativeThinkingUnlockTemplate({ level, locale }: Creati
           <p>{section.text}</p>
         </div>
 
-        {/* Insights List for insights section */}
+        {/* Insights List for insights section - Circular Layout */}
         {section.key === 'insights' && section.insights && (
           <div style={{
-            marginTop: '24px',
+            marginTop: '48px',
+            position: 'relative',
+            width: '100%',
+            minHeight: isMobile ? 'auto' : '600px',
             display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: isMobile ? '0' : '40px',
           }}>
-            {section.insights.map((insight, index) => (
-              <FadeInCard
-                key={index}
-                delay={index * 0.1}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
+            {/* Central Emoji Group */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '12px',
+                zIndex: 10,
+                background: 'radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, transparent 70%)',
+                borderRadius: '50%',
+                padding: '20px',
+              }}
+            >
+              {config.heroEmojis.map((emoji, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1, duration: 0.4 }}
                   style={{
-                    background: 'rgba(255, 255, 255, 0.8)',
-                    borderRadius: '20px',
-                    padding: '20px',
-                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.06)',
-                    border: '1px solid rgba(108, 99, 255, 0.15)',
-                    transition: 'all 0.3s ease',
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '12px',
+                    fontSize: isMobile ? '40px' : '48px',
+                    display: 'inline-block',
+                    filter: 'drop-shadow(0 4px 8px rgba(108, 99, 255, 0.3))',
                   }}
                 >
-                  <div style={{
-                    fontSize: '24px',
-                    flexShrink: 0,
-                  }}>
-                    {config.sectionEmojis[1]}
-                  </div>
-                  <p style={{
-                    fontSize: '14px',
-                    color: '#666',
-                    lineHeight: '1.6',
-                    margin: 0,
-                  }}>
-                    {insight}
-                  </p>
-                </motion.div>
-              </FadeInCard>
-            ))}
+                  {emoji}
+                </motion.span>
+              ))}
+            </motion.div>
+
+            {/* Circular Card Layout */}
+            {!isMobile ? (
+              <div style={{
+                position: 'relative',
+                width: '100%',
+                height: '600px',
+              }}>
+                {section.insights.slice(0, 5).map((insight, index) => {
+                  // Calculate position for circular layout
+                  const angle = (index * 360) / 5 - 90; // Start from top
+                  const radius = 200; // Distance from center
+                  const x = Math.cos((angle * Math.PI) / 180) * radius;
+                  const y = Math.sin((angle * Math.PI) / 180) * radius;
+
+                  // Extract title and description
+                  const parts = insight.split(':');
+                  const title = parts.length > 1 ? parts[0].trim() : '';
+                  const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
+
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ 
+                        opacity: 1, 
+                        scale: 1,
+                      }}
+                      transition={{ delay: index * 0.1 + 0.3, duration: 0.4, ease: 'easeOut' }}
+                      whileHover={{
+                        scale: 1.1,
+                        transition: { duration: 0.2 }
+                      }}
+                      style={{
+                        position: 'absolute',
+                        top: `calc(50% + ${y}px)`,
+                        left: `calc(50% + ${x}px)`,
+                        transform: 'translate(-50%, -50%)',
+                        width: '170px',
+                        background: 'rgba(255, 255, 255, 0.95)',
+                        borderRadius: '14px',
+                        padding: '14px',
+                        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
+                        border: '1px solid rgba(108, 99, 255, 0.2)',
+                        cursor: 'pointer',
+                        zIndex: 1,
+                        overflow: 'hidden',
+                      }}
+                    >
+                      {/* Shimmer Effect on Hover */}
+                      <motion.div
+                        initial={{ x: '-100%', opacity: 0 }}
+                        whileHover={{
+                          x: '200%',
+                          opacity: [0, 0.6, 0],
+                          transition: {
+                            duration: 0.2,
+                            ease: 'easeInOut',
+                          }
+                        }}
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          width: '50%',
+                          height: '100%',
+                          background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.5), transparent)',
+                          transform: 'skewX(-20deg)',
+                          pointerEvents: 'none',
+                          zIndex: 2,
+                        }}
+                      />
+                      <div style={{
+                        position: 'relative',
+                        zIndex: 1,
+                      }}>
+                        {title && (
+                          <p style={{
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            color: '#6c63ff',
+                            margin: '0 0 6px 0',
+                            lineHeight: '1.3',
+                          }}>
+                            {title}
+                          </p>
+                        )}
+                        <p style={{
+                          fontSize: '11px',
+                          color: '#666',
+                          lineHeight: '1.4',
+                          margin: 0,
+                        }}>
+                          {description.length > 100 ? description.substring(0, 100) + '...' : description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            ) : (
+              // Mobile: Vertical Stack
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+                width: '100%',
+                marginTop: '200px',
+              }}>
+                {section.insights.slice(0, 5).map((insight, index) => {
+                  const parts = insight.split(':');
+                  const title = parts.length > 1 ? parts[0].trim() : '';
+                  const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
+
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.4 }}
+                      whileHover={{
+                        scale: 1.05,
+                        transition: { duration: 0.2 }
+                      }}
+                      style={{
+                        width: '100%',
+                        background: 'rgba(255, 255, 255, 0.95)',
+                        borderRadius: '14px',
+                        padding: '14px',
+                        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
+                        border: '1px solid rgba(108, 99, 255, 0.2)',
+                        cursor: 'pointer',
+                        overflow: 'hidden',
+                        position: 'relative',
+                      }}
+                    >
+                      {/* Shimmer Effect */}
+                      <motion.div
+                        initial={{ x: '-100%', opacity: 0 }}
+                        whileHover={{
+                          x: '200%',
+                          opacity: [0, 0.6, 0],
+                          transition: { duration: 0.2, ease: 'easeInOut' }
+                        }}
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          width: '50%',
+                          height: '100%',
+                          background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.5), transparent)',
+                          transform: 'skewX(-20deg)',
+                          pointerEvents: 'none',
+                          zIndex: 2,
+                        }}
+                      />
+                      <div style={{ position: 'relative', zIndex: 1 }}>
+                        {title && (
+                          <p style={{
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            color: '#6c63ff',
+                            margin: '0 0 6px 0',
+                            lineHeight: '1.3',
+                          }}>
+                            {title}
+                          </p>
+                        )}
+                        <p style={{
+                          fontSize: '11px',
+                          color: '#666',
+                          lineHeight: '1.4',
+                          margin: 0,
+                        }}>
+                          {description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         )}
       </FadeInCard>

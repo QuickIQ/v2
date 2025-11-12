@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Star } from 'lucide-react';
 import '../../../App.css';
 
 interface Props {
@@ -79,9 +79,38 @@ function CreativeThinkingIntro({ onStart }: Props) {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '12px',
           }}
         >
           {getTranslation('tests.creativeThinking.landing.title', 'Before You Begin')}
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.7, 1, 0.7],
+              rotate: [0, 15, -15, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+            }}
+          >
+            <Star 
+              size={isMobile ? 32 : 40} 
+              style={{ 
+                color: '#FFD700',
+                filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.8))',
+                fill: '#FFD700',
+              }} 
+            />
+          </motion.div>
         </motion.h1>
 
         {/* Subtitle */}
@@ -106,6 +135,12 @@ function CreativeThinkingIntro({ onStart }: Props) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          whileHover={{
+            scale: 1.05,
+            y: -10,
+            boxShadow: '0 16px 48px rgba(108, 99, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.5)',
+            transition: { duration: 0.15, ease: 'easeOut' }
+          }}
           style={{
             background: 'rgba(255, 255, 255, 0.7)',
             backdropFilter: 'blur(10px)',
@@ -115,6 +150,10 @@ function CreativeThinkingIntro({ onStart }: Props) {
             marginBottom: '24px',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
+            cursor: 'pointer',
+            transition: 'all 0.15s ease-out',
+            position: 'relative',
+            zIndex: 1,
           }}
         >
           <p style={{
@@ -240,8 +279,10 @@ function CreativeThinkingIntro({ onStart }: Props) {
           <motion.button
             onClick={onStart}
             whileHover={{ 
-              scale: 1.05,
-              boxShadow: '0 8px 30px rgba(108, 99, 255, 0.5)',
+              scale: 1.15,
+              y: -8,
+              boxShadow: '0 16px 50px rgba(108, 99, 255, 0.7), 0 0 60px rgba(155, 201, 237, 0.6), 0 0 80px rgba(108, 99, 255, 0.4)',
+              transition: { duration: 0.15, ease: 'easeOut' }
             }}
             whileTap={{ scale: 0.98 }}
             style={{
@@ -254,9 +295,10 @@ function CreativeThinkingIntro({ onStart }: Props) {
               fontWeight: 'bold',
               cursor: 'pointer',
               boxShadow: '0 4px 20px rgba(108, 99, 255, 0.4)',
-              transition: 'all 0.3s ease',
+              transition: 'all 0.15s ease-out',
               position: 'relative',
               overflow: 'hidden',
+              zIndex: 2,
             }}
           >
             <motion.span

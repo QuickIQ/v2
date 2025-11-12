@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 import { useMobile } from '../../hooks/useMobile';
 import '../../App.css';
 
@@ -49,6 +50,10 @@ function PersonalityEmailPage({ onSubmit }: Props) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
+        whileHover={{
+          boxShadow: '0 24px 80px rgba(108, 99, 255, 0.25), 0 0 40px rgba(255, 143, 163, 0.2)',
+          transition: { duration: 0.3 }
+        }}
         style={{
           maxWidth: '500px',
           width: '100%',
@@ -58,6 +63,8 @@ function PersonalityEmailPage({ onSubmit }: Props) {
           borderRadius: '24px',
           padding: isMobile ? '30px 20px' : '40px',
           boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15)',
+          transition: 'all 0.3s ease',
+          cursor: 'default',
         }}
       >
         {/* Title */}
@@ -74,9 +81,39 @@ function PersonalityEmailPage({ onSubmit }: Props) {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '12px',
+            flexWrap: 'wrap',
           }}
         >
-          {t('tests.personality.email.title') || 'Get Your Results'}
+          See the Science Behind Your Personality
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.7, 1, 0.7],
+              rotate: [0, 15, -15, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+            }}
+          >
+            <Star 
+              size={isMobile ? 28 : 36} 
+              style={{ 
+                color: '#FFD700',
+                filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.8))',
+                fill: '#FFD700',
+              }} 
+            />
+          </motion.div>
         </motion.h1>
 
         {/* Subtitle */}
@@ -90,10 +127,9 @@ function PersonalityEmailPage({ onSubmit }: Props) {
             marginBottom: '32px',
             textAlign: 'center',
             lineHeight: '1.6',
-            whiteSpace: 'nowrap',
           }}
         >
-          {t('tests.personality.email.subtitle') || 'Enter your email to instantly receive your personality insights.'}
+          Instantly receive your personalized insights and start unlocking your true potential.
         </motion.p>
 
         {/* Email Input */}

@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
+import { useTestsCompletedCounter } from '../../../hooks/useTestsCompletedCounter';
 import { Lock, Shield, CheckCircle, Star } from 'lucide-react';
 import { useDisorderTestStore } from '../../../store/disorderTestStore';
 import '../../../App.css';
@@ -386,61 +387,7 @@ export default function DisorderPaymentPage() {
     const groups = cleaned.match(/.{1,4}/g);
     return groups ? groups.join(' ') : cleaned;
   };
-  const [testCount, setTestCount] = useState(() => {
-    if (typeof window === 'undefined') return 8000;
-    const saved = localStorage.getItem('disorderTestsCount');
-    const savedTime = localStorage.getItem('disorderTestsTime');
-    const now = Date.now();
-    
-    if (saved && savedTime) {
-      const timeDiff = now - parseInt(savedTime);
-      if (timeDiff < 86400000) {
-        return parseInt(saved);
-      }
-    }
-    
-    const newCount = Math.floor(7000 + Math.random() * 2000);
-    localStorage.setItem('disorderTestsCount', newCount.toString());
-    localStorage.setItem('disorderTestsTime', now.toString());
-    return newCount;
-  });
-
-  useEffect(() => {
-    const interval1 = setInterval(() => {
-      setTestCount((prev) => {
-        const newCount = prev + 1;
-        localStorage.setItem('disorderTestsCount', newCount.toString());
-        return newCount;
-      });
-    }, 60000);
-
-    const interval2 = setInterval(() => {
-      setTestCount((prev) => {
-        const newCount = prev + 2;
-        localStorage.setItem('disorderTestsCount', newCount.toString());
-        return newCount;
-      });
-    }, 120000);
-
-    const checkReset = setInterval(() => {
-      const savedTime = localStorage.getItem('disorderTestsTime');
-      if (savedTime) {
-        const timeDiff = Date.now() - parseInt(savedTime);
-        if (timeDiff >= 86400000) {
-          const newCount = Math.floor(7000 + Math.random() * 2000);
-          setTestCount(newCount);
-          localStorage.setItem('disorderTestsCount', newCount.toString());
-          localStorage.setItem('disorderTestsTime', Date.now().toString());
-        }
-      }
-    }, 3600000);
-
-    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-      clearInterval(checkReset);
-    };
-  }, []);
+  const { count: testCount, text: testsCompletedText, formattedCount } = useTestsCompletedCounter();
 
 
   const reviews = {
@@ -848,15 +795,72 @@ export default function DisorderPaymentPage() {
         >
           <motion.p
             key={testCount}
-            initial={{ scale: 1.1 }}
+            initial={{ scale: 1 }}
             animate={{ scale: 1 }}
             style={{
-              fontSize: isMobile ? '16px' : '18px',
+              fontSize: isMobile ? '20px' : '24px',
               color: '#888',
               fontWeight: '500',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '4px',
+              flexWrap: 'wrap',
             }}
           >
-            {getTranslation('tests.disorder.payment.tests_completed', i18n.language === 'tr' ? 'Bugün' : 'Today')} <span style={{ fontWeight: '700', color: '#6c63ff' }}>{testCount.toLocaleString()}</span> {getTranslation('tests.disorder.payment.tests_completed_suffix', i18n.language === 'tr' ? 'kişi testi tamamladı' : 'people completed the test')}
+            {i18n.language === 'tr' ? (
+              <>
+                <span>Bugün</span>
+                <motion.span
+                  key={testCount}
+                  initial={{ scale: 1.3, y: -5 }}
+                  animate={{ scale: 1, y: 0 }}
+                  transition={{ 
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 20,
+                    duration: 0.5
+                  }}
+                  style={{
+                    fontWeight: '700',
+                    background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    fontSize: isMobile ? '22px' : '26px',
+                  }}
+                >
+                  {formattedCount}
+                </motion.span>
+                <span>test tamamlandı!</span>
+              </>
+            ) : (
+              <>
+                <span>Today</span>
+                <motion.span
+                  key={testCount}
+                  initial={{ scale: 1.3, y: -5 }}
+                  animate={{ scale: 1, y: 0 }}
+                  transition={{ 
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 20,
+                    duration: 0.5
+                  }}
+                  style={{
+                    fontWeight: '700',
+                    background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    fontSize: isMobile ? '22px' : '26px',
+                  }}
+                >
+                  {formattedCount}
+                </motion.span>
+                <span>test's completed!</span>
+              </>
+            )}
           </motion.p>
         </motion.div>
 
@@ -1915,9 +1919,7 @@ export default function DisorderPaymentPage() {
                       lineHeight: '1.6',
                       margin: 0,
                     }}>
-                      {getTranslation('trust.testsCompleted', i18n.language === 'tr' 
-                        ? `Bugün ${testCount.toLocaleString()} test tamamlandı`
-                        : `Over ${testCount.toLocaleString()} tests completed today`)}
+                      {testsCompletedText}
                     </p>
                   </motion.div>
 

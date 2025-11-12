@@ -2,8 +2,9 @@
   min-height: 100vh;
 }
 
-/* Smooth scrolling - removed to prevent scroll blocking */
+/* Smooth scrolling */
 html {
+  scroll-behavior: smooth;
   overflow-anchor: none;
 }
 
@@ -412,5 +413,33 @@ body {
 
 .animate-fadeUp {
   animation: fadeUp 0.8s ease-out;
+}
+
+/* Timer positioning for mobile */
+@media (max-width: 640px) {
+  /* Hide the bottom timer completely on mobile */
+  .bottom-timer {
+    display: none !important;
+  }
+
+  /* Center the top timer between Back and Next */
+  .timer-container {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timer-container .timer {
+    margin: 0;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
 }
 

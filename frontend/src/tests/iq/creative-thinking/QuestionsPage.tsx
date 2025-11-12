@@ -11,7 +11,27 @@ interface Props {
   onComplete: () => void;
 }
 
-const optionGradient = 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)';
+// Soft pastel gradient colors for answer buttons (red to green scale)
+const answerGradients = [
+  'linear-gradient(135deg, #f8b2b2, #f5a1a1)', // Never - soft red
+  'linear-gradient(135deg, #f5a1a1, #f7c59f)', // Rarely - red to orange
+  'linear-gradient(135deg, #f7c59f, #fff2dc)', // Sometimes - orange to cream
+  'linear-gradient(135deg, #ffffff, #fefefe)', // Neutral - pure white
+  'linear-gradient(135deg, #f4ffe5, #c8f8c8)', // Often - cream to light green
+  'linear-gradient(135deg, #c8f8c8, #a4e8a4)', // Usually - light green to green
+  'linear-gradient(135deg, #a4e8a4, #89dc89)', // Always - green to darker green
+];
+
+// Glow colors for hover effect (matching each button's color)
+const glowColors = [
+  'rgba(248, 178, 178, 0.5)', // Never - soft red glow
+  'rgba(245, 161, 161, 0.5)', // Rarely - red-orange glow
+  'rgba(247, 197, 159, 0.5)', // Sometimes - orange glow
+  'rgba(255, 255, 255, 0.5)', // Neutral - white glow
+  'rgba(200, 248, 200, 0.5)', // Often - light green glow
+  'rgba(164, 232, 164, 0.5)', // Usually - green glow
+  'rgba(137, 220, 137, 0.5)', // Always - darker green glow
+];
 
 function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
   const { t } = useTranslation();
@@ -107,7 +127,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
     setSelectedOption(optionIndex);
     
     // Base score: Never=1, Rarely=2, ..., Always=7 (optionIndex + 1)
-    // Options order: ["Never", "Rarely", "Occasionally", "Neutral", "Often", "Usually", "Always"]
+    // Options order: ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"]
     // Reverse scoring is handled in calculateScore() in the store
     const baseScore = optionIndex + 1;
     
@@ -244,27 +264,431 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
             transition={{ duration: 0.3 }}
             style={{
               width: '100%',
+              position: 'relative',
             }}
           >
-            {/* Header: Creativity Test + Question Progress + Timer - Just above the card */}
+            {/* Developer Feature: Skip to Last Question - Top right corner */}
+            {currentQuestionIndex < questions.length - 1 && (
+              <motion.button
+                onClick={handleSkipToLast}
+                disabled={autoAdvancing}
+                whileHover={!autoAdvancing ? { scale: 1.05 } : {}}
+                whileTap={!autoAdvancing ? { scale: 0.95 } : {}}
+                style={{
+                  position: 'absolute',
+                  top: '0',
+                  right: '0',
+                  padding: isMobile ? '6px 10px' : '8px 12px',
+                  background: 'rgba(255, 152, 0, 0.1)',
+                  border: '1px solid rgba(255, 152, 0, 0.3)',
+                  borderRadius: '8px',
+                  color: '#ff9800',
+                  fontSize: isMobile ? '10px' : '11px',
+                  fontWeight: '600',
+                  cursor: autoAdvancing ? 'not-allowed' : 'pointer',
+                  opacity: autoAdvancing ? 0.5 : 1,
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap',
+                  zIndex: 10,
+                }}
+                title="Developer: Skip to last question (will be removed)"
+              >
+                ⚡ Skip to 20
+              </motion.button>
+            )}
+
+            {/* Light Icon - Outside card, above */}
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                fontSize: isMobile ? '40px' : '48px',
+                marginBottom: '16px',
+                textAlign: 'center',
+              }}
+            >
+              💡
+            </motion.div>
+
+            {/* Question Card */}
+            <div
+              className="card"
+              style={{
+                width: '100%',
+                padding: isMobile ? '30px 20px' : '40px',
+                background: 'linear-gradient(135deg, rgba(60, 60, 70, 0.95) 0%, rgba(65, 65, 80, 0.98) 100%)',
+                borderRadius: '20px',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 60px rgba(108, 99, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(108, 99, 255, 0.2)',
+              }}
+            >
+            <motion.h2 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                fontSize: isMobile ? '24px' : '32px',
+                marginBottom: '32px',
+                lineHeight: '1.55',
+                fontWeight: '400',
+                textAlign: 'center',
+                color: '#FFFFFF',
+                textShadow: '0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3)',
+              }}
+            >
+              {currentQuestion.text}
+            </motion.h2>
+
+            <div style={{ 
+              display: isMobile ? 'flex' : 'flex',
+              flexDirection: isMobile ? 'column' : 'row',
+              flexWrap: 'nowrap',
+              gap: isMobile ? '10px' : '12px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
+              marginTop: isMobile ? '48px' : '80px',
+            }}>
+              {/* Reordered: Top row (Often, Usually, Always), Middle (Neutral), Bottom (Never, Rarely, Sometimes) */}
+              {isMobile ? (
+                <>
+                  {/* Top row: Often, Usually, Always */}
+                  <div style={{
+                    display: 'flex',
+                    gap: '10px',
+                    justifyContent: 'center',
+                    width: '100%',
+                  }}>
+                    {[4, 5, 6].map((originalIndex) => {
+                      const option = currentQuestion.options[originalIndex];
+                      return (
+                        <motion.button
+                          key={originalIndex}
+                          onClick={() => handleOptionSelect(originalIndex)}
+                          whileHover={!autoAdvancing ? { 
+                            y: -4,
+                            boxShadow: `0 0 12px ${glowColors[originalIndex]}, 0 4px 18px rgba(0,0,0,0.1)`,
+                            filter: 'brightness(1.06)',
+                            transition: { duration: 0.12, ease: 'easeOut' }
+                          } : {}}
+                          whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
+                          disabled={autoAdvancing}
+                          style={{
+                            padding: '10px 14px',
+                            border: 'none',
+                            borderRadius: '12px',
+                            background: answerGradients[originalIndex],
+                            cursor: autoAdvancing ? 'not-allowed' : 'pointer',
+                            textAlign: 'center',
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            color: '#333',
+                            transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
+                            opacity: autoAdvancing ? 0.6 : 1,
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
+                            position: 'relative',
+                            zIndex: selectedOption === originalIndex ? 2 : 1,
+                            minWidth: '100px',
+                            flex: '1 1 0',
+                            whiteSpace: 'nowrap',
+                            overflow: 'visible',
+                            textOverflow: 'clip',
+                          }}
+                        >
+                          {option}
+                        </motion.button>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* Middle: Neutral */}
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    width: '100%',
+                  }}>
+                    <motion.button
+                      key={3}
+                      onClick={() => handleOptionSelect(3)}
+                      whileHover={!autoAdvancing ? { 
+                        y: -4,
+                        boxShadow: `0 0 12px ${glowColors[3]}, 0 4px 18px rgba(0,0,0,0.1)`,
+                        filter: 'brightness(1.06)',
+                        transition: { duration: 0.12, ease: 'easeOut' }
+                      } : {}}
+                      whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
+                      disabled={autoAdvancing}
+                      style={{
+                        padding: '10px 14px',
+                        border: 'none',
+                        borderRadius: '12px',
+                        background: answerGradients[3],
+                        cursor: autoAdvancing ? 'not-allowed' : 'pointer',
+                        textAlign: 'center',
+                        fontSize: '12px',
+                        fontWeight: '600',
+                        color: '#333',
+                        transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
+                        opacity: autoAdvancing ? 0.6 : 1,
+                        boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
+                        position: 'relative',
+                        zIndex: selectedOption === 3 ? 2 : 1,
+                        minWidth: '250px',
+                        maxWidth: '250px',
+                        whiteSpace: 'nowrap',
+                        overflow: 'visible',
+                        textOverflow: 'clip',
+                      }}
+                    >
+                      {currentQuestion.options[3]}
+                    </motion.button>
+                  </div>
+                  
+                  {/* Bottom row: Never, Rarely, Sometimes */}
+                  <div style={{
+                    display: 'flex',
+                    gap: '10px',
+                    justifyContent: 'center',
+                    width: '100%',
+                  }}>
+                    {[0, 1, 2].map((originalIndex) => {
+                      const option = currentQuestion.options[originalIndex];
+                      return (
+                        <motion.button
+                          key={originalIndex}
+                          onClick={() => handleOptionSelect(originalIndex)}
+                          whileHover={!autoAdvancing ? { 
+                            y: -4,
+                            boxShadow: `0 0 12px ${glowColors[originalIndex]}, 0 4px 18px rgba(0,0,0,0.1)`,
+                            filter: 'brightness(1.06)',
+                            transition: { duration: 0.12, ease: 'easeOut' }
+                          } : {}}
+                          whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
+                          disabled={autoAdvancing}
+                          style={{
+                            padding: '10px 14px',
+                            border: 'none',
+                            borderRadius: '12px',
+                            background: answerGradients[originalIndex],
+                            cursor: autoAdvancing ? 'not-allowed' : 'pointer',
+                            textAlign: 'center',
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            color: '#333',
+                            transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
+                            opacity: autoAdvancing ? 0.6 : 1,
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
+                            position: 'relative',
+                            zIndex: selectedOption === originalIndex ? 2 : 1,
+                            minWidth: '100px',
+                            flex: '1 1 0',
+                            whiteSpace: 'nowrap',
+                            overflow: 'visible',
+                            textOverflow: 'clip',
+                          }}
+                        >
+                          {option}
+                        </motion.button>
+                      );
+                    })}
+                  </div>
+                </>
+              ) : (
+                // Desktop: Original order (left to right)
+                currentQuestion.options.map((option, index) => {
+                  return (
+                    <motion.button
+                      key={index}
+                      onClick={() => handleOptionSelect(index)}
+                      whileHover={!autoAdvancing ? { 
+                        y: -4,
+                        boxShadow: `0 0 12px ${glowColors[index]}, 0 4px 18px rgba(0,0,0,0.1)`,
+                        filter: 'brightness(1.06)',
+                        transition: { duration: 0.12, ease: 'easeOut' }
+                      } : {}}
+                      whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
+                      disabled={autoAdvancing}
+                      style={{
+                        padding: '12px 20px',
+                        border: 'none',
+                        borderRadius: '12px',
+                        background: answerGradients[index],
+                        cursor: autoAdvancing ? 'not-allowed' : 'pointer',
+                        textAlign: 'center',
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        color: '#333',
+                        transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
+                        opacity: autoAdvancing ? 0.6 : 1,
+                        boxShadow: '0 3px 10px rgba(0,0,0,0.08)',
+                        position: 'relative',
+                        zIndex: selectedOption === index ? 2 : 1,
+                        flex: '1 1 0',
+                        maxWidth: '150px',
+                        whiteSpace: 'nowrap',
+                        overflow: 'visible',
+                        textOverflow: 'clip',
+                      }}
+                    >
+                      {option}
+                    </motion.button>
+                  );
+                })
+              )}
+            </div>
+
+            <div style={{
+              display: 'flex',
+              justifyContent: isMobile ? 'space-between' : 'space-between',
+              alignItems: 'center',
+              marginTop: '32px',
+              gap: '16px',
+              position: 'relative',
+              padding: isMobile ? '16px 20px' : '20px 24px',
+              background: 'linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(35, 35, 50, 0.98) 100%)',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 60px rgba(108, 99, 255, 0.1)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(108, 99, 255, 0.2)',
+            }}>
+              <motion.button
+                onClick={handlePreviousQuestion}
+                disabled={currentQuestionIndex === 0 || autoAdvancing}
+                whileHover={currentQuestionIndex > 0 && !autoAdvancing ? { scale: 1.05 } : {}}
+                whileTap={currentQuestionIndex > 0 && !autoAdvancing ? { scale: 0.95 } : {}}
+                style={{
+                  padding: isMobile ? '12px 24px' : '14px 28px',
+                  background: currentQuestionIndex === 0 || autoAdvancing
+                    ? 'rgba(100, 100, 100, 0.3)'
+                    : 'linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  borderRadius: '12px',
+                  color: currentQuestionIndex === 0 || autoAdvancing ? '#999' : 'white',
+                  fontWeight: '600',
+                  fontSize: isMobile ? '14px' : '16px',
+                  cursor: currentQuestionIndex === 0 || autoAdvancing ? 'not-allowed' : 'pointer',
+                  opacity: currentQuestionIndex === 0 || autoAdvancing ? 0.5 : 1,
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                {t('common.back') || 'Previous'}
+              </motion.button>
+
+              {/* Timer in the middle on mobile - Centered between Back and Next, below Rarely */}
+              {isMobile && (
+                <motion.div
+                  className="timer-container"
+                  animate={{
+                    scale: timeRemaining <= 180 ? [1, 1.05, 1] : 1,
+                    boxShadow: timeRemaining <= 180 
+                      ? [
+                          '0 0 0 0 rgba(231, 76, 60, 0.4)',
+                          '0 0 0 8px rgba(231, 76, 60, 0)',
+                          '0 0 0 0 rgba(231, 76, 60, 0)',
+                        ]
+                      : undefined,
+                  }}
+                  transition={{
+                    duration: timeRemaining <= 180 ? 1.5 : 0,
+                    repeat: timeRemaining <= 180 ? Infinity : 0,
+                    ease: 'easeInOut',
+                  }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    padding: '6px 12px',
+                    background: timeRemaining <= 180 
+                      ? 'rgba(231, 76, 60, 0.2)' 
+                      : 'linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(35, 35, 50, 0.98) 100%)',
+                    borderRadius: '10px',
+                    border: `2px solid ${timeRemaining <= 180 ? '#e74c3c' : 'rgba(108, 99, 255, 0.3)'}`,
+                    boxShadow: timeRemaining <= 180 
+                      ? '0 4px 20px rgba(231, 76, 60, 0.3)' 
+                      : '0 2px 8px rgba(0, 0, 0, 0.3)',
+                    transition: 'all 0.3s ease',
+                    position: 'absolute',
+                    left: '38.5%',
+                    top: '8px',
+                    transform: 'translateX(-50%)',
+                    zIndex: 5,
+                    margin: 0,
+                    fontSize: '0.9rem',
+                  }}
+                >
+                  <Clock 
+                    size={16} 
+                    style={{ 
+                      color: timeRemaining <= 180 ? '#e74c3c' : '#E8E8F0',
+                    }} 
+                  />
+                  <span style={{
+                    fontSize: '14px',
+                    fontWeight: 'bold',
+                    color: timeRemaining <= 180 ? '#e74c3c' : '#E8E8F0',
+                    fontFamily: 'monospace',
+                    letterSpacing: '1px',
+                  }}>
+                    {formatTime(timeRemaining)}
+                  </span>
+                </motion.div>
+              )}
+
+              {currentQuestionIndex < questions.length - 1 && (
+                <motion.button
+                  onClick={handleNextQuestion}
+                  disabled={!currentAnswer || autoAdvancing}
+                  whileHover={currentAnswer && !autoAdvancing ? { scale: 1.05 } : {}}
+                  whileTap={currentAnswer && !autoAdvancing ? { scale: 0.95 } : {}}
+                  style={{
+                    padding: isMobile ? '12px 24px' : '14px 28px',
+                    background: !currentAnswer || autoAdvancing
+                      ? 'rgba(100, 100, 100, 0.3)'
+                      : 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                    border: 'none',
+                    borderRadius: '12px',
+                    color: !currentAnswer || autoAdvancing ? '#999' : 'white',
+                    fontWeight: '600',
+                    fontSize: isMobile ? '14px' : '16px',
+                    cursor: !currentAnswer || autoAdvancing ? 'not-allowed' : 'pointer',
+                    opacity: !currentAnswer || autoAdvancing ? 0.5 : 1,
+                    transition: 'all 0.3s ease',
+                    marginLeft: isMobile ? '0' : 'auto',
+                  }}
+                >
+                  {t('common.next') || 'Next'}
+                </motion.button>
+              )}
+            </div>
+            </div>
+
+            {/* Header: Creativity Test + Question Progress + Timer - Below the card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               style={{
                 width: '100%',
-                padding: isMobile ? '0 20px' : '0',
-                marginBottom: '16px',
+                padding: isMobile ? '16px 20px' : '20px 24px',
+                marginTop: '24px',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 flexWrap: 'wrap',
                 gap: '20px',
+                background: 'linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(35, 35, 50, 0.98) 100%)',
+                borderRadius: '20px',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 60px rgba(108, 99, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(108, 99, 255, 0.2)',
               }}
             >
               <div style={{ 
                 fontSize: isMobile ? '20px' : '24px',
                 fontWeight: '600',
-                color: '#6c63ff',
+                color: '#E8E8F0',
               }}>
                 Creativity Test
               </div>
@@ -282,18 +706,18 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
                   transition={{ duration: 0.3, delay: 0.2 }}
                   style={{
                     padding: isMobile ? '6px 10px' : '8px 14px',
-                    background: 'linear-gradient(135deg, rgba(108, 99, 255, 0.95) 0%, rgba(155, 201, 237, 0.95) 100%)',
+                    background: 'rgba(255, 255, 255, 0.95)',
                     borderRadius: '10px',
-                    boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
                     backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    border: '1px solid rgba(0, 0, 0, 0.1)',
                   }}
                 >
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '6px',
-                    color: 'white',
+                    color: '#1a1a1a',
                     fontSize: isMobile ? '12px' : '14px',
                     fontWeight: '600',
                   }}>
@@ -303,48 +727,62 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
                       {currentQuestionIndex + 1}
                     </span>
                     <span style={{
-                      opacity: 0.8,
+                      opacity: 0.6,
                     }}>
                       /
                     </span>
                     <span style={{
-                      opacity: 0.8,
+                      opacity: 0.6,
                     }}>
                       {questions.length}
                     </span>
                   </div>
                 </motion.div>
 
-                {/* Timer */}
+                {/* Timer - Hidden on mobile */}
                 <motion.div
+                  className="bottom-timer"
                   animate={{
-                    scale: timeRemaining <= 60 ? [1, 1.1, 1] : 1,
+                    scale: timeRemaining <= 180 ? [1, 1.05, 1] : 1,
+                    boxShadow: timeRemaining <= 180 
+                      ? [
+                          '0 0 0 0 rgba(231, 76, 60, 0.4)',
+                          '0 0 0 8px rgba(231, 76, 60, 0)',
+                          '0 0 0 0 rgba(231, 76, 60, 0)',
+                        ]
+                      : undefined,
                   }}
                   transition={{
-                    duration: 1,
-                    repeat: timeRemaining <= 60 ? Infinity : 0,
+                    duration: timeRemaining <= 180 ? 1.5 : 0,
+                    repeat: timeRemaining <= 180 ? Infinity : 0,
                     ease: 'easeInOut',
                   }}
                   style={{
-                    display: 'flex',
+                    display: isMobile ? 'none' : 'flex',
                     alignItems: 'center',
                     gap: '8px',
                     padding: '8px 16px',
-                    background: timeRemaining <= 60 ? 'rgba(231, 76, 60, 0.1)' : 'rgba(108, 99, 255, 0.1)',
+                    background: timeRemaining <= 180 
+                      ? 'rgba(231, 76, 60, 0.2)' 
+                      : 'linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(35, 35, 50, 0.98) 100%)',
                     borderRadius: '12px',
-                    border: `2px solid ${timeRemaining <= 60 ? '#e74c3c' : '#6c63ff'}`,
+                    border: `2px solid ${timeRemaining <= 180 ? '#e74c3c' : 'rgba(108, 99, 255, 0.3)'}`,
+                    boxShadow: timeRemaining <= 180 
+                      ? '0 4px 20px rgba(231, 76, 60, 0.3)' 
+                      : '0 2px 8px rgba(0, 0, 0, 0.3)',
+                    transition: 'all 0.3s ease',
                   }}
                 >
                   <Clock 
                     size={20} 
                     style={{ 
-                      color: timeRemaining <= 60 ? '#e74c3c' : '#6c63ff',
+                      color: timeRemaining <= 180 ? '#e74c3c' : '#E8E8F0',
                     }} 
                   />
                   <span style={{
                     fontSize: isMobile ? '18px' : '20px',
                     fontWeight: 'bold',
-                    color: timeRemaining <= 60 ? '#e74c3c' : '#6c63ff',
+                    color: timeRemaining <= 180 ? '#e74c3c' : '#E8E8F0',
                     fontFamily: 'monospace',
                     letterSpacing: '1px',
                   }}>
@@ -352,205 +790,8 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
                   </span>
                 </motion.div>
 
-                {/* Developer Feature: Skip to Last Question */}
-                {currentQuestionIndex < questions.length - 1 && (
-                  <motion.button
-                    onClick={handleSkipToLast}
-                    disabled={autoAdvancing}
-                    whileHover={!autoAdvancing ? { scale: 1.05 } : {}}
-                    whileTap={!autoAdvancing ? { scale: 0.95 } : {}}
-                    style={{
-                      padding: isMobile ? '6px 10px' : '8px 12px',
-                      background: 'rgba(255, 152, 0, 0.1)',
-                      border: '1px solid rgba(255, 152, 0, 0.3)',
-                      borderRadius: '8px',
-                      color: '#ff9800',
-                      fontSize: isMobile ? '10px' : '11px',
-                      fontWeight: '600',
-                      cursor: autoAdvancing ? 'not-allowed' : 'pointer',
-                      opacity: autoAdvancing ? 0.5 : 1,
-                      transition: 'all 0.2s ease',
-                      whiteSpace: 'nowrap',
-                    }}
-                    title="Developer: Skip to last question (will be removed)"
-                  >
-                    ⚡ Skip to 20
-                  </motion.button>
-                )}
               </div>
             </motion.div>
-
-            {/* Question Card */}
-            <div
-              className="card"
-              style={{
-                width: '100%',
-                padding: isMobile ? '30px 20px' : '40px',
-                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 255, 0.98) 100%)',
-                borderRadius: '20px',
-                boxShadow: '0 8px 32px rgba(108, 99, 255, 0.15)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(108, 99, 255, 0.1)',
-              }}
-            >
-            <motion.h2 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              style={{
-                fontSize: isMobile ? '24px' : '32px',
-                marginBottom: '0',
-                lineHeight: '1.55',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '12px',
-                flexWrap: 'wrap',
-                textAlign: 'center',
-              }}
-            >
-              <span style={{
-                fontSize: isMobile ? '28px' : '36px',
-              }}>
-                💡
-              </span>
-              <span style={{
-                background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                flex: 1,
-              }}>
-                {currentQuestion.text}
-              </span>
-            </motion.h2>
-
-            <div style={{ 
-              display: isMobile ? 'grid' : 'flex',
-              gridTemplateColumns: isMobile ? 'repeat(3, 1fr)' : 'none',
-              flexDirection: isMobile ? 'none' : 'row',
-              flexWrap: isMobile ? 'none' : 'nowrap',
-              gap: isMobile ? '10px' : '8px',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: '100%',
-              marginTop: '48px',
-            }}>
-              {currentQuestion.options.map((option, index) => {
-                // Mobile: 3-1-3 layout (first 3, middle 1 (Neutral at index 3), last 3)
-                const isNeutralOption = index === 3; // Neutral is at index 3
-                const shouldSpanFullWidth = isMobile && isNeutralOption;
-                
-                return (
-                  <motion.button
-                    key={index}
-                    onClick={() => handleOptionSelect(index)}
-                    whileHover={!autoAdvancing ? { 
-                      scale: 1.05,
-                      boxShadow: '0 6px 20px rgba(108, 99, 255, 0.4)',
-                    } : {}}
-                    whileTap={!autoAdvancing ? { scale: 0.95 } : {}}
-                    disabled={autoAdvancing}
-                    style={{
-                      padding: isMobile ? '12px 8px' : '14px 12px',
-                      border: selectedOption === index 
-                        ? '2px solid #6c63ff' 
-                        : '1px solid #e0e0e0',
-                      borderRadius: '10px',
-                      background: selectedOption === index
-                        ? optionGradient
-                        : '#ffffff',
-                      cursor: autoAdvancing ? 'not-allowed' : 'pointer',
-                      textAlign: 'center',
-                      fontSize: isMobile ? '12px' : '14px',
-                      fontWeight: selectedOption === index ? '600' : '500',
-                      color: selectedOption === index ? '#333' : '#666',
-                      transition: 'all 0.2s ease',
-                      opacity: autoAdvancing ? 0.6 : 1,
-                      boxShadow: selectedOption === index
-                        ? '0 3px 12px rgba(108, 99, 255, 0.25)'
-                        : '0 1px 4px rgba(0, 0, 0, 0.08)',
-                      ...(isMobile 
-                        ? {
-                            gridColumn: shouldSpanFullWidth ? '1 / -1' : 'auto',
-                            width: shouldSpanFullWidth ? 'auto' : '100%',
-                            maxWidth: shouldSpanFullWidth ? '250px' : 'none',
-                            margin: shouldSpanFullWidth ? '0 auto' : '0',
-                          }
-                        : {
-                            flex: '1 1 0',
-                            minWidth: '80px',
-                            maxWidth: '140px',
-                          }
-                      ),
-                      whiteSpace: 'nowrap',
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                    }}
-                  >
-                    {option}
-                  </motion.button>
-                );
-              })}
-            </div>
-
-            <div style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              marginTop: '32px',
-              gap: '16px',
-            }}>
-              <motion.button
-                onClick={handlePreviousQuestion}
-                disabled={currentQuestionIndex === 0 || autoAdvancing}
-                whileHover={currentQuestionIndex > 0 && !autoAdvancing ? { scale: 1.05 } : {}}
-                whileTap={currentQuestionIndex > 0 && !autoAdvancing ? { scale: 0.95 } : {}}
-                style={{
-                  padding: isMobile ? '12px 24px' : '14px 28px',
-                  background: currentQuestionIndex === 0 || autoAdvancing
-                    ? '#e0e0e0'
-                    : 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                  border: 'none',
-                  borderRadius: '12px',
-                  color: currentQuestionIndex === 0 || autoAdvancing ? '#999' : 'white',
-                  fontWeight: '600',
-                  fontSize: isMobile ? '14px' : '16px',
-                  cursor: currentQuestionIndex === 0 || autoAdvancing ? 'not-allowed' : 'pointer',
-                  opacity: currentQuestionIndex === 0 || autoAdvancing ? 0.5 : 1,
-                  transition: 'all 0.3s ease',
-                }}
-              >
-                {t('common.back') || 'Previous'}
-              </motion.button>
-
-              {currentQuestionIndex < questions.length - 1 && (
-                <motion.button
-                  onClick={handleNextQuestion}
-                  disabled={!currentAnswer || autoAdvancing}
-                  whileHover={currentAnswer && !autoAdvancing ? { scale: 1.05 } : {}}
-                  whileTap={currentAnswer && !autoAdvancing ? { scale: 0.95 } : {}}
-                  style={{
-                    padding: isMobile ? '12px 24px' : '14px 28px',
-                    background: !currentAnswer || autoAdvancing
-                      ? '#e0e0e0'
-                      : 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                    border: 'none',
-                    borderRadius: '12px',
-                    color: !currentAnswer || autoAdvancing ? '#999' : 'white',
-                    fontWeight: '600',
-                    fontSize: isMobile ? '14px' : '16px',
-                    cursor: !currentAnswer || autoAdvancing ? 'not-allowed' : 'pointer',
-                    opacity: !currentAnswer || autoAdvancing ? 0.5 : 1,
-                    transition: 'all 0.3s ease',
-                    marginLeft: 'auto',
-                  }}
-                >
-                  {t('common.next') || 'Next'}
-                </motion.button>
-              )}
-            </div>
-            </div>
           </motion.div>
         </AnimatePresence>
       </div>

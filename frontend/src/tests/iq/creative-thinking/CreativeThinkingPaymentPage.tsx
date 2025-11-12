@@ -3,7 +3,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
-import { Lock, Shield, CheckCircle, Star } from 'lucide-react';
+import { useTestsCompletedCounter } from '../../../hooks/useTestsCompletedCounter';
+import { Lock, Shield, CheckCircle, Star, ArrowDown } from 'lucide-react';
 import { useCreativeThinkingTestStore } from '../../../store/creativeThinkingTestStore';
 import '../../../App.css';
 
@@ -259,6 +260,16 @@ export default function CreativeThinkingPaymentPage() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const checkTablet = () => {
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+    };
+    checkTablet();
+    window.addEventListener('resize', checkTablet);
+    return () => window.removeEventListener('resize', checkTablet);
+  }, []);
   const { resultLevel, resultData } = useCreativeThinkingTestStore();
   const [activeTab, setActiveTab] = useState<'card' | 'googlepay'>('card');
   const [processing, setProcessing] = useState(false);
@@ -386,61 +397,7 @@ export default function CreativeThinkingPaymentPage() {
     const groups = cleaned.match(/.{1,4}/g);
     return groups ? groups.join(' ') : cleaned;
   };
-  const [testCount, setTestCount] = useState(() => {
-    if (typeof window === 'undefined') return 8000;
-    const saved = localStorage.getItem('creativeThinkingTestsCount');
-    const savedTime = localStorage.getItem('creativeThinkingTestsTime');
-    const now = Date.now();
-    
-    if (saved && savedTime) {
-      const timeDiff = now - parseInt(savedTime);
-      if (timeDiff < 86400000) {
-        return parseInt(saved);
-      }
-    }
-    
-    const newCount = Math.floor(7000 + Math.random() * 2000);
-    localStorage.setItem('creativeThinkingTestsCount', newCount.toString());
-    localStorage.setItem('creativeThinkingTestsTime', now.toString());
-    return newCount;
-  });
-
-  useEffect(() => {
-    const interval1 = setInterval(() => {
-      setTestCount((prev) => {
-        const newCount = prev + 1;
-        localStorage.setItem('creativeThinkingTestsCount', newCount.toString());
-        return newCount;
-      });
-    }, 60000);
-
-    const interval2 = setInterval(() => {
-      setTestCount((prev) => {
-        const newCount = prev + 2;
-        localStorage.setItem('creativeThinkingTestsCount', newCount.toString());
-        return newCount;
-      });
-    }, 120000);
-
-    const checkReset = setInterval(() => {
-      const savedTime = localStorage.getItem('creativeThinkingTestsTime');
-      if (savedTime) {
-        const timeDiff = Date.now() - parseInt(savedTime);
-        if (timeDiff >= 86400000) {
-          const newCount = Math.floor(7000 + Math.random() * 2000);
-          setTestCount(newCount);
-          localStorage.setItem('creativeThinkingTestsCount', newCount.toString());
-          localStorage.setItem('creativeThinkingTestsTime', Date.now().toString());
-        }
-      }
-    }, 3600000);
-
-    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-      clearInterval(checkReset);
-    };
-  }, []);
+  const { count: testCount, text: testsCompletedText, formattedCount } = useTestsCompletedCounter();
 
 
   const reviews = {
@@ -514,53 +471,227 @@ export default function CreativeThinkingPaymentPage() {
         maxWidth: '1200px',
         margin: '0 auto',
       }}>
-        {/* Top Banner: Celebration-style result ready banner */}
+        {/* AI Aurora Payment Card - Redesigned */}
         <motion.section
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          whileHover={{
+            y: -8,
+            scale: 1.02,
+            transition: { duration: 0.3 }
+          }}
           style={{
             position: 'relative',
-            textAlign: 'center',
-            marginBottom: isMobile ? '32px' : '48px',
-            padding: isMobile ? '48px 24px' : '48px 40px',
-            background: 'linear-gradient(135deg, #A78BFA 0%, #67E8F9 100%)',
-            borderRadius: '24px',
-            boxShadow: '0 20px 60px rgba(167, 139, 250, 0.3), inset 0 0 60px rgba(255, 255, 255, 0.1)',
+            width: '90vw',
+            maxWidth: '1000px',
+            margin: '0 auto',
+            marginBottom: isMobile ? '48px' : '64px',
+            padding: isMobile ? '40px 24px' : '80px 60px',
+            background: 'linear-gradient(135deg, #7B5CFF 0%, #5BE9FF 100%)',
+            borderRadius: '28px',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255, 255, 255, 0.3)',
+            boxShadow: 'inset 0 0 30px rgba(255,255,255,0.05), 0 0 50px rgba(124,90,255,0.35)',
             overflow: 'hidden',
+            cursor: 'default',
+            transition: 'all 0.4s ease',
           }}
         >
+          {/* Subtle Aurora Glow Overlay */}
+          <motion.div
+            animate={{
+              opacity: [0.06, 0.1, 0.06],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'rgba(255, 255, 255, 0.08)',
+              zIndex: 1,
+              pointerEvents: 'none',
+            }}
+          />
+
+          {/* Shimmering Glow Pulse - Hover Effect */}
+          <motion.div
+            initial={{ x: '-100%', opacity: 0 }}
+            whileHover={{
+              x: '200%',
+              opacity: [0, 0.6, 0],
+              transition: {
+                duration: 1.2,
+                ease: 'easeInOut',
+                repeat: Infinity,
+                repeatDelay: 0.5,
+              }
+            }}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '50%',
+              height: '100%',
+              background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)',
+              transform: 'skewX(-20deg)',
+              zIndex: 1,
+              pointerEvents: 'none',
+            }}
+          />
+
+          {/* Slow Gradient Animation */}
+          <motion.div
+            animate={{
+              background: [
+                'linear-gradient(135deg, #7B5CFF 0%, #5BE9FF 100%)',
+                'linear-gradient(135deg, #6B4CFF 0%, #4BD9FF 100%)',
+                'linear-gradient(135deg, #7B5CFF 0%, #5BE9FF 100%)',
+              ],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              opacity: 0.3,
+              zIndex: 0,
+            }}
+          />
+
+          {/* Brightening Overlay on Hover */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: 0.15,
+              transition: { duration: 0.4, ease: 'easeOut' }
+            }}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%)',
+              zIndex: 0,
+              pointerEvents: 'none',
+            }}
+          />
 
           <div style={{
             position: 'relative',
-            zIndex: 1,
+            zIndex: 2,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '16px',
+            textAlign: 'center',
+            gap: '24px',
           }}>
-            <h1 style={{
-              fontSize: isMobile ? '28px' : '36px',
-              fontWeight: '700',
-              color: 'white',
-              marginBottom: '8px',
-              textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-            }}>
-              {getTranslation('payment.resultBanner.title', i18n.language === 'tr' 
-                ? 'Kişisel analiz raporun hazır!' 
-                : 'Your personalized insights are ready!')}
-            </h1>
-            <p style={{
-              fontSize: isMobile ? '14px' : '16px',
-              color: 'rgba(255, 255, 255, 0.95)',
-              lineHeight: '1.6',
-              maxWidth: '600px',
-              marginBottom: '8px',
-            }}>
-              {getTranslation('payment.resultBanner.subtitle', i18n.language === 'tr'
-                ? 'Cevaplarına özel olarak hazırlanmış yapay zekâ destekli sonuçlarını şimdi keşfet.'
-                : 'Unlock your full results, crafted by our AI based on your unique answers.')}
-            </p>
+            {/* Badge */}
+            <motion.div
+              animate={{
+                opacity: [0.8, 1, 0.8],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              style={{
+                padding: '6px 16px',
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: '20px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                fontSize: '13px',
+                color: 'rgba(255, 255, 255, 0.85)',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+              }}
+            >
+              ✨ AI-powered insight just for you
+            </motion.div>
+
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              style={{
+                fontSize: isMobile ? '28px' : '38px',
+                fontWeight: '700',
+                color: '#f8f9ff',
+                margin: 0,
+                lineHeight: '1.3',
+                textShadow: '0 2px 12px rgba(0,0,0,0.25)',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '12px',
+                flexWrap: 'wrap',
+              }}
+            >
+              Your Mind Holds More Than You Think
+              <motion.div
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7],
+                  rotate: [0, 15, -15, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.8))',
+                }}
+              >
+                <Star
+                  size={isMobile ? 28 : 36}
+                  fill="#FFD700"
+                  color="#FFD700"
+                  style={{
+                    filter: 'drop-shadow(0 0 12px rgba(255, 215, 0, 0.8))',
+                  }}
+                />
+              </motion.div>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              style={{
+                fontSize: '18px',
+                color: 'rgba(255, 255, 255, 0.9)',
+                lineHeight: '1.6',
+                maxWidth: '700px',
+                margin: '4px 0 0 0',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif',
+              }}
+            >
+              Unlock your full creative potential — AI has analyzed your answers and crafted a detailed insight just for you.
+            </motion.p>
+
+            {/* Main CTA Button */}
             <motion.button
               onClick={() => {
                 const paymentSection = document.getElementById('payment-section');
@@ -568,31 +699,53 @@ export default function CreativeThinkingPaymentPage() {
                   paymentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
               }}
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: '0 0 30px rgba(255, 255, 255, 0.5)',
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{
+                scale: 1.1,
+                boxShadow: '0 0 30px rgba(91,233,255,0.5)',
+                transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.98 }}
               style={{
-                padding: '14px 32px',
-                background: 'rgba(255, 255, 255, 0.95)',
-                border: '2px solid rgba(255, 255, 255, 0.8)',
-                borderRadius: '12px',
-                color: '#6C63FF',
+                position: 'relative',
+                padding: '18px 42px',
+                background: 'linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%)',
+                border: 'none',
+                borderRadius: '14px',
+                color: 'white',
                 fontWeight: '700',
-                fontSize: isMobile ? '16px' : '18px',
+                fontSize: '18px',
                 cursor: 'pointer',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-                transition: 'all 0.3s ease',
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '10px',
                 marginTop: '8px',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif',
+                boxShadow: '0 8px 24px rgba(139, 92, 246, 0.4)',
+                transition: 'all 0.3s ease',
               }}
             >
-              {getTranslation('payment.resultBanner.button', i18n.language === 'tr' 
-                ? 'Sonucumu Gör ↓' 
-                : 'See My Result ↓')}
+              <span style={{ display: 'inline-block' }}>
+                Reveal My Hidden Potential
+              </span>
+              <motion.span
+                animate={{
+                  y: [0, 6, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                }}
+              >
+                <ArrowDown size={20} style={{ display: 'block' }} />
+              </motion.span>
             </motion.button>
           </div>
         </motion.section>
@@ -603,11 +756,16 @@ export default function CreativeThinkingPaymentPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
+            whileHover={{
+              scale: 1.02,
+              boxShadow: '0 32px 100px rgba(108, 99, 255, 0.3), 0 0 0 1px rgba(108, 99, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9)',
+              transition: { duration: 0.2, ease: 'easeOut' }
+            }}
             style={{
               position: 'relative',
               maxWidth: '700px',
               margin: '0 auto 48px',
-              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 255, 1) 100%)',
+              background: '#ffffff',
               backdropFilter: 'blur(20px)',
               borderRadius: '32px',
               boxShadow: '0 24px 80px rgba(108, 99, 255, 0.2), 0 0 0 1px rgba(108, 99, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
@@ -615,162 +773,506 @@ export default function CreativeThinkingPaymentPage() {
               textAlign: 'center',
               border: '1px solid rgba(108, 99, 255, 0.15)',
               overflow: 'hidden',
+              cursor: 'default',
+              transition: 'all 0.2s ease-out',
             }}
           >
-            {/* Decorative gradient overlay */}
-            <div style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              height: '200px',
-              background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.08) 0%, rgba(103, 232, 249, 0.08) 100%)',
-              borderRadius: '32px 32px 0 0',
-              pointerEvents: 'none',
-            }} />
             <div style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{
-              fontSize: '12px',
-              fontWeight: '600',
-              letterSpacing: '1.5px',
-              color: '#6c63ff',
-              textTransform: 'uppercase',
-              marginBottom: '12px',
-            }}>
-              {getTranslation('tests.creativeThinking.payment.your_result', 'Your Creativity Level')}
-            </p>
-            
-            <p style={{
-              fontSize: isMobile ? '16px' : '18px',
-              fontWeight: '500',
-              color: '#666',
-              marginBottom: '32px',
-              lineHeight: '1.6',
-            }}>
-              {getTranslation('tests.creativeThinking.payment.blueprint_text', 'Your creative thinking analysis has been generated.')}
-            </p>
-
-            {/* Result Title */}
-            <h1 style={{
-              fontSize: isMobile ? '32px' : '48px',
-              fontWeight: '900',
-              background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              marginBottom: '16px',
-              lineHeight: '1.2',
-            }}>
-              <div>Creative Thinker</div>
-              <div style={{ 
-                fontSize: isMobile ? '24px' : '36px', 
-                marginTop: '4px',
-                background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}>
-                {(() => {
-                  const title = getResultTitle();
-                  const parts = title.split(/[–—]/).map(s => s.trim());
-                  return parts.length > 1 ? parts[1] : '';
-                })()}
-              </div>
-            </h1>
-
-            {/* Animated Emoji Background */}
+            {/* The Growing Mind Section */}
             <div style={{
-              position: 'relative',
               display: 'flex',
-              justifyContent: 'center',
+              flexDirection: 'column',
               alignItems: 'center',
-              marginBottom: '24px',
-              height: isMobile ? '60px' : '80px',
-            }}>
-              <div style={{
-                position: 'absolute',
-                width: isMobile ? '80px' : '96px',
-                height: isMobile ? '80px' : '96px',
-                background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                borderRadius: '50%',
-                filter: 'blur(20px)',
-                opacity: 0.3,
-                animation: 'pulse 3s ease-in-out infinite',
-              }} />
-              
-              <div style={{
-                position: 'relative',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: '8px',
-                zIndex: 1,
-              }}>
-                {getResultEmojis().map((emoji, index) => (
-                  <span
-                    key={index}
-                    style={{
-                      fontSize: isMobile ? '28px' : '36px',
-                      display: 'inline-block',
-                    }}
-                  >
-                    {emoji}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Preview Points */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
-              gap: '20px',
+              justifyContent: 'center',
+              textAlign: 'center',
               marginBottom: '32px',
             }}>
-              {resultData.insights?.slice(0, 3).map((insight, index) => (
-                <motion.div 
-                  key={index} 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                  whileHover={{ scale: 1.03, y: -2 }}
+              {/* Title */}
+              <h2 style={{
+                fontSize: isMobile ? '2rem' : '2.75rem',
+                fontWeight: '700',
+                color: '#6C63FF',
+                margin: 0,
+                marginBottom: '8px',
+              }}>
+                The Growing Mind
+              </h2>
+
+              {/* Decorative Line */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                width: '100%',
+                margin: '8px 0 24px',
+              }}>
+                <span style={{
+                  flex: 1,
+                  height: '2px',
+                  background: 'linear-gradient(90deg, transparent, #6C63FF, transparent)',
+                  maxWidth: '150px',
+                }} />
+                <span style={{
+                  fontSize: '18px',
+                  color: '#6C63FF',
+                }}>
+                  ⭐
+                </span>
+                <span style={{
+                  flex: 1,
+                  height: '2px',
+                  background: 'linear-gradient(90deg, transparent, #6C63FF, transparent)',
+                  maxWidth: '150px',
+                }} />
+              </div>
+
+              {/* Emoji Group - Mobile: Below Title */}
+              {isMobile && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2, duration: 0.4 }}
                   style={{
-                    padding: '20px',
-                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 255, 0.95) 100%)',
-                    borderRadius: '20px',
-                    border: '1px solid rgba(108, 99, 255, 0.2)',
-                    boxShadow: '0 4px 16px rgba(108, 99, 255, 0.1)',
-                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: '30px',
+                    marginTop: '8px',
+                    marginBottom: '16px',
+                    textAlign: 'center',
                   }}
                 >
-                  <p style={{
-                    fontSize: '13px',
-                    color: '#555',
-                    lineHeight: '1.6',
-                    fontWeight: '500',
-                    margin: 0,
-                  }}>
-                    {insight}
-                  </p>
+                  {getResultEmojis().map((emoji, index) => (
+                    <span key={index} style={{ display: 'inline-block' }}>
+                      {emoji}
+                    </span>
+                  ))}
                 </motion.div>
-              ))}
+              )}
+
+              {/* Diamond Layout with Cards */}
+              {!isMobile ? (
+                <div style={{
+                  position: 'relative',
+                  width: '100%',
+                  minHeight: '400px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '26px',
+                }}>
+                  {/* Top Card */}
+                  {resultData.insights?.[0] && (() => {
+                    const parts = resultData.insights[0].split(':');
+                    const title = parts.length > 1 ? parts[0].trim() : '';
+                    const description = parts.length > 1 ? parts.slice(1).join(':').trim() : resultData.insights[0];
+                    return (
+                      <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1, duration: 0.4 }}
+                        whileHover={{
+                          scale: 1.06,
+                          boxShadow: '0 0 25px rgba(108,99,255,0.4)',
+                          filter: 'brightness(1.1)',
+                          transition: { duration: 0.15, ease: 'easeInOut' }
+                        }}
+                        style={{
+                          width: isTablet ? '240px' : '270px',
+                          minHeight: isTablet ? '170px' : '180px',
+                          background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                          borderRadius: '16px',
+                          border: '1.5px solid rgba(108,99,255,0.09)',
+                          boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                          padding: '18px 20px',
+                          cursor: 'pointer',
+                          textAlign: 'center',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
+                          transition: 'all 0.15s ease-in-out',
+                          transformOrigin: 'center',
+                        }}
+                      >
+                        {title && (
+                          <h4 style={{
+                            color: '#6C63FF',
+                            fontWeight: '600',
+                            fontSize: '16px',
+                            margin: '0 0 12px 0',
+                            lineHeight: '1.3',
+                            userSelect: 'none',
+                            WebkitUserSelect: 'none',
+                            MozUserSelect: 'none',
+                            msUserSelect: 'none',
+                          }}>
+                            {title}
+                          </h4>
+                        )}
+                        <p style={{
+                          fontSize: '14.5px',
+                          color: '#555',
+                          textAlign: 'center',
+                          lineHeight: '1.55',
+                          margin: 0,
+                          filter: 'blur(4px)',
+                          userSelect: 'none',
+                          WebkitUserSelect: 'none',
+                          MozUserSelect: 'none',
+                          msUserSelect: 'none',
+                        }}>
+                          {description}
+                        </p>
+                      </motion.div>
+                    );
+                  })()}
+
+                  {/* Middle Row: Emoji + 2 Cards */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: isTablet ? '20px' : '26px',
+                    width: '100%',
+                  }}>
+                    {/* Left Middle Card */}
+                    {resultData.insights?.[1] && (() => {
+                      const parts = resultData.insights[1].split(':');
+                      const title = parts.length > 1 ? parts[0].trim() : '';
+                      const description = parts.length > 1 ? parts.slice(1).join(':').trim() : resultData.insights[1];
+                      return (
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.2, duration: 0.4 }}
+                          whileHover={{
+                            scale: 1.06,
+                            boxShadow: '0 0 25px rgba(108,99,255,0.4)',
+                            background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                            filter: 'brightness(1.1)',
+                            transition: { duration: 0.15, ease: 'easeInOut' }
+                          }}
+                          style={{
+                            width: '270px',
+                            minHeight: '180px',
+                            background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                            borderRadius: '16px',
+                            border: '1.5px solid rgba(108,99,255,0.09)',
+                            boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                            padding: '18px 20px',
+                            cursor: 'pointer',
+                            textAlign: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            transition: 'all 0.15s ease-in-out',
+                            transformOrigin: 'center',
+                          }}
+                        >
+                          {title && (
+                            <h4 style={{
+                              color: '#6C63FF',
+                              fontWeight: '600',
+                              fontSize: '16px',
+                              margin: '0 0 12px 0',
+                              lineHeight: '1.3',
+                              userSelect: 'none',
+                              WebkitUserSelect: 'none',
+                              MozUserSelect: 'none',
+                              msUserSelect: 'none',
+                            }}>
+                              {title}
+                            </h4>
+                          )}
+                          <p style={{
+                            fontSize: '14.5px',
+                            color: '#555',
+                            textAlign: 'center',
+                            lineHeight: '1.55',
+                            margin: 0,
+                            filter: 'blur(4px)',
+                            userSelect: 'none',
+                            WebkitUserSelect: 'none',
+                            MozUserSelect: 'none',
+                            msUserSelect: 'none',
+                          }}>
+                            {description}
+                          </p>
+                        </motion.div>
+                      );
+                    })()}
+
+                    {/* Center Emoji Group */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.3, duration: 0.4 }}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: '8px',
+                        fontSize: '34px',
+                        marginTop: '-10px',
+                        marginBottom: '-10px',
+                        textAlign: 'center',
+                      }}
+                    >
+                      {getResultEmojis().map((emoji, index) => (
+                        <span key={index} style={{ display: 'inline-block' }}>
+                          {emoji}
+                        </span>
+                      ))}
+                    </motion.div>
+
+                    {/* Right Middle Card */}
+                    {resultData.insights?.[2] && (() => {
+                      const parts = resultData.insights[2].split(':');
+                      const title = parts.length > 1 ? parts[0].trim() : '';
+                      const description = parts.length > 1 ? parts.slice(1).join(':').trim() : resultData.insights[2];
+                      return (
+                        <motion.div
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.2, duration: 0.4 }}
+                          whileHover={{
+                            scale: 1.06,
+                            boxShadow: '0 0 25px rgba(108,99,255,0.4)',
+                            background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                            filter: 'brightness(1.1)',
+                            transition: { duration: 0.15, ease: 'easeInOut' }
+                          }}
+                          style={{
+                            width: '270px',
+                            minHeight: '180px',
+                            background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                            borderRadius: '16px',
+                            border: '1.5px solid rgba(108,99,255,0.09)',
+                            boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                            padding: '18px 20px',
+                            cursor: 'pointer',
+                            textAlign: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            transition: 'all 0.15s ease-in-out',
+                            transformOrigin: 'center',
+                          }}
+                        >
+                          {title && (
+                            <h4 style={{
+                              color: '#6C63FF',
+                              fontWeight: '600',
+                              fontSize: '16px',
+                              margin: '0 0 12px 0',
+                              lineHeight: '1.3',
+                              userSelect: 'none',
+                              WebkitUserSelect: 'none',
+                              MozUserSelect: 'none',
+                              msUserSelect: 'none',
+                            }}>
+                              {title}
+                            </h4>
+                          )}
+                          <p style={{
+                            fontSize: '14.5px',
+                            color: '#555',
+                            textAlign: 'center',
+                            lineHeight: '1.55',
+                            margin: 0,
+                            filter: 'blur(4px)',
+                            userSelect: 'none',
+                            WebkitUserSelect: 'none',
+                            MozUserSelect: 'none',
+                            msUserSelect: 'none',
+                          }}>
+                            {description}
+                          </p>
+                        </motion.div>
+                      );
+                    })()}
+                  </div>
+
+                  {/* Bottom Row: 2 Cards */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: isTablet ? '20px' : '26px',
+                    width: '100%',
+                  }}>
+                    {resultData.insights?.slice(3, 5).map((insight: string, index: number) => {
+                      const parts = insight.split(':');
+                      const title = parts.length > 1 ? parts[0].trim() : '';
+                      const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
+                      return (
+                        <motion.div
+                          key={index + 3}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.4 + index * 0.1, duration: 0.4 }}
+                          whileHover={{
+                            scale: 1.06,
+                            boxShadow: '0 0 25px rgba(108,99,255,0.4)',
+                            background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                            filter: 'brightness(1.1)',
+                            transition: { duration: 0.15, ease: 'easeInOut' }
+                          }}
+                          style={{
+                            width: '270px',
+                            minHeight: '180px',
+                            background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                            borderRadius: '16px',
+                            border: '1.5px solid rgba(108,99,255,0.09)',
+                            boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                            padding: '18px 20px',
+                            cursor: 'pointer',
+                            textAlign: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            transition: 'all 0.15s ease-in-out',
+                            transformOrigin: 'center',
+                          }}
+                        >
+                          {title && (
+                            <h4 style={{
+                              color: '#6C63FF',
+                              fontWeight: '600',
+                              fontSize: '16px',
+                              margin: '0 0 12px 0',
+                              lineHeight: '1.3',
+                              userSelect: 'none',
+                              WebkitUserSelect: 'none',
+                              MozUserSelect: 'none',
+                              msUserSelect: 'none',
+                            }}>
+                              {title}
+                            </h4>
+                          )}
+                          <p style={{
+                            fontSize: '14.5px',
+                            color: '#555',
+                            textAlign: 'center',
+                            lineHeight: '1.55',
+                            margin: 0,
+                            filter: 'blur(4px)',
+                            userSelect: 'none',
+                            WebkitUserSelect: 'none',
+                            MozUserSelect: 'none',
+                            msUserSelect: 'none',
+                          }}>
+                            {description}
+                          </p>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ) : (
+                // Mobile: Vertical Stack
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '18px',
+                  width: '100%',
+                }}>
+                  {/* All Cards */}
+                  {resultData.insights?.slice(0, 5).map((insight: string, index: number) => {
+                    const parts = insight.split(':');
+                    const title = parts.length > 1 ? parts[0].trim() : '';
+                    const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }}
+                        whileHover={{
+                          scale: 1.05,
+                          boxShadow: '0 0 25px rgba(108,99,255,0.4)',
+                          background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                          filter: 'brightness(1.1)',
+                          transition: { duration: 0.15, ease: 'easeInOut' }
+                        }}
+                        style={{
+                          width: '100%',
+                          maxWidth: '300px',
+                          minHeight: '170px',
+                          background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                          borderRadius: '16px',
+                          border: '1.5px solid rgba(108,99,255,0.09)',
+                          boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                          padding: '18px 20px',
+                          cursor: 'pointer',
+                          textAlign: 'center',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
+                          transition: 'all 0.15s ease-in-out',
+                          transformOrigin: 'center',
+                        }}
+                      >
+                        {title && (
+                          <h4 style={{
+                            color: '#6C63FF',
+                            fontWeight: '600',
+                            fontSize: '16px',
+                            margin: '0 0 12px 0',
+                            lineHeight: '1.3',
+                            userSelect: 'none',
+                            WebkitUserSelect: 'none',
+                            MozUserSelect: 'none',
+                            msUserSelect: 'none',
+                          }}>
+                            {title}
+                          </h4>
+                        )}
+                        <p style={{
+                          fontSize: '14.5px',
+                          color: '#555',
+                          textAlign: 'center',
+                          lineHeight: '1.55',
+                          margin: 0,
+                          filter: 'blur(4px)',
+                          userSelect: 'none',
+                          WebkitUserSelect: 'none',
+                          MozUserSelect: 'none',
+                          msUserSelect: 'none',
+                        }}>
+                          {description}
+                        </p>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
-            {/* Lock Message */}
+            {/* Unlock Detailed Result Section */}
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.5, duration: 1.2, ease: 'easeInOut' }}
+              whileHover={{
+                scale: 1.02,
+                boxShadow: '0 0 40px rgba(108, 99, 255, 0.25)',
+                transition: { duration: 0.3 }
+              }}
               style={{
-                padding: isMobile ? '32px 24px' : '40px 32px',
-                background: 'linear-gradient(135deg, rgba(251, 234, 255, 0.8) 0%, rgba(255, 244, 240, 0.8) 100%)',
-                backdropFilter: 'blur(10px)',
-                borderRadius: '24px',
-                border: '2px dashed rgba(108, 99, 255, 0.4)',
+                padding: isMobile ? '24px' : '36px 24px',
+                background: 'linear-gradient(180deg, #faf6ff 0%, #f3ecff 100%)',
+                borderRadius: '22px',
+                border: '2px dashed rgba(108, 99, 255, 0.25)',
                 textAlign: 'center',
                 marginTop: '32px',
-                boxShadow: '0 8px 24px rgba(108, 99, 255, 0.15)',
+                boxShadow: '0 4px 25px rgba(108, 99, 255, 0.08)',
                 position: 'relative',
+                transition: 'all 0.3s ease',
               }}
             >
               <motion.div 
@@ -785,7 +1287,7 @@ export default function CreativeThinkingPaymentPage() {
                 }}
                 style={{
                   fontSize: '40px',
-                  marginBottom: '16px',
+                  marginBottom: '20px',
                   display: 'flex',
                   justifyContent: 'center',
                 }}
@@ -794,12 +1296,15 @@ export default function CreativeThinkingPaymentPage() {
               </motion.div>
               <p style={{
                 fontSize: isMobile ? '15px' : '16px',
-                color: '#555',
-                lineHeight: '1.7',
+                color: '#444',
+                lineHeight: '1.6',
                 fontWeight: '500',
                 marginBottom: '24px',
+                maxWidth: '540px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
               }}>
-                {getTranslation('tests.creativeThinking.payment.locked_subtext', 'Your full detailed report is ready — including creative strategies, growth areas, and personalized insights.')}
+                {getTranslation('tests.creativeThinking.payment.locked_subtext', 'Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.')}
               </p>
               <motion.button
                 onClick={() => {
@@ -809,24 +1314,26 @@ export default function CreativeThinkingPaymentPage() {
                   }
                 }}
                 whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: '0 8px 24px rgba(108, 99, 255, 0.4)',
+                  scale: 1.06,
+                  boxShadow: '0 10px 25px rgba(108, 99, 255, 0.45)',
+                  filter: 'brightness(1.1)',
+                  transition: { duration: 0.25, ease: 'easeInOut' }
                 }}
                 whileTap={{ scale: 0.98 }}
                 style={{
-                  padding: '14px 32px',
-                  background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                  padding: '14px 34px',
+                  background: 'linear-gradient(90deg, #6C63FF 0%, #9E8DFF 100%)',
                   border: 'none',
-                  borderRadius: '12px',
+                  borderRadius: '14px',
                   color: 'white',
                   fontWeight: '600',
                   fontSize: isMobile ? '15px' : '17px',
                   cursor: 'pointer',
-                  boxShadow: '0 4px 20px rgba(108, 99, 255, 0.4)',
-                  transition: 'all 0.3s ease',
+                  boxShadow: '0 6px 20px rgba(108, 99, 255, 0.3)',
+                  transition: 'all 0.25s ease-in-out',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '10px',
+                  gap: '8px',
                 }}
               >
                 🔓 {getTranslation('tests.creativeThinking.payment.unlock_button', 'Unlock Detailed Result')}
@@ -848,15 +1355,72 @@ export default function CreativeThinkingPaymentPage() {
         >
           <motion.p
             key={testCount}
-            initial={{ scale: 1.1 }}
+            initial={{ scale: 1 }}
             animate={{ scale: 1 }}
             style={{
-              fontSize: isMobile ? '16px' : '18px',
+              fontSize: isMobile ? '20px' : '24px',
               color: '#888',
               fontWeight: '500',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '4px',
+              flexWrap: 'wrap',
             }}
           >
-            {getTranslation('tests.creativeThinking.payment.tests_completed', i18n.language === 'tr' ? 'Bugün' : 'Today')} <span style={{ fontWeight: '700', color: '#6c63ff' }}>{testCount.toLocaleString()}</span> {getTranslation('tests.creativeThinking.payment.tests_completed_suffix', i18n.language === 'tr' ? 'kişi testi tamamladı' : 'people completed the test')}
+            {i18n.language === 'tr' ? (
+              <>
+                <span>Bugün</span>
+                <motion.span
+                  key={testCount}
+                  initial={{ scale: 1.3, y: -5 }}
+                  animate={{ scale: 1, y: 0 }}
+                  transition={{ 
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 20,
+                    duration: 0.5
+                  }}
+                  style={{
+                    fontWeight: '700',
+                    background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    fontSize: isMobile ? '22px' : '26px',
+                  }}
+                >
+                  {formattedCount}
+                </motion.span>
+                <span>test tamamlandı!</span>
+              </>
+            ) : (
+              <>
+                <span>Today</span>
+                <motion.span
+                  key={testCount}
+                  initial={{ scale: 1.3, y: -5 }}
+                  animate={{ scale: 1, y: 0 }}
+                  transition={{ 
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 20,
+                    duration: 0.5
+                  }}
+                  style={{
+                    fontWeight: '700',
+                    background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    fontSize: isMobile ? '22px' : '26px',
+                  }}
+                >
+                  {formattedCount}
+                </motion.span>
+                <span>test's completed!</span>
+              </>
+            )}
           </motion.p>
         </motion.div>
 
@@ -907,12 +1471,21 @@ export default function CreativeThinkingPaymentPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
+                whileHover={{
+                  scale: 1.05,
+                  y: -8,
+                  boxShadow: '0 12px 32px rgba(108, 99, 255, 0.25)',
+                  background: 'rgba(255, 255, 255, 0.95)',
+                  transition: { duration: 0.2, ease: 'easeOut' }
+                }}
                 style={{
                   background: 'rgba(255, 255, 255, 0.7)',
                   borderRadius: '20px',
                   padding: '32px 24px',
                   textAlign: 'center',
                   boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease-out',
                 }}
               >
                 <div style={{
@@ -1056,31 +1629,6 @@ export default function CreativeThinkingPaymentPage() {
           </div>
         </motion.section>
 
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          style={{
-            textAlign: 'center',
-            padding: '24px',
-            background: 'rgba(255, 255, 255, 0.6)',
-            borderRadius: '16px',
-            marginTop: '32px',
-            marginBottom: '32px',
-          }}
-        >
-          <p style={{
-            fontSize: '14px',
-            color: '#666',
-            lineHeight: '1.6',
-          }}>
-            {getTranslation('tests.creativeThinking.payment.footer', i18n.language === 'tr'
-              ? 'Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur.'
-              : 'You\'ll be redirected to your results after successful payment. Your data remains private.')}
-          </p>
-        </motion.div>
-
         {/* Recent Results Section */}
         <RecentResults t={t} i18n={i18n} isMobile={isMobile} />
 
@@ -1096,33 +1644,121 @@ export default function CreativeThinkingPaymentPage() {
               marginBottom: isMobile ? '32px' : '40px',
             }}
           >
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '16px',
-              marginBottom: '16px',
-            }}>
-              <div style={{
-                flex: 1,
-                height: '1px',
-                background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent)',
-              }} />
-              <p style={{
-                fontSize: isMobile ? '14px' : '16px',
-                color: '#6c63ff',
-                fontWeight: '600',
-                padding: '0 16px',
-                whiteSpace: 'nowrap',
-              }}>
-                {getTranslation('payment.completeTrial', 'Complete Your 7-Day Trial Securely')}
-              </p>
-              <div style={{
-                flex: 1,
-                height: '1px',
-                background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent)',
-              }} />
-            </div>
+            {/* Discover Your Mind Card */}
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
+              whileHover={{
+                scale: 1.02,
+                y: -4,
+                transition: { duration: 0.3, ease: 'easeOut' }
+              }}
+              style={{
+                width: '100%',
+                marginBottom: isMobile ? '24px' : '32px',
+              }}
+            >
+              <motion.div
+                animate={{
+                  background: [
+                    'linear-gradient(135deg, rgba(108, 99, 255, 0.15) 0%, rgba(155, 201, 237, 0.15) 50%, rgba(139, 92, 246, 0.12) 100%)',
+                    'linear-gradient(135deg, rgba(139, 92, 246, 0.18) 0%, rgba(108, 99, 255, 0.15) 50%, rgba(155, 201, 237, 0.15) 100%)',
+                    'linear-gradient(135deg, rgba(108, 99, 255, 0.15) 0%, rgba(155, 201, 237, 0.15) 50%, rgba(139, 92, 246, 0.12) 100%)',
+                  ],
+                  boxShadow: [
+                    '0 8px 32px rgba(108, 99, 255, 0.25), 0 0 40px rgba(155, 201, 237, 0.2), inset 0 0 60px rgba(255, 255, 255, 0.1)',
+                    '0 12px 48px rgba(139, 92, 246, 0.3), 0 0 50px rgba(108, 99, 255, 0.25), inset 0 0 80px rgba(255, 255, 255, 0.15)',
+                    '0 8px 32px rgba(108, 99, 255, 0.25), 0 0 40px rgba(155, 201, 237, 0.2), inset 0 0 60px rgba(255, 255, 255, 0.1)',
+                  ],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                style={{
+                  background: 'linear-gradient(135deg, rgba(108, 99, 255, 0.15) 0%, rgba(155, 201, 237, 0.15) 50%, rgba(139, 92, 246, 0.12) 100%)',
+                  borderRadius: '24px',
+                  border: '2px solid rgba(108, 99, 255, 0.3)',
+                  padding: isMobile ? '28px 24px' : '36px 48px',
+                  boxShadow: '0 8px 32px rgba(108, 99, 255, 0.25), 0 0 40px rgba(155, 201, 237, 0.2), inset 0 0 60px rgba(255, 255, 255, 0.1)',
+                  textAlign: 'center',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  cursor: 'pointer',
+                }}
+              >
+                {/* Animated rainbow shimmer */}
+                <motion.div
+                  animate={{
+                    x: ['-100%', '200%'],
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: 'linear',
+                  }}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    width: '200%',
+                    background: 'linear-gradient(90deg, transparent 0%, rgba(255, 0, 0, 0.3) 10%, rgba(255, 165, 0, 0.3) 20%, rgba(255, 255, 0, 0.3) 30%, rgba(0, 255, 0, 0.3) 40%, rgba(0, 0, 255, 0.3) 50%, rgba(75, 0, 130, 0.3) 60%, rgba(238, 130, 238, 0.3) 70%, transparent 80%, transparent 100%)',
+                    pointerEvents: 'none',
+                    filter: 'blur(8px)',
+                  }}
+                />
+                
+                {/* Decorative dots pattern */}
+                <div style={{
+                  position: 'absolute',
+                  top: '20px',
+                  left: '20px',
+                  width: '60px',
+                  height: '60px',
+                  background: 'radial-gradient(circle, rgba(108, 99, 255, 0.2) 2px, transparent 2px)',
+                  backgroundSize: '20px 20px',
+                  opacity: 0.3,
+                  pointerEvents: 'none',
+                }} />
+                <div style={{
+                  position: 'absolute',
+                  bottom: '20px',
+                  right: '20px',
+                  width: '60px',
+                  height: '60px',
+                  background: 'radial-gradient(circle, rgba(155, 201, 237, 0.2) 2px, transparent 2px)',
+                  backgroundSize: '20px 20px',
+                  opacity: 0.3,
+                  pointerEvents: 'none',
+                }} />
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.7, duration: 0.5 }}
+                  style={{
+                    fontSize: isMobile ? '18px' : '24px',
+                    fontWeight: '700',
+                    lineHeight: '1.5',
+                    margin: 0,
+                    background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    textShadow: '0 2px 20px rgba(108, 99, 255, 0.3)',
+                    position: 'relative',
+                    zIndex: 1,
+                    letterSpacing: '0.3px',
+                  }}
+                >
+                  Discover your mind, reveal your truth, unlock your potential, and transform yourself.
+                </motion.p>
+              </motion.div>
+            </motion.div>
           </motion.div>
 
           {/* 3-Column Layout: Trust | Payment | Quick Facts */}
@@ -1839,6 +2475,47 @@ export default function CreativeThinkingPaymentPage() {
                   💰 {getTranslation('payment.refund', '7-Day Refund Policy')}
                 </span>
               </div>
+
+              {/* Complete Your 7-Day Trial Securely - Below Payment Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginTop: '32px',
+                  width: '100%',
+                }}
+              >
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '16px',
+                }}>
+                  <div style={{
+                    flex: 1,
+                    height: '1px',
+                    background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent)',
+                  }} />
+                  <p style={{
+                    fontSize: isMobile ? '14px' : '16px',
+                    color: '#6c63ff',
+                    fontWeight: '600',
+                    padding: '0 16px',
+                    whiteSpace: 'nowrap',
+                  }}>
+                    {getTranslation('payment.completeTrial', 'Complete Your 7-Day Trial Securely')}
+                  </p>
+                  <div style={{
+                    flex: 1,
+                    height: '1px',
+                    background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent)',
+                  }} />
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -1915,9 +2592,7 @@ export default function CreativeThinkingPaymentPage() {
                       lineHeight: '1.6',
                       margin: 0,
                     }}>
-                      {getTranslation('trust.testsCompleted', i18n.language === 'tr' 
-                        ? `Bugün ${testCount.toLocaleString()} test tamamlandı`
-                        : `Over ${testCount.toLocaleString()} tests completed today`)}
+                      {testsCompletedText}
                     </p>
                   </motion.div>
 
@@ -2062,10 +2737,7 @@ export default function CreativeThinkingPaymentPage() {
                   y: -8,
                   zIndex: 10,
                   boxShadow: '0 8px 24px rgba(108, 99, 255, 0.25)',
-                }}
-                transition={{ 
-                  hover: { duration: 0.15, ease: 'easeOut' },
-                  default: { duration: 0.2, ease: 'easeIn' }
+                  transition: { duration: 0.15, ease: 'easeOut' }
                 }}
                 style={{
                   background: 'rgba(255, 255, 255, 0.8)',
@@ -2129,10 +2801,7 @@ export default function CreativeThinkingPaymentPage() {
                   y: -8,
                   zIndex: 10,
                   boxShadow: '0 8px 24px rgba(108, 99, 255, 0.25)',
-                }}
-                transition={{ 
-                  hover: { duration: 0.15, ease: 'easeOut' },
-                  default: { duration: 0.2, ease: 'easeIn' }
+                  transition: { duration: 0.15, ease: 'easeOut' }
                 }}
                 style={{
                   background: 'rgba(255, 255, 255, 0.8)',
@@ -2196,10 +2865,7 @@ export default function CreativeThinkingPaymentPage() {
                   y: -8,
                   zIndex: 10,
                   boxShadow: '0 8px 24px rgba(108, 99, 255, 0.25)',
-                }}
-                transition={{ 
-                  hover: { duration: 0.15, ease: 'easeOut' },
-                  default: { duration: 0.2, ease: 'easeIn' }
+                  transition: { duration: 0.15, ease: 'easeOut' }
                 }}
                 style={{
                   background: 'rgba(255, 255, 255, 0.8)',
@@ -2282,6 +2948,31 @@ export default function CreativeThinkingPaymentPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Footer */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        style={{
+          textAlign: 'center',
+          padding: '24px',
+          background: 'rgba(255, 255, 255, 0.6)',
+          borderRadius: '16px',
+          marginTop: '64px',
+          marginBottom: '32px',
+        }}
+      >
+        <p style={{
+          fontSize: '14px',
+          color: '#666',
+          lineHeight: '1.6',
+        }}>
+          {getTranslation('tests.creativeThinking.payment.footer', i18n.language === 'tr'
+            ? 'Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur.'
+            : 'You\'ll be redirected to your results after successful payment. Your data remains private.')}
+        </p>
+      </motion.div>
     </main>
   );
 }
