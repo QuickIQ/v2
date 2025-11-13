@@ -395,6 +395,899 @@
           }
         }
       },
+      "entrepreneurMindset": {
+        "card": {
+          "title": "Entrepreneur Mindset",
+          "subtitle": "Are you an entrepreneur who can sense opportunities?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your entrepreneurial mindset and opportunity recognition...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Entrepreneur Mindset Test results below and explore your entrepreneurial potential.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your entrepreneurial strengths, opportunity recognition, and unique business blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Entrepreneur Analysis",
+          "trust_feature1_desc": "Deep analysis of your entrepreneurial mindset and opportunity recognition patterns with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "Secure payment powered by Stripe. Your information is encrypted and protected."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "riskTolerance": {
+        "card": {
+          "title": "Risk Tolerance",
+          "subtitle": "Do you see uncertainty as a threat or as a playground?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your risk tolerance and decision-making patterns...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Risk Tolerance Test results below and explore your decision-making patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your hidden strengths, risk tolerance zones, and unique decision-making blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Risk Analysis",
+          "trust_feature1_desc": "Deep analysis of your risk tolerance and decision-making patterns with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "strategicThinking": {
+        "card": {
+          "title": "Strategic Thinking",
+          "subtitle": "How well can you see the big picture?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your strategic thinking patterns and decision-making approach...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds...",
+          "popup1": "Considering your long-term vision...",
+          "popup1_sub": "This helps us understand your foresight and planning abilities.",
+          "popup2": "Evaluating your decision-making processes...",
+          "popup2_sub": "We are analyzing how you approach complex choices."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "header": "Your Detailed Strategic Thinking Result",
+          "intro": "Unlock your personalized Strategic Thinking Test results below and explore your strategic planning patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your hidden strengths, strategic growth zones, and unique thinking blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Strategic Analysis",
+          "trust_feature1_desc": "Deep analysis of your strategic thinking style with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "Secure payment powered by Stripe. Your information is encrypted and protected."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "The Visionary Strategist",
+            "summary": "You possess an exceptional ability to see the big picture, anticipate future trends, and formulate comprehensive plans. Your strategic foresight and analytical prowess make you a natural leader in complex environments.",
+            "insights": [
+              "Exceptional foresight and long-term planning capabilities.",
+              "Mastery in identifying complex patterns and interconnections.",
+              "Highly analytical and data-driven decision-making.",
+              "Adept at translating vision into actionable strategies.",
+              "Inspires confidence and direction in teams."
+            ],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "The Adaptive Planner",
+            "summary": "You demonstrate strong strategic thinking skills, capable of developing effective plans and adapting them to changing circumstances. Your balanced approach to analysis and execution allows you to navigate challenges with confidence.",
+            "insights": [
+              "Solid ability to develop and adjust strategic plans.",
+              "Good at recognizing key patterns and their implications.",
+              "Makes well-reasoned decisions with a blend of analysis and intuition.",
+              "Effectively manages resources to achieve objectives.",
+              "Collaborates well to refine strategic approaches."
+            ],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "The Emerging Strategist",
+            "summary": "You are developing your strategic thinking abilities, showing potential in understanding broader contexts and making informed decisions. Focusing on structured analysis and long-term perspective will significantly enhance your impact.",
+            "insights": [
+              "Growing awareness of the importance of long-term vision.",
+              "Beginning to identify patterns and their relevance.",
+              "Developing a more analytical approach to decision-making.",
+              "Learning to connect daily tasks with overarching goals.",
+              "Open to feedback for strategic improvement."
+            ],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "timeManagement": {
+        "card": {
+          "title": "Time Management",
+          "subtitle": "Are you managing your time, or is time managing you?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your time management patterns and efficiency...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds...",
+          "popup1": "Evaluating your task prioritization...",
+          "popup1_sub": "This helps us understand how you organize your daily activities.",
+          "popup2": "Analyzing your scheduling patterns...",
+          "popup2_sub": "We are examining your time planning and efficiency strategies."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "header": "Your Detailed Time Management Result",
+          "intro": "Unlock your personalized Time Management Test results below and explore your time efficiency patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your hidden strengths, time management zones, and unique efficiency blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Time Management Analysis",
+          "trust_feature1_desc": "Deep analysis of your time management style and efficiency patterns with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "Secure payment powered by Stripe. Your information is encrypted and protected."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "Time Master – The Efficient Organizer",
+            "summary": "You demonstrate exceptional time management skills, effectively prioritizing tasks, planning ahead, and maximizing productivity. Your ability to balance multiple responsibilities while maintaining efficiency sets you apart as a true time master.",
+            "insights": [
+              "Exceptional ability to prioritize tasks based on importance and urgency.",
+              "Mastery in time-blocking and scheduling techniques.",
+              "Highly efficient in minimizing time waste and distractions.",
+              "Adept at breaking down large projects into manageable steps.",
+              "Excellent at maintaining work-life balance through effective time management."
+            ],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "Time Manager – The Balanced Planner",
+            "summary": "You show strong time management capabilities, with good planning skills and the ability to handle multiple tasks effectively. Your balanced approach allows you to maintain productivity while adapting to changing priorities.",
+            "insights": [
+              "Solid ability to create and follow daily schedules.",
+              "Good at identifying and eliminating time-wasting activities.",
+              "Effective at setting realistic deadlines and meeting them.",
+              "Capable of managing interruptions without losing focus.",
+              "Developing stronger delegation and prioritization skills."
+            ],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "Time Learner – The Developing Organizer",
+            "summary": "You are developing your time management skills, showing potential in organization and planning. With focused effort on structured approaches and prioritization techniques, you can significantly improve your efficiency and productivity.",
+            "insights": [
+              "Growing awareness of the importance of time management.",
+              "Beginning to recognize patterns in time usage.",
+              "Developing better planning and scheduling habits.",
+              "Learning to say no to non-essential tasks.",
+              "Open to adopting new time management tools and techniques."
+            ],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "multitasking": {
+        "card": {
+          "title": "Multitasking Efficiency",
+          "subtitle": "Can you really manage multiple tasks at the same time?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your multitasking efficiency and task management patterns...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Multitasking Efficiency Test results below and explore how you manage multiple tasks.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your hidden strengths, efficiency zones, and unique task management blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Multitasking Analysis",
+          "trust_feature1_desc": "Deep analysis of your task management patterns and efficiency balance with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "Secure payment powered by Stripe. Your information is encrypted and protected."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "attentionSpan": {
+        "card": {
+          "title": "Attention Span",
+          "subtitle": "Can your attention span be shorter than you think?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your attention span and focus patterns...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Attention Span Test results below and explore your focus patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your attention patterns, focus strengths, and concentration blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Attention Analysis",
+          "trust_feature1_desc": "Deep analysis of your attention span and focus patterns with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "memoryRetention": {
+        "card": {
+          "title": "Memory Retention",
+          "subtitle": "How long can you retain information in your memory?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your memory retention patterns and recall abilities...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Memory Retention Test results below and explore your memory patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your memory patterns, retention strengths, and recall blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Memory Analysis",
+          "trust_feature1_desc": "Deep analysis of your memory retention and recall patterns with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
       "disorder": {
         "card": {
           "title": "Disorder Test",
@@ -553,12 +1446,254 @@
             "futurePotential": {
               "title": "Future Potential",
               "text": "Placeholder text for future potential section at developing level."
+          }
+        }
+      },
+      "anxiety": {
+        "card": {
+          "title": "Anxiety Test",
+          "subtitle": "Is your mind controlling you, or are you in control?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your anxiety patterns and stress management...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Anxiety Test results below and explore your anxiety patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your anxiety patterns, stress management strengths, and emotional control blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Anxiety Analysis",
+          "trust_feature1_desc": "Deep analysis of your anxiety patterns and stress management abilities with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "problemSolving": {
+        "card": {
+          "title": "Problem Solving",
+          "subtitle": "How quickly can you find solutions in complex situations?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your problem-solving patterns and solution strategies...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Problem Solving Test results below and explore your problem-solving patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your problem-solving patterns, solution strategies, and analytical thinking blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Problem Solving Analysis",
+          "trust_feature1_desc": "Deep analysis of your problem-solving patterns and solution strategies with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
             }
           }
         }
       }
     }
-  },
+  }
+},
   "home": {
     "categories": {
       "mental_cognitive": "Zihinsel & Bilişsel Testler"

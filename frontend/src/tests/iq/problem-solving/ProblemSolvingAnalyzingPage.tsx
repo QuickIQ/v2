@@ -141,7 +141,7 @@ function ProblemSolvingAnalyzingPage({ onComplete }: Props) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -153,9 +153,9 @@ function ProblemSolvingAnalyzingPage({ onComplete }: Props) {
       <motion.div
         animate={{
           background: [
-            'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
-            'linear-gradient(135deg, #E1F5FE 0%, #E3F2FD 100%)',
-            'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+            'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+            'linear-gradient(135deg, #FFF4F0 0%, #FBEAFF 100%)',
+            'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
           ],
         }}
         transition={{
@@ -198,7 +198,7 @@ function ProblemSolvingAnalyzingPage({ onComplete }: Props) {
             textAlign: 'center',
           }}
         >
-          {getTranslation('tests.problemSolving.calculating.title', 'Analyzing your problemSolving patterns and thought balance...')}
+          {getTranslation('tests.problemSolving.calculating.title', 'Analyzing your problem-solving patterns and solution strategies...')}
         </motion.h1>
 
         {/* Subtitle */}
@@ -462,11 +462,11 @@ function ProblemSolvingAnalyzingPage({ onComplete }: Props) {
               }}>
                 {popupStep === 35
                   ? (i18n.language === 'tr'
-                      ? 'Kendinizi sürekli yorgun hissediyor musunuz?'
-                      : 'Do you constantly feel tired?')
+                      ? 'Karmaşık problemlerle karşılaştığınızda ne yaparsınız?'
+                      : 'What do you do when you encounter complex problems?')
                   : (i18n.language === 'tr'
-                      ? 'Günlük aktivitelerden zevk almakta zorlanıyor musunuz?'
-                      : 'Do you struggle to find joy in daily activities?')}
+                      ? 'Hızlı çözüm bulmakta zorlanıyor musunuz?'
+                      : 'Do you struggle to find quick solutions?')}
               </p>
 
               {/* Buttons */}
@@ -506,7 +506,7 @@ function ProblemSolvingAnalyzingPage({ onComplete }: Props) {
                     flex: 1,
                     minWidth: '120px',
                     padding: '12px 20px',
-                    background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
+                    background: 'linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)',
                     border: 'none',
                     borderRadius: '12px',
                     color: 'white',

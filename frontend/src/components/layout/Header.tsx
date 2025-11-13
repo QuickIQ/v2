@@ -72,22 +72,22 @@ export function Header() {
         alignItems: 'center',
         gap: '12px',
       }}>
-        <motion.div
-          onClick={() => {
-            if (isHomePage) {
-              const testsSection = document.getElementById('tests-section');
-              if (testsSection) {
-                testsSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            } else {
-              navigate('/');
-            }
-          }}
+          <motion.div
+              onClick={() => {
+                if (isHomePage) {
+                  const testsSection = document.getElementById('tests-section');
+                  if (testsSection) {
+                    testsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                } else {
+                  navigate('/');
+                }
+              }}
           style={{ cursor: 'pointer' }}
           initial={{ rotate: 0 }}
           whileHover={{ rotate: 10 }}
           transition={{ type: "spring", stiffness: 200, damping: 10 }}
-        >
+            >
           <LogoCompact size={32} />
         </motion.div>
         <div>
@@ -96,11 +96,11 @@ export function Header() {
             fontWeight: '600',
             margin: 0,
             background: 'linear-gradient(135deg, #6C63FF 0%, #764ba2 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}>
-            QuickIQ
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>
+                QuickIQ
           </h1>
           <p style={{
             fontSize: '10px',
@@ -110,21 +110,21 @@ export function Header() {
           }}>
             Intelligence Test
           </p>
-        </div>
-      </div>
-
-      {!isMobile && (
+              </div>
+            </div>
+          
+          {!isMobile && (
         <nav style={{
           display: 'flex',
           alignItems: 'center',
           gap: '24px',
           fontSize: '14px',
         }}>
-          <Link
-            to="/"
-            style={{
+                <Link 
+                  to="/" 
+                  style={{ 
               color: location.pathname === '/' ? '#6C63FF' : '#666',
-              textDecoration: 'none',
+                    textDecoration: 'none', 
               fontWeight: location.pathname === '/' ? '600' : '400',
               transition: 'color 0.3s ease',
             }}
@@ -141,11 +141,11 @@ export function Header() {
           >
             Ana Sayfa
           </Link>
-          <Link
-            to="/tests"
-            style={{
+          <Link 
+            to="/tests" 
+            style={{ 
               color: location.pathname === '/tests' ? '#6C63FF' : '#666',
-              textDecoration: 'none',
+              textDecoration: 'none', 
               fontWeight: location.pathname === '/tests' ? '600' : '400',
               transition: 'color 0.3s ease',
             }}

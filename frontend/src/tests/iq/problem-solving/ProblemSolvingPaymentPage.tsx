@@ -376,7 +376,7 @@ export default function ProblemSolvingPaymentPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // On success, navigate to unlock
-      navigate('/test/problemSolving/unlock');
+      navigate('/test/problem-solving/unlock');
     } catch (error) {
       setProcessing(false);
       setToastMessage(getTranslation('payment.errors.failed', 'Payment failed. Please check your card info.'));
@@ -388,7 +388,7 @@ export default function ProblemSolvingPaymentPage() {
   const handleGooglePayClick = () => {
     setProcessing(true);
     setTimeout(() => {
-      navigate('/test/problemSolving/unlock');
+      navigate('/test/problem-solving/unlock');
     }, 1000);
   };
 
@@ -455,19 +455,19 @@ export default function ProblemSolvingPaymentPage() {
   };
 
   const getResultEmojis = () => {
-    if (resultLevel === 'excellent') return ['🧩', '✨', '💖'];
-    if (resultLevel === 'good') return ['🌺', '🌟', '💫'];
-    return ['🧩', '🌺', '💖'];
+    if (resultLevel === 'excellent') return ['🧩', '✨', '🔵'];
+    if (resultLevel === 'good') return ['🧩', '🌟', '🔵'];
+    return ['🧩', '🌟', '🔵'];
   };
 
   // Placeholder insights that always show
   const getPlaceholderInsights = () => [
-    'Understanding Your Patterns: Discover how your mind processes emotions and thoughts',
-    'Emotional Awareness: Learn to recognize and manage your emotional responses',
-    'Thought Balance: Explore the relationship between your thoughts and feelings',
-    'Growth Strategies: Practical steps to improve your mental well-being',
-    'Future Potential: Unlock your path to emotional resilience and balance',
-    'Self-Care Essentials: Build daily habits that support your mental wellness'
+    'Understanding Your Patterns: Discover how your mind approaches and solves problems',
+    'Solution Strategies: Learn to recognize and apply effective problem-solving methods',
+    'Analytical Thinking: Explore the relationship between analysis and action',
+    'Growth Strategies: Practical steps to improve your problem-solving abilities',
+    'Future Potential: Unlock your path to faster and more effective solutions',
+    'Skill Development: Build daily habits that enhance your problem-solving skills'
   ];
 
   // Get insights to display (use resultData if available, otherwise use placeholders)
@@ -478,7 +478,7 @@ export default function ProblemSolvingPaymentPage() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       padding: isMobile ? '20px' : '40px',
       paddingTop: isMobile ? '100px' : '120px',
     }}>
@@ -766,27 +766,27 @@ export default function ProblemSolvingPaymentPage() {
         </motion.section>
 
         {/* The Growing Mind Section - Always Visible */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          style={{
-            position: 'relative',
-            maxWidth: '700px',
-            margin: '0 auto 48px',
-            background: '#ffffff',
-            backdropFilter: 'blur(20px)',
-            borderRadius: '32px',
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            style={{
+              position: 'relative',
+              maxWidth: '700px',
+              margin: '0 auto 48px',
+              background: '#ffffff',
+              backdropFilter: 'blur(20px)',
+              borderRadius: '32px',
             boxShadow: '0 24px 80px rgba(255, 105, 180, 0.2), 0 0 0 1px rgba(255, 105, 180, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
-            padding: isMobile ? '40px 28px' : '56px 48px',
-            textAlign: 'center',
+              padding: isMobile ? '40px 28px' : '56px 48px',
+              textAlign: 'center',
             border: '1px solid rgba(255, 105, 180, 0.15)',
-            overflow: 'hidden',
-            cursor: 'default',
-            transition: 'all 0.2s ease-out',
-          }}
-        >
-          <div style={{ position: 'relative', zIndex: 1 }}>
+              overflow: 'hidden',
+              cursor: 'default',
+              transition: 'all 0.2s ease-out',
+            }}
+          >
+            <div style={{ position: 'relative', zIndex: 1 }}>
             {/* The Growing Mind Section */}
             <div style={{
               display: 'flex',
@@ -800,15 +800,15 @@ export default function ProblemSolvingPaymentPage() {
               <h2 style={{
                 fontSize: isMobile ? '2rem' : '2.75rem',
                 fontWeight: '700',
-                background: 'linear-gradient(135deg, #FF69B4 0%, #FFB6C1 50%, #FF69B4 100%)',
+                background: 'linear-gradient(135deg, #00BCD4 0%, #4DD0E1 50%, #00BCD4 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 margin: 0,
                 marginBottom: '8px',
-                textShadow: '0 2px 8px rgba(255, 105, 180, 0.3)',
+                textShadow: '0 2px 8px rgba(0, 188, 212, 0.3)',
               }}>
-                Your Inner Balance Journey
+                Your Detailed Problem Solving Result
               </h2>
 
               {/* Decorative Line */}
@@ -823,7 +823,7 @@ export default function ProblemSolvingPaymentPage() {
                 <span style={{
                   flex: 1,
                   height: '2px',
-                  background: 'linear-gradient(90deg, transparent, #FF69B4, transparent)',
+                  background: 'linear-gradient(90deg, transparent, #00BCD4, transparent)',
                   maxWidth: '150px',
                 }} />
                 <motion.span
@@ -837,8 +837,8 @@ export default function ProblemSolvingPaymentPage() {
                     ease: 'easeInOut',
                   }}
                   style={{
-                    fontSize: '18px',
-                    filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
+                  fontSize: '18px',
+                    filter: 'drop-shadow(0 0 8px rgba(0, 188, 212, 0.8))',
                   }}
                 >
                   🧩
@@ -846,7 +846,7 @@ export default function ProblemSolvingPaymentPage() {
                 <span style={{
                   flex: 1,
                   height: '2px',
-                  background: 'linear-gradient(90deg, transparent, #FF69B4, transparent)',
+                  background: 'linear-gradient(90deg, transparent, #00BCD4, transparent)',
                   maxWidth: '150px',
                 }} />
               </div>
@@ -898,69 +898,69 @@ export default function ProblemSolvingPaymentPage() {
                   }}>
                     {displayInsights.slice(0, 2).map((insight: string, index: number) => {
                       const parts = insight.split(':');
-                      const title = parts.length > 1 ? parts[0].trim() : '';
+                    const title = parts.length > 1 ? parts[0].trim() : '';
                       const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
-                      return (
-                        <motion.div
+                    return (
+                      <motion.div
                           key={index}
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.1 + index * 0.1, duration: 0.4 }}
-                          whileHover={{
-                            scale: 1.06,
+                        whileHover={{
+                          scale: 1.06,
                             boxShadow: '0 0 25px rgba(255,105,180,0.4)',
                             background: 'linear-gradient(135deg, #fff5f8 0%, #ffe8eb 100%)',
-                            filter: 'brightness(1.1)',
-                            transition: { duration: 0.15, ease: 'easeInOut' }
-                          }}
-                          style={{
-                            width: isTablet ? '240px' : '270px',
-                            minHeight: isTablet ? '170px' : '180px',
+                          filter: 'brightness(1.1)',
+                          transition: { duration: 0.15, ease: 'easeInOut' }
+                        }}
+                        style={{
+                          width: isTablet ? '240px' : '270px',
+                          minHeight: isTablet ? '170px' : '180px',
                             background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
-                            borderRadius: '16px',
+                          borderRadius: '16px',
                             border: '1.5px solid rgba(255,105,180,0.15)',
                             boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
-                            padding: '18px 20px',
-                            cursor: 'pointer',
-                            textAlign: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            transition: 'all 0.15s ease-in-out',
-                            transformOrigin: 'center',
-                          }}
-                        >
-                          {title && (
-                            <h4 style={{
-                              color: '#FF69B4',
-                              fontWeight: '600',
-                              fontSize: '16px',
-                              margin: '0 0 12px 0',
-                              lineHeight: '1.3',
-                              userSelect: 'none',
-                              WebkitUserSelect: 'none',
-                              MozUserSelect: 'none',
-                              msUserSelect: 'none',
-                            }}>
-                              {title}
-                            </h4>
-                          )}
-                          <p style={{
-                            fontSize: '14.5px',
-                            color: '#555',
-                            textAlign: 'center',
-                            lineHeight: '1.55',
-                            margin: 0,
-                            filter: 'blur(4px)',
+                          padding: '18px 20px',
+                          cursor: 'pointer',
+                          textAlign: 'center',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
+                          transition: 'all 0.15s ease-in-out',
+                          transformOrigin: 'center',
+                        }}
+                      >
+                        {title && (
+                          <h4 style={{
+                              color: '#00BCD4',
+                            fontWeight: '600',
+                            fontSize: '16px',
+                            margin: '0 0 12px 0',
+                            lineHeight: '1.3',
                             userSelect: 'none',
                             WebkitUserSelect: 'none',
                             MozUserSelect: 'none',
                             msUserSelect: 'none',
                           }}>
-                            {description}
-                          </p>
-                        </motion.div>
-                      );
+                            {title}
+                          </h4>
+                        )}
+                        <p style={{
+                          fontSize: '14.5px',
+                          color: '#555',
+                          textAlign: 'center',
+                          lineHeight: '1.55',
+                          margin: 0,
+                          filter: 'blur(4px)',
+                          userSelect: 'none',
+                          WebkitUserSelect: 'none',
+                          MozUserSelect: 'none',
+                          msUserSelect: 'none',
+                        }}>
+                          {description}
+                        </p>
+                      </motion.div>
+                    );
                     })}
                   </div>
 
@@ -1008,7 +1008,7 @@ export default function ProblemSolvingPaymentPage() {
                         >
                           {title && (
                             <h4 style={{
-                              color: '#FF69B4',
+                              color: '#00BCD4',
                               fontWeight: '600',
                               fontSize: '16px',
                               margin: '0 0 12px 0',
@@ -1084,7 +1084,7 @@ export default function ProblemSolvingPaymentPage() {
                         >
                           {title && (
                             <h4 style={{
-                              color: '#FF69B4',
+                              color: '#00BCD4',
                               fontWeight: '600',
                               fontSize: '16px',
                               margin: '0 0 12px 0',
@@ -1163,7 +1163,7 @@ export default function ProblemSolvingPaymentPage() {
                       >
                         {title && (
                           <h4 style={{
-                            color: '#FF69B4',
+                            color: '#00BCD4',
                             fontWeight: '600',
                             fontSize: '16px',
                             margin: '0 0 12px 0',
@@ -1215,7 +1215,7 @@ export default function ProblemSolvingPaymentPage() {
                 <p style={{
                   fontSize: isMobile ? '15px' : '17px',
                   fontWeight: '700',
-                  color: '#FF69B4',
+                  color: '#00BCD4',
                   margin: 0,
                   lineHeight: '1.6',
                   display: 'flex',
@@ -1314,7 +1314,7 @@ export default function ProblemSolvingPaymentPage() {
                 marginLeft: 'auto',
                 marginRight: 'auto',
               }}>
-                {getTranslation('tests.problemSolving.payment.locked_subtext', 'Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.')}
+                {getTranslation('tests.problemSolving.payment.locked_subtext', 'Your personalized insight is waiting — Discover your problem-solving patterns, solution strategies, and analytical thinking blueprint.')}
               </p>
               <motion.button
                 onClick={() => {
@@ -1461,8 +1461,8 @@ export default function ProblemSolvingPaymentPage() {
             {[
               {
                 icon: <Shield size={32} />,
-                title: getTranslation('tests.problemSolving.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Yaratıcılık Analizi' : 'AI-Powered Creativity Analysis'),
-                desc: getTranslation('tests.problemSolving.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla yaratıcı düşünme tarzınızın derinlemesine analizi.' : 'Deep analysis of your creative thinking style with advanced algorithms.'),
+                title: getTranslation('tests.problemSolving.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Problem Çözme Analizi' : 'AI-Powered Problem Solving Analysis'),
+                desc: getTranslation('tests.problemSolving.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla problem çözme kalıplarınızın ve çözüm stratejilerinizin derinlemesine analizi.' : 'Deep analysis of your problem-solving patterns and solution strategies with advanced algorithms.'),
               },
               {
                 icon: <CheckCircle size={32} />,

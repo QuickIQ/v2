@@ -3,12 +3,12 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProblemSolvingTestStore } from '../store/problemSolvingTestStore';
-import ProblemSolvingIntro from '../tests/iq/problemSolving/index';
-import ProblemSolvingQuestionsPage from '../tests/iq/problemSolving/QuestionsPage';
-import ProblemSolvingAnalyzingPage from '../tests/iq/problemSolving/ProblemSolvingAnalyzingPage';
+import ProblemSolvingIntro from '../tests/iq/problem-solving/index';
+import ProblemSolvingQuestionsPage from '../tests/iq/problem-solving/QuestionsPage';
+import ProblemSolvingAnalyzingPage from '../tests/iq/problem-solving/ProblemSolvingAnalyzingPage';
 import PersonalityEmailPage from '../tests/personality/PersonalityEmailPage';
-import { resultContent } from '../tests/iq/problemSolving/resultContent';
-import questionsData from '../data/tests/problemSolving/questions.json';
+import { resultContent } from '../tests/iq/problem-solving/resultContent';
+import questionsData from '../data/tests/problem-solving/questions.json';
 
 function ProblemSolvingTestPage() {
   const { t } = useTranslation();
@@ -225,7 +225,7 @@ function ProblemSolvingTestPage() {
     }
     
     // Navigate to payment page
-    navigate('/test/problemSolving/payment');
+    navigate('/test/problem-solving/payment');
   };
 
   useEffect(() => {
@@ -249,7 +249,7 @@ function ProblemSolvingTestPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
         padding: '40px',
       }}>
         <div className="card" style={{
@@ -279,9 +279,9 @@ function ProblemSolvingTestPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       }}>
-        <div className="loading" style={{ fontSize: '18px', color: '#2196F3' }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#00BCD4' }}>
           {t('common.loading')}
         </div>
       </div>
@@ -319,9 +319,9 @@ function ProblemSolvingTestPage() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+            background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
           }}>
-            <div className="loading" style={{ fontSize: '18px', color: '#2196F3' }}>
+            <div className="loading" style={{ fontSize: '18px', color: '#00BCD4' }}>
               {t('common.loading')}
             </div>
           </div>
@@ -402,9 +402,9 @@ function ProblemSolvingTestPage() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+            background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
           }}>
-            <div className="loading" style={{ fontSize: '18px', color: '#2196F3' }}>
+            <div className="loading" style={{ fontSize: '18px', color: '#00BCD4' }}>
               {t('common.loading')}
             </div>
           </div>

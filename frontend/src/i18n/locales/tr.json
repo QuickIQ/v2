@@ -390,6 +390,899 @@
           }
         }
       },
+      "entrepreneurMindset": {
+        "card": {
+          "title": "Girişimci Zihniyeti",
+          "subtitle": "Fırsatları sezebilen bir girişimci misin?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmanız için değil.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "Soru {{current}} / {{total}}"
+        },
+        "calculating": {
+          "title": "Girişimci zihniyetiniz ve fırsat tanıma yetenekleriniz analiz ediliyor...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain içeren geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikasını kabul ediyorum.",
+          "consent_required": "Lütfen Şartları ve Gizlilik Politikasını kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+        },
+        "payment": {
+          "intro": "Aşağıdan kişiselleştirilmiş Girişimci Zihniyeti Test sonuçlarınızın kilidini açın ve girişimcilik potansiyelinizi keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişisel analiz raporunuz bekliyor — Girişimcilik güçlü yönlerinizi, fırsat tanıma yeteneklerinizi ve benzersiz iş haritanızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Girişimci Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla girişimci zihniyetinizin ve fırsat tanıma kalıplarınızın derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Stripe tarafından desteklenen güvenli ödeme. Bilgileriniz şifrelenmiş ve korunmaktadır."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
+      "riskTolerance": {
+        "card": {
+          "title": "Risk Toleransı",
+          "subtitle": "Belirsizliği tehdit mi yoksa oyun alanı mı görüyorsun?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmanız için değil.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "Soru {{current}} / {{total}}"
+        },
+        "calculating": {
+          "title": "Risk toleransınız ve karar verme kalıplarınız analiz ediliyor...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain içeren geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikasını kabul ediyorum.",
+          "consent_required": "Lütfen Şartları ve Gizlilik Politikasını kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+        },
+        "payment": {
+          "intro": "Aşağıdan kişiselleştirilmiş Risk Toleransı Test sonuçlarınızın kilidini açın ve karar verme kalıplarınızı keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişisel analiz raporunuz bekliyor — Gizli güçlü yönlerinizi, risk toleransı bölgelerinizi ve benzersiz karar verme haritanızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Risk Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla risk toleransınızın ve karar verme kalıplarınızın derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
+      "strategicThinking": {
+        "card": {
+          "title": "Stratejik Düşünme",
+          "subtitle": "Büyük resmi ne kadar iyi görebiliyorsun?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmanız için değil.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Sorular",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "{{total}} sorudan {{current}}. soru"
+        },
+        "calculating": {
+          "title": "Stratejik düşünme kalıplarınız ve karar verme yaklaşımınız analiz ediliyor...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek...",
+          "popup1": "Uzun vadeli vizyonunuz değerlendiriliyor...",
+          "popup1_sub": "Bu, öngörü ve planlama yeteneklerinizi anlamamıza yardımcı olur.",
+          "popup2": "Karar verme süreçleriniz değerlendiriliyor...",
+          "popup2_sub": "Karmaşık seçimlere nasıl yaklaştığınızı analiz ediyoruz."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınmış bir alan adıyla geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikası'nı kabul ediyorum.",
+          "consent_required": "Lütfen Şartları ve Gizlilik Politikası'nı kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacak."
+        },
+        "payment": {
+          "header": "Detaylı Stratejik Düşünme Sonucunuz",
+          "intro": "Aşağıdaki kişiselleştirilmiş Stratejik Düşünme Testi sonuçlarınızın kilidini açın ve stratejik planlama kalıplarınızı keşfedin.",
+          "recent_results": "Son Sonuçlar",
+          "locked_subtext": "Kişiselleştirilmiş içgörünüz bekliyor — Gizli güçlerinizi, stratejik büyüme alanlarınızı ve benzersiz düşünme planınızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Stratejik Analiz",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla stratejik düşünme tarzınızın derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Stripe tarafından desteklenen güvenli ödeme. Bilgileriniz şifrelenir ve korunur."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "Vizyoner Stratejist",
+            "summary": "Büyük resmi görme, gelecek trendleri öngörme ve kapsamlı planlar oluşturma konusunda olağanüstü bir yeteneğe sahipsiniz. Stratejik öngörünüz ve analitik gücünüz, karmaşık ortamlarda doğal bir lider olmanızı sağlar.",
+            "insights": [
+              "Olağanüstü öngörü ve uzun vadeli planlama yetenekleri.",
+              "Karmaşık kalıpları ve bağlantıları belirlemede ustalık.",
+              "Yüksek düzeyde analitik ve veri odaklı karar verme.",
+              "Vizyonu uygulanabilir stratejilere dönüştürmede yetenekli.",
+              "Ekiplerde güven ve yön ilham verir."
+            ],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "Uyumlu Planlayıcı",
+            "summary": "Güçlü stratejik düşünme becerileri sergiliyorsunuz, etkili planlar geliştirebilir ve bunları değişen koşullara uyarlayabilirsiniz. Analiz ve uygulamaya dengeli yaklaşımınız, zorlukları güvenle yönetmenizi sağlar.",
+            "insights": [
+              "Stratejik planlar geliştirme ve ayarlama konusunda sağlam yetenek.",
+              "Anahtar kalıpları ve bunların etkilerini tanımada iyi.",
+              "Analiz ve sezginin bir karışımıyla iyi gerekçelendirilmiş kararlar verir.",
+              "Hedeflere ulaşmak için kaynakları etkili bir şekilde yönetir.",
+              "Stratejik yaklaşımları geliştirmek için iyi işbirliği yapar."
+            ],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "Gelişen Stratejist",
+            "summary": "Stratejik düşünme yeteneklerinizi geliştiriyorsunuz, daha geniş bağlamları anlama ve bilinçli kararlar verme konusunda potansiyel gösteriyorsunuz. Yapılandırılmış analiz ve uzun vadeli perspektife odaklanmak, etkinizi önemli ölçüde artıracaktır.",
+            "insights": [
+              "Uzun vadeli vizyonun önemi konusunda artan farkındalık.",
+              "Kalıpları ve bunların ilgisini belirlemeye başlama.",
+              "Karar vermeye daha analitik bir yaklaşım geliştirme.",
+              "Günlük görevleri genel hedeflerle bağlantılandırmayı öğrenme.",
+              "Stratejik iyileştirme için geri bildirime açık."
+            ],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
+      "timeManagement": {
+        "card": {
+          "title": "Zaman Yönetimi",
+          "subtitle": "Zamanını yönetiyor musun, yoksa zaman seni mi yönetiyor?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmanız için değil.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Sorular",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "{{total}} sorudan {{current}}. soru"
+        },
+        "calculating": {
+          "title": "Zaman yönetimi kalıplarınız ve verimliliğiniz analiz ediliyor...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek...",
+          "popup1": "Görev önceliklendirmeniz değerlendiriliyor...",
+          "popup1_sub": "Bu, günlük aktivitelerinizi nasıl organize ettiğinizi anlamamıza yardımcı olur.",
+          "popup2": "Planlama kalıplarınız analiz ediliyor...",
+          "popup2_sub": "Zaman planlamanızı ve verimlilik stratejilerinizi inceliyoruz."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınmış bir alan adıyla geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikası'nı kabul ediyorum.",
+          "consent_required": "Lütfen Şartları ve Gizlilik Politikası'nı kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacak."
+        },
+        "payment": {
+          "header": "Detaylı Zaman Yönetimi Sonucunuz",
+          "intro": "Aşağıdaki kişiselleştirilmiş Zaman Yönetimi Testi sonuçlarınızın kilidini açın ve zaman verimliliği kalıplarınızı keşfedin.",
+          "recent_results": "Son Sonuçlar",
+          "locked_subtext": "Kişiselleştirilmiş içgörünüz bekliyor — Gizli güçlerinizi, zaman yönetimi alanlarınızı ve benzersiz verimlilik planınızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Zaman Yönetimi Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla zaman yönetimi tarzınızın ve verimlilik kalıplarınızın derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Stripe tarafından desteklenen güvenli ödeme. Bilgileriniz şifrelenir ve korunur."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "Zaman Ustası – Verimli Organizatör",
+            "summary": "Olağanüstü zaman yönetimi becerileri sergiliyorsunuz, görevleri etkili bir şekilde önceliklendiriyor, önceden planlıyor ve verimliliği maksimize ediyorsunuz. Birden fazla sorumluluğu dengelerken verimliliği koruma yeteneğiniz sizi gerçek bir zaman ustası yapıyor.",
+            "insights": [
+              "Önem ve aciliyete göre görevleri önceliklendirmede olağanüstü yetenek.",
+              "Zaman bloklama ve planlama tekniklerinde ustalık.",
+              "Zaman israfını ve dikkat dağıtıcıları en aza indirmede yüksek verimlilik.",
+              "Büyük projeleri yönetilebilir adımlara ayırmada yetenekli.",
+              "Etkili zaman yönetimi yoluyla iş-yaşam dengesini korumada mükemmel."
+            ],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "Zaman Yöneticisi – Dengeli Planlayıcı",
+            "summary": "Güçlü zaman yönetimi yetenekleri sergiliyorsunuz, iyi planlama becerileri ve birden fazla görevi etkili bir şekilde yönetme yeteneğiniz var. Dengeli yaklaşımınız, değişen önceliklere uyum sağlarken verimliliği korumanızı sağlar.",
+            "insights": [
+              "Günlük programlar oluşturma ve takip etmede sağlam yetenek.",
+              "Zaman kaybettiren aktiviteleri belirleme ve ortadan kaldırmada iyi.",
+              "Gerçekçi son tarihler belirleme ve bunlara uymada etkili.",
+              "Odak kaybetmeden kesintileri yönetebilme.",
+              "Daha güçlü delegasyon ve önceliklendirme becerileri geliştirme."
+            ],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "Zaman Öğrencisi – Gelişen Organizatör",
+            "summary": "Zaman yönetimi becerilerinizi geliştiriyorsunuz, organizasyon ve planlamada potansiyel gösteriyorsunuz. Yapılandırılmış yaklaşımlar ve önceliklendirme tekniklerine odaklanarak verimliliğinizi ve üretkenliğinizi önemli ölçüde artırabilirsiniz.",
+            "insights": [
+              "Zaman yönetiminin önemi konusunda artan farkındalık.",
+              "Zaman kullanımındaki kalıpları tanımaya başlama.",
+              "Daha iyi planlama ve programlama alışkanlıkları geliştirme.",
+              "Gereksiz görevlere hayır demeyi öğrenme.",
+              "Yeni zaman yönetimi araçları ve tekniklerini benimsemeye açık."
+            ],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
+      "multitasking": {
+        "card": {
+          "title": "Çoklu Görev Verimliliği",
+          "subtitle": "aynı anda birden fazla işi gerçekten yönetebiliyor musun?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmanız için değil.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "Soru {{current}} / {{total}}"
+        },
+        "calculating": {
+          "title": "Çoklu görev verimliliğiniz ve görev yönetimi kalıplarınız analiz ediliyor...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain içeren geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikasını kabul ediyorum.",
+          "consent_required": "Lütfen Şartları ve Gizlilik Politikasını kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+        },
+        "payment": {
+          "intro": "Aşağıdan kişiselleştirilmiş Çoklu Görev Verimliliği Test sonuçlarınızın kilidini açın ve birden fazla görevi nasıl yönettiğinizi keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişisel analiz raporunuz bekliyor — Gizli güçlü yönlerinizi, verimlilik alanlarınızı ve benzersiz görev yönetimi haritanızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Çoklu Görev Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla görev yönetimi kalıplarınızın ve verimlilik dengenizin derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Stripe tarafından desteklenen güvenli ödeme. Bilgileriniz şifrelenmiş ve korunmaktadır."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
+      "attentionSpan": {
+        "card": {
+          "title": "Odaklanma Süresi",
+          "subtitle": "Odaklanma süren sandığından daha kısa olabilir mi?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüst cevap verin — bu test yargılamak için değil, kendinizi keşfetmeniz içindir.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "{{total}} sorudan {{current}}. soru"
+        },
+        "calculating": {
+          "title": "Odaklanma sürenizi ve dikkat kalıplarınızı analiz ediyoruz...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain ile geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikası'nı kabul ediyorum.",
+          "consent_required": "Lütfen Şartlar ve Gizlilik Politikası'nı kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+        },
+        "payment": {
+          "intro": "Aşağıda kişiselleştirilmiş Odaklanma Süresi Testi sonuçlarınızın kilidini açın ve odaklanma kalıplarınızı keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişiselleştirilmiş içgörünüz bekliyor — Dikkat kalıplarınızı, odaklanma güçlerinizi ve konsantrasyon planınızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Odaklanma Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla odaklanma ve dikkat sürenizin derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
+      "memoryRetention": {
+        "card": {
+          "title": "Hafıza Tutma",
+          "subtitle": "Bilgiyi ne kadar süre hafızanda tutabiliyorsun?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüst cevap verin — bu test yargılamak için değil, kendinizi keşfetmeniz içindir.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "{{total}} sorudan {{current}}. soru"
+        },
+        "calculating": {
+          "title": "Hafıza tutma kalıplarınızı ve hatırlama yeteneklerinizi analiz ediyoruz...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain ile geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikası'nı kabul ediyorum.",
+          "consent_required": "Lütfen Şartlar ve Gizlilik Politikası'nı kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+        },
+        "payment": {
+          "intro": "Aşağıda kişiselleştirilmiş Hafıza Tutma Testi sonuçlarınızın kilidini açın ve hafıza kalıplarınızı keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişiselleştirilmiş içgörünüz bekliyor — Hafıza kalıplarınızı, tutma güçlerinizi ve hatırlama planınızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Hafıza Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla hafıza tutma ve hatırlama kalıplarınızın derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
       "disorder": {
         "card": {
           "title": "Disorder Testi",
@@ -548,6 +1441,248 @@
             "futurePotential": {
               "title": "Gelecek Potansiyeli",
               "text": "Gelişen seviye gelecek potansiyeli bölümü için placeholder metin."
+            }
+          }
+        }
+      },
+      "anxiety": {
+        "card": {
+          "title": "Kaygı Testi",
+          "subtitle": "Zihnin seni mi yönetiyor, yoksa sen mi kontrolü elinde tutuyorsun?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüst cevap verin — bu test yargılamak için değil, kendinizi keşfetmeniz içindir.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "{{total}} sorudan {{current}}. soru"
+        },
+        "calculating": {
+          "title": "Kaygı kalıplarınızı ve stres yönetiminizi analiz ediyoruz...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain ile geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikası'nı kabul ediyorum.",
+          "consent_required": "Lütfen Şartlar ve Gizlilik Politikası'nı kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+        },
+        "payment": {
+          "intro": "Aşağıda kişiselleştirilmiş Kaygı Testi sonuçlarınızın kilidini açın ve kaygı kalıplarınızı keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişiselleştirilmiş içgörünüz bekliyor — Kaygı kalıplarınızı, stres yönetimi güçlerinizi ve duygusal kontrol planınızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Kaygı Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla kaygı kalıplarınızın ve stres yönetimi yeteneklerinizin derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          }
+        }
+      },
+      "problemSolving": {
+        "card": {
+          "title": "Problem Çözme",
+          "subtitle": "Karmaşık durumlarda ne kadar hızlı çözüm bulabiliyorsun?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüst cevap verin — bu test yargılamak için değil, kendinizi keşfetmeniz içindir.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "{{total}} sorudan {{current}}. soru"
+        },
+        "calculating": {
+          "title": "Problem çözme kalıplarınızı ve çözüm stratejilerinizi analiz ediyoruz...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain ile geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikası'nı kabul ediyorum.",
+          "consent_required": "Lütfen Şartlar ve Gizlilik Politikası'nı kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+        },
+        "payment": {
+          "intro": "Aşağıda kişiselleştirilmiş Problem Çözme Testi sonuçlarınızın kilidini açın ve problem çözme kalıplarınızı keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişiselleştirilmiş içgörünüz bekliyor — Problem çözme kalıplarınızı, çözüm stratejilerinizi ve analitik düşünme planınızı keşfedin.",
+          "unlock_button": "Detaylı Sonucu Aç",
+          "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
+          "trust_feature1_title": "Yapay Zeka Destekli Problem Çözme Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla problem çözme kalıplarınızın ve çözüm stratejilerinizin derinlemesine analizi.",
+          "trust_feature2_title": "Uygulanabilir İçgörüler",
+          "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
+          "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
+          "trust_feature3_desc": "Size özel hazırlanmış kapsamlı gelişim stratejisi.",
+          "reviews": "Yorumlar",
+          "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
+          "verified_customer": "Doğrulanmış Müşteri",
+          "footer": "Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur."
+        },
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Güçlü Yönleriniz",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Gelişim Alanları",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Pratik Uygulamalar",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Gelecek Potansiyeli",
+              "text": ""
             }
           }
         }

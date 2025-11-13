@@ -26,26 +26,26 @@ export const resultContent: Record<'excellent' | 'good' | 'developing', ProblemS
   },
   good: {
     level: 'good',
-    title: '', // Will be filled via localization: tests.problemSolving.result.good.title
-    summary: '', // Will be filled via localization: tests.problemSolving.result.good.summary
-    insights: [], // Will be filled via localization: tests.problemSolving.result.good.insights
+    title: '', // Will be filled via localization: tests.depression.result.good.title
+    summary: '', // Will be filled via localization: tests.depression.result.good.summary
+    insights: [], // Will be filled via localization: tests.depression.result.good.insights
     sections: {
-      strengths: '', // Will be filled via localization: tests.problemSolving.result.good.strengths.text
-      growthAreas: '', // Will be filled via localization: tests.problemSolving.result.good.growthAreas.text
-      practicalApplications: '', // Will be filled via localization: tests.problemSolving.result.good.practicalApplications.text
-      futurePotential: '', // Will be filled via localization: tests.problemSolving.result.good.futurePotential.text
+      strengths: '', // Will be filled via localization: tests.depression.result.good.strengths.text
+      growthAreas: '', // Will be filled via localization: tests.depression.result.good.growthAreas.text
+      practicalApplications: '', // Will be filled via localization: tests.depression.result.good.practicalApplications.text
+      futurePotential: '', // Will be filled via localization: tests.depression.result.good.futurePotential.text
     }
   },
   developing: {
     level: 'developing',
-    title: '', // Will be filled via localization: tests.problemSolving.result.developing.title
-    summary: '', // Will be filled via localization: tests.problemSolving.result.developing.summary
-    insights: [], // Will be filled via localization: tests.problemSolving.result.developing.insights
+    title: '', // Will be filled via localization: tests.depression.result.developing.title
+    summary: '', // Will be filled via localization: tests.depression.result.developing.summary
+    insights: [], // Will be filled via localization: tests.depression.result.developing.insights
     sections: {
-      strengths: '', // Will be filled via localization: tests.problemSolving.result.developing.strengths.text
-      growthAreas: '', // Will be filled via localization: tests.problemSolving.result.developing.growthAreas.text
-      practicalApplications: '', // Will be filled via localization: tests.problemSolving.result.developing.practicalApplications.text
-      futurePotential: '', // Will be filled via localization: tests.problemSolving.result.developing.futurePotential.text
+      strengths: '', // Will be filled via localization: tests.depression.result.developing.strengths.text
+      growthAreas: '', // Will be filled via localization: tests.depression.result.developing.growthAreas.text
+      practicalApplications: '', // Will be filled via localization: tests.depression.result.developing.practicalApplications.text
+      futurePotential: '', // Will be filled via localization: tests.depression.result.developing.futurePotential.text
     }
   }
 };

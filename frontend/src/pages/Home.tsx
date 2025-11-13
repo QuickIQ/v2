@@ -6,7 +6,7 @@ import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
-import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, Heart, Lock, Database, Lightbulb, Flower2 } from 'lucide-react';
+import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, Heart, Lock, Database, Lightbulb, Flower2, Target, MessageSquare, Puzzle, Briefcase, Compass, Timer } from 'lucide-react';
 import { useMobile } from '../hooks/useMobile';
 import { useTestsCompletedCounter } from '../hooks/useTestsCompletedCounter';
 import { usePersonalityTestStore } from '../store/personalityTestStore';
@@ -667,66 +667,31 @@ function Home() {
                       </p>
                     </div>
 
-                    {/* Start Test Button Container */}
-                    <div style={{ marginTop: 'auto', position: 'relative' }}>
-                      {/* Background Button - Her zaman görünür */}
-                      <motion.div
-                        style={{
-                          position: 'absolute',
-                          top: 0,
-                          left: '50%',
-                          transform: 'translateX(-50%)',
-                          background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                          borderRadius: '14px',
-                          padding: '14px 26px',
-                          opacity: 0.15,
-                          zIndex: 0,
-                          transition: 'opacity 0.15s ease',
-                          width: 'fit-content',
-                        }}
-                        transition={{ duration: 0.15 }}
-                        whileHover={{ opacity: 0.25 }}
-                      />
-                      
-                      {/* Actual Button */}
-                      <motion.div
-                        style={{
-                          position: 'relative',
-                          zIndex: 2,
-                          background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                          borderRadius: '14px',
-                          padding: isMobile ? '12px 20px' : '14px 26px',
-                          color: 'white',
-                          fontWeight: '700',
-                          fontSize: isMobile ? '16px' : '18px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '8px',
-                          boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
-                          transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                          cursor: 'pointer',
-                          width: 'fit-content',
-                          margin: '0 auto',
-                        }}
-                        transition={{ duration: 0.15, ease: 'easeOut' }}
-                        whileHover={{
-                          y: -8,
-                          scale: 1.1,
-                          boxShadow: '0 10px 35px rgba(108, 99, 255, 0.5), 0 0 50px rgba(155, 201, 237, 0.4), 0 0 70px rgba(108, 99, 255, 0.3)',
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <span>Start Test</span>
-                        <motion.span
-                          animate={{ x: [0, 6, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                          style={{ fontSize: '20px' }}
-                        >
-                          →
-                        </motion.span>
-                      </motion.div>
-                    </div>
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(108, 99, 255, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(108, 99, 255, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
                   </div>
                 </motion.div>
               </Link>
@@ -836,66 +801,31 @@ function Home() {
                       </p>
                     </div>
 
-                    {/* Start Test Button Container */}
-                    <div style={{ marginTop: 'auto', position: 'relative' }}>
-                      {/* Background Button */}
-                      <motion.div
-                        style={{
-                          position: 'absolute',
-                          top: 0,
-                          left: '50%',
-                          transform: 'translateX(-50%)',
-                          background: 'linear-gradient(135deg, #ec4899 0%, #fb923c 100%)',
-                          borderRadius: '14px',
-                          padding: '14px 26px',
-                          opacity: 0.15,
-                          zIndex: 0,
-                          transition: 'opacity 0.15s ease',
-                          width: 'fit-content',
-                        }}
-                        transition={{ duration: 0.15 }}
-                        whileHover={{ opacity: 0.25 }}
-                      />
-                      
-                      {/* Actual Button */}
-                      <motion.div
-                        style={{
-                          position: 'relative',
-                          zIndex: 2,
-                          background: 'linear-gradient(135deg, #ec4899 0%, #fb923c 100%)',
-                          borderRadius: '14px',
-                          padding: isMobile ? '12px 20px' : '14px 26px',
-                          color: 'white',
-                          fontWeight: '700',
-                          fontSize: isMobile ? '16px' : '18px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '8px',
-                          boxShadow: '0 4px 20px rgba(236, 72, 153, 0.3)',
-                          transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                          cursor: 'pointer',
-                          width: 'fit-content',
-                          margin: '0 auto',
-                        }}
-                        transition={{ duration: 0.15, ease: 'easeOut' }}
-                        whileHover={{
-                          y: -8,
-                          scale: 1.1,
-                          boxShadow: '0 10px 35px rgba(236, 72, 153, 0.5), 0 0 50px rgba(251, 146, 60, 0.4), 0 0 70px rgba(236, 72, 153, 0.3)',
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <span>Start Test</span>
-                        <motion.span
-                          animate={{ x: [0, 6, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                          style={{ fontSize: '20px' }}
-                        >
-                          →
-                        </motion.span>
-                      </motion.div>
-                    </div>
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #ec4899 0%, #fb923c 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(236, 72, 153, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(236, 72, 153, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
                   </div>
                 </motion.div>
               </Link>
@@ -1167,22 +1097,19 @@ function Home() {
             marginBottom: isMobile ? '48px' : '64px',
           }}
         >
-          {/* Category Header */}
+          {/* Category Headers */}
           <h2 style={{
             fontSize: isMobile ? '24px' : '32px',
             fontWeight: '700',
-            color: '#1a1a1a',
-            marginBottom: isMobile ? '24px' : '32px',
+            color: '#4A6CFF',
+            marginTop: '0',
+            marginBottom: '16px',
             textAlign: 'center',
-            background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
           }}>
-            {t('home.categories.mental_cognitive') || 'Zihinsel & Bilişsel Testler'}
+            🧠 Bussiness – Career, Performance & Leadership Mastery
           </h2>
 
-          {/* Creative Thinking Test Card */}
+          {/* Business Category Test Cards */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
@@ -1190,7 +1117,9 @@ function Home() {
             maxWidth: 'none',
             margin: '0 auto',
             padding: isMobile ? '0 20px' : '0 20px',
+            marginBottom: isMobile ? '32px' : '48px',
           }}>
+            {/* Creative Thinking Test Card */}
             <Link
               to="/test/creative-thinking"
               style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
@@ -1307,68 +1236,1287 @@ function Home() {
                     </p>
                   </div>
 
-                  {/* Start Test Button Container */}
-                  <div style={{ marginTop: 'auto', position: 'relative' }}>
-                    <motion.div
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                        borderRadius: '14px',
-                        padding: '14px 26px',
-                        opacity: 0.15,
-                        zIndex: 0,
-                        transition: 'opacity 0.15s ease',
-                        width: 'fit-content',
-                      }}
-                      transition={{ duration: 0.15 }}
-                      whileHover={{ opacity: 0.25 }}
-                    />
-                    
-                    <motion.div
-                      style={{
-                        position: 'relative',
-                        zIndex: 2,
-                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                        borderRadius: '14px',
-                        padding: isMobile ? '12px 20px' : '14px 26px',
-                        color: 'white',
-                        fontWeight: '700',
-                        fontSize: isMobile ? '16px' : '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
-                        transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                        cursor: 'pointer',
-                        width: 'fit-content',
-                        margin: '0 auto',
-                      }}
-                      transition={{ duration: 0.15, ease: 'easeOut' }}
-                      whileHover={{
-                        y: -8,
-                        scale: 1.1,
-                        boxShadow: '0 10px 35px rgba(108, 99, 255, 0.5), 0 0 50px rgba(155, 201, 237, 0.4), 0 0 70px rgba(108, 99, 255, 0.3)',
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <span>Start Test</span>
-                      <motion.span
-                        animate={{ x: [0, 6, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                        style={{ fontSize: '20px' }}
-                      >
-                        →
-                      </motion.span>
-                    </motion.div>
-                  </div>
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(108, 99, 255, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(108, 99, 255, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
                 </div>
               </motion.div>
             </Link>
 
+            {/* Problem Solving Test Card */}
+            <Link
+              to="/test/problem-solving"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="problem-solving-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(0, 188, 212, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(0, 188, 212, 0.35), 0 0 0 1px rgba(0, 188, 212, 0.25), 0 0 80px rgba(77, 208, 225, 0.3)',
+                  borderColor: 'rgba(0, 188, 212, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(0, 188, 212, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Puzzle
+                          size={isMobile ? 28 : 34}
+                          color="#00BCD4"
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(0, 188, 212, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#00BCD4',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Problem Solving
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#00BCD4' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#00BCD4' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Karmaşık durumlarda ne kadar hızlı çözüm bulabiliyorsun?' : 'How quickly can you find solutions in complex situations?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(0, 188, 212, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(0, 188, 212, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Multitasking Efficiency Test Card */}
+            <Link
+              to="/test/multitasking"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="multitasking-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #eef2ff 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(99, 102, 241, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(99, 102, 241, 0.35), 0 0 0 1px rgba(99, 102, 241, 0.25), 0 0 80px rgba(139, 92, 246, 0.3)',
+                  borderColor: 'rgba(99, 102, 241, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.svg
+                        width="34"
+                        height="34"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        animate={{
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.05, 1],
+                        }}
+                        transition={{
+                          duration: 4,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          filter: 'drop-shadow(0 2px 4px rgba(255, 215, 0, 0.4))',
+                        }}
+                      >
+                        <motion.path
+                          d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"
+                          fill="#FFD700"
+                          animate={{
+                            opacity: [0.9, 1, 0.9],
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                          }}
+                        />
+                      </motion.svg>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#6C63FF',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Multitasking Efficiency
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#6366F1' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#6366F1' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                    }}>
+                      aynı anda birden fazla işi gerçekten yönetebiliyor musun?
+                    </p>
+                  </div>
+
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(99, 102, 241, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(99, 102, 241, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Attention Span Test Card */}
+            <Link
+              to="/test/attention-span"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="attention-span-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(76, 175, 80, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(76, 175, 80, 0.35), 0 0 0 1px rgba(76, 175, 80, 0.25), 0 0 80px rgba(139, 195, 74, 0.3)',
+                  borderColor: 'rgba(76, 175, 80, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(76, 175, 80, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Target
+                          size={isMobile ? 28 : 34}
+                          color="#4CAF50"
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(76, 175, 80, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#4CAF50',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Attention Span
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#4CAF50' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#4CAF50' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                    }}>
+                      Odaklanma süren sandığından daha kısa olabilir mi?
+                    </p>
+                  </div>
+
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(76, 175, 80, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(76, 175, 80, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Memory Retention Test Card */}
+            <Link
+              to="/test/memory-retention"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="memory-retention-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #f3e5f5 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(156, 39, 176, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(156, 39, 176, 0.35), 0 0 0 1px rgba(156, 39, 176, 0.25), 0 0 80px rgba(186, 104, 200, 0.3)',
+                  borderColor: 'rgba(156, 39, 176, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(156, 39, 176, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Brain
+                          size={isMobile ? 28 : 34}
+                          color="#9C27B0"
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(156, 39, 176, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#9C27B0',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Memory Retention
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#9C27B0' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#9C27B0' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                    }}>
+                      Bilgiyi ne kadar süre hafızanda tutabiliyorsun?
+                    </p>
+                  </div>
+
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #9C27B0 0%, #BA68C8 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(156, 39, 176, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(156, 39, 176, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Entrepreneur Mindset Test Card */}
+            <Link
+              to="/test/entrepreneur-mindset"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="entrepreneur-mindset-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E8F0FF 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(74, 108, 255, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(74, 108, 255, 0.35), 0 0 0 1px rgba(74, 108, 255, 0.25), 0 0 80px rgba(255, 215, 0, 0.3)',
+                  borderColor: 'rgba(74, 108, 255, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(74, 108, 255, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Briefcase
+                          size={isMobile ? 28 : 34}
+                          color="#4A6CFF"
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(74, 108, 255, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#4A6CFF',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Entrepreneur Mindset
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#4A6CFF' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#4A6CFF' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Fırsatları sezebilen bir girişimci misin?' : 'Are you an entrepreneur who can sense opportunities?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #4A6CFF 0%, #FFD700 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(74, 108, 255, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(74, 108, 255, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Risk Tolerance Test Card */}
+            <Link
+              to="/test/risk-tolerance"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="risk-tolerance-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #fff0f0 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(255, 68, 68, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(255, 68, 68, 0.35), 0 0 0 1px rgba(255, 68, 68, 0.25), 0 0 80px rgba(255, 107, 107, 0.3)',
+                  borderColor: 'rgba(255, 68, 68, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(255, 68, 68, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <TrendingUp
+                          size={isMobile ? 28 : 34}
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(255, 68, 68, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#ff4444',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Risk Tolerance
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#ff4444' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#ff4444' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Belirsizliği tehdit olarak mı yoksa oyun alanı olarak mı görüyorsun?' : 'Do you see uncertainty as a threat or as a playground?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #ff4444 0%, #ff6b6b 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(255, 68, 68, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(255, 68, 68, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Strategic Thinking Test Card */}
+            <Link
+              to="/test/strategic-thinking"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="strategic-thinking-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E8F0FE 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(74, 108, 255, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(74, 108, 255, 0.35), 0 0 0 1px rgba(74, 108, 255, 0.25), 0 0 80px rgba(107, 142, 255, 0.3)',
+                  borderColor: 'rgba(74, 108, 255, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(74, 108, 255, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Compass
+                          size={isMobile ? 28 : 34}
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(74, 108, 255, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#4A6CFF',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Strategic Thinking
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#4A6CFF' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#4A6CFF' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Büyük resmi ne kadar iyi görebiliyorsun?' : 'How well can you see the big picture?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #4A6CFF 0%, #6B8EFF 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(74, 108, 255, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(74, 108, 255, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Time Management Test Card */}
+            <Link
+              to="/test/time-management"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="time-management-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E0F7FA 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(0, 206, 209, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(0, 206, 209, 0.35), 0 0 0 1px rgba(0, 206, 209, 0.25), 0 0 80px rgba(32, 178, 170, 0.3)',
+                  borderColor: 'rgba(0, 206, 209, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(0, 206, 209, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Timer
+                          size={isMobile ? 28 : 34}
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(0, 206, 209, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#00CED1',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Time Management
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#00CED1' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#00CED1' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Zamanını yönetiyor musun, yoksa zaman seni mi yönetiyor?' : 'Are you managing your time, or is time managing you?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #00CED1 0%, #B0E0E6 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(0, 206, 209, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(0, 206, 209, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+          </div>
+
+          <h2 style={{
+            fontSize: isMobile ? '24px' : '32px',
+            fontWeight: '700',
+            color: '#A066FF',
+            marginTop: '32px',
+            marginBottom: '16px',
+            textAlign: 'center',
+          }}>
+            🧬 Health – Mental Fitness, Cognitive Balance & Habit Strength
+          </h2>
+
+          {/* Health Category Test Cards */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+            gap: isMobile ? '20px' : '10px',
+            maxWidth: 'none',
+            margin: '0 auto',
+            padding: isMobile ? '0 20px' : '0 20px',
+            marginBottom: isMobile ? '32px' : '48px',
+          }}>
             {/* Depression Test Card */}
             <Link
               to="/test/depression"
@@ -1486,68 +2634,220 @@ function Home() {
                     </p>
                   </div>
 
-                  {/* Start Test Button Container */}
-                  <div style={{ marginTop: 'auto', position: 'relative' }}>
-                    <motion.div
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
-                        borderRadius: '14px',
-                        padding: '14px 26px',
-                        opacity: 0.15,
-                        zIndex: 0,
-                        transition: 'opacity 0.15s ease',
-                        width: 'fit-content',
-                      }}
-                      transition={{ duration: 0.15 }}
-                      whileHover={{ opacity: 0.25 }}
-                    />
-                    
-                    <motion.div
-                      style={{
-                        position: 'relative',
-                        zIndex: 2,
-                        background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
-                        borderRadius: '14px',
-                        padding: isMobile ? '12px 20px' : '14px 26px',
-                        color: 'white',
-                        fontWeight: '700',
-                        fontSize: isMobile ? '16px' : '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        boxShadow: '0 4px 20px rgba(255, 105, 180, 0.3)',
-                        transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                        cursor: 'pointer',
-                        width: 'fit-content',
-                        margin: '0 auto',
-                      }}
-                      transition={{ duration: 0.15, ease: 'easeOut' }}
-                      whileHover={{
-                        y: -8,
-                        scale: 1.1,
-                        boxShadow: '0 10px 35px rgba(255, 105, 180, 0.5), 0 0 50px rgba(255, 182, 193, 0.4), 0 0 70px rgba(255, 105, 180, 0.3)',
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <span>Start Test</span>
-                      <motion.span
-                        animate={{ x: [0, 6, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                        style={{ fontSize: '20px' }}
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(255, 105, 180, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(255, 105, 180, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Anxiety Test Card */}
+            <Link
+              to="/test/anxiety"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="anxiety-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #fff3e0 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(255, 152, 0, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(255, 152, 0, 0.35), 0 0 0 1px rgba(255, 152, 0, 0.25), 0 0 80px rgba(255, 183, 77, 0.3)',
+                  borderColor: 'rgba(255, 152, 0, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(255, 152, 0, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      marginTop: '8px',
+                      userSelect: 'none',
+                      WebkitUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                    }}>
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7],
+                          rotate: [0, 15, -15, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                          ease: 'easeInOut',
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
                       >
-                        →
-                      </motion.span>
-                    </motion.div>
+                        <MessageSquare
+                          size={isMobile ? 28 : 34}
+                          color="#FF9800"
+                          style={{
+                            filter: 'drop-shadow(0 0 8px rgba(255, 152, 0, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#FF9800',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Anxiety Test
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#FF9800' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#FF9800' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Zihnin seni mi yönetiyor, yoksa sen mi kontrolü elinde tutuyorsun?' : 'Is your mind controlling you, or are you in control?'}
+                    </p>
                   </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #FF9800 0%, #FFB74D 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(255, 152, 0, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(255, 152, 0, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
                 </div>
               </motion.div>
             </Link>
           </div>
+
+          <h2 style={{
+            fontSize: isMobile ? '24px' : '32px',
+            fontWeight: '700',
+            color: '#FF5A8A',
+            marginTop: '32px',
+            marginBottom: '16px',
+            textAlign: 'center',
+          }}>
+            ❤️ Love – Romantic Dynamics & Emotional Bonding
+          </h2>
+
+          <h2 style={{
+            fontSize: isMobile ? '24px' : '32px',
+            fontWeight: '700',
+            color: '#32C26A',
+            marginTop: '32px',
+            marginBottom: '16px',
+            textAlign: 'center',
+          }}>
+            💰 Money – Risk, Impulse & Money Behavior Patterns
+          </h2>
+
+          <h2 style={{
+            fontSize: isMobile ? '24px' : '32px',
+            fontWeight: '700',
+            color: '#000000',
+            marginTop: '32px',
+            marginBottom: '16px',
+            textAlign: 'center',
+          }}>
+            🖤 Dark – Shadow Traits, Manipulation & Inner Conflict Forces
+          </h2>
         </motion.div>
 
         {/* Testler Section */}
@@ -1805,6 +3105,492 @@ function Home() {
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.color = '#FF69B4';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Multitasking Efficiency Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(99, 102, 241, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Multitasking Efficiency Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/multitasking/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#6366F1',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#4f46e5';
+                          e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#6366F1';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Attention Span Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(76, 175, 80, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Attention Span Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/attention-span/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#4CAF50',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#388e3c';
+                          e.currentTarget.style.background = 'rgba(76, 175, 80, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#4CAF50';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Problem Solving Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(0, 188, 212, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Problem Solving Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/problem-solving/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#00BCD4',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = 'rgba(0, 188, 212, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Memory Retention Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(156, 39, 176, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Memory Retention Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/memory-retention/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#9C27B0',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#7b1fa2';
+                          e.currentTarget.style.background = 'rgba(156, 39, 176, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#9C27B0';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Entrepreneur Mindset Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(74, 108, 255, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Entrepreneur Mindset Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/entrepreneur-mindset/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#4A6CFF',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#3d5ce8';
+                          e.currentTarget.style.background = 'rgba(74, 108, 255, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#4A6CFF';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Risk Tolerance Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(255, 68, 68, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Risk Tolerance Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/risk-tolerance/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#ff4444',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#e63939';
+                          e.currentTarget.style.background = 'rgba(255, 68, 68, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#ff4444';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Strategic Thinking Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(74, 108, 255, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Strategic Thinking Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/strategic-thinking/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#4A6CFF',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#3d5ce8';
+                          e.currentTarget.style.background = 'rgba(74, 108, 255, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#4A6CFF';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Time Management Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(0, 206, 209, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Time Management Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/time-management/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#00CED1',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#00B8B8';
+                          e.currentTarget.style.background = 'rgba(0, 206, 209, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#00CED1';
                           e.currentTarget.style.background = 'transparent';
                         }}
                       >

@@ -37,7 +37,7 @@ const FadeInCard = ({ children, delay = 0, className, style, disableHover = fals
       transition={{ duration: 0.5, delay, ease: 'easeOut' }}
       whileHover={disableHover ? {} : { 
         scale: 1.03,
-        boxShadow: '0 20px 60px rgba(255, 105, 180, 0.3)',
+        boxShadow: '0 20px 60px rgba(0, 188, 212, 0.3)',
         transition: { duration: 0.3 }
       }}
       style={style}
@@ -54,16 +54,16 @@ const levelConfig: Record<'excellent' | 'good' | 'developing', {
   sectionEmojis: string[];
 }> = {
   excellent: {
-    heroEmojis: ['🧩', '✨', '💖'],
-    sectionEmojis: ['🧩', '🌺', '🌟', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭'],
+    heroEmojis: ['🧩', '✨', '🔵'],
+    sectionEmojis: ['🧩', '🌟', '🔵', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭'],
   },
   good: {
-    heroEmojis: ['🌺', '🌟', '💫'],
-    sectionEmojis: ['🌺', '🧩', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭', '🌟'],
+    heroEmojis: ['🧩', '🌟', '🔵'],
+    sectionEmojis: ['🧩', '🌟', '🔵', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭'],
   },
   developing: {
-    heroEmojis: ['🌱', '📚', '🔍'],
-    sectionEmojis: ['🌱', '📚', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭', '🌟'],
+    heroEmojis: ['🧩', '📚', '🔍'],
+    sectionEmojis: ['🧩', '📚', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭', '🌟'],
   },
 };
 
@@ -119,7 +119,7 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
     {
       key: 'overview',
       icon: config.sectionEmojis[0],
-      title: currentLocale === 'tr' ? 'Depresyon Profiliniz' : 'Your ProblemSolving Profile',
+      title: currentLocale === 'tr' ? 'Problem Çözme Profiliniz' : 'Your Problem Solving Profile',
       text: content.summary,
     },
     {
@@ -127,8 +127,8 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
       icon: config.sectionEmojis[1],
       title: currentLocale === 'tr' ? 'Temel İçgörüler' : 'Key Insights',
       text: currentLocale === 'tr' 
-        ? 'Ruh hali kalıplarınız ve düşünce dengeniz hakkında en önemli bulgular:'
-        : 'The most important findings about your mood patterns and thought balance:',
+        ? 'Problem çözme kalıplarınız ve çözüm stratejileriniz hakkında en önemli bulgular:'
+        : 'The most important findings about your problem-solving patterns and solution strategies:',
       insights: content.insights,
     },
     {
@@ -137,15 +137,15 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
       title: currentLocale === 'tr' ? 'Güçlü Yönleriniz' : 'Your Strengths',
       text: content.sections?.strengths || (level === 'excellent'
         ? (currentLocale === 'tr' 
-          ? 'Ruh hali dengeniz konusunda olağanüstü yeteneklere sahipsiniz. İşte en güçlü yönleriniz:'
-          : 'You possess exceptional mood balance abilities. Here are your strongest areas:')
+          ? 'Problem çözme konusunda olağanüstü yeteneklere sahipsiniz. İşte en güçlü yönleriniz:'
+          : 'You possess exceptional problem-solving abilities. Here are your strongest areas:')
         : level === 'good'
         ? (currentLocale === 'tr'
-          ? 'Ruh hali dengeniz konusunda güçlü yetenekleriniz var. İşte öne çıkan güçlü yönleriniz:'
-          : 'You have strong mood balance skills. Here are your standout strengths:')
+          ? 'Problem çözme konusunda güçlü yetenekleriniz var. İşte öne çıkan güçlü yönleriniz:'
+          : 'You have strong problem-solving skills. Here are your standout strengths:')
         : (currentLocale === 'tr'
-          ? 'Ruh hali dengeniz potansiyeliniz gelişiyor. İşte güçlü yönleriniz:'
-          : 'Your mood balance potential is developing. Here are your strengths:')),
+          ? 'Problem çözme potansiyeliniz gelişiyor. İşte güçlü yönleriniz:'
+          : 'Your problem-solving potential is developing. Here are your strengths:')),
     },
     {
       key: 'growth',
@@ -153,31 +153,31 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
       title: currentLocale === 'tr' ? 'Gelişim Alanları' : 'Growth Areas',
       text: content.sections?.growthAreas || (level === 'excellent'
         ? (currentLocale === 'tr'
-          ? 'Mükemmel seviyede olsanız bile, ruh hali dengenizi daha da geliştirebileceğiniz alanlar:'
-          : 'Even at an excellent level, areas where you can further enhance your mood balance:')
+          ? 'Mükemmel seviyede olsanız bile, problem çözme yeteneklerinizi daha da geliştirebileceğiniz alanlar:'
+          : 'Even at an excellent level, areas where you can further enhance your problem-solving abilities:')
         : level === 'good'
         ? (currentLocale === 'tr'
-          ? 'Ruh hali dengenizi daha da artırmak için odaklanabileceğiniz alanlar:'
-          : 'Areas you can focus on to further increase your mood balance:')
+          ? 'Problem çözme yeteneklerinizi daha da artırmak için odaklanabileceğiniz alanlar:'
+          : 'Areas you can focus on to further increase your problem-solving abilities:')
         : (currentLocale === 'tr'
-          ? 'Ruh hali dengenizi geliştirmek için pratik yapabileceğiniz alanlar:'
-          : 'Areas you can practice to develop your mood balance abilities:')),
+          ? 'Problem çözme yeteneklerinizi geliştirmek için pratik yapabileceğiniz alanlar:'
+          : 'Areas you can practice to develop your problem-solving abilities:')),
     },
     {
       key: 'application',
       icon: config.sectionEmojis[4],
       title: currentLocale === 'tr' ? 'Pratik Uygulamalar' : 'Practical Applications',
       text: content.sections?.practicalApplications || (currentLocale === 'tr'
-        ? 'Ruh hali dengenizi günlük hayatta nasıl koruyabileceğiniz:'
-        : 'How you can maintain your mood balance in daily life:'),
+        ? 'Problem çözme yeteneklerinizi günlük hayatta nasıl kullanabileceğiniz:'
+        : 'How you can apply your problem-solving abilities in daily life:'),
     },
     {
       key: 'future',
       icon: config.sectionEmojis[5],
       title: currentLocale === 'tr' ? 'Gelecek Potansiyeli' : 'Future Potential',
       text: content.sections?.futurePotential || (currentLocale === 'tr'
-        ? 'Ruh hali dengenizi geliştirmeye devam ederseniz neler başarabileceğiniz:'
-        : 'What you can achieve if you continue developing your mood balance:'),
+        ? 'Problem çözme yeteneklerinizi geliştirmeye devam ederseniz neler başarabileceğiniz:'
+        : 'What you can achieve if you continue developing your problem-solving abilities:'),
     },
   ];
 
@@ -209,7 +209,7 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
           <h2 style={{
             fontSize: isMobile ? '20px' : '24px',
             fontWeight: '800',
-            background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
+            background: 'linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -270,25 +270,25 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
                 repeatDelay: 2,
                 ease: 'easeInOut'
               }}
-              style={{
-                fontSize: '48px',
-                display: 'inline-block',
-                filter: 'drop-shadow(0 2px 8px rgba(255, 105, 180, 0.4))',
-              }}
-            >
+                style={{
+                  fontSize: '48px',
+                  display: 'inline-block',
+                filter: 'drop-shadow(0 2px 8px rgba(0, 188, 212, 0.4))',
+                }}
+              >
               🧩
             </motion.div>
           </div>
           <h1 style={{
             fontSize: isMobile ? '32px' : '42px',
             fontWeight: '900',
-            background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
+            background: 'linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             marginBottom: '16px',
           }}>
-            Your Detailed ProblemSolving Report
+            Your Detailed Problem Solving Report
           </h1>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',
@@ -333,7 +333,7 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
           <h2 style={{
             fontSize: isMobile ? '24px' : '28px',
             fontWeight: '800',
-              color: '#2196F3',
+              color: '#ff69b4',
             marginBottom: '12px',
           }}>
             {currentLocale === 'tr' ? 'Daha Fazlasını Keşfetmeye Hazır mısınız?' : 'Ready to Explore More?'}
@@ -354,7 +354,7 @@ export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemS
             whileTap={{ scale: 0.98 }}
             style={{
               padding: isMobile ? '16px 32px' : '18px 40px',
-              background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
+              background: 'linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)',
               border: 'none',
               borderRadius: '999px',
               color: 'white',

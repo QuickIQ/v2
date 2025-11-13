@@ -9,7 +9,7 @@ function LoadingFallback() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -26,7 +26,7 @@ function NoResultFallback() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
+      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -54,8 +54,8 @@ function NoResultFallback() {
           lineHeight: '1.6',
         }}>
           {i18n.language === 'tr'
-            ? 'Yaratıcı düşünme testi sonuçlarınız bulunamadı. Lütfen testi tekrar tamamlayın.'
-            : 'Your creative thinking test results were not found. Please complete the test again.'}
+            ? 'Problem çözme testi sonuçlarınız bulunamadı. Lütfen testi tekrar tamamlayın.'
+            : 'Your problem solving test results were not found. Please complete the test again.'}
         </p>
       </div>
     </main>
@@ -85,7 +85,7 @@ export default function ProblemSolvingUnlockPage() {
     // Priority 3: Check localStorage if store doesn't have it
     if (!level) {
       try {
-        const saved = localStorage.getItem('problemSolving-test-storage');
+        const saved = localStorage.getItem('problem-solving-test-storage');
         if (saved) {
           const parsed = JSON.parse(saved);
           // Zustand persist saves the partialized state directly
