@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
 import { useTestsCompletedCounter } from '../../../hooks/useTestsCompletedCounter';
 import { Lock, Shield, CheckCircle, Star, ArrowDown } from 'lucide-react';
-import { useCreativeThinkingTestStore } from '../../../store/creativeThinkingTestStore';
+import { useDepressionTestStore } from '../../../store/depressionTestStore';
 import '../../../App.css';
 
 // Recent Results Component
@@ -197,7 +197,7 @@ function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boo
           marginBottom: '24px',
         }}
       >
-        {getTranslation('tests.creativeThinking.payment.recent_results', i18n.language === 'tr' ? 'Güncel Sonuçlar' : 'Recent Results')}
+        {getTranslation('tests.depression.payment.recent_results', i18n.language === 'tr' ? 'Güncel Sonuçlar' : 'Recent Results')}
       </motion.h2>
       <div style={{
         maxWidth: '800px',
@@ -256,7 +256,7 @@ function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boo
   );
 }
 
-export default function CreativeThinkingPaymentPage() {
+export default function DepressionPaymentPage() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
@@ -270,7 +270,7 @@ export default function CreativeThinkingPaymentPage() {
     window.addEventListener('resize', checkTablet);
     return () => window.removeEventListener('resize', checkTablet);
   }, []);
-  const { resultLevel, resultData } = useCreativeThinkingTestStore();
+  const { resultLevel, resultData } = useDepressionTestStore();
   const [activeTab, setActiveTab] = useState<'card' | 'googlepay'>('card');
   const [processing, setProcessing] = useState(false);
   
@@ -376,7 +376,7 @@ export default function CreativeThinkingPaymentPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // On success, navigate to unlock
-      navigate('/test/creative-thinking/unlock');
+      navigate('/test/depression/unlock');
     } catch (error) {
       setProcessing(false);
       setToastMessage(getTranslation('payment.errors.failed', 'Payment failed. Please check your card info.'));
@@ -388,7 +388,7 @@ export default function CreativeThinkingPaymentPage() {
   const handleGooglePayClick = () => {
     setProcessing(true);
     setTimeout(() => {
-      navigate('/test/creative-thinking/unlock');
+      navigate('/test/depression/unlock');
     }, 1000);
   };
 
@@ -455,10 +455,25 @@ export default function CreativeThinkingPaymentPage() {
   };
 
   const getResultEmojis = () => {
-    if (resultLevel === 'excellent') return ['💡', '✨', '🚀'];
-    if (resultLevel === 'good') return ['🎨', '🌟', '💫'];
-    return ['🌱', '📚', '🔍'];
+    if (resultLevel === 'excellent') return ['🌸', '✨', '💖'];
+    if (resultLevel === 'good') return ['🌺', '🌟', '💫'];
+    return ['🌸', '🌺', '💖'];
   };
+
+  // Placeholder insights that always show
+  const getPlaceholderInsights = () => [
+    'Understanding Your Patterns: Discover how your mind processes emotions and thoughts',
+    'Emotional Awareness: Learn to recognize and manage your emotional responses',
+    'Thought Balance: Explore the relationship between your thoughts and feelings',
+    'Growth Strategies: Practical steps to improve your mental well-being',
+    'Future Potential: Unlock your path to emotional resilience and balance',
+    'Self-Care Essentials: Build daily habits that support your mental wellness'
+  ];
+
+  // Get insights to display (use resultData if available, otherwise use placeholders)
+  const displayInsights = resultData?.insights && resultData.insights.length > 0 
+    ? resultData.insights 
+    : getPlaceholderInsights();
 
   return (
     <main style={{
@@ -750,34 +765,28 @@ export default function CreativeThinkingPaymentPage() {
           </div>
         </motion.section>
 
-        {/* Result Preview Section */}
-        {resultLevel && resultData ? (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            whileHover={{
-              scale: 1.02,
-              boxShadow: '0 32px 100px rgba(108, 99, 255, 0.3), 0 0 0 1px rgba(108, 99, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9)',
-              transition: { duration: 0.2, ease: 'easeOut' }
-            }}
-            style={{
-              position: 'relative',
-              maxWidth: '700px',
-              margin: '0 auto 48px',
-              background: '#ffffff',
-              backdropFilter: 'blur(20px)',
-              borderRadius: '32px',
-              boxShadow: '0 24px 80px rgba(108, 99, 255, 0.2), 0 0 0 1px rgba(108, 99, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
-              padding: isMobile ? '40px 28px' : '56px 48px',
-              textAlign: 'center',
-              border: '1px solid rgba(108, 99, 255, 0.15)',
-              overflow: 'hidden',
-              cursor: 'default',
-              transition: 'all 0.2s ease-out',
-            }}
-          >
-            <div style={{ position: 'relative', zIndex: 1 }}>
+        {/* The Growing Mind Section - Always Visible */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          style={{
+            position: 'relative',
+            maxWidth: '700px',
+            margin: '0 auto 48px',
+            background: '#ffffff',
+            backdropFilter: 'blur(20px)',
+            borderRadius: '32px',
+            boxShadow: '0 24px 80px rgba(255, 105, 180, 0.2), 0 0 0 1px rgba(255, 105, 180, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
+            padding: isMobile ? '40px 28px' : '56px 48px',
+            textAlign: 'center',
+            border: '1px solid rgba(255, 105, 180, 0.15)',
+            overflow: 'hidden',
+            cursor: 'default',
+            transition: 'all 0.2s ease-out',
+          }}
+        >
+          <div style={{ position: 'relative', zIndex: 1 }}>
             {/* The Growing Mind Section */}
             <div style={{
               display: 'flex',
@@ -791,11 +800,15 @@ export default function CreativeThinkingPaymentPage() {
               <h2 style={{
                 fontSize: isMobile ? '2rem' : '2.75rem',
                 fontWeight: '700',
-                color: '#6C63FF',
+                background: 'linear-gradient(135deg, #FF69B4 0%, #FFB6C1 50%, #FF69B4 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
                 margin: 0,
                 marginBottom: '8px',
+                textShadow: '0 2px 8px rgba(255, 105, 180, 0.3)',
               }}>
-                The Growing Mind
+                Your Inner Balance Journey
               </h2>
 
               {/* Decorative Line */}
@@ -810,19 +823,30 @@ export default function CreativeThinkingPaymentPage() {
                 <span style={{
                   flex: 1,
                   height: '2px',
-                  background: 'linear-gradient(90deg, transparent, #6C63FF, transparent)',
+                  background: 'linear-gradient(90deg, transparent, #FF69B4, transparent)',
                   maxWidth: '150px',
                 }} />
-                <span style={{
-                  fontSize: '18px',
-                  color: '#6C63FF',
-                }}>
-                  ⭐
-                </span>
+                <motion.span
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    rotate: [0, 15, -15, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                  style={{
+                    fontSize: '18px',
+                    filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
+                  }}
+                >
+                  🌸
+                </motion.span>
                 <span style={{
                   flex: 1,
                   height: '2px',
-                  background: 'linear-gradient(90deg, transparent, #6C63FF, transparent)',
+                  background: 'linear-gradient(90deg, transparent, #FF69B4, transparent)',
                   maxWidth: '150px',
                 }} />
               </div>
@@ -852,7 +876,7 @@ export default function CreativeThinkingPaymentPage() {
                 </motion.div>
               )}
 
-              {/* Diamond Layout with Cards */}
+              {/* Symmetric 6-Card Layout */}
               {!isMobile ? (
                 <div style={{
                   position: 'relative',
@@ -864,73 +888,7 @@ export default function CreativeThinkingPaymentPage() {
                   justifyContent: 'center',
                   gap: '26px',
                 }}>
-                  {/* Top Card */}
-                  {resultData.insights?.[0] && (() => {
-                    const parts = resultData.insights[0].split(':');
-                    const title = parts.length > 1 ? parts[0].trim() : '';
-                    const description = parts.length > 1 ? parts.slice(1).join(':').trim() : resultData.insights[0];
-                    return (
-                      <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1, duration: 0.4 }}
-                        whileHover={{
-                          scale: 1.06,
-                          boxShadow: '0 0 25px rgba(108,99,255,0.4)',
-                          filter: 'brightness(1.1)',
-                          transition: { duration: 0.15, ease: 'easeInOut' }
-                        }}
-                        style={{
-                          width: isTablet ? '240px' : '270px',
-                          minHeight: isTablet ? '170px' : '180px',
-                          background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
-                          borderRadius: '16px',
-                          border: '1.5px solid rgba(108,99,255,0.09)',
-                          boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
-                          padding: '18px 20px',
-                          cursor: 'pointer',
-                          textAlign: 'center',
-                          display: 'flex',
-                          flexDirection: 'column',
-                          justifyContent: 'center',
-                          transition: 'all 0.15s ease-in-out',
-                          transformOrigin: 'center',
-                        }}
-                      >
-                        {title && (
-                          <h4 style={{
-                            color: '#6C63FF',
-                            fontWeight: '600',
-                            fontSize: '16px',
-                            margin: '0 0 12px 0',
-                            lineHeight: '1.3',
-                            userSelect: 'none',
-                            WebkitUserSelect: 'none',
-                            MozUserSelect: 'none',
-                            msUserSelect: 'none',
-                          }}>
-                            {title}
-                          </h4>
-                        )}
-                        <p style={{
-                          fontSize: '14.5px',
-                          color: '#555',
-                          textAlign: 'center',
-                          lineHeight: '1.55',
-                          margin: 0,
-                          filter: 'blur(4px)',
-                          userSelect: 'none',
-                          WebkitUserSelect: 'none',
-                          MozUserSelect: 'none',
-                          msUserSelect: 'none',
-                        }}>
-                          {description}
-                        </p>
-                      </motion.div>
-                    );
-                  })()}
-
-                  {/* Middle Row: Emoji + 2 Cards */}
+                  {/* Top Row: 2 Cards */}
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -938,30 +896,30 @@ export default function CreativeThinkingPaymentPage() {
                     gap: isTablet ? '20px' : '26px',
                     width: '100%',
                   }}>
-                    {/* Left Middle Card */}
-                    {resultData.insights?.[1] && (() => {
-                      const parts = resultData.insights[1].split(':');
+                    {displayInsights.slice(0, 2).map((insight: string, index: number) => {
+                      const parts = insight.split(':');
                       const title = parts.length > 1 ? parts[0].trim() : '';
-                      const description = parts.length > 1 ? parts.slice(1).join(':').trim() : resultData.insights[1];
+                      const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
                       return (
                         <motion.div
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.2, duration: 0.4 }}
+                          key={index}
+                          initial={{ opacity: 0, y: -20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.1 + index * 0.1, duration: 0.4 }}
                           whileHover={{
                             scale: 1.06,
-                            boxShadow: '0 0 25px rgba(108,99,255,0.4)',
-                            background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                            boxShadow: '0 0 25px rgba(255,105,180,0.4)',
+                            background: 'linear-gradient(135deg, #fff5f8 0%, #ffe8eb 100%)',
                             filter: 'brightness(1.1)',
                             transition: { duration: 0.15, ease: 'easeInOut' }
                           }}
                           style={{
-                            width: '270px',
-                            minHeight: '180px',
-                            background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                            width: isTablet ? '240px' : '270px',
+                            minHeight: isTablet ? '170px' : '180px',
+                            background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                             borderRadius: '16px',
-                            border: '1.5px solid rgba(108,99,255,0.09)',
-                            boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                            border: '1.5px solid rgba(255,105,180,0.15)',
+                            boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
                             padding: '18px 20px',
                             cursor: 'pointer',
                             textAlign: 'center',
@@ -974,7 +932,7 @@ export default function CreativeThinkingPaymentPage() {
                         >
                           {title && (
                             <h4 style={{
-                              color: '#6C63FF',
+                              color: '#FF69B4',
                               fontWeight: '600',
                               fontSize: '16px',
                               margin: '0 0 12px 0',
@@ -1003,55 +961,41 @@ export default function CreativeThinkingPaymentPage() {
                           </p>
                         </motion.div>
                       );
-                    })()}
+                    })}
+                  </div>
 
-                    {/* Center Emoji Group */}
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.3, duration: 0.4 }}
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '8px',
-                        fontSize: '34px',
-                        marginTop: '-10px',
-                        marginBottom: '-10px',
-                        textAlign: 'center',
-                      }}
-                    >
-                      {getResultEmojis().map((emoji, index) => (
-                        <span key={index} style={{ display: 'inline-block' }}>
-                          {emoji}
-                        </span>
-                      ))}
-                    </motion.div>
-
-                    {/* Right Middle Card */}
-                    {resultData.insights?.[2] && (() => {
-                      const parts = resultData.insights[2].split(':');
+                  {/* Middle Row: 2 Cards */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: isTablet ? '20px' : '26px',
+                    width: '100%',
+                  }}>
+                    {displayInsights.slice(2, 4).map((insight: string, index: number) => {
+                      const parts = insight.split(':');
                       const title = parts.length > 1 ? parts[0].trim() : '';
-                      const description = parts.length > 1 ? parts.slice(1).join(':').trim() : resultData.insights[2];
+                      const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
                       return (
                         <motion.div
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.2, duration: 0.4 }}
+                          key={index + 2}
+                          initial={{ opacity: 0, y: 0 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
                           whileHover={{
                             scale: 1.06,
-                            boxShadow: '0 0 25px rgba(108,99,255,0.4)',
-                            background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                            boxShadow: '0 0 25px rgba(255,105,180,0.4)',
+                            background: 'linear-gradient(135deg, #fff5f8 0%, #ffe8eb 100%)',
                             filter: 'brightness(1.1)',
                             transition: { duration: 0.15, ease: 'easeInOut' }
                           }}
                           style={{
-                            width: '270px',
-                            minHeight: '180px',
-                            background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                            width: isTablet ? '240px' : '270px',
+                            minHeight: isTablet ? '170px' : '180px',
+                            background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                             borderRadius: '16px',
-                            border: '1.5px solid rgba(108,99,255,0.09)',
-                            boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                            border: '1.5px solid rgba(255,105,180,0.15)',
+                            boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
                             padding: '18px 20px',
                             cursor: 'pointer',
                             textAlign: 'center',
@@ -1064,7 +1008,7 @@ export default function CreativeThinkingPaymentPage() {
                         >
                           {title && (
                             <h4 style={{
-                              color: '#6C63FF',
+                              color: '#FF69B4',
                               fontWeight: '600',
                               fontSize: '16px',
                               margin: '0 0 12px 0',
@@ -1093,7 +1037,7 @@ export default function CreativeThinkingPaymentPage() {
                           </p>
                         </motion.div>
                       );
-                    })()}
+                    })}
                   </div>
 
                   {/* Bottom Row: 2 Cards */}
@@ -1104,7 +1048,7 @@ export default function CreativeThinkingPaymentPage() {
                     gap: isTablet ? '20px' : '26px',
                     width: '100%',
                   }}>
-                    {resultData.insights?.slice(3, 5).map((insight: string, index: number) => {
+                    {displayInsights.slice(4, 6).map((insight: string, index: number) => {
                       const parts = insight.split(':');
                       const title = parts.length > 1 ? parts[0].trim() : '';
                       const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
@@ -1116,18 +1060,18 @@ export default function CreativeThinkingPaymentPage() {
                           transition={{ delay: 0.4 + index * 0.1, duration: 0.4 }}
                           whileHover={{
                             scale: 1.06,
-                            boxShadow: '0 0 25px rgba(108,99,255,0.4)',
-                            background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                            boxShadow: '0 0 25px rgba(255,105,180,0.4)',
+                            background: 'linear-gradient(135deg, #fff5f8 0%, #ffe8eb 100%)',
                             filter: 'brightness(1.1)',
                             transition: { duration: 0.15, ease: 'easeInOut' }
                           }}
                           style={{
                             width: '270px',
                             minHeight: '180px',
-                            background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                            background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                             borderRadius: '16px',
-                            border: '1.5px solid rgba(108,99,255,0.09)',
-                            boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                            border: '1.5px solid rgba(255,105,180,0.15)',
+                            boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
                             padding: '18px 20px',
                             cursor: 'pointer',
                             textAlign: 'center',
@@ -1140,7 +1084,7 @@ export default function CreativeThinkingPaymentPage() {
                         >
                           {title && (
                             <h4 style={{
-                              color: '#6C63FF',
+                              color: '#FF69B4',
                               fontWeight: '600',
                               fontSize: '16px',
                               margin: '0 0 12px 0',
@@ -1182,7 +1126,7 @@ export default function CreativeThinkingPaymentPage() {
                   width: '100%',
                 }}>
                   {/* All Cards */}
-                  {resultData.insights?.slice(0, 5).map((insight: string, index: number) => {
+                  {displayInsights.slice(0, 6).map((insight: string, index: number) => {
                     const parts = insight.split(':');
                     const title = parts.length > 1 ? parts[0].trim() : '';
                     const description = parts.length > 1 ? parts.slice(1).join(':').trim() : insight;
@@ -1194,8 +1138,8 @@ export default function CreativeThinkingPaymentPage() {
                         transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }}
                         whileHover={{
                           scale: 1.05,
-                          boxShadow: '0 0 25px rgba(108,99,255,0.4)',
-                          background: 'linear-gradient(135deg, #f9faff 0%, #e1e0ff 100%)',
+                          boxShadow: '0 0 25px rgba(255,105,180,0.4)',
+                          background: 'linear-gradient(135deg, #fff5f8 0%, #ffe8eb 100%)',
                           filter: 'brightness(1.1)',
                           transition: { duration: 0.15, ease: 'easeInOut' }
                         }}
@@ -1203,10 +1147,10 @@ export default function CreativeThinkingPaymentPage() {
                           width: '100%',
                           maxWidth: '300px',
                           minHeight: '170px',
-                          background: 'linear-gradient(135deg, #f4f6ff 0%, #e9e4ff 100%)',
+                          background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                           borderRadius: '16px',
-                          border: '1.5px solid rgba(108,99,255,0.09)',
-                          boxShadow: '0 2px 10px rgba(108,99,255,0.07)',
+                          border: '1.5px solid rgba(255,105,180,0.15)',
+                          boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
                           padding: '18px 20px',
                           cursor: 'pointer',
                           textAlign: 'center',
@@ -1219,7 +1163,7 @@ export default function CreativeThinkingPaymentPage() {
                       >
                         {title && (
                           <h4 style={{
-                            color: '#6C63FF',
+                            color: '#FF69B4',
                             fontWeight: '600',
                             fontSize: '16px',
                             margin: '0 0 12px 0',
@@ -1251,8 +1195,74 @@ export default function CreativeThinkingPaymentPage() {
                   })}
                 </div>
               )}
-            </div>
 
+              {/* Intro Preview Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+                style={{
+                  width: '100%',
+                  marginTop: '32px',
+                  background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
+                  borderRadius: '20px',
+                  padding: isMobile ? '24px 20px' : '32px 28px',
+                  border: '2px solid rgba(255, 105, 180, 0.2)',
+                  boxShadow: '0 8px 32px rgba(255, 105, 180, 0.15)',
+                  textAlign: 'center',
+                }}
+              >
+                <p style={{
+                  fontSize: isMobile ? '15px' : '17px',
+                  fontWeight: '700',
+                  color: '#FF69B4',
+                  margin: 0,
+                  lineHeight: '1.6',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  flexWrap: 'wrap',
+                }}>
+                  <span>THIS IS JUST AN INTRO!</span>
+                  <span style={{ fontSize: '20px' }}>☕</span>
+                </p>
+                <p style={{
+                  fontSize: isMobile ? '14px' : '16px',
+                  fontWeight: '600',
+                  color: '#666',
+                  margin: '12px 0 0 0',
+                  lineHeight: '1.5',
+                }}>
+                  YOU WILL SEE 100X MORE CONTENT WHEN YOU UNLOCK YOUR PERSONALIZED RESULT. IT'S CHEAPER THAN A COFFEE PRICE!☕
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Result Preview Section */}
+        {resultLevel && resultData ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            style={{
+              position: 'relative',
+              maxWidth: '700px',
+              margin: '0 auto 48px',
+              background: '#ffffff',
+              backdropFilter: 'blur(20px)',
+              borderRadius: '32px',
+              boxShadow: '0 24px 80px rgba(255, 105, 180, 0.2), 0 0 0 1px rgba(255, 105, 180, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
+              padding: isMobile ? '40px 28px' : '56px 48px',
+              textAlign: 'center',
+              border: '1px solid rgba(255, 105, 180, 0.15)',
+              overflow: 'hidden',
+              cursor: 'default',
+              transition: 'all 0.2s ease-out',
+            }}
+          >
             {/* Unlock Detailed Result Section */}
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
@@ -1260,17 +1270,17 @@ export default function CreativeThinkingPaymentPage() {
               transition={{ delay: 0.5, duration: 1.2, ease: 'easeInOut' }}
               whileHover={{
                 scale: 1.02,
-                boxShadow: '0 0 40px rgba(108, 99, 255, 0.25)',
+                boxShadow: '0 0 40px rgba(255, 105, 180, 0.25)',
                 transition: { duration: 0.3 }
               }}
               style={{
                 padding: isMobile ? '24px' : '36px 24px',
-                background: 'linear-gradient(180deg, #faf6ff 0%, #f3ecff 100%)',
+                background: 'linear-gradient(180deg, #fff0f5 0%, #ffe4e1 100%)',
                 borderRadius: '22px',
-                border: '2px dashed rgba(108, 99, 255, 0.25)',
+                border: '2px dashed rgba(255, 105, 180, 0.25)',
                 textAlign: 'center',
                 marginTop: '32px',
-                boxShadow: '0 4px 25px rgba(108, 99, 255, 0.08)',
+                boxShadow: '0 4px 25px rgba(255, 105, 180, 0.08)',
                 position: 'relative',
                 transition: 'all 0.3s ease',
               }}
@@ -1304,7 +1314,7 @@ export default function CreativeThinkingPaymentPage() {
                 marginLeft: 'auto',
                 marginRight: 'auto',
               }}>
-                {getTranslation('tests.creativeThinking.payment.locked_subtext', 'Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.')}
+                {getTranslation('tests.depression.payment.locked_subtext', 'Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.')}
               </p>
               <motion.button
                 onClick={() => {
@@ -1336,10 +1346,9 @@ export default function CreativeThinkingPaymentPage() {
                   gap: '8px',
                 }}
               >
-                🔓 {getTranslation('tests.creativeThinking.payment.unlock_button', 'Unlock Detailed Result')}
+                🔓 {getTranslation('tests.depression.payment.unlock_button', 'Unlock Detailed Result')}
               </motion.button>
             </motion.div>
-            </div>
           </motion.div>
         ) : null}
 
@@ -1440,7 +1449,7 @@ export default function CreativeThinkingPaymentPage() {
             textAlign: 'center',
             marginBottom: '32px',
           }}>
-            {getTranslation('tests.creativeThinking.payment.why_trust', i18n.language === 'tr' ? 'Neden QuickIQ\'ya Güvenmelisiniz?' : 'Why Trust QuickIQ?')}
+            {getTranslation('tests.depression.payment.why_trust', i18n.language === 'tr' ? 'Neden QuickIQ\'ya Güvenmelisiniz?' : 'Why Trust QuickIQ?')}
           </h2>
           
           <div style={{
@@ -1452,18 +1461,18 @@ export default function CreativeThinkingPaymentPage() {
             {[
               {
                 icon: <Shield size={32} />,
-                title: getTranslation('tests.creativeThinking.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Yaratıcılık Analizi' : 'AI-Powered Creativity Analysis'),
-                desc: getTranslation('tests.creativeThinking.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla yaratıcı düşünme tarzınızın derinlemesine analizi.' : 'Deep analysis of your creative thinking style with advanced algorithms.'),
+                title: getTranslation('tests.depression.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Yaratıcılık Analizi' : 'AI-Powered Creativity Analysis'),
+                desc: getTranslation('tests.depression.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla yaratıcı düşünme tarzınızın derinlemesine analizi.' : 'Deep analysis of your creative thinking style with advanced algorithms.'),
               },
               {
                 icon: <CheckCircle size={32} />,
-                title: getTranslation('tests.creativeThinking.payment.trust_feature2_title', i18n.language === 'tr' ? 'Uygulanabilir İçgörüler' : 'Actionable Insights'),
-                desc: getTranslation('tests.creativeThinking.payment.trust_feature2_desc', i18n.language === 'tr' ? 'Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.' : 'Practical advice you can use in real life.'),
+                title: getTranslation('tests.depression.payment.trust_feature2_title', i18n.language === 'tr' ? 'Uygulanabilir İçgörüler' : 'Actionable Insights'),
+                desc: getTranslation('tests.depression.payment.trust_feature2_desc', i18n.language === 'tr' ? 'Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.' : 'Practical advice you can use in real life.'),
               },
               {
                 icon: <Lock size={32} />,
-                title: getTranslation('tests.creativeThinking.payment.trust_feature3_title', i18n.language === 'tr' ? 'Kişiselleştirilmiş Gelişim Planı' : 'Personalized Growth Plan'),
-                desc: getTranslation('tests.creativeThinking.payment.trust_feature3_desc', i18n.language === 'tr' ? 'Size özel hazırlanmış kapsamlı gelişim stratejisi.' : 'Comprehensive growth strategy tailored just for you.'),
+                title: getTranslation('tests.depression.payment.trust_feature3_title', i18n.language === 'tr' ? 'Kişiselleştirilmiş Gelişim Planı' : 'Personalized Growth Plan'),
+                desc: getTranslation('tests.depression.payment.trust_feature3_desc', i18n.language === 'tr' ? 'Size özel hazırlanmış kapsamlı gelişim stratejisi.' : 'Comprehensive growth strategy tailored just for you.'),
               },
             ].map((feature, index) => (
               <motion.div
@@ -1537,7 +1546,7 @@ export default function CreativeThinkingPaymentPage() {
             textAlign: 'center',
             marginBottom: '8px',
           }}>
-            {getTranslation('tests.creativeThinking.payment.reviews', i18n.language === 'tr' ? 'Yorumlar' : 'Reviews')}
+            {getTranslation('tests.depression.payment.reviews', i18n.language === 'tr' ? 'Yorumlar' : 'Reviews')}
           </h2>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',
@@ -1545,7 +1554,7 @@ export default function CreativeThinkingPaymentPage() {
             textAlign: 'center',
             marginBottom: '32px',
           }}>
-            {getTranslation('tests.creativeThinking.payment.reviews_subtitle', i18n.language === 'tr' ? 'Mükemmel ⭐ 4.7 puan — 1769 yorum' : 'Excellent ⭐ 4.7 rating — 1769 reviews')}
+            {getTranslation('tests.depression.payment.reviews_subtitle', i18n.language === 'tr' ? 'Mükemmel ⭐ 4.7 puan — 1769 yorum' : 'Excellent ⭐ 4.7 rating — 1769 reviews')}
           </p>
 
           <div style={{
@@ -1606,7 +1615,7 @@ export default function CreativeThinkingPaymentPage() {
                       fontWeight: '600',
                       marginBottom: '12px',
                     }}>
-                      {getTranslation('tests.creativeThinking.payment.verified_customer', i18n.language === 'tr' ? 'Doğrulanmış Müşteri' : 'Verified Customer')}
+                      {getTranslation('tests.depression.payment.verified_customer', i18n.language === 'tr' ? 'Doğrulanmış Müşteri' : 'Verified Customer')}
                     </p>
                     <p style={{
                       fontSize: '14px',
@@ -3291,7 +3300,7 @@ export default function CreativeThinkingPaymentPage() {
           color: '#666',
           lineHeight: '1.6',
         }}>
-          {getTranslation('tests.creativeThinking.payment.footer', i18n.language === 'tr'
+          {getTranslation('tests.depression.payment.footer', i18n.language === 'tr'
             ? 'Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur.'
             : 'You\'ll be redirected to your results after successful payment. Your data remains private.')}
         </p>

@@ -23,7 +23,7 @@ export function useDynamicTestTranslations() {
       const testName = pathSegments[testIndex + 1];
       
       // List of valid test names
-      const validTests = ['personality', 'iq', 'iqtest', 'focus', 'memory', 'creative-thinking', 'autism', 'disorder'];
+        const validTests = ['personality', 'iq', 'iqtest', 'focus', 'memory', 'creative-thinking', 'depression'];
       
       if (validTests.includes(testName)) {
         // Normalize test name (e.g., 'iqtest' -> 'iq', 'creative-thinking' -> 'creative-thinking')

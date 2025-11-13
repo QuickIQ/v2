@@ -287,7 +287,7 @@ function PersonalityTestPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+        background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
         padding: '40px',
       }}>
         <div className="card" style={{
@@ -318,7 +318,7 @@ function PersonalityTestPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+        background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
       }}>
         <div className="loading" style={{ fontSize: '18px', color: '#ec4899' }}>
           {t('common.loading')}
@@ -369,7 +369,7 @@ function PersonalityTestPage() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+            background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
           }}>
             <div className="loading" style={{ fontSize: '18px', color: '#ec4899' }}>
               {t('common.loading')}

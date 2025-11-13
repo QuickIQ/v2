@@ -16,13 +16,47 @@ function PersonalityEmailPage({ onSubmit }: Props) {
   const [consent, setConsent] = useState(false);
   const [error, setError] = useState('');
 
-  const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isValidEmail = (email: string) => {
+    // Basic email format check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return false;
+    }
+    
+    // Extract domain
+    const domain = email.split('@')[1]?.toLowerCase();
+    if (!domain) return false;
+    
+    // List of valid email domains
+    const validDomains = [
+      'gmail.com', 'hotmail.com', 'hotmail.co.uk', 'hotmail.fr', 'hotmail.de', 'hotmail.es', 'hotmail.it',
+      'outlook.com', 'outlook.fr', 'outlook.de', 'outlook.es', 'outlook.it', 'outlook.co.uk',
+      'yahoo.com', 'yahoo.co.uk', 'yahoo.fr', 'yahoo.de', 'yahoo.es',
+      'protonmail.com', 'proton.me',
+      'live.com', 'live.co.uk', 'live.fr', 'live.de',
+      'icloud.com', 'me.com', 'mac.com',
+      'aol.com', 'msn.com', 'ymail.com'
+    ];
+    
+    // Check if domain is valid
+    return validDomains.includes(domain);
+  };
 
   const handleSubmit = () => {
     setError('');
 
+    if (!email) {
+      setError(t('tests.personality.email.email_required') || 'Please enter your email address.');
+      return;
+    }
+
     if (!isValidEmail(email)) {
-      setError(t('tests.personality.email.email_required') || 'Please enter a valid email address.');
+      const domain = email.split('@')[1]?.toLowerCase();
+      if (domain && !['gmail.com', 'hotmail.com', 'hotmail.co.uk', 'outlook.com', 'yahoo.com', 'protonmail.com', 'live.com'].some(d => d === domain)) {
+        setError(t('tests.personality.email.email_invalid') || 'Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).');
+      } else {
+        setError(t('tests.personality.email.email_invalid') || 'Please enter a valid email address.');
+      }
       return;
     }
 

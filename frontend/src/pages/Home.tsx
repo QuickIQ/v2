@@ -6,7 +6,7 @@ import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
-import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, Heart, Lock, Database, Activity, Lightbulb, Puzzle } from 'lucide-react';
+import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, Heart, Lock, Database, Lightbulb, Flower2 } from 'lucide-react';
 import { useMobile } from '../hooks/useMobile';
 import { useTestsCompletedCounter } from '../hooks/useTestsCompletedCounter';
 import { usePersonalityTestStore } from '../store/personalityTestStore';
@@ -1035,142 +1035,6 @@ function Home() {
                   </div>
                 </div>
               </motion.div>
-
-              {/* ADHD Test Card - Coming Soon */}
-              <motion.div
-                className="adhd-test-card"
-                style={{
-                  cursor: 'not-allowed',
-                  background: 'linear-gradient(135deg, #ffffff 0%, #fef3c7 100%)',
-                  borderRadius: isMobile ? '16px' : '24px',
-                  padding: isMobile ? '24px' : '32px',
-                  border: '2px solid rgba(234, 179, 8, 0.15)',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                  width: '100%',
-                  aspectRatio: '1.295',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  opacity: 0.8,
-                }}
-                transition={{ duration: 0.15, ease: 'easeOut' }}
-                whileHover={{
-                  y: -5,
-                  scale: 1.02,
-                }}
-              >
-                {/* Overlay for coming soon */}
-                <div style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: 'rgba(255, 255, 255, 0.7)',
-                  backdropFilter: 'blur(2px)',
-                  zIndex: 10,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: isMobile ? '16px' : '24px',
-                }}>
-                  <div style={{
-                    background: 'linear-gradient(135deg, #eab308 0%, #fbbf24 100%)',
-                    color: 'white',
-                    padding: '8px 20px',
-                    borderRadius: '20px',
-                    fontWeight: '700',
-                    fontSize: '14px',
-                    boxShadow: '0 4px 12px rgba(234, 179, 8, 0.3)',
-                  }}>
-                    Open Soon
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <div style={{ marginBottom: '24px' }}>
-                    <h3 style={{ 
-                      fontSize: isMobile ? '24px' : '32px', 
-                      marginBottom: isMobile ? '8px' : '12px', 
-                      fontWeight: '700', 
-                      color: '#1a1a1a',
-                      background: 'linear-gradient(135deg, #eab308 0%, #fbbf24 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: isMobile ? '8px' : '12px',
-                      flexWrap: 'wrap',
-                    }}>
-                      <motion.div
-                        animate={{ 
-                          rotate: [0, 5, -5, 5, 0],
-                          scale: [1, 1.1, 1]
-                        }}
-                        transition={{ 
-                          duration: 3,
-                          repeat: Infinity,
-                          repeatDelay: 2,
-                          ease: 'easeInOut'
-                        }}
-                      >
-                        <Activity 
-                          size={isMobile ? 28 : 36} 
-                          style={{ 
-                            color: '#eab308',
-                            filter: 'drop-shadow(0 2px 8px rgba(234, 179, 8, 0.3))'
-                          }} 
-                        />
-                      </motion.div>
-                      ADHD Test
-                    </h3>
-                    <p style={{ 
-                      color: '#666', 
-                      fontSize: isMobile ? '14px' : '16px', 
-                      fontWeight: '600',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: isMobile ? '6px' : '8px',
-                      flexWrap: 'wrap',
-                    }}>
-                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#eab308' }} />
-                      <span>Coming soon</span>
-                    </p>
-                  </div>
-
-                  {/* Locked Button */}
-                  <div style={{ marginTop: 'auto', position: 'relative' }}>
-                    <motion.div
-                      style={{
-                        position: 'relative',
-                        zIndex: 2,
-                        background: 'linear-gradient(135deg, #94a3b8 0%, #cbd5e1 100%)',
-                        borderRadius: '14px',
-                        padding: isMobile ? '12px 20px' : '14px 26px',
-                        color: 'white',
-                        fontWeight: '700',
-                        fontSize: isMobile ? '16px' : '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        boxShadow: '0 4px 20px rgba(148, 163, 184, 0.3)',
-                        cursor: 'not-allowed',
-                        width: 'fit-content',
-                        margin: '0 auto',
-                      }}
-                    >
-                      <Lock size={18} />
-                      <span>Coming Soon</span>
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           );
         })()}
@@ -1504,20 +1368,20 @@ function Home() {
                 </div>
               </motion.div>
             </Link>
-            
-            {/* Autism Test Card */}
+
+            {/* Depression Test Card */}
             <Link
-              to="/test/autism"
+              to="/test/depression"
               style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
             >
               <motion.div
-                className="autism-test-card"
+                className="depression-test-card"
                 style={{
                   cursor: 'pointer',
-                  background: 'linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%)',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #fff0f5 100%)',
                   borderRadius: isMobile ? '16px' : '24px',
                   padding: isMobile ? '24px' : '32px',
-                  border: '2px solid rgba(108, 99, 255, 0.15)',
+                  border: '2px solid rgba(255, 105, 180, 0.15)',
                   position: 'relative',
                   overflow: 'hidden',
                   transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
@@ -1530,8 +1394,8 @@ function Home() {
                 whileHover={{
                   y: -15,
                   scale: 1.05,
-                  boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
-                  borderColor: 'rgba(108, 99, 255, 0.4)',
+                  boxShadow: '0 24px 60px rgba(255, 105, 180, 0.35), 0 0 0 1px rgba(255, 105, 180, 0.25), 0 0 80px rgba(255, 182, 193, 0.3)',
+                  borderColor: 'rgba(255, 105, 180, 0.4)',
                 }}
               >
                 {/* Glow Effect Background */}
@@ -1542,7 +1406,7 @@ function Home() {
                     left: '-50%',
                     width: '200%',
                     height: '200%',
-                    background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(255, 105, 180, 0.18) 0%, transparent 70%)',
                     opacity: 0,
                     pointerEvents: 'none',
                     transition: 'opacity 0.15s ease',
@@ -1559,7 +1423,7 @@ function Home() {
                       marginBottom: isMobile ? '8px' : '12px', 
                       fontWeight: '700', 
                       color: '#1a1a1a',
-                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -1581,15 +1445,15 @@ function Home() {
                           ease: 'easeInOut'
                         }}
                       >
-                        <Puzzle 
+                        <Heart 
                           size={isMobile ? 28 : 36} 
                           style={{ 
-                            color: '#22C55E',
-                            filter: 'drop-shadow(0 2px 8px rgba(34, 197, 94, 0.4))'
+                            color: '#FF69B4',
+                            filter: 'drop-shadow(0 2px 8px rgba(255, 105, 180, 0.4))'
                           }} 
                         />
                       </motion.div>
-                      {t('tests.autism.landing.title', 'Autism Test')}
+                      Depression Test
                     </h3>
                     <p style={{ 
                       color: '#666', 
@@ -1602,10 +1466,10 @@ function Home() {
                       flexWrap: 'wrap',
                       marginBottom: '8px',
                     }}>
-                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#ff69b4' }} />
                       <span>20 soru</span>
                       <span style={{ margin: '0 4px' }}>-</span>
-                      <Clock size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#ff69b4' }} />
                       <span>10 dakika</span>
                     </p>
                     <p style={{ 
@@ -1618,7 +1482,7 @@ function Home() {
                       gap: isMobile ? '6px' : '8px',
                       flexWrap: 'wrap',
                     }}>
-                      {t('tests.autism.landing.description', 'Can you read social cues easily, or do you think differently?')}
+                      Sadece yorgun musun, yoksa ruh halin sessizce mi çöküyor?
                     </p>
                   </div>
 
@@ -1630,7 +1494,7 @@ function Home() {
                         top: 0,
                         left: '50%',
                         transform: 'translateX(-50%)',
-                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                        background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
                         borderRadius: '14px',
                         padding: '14px 26px',
                         opacity: 0.15,
@@ -1646,7 +1510,7 @@ function Home() {
                       style={{
                         position: 'relative',
                         zIndex: 2,
-                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                        background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
                         borderRadius: '14px',
                         padding: isMobile ? '12px 20px' : '14px 26px',
                         color: 'white',
@@ -1656,7 +1520,7 @@ function Home() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         gap: '8px',
-                        boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
+                        boxShadow: '0 4px 20px rgba(255, 105, 180, 0.3)',
                         transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
                         cursor: 'pointer',
                         width: 'fit-content',
@@ -1666,185 +1530,7 @@ function Home() {
                       whileHover={{
                         y: -8,
                         scale: 1.1,
-                        boxShadow: '0 10px 35px rgba(108, 99, 255, 0.5), 0 0 50px rgba(155, 201, 237, 0.4), 0 0 70px rgba(108, 99, 255, 0.3)',
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <span>Start Test</span>
-                      <motion.span
-                        animate={{ x: [0, 6, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                        style={{ fontSize: '20px' }}
-                      >
-                        →
-                      </motion.span>
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-            </Link>
-            
-            {/* Disorder Test Card */}
-            <Link
-              to="/test/disorder"
-              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
-            >
-              <motion.div
-                className="disorder-test-card"
-                style={{
-                  cursor: 'pointer',
-                  background: 'linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%)',
-                  borderRadius: isMobile ? '16px' : '24px',
-                  padding: isMobile ? '24px' : '32px',
-                  border: '2px solid rgba(108, 99, 255, 0.15)',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                  height: '100%',
-                  width: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-                transition={{ duration: 0.15, ease: 'easeOut' }}
-                whileHover={{
-                  y: -15,
-                  scale: 1.05,
-                  boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
-                  borderColor: 'rgba(108, 99, 255, 0.4)',
-                }}
-              >
-                {/* Glow Effect Background */}
-                <motion.div
-                  style={{
-                    position: 'absolute',
-                    top: '-50%',
-                    left: '-50%',
-                    width: '200%',
-                    height: '200%',
-                    background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
-                    opacity: 0,
-                    pointerEvents: 'none',
-                    transition: 'opacity 0.15s ease',
-                  }}
-                  transition={{ duration: 0.15 }}
-                  whileHover={{ opacity: 1 }}
-                />
-                
-                <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  {/* Title Section */}
-                  <div style={{ marginBottom: '24px', textAlign: 'center' }}>
-                    <h3 style={{
-                      fontSize: isMobile ? '24px' : '32px',
-                      fontWeight: 'bold',
-                      marginBottom: '20px',
-                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: isMobile ? '8px' : '12px',
-                      flexWrap: 'wrap',
-                    }}>
-                      <motion.div
-                        animate={{ 
-                          rotate: [0, -5, 5, -5, 0],
-                          scale: [1, 1.1, 1]
-                        }}
-                        transition={{ 
-                          duration: 3,
-                          repeat: Infinity,
-                          repeatDelay: 2,
-                          ease: 'easeInOut'
-                        }}
-                      >
-                        <Activity 
-                          size={isMobile ? 28 : 36} 
-                          style={{ 
-                            color: '#FF6B6B',
-                            filter: 'drop-shadow(0 2px 8px rgba(255, 107, 107, 0.4))'
-                          }} 
-                        />
-                      </motion.div>
-                      {t('tests.disorder.landing.title', 'Disorder Test')}
-                    </h3>
-                    <p style={{ 
-                      color: '#666', 
-                      fontSize: isMobile ? '14px' : '16px', 
-                      fontWeight: '600',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: isMobile ? '6px' : '8px',
-                      flexWrap: 'wrap',
-                      marginBottom: '8px',
-                    }}>
-                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
-                      <span>20 soru</span>
-                      <span style={{ margin: '0 4px' }}>-</span>
-                      <Clock size={isMobile ? 16 : 18} style={{ color: '#667eea' }} />
-                      <span>10 dakika</span>
-                    </p>
-                    <p style={{ 
-                      color: '#666', 
-                      fontSize: isMobile ? '14px' : '16px', 
-                      fontWeight: '600',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: isMobile ? '6px' : '8px',
-                      flexWrap: 'wrap',
-                    }}>
-                      {t('tests.disorder.landing.description', 'Could your mind be carrying hidden patterns that shake your balance?')}
-                    </p>
-                  </div>
-
-                  {/* Start Test Button Container */}
-                  <div style={{ marginTop: 'auto', position: 'relative' }}>
-                    <motion.div
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                        borderRadius: '14px',
-                        padding: '14px 26px',
-                        opacity: 0.15,
-                        zIndex: 0,
-                        transition: 'opacity 0.15s ease',
-                        width: 'fit-content',
-                      }}
-                      transition={{ duration: 0.15 }}
-                      whileHover={{ opacity: 0.25 }}
-                    />
-                    
-                    <motion.div
-                      style={{
-                        position: 'relative',
-                        zIndex: 2,
-                        background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
-                        borderRadius: '14px',
-                        padding: isMobile ? '12px 20px' : '14px 26px',
-                        color: 'white',
-                        fontWeight: '700',
-                        fontSize: isMobile ? '16px' : '18px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        boxShadow: '0 4px 20px rgba(108, 99, 255, 0.3)',
-                        transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                        cursor: 'pointer',
-                        width: 'fit-content',
-                        margin: '0 auto',
-                      }}
-                      transition={{ duration: 0.15, ease: 'easeOut' }}
-                      whileHover={{
-                        y: -8,
-                        scale: 1.1,
-                        boxShadow: '0 10px 35px rgba(108, 99, 255, 0.5), 0 0 50px rgba(155, 201, 237, 0.4), 0 0 70px rgba(108, 99, 255, 0.3)',
+                        boxShadow: '0 10px 35px rgba(255, 105, 180, 0.5), 0 0 50px rgba(255, 182, 193, 0.4), 0 0 70px rgba(255, 105, 180, 0.3)',
                       }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -2069,16 +1755,16 @@ function Home() {
                 </ul>
               </motion.div>
 
-              {/* Autism Test */}
+              {/* Depression Test */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.15 }}
                 style={{
                   background: 'rgba(255, 255, 255, 0.6)',
                   borderRadius: '12px',
                   padding: '20px',
-                  border: '1px solid rgba(108, 99, 255, 0.15)',
+                  border: '1px solid rgba(255, 105, 180, 0.15)',
                 }}
               >
                 <h4 style={{
@@ -2087,7 +1773,7 @@ function Home() {
                   marginBottom: '12px',
                   color: '#444',
                 }}>
-                  Autism Test
+                  Depression Test
                 </h4>
                 <ul style={{
                   listStyle: 'none',
@@ -2097,12 +1783,12 @@ function Home() {
                   {(['excellent', 'good', 'developing'] as const).map((level) => (
                     <li key={level} style={{ margin: '8px 0' }}>
                       <a
-                        href={`/test/autism/unlock/${level}`}
+                        href={`/test/depression/unlock/${level}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
                           textDecoration: 'none',
-                          color: '#6C63FF',
+                          color: '#FF69B4',
                           fontWeight: '500',
                           fontSize: '14px',
                           display: 'inline-flex',
@@ -2114,72 +1800,11 @@ function Home() {
                           cursor: 'pointer',
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.color = '#5b56f0';
-                          e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
+                          e.currentTarget.style.color = '#ff5ba3';
+                          e.currentTarget.style.background = 'rgba(255, 105, 180, 0.1)';
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.color = '#6C63FF';
-                          e.currentTarget.style.background = 'transparent';
-                        }}
-                      >
-                        {level.charAt(0).toUpperCase() + level.slice(1)}
-                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              {/* Disorder Test */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.6)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  border: '1px solid rgba(108, 99, 255, 0.15)',
-                }}
-              >
-                <h4 style={{
-                  fontSize: '15px',
-                  fontWeight: '600',
-                  marginBottom: '12px',
-                  color: '#444',
-                }}>
-                  Disorder Test
-                </h4>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                }}>
-                  {(['excellent', 'good', 'developing'] as const).map((level) => (
-                    <li key={level} style={{ margin: '8px 0' }}>
-                      <a
-                        href={`/test/disorder/unlock/${level}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          textDecoration: 'none',
-                          color: '#6C63FF',
-                          fontWeight: '500',
-                          fontSize: '14px',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          transition: 'all 0.2s ease',
-                          padding: '4px 8px',
-                          borderRadius: '6px',
-                          cursor: 'pointer',
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.color = '#5b56f0';
-                          e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.color = '#6C63FF';
+                          e.currentTarget.style.color = '#FF69B4';
                           e.currentTarget.style.background = 'transparent';
                         }}
                       >

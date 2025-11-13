@@ -2,15 +2,17 @@ import { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
+import { useTestsCompletedCounter } from '../../../hooks/useTestsCompletedCounter';
 import '../../../App.css';
 
 interface Props {
   onComplete: () => void;
 }
 
-function AutismAnalyzingPage({ onComplete }: Props) {
+function CreativeThinkingAnalyzingPage({ onComplete }: Props) {
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
+  const { count: testCount, text: testsCompletedText, formattedCount } = useTestsCompletedCounter();
   const [progress, setProgress] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
   const [popupStep, setPopupStep] = useState(0);
@@ -61,14 +63,15 @@ function AutismAnalyzingPage({ onComplete }: Props) {
     },
   ];
 
-  // Rotate trust cards every 2 seconds
+  // Rotate trust cards every 3 seconds (slower)
   useEffect(() => {
     const cardInterval = setInterval(() => {
       setCurrentCardIndex((prev) => (prev + 1) % trustCards.length);
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(cardInterval);
   }, [trustCards.length]);
+
 
   // Progress animation - 10 seconds total (100 steps of 100ms)
   useEffect(() => {
@@ -195,7 +198,7 @@ function AutismAnalyzingPage({ onComplete }: Props) {
             textAlign: 'center',
           }}
         >
-          {getTranslation('tests.autism.calculating.title', 'Analyzing your results...')}
+          {getTranslation('tests.creativeThinking.calculating.title', 'Analyzing your results...')}
         </motion.h1>
 
         {/* Subtitle */}
@@ -210,7 +213,7 @@ function AutismAnalyzingPage({ onComplete }: Props) {
             textAlign: 'center',
           }}
         >
-          {getTranslation('tests.autism.calculating.subtitle', 'Our AI is evaluating your responses. This will take a few seconds...')}
+          {getTranslation('tests.creativeThinking.calculating.subtitle', 'Our AI is evaluating your responses. This will take a few seconds...')}
         </motion.p>
 
         {/* Progress Bar */}
@@ -241,73 +244,165 @@ function AutismAnalyzingPage({ onComplete }: Props) {
         </motion.div>
 
         {/* Trust Cards Grid - Rotating display */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-          gap: '12px',
-          marginTop: '24px',
-          minHeight: isMobile ? '120px' : '140px',
-        }}>
-          {trustCards.map((card, index) => {
-            // Show 2 cards at a time on desktop, 1 on mobile
-            const isVisible = isMobile 
-              ? index === currentCardIndex
-              : index === currentCardIndex || index === (currentCardIndex + 1) % trustCards.length;
-            
-            if (!isVisible) return null;
-            
-            return (
-              <motion.div
-                key={`${card.name}-${index}-${currentCardIndex}`}
-                initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                animate={{ 
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5 }}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.9)',
-                  borderRadius: '16px',
-                  padding: '16px',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
-                  border: '1px solid rgba(108, 99, 255, 0.2)',
-                }}
-              >
-                {/* Stars */}
-                <div style={{
-                  color: '#FFD700',
-                  fontSize: '14px',
-                  marginBottom: '8px',
-                  letterSpacing: '2px',
-                }}>
-                  {'★'.repeat(card.stars)}{'☆'.repeat(5 - card.stars)}
-                </div>
-                
-                {/* Review Text */}
-                <p style={{
-                  fontSize: isMobile ? '12px' : '14px',
-                  color: '#555',
-                  fontStyle: 'italic',
-                  marginBottom: '12px',
-                  lineHeight: '1.5',
-                }}>
-                  "{card.text}"
-                </p>
-                
-                {/* Author */}
-                <p style={{
-                  fontSize: '12px',
-                  color: '#888',
-                  fontWeight: '500',
-                }}>
-                  {card.name} – {card.city}
-                </p>
-              </motion.div>
-            );
-          })}
-        </div>
+        <AnimatePresence mode="wait">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+            gap: '12px',
+            marginTop: '24px',
+            minHeight: isMobile ? '120px' : '140px',
+            position: 'relative',
+            overflow: 'hidden',
+          }}>
+            {trustCards.map((card, index) => {
+              // Show 2 cards at a time on desktop, 1 on mobile
+              const isVisible = isMobile 
+                ? index === currentCardIndex
+                : index === currentCardIndex || index === (currentCardIndex + 1) % trustCards.length;
+              
+              if (!isVisible) return null;
+              
+              return (
+                <motion.div
+                  key={`${card.name}-${index}-${currentCardIndex}`}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ 
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 1, ease: 'easeOut' }}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.9)',
+                    borderRadius: '16px',
+                    padding: '16px',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
+                    border: '1px solid rgba(108, 99, 255, 0.2)',
+                    width: '100%',
+                  }}
+                >
+                  {/* Stars */}
+                  <div style={{
+                    color: '#FFD700',
+                    fontSize: '14px',
+                    marginBottom: '8px',
+                    letterSpacing: '2px',
+                  }}>
+                    {'★'.repeat(card.stars)}{'☆'.repeat(5 - card.stars)}
+                  </div>
+                  
+                  {/* Review Text */}
+                  <p style={{
+                    fontSize: isMobile ? '12px' : '14px',
+                    color: '#555',
+                    fontStyle: 'italic',
+                    marginBottom: '12px',
+                    lineHeight: '1.5',
+                  }}>
+                    "{card.text}"
+                  </p>
+                  
+                  {/* Author */}
+                  <p style={{
+                    fontSize: '12px',
+                    color: '#888',
+                    fontWeight: '500',
+                  }}>
+                    {card.name} – {card.city}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </AnimatePresence>
+
+        {/* Tests Completed Today Notification */}
+        {testsCompletedText && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            style={{
+              marginTop: '32px',
+              padding: '16px',
+              background: 'rgba(108, 99, 255, 0.1)',
+              borderRadius: '12px',
+              border: '1px solid rgba(108, 99, 255, 0.2)',
+              textAlign: 'center',
+            }}
+          >
+            <motion.p
+              key={testCount}
+              initial={{ scale: 1 }}
+              animate={{ scale: 1 }}
+              style={{
+                fontSize: isMobile ? '20px' : '24px',
+                color: '#888',
+                fontWeight: '500',
+                margin: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '4px',
+                flexWrap: 'wrap',
+              }}
+            >
+              {i18n.language === 'tr' ? (
+                <>
+                  <span>Bugün</span>
+                  <motion.span
+                    key={testCount}
+                    initial={{ scale: 1.3, y: -5 }}
+                    animate={{ scale: 1, y: 0 }}
+                    transition={{ 
+                      type: 'spring',
+                      stiffness: 300,
+                      damping: 20,
+                      duration: 0.5
+                    }}
+                    style={{
+                      fontWeight: '700',
+                      background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      fontSize: isMobile ? '22px' : '26px',
+                    }}
+                  >
+                    {formattedCount}
+                  </motion.span>
+                  <span>test tamamlandı!</span>
+                </>
+              ) : (
+                <>
+                  <span>Today</span>
+                  <motion.span
+                    key={testCount}
+                    initial={{ scale: 1.3, y: -5 }}
+                    animate={{ scale: 1, y: 0 }}
+                    transition={{ 
+                      type: 'spring',
+                      stiffness: 300,
+                      damping: 20,
+                      duration: 0.5
+                    }}
+                    style={{
+                      fontWeight: '700',
+                      background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      fontSize: isMobile ? '22px' : '26px',
+                    }}
+                  >
+                    {formattedCount}
+                  </motion.span>
+                  <span>test's completed!</span>
+                </>
+              )}
+            </motion.p>
+          </motion.div>
+        )}
       </div>
 
       {/* Popup Questions at 35% and 70% */}
@@ -434,5 +529,5 @@ function AutismAnalyzingPage({ onComplete }: Props) {
   );
 }
 
-export default AutismAnalyzingPage;
+export default CreativeThinkingAnalyzingPage;
 

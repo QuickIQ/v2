@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Star } from 'lucide-react';
 import '../../../App.css';
 
 interface Props {
   onStart: () => void;
 }
 
-function DisorderIntro({ onStart }: Props) {
+function DepressionIntro({ onStart }: Props) {
   const { t } = useTranslation();
   const isMobile = useMobile();
   
@@ -21,7 +21,7 @@ function DisorderIntro({ onStart }: Props) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FDE1E3 0%, #E4ECFF 50%, #E3FDFD 100%)',
+      background: 'linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)',
       paddingTop: isMobile ? '100px' : '120px',
       paddingBottom: isMobile ? '40px' : '48px',
       paddingLeft: isMobile ? '20px' : '40px',
@@ -38,10 +38,10 @@ function DisorderIntro({ onStart }: Props) {
       <motion.div
         animate={{
           background: [
-            'linear-gradient(135deg, #FDE1E3 0%, #E4ECFF 50%, #E3FDFD 100%)',
-            'linear-gradient(135deg, #E4ECFF 0%, #E3FDFD 50%, #FDE1E3 100%)',
-            'linear-gradient(135deg, #E3FDFD 0%, #FDE1E3 50%, #E4ECFF 100%)',
-            'linear-gradient(135deg, #FDE1E3 0%, #E4ECFF 50%, #E3FDFD 100%)',
+            'linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)',
+            'linear-gradient(135deg, #FFE4E1 0%, #FFF8F0 50%, #FFF0F5 100%)',
+            'linear-gradient(135deg, #FFF8F0 0%, #FFF0F5 50%, #FFE4E1 100%)',
+            'linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)',
           ],
         }}
         transition={{
@@ -74,14 +74,43 @@ function DisorderIntro({ onStart }: Props) {
             fontSize: isMobile ? '36px' : '48px',
             marginBottom: '16px',
             fontWeight: 'bold',
-            background: 'linear-gradient(135deg, #6C63FF 0%, #FF6FB1 100%)',
+            background: 'linear-gradient(135deg, #FF69B4 0%, #FFB6C1 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '12px',
           }}
         >
-          {getTranslation('tests.disorder.landing.title', 'Before You Begin')}
+          {getTranslation('tests.depression.landing.title', 'Before You Begin')}
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.7, 1, 0.7],
+              rotate: [0, 15, -15, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+            }}
+          >
+            <Star 
+              size={isMobile ? 32 : 40} 
+              style={{ 
+                color: '#FF69B4',
+                filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
+                fill: '#FF69B4',
+              }} 
+            />
+          </motion.div>
         </motion.h1>
 
         {/* Subtitle */}
@@ -98,7 +127,7 @@ function DisorderIntro({ onStart }: Props) {
             textAlign: 'center',
           }}
         >
-          {getTranslation('tests.disorder.landing.subtitle', 'Answer honestly — this test is for your self-discovery, not for judgment.')}
+          {getTranslation('tests.depression.landing.subtitle', 'Answer honestly — this test is for your self-discovery, not for judgment.')}
         </motion.p>
 
         {/* Description Card */}
@@ -106,6 +135,12 @@ function DisorderIntro({ onStart }: Props) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          whileHover={{
+            scale: 1.05,
+            y: -10,
+            boxShadow: '0 16px 48px rgba(255, 105, 180, 0.3), 0 0 40px rgba(255, 255, 255, 0.5)',
+            transition: { duration: 0.15, ease: 'easeOut' }
+          }}
           style={{
             background: 'rgba(255, 255, 255, 0.7)',
             backdropFilter: 'blur(10px)',
@@ -115,6 +150,10 @@ function DisorderIntro({ onStart }: Props) {
             marginBottom: '24px',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
+            cursor: 'pointer',
+            transition: 'all 0.15s ease-out',
+            position: 'relative',
+            zIndex: 1,
           }}
         >
           <p style={{
@@ -125,7 +164,7 @@ function DisorderIntro({ onStart }: Props) {
             margin: 0,
             marginBottom: '16px',
           }}>
-            {getTranslation('tests.disorder.landing.description', 'Be as genuine as possible. Your responses are not stored or shared — they\'re only used to calculate your result.')}
+            {getTranslation('tests.depression.landing.description', 'Be as genuine as possible. Your responses are not stored or shared — they\'re only used to calculate your result.')}
           </p>
           <p style={{
             fontSize: isMobile ? '14px' : '16px',
@@ -135,7 +174,7 @@ function DisorderIntro({ onStart }: Props) {
             margin: 0,
             fontStyle: 'italic',
           }}>
-            {getTranslation('tests.disorder.landing.reminder', 'You\'ll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.')}
+            {getTranslation('tests.depression.landing.reminder', 'You\'ll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.')}
           </p>
         </motion.div>
 
@@ -155,13 +194,13 @@ function DisorderIntro({ onStart }: Props) {
           <div style={{
             flex: 1,
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(255, 105, 180, 0.3), transparent)',
           }} />
-          <Sparkles size={20} style={{ color: '#6c63ff', opacity: 0.6 }} />
+          <Sparkles size={20} style={{ color: '#ff69b4', opacity: 0.6 }} />
           <div style={{
             flex: 1,
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(255, 105, 180, 0.3), transparent)',
           }} />
         </motion.div>
 
@@ -186,17 +225,17 @@ function DisorderIntro({ onStart }: Props) {
               WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '16px',
               padding: isMobile ? '24px' : '32px',
-              boxShadow: '0 4px 16px rgba(108, 99, 255, 0.15)',
+              boxShadow: '0 4px 16px rgba(255, 105, 180, 0.15)',
               border: '1px solid rgba(255, 255, 255, 0.3)',
               flex: 1,
               maxWidth: isMobile ? '100%' : '200px',
             }}
           >
-            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#6c63ff', marginBottom: '8px' }}>
+            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#ff69b4', marginBottom: '8px' }}>
               20
             </div>
             <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
-              {getTranslation('tests.disorder.landing.questions', 'Questions')}
+              {getTranslation('tests.depression.landing.questions', 'Questions')}
             </div>
           </motion.div>
           <motion.div
@@ -207,17 +246,17 @@ function DisorderIntro({ onStart }: Props) {
               WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '16px',
               padding: isMobile ? '24px' : '32px',
-              boxShadow: '0 4px 16px rgba(108, 99, 255, 0.15)',
+              boxShadow: '0 4px 16px rgba(255, 105, 180, 0.15)',
               border: '1px solid rgba(255, 255, 255, 0.3)',
               flex: 1,
               maxWidth: isMobile ? '100%' : '200px',
             }}
           >
-            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#6c63ff', marginBottom: '8px' }}>
+            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#ff69b4', marginBottom: '8px' }}>
               10
             </div>
             <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
-              {getTranslation('tests.disorder.landing.minutes', 'Minutes')}
+              {getTranslation('tests.depression.landing.minutes', 'Minutes')}
             </div>
           </motion.div>
         </motion.div>
@@ -240,31 +279,34 @@ function DisorderIntro({ onStart }: Props) {
           <motion.button
             onClick={onStart}
             whileHover={{ 
-              scale: 1.05,
-              boxShadow: '0 8px 30px rgba(108, 99, 255, 0.5)',
+              scale: 1.15,
+              y: -8,
+              boxShadow: '0 16px 50px rgba(255, 105, 180, 0.7), 0 0 60px rgba(255, 182, 193, 0.6), 0 0 80px rgba(255, 105, 180, 0.4)',
+              transition: { duration: 0.15, ease: 'easeOut' }
             }}
             whileTap={{ scale: 0.98 }}
             style={{
               fontSize: isMobile ? '18px' : '20px',
               padding: isMobile ? '18px 48px' : '20px 56px',
-              background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+              background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
               border: 'none',
               borderRadius: '16px',
               color: 'white',
               fontWeight: 'bold',
               cursor: 'pointer',
-              boxShadow: '0 4px 20px rgba(108, 99, 255, 0.4)',
-              transition: 'all 0.3s ease',
+              boxShadow: '0 4px 20px rgba(255, 105, 180, 0.4)',
+              transition: 'all 0.15s ease-out',
               position: 'relative',
               overflow: 'hidden',
+              zIndex: 2,
             }}
           >
             <motion.span
               animate={{
                 boxShadow: [
-                  '0 0 0 0 rgba(108, 99, 255, 0.7)',
-                  '0 0 0 10px rgba(108, 99, 255, 0)',
-                  '0 0 0 0 rgba(108, 99, 255, 0)',
+                  '0 0 0 0 rgba(255, 105, 180, 0.7)',
+                  '0 0 0 10px rgba(255, 105, 180, 0)',
+                  '0 0 0 0 rgba(255, 105, 180, 0)',
                 ],
               }}
               transition={{
@@ -283,7 +325,7 @@ function DisorderIntro({ onStart }: Props) {
                 pointerEvents: 'none',
               }}
             />
-            {getTranslation('tests.disorder.landing.startButton', 'Continue')}
+            {getTranslation('tests.depression.landing.startButton', 'Continue')}
           </motion.button>
         </motion.div>
       </div>
@@ -291,5 +333,5 @@ function DisorderIntro({ onStart }: Props) {
   );
 }
 
-export default DisorderIntro;
+export default DepressionIntro;
 

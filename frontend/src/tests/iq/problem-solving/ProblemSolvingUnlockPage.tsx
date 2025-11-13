@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { useAutismTestStore } from '../../../store/autismTestStore';
-import AutismUnlockTemplate from './AutismUnlockTemplate';
+import { useProblemSolvingTestStore } from '../../../store/problemSolvingTestStore';
+import ProblemSolvingUnlockTemplate from './ProblemSolvingUnlockTemplate';
 import '../../../App.css';
 
 function LoadingFallback() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -26,7 +26,7 @@ function NoResultFallback() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -54,18 +54,18 @@ function NoResultFallback() {
           lineHeight: '1.6',
         }}>
           {i18n.language === 'tr'
-            ? 'Autism testi sonuçlarınız bulunamadı. Lütfen testi tekrar tamamlayın.'
-            : 'Your autism test results were not found. Please complete the test again.'}
+            ? 'Yaratıcı düşünme testi sonuçlarınız bulunamadı. Lütfen testi tekrar tamamlayın.'
+            : 'Your creative thinking test results were not found. Please complete the test again.'}
         </p>
       </div>
     </main>
   );
 }
 
-export default function AutismUnlockPage() {
+export default function ProblemSolvingUnlockPage() {
   const { i18n } = useTranslation();
   const { level: urlLevel } = useParams<{ level?: string }>();
-  const { resultLevel } = useAutismTestStore();
+  const { resultLevel } = useProblemSolvingTestStore();
   const [levelToLoad, setLevelToLoad] = useState<'excellent' | 'good' | 'developing' | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -85,7 +85,7 @@ export default function AutismUnlockPage() {
     // Priority 3: Check localStorage if store doesn't have it
     if (!level) {
       try {
-        const saved = localStorage.getItem('autism-test-storage');
+        const saved = localStorage.getItem('problemSolving-test-storage');
         if (saved) {
           const parsed = JSON.parse(saved);
           // Zustand persist saves the partialized state directly
@@ -114,7 +114,7 @@ export default function AutismUnlockPage() {
   const locale = (i18n.language || 'en').split('-')[0] as 'en' | 'tr';
 
   return (
-    <AutismUnlockTemplate
+    <ProblemSolvingUnlockTemplate
       level={levelToLoad}
       locale={locale}
     />

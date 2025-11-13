@@ -37,7 +37,7 @@ const FadeInCard = ({ children, delay = 0, className, style, disableHover = fals
       transition={{ duration: 0.5, delay, ease: 'easeOut' }}
       whileHover={disableHover ? {} : { 
         scale: 1.03,
-        boxShadow: '0 20px 60px rgba(108, 99, 255, 0.3)',
+        boxShadow: '0 20px 60px rgba(255, 105, 180, 0.3)',
         transition: { duration: 0.3 }
       }}
       style={style}
@@ -54,12 +54,12 @@ const levelConfig: Record<'excellent' | 'good' | 'developing', {
   sectionEmojis: string[];
 }> = {
   excellent: {
-    heroEmojis: ['💡', '✨', '🚀'],
-    sectionEmojis: ['💡', '🎨', '🌟', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭'],
+    heroEmojis: ['🧩', '✨', '💖'],
+    sectionEmojis: ['🧩', '🌺', '🌟', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭'],
   },
   good: {
-    heroEmojis: ['🎨', '🌟', '💫'],
-    sectionEmojis: ['🎨', '💡', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭', '🌟'],
+    heroEmojis: ['🌺', '🌟', '💫'],
+    sectionEmojis: ['🌺', '🧩', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭', '🌟'],
   },
   developing: {
     heroEmojis: ['🌱', '📚', '🔍'],
@@ -67,19 +67,35 @@ const levelConfig: Record<'excellent' | 'good' | 'developing', {
   },
 };
 
-interface AutismUnlockTemplateProps {
+interface ProblemSolvingUnlockTemplateProps {
   level: 'excellent' | 'good' | 'developing';
   locale?: 'en' | 'tr';
 }
 
-export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemplateProps) {
+export default function ProblemSolvingUnlockTemplate({ level, locale }: ProblemSolvingUnlockTemplateProps) {
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
   const navigate = useNavigate();
 
   const currentLocale = (locale || i18n.language || 'en').split('-')[0] as 'en' | 'tr';
-  const content = resultContent[level];
   const config = levelConfig[level];
+  
+  // Get content from localization keys
+  const getContent = () => {
+    const baseKey = `tests.problemSolving.result.${level}`;
+    return {
+      title: t(`${baseKey}.title`) || '',
+      summary: t(`${baseKey}.summary`) || '',
+      insights: (t(`${baseKey}.insights`, { returnObjects: true }) as string[]) || [],
+      sections: {
+        strengths: t(`${baseKey}.strengths.text`) || '',
+        growthAreas: t(`${baseKey}.growthAreas.text`) || '',
+        practicalApplications: t(`${baseKey}.practicalApplications.text`) || '',
+        futurePotential: t(`${baseKey}.futurePotential.text`) || '',
+      }
+    };
+  };
+  const content = getContent();
 
   const scrollToTests = () => {
     navigate('/');
@@ -103,7 +119,7 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
     {
       key: 'overview',
       icon: config.sectionEmojis[0],
-      title: currentLocale === 'tr' ? 'Autism Test Profiliniz' : 'Your Autism Test Profile',
+      title: currentLocale === 'tr' ? 'Depresyon Profiliniz' : 'Your ProblemSolving Profile',
       text: content.summary,
     },
     {
@@ -111,8 +127,8 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
       icon: config.sectionEmojis[1],
       title: currentLocale === 'tr' ? 'Temel İçgörüler' : 'Key Insights',
       text: currentLocale === 'tr' 
-        ? 'Autism test sonuçlarınız hakkında en önemli bulgular:'
-        : 'The most important findings about your autism test results:',
+        ? 'Ruh hali kalıplarınız ve düşünce dengeniz hakkında en önemli bulgular:'
+        : 'The most important findings about your mood patterns and thought balance:',
       insights: content.insights,
     },
     {
@@ -121,15 +137,15 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
       title: currentLocale === 'tr' ? 'Güçlü Yönleriniz' : 'Your Strengths',
       text: content.sections?.strengths || (level === 'excellent'
         ? (currentLocale === 'tr' 
-          ? 'Autism test sonuçlarınız olağanüstü seviyede. İşte en güçlü yönleriniz:'
-          : 'Your autism test results are at an excellent level. Here are your strongest areas:')
+          ? 'Ruh hali dengeniz konusunda olağanüstü yeteneklere sahipsiniz. İşte en güçlü yönleriniz:'
+          : 'You possess exceptional mood balance abilities. Here are your strongest areas:')
         : level === 'good'
         ? (currentLocale === 'tr'
-          ? 'Autism test sonuçlarınız iyi seviyede. İşte öne çıkan güçlü yönleriniz:'
-          : 'Your autism test results are at a good level. Here are your standout strengths:')
+          ? 'Ruh hali dengeniz konusunda güçlü yetenekleriniz var. İşte öne çıkan güçlü yönleriniz:'
+          : 'You have strong mood balance skills. Here are your standout strengths:')
         : (currentLocale === 'tr'
-          ? 'Autism test sonuçlarınız gelişiyor. İşte güçlü yönleriniz:'
-          : 'Your autism test results are developing. Here are your strengths:')),
+          ? 'Ruh hali dengeniz potansiyeliniz gelişiyor. İşte güçlü yönleriniz:'
+          : 'Your mood balance potential is developing. Here are your strengths:')),
     },
     {
       key: 'growth',
@@ -137,31 +153,31 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
       title: currentLocale === 'tr' ? 'Gelişim Alanları' : 'Growth Areas',
       text: content.sections?.growthAreas || (level === 'excellent'
         ? (currentLocale === 'tr'
-          ? 'Mükemmel seviyede olsanız bile, autism test sonuçlarınızı daha da geliştirebileceğiniz alanlar:'
-          : 'Even at an excellent level, areas where you can further enhance your autism test results:')
+          ? 'Mükemmel seviyede olsanız bile, ruh hali dengenizi daha da geliştirebileceğiniz alanlar:'
+          : 'Even at an excellent level, areas where you can further enhance your mood balance:')
         : level === 'good'
         ? (currentLocale === 'tr'
-          ? 'Autism test sonuçlarınızı daha da artırmak için odaklanabileceğiniz alanlar:'
-          : 'Areas you can focus on to further improve your autism test results:')
+          ? 'Ruh hali dengenizi daha da artırmak için odaklanabileceğiniz alanlar:'
+          : 'Areas you can focus on to further increase your mood balance:')
         : (currentLocale === 'tr'
-          ? 'Autism test sonuçlarınızı geliştirmek için pratik yapabileceğiniz alanlar:'
-          : 'Areas you can practice to develop your autism test results:')),
+          ? 'Ruh hali dengenizi geliştirmek için pratik yapabileceğiniz alanlar:'
+          : 'Areas you can practice to develop your mood balance abilities:')),
     },
     {
       key: 'application',
       icon: config.sectionEmojis[4],
       title: currentLocale === 'tr' ? 'Pratik Uygulamalar' : 'Practical Applications',
       text: content.sections?.practicalApplications || (currentLocale === 'tr'
-        ? 'Autism test sonuçlarınızı günlük hayatta ve kariyerinizde nasıl kullanabileceğiniz:'
-        : 'How you can apply your autism test results in daily life and career:'),
+        ? 'Ruh hali dengenizi günlük hayatta nasıl koruyabileceğiniz:'
+        : 'How you can maintain your mood balance in daily life:'),
     },
     {
       key: 'future',
       icon: config.sectionEmojis[5],
       title: currentLocale === 'tr' ? 'Gelecek Potansiyeli' : 'Future Potential',
       text: content.sections?.futurePotential || (currentLocale === 'tr'
-        ? 'Autism test sonuçlarınızı geliştirmeye devam ederseniz neler başarabileceğiniz:'
-        : 'What you can achieve if you continue developing your autism test results:'),
+        ? 'Ruh hali dengenizi geliştirmeye devam ederseniz neler başarabileceğiniz:'
+        : 'What you can achieve if you continue developing your mood balance:'),
     },
   ];
 
@@ -193,7 +209,7 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
           <h2 style={{
             fontSize: isMobile ? '20px' : '24px',
             fontWeight: '800',
-            background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+            background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -202,60 +218,15 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
             {section.title}
           </h2>
         </div>
-        <div style={{ 
-          color: '#555', 
-          lineHeight: '1.8', 
-          fontSize: '15px', 
-          whiteSpace: 'pre-line',
-          marginBottom: section.key === 'insights' ? '32px' : '0',
-        }}>
-          <p>{section.text}</p>
-        </div>
-
-        {/* Insights List for insights section */}
-        {section.key === 'insights' && section.insights && (
-          <div style={{
-            marginTop: '24px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
+        {section.key !== 'insights' && (
+          <div style={{ 
+            color: '#555', 
+            lineHeight: '1.8', 
+            fontSize: '15px', 
+            whiteSpace: 'pre-line',
+            marginBottom: '0',
           }}>
-            {section.insights.map((insight, index) => (
-              <FadeInCard
-                key={index}
-                delay={index * 0.1}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.8)',
-                    borderRadius: '20px',
-                    padding: '20px',
-                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.06)',
-                    border: '1px solid rgba(108, 99, 255, 0.15)',
-                    transition: 'all 0.3s ease',
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '12px',
-                  }}
-                >
-                  <div style={{
-                    fontSize: '24px',
-                    flexShrink: 0,
-                  }}>
-                    {config.sectionEmojis[1]}
-                  </div>
-                  <p style={{
-                    fontSize: '14px',
-                    color: '#666',
-                    lineHeight: '1.6',
-                    margin: 0,
-                  }}>
-                    {insight}
-                  </p>
-                </motion.div>
-              </FadeInCard>
-            ))}
+            <p></p>
           </div>
         )}
       </FadeInCard>
@@ -288,38 +259,42 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
             gap: '12px',
             marginBottom: '24px',
           }}>
-            {config.heroEmojis.map((emoji, index) => (
-              <span
-                key={index}
-                className="float-emoji"
-                style={{
-                  fontSize: '48px',
-                  animationDelay: `${index * 0.2}s`,
-                  display: 'inline-block',
-                  willChange: 'transform',
-                }}
-              >
-                {emoji}
-              </span>
-            ))}
+            <motion.div
+              animate={{ 
+                rotate: [0, -5, 5, -5, 0],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{ 
+                duration: 3,
+                repeat: Infinity,
+                repeatDelay: 2,
+                ease: 'easeInOut'
+              }}
+              style={{
+                fontSize: '48px',
+                display: 'inline-block',
+                filter: 'drop-shadow(0 2px 8px rgba(255, 105, 180, 0.4))',
+              }}
+            >
+              🧩
+            </motion.div>
           </div>
           <h1 style={{
             fontSize: isMobile ? '32px' : '42px',
             fontWeight: '900',
-            background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+            background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             marginBottom: '16px',
           }}>
-            {content.title}
+            Your Detailed ProblemSolving Report
           </h1>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',
             color: '#666',
             lineHeight: '1.6',
           }}>
-            {content.summary}
           </p>
         </FadeInCard>
 
@@ -358,7 +333,7 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
           <h2 style={{
             fontSize: isMobile ? '24px' : '28px',
             fontWeight: '800',
-            color: '#6c63ff',
+              color: '#2196F3',
             marginBottom: '12px',
           }}>
             {currentLocale === 'tr' ? 'Daha Fazlasını Keşfetmeye Hazır mısınız?' : 'Ready to Explore More?'}
@@ -379,7 +354,7 @@ export default function AutismUnlockTemplate({ level, locale }: AutismUnlockTemp
             whileTap={{ scale: 0.98 }}
             style={{
               padding: isMobile ? '16px 32px' : '18px 40px',
-              background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+              background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
               border: 'none',
               borderRadius: '999px',
               color: 'white',

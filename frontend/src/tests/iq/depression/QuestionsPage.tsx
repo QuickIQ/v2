@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useCreativeThinkingTestStore, CreativeThinkingQuestion, CreativeThinkingAnswer } from '../../../store/creativeThinkingTestStore';
+import { useDepressionTestStore, DepressionQuestion, DepressionAnswer } from '../../../store/depressionTestStore';
 import { useMobile } from '../../../hooks/useMobile';
 import { Clock } from 'lucide-react';
 import '../../../App.css';
 
 interface Props {
-  questions: CreativeThinkingQuestion[];
+  questions: DepressionQuestion[];
   onComplete: () => void;
 }
 
@@ -33,7 +33,7 @@ const glowColors = [
   'rgba(137, 220, 137, 0.5)', // Always - darker green glow
 ];
 
-function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
+function DepressionQuestionsPage({ questions, onComplete }: Props) {
   const { t } = useTranslation();
   const isMobile = useMobile();
   const {
@@ -43,7 +43,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
     setCurrentQuestionIndex,
     addAnswer,
     setTimeRemaining,
-  } = useCreativeThinkingTestStore();
+  } = useDepressionTestStore();
 
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [autoAdvancing, setAutoAdvancing] = useState(false);
@@ -68,7 +68,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
       timerIntervalRef.current = null;
     }
 
-    let currentTime = useCreativeThinkingTestStore.getState().timeRemaining;
+    let currentTime = useDepressionTestStore.getState().timeRemaining;
     
     if (!currentTime || currentTime <= 0 || currentTime > 10 * 60 || isNaN(currentTime)) {
       currentTime = 10 * 60;
@@ -81,7 +81,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
     }
 
     timerIntervalRef.current = setInterval(() => {
-      const storeTime = useCreativeThinkingTestStore.getState().timeRemaining;
+      const storeTime = useDepressionTestStore.getState().timeRemaining;
       
       if (!storeTime || storeTime <= 0 || isNaN(storeTime)) {
         if (timerIntervalRef.current) {
@@ -131,7 +131,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
     // Reverse scoring is handled in calculateScore() in the store
     const baseScore = optionIndex + 1;
     
-    const answer: CreativeThinkingAnswer = {
+    const answer: DepressionAnswer = {
       question_id: currentQuestion.id,
       option_index: optionIndex,
       score: baseScore, // Store base score, reverse logic applied in calculateScore
@@ -180,7 +180,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
         justifyContent: 'center',
         background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       }}>
-        <div className="loading" style={{ fontSize: '18px', color: '#6c63ff' }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#ff69b4' }}>
           {t('common.loading') || 'Loading...'}
         </div>
       </div>
@@ -203,7 +203,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
           textAlign: 'center',
         }}>
           <div style={{ color: '#e74c3c', marginBottom: '20px' }}>
-            {t('tests.creativeThinking.errors.load_questions') || 'Failed to load questions. Please try again.'}
+            {t('tests.depression.errors.load_questions') || 'Failed to load questions. Please try again.'}
           </div>
         </div>
       </div>
@@ -240,7 +240,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
           transition={{ duration: 0.3 }}
           style={{
             height: '100%',
-            background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+            background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
           }}
         />
       </motion.div>
@@ -308,7 +308,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
                 textAlign: 'center',
               }}
             >
-              💡
+              🌸
             </motion.div>
 
             {/* Question Card */}
@@ -648,7 +648,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
                     padding: isMobile ? '12px 24px' : '14px 28px',
                     background: !currentAnswer || autoAdvancing
                       ? 'rgba(100, 100, 100, 0.3)'
-                      : 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      : 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
                     border: 'none',
                     borderRadius: '12px',
                     color: !currentAnswer || autoAdvancing ? '#999' : 'white',
@@ -691,7 +691,7 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
                 fontWeight: '600',
                 color: '#1a1a1a',
               }}>
-                Creativity Test
+                Depression Test
               </div>
               
               <div style={{
@@ -780,5 +780,5 @@ function CreativeThinkingQuestionsPage({ questions, onComplete }: Props) {
   );
 }
 
-export default CreativeThinkingQuestionsPage;
+export default DepressionQuestionsPage;
 

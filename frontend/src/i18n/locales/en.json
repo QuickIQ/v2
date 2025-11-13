@@ -274,27 +274,53 @@
           }
         }
       },
-      "autism": {
+      "depression": {
         "card": {
-          "title": "Autism Test",
-          "subtitle": "autism test description placeholder"
+          "title": "Depression Test",
+          "subtitle": "Are you just tired, or is your mood quietly collapsing?"
         },
         "landing": {
           "title": "Before You Begin",
           "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
-          "description": "Can you read social cues easily, or do you think differently?",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
           "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
           "questions": "Questions",
           "minutes": "Minutes",
           "startButton": "Continue"
         },
         "questions": {
-          "title": "Question {{current}} of {{total}}",
-          "testName": "Autism Test"
+          "title": "Question {{current}} of {{total}}"
         },
         "calculating": {
-          "title": "Analyzing your results...",
+          "title": "Analyzing your depression patterns and thought balance...",
           "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Depression Test results below and explore how your mind adapts to inner patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your hidden strengths, growth zones, and unique mental blueprint.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Depression Analysis",
+          "trust_feature1_desc": "Deep analysis of your mood patterns and thought balance with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "Secure payment powered by Stripe. Your information is encrypted and protected."
         },
         "errors": {
           "load_questions": "Failed to load questions. Please try again.",
@@ -303,134 +329,68 @@
         "warnings": {
           "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
         },
-        "payment": {
-          "your_result": "Your Autism Level",
-          "blueprint_text": "Your autism test analysis has been generated.",
-          "locked_subtext": "Your full detailed report is ready — including autism strategies, growth areas, and personalized insights.",
-          "unlock_button": "Unlock Detailed Result",
-          "tests_completed": "Today",
-          "tests_completed_suffix": "people completed the test",
-          "why_trust": "Why Trust QuickIQ?",
-          "trust_feature1_title": "AI-Powered Autism Analysis",
-          "trust_feature1_desc": "Deep analysis of your autism test results with advanced algorithms.",
-          "trust_feature2_title": "Actionable Insights",
-          "trust_feature2_desc": "Practical advice you can use in real life.",
-          "trust_feature3_title": "Personalized Growth Plan",
-          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
-          "reviews": "Reviews",
-          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
-          "verified_customer": "Verified Customer",
-          "trial_price": "$1.95 USD",
-          "trial_footer": "Then $39.90 per month after trial — cancel anytime.",
-          "recent_results": "Recent Results",
-          "completeTrial": "Complete Your 7-Day Trial Securely",
-          "features": {
-            "advancedPersonalityMap": {
-              "title": "Advanced Personality Map",
-              "desc": "Gain an AI-powered framework to understand yourself in rich detail."
-            },
-            "applicableInitiatives": {
-              "title": "Applicable Personal Initiatives",
-              "desc": "Instantly apply strong insights to improve your relationships, work, and personal growth."
-            },
-            "personalizedPlan": {
-              "title": "Personalized Growth Plan",
-              "desc": "Turn your awareness into real-world success through a tailored improvement guide."
-            }
-          },
-          "resultBanner": {
-            "title": "Your personalized insights are ready!",
-            "subtitle": "Unlock your full results, crafted by our AI based on your unique answers.",
-            "button": "See My Result ↓"
-          }
-        },
-        "trust": {
-          "title": "Why Trust QuickIQ?",
-          "aiAccuracy": "AI-Powered Accuracy",
-          "aiAccuracyDesc": "Gain insights generated by cognitive AI models verified by thousands of test results.",
-          "dataPrivacy": "Data Privacy",
-          "dataPrivacyDesc": "Your responses are encrypted. No personal data is ever stored.",
-          "actionableInsights": "Actionable Insights",
-          "actionableInsightsDesc": "Get practical feedback you can apply immediately in real life.",
-          "quickFacts": "QuickIQ by the Numbers",
-          "testsCompleted": "Over {{count}} tests completed today",
-          "countries": "Trusted by users from 80+ countries",
-          "rating": "Rated 4.9/5 accuracy feedback"
-        },
         "result": {
           "excellent": {
-            "title": "High Social Awareness",
-            "summary": "You demonstrate strong awareness of social signals, emotions, and patterns in communication. You naturally recognize subtle cues like tone, gestures, and unspoken context, allowing you to connect easily with others. Your empathy and attention to details help you navigate complex social situations smoothly. To keep improving, continue exploring new perspectives and environments — creativity grows when curiosity meets empathy.",
-            "insights": [
-              "Practice active listening in conversations.",
-              "Try new group activities that challenge your adaptability.",
-              "Reflect on how your awareness can help others feel more understood."
-            ],
+            "title": "",
+            "summary": "",
+            "insights": [],
             "strengths": {
               "title": "Your Strengths",
-              "text": "Placeholder text for strengths section at excellent level."
+              "text": ""
             },
             "growthAreas": {
               "title": "Growth Areas",
-              "text": "Placeholder text for growth areas section at excellent level."
+              "text": ""
             },
             "practicalApplications": {
               "title": "Practical Applications",
-              "text": "Placeholder text for practical applications section at excellent level."
+              "text": ""
             },
             "futurePotential": {
               "title": "Future Potential",
-              "text": "Placeholder text for future potential section at excellent level."
+              "text": ""
             }
           },
           "good": {
-            "title": "Balanced Social Perception",
-            "summary": "You often understand how others feel and what they mean, though sometimes social cues might be less clear to you. You have an intuitive sense of connection but might need extra time in fast-changing or emotional settings. Your logical approach helps you analyze situations calmly — a strength in both personal and professional life. To grow further, try blending emotional and logical understanding when communicating with others.",
-            "insights": [
-              "Slow down and observe emotional details during conversations.",
-              "Ask clarifying questions instead of assuming meaning.",
-              "Balance logical thinking with emotional awareness."
-            ],
+            "title": "",
+            "summary": "",
+            "insights": [],
             "strengths": {
               "title": "Your Strengths",
-              "text": "Placeholder text for strengths section at good level."
+              "text": ""
             },
             "growthAreas": {
               "title": "Growth Areas",
-              "text": "Placeholder text for growth areas section at good level."
+              "text": ""
             },
             "practicalApplications": {
               "title": "Practical Applications",
-              "text": "Placeholder text for practical applications section at good level."
+              "text": ""
             },
             "futurePotential": {
               "title": "Future Potential",
-              "text": "Placeholder text for future potential section at good level."
+              "text": ""
             }
           },
           "developing": {
-            "title": "Unique Perception Style",
-            "summary": "You tend to process the world differently — noticing patterns, structures, and ideas that others often miss. Social cues may sometimes feel confusing or irrelevant, but this difference can be a deep creative strength. You might connect better through ideas, honesty, and clear logic rather than emotional hints. With small, mindful steps, you can improve comfort in social interactions while keeping your authentic perspective.",
-            "insights": [
-              "Observe body language and tone gradually without pressure.",
-              "Engage in one-on-one conversations rather than large groups.",
-              "Use your clarity and focus to create meaningful, logical connections."
-            ],
+            "title": "",
+            "summary": "",
+            "insights": [],
             "strengths": {
               "title": "Your Strengths",
-              "text": "Placeholder text for strengths section at developing level."
+              "text": ""
             },
             "growthAreas": {
               "title": "Growth Areas",
-              "text": "Placeholder text for growth areas section at developing level."
+              "text": ""
             },
             "practicalApplications": {
               "title": "Practical Applications",
-              "text": "Placeholder text for practical applications section at developing level."
+              "text": ""
             },
             "futurePotential": {
               "title": "Future Potential",
-              "text": "Placeholder text for future potential section at developing level."
+              "text": ""
             }
           }
         }

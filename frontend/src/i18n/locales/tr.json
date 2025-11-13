@@ -211,45 +211,103 @@
           "payment_amount": "₺59,00"
         }
       },
-      "autism": {
+      "creativeThinking": {
         "card": {
-          "title": "Autism Testi",
-          "subtitle": "autism test açıklaması placeholder"
+          "title": "Yaratıcı Düşünme Testi",
+          "subtitle": "yaratıcılığın sınırlarını ne kadar zorlayabiliyorsun?"
         },
         "landing": {
           "title": "Başlamadan Önce",
-          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmak için değil.",
-          "description": "Sosyal ipuçlarını yakalayabiliyor musun, yoksa farklı mı düşünüyorsun?",
+          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmanız için değil.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
           "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
           "questions": "Soru",
           "minutes": "Dakika",
           "startButton": "Devam Et"
         },
         "questions": {
-          "title": "Soru {{current}} / {{total}}",
-          "testName": "Autism Testi"
+          "title": "Soru {{current}} / {{total}}"
         },
         "calculating": {
           "title": "Sonuçlarınız analiz ediliyor...",
-          "subtitle": "Yapay zekamız yanıtlarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
         },
         "errors": {
           "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
           "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
         },
         "warnings": {
-          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam edilsin mi?"
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
+        },
+        "result": {
+          "excellent": {
+            "title": "Yaratıcı Düşünür – Yenilikçi Zihin",
+            "summary": "Yaratıcı düşünme yetenekleriniz olağanüstü. Sürekli sınırları zorluyorsunuz, başkalarının kaçırdığı bağlantıları görüyorsunuz ve soyut fikirleri yenilikçi çözümlere dönüştürüyorsunuz.",
+            "insights": [
+              "Farklı kavramları birleştirerek yeni çözümler üretmede mükemmelsiniz",
+              "Hemen görünen kısıtlamaların ötesini görme yeteneğiniz çığır açan yeniliklere yol açıyor",
+              "Doğal olarak varsayımları sorguluyor ve alışılmadık yolları keşfediyorsunuz"
+            ]
+          },
+          "good": {
+            "title": "Yaratıcı Düşünür – Uyumlu Yenilikçi",
+            "summary": "Güçlü yaratıcı düşünme becerileriniz var ve gelişme alanınız mevcut. Orijinal fikirler üretebiliyor ve alternatif bakış açıları görebiliyorsunuz, ancak bazen tanıdık kalıplara geri dönüyorsunuz.",
+            "insights": [
+              "Sağlam yaratıcı problem çözme yetenekleri sergiliyorsunuz",
+              "Rahatlık alanınızı genişletmek daha büyük yaratıcı potansiyeli açacak",
+              "Fikirlerinizi geliştirmek için çeşitli bakış açıları aramaktan faydalanıyorsunuz"
+            ]
+          },
+          "developing": {
+            "title": "Yaratıcı Düşünür – Gelişen Yenilikçi",
+            "summary": "Yaratıcı düşünmeniz gelişiyor. Yeni yaklaşımları keşfetmek yerine pratik, kanıtlanmış çözümlere yönelebilirsiniz. Bu bir sınırlama değil—bir fırsat.",
+            "insights": [
+              "Birini seçmeden önce birden fazla çözüm üretmeye odaklanın",
+              "Sorunları tamamen farklı açılardan görmeyi pratik edin",
+              "Denemeyi benimseyin ve başarısızlıkları öğrenme fırsatları olarak görün"
+            ]
+          }
+        }
+      },
+      "depression": {
+        "card": {
+          "title": "Depresyon Testi",
+          "subtitle": "Sadece yorgun musun, yoksa ruh halin sessizce mi çöküyor?"
+        },
+        "landing": {
+          "title": "Başlamadan Önce",
+          "subtitle": "Dürüstçe cevaplayın — bu test kendinizi keşfetmeniz içindir, yargılanmanız için değil.",
+          "description": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır.",
+          "reminder": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız.",
+          "questions": "Soru",
+          "minutes": "Dakika",
+          "startButton": "Devam Et"
+        },
+        "questions": {
+          "title": "Soru {{current}} / {{total}}"
+        },
+        "calculating": {
+          "title": "Depresyon kalıplarınız ve düşünce dengeniz analiz ediliyor...",
+          "subtitle": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+        },
+        "email": {
+          "email_label": "E-posta Adresi",
+          "email_placeholder": "ornek@email.com",
+          "email_required": "Lütfen e-posta adresinizi girin.",
+          "email_invalid": "Lütfen tanınan bir domain içeren geçerli bir e-posta adresi girin (örn: gmail.com, hotmail.com).",
+          "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikasını kabul ediyorum.",
+          "consent_required": "Lütfen Şartları ve Gizlilik Politikasını kabul edin.",
+          "continue_button": "Devam Et",
+          "privacy": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
         },
         "payment": {
-          "your_result": "Autism Seviyeniz",
-          "blueprint_text": "Autism test analiziniz oluşturuldu.",
-          "locked_subtext": "Detaylı raporunuz hazır — autism stratejileri, gelişim alanları ve kişiselleştirilmiş içgörüler dahil.",
+          "intro": "Aşağıdan kişiselleştirilmiş Depresyon Test sonuçlarınızın kilidini açın ve zihninizin iç kalıplara nasıl uyum sağladığını keşfedin.",
+          "recent_results": "Güncel Sonuçlar",
+          "locked_subtext": "Kişisel analiz raporunuz bekliyor — Gizli güçlü yönlerinizi, büyüme alanlarınızı ve benzersiz zihinsel haritanızı keşfedin.",
           "unlock_button": "Detaylı Sonucu Aç",
-          "tests_completed": "Bugün",
-          "tests_completed_suffix": "kişi testi tamamladı",
           "why_trust": "Neden QuickIQ'ya Güvenmelisiniz?",
-          "trust_feature1_title": "Yapay Zeka Destekli Autism Analizi",
-          "trust_feature1_desc": "Gelişmiş algoritmalarla autism test sonuçlarınızın derinlemesine analizi.",
+          "trust_feature1_title": "Yapay Zeka Destekli Depresyon Analizi",
+          "trust_feature1_desc": "Gelişmiş algoritmalarla ruh hali kalıplarınızın ve düşünce dengenizin derinlemesine analizi.",
           "trust_feature2_title": "Uygulanabilir İçgörüler",
           "trust_feature2_desc": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.",
           "trust_feature3_title": "Kişiselleştirilmiş Gelişim Planı",
@@ -257,117 +315,77 @@
           "reviews": "Yorumlar",
           "reviews_subtitle": "Mükemmel ⭐ 4.7 puan — 1769 yorum",
           "verified_customer": "Doğrulanmış Müşteri",
-          "trial_price": "$1.95 USD",
-          "trial_footer": "Sonrasında ayda ₺1,199 — istediğiniz zaman iptal edebilirsiniz.",
-          "recent_results": "Güncel Sonuçlar",
-          "completeTrial": "7 Günlük Deneme Sürenizi Güvenle Tamamlayın",
-          "features": {
-            "advancedPersonalityMap": {
-              "title": "Gelişmiş Kişilik Haritası",
-              "desc": "Kendi kendinizi ayrıntılı bir şekilde anlamanıza yardımcı olan yapay zeka destekli bir kişilik çerçevesine sahip olun."
-            },
-            "applicableInitiatives": {
-              "title": "Uygulanabilir Kişisel İnisiyatifler",
-              "desc": "Güçlü bilgileri hemen ilişkilerinizi, işinize ve kişisel büyümeye geliştirin."
-            },
-            "personalizedPlan": {
-              "title": "Kişiselleştirilmiş Gelişim Planı",
-              "desc": "Kendi bilginizi gerçek dünya başarısına dönüştürmek için kişiselleştirilmiş kılavuzla."
-            }
-          },
-          "resultBanner": {
-            "title": "Kişisel analiz raporun hazır!",
-            "subtitle": "Cevaplarına özel olarak hazırlanmış yapay zekâ destekli sonuçlarını şimdi keşfet.",
-            "button": "Sonucumu Gör ↓"
-          }
+          "footer": "Stripe tarafından desteklenen güvenli ödeme. Bilgileriniz şifrelenmiş ve korunmaktadır."
         },
-        "trust": {
-          "title": "Neden QuickIQ'ya Güvenmelisiniz?",
-          "aiAccuracy": "Yapay Zeka Destekli Doğruluk",
-          "aiAccuracyDesc": "Binlerce test sonucuyla doğrulanmış bilişsel AI modelleri tarafından üretilen içgörüler kazanın.",
-          "dataPrivacy": "Veri Gizliliği",
-          "dataPrivacyDesc": "Yanıtlarınız şifrelenir. Hiçbir kişisel veri saklanmaz.",
-          "actionableInsights": "Uygulanabilir İçgörüler",
-          "actionableInsightsDesc": "Gerçek hayatta hemen uygulayabileceğiniz pratik geri bildirim alın.",
-          "quickFacts": "QuickIQ Rakamlarla",
-          "testsCompleted": "Bugün {{count}} test tamamlandı",
-          "countries": "80+ ülkeden kullanıcılar tarafından güveniliyor",
-          "rating": "4.9/5 doğruluk geri bildirimi puanı"
+        "errors": {
+          "load_questions": "Sorular yüklenemedi. Lütfen tekrar deneyin.",
+          "load_result": "Sonuçlar yüklenemedi. Lütfen tekrar deneyin."
+        },
+        "warnings": {
+          "leave_page": "Bu sayfadan ayrılırsanız, mevcut test ilerlemeniz kaybolacak. Devam etmek istiyor musunuz?"
         },
         "result": {
           "excellent": {
-            "title": "Yüksek Sosyal Farkındalık",
-            "summary": "Sosyal sinyaller, duygular ve iletişimdeki kalıplar konusunda güçlü bir farkındalık gösteriyorsunuz. Ton, jestler ve söylenmemiş bağlam gibi ince ipuçlarını doğal olarak tanıyorsunuz, bu da başkalarıyla kolayca bağlantı kurmanıza olanak sağlıyor. Empati ve detaylara dikkatiniz, karmaşık sosyal durumlarda sorunsuz bir şekilde ilerlemenize yardımcı oluyor. Gelişmeye devam etmek için yeni perspektifler ve ortamlar keşfetmeye devam edin — merak empatiyle buluştuğunda yaratıcılık büyür.",
-            "insights": [
-              "Konuşmalarda aktif dinleme pratiği yapın.",
-              "Uyum sağlama yeteneğinizi zorlayan yeni grup aktiviteleri deneyin.",
-              "Farkındalığınızın başkalarının daha iyi anlaşılmış hissetmesine nasıl yardımcı olabileceğini düşünün."
-            ],
+            "title": "",
+            "summary": "",
+            "insights": [],
             "strengths": {
               "title": "Güçlü Yönleriniz",
-              "text": "Mükemmel seviye güçlü yönler bölümü için placeholder metin."
+              "text": ""
             },
             "growthAreas": {
               "title": "Gelişim Alanları",
-              "text": "Mükemmel seviye gelişim alanları bölümü için placeholder metin."
+              "text": ""
             },
             "practicalApplications": {
               "title": "Pratik Uygulamalar",
-              "text": "Mükemmel seviye pratik uygulamalar bölümü için placeholder metin."
+              "text": ""
             },
             "futurePotential": {
               "title": "Gelecek Potansiyeli",
-              "text": "Mükemmel seviye gelecek potansiyeli bölümü için placeholder metin."
+              "text": ""
             }
           },
           "good": {
-            "title": "Dengeli Sosyal Algı",
-            "summary": "Başkalarının nasıl hissettiğini ve ne demek istediklerini genellikle anlıyorsunuz, ancak bazen sosyal ipuçları size daha az net gelebilir. Sezgisel bir bağlantı duygunuz var ancak hızlı değişen veya duygusal ortamlarda ekstra zamana ihtiyacınız olabilir. Mantıksal yaklaşımınız durumları sakin bir şekilde analiz etmenize yardımcı oluyor — bu hem kişisel hem de profesyonel hayatta bir güç. Daha da gelişmek için başkalarıyla iletişim kurarken duygusal ve mantıksal anlayışı harmanlamayı deneyin.",
-            "insights": [
-              "Konuşmalar sırasında yavaşlayın ve duygusal detayları gözlemleyin.",
-              "Anlam varsaymak yerine açıklayıcı sorular sorun.",
-              "Mantıksal düşünmeyi duygusal farkındalıkla dengeleyin."
-            ],
+            "title": "",
+            "summary": "",
+            "insights": [],
             "strengths": {
               "title": "Güçlü Yönleriniz",
-              "text": "İyi seviye güçlü yönler bölümü için placeholder metin."
+              "text": ""
             },
             "growthAreas": {
               "title": "Gelişim Alanları",
-              "text": "İyi seviye gelişim alanları bölümü için placeholder metin."
+              "text": ""
             },
             "practicalApplications": {
               "title": "Pratik Uygulamalar",
-              "text": "İyi seviye pratik uygulamalar bölümü için placeholder metin."
+              "text": ""
             },
             "futurePotential": {
               "title": "Gelecek Potansiyeli",
-              "text": "İyi seviye gelecek potansiyeli bölümü için placeholder metin."
+              "text": ""
             }
           },
           "developing": {
-            "title": "Benzersiz Algı Tarzı",
-            "summary": "Dünyayı farklı şekilde işleme eğilimindesiniz — başkalarının sıklıkla kaçırdığı kalıpları, yapıları ve fikirleri fark ediyorsunuz. Sosyal ipuçları bazen kafa karıştırıcı veya ilgisiz gelebilir, ancak bu fark derin bir yaratıcı güç olabilir. Duygusal ipuçlarından ziyade fikirler, dürüstlük ve net mantık aracılığıyla daha iyi bağlantı kurabilirsiniz. Küçük, bilinçli adımlarla, otantik bakış açınızı korurken sosyal etkileşimlerdeki rahatlığınızı artırabilirsiniz.",
-            "insights": [
-              "Beden dilini ve tonu baskı olmadan yavaş yavaş gözlemleyin.",
-              "Büyük gruplar yerine bire bir konuşmalara katılın.",
-              "Anlamlı, mantıksal bağlantılar oluşturmak için netliğinizi ve odaklanmanızı kullanın."
-            ],
+            "title": "",
+            "summary": "",
+            "insights": [],
             "strengths": {
               "title": "Güçlü Yönleriniz",
-              "text": "Gelişen seviye güçlü yönler bölümü için placeholder metin."
+              "text": ""
             },
             "growthAreas": {
               "title": "Gelişim Alanları",
-              "text": "Gelişen seviye gelişim alanları bölümü için placeholder metin."
+              "text": ""
             },
             "practicalApplications": {
               "title": "Pratik Uygulamalar",
-              "text": "Gelişen seviye pratik uygulamalar bölümü için placeholder metin."
+              "text": ""
             },
             "futurePotential": {
               "title": "Gelecek Potansiyeli",
-              "text": "Gelişen seviye gelecek potansiyeli bölümü için placeholder metin."
+              "text": ""
             }
           }
         }

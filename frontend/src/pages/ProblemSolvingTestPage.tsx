@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useDisorderTestStore } from '../store/disorderTestStore';
-import DisorderIntro from '../tests/iq/disorder/index';
-import DisorderQuestionsPage from '../tests/iq/disorder/QuestionsPage';
-import DisorderAnalyzingPage from '../tests/iq/disorder/DisorderAnalyzingPage';
+import { useProblemSolvingTestStore } from '../store/problemSolvingTestStore';
+import ProblemSolvingIntro from '../tests/iq/problemSolving/index';
+import ProblemSolvingQuestionsPage from '../tests/iq/problemSolving/QuestionsPage';
+import ProblemSolvingAnalyzingPage from '../tests/iq/problemSolving/ProblemSolvingAnalyzingPage';
 import PersonalityEmailPage from '../tests/personality/PersonalityEmailPage';
-import { resultContent } from '../tests/iq/disorder/resultContent';
-import questionsData from '../data/tests/disorder/questions.json';
+import { resultContent } from '../tests/iq/problemSolving/resultContent';
+import questionsData from '../data/tests/problemSolving/questions.json';
 
-function DisorderTestPage() {
+function ProblemSolvingTestPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
@@ -27,7 +27,7 @@ function DisorderTestPage() {
     calculateScore,
     setResultData,
     setEmail,
-  } = useDisorderTestStore();
+  } = useProblemSolvingTestStore();
 
   const [error, setError] = useState<string | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
@@ -42,7 +42,7 @@ function DisorderTestPage() {
       return;
     }
     
-    const store = useDisorderTestStore.getState();
+    const store = useProblemSolvingTestStore.getState();
     const storeStep = store.step;
     
     // Only reset to landing if we're actually starting fresh (no step set or landing)
@@ -57,7 +57,7 @@ function DisorderTestPage() {
     }
     
     try {
-      const storeQuestions = useDisorderTestStore.getState().questions;
+      const storeQuestions = useProblemSolvingTestStore.getState().questions;
       
       if (storeQuestions.length === 0 && questionsData && questionsData.length > 0) {
         setQuestions(questionsData as any);
@@ -81,7 +81,7 @@ function DisorderTestPage() {
     console.log('🔄 Step changed to:', step);
     
     if (step === 'questions') {
-      const store = useDisorderTestStore.getState();
+      const store = useProblemSolvingTestStore.getState();
       const storeQuestions = store.questions;
       
       if (storeQuestions.length === 0) {
@@ -103,7 +103,7 @@ function DisorderTestPage() {
   }, [step]);
 
   const handleStart = () => {
-    const storeQuestions = useDisorderTestStore.getState().questions;
+    const storeQuestions = useProblemSolvingTestStore.getState().questions;
     
     if (storeQuestions.length === 0) {
       if (questionsData && questionsData.length > 0) {
@@ -114,15 +114,15 @@ function DisorderTestPage() {
       }
     }
     
-    const store = useDisorderTestStore.getState();
+    const store = useProblemSolvingTestStore.getState();
     store.setCurrentQuestionIndex(0);
     
     const timerSeconds = 10 * 60; // 10 minutes
     store.setTimeRemaining(timerSeconds);
     
-    useDisorderTestStore.setState({ answers: [] });
-    useDisorderTestStore.setState({ totalScore: 0 });
-    useDisorderTestStore.setState({ resultLevel: null });
+    useProblemSolvingTestStore.setState({ answers: [] });
+    useProblemSolvingTestStore.setState({ totalScore: 0 });
+    useProblemSolvingTestStore.setState({ resultLevel: null });
     
     setStep('questions');
     setPhase('questions');
@@ -150,7 +150,7 @@ function DisorderTestPage() {
       setStep('analyzing');
       
       // Verify step was set
-      const storeAfterSet = useDisorderTestStore.getState();
+      const storeAfterSet = useProblemSolvingTestStore.getState();
       console.log('✅ Step set to:', storeAfterSet.step);
       console.log('✅ Current step in component:', step);
     } catch (err) {
@@ -166,13 +166,13 @@ function DisorderTestPage() {
       console.log('📧 handleAnalyzingComplete called');
       
       // Ensure score is calculated
-      let store = useDisorderTestStore.getState();
+      let store = useProblemSolvingTestStore.getState();
       if (!store.resultLevel) {
         console.log('⚠️ No resultLevel found, calculating score...');
         calculateScore();
         // Wait a bit for score calculation
         await new Promise(resolve => setTimeout(resolve, 200));
-        store = useDisorderTestStore.getState();
+        store = useProblemSolvingTestStore.getState();
       }
       
       const level = store.resultLevel || 'good';
@@ -188,7 +188,7 @@ function DisorderTestPage() {
       
       // Transition to email screen - use store's setStep directly
       console.log('➡️ Transitioning to email screen...');
-      const storeInstance = useDisorderTestStore.getState();
+      const storeInstance = useProblemSolvingTestStore.getState();
       storeInstance.setStep('email');
       
       // Also call the component's setStep for immediate update
@@ -196,7 +196,7 @@ function DisorderTestPage() {
       
       // Verify step was set
       await new Promise(resolve => setTimeout(resolve, 50));
-      const storeAfterSet = useDisorderTestStore.getState();
+      const storeAfterSet = useProblemSolvingTestStore.getState();
       console.log('✅ Step set to:', storeAfterSet.step);
       console.log('✅ Component step:', step);
     } catch (err: any) {
@@ -204,7 +204,7 @@ function DisorderTestPage() {
       // Even on error, proceed to email screen
       const result = resultContent['good'];
       setResultData(result);
-      const storeInstance = useDisorderTestStore.getState();
+      const storeInstance = useProblemSolvingTestStore.getState();
       storeInstance.setStep('email');
       setStep('email');
     }
@@ -218,22 +218,22 @@ function DisorderTestPage() {
     
     setEmail(emailValue);
     
-    const store = useDisorderTestStore.getState();
+    const store = useProblemSolvingTestStore.getState();
     if (!store.sessionToken) {
       const tempToken = `temp_${Date.now()}`;
       store.setSessionToken(tempToken);
     }
     
     // Navigate to payment page
-    navigate('/test/disorder/payment');
+    navigate('/test/problemSolving/payment');
   };
 
   useEffect(() => {
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-      const store = useDisorderTestStore.getState();
+      const store = useProblemSolvingTestStore.getState();
       if (store.step === 'questions' && store.answers.length > 0) {
         e.preventDefault();
-        e.returnValue = t('tests.disorder.warnings.leave_page') || 'If you leave this page, your current test progress will be lost. Continue?';
+        e.returnValue = t('tests.problemSolving.warnings.leave_page') || 'If you leave this page, your current test progress will be lost. Continue?';
         return e.returnValue;
       }
     };
@@ -249,7 +249,7 @@ function DisorderTestPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+        background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
         padding: '40px',
       }}>
         <div className="card" style={{
@@ -279,9 +279,9 @@ function DisorderTestPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+        background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
       }}>
-        <div className="loading" style={{ fontSize: '18px', color: '#6c63ff' }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#2196F3' }}>
           {t('common.loading')}
         </div>
       </div>
@@ -298,7 +298,7 @@ function DisorderTestPage() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <DisorderIntro onStart={handleStart} />
+          <ProblemSolvingIntro onStart={handleStart} />
         </motion.div>
       </AnimatePresence>
     );
@@ -306,7 +306,7 @@ function DisorderTestPage() {
 
   switch (step) {
     case 'questions':
-      const currentQuestionsFromStore = useDisorderTestStore.getState().questions;
+      const currentQuestionsFromStore = useProblemSolvingTestStore.getState().questions;
       const questionsToUse = currentQuestionsFromStore.length > 0 ? currentQuestionsFromStore : questions;
       
       if (questionsToUse.length === 0) {
@@ -319,9 +319,9 @@ function DisorderTestPage() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+            background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
           }}>
-            <div className="loading" style={{ fontSize: '18px', color: '#6c63ff' }}>
+            <div className="loading" style={{ fontSize: '18px', color: '#2196F3' }}>
               {t('common.loading')}
             </div>
           </div>
@@ -337,7 +337,7 @@ function DisorderTestPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <DisorderQuestionsPage
+            <ProblemSolvingQuestionsPage
               questions={questionsToUse}
               onComplete={handleQuestionsComplete}
             />
@@ -354,7 +354,7 @@ function DisorderTestPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <DisorderAnalyzingPage onComplete={handleAnalyzingComplete} />
+            <ProblemSolvingAnalyzingPage onComplete={handleAnalyzingComplete} />
           </motion.div>
         </AnimatePresence>
       );
@@ -402,9 +402,9 @@ function DisorderTestPage() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+            background: 'linear-gradient(135deg, #E3F2FD 0%, #E1F5FE 100%)',
           }}>
-            <div className="loading" style={{ fontSize: '18px', color: '#6c63ff' }}>
+            <div className="loading" style={{ fontSize: '18px', color: '#2196F3' }}>
               {t('common.loading')}
             </div>
           </div>
@@ -420,12 +420,11 @@ function DisorderTestPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <DisorderAnalyzingPage onComplete={handleAnalyzingComplete} />
+            <ProblemSolvingAnalyzingPage onComplete={handleAnalyzingComplete} />
           </motion.div>
         </AnimatePresence>
       );
   }
 }
 
-export default DisorderTestPage;
-
+export default ProblemSolvingTestPage;

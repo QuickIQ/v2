@@ -1,28 +1,28 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export interface DisorderQuestion {
+export interface DepressionQuestion {
   id: number;
   text: string;
-  options: string[]; // ["Never", "Rarely", "Occasionally", "Neutral", "Often", "Usually", "Always"]
+  options: string[]; // ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"]
   reverse?: boolean; // If true, invert the score (8 - baseScore)
 }
 
-export interface DisorderAnswer {
+export interface DepressionAnswer {
   question_id: number;
   option_index: number;
   score: number; // 1-7 based on option index
 }
 
-export interface DisorderTestState {
+export interface DepressionTestState {
   // Session
   sessionToken: string | null;
   timeRemaining: number; // seconds
   timeStarted: Date | null;
   
   // Test data
-  questions: DisorderQuestion[];
-  answers: DisorderAnswer[];
+  questions: DepressionQuestion[];
+  answers: DepressionAnswer[];
   currentQuestionIndex: number;
   
   // Score
@@ -39,13 +39,13 @@ export interface DisorderTestState {
   // Actions
   setSessionToken: (token: string) => void;
   setTimeRemaining: (seconds: number) => void;
-  setQuestions: (questions: DisorderQuestion[]) => void;
+  setQuestions: (questions: DepressionQuestion[]) => void;
   setCurrentQuestionIndex: (index: number) => void;
-  addAnswer: (answer: DisorderAnswer) => void;
+  addAnswer: (answer: DepressionAnswer) => void;
   calculateScore: () => void;
   setResultData: (data: any) => void;
   setEmail: (email: string) => void;
-  setStep: (step: DisorderTestState['step']) => void;
+  setStep: (step: DepressionTestState['step']) => void;
   reset: () => void;
 }
 
@@ -63,7 +63,7 @@ const initialState = {
   step: 'landing' as const,
 };
 
-export const useDisorderTestStore = create<DisorderTestState>()(
+export const useDepressionTestStore = create<DepressionTestState>()(
   persist(
     (set, get) => ({
       ...initialState,
@@ -72,11 +72,11 @@ export const useDisorderTestStore = create<DisorderTestState>()(
       
       setTimeRemaining: (seconds: number) => set({ timeRemaining: seconds }),
       
-      setQuestions: (questions: DisorderQuestion[]) => set({ questions }),
+      setQuestions: (questions: DepressionQuestion[]) => set({ questions }),
       
       setCurrentQuestionIndex: (index: number) => set({ currentQuestionIndex: index }),
       
-      addAnswer: (answer: DisorderAnswer) => {
+      addAnswer: (answer: DepressionAnswer) => {
         const currentAnswers = get().answers;
         const filteredAnswers = currentAnswers.filter(a => a.question_id !== answer.question_id);
         const newAnswers = [...filteredAnswers, answer];
@@ -124,12 +124,12 @@ export const useDisorderTestStore = create<DisorderTestState>()(
       
       setEmail: (email: string) => set({ email }),
       
-      setStep: (step: DisorderTestState['step']) => set({ step }),
+      setStep: (step: DepressionTestState['step']) => set({ step }),
       
       reset: () => set(initialState),
     }),
     {
-      name: 'disorder-test-storage',
+      name: 'depression-test-storage',
       partialize: (state) => ({
         sessionToken: state.sessionToken,
         timeRemaining: state.timeRemaining,

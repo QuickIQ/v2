@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { useDisorderTestStore } from '../../../store/disorderTestStore';
-import DisorderUnlockTemplate from './DisorderUnlockTemplate';
+import { useDepressionTestStore } from '../../../store/depressionTestStore';
+import DepressionUnlockTemplate from './DepressionUnlockTemplate';
 import '../../../App.css';
 
 function LoadingFallback() {
@@ -62,10 +62,10 @@ function NoResultFallback() {
   );
 }
 
-export default function DisorderUnlockPage() {
+export default function DepressionUnlockPage() {
   const { i18n } = useTranslation();
   const { level: urlLevel } = useParams<{ level?: string }>();
-  const { resultLevel } = useDisorderTestStore();
+  const { resultLevel } = useDepressionTestStore();
   const [levelToLoad, setLevelToLoad] = useState<'excellent' | 'good' | 'developing' | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -85,7 +85,7 @@ export default function DisorderUnlockPage() {
     // Priority 3: Check localStorage if store doesn't have it
     if (!level) {
       try {
-        const saved = localStorage.getItem('disorder-test-storage');
+        const saved = localStorage.getItem('depression-test-storage');
         if (saved) {
           const parsed = JSON.parse(saved);
           // Zustand persist saves the partialized state directly
@@ -114,7 +114,7 @@ export default function DisorderUnlockPage() {
   const locale = (i18n.language || 'en').split('-')[0] as 'en' | 'tr';
 
   return (
-    <DisorderUnlockTemplate
+    <DepressionUnlockTemplate
       level={levelToLoad}
       locale={locale}
     />
