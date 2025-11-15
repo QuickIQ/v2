@@ -33,51 +33,34 @@ import { useAnxietyTestStore } from '../store/anxietyTestStore';
 // Use Universal QuestionsPage component
 import UniversalQuestionsPage from '../components/TestFlow/UniversalQuestionsPage';
 
-// Import all resultContent from JSON files
-import autismResultContent from '../data/tests/results/autism.json';
-import criticismResultContent from '../data/tests/results/criticism.json';
-import problemSolvingResultContent from '../data/tests/results/problem-solving.json';
-import creativeThinkingResultContent from '../data/tests/results/creative-thinking.json';
-import depressionResultContent from '../data/tests/results/depression.json';
-import multitaskingResultContent from '../data/tests/results/multitasking.json';
-import attentionSpanResultContent from '../data/tests/results/attention-span.json';
-import memoryRetentionResultContent from '../data/tests/results/memory-retention.json';
-import entrepreneurMindsetResultContent from '../data/tests/results/entrepreneur-mindset.json';
-import riskToleranceResultContent from '../data/tests/results/risk-tolerance.json';
-import strategicThinkingResultContent from '../data/tests/results/strategic-thinking.json';
-import timeManagementResultContent from '../data/tests/results/time-management.json';
-import decisionMakingResultContent from '../data/tests/results/decision-making.json';
-import leadershipArchetypeResultContent from '../data/tests/results/leadership-archetype.json';
-import negotiationSkillsResultContent from '../data/tests/results/negotiation-skills.json';
-import stressManagementResultContent from '../data/tests/results/stress-management.json';
-import teamPlayerResultContent from '../data/tests/results/team-player.json';
-import successResultContent from '../data/tests/results/success.json';
-import perfectionismResultContent from '../data/tests/results/perfectionism.json';
-import ambitionResultContent from '../data/tests/results/ambition.json';
-import anxietyResultContent from '../data/tests/results/anxiety.json';
+// Dynamic import functions for resultContent and questionsData
+// These will be loaded on-demand to reduce initial bundle size
 
-// Import all questions data
-import autismQuestionsData from '../data/tests/autism/questions.json';
-import criticismQuestionsData from '../data/tests/criticism/questions.json';
-import problemSolvingQuestionsData from '../data/tests/problem-solving/questions.json';
-import creativeThinkingQuestionsData from '../data/tests/creative-thinking/questions.json';
-import depressionQuestionsData from '../data/tests/depression/questions.json';
-import multitaskingQuestionsData from '../data/tests/multitasking/questions.json';
-import attentionSpanQuestionsData from '../data/tests/attention-span/questions.json';
-import memoryRetentionQuestionsData from '../data/tests/memory-retention/questions.json';
-import entrepreneurMindsetQuestionsData from '../data/tests/entrepreneur-mindset/questions.json';
-import riskToleranceQuestionsData from '../data/tests/risk-tolerance/questions.json';
-import strategicThinkingQuestionsData from '../data/tests/strategic-thinking/questions.json';
-import timeManagementQuestionsData from '../data/tests/time-management/questions.json';
-import decisionMakingQuestionsData from '../data/tests/decision-making/questions.json';
-import leadershipArchetypeQuestionsData from '../data/tests/leadership-archetype/questions.json';
-import negotiationSkillsQuestionsData from '../data/tests/negotiation-skills/questions.json';
-import stressManagementQuestionsData from '../data/tests/stress-management/questions.json';
-import teamPlayerQuestionsData from '../data/tests/team-player/questions.json';
-import successQuestionsData from '../data/tests/success/questions.json';
-import perfectionismQuestionsData from '../data/tests/perfectionism/questions.json';
-import ambitionQuestionsData from '../data/tests/ambition/questions.json';
-import anxietyQuestionsData from '../data/tests/anxiety/questions.json';
+/**
+ * Dynamically load resultContent for a test
+ */
+async function loadResultContent(testId: string): Promise<any> {
+  try {
+    const content = await import(`../data/tests/results/${testId}.json`);
+    return content.default || content;
+  } catch (error) {
+    console.error(`Failed to load resultContent for ${testId}:`, error);
+    return null;
+  }
+}
+
+/**
+ * Dynamically load questionsData for a test
+ */
+async function loadQuestionsData(testId: string): Promise<any> {
+  try {
+    const data = await import(`../data/tests/${testId}/questions.json`);
+    return data.default || data;
+  } catch (error) {
+    console.error(`Failed to load questionsData for ${testId}:`, error);
+    return null;
+  }
+}
 
 // Store mapping - Export for use in UniversalPaymentPage and UniversalUnlockPage
 export const storeMap: Record<string, any> = {
@@ -106,55 +89,9 @@ export const storeMap: Record<string, any> = {
 
 // All tests use UniversalQuestionsPage
 
-// ResultContent mapping
-const resultContentMap: Record<string, any> = {
-  'autism': autismResultContent,
-  'criticism': criticismResultContent,
-  'problem-solving': problemSolvingResultContent,
-  'creative-thinking': creativeThinkingResultContent,
-  'depression': depressionResultContent,
-  'multitasking': multitaskingResultContent,
-  'attention-span': attentionSpanResultContent,
-  'memory-retention': memoryRetentionResultContent,
-  'entrepreneur-mindset': entrepreneurMindsetResultContent,
-  'risk-tolerance': riskToleranceResultContent,
-  'strategic-thinking': strategicThinkingResultContent,
-  'time-management': timeManagementResultContent,
-  'decision-making': decisionMakingResultContent,
-  'leadership-archetype': leadershipArchetypeResultContent,
-  'negotiation-skills': negotiationSkillsResultContent,
-  'stress-management': stressManagementResultContent,
-  'team-player': teamPlayerResultContent,
-  'success': successResultContent,
-  'perfectionism': perfectionismResultContent,
-  'ambition': ambitionResultContent,
-  'anxiety': anxietyResultContent,
-};
-
-// QuestionsData mapping
-const questionsDataMap: Record<string, any> = {
-  'autism': autismQuestionsData,
-  'criticism': criticismQuestionsData,
-  'problem-solving': problemSolvingQuestionsData,
-  'creative-thinking': creativeThinkingQuestionsData,
-  'depression': depressionQuestionsData,
-  'multitasking': multitaskingQuestionsData,
-  'attention-span': attentionSpanQuestionsData,
-  'memory-retention': memoryRetentionQuestionsData,
-  'entrepreneur-mindset': entrepreneurMindsetQuestionsData,
-  'risk-tolerance': riskToleranceQuestionsData,
-  'strategic-thinking': strategicThinkingQuestionsData,
-  'time-management': timeManagementQuestionsData,
-  'decision-making': decisionMakingQuestionsData,
-  'leadership-archetype': leadershipArchetypeQuestionsData,
-  'negotiation-skills': negotiationSkillsQuestionsData,
-  'stress-management': stressManagementQuestionsData,
-  'team-player': teamPlayerQuestionsData,
-  'success': successQuestionsData,
-  'perfectionism': perfectionismQuestionsData,
-  'ambition': ambitionQuestionsData,
-  'anxiety': anxietyQuestionsData,
-};
+// Cache for loaded resultContent and questionsData to avoid re-loading
+const resultContentCache: Record<string, any> = {};
+const questionsDataCache: Record<string, any> = {};
 
 interface UniversalTestPageProps {
   testId: string;
@@ -172,12 +109,73 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
   // Get test config
   const testConfig = getTestConfig(testId);
   
-  // Get components and data from mappings
+  // Get store from mapping
   const useTestStore = storeMap[testId];
-  const resultContent = resultContentMap[testId];
-  const questionsData = questionsDataMap[testId];
+  
+  // State for dynamically loaded data
+  const [resultContent, setResultContent] = useState<any>(null);
+  const [questionsData, setQuestionsData] = useState<any>(null);
+  const [dataLoading, setDataLoading] = useState(true);
+  const [dataError, setDataError] = useState<string | null>(null);
 
-  if (!useTestStore || !resultContent || !questionsData) {
+  // Load resultContent and questionsData dynamically
+  useEffect(() => {
+    let isMounted = true;
+    
+    async function loadData() {
+      if (!useTestStore) {
+        setDataError('Test store not found');
+        setDataLoading(false);
+        return;
+      }
+
+      try {
+        // Check cache first
+        let content = resultContentCache[testId];
+        let questions = questionsDataCache[testId];
+
+        // Load if not in cache
+        if (!content) {
+          content = await loadResultContent(testId);
+          if (content) {
+            resultContentCache[testId] = content;
+          }
+        }
+
+        if (!questions) {
+          questions = await loadQuestionsData(testId);
+          if (questions) {
+            questionsDataCache[testId] = questions;
+          }
+        }
+
+        if (isMounted) {
+          if (!content || !questions) {
+            setDataError(`Failed to load data for test: ${testId}`);
+          } else {
+            setResultContent(content);
+            setQuestionsData(questions);
+            setDataError(null);
+          }
+          setDataLoading(false);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          console.error('Error loading test data:', err);
+          setDataError(err.message || 'Failed to load test data');
+          setDataLoading(false);
+        }
+      }
+    }
+
+    loadData();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [testId, useTestStore]);
+
+  if (!useTestStore) {
     return (
       <div style={{
         minHeight: '100vh',
@@ -190,6 +188,68 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
           Test configuration not found for: {testId}
           <br />
           Available tests: {Object.keys(storeMap).join(', ')}
+        </div>
+      </div>
+    );
+  }
+
+  if (dataLoading) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#10b981' }}>
+          {t('common.loading')}
+        </div>
+      </div>
+    );
+  }
+
+  if (dataError || !resultContent || !questionsData) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+        padding: '40px',
+      }}>
+        <div className="card" style={{
+          maxWidth: '600px',
+          padding: '40px',
+          textAlign: 'center',
+        }}>
+          <div className="error" style={{ marginBottom: '20px' }}>
+            {dataError || 'Failed to load test data'}
+          </div>
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              setDataError(null);
+              setDataLoading(true);
+              // Retry loading
+              loadResultContent(testId).then(content => {
+                if (content) {
+                  resultContentCache[testId] = content;
+                  setResultContent(content);
+                }
+              });
+              loadQuestionsData(testId).then(questions => {
+                if (questions) {
+                  questionsDataCache[testId] = questions;
+                  setQuestionsData(questions);
+                }
+                setDataLoading(false);
+              });
+            }}
+          >
+            {t('common.tryAgain')}
+          </button>
         </div>
       </div>
     );
