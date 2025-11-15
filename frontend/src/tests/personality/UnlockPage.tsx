@@ -127,7 +127,7 @@ export default function UnlockPage() {
           }
         }
       } catch (e) {
-        console.error('Error loading from localStorage:', e);
+        // Error loading from localStorage (non-critical)
       }
     }
 

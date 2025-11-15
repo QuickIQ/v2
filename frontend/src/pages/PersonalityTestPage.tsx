@@ -9,6 +9,7 @@ import PersonalityResultPage from '../tests/personality/PersonalityResultPage';
 import PersonalityAnalyzingPage from '../tests/personality/PersonalityAnalyzingPage';
 import PersonalityEmailPage from '../tests/personality/PersonalityEmailPage';
 import questionsData from '../data/tests/personality/questions.json';
+import { logger } from '../utils/logger';
 
 function PersonalityTestPage() {
   const { t } = useTranslation();
@@ -32,17 +33,17 @@ function PersonalityTestPage() {
   const [phase, setPhase] = useState<'intro' | 'questions'>('intro');
   
   // Debug: Log component render
-  console.log('🔵 PersonalityTestPage render - step:', step, 'phase:', phase, 'questions.length:', questions.length);
+  logger.debug('🔵 PersonalityTestPage render - step:', step, 'phase:', phase, 'questions.length:', questions.length);
 
   // Initialize: Always reset to fresh start and load questions
   useEffect(() => {
-    console.log('🟢 useEffect[onMount] - Initializing...');
+    logger.debug('🟢 useEffect[onMount] - Initializing...');
     
     const store = usePersonalityTestStore.getState();
-    console.log('📊 Current step from store:', store.step);
+    logger.debug('📊 Current step from store:', store.step);
     
     // Always reset to fresh start when page loads
-    console.log('🔄 Resetting to fresh start...');
+    logger.debug('🔄 Resetting to fresh start...');
     store.setCurrentQuestionIndex(0);
     store.updateScores({
       E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0
@@ -54,18 +55,18 @@ function PersonalityTestPage() {
     // Load questions
     try {
       const storeQuestions = usePersonalityTestStore.getState().questions;
-      console.log('📊 Store questions length:', storeQuestions.length);
-      console.log('📊 Questions data length:', questionsData.length);
+      logger.debug('📊 Store questions length:', storeQuestions.length);
+      logger.debug('📊 Questions data length:', questionsData.length);
       
       if (storeQuestions.length === 0 && questionsData && questionsData.length > 0) {
-        console.log('✅ Setting questions to store...');
+        logger.debug('✅ Setting questions to store...');
         setQuestions(questionsData as any);
-        console.log('✅ Questions set. New store length:', usePersonalityTestStore.getState().questions.length);
+        logger.debug('✅ Questions set. New store length:', usePersonalityTestStore.getState().questions.length);
       } else {
-        console.log('ℹ️ Questions already in store or questionsData is empty');
+        logger.debug('ℹ️ Questions already in store or questionsData is empty');
       }
     } catch (err: any) {
-      console.error('❌ Error loading questions:', err);
+      logger.error('❌ Error loading questions:', err);
       setError(err.message || 'Failed to load questions');
     }
     
@@ -76,59 +77,59 @@ function PersonalityTestPage() {
   // Ensure questions are loaded when entering questions step
   useEffect(() => {
     if (step === 'questions') {
-      console.log('🟡 useEffect[step=questions] - Checking questions...');
+      logger.debug('🟡 useEffect[step=questions] - Checking questions...');
       const store = usePersonalityTestStore.getState();
       const storeQuestions = store.questions;
-      console.log('📊 Questions in store:', storeQuestions.length);
-      console.log('📊 Current question index:', store.currentQuestionIndex);
-      console.log('📊 Time remaining:', store.timeRemaining);
+      logger.debug('📊 Questions in store:', storeQuestions.length);
+      logger.debug('📊 Current question index:', store.currentQuestionIndex);
+      logger.debug('📊 Time remaining:', store.timeRemaining);
       
       if (storeQuestions.length === 0) {
-        console.log('⚠️ No questions in store, loading now...');
+        logger.debug('⚠️ No questions in store, loading now...');
         if (questionsData && questionsData.length > 0) {
           setQuestions(questionsData as any);
-          console.log('✅ Questions loaded. New length:', usePersonalityTestStore.getState().questions.length);
+          logger.debug('✅ Questions loaded. New length:', usePersonalityTestStore.getState().questions.length);
         } else {
-          console.error('❌ questionsData is empty or undefined!');
+          logger.error('❌ questionsData is empty or undefined!');
           setError('Questions data not available');
         }
       } else {
-        console.log('✅ Questions already loaded');
+        logger.debug('✅ Questions already loaded');
       }
       
       // Reset question index if it's out of bounds
       if (store.currentQuestionIndex >= storeQuestions.length || store.currentQuestionIndex < 0) {
-        console.log('🔄 Resetting question index to 0');
+        logger.debug('🔄 Resetting question index to 0');
         store.setCurrentQuestionIndex(0);
       }
       
       // Ensure timer is set correctly (should already be set by handleStart, but double-check)
       if (!store.timeRemaining || store.timeRemaining <= 0 || store.timeRemaining > 15 * 60 || isNaN(store.timeRemaining)) {
-        console.log('🕐 Timer invalid, resetting to 15 minutes');
+        logger.debug('🕐 Timer invalid, resetting to 15 minutes');
         setTimeRemaining(15 * 60);
       } else {
-        console.log('✅ Timer is valid:', store.timeRemaining, 'seconds');
+        logger.debug('✅ Timer is valid:', store.timeRemaining, 'seconds');
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]); // Only depend on step
 
   const handleStart = () => {
-    console.log('🚀 Start button clicked!');
-    console.log('📊 Current phase:', phase);
-    console.log('📊 Questions length (from hook):', questions.length);
+    logger.debug('🚀 Start button clicked!');
+    logger.debug('📊 Current phase:', phase);
+    logger.debug('📊 Questions length (from hook):', questions.length);
     
     // Always ensure questions are loaded before proceeding
     const storeQuestions = usePersonalityTestStore.getState().questions;
-    console.log('📊 Questions length (from store):', storeQuestions.length);
+    logger.debug('📊 Questions length (from store):', storeQuestions.length);
     
     if (storeQuestions.length === 0) {
-      console.log('⚠️ No questions in store, loading them now...');
+      logger.debug('⚠️ No questions in store, loading them now...');
       if (questionsData && questionsData.length > 0) {
         setQuestions(questionsData as any);
-        console.log('✅ Questions set. Verifying...', usePersonalityTestStore.getState().questions.length);
+        logger.debug('✅ Questions set. Verifying...', usePersonalityTestStore.getState().questions.length);
       } else {
-        console.error('❌ questionsData is empty!');
+        logger.error('❌ questionsData is empty!');
         setError('Questions data not available');
         return;
       }
@@ -141,7 +142,7 @@ function PersonalityTestPage() {
     // Reset timer to 15 minutes and start it immediately
     const timerSeconds = 15 * 60; // 15 minutes in seconds
     store.setTimeRemaining(timerSeconds);
-    console.log('🕐 Timer started with:', timerSeconds, 'seconds (15:00)');
+    logger.debug('🕐 Timer started with:', timerSeconds, 'seconds (15:00)');
     
     // Reset answers and scores for fresh test
     store.updateScores({
@@ -151,12 +152,12 @@ function PersonalityTestPage() {
     usePersonalityTestStore.setState({ answers: [] });
     
     // Set step to questions in store and change phase
-    console.log('➡️ Setting step to questions and phase to questions...');
+    logger.debug('➡️ Setting step to questions and phase to questions...');
     setStep('questions');
     setPhase('questions');
-    console.log('✅ Step and phase set. New step:', usePersonalityTestStore.getState().step);
-    console.log('✅ Question index reset to:', usePersonalityTestStore.getState().currentQuestionIndex);
-    console.log('✅ Timer started at:', usePersonalityTestStore.getState().timeRemaining, 'seconds');
+    logger.debug('✅ Step and phase set. New step:', usePersonalityTestStore.getState().step);
+    logger.debug('✅ Question index reset to:', usePersonalityTestStore.getState().currentQuestionIndex);
+    logger.debug('✅ Timer started at:', usePersonalityTestStore.getState().timeRemaining, 'seconds');
   };
 
   const handleQuestionsComplete = async () => {
@@ -168,7 +169,7 @@ function PersonalityTestPage() {
     const currentAnswers = store.answers;
     const currentQuestions = store.questions;
     
-    console.log('🔍 Validating answers:', {
+    logger.debug('🔍 Validating answers:', {
       answersCount: currentAnswers.length,
       questionsCount: currentQuestions.length,
       answers: currentAnswers.map(a => ({ q: a.question_id, opt: a.option_index }))
@@ -176,7 +177,7 @@ function PersonalityTestPage() {
     
     // Check if we have answers for all questions
     if (currentAnswers.length < currentQuestions.length) {
-      console.warn('⚠️ Not all questions answered:', {
+      logger.warn('⚠️ Not all questions answered:', {
         answered: currentAnswers.length,
         total: currentQuestions.length
       });
@@ -189,7 +190,7 @@ function PersonalityTestPage() {
     const allQuestionIds = new Set(currentQuestions.map(q => q.id));
     
     if (answeredQuestionIds.size !== allQuestionIds.size) {
-      console.warn('⚠️ Some questions are missing answers:', {
+      logger.warn('⚠️ Some questions are missing answers:', {
         answeredIds: Array.from(answeredQuestionIds),
         allIds: Array.from(allQuestionIds),
         missingIds: Array.from(allQuestionIds).filter(id => !answeredQuestionIds.has(id))
@@ -198,7 +199,7 @@ function PersonalityTestPage() {
       return;
     }
 
-    console.log('✅ All questions answered, proceeding to analyzing...');
+    logger.debug('✅ All questions answered, proceeding to analyzing...');
     setError(null); // Clear any previous errors
     calculatePersonalityType();
     setStep('analyzing');
@@ -214,7 +215,7 @@ function PersonalityTestPage() {
           setResultData(resultModule.default);
           setStep('email');
         } catch (importErr: any) {
-          console.error('Error importing result file:', importErr);
+          logger.error('Error importing result file:', importErr);
           // Fallback: create a basic result structure
           setResultData({
             title: `${type} — Your Personality Type`,
@@ -234,7 +235,7 @@ function PersonalityTestPage() {
         setStep('questions');
       }
     } catch (err: any) {
-      console.error('Error loading result:', err);
+      logger.error('Error loading result:', err);
       setError(err.message || t('tests.personality.errors.load_result'));
       setStep('questions');
     }
@@ -351,16 +352,16 @@ function PersonalityTestPage() {
       const currentQuestionsFromStore = usePersonalityTestStore.getState().questions;
       const questionsToUse = currentQuestionsFromStore.length > 0 ? currentQuestionsFromStore : questions;
       
-      console.log('📋 Questions step render:');
-      console.log('  - Hook questions.length:', questions.length);
-      console.log('  - Store questions.length:', currentQuestionsFromStore.length);
-      console.log('  - Using questions.length:', questionsToUse.length);
+      logger.debug('📋 Questions step render:');
+      logger.debug('  - Hook questions.length:', questions.length);
+      logger.debug('  - Store questions.length:', currentQuestionsFromStore.length);
+      logger.debug('  - Using questions.length:', questionsToUse.length);
       
       if (questionsToUse.length === 0) {
-        console.log('⏳ Questions empty, showing loading...');
+        logger.debug('⏳ Questions empty, showing loading...');
         // Force a re-render by setting questions if we have the data
         if (questionsData && questionsData.length > 0) {
-          console.log('🔄 Force loading questions in render...');
+          logger.debug('🔄 Force loading questions in render...');
           setQuestions(questionsData as any);
         }
         return (
@@ -378,7 +379,7 @@ function PersonalityTestPage() {
         );
       }
       
-      console.log('✅ Rendering questions page with', questionsToUse.length, 'questions');
+      logger.debug('✅ Rendering questions page with', questionsToUse.length, 'questions');
       return (
         <AnimatePresence mode="wait">
           <motion.div

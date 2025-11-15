@@ -7,30 +7,16 @@ import { X, CreditCard, Lock, Shield, CheckCircle, Star } from 'lucide-react';
 import { usePersonalityTestStore } from '../../store/personalityTestStore';
 import '../../App.css';
 
-// Recent Results Component (keeping existing functionality)
-const names = [
-  'Ayşe Doğan', 'Fatma Şen', 'Ali Demir', 'Mehmet Kaya', 'Maria Petrova', 'Ivanka Stoyanova',
-  'Hassan Khalid', 'Noor Alhashimi', 'Omar Said', 'Lina Aboud', 'John Smith', 'Sarah Johnson',
-  'Michael Brown', 'Emily Davis', 'David Wilson', 'Emma Martinez', 'James Anderson', 'Olivia Taylor',
-  'William Thomas', 'Sophia Jackson', 'Daniel White', 'Isabella Harris', 'Matthew Martin', 'Mia Thompson'
-];
+// Recent Results Component - Using shared JSON data
+import namesByCountryData from '../../data/shared/names-by-country.json';
+import countriesData from '../../data/shared/countries.json';
+import personalityTypesData from '../../data/shared/personality-types.json';
 
-const countries = [
-  { flag: '🇹🇷', code: 'TR' },
-  { flag: '🇸🇾', code: 'SY' },
-  { flag: '🇧🇬', code: 'BG' },
-  { flag: '🇮🇶', code: 'IQ' },
-  { flag: '🇬🇷', code: 'GR' },
-  { flag: '🇺🇸', code: 'US' },
-  { flag: '🇬🇧', code: 'GB' },
-  { flag: '🇩🇪', code: 'DE' },
-  { flag: '🇫🇷', code: 'FR' },
-  { flag: '🇪🇸', code: 'ES' }
-];
-
+const namesByCountry: Record<string, string[]> = namesByCountryData;
+const countries = countriesData;
 const personalityTypes = {
-  en: ['Architect', 'Logician', 'Commander', 'Debater', 'Advocate', 'Mediator', 'Protagonist', 'Campaigner', 'Logistician', 'Defender', 'Executive', 'Consul', 'Virtuoso', 'Adventurer', 'Entrepreneur', 'Entertainer'],
-  tr: ['Mimar', 'Mantıkçı', 'Komutan', 'Tartışmacı', 'Savunucu', 'Arabulucu', 'Protagonist', 'Kampanyacı', 'Lojistikçi', 'Savunucu', 'Yönetici', 'Konsolos', 'Virtüöz', 'Maceracı', 'Girişimci', 'Eğlendirici']
+  en: personalityTypesData.personalityTypes.map(p => p.name),
+  tr: personalityTypesData.personalityTypes.map(p => p.name), // TODO: Add TR translations if needed
 };
 
 function randomShortName(fullName: string): string {
@@ -47,12 +33,30 @@ interface RecentResult {
 
 function generateResults(locale: string): RecentResult[] {
   const types = personalityTypes[locale as 'en' | 'tr'] || personalityTypes.en;
-  return Array.from({ length: 8 }, () => {
-    const name = names[Math.floor(Math.random() * names.length)];
-    const country = countries[Math.floor(Math.random() * countries.length)];
+  const results: RecentResult[] = [];
+  const usedCombinations = new Set<string>();
+  
+  // Shuffle countries for variety
+  const shuffledCountries = [...countries].sort(() => Math.random() - 0.5);
+  
+  for (let i = 0; i < 8; i++) {
+    const country = shuffledCountries[Math.floor(Math.random() * shuffledCountries.length)];
+    const countryNames = namesByCountry[country.code] || namesByCountry['US'] || [];
+    const name = countryNames[Math.floor(Math.random() * countryNames.length)] || 'John Doe';
     const type = types[Math.floor(Math.random() * types.length)];
-    return { name: randomShortName(name), country: country.flag, type };
-  });
+    const combinationKey = `${randomShortName(name)}-${country.flag}-${type}`;
+    
+    // Avoid exact duplicates
+    if (!usedCombinations.has(combinationKey)) {
+      results.push({ name: randomShortName(name), country: country.flag, type });
+      usedCombinations.add(combinationKey);
+    } else {
+      // If duplicate, try again with different combination
+      i--;
+    }
+  }
+  
+  return results;
 }
 
 function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boolean }) {

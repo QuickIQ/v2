@@ -8,8 +8,8 @@ import { Lock, Shield, CheckCircle, Star, ArrowDown, MessageSquare } from 'lucid
 import namesByCountryData from '../../data/shared/names-by-country.json';
 import countriesData from '../../data/shared/countries.json';
 import creativityTypesData from '../../data/shared/creativity-types.json';
-// Import storeMap from testPageFactory and getTestConfig
-import { storeMap } from '../../utils/testPageFactory';
+// Import getTestStore and getTestConfig
+import { getTestStore } from '../../utils/testPageFactory';
 import { getTestConfig } from '../../utils/testContentLoader';
 import '../../App.css';
 
@@ -200,8 +200,49 @@ export default function UniversalPaymentPage({ testId: testIdProp }: UniversalPa
     }
   }
   
-  // Get store from storeMap
-  const useTestStore = storeMap[testId];
+  // Load store dynamically
+  const [useTestStore, setUseTestStore] = useState<any>(null);
+  const [storeLoading, setStoreLoading] = useState(true);
+  
+  useEffect(() => {
+    let isMounted = true;
+    
+    async function loadStore() {
+      try {
+        const store = await getTestStore(testId);
+        if (isMounted) {
+          setUseTestStore(() => store);
+          setStoreLoading(false);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          setStoreLoading(false);
+        }
+      }
+    }
+    
+    loadStore();
+    
+    return () => {
+      isMounted = false;
+    };
+  }, [testId]);
+  
+  if (storeLoading) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#10b981' }}>
+          {t('common.loading')}
+        </div>
+      </div>
+    );
+  }
   
   if (!useTestStore) {
     return (

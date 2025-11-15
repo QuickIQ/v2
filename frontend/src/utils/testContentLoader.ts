@@ -139,7 +139,7 @@ export interface TestContent {
  */
 export async function loadTestContent(testId: string): Promise<TestContent | null> {
   try {
-    console.log(`🔍 Attempting to load JSON for testId: ${testId}`);
+    // Loading test content for testId: ${testId}
     const content = await import(`../data/tests/contents/${testId}.json`);
     
     if (!content || !content.default) {
@@ -154,19 +154,14 @@ export async function loadTestContent(testId: string): Promise<TestContent | nul
       console.warn(`⚠️ Test content missing testId field: ${testId}`);
     }
     if (!testContent.colors || !testContent.landing || !testContent.questions || !testContent.analyzing) {
-      console.error(`❌ Test content missing essential fields for: ${testId}`);
+      // Test content missing essential fields for: ${testId}
       return null;
     }
     
-    console.log(`✅ Successfully loaded and validated content for: ${testId}`);
+    // Successfully loaded and validated content for: ${testId}
     return testContent;
   } catch (error: any) {
-    console.error(`❌ Failed to load test content for ${testId}:`, error);
-    console.error(`   Error details:`, {
-      message: error.message,
-      stack: error.stack,
-      name: error.name,
-    });
+    // Failed to load test content for ${testId}
     return null;
   }
 }

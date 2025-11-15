@@ -7,28 +7,8 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import PersonalityEmailPage from '../tests/personality/PersonalityEmailPage';
 
-// Import all stores dynamically
-import { useAutismTestStore } from '../store/autismTestStore';
-import { useCriticismTestStore } from '../store/criticismTestStore';
-import { useProblemSolvingTestStore } from '../store/problemSolvingTestStore';
-import { useCreativeThinkingTestStore } from '../store/creativeThinkingTestStore';
-import { useDepressionTestStore } from '../store/depressionTestStore';
-import { useMultitaskingTestStore } from '../store/multitaskingTestStore';
-import { useAttentionSpanTestStore } from '../store/attentionSpanTestStore';
-import { useMemoryRetentionTestStore } from '../store/memoryRetentionTestStore';
-import { useEntrepreneurMindsetTestStore } from '../store/entrepreneurMindsetTestStore';
-import { useRiskToleranceTestStore } from '../store/riskToleranceTestStore';
-import { useStrategicThinkingTestStore } from '../store/strategicThinkingTestStore';
-import { useTimeManagementTestStore } from '../store/timeManagementTestStore';
-import { useDecisionMakingTestStore } from '../store/decisionMakingTestStore';
-import { useLeadershipArchetypeTestStore } from '../store/leadershipArchetypeTestStore';
-import { useNegotiationSkillsTestStore } from '../store/negotiationSkillsTestStore';
-import { useStressManagementTestStore } from '../store/stressManagementTestStore';
-import { useTeamPlayerTestStore } from '../store/teamPlayerTestStore';
-import { useSuccessTestStore } from '../store/successTestStore';
-import { usePerfectionismTestStore } from '../store/perfectionismTestStore';
-import { useAmbitionTestStore } from '../store/ambitionTestStore';
-import { useAnxietyTestStore } from '../store/anxietyTestStore';
+// Dynamic store imports - stores are loaded on-demand to reduce initial bundle size
+// Store mapping will be populated lazily as stores are requested
 
 // Use Universal QuestionsPage component
 import UniversalQuestionsPage from '../components/TestFlow/UniversalQuestionsPage';
@@ -44,7 +24,7 @@ async function loadResultContent(testId: string): Promise<any> {
     const content = await import(`../data/tests/results/${testId}.json`);
     return content.default || content;
   } catch (error) {
-    console.error(`Failed to load resultContent for ${testId}:`, error);
+    // Failed to load resultContent for ${testId}
     return null;
   }
 }
@@ -57,35 +37,80 @@ async function loadQuestionsData(testId: string): Promise<any> {
     const data = await import(`../data/tests/${testId}/questions.json`);
     return data.default || data;
   } catch (error) {
-    console.error(`Failed to load questionsData for ${testId}:`, error);
+    // Failed to load questionsData for ${testId}
     return null;
   }
 }
 
-// Store mapping - Export for use in UniversalPaymentPage and UniversalUnlockPage
-export const storeMap: Record<string, any> = {
-  'autism': useAutismTestStore,
-  'criticism': useCriticismTestStore,
-  'problem-solving': useProblemSolvingTestStore,
-  'creative-thinking': useCreativeThinkingTestStore,
-  'depression': useDepressionTestStore,
-  'multitasking': useMultitaskingTestStore,
-  'attention-span': useAttentionSpanTestStore,
-  'memory-retention': useMemoryRetentionTestStore,
-  'entrepreneur-mindset': useEntrepreneurMindsetTestStore,
-  'risk-tolerance': useRiskToleranceTestStore,
-  'strategic-thinking': useStrategicThinkingTestStore,
-  'time-management': useTimeManagementTestStore,
-  'decision-making': useDecisionMakingTestStore,
-  'leadership-archetype': useLeadershipArchetypeTestStore,
-  'negotiation-skills': useNegotiationSkillsTestStore,
-  'stress-management': useStressManagementTestStore,
-  'team-player': useTeamPlayerTestStore,
-  'success': useSuccessTestStore,
-  'perfectionism': usePerfectionismTestStore,
-  'ambition': useAmbitionTestStore,
-  'anxiety': useAnxietyTestStore,
+// Store mapping - populated lazily via dynamic imports
+const storeMapCache: Record<string, any> = {};
+
+// Store import mapping for dynamic loading
+const storeImportMap: Record<string, () => Promise<any>> = {
+  'autism': () => import('../store/autismTestStore').then(m => m.useAutismTestStore),
+  'criticism': () => import('../store/criticismTestStore').then(m => m.useCriticismTestStore),
+  'problem-solving': () => import('../store/problemSolvingTestStore').then(m => m.useProblemSolvingTestStore),
+  'creative-thinking': () => import('../store/creativeThinkingTestStore').then(m => m.useCreativeThinkingTestStore),
+  'depression': () => import('../store/depressionTestStore').then(m => m.useDepressionTestStore),
+  'multitasking': () => import('../store/multitaskingTestStore').then(m => m.useMultitaskingTestStore),
+  'attention-span': () => import('../store/attentionSpanTestStore').then(m => m.useAttentionSpanTestStore),
+  'memory-retention': () => import('../store/memoryRetentionTestStore').then(m => m.useMemoryRetentionTestStore),
+  'entrepreneur-mindset': () => import('../store/entrepreneurMindsetTestStore').then(m => m.useEntrepreneurMindsetTestStore),
+  'risk-tolerance': () => import('../store/riskToleranceTestStore').then(m => m.useRiskToleranceTestStore),
+  'strategic-thinking': () => import('../store/strategicThinkingTestStore').then(m => m.useStrategicThinkingTestStore),
+  'time-management': () => import('../store/timeManagementTestStore').then(m => m.useTimeManagementTestStore),
+  'decision-making': () => import('../store/decisionMakingTestStore').then(m => m.useDecisionMakingTestStore),
+  'leadership-archetype': () => import('../store/leadershipArchetypeTestStore').then(m => m.useLeadershipArchetypeTestStore),
+  'negotiation-skills': () => import('../store/negotiationSkillsTestStore').then(m => m.useNegotiationSkillsTestStore),
+  'stress-management': () => import('../store/stressManagementTestStore').then(m => m.useStressManagementTestStore),
+  'team-player': () => import('../store/teamPlayerTestStore').then(m => m.useTeamPlayerTestStore),
+  'success': () => import('../store/successTestStore').then(m => m.useSuccessTestStore),
+  'perfectionism': () => import('../store/perfectionismTestStore').then(m => m.usePerfectionismTestStore),
+  'ambition': () => import('../store/ambitionTestStore').then(m => m.useAmbitionTestStore),
+  'anxiety': () => import('../store/anxietyTestStore').then(m => m.useAnxietyTestStore),
 };
+
+/**
+ * Get store hook for a test ID, loading it dynamically if not already cached
+ */
+export async function getTestStore(testId: string): Promise<any> {
+  // Return cached store if available
+  if (storeMapCache[testId]) {
+    return storeMapCache[testId];
+  }
+
+  // Load store dynamically
+  const importFn = storeImportMap[testId];
+  if (!importFn) {
+    throw new Error(`Store not found for test: ${testId}`);
+  }
+
+  const store = await importFn();
+  storeMapCache[testId] = store;
+  return store;
+}
+
+/**
+ * Synchronous store map for backward compatibility
+ * Note: Stores must be loaded first via getTestStore() before accessing via storeMap
+ */
+export const storeMap: Record<string, any> = new Proxy({} as Record<string, any>, {
+  get(target, prop: string) {
+    // Return cached store if available
+    if (storeMapCache[prop]) {
+      return storeMapCache[prop];
+    }
+    // For synchronous access, return a placeholder that will be replaced when store loads
+    // This maintains backward compatibility but stores should ideally be loaded async
+    return undefined;
+  },
+  has(target, prop: string) {
+    return prop in storeMapCache || prop in storeImportMap;
+  },
+  ownKeys() {
+    return Object.keys(storeImportMap);
+  },
+});
 
 // All tests use UniversalQuestionsPage
 
@@ -109,8 +134,34 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
   // Get test config
   const testConfig = getTestConfig(testId);
   
-  // Get store from mapping
-  const useTestStore = storeMap[testId];
+  // Load store dynamically
+  const [useTestStore, setUseTestStore] = useState<any>(null);
+  const [storeLoading, setStoreLoading] = useState(true);
+  
+  useEffect(() => {
+    let isMounted = true;
+    
+    async function loadStore() {
+      try {
+        const store = await getTestStore(testId);
+        if (isMounted) {
+          setUseTestStore(() => store);
+          setStoreLoading(false);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          console.error(`Failed to load store for ${testId}:`, err);
+          setStoreLoading(false);
+        }
+      }
+    }
+    
+    loadStore();
+    
+    return () => {
+      isMounted = false;
+    };
+  }, [testId]);
   
   // State for dynamically loaded data
   const [resultContent, setResultContent] = useState<any>(null);
@@ -175,6 +226,22 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
     };
   }, [testId, useTestStore]);
 
+  if (storeLoading) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#10b981' }}>
+          {t('common.loading')}
+        </div>
+      </div>
+    );
+  }
+
   if (!useTestStore) {
     return (
       <div style={{
@@ -187,7 +254,7 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
         <div className="error">
           Test configuration not found for: {testId}
           <br />
-          Available tests: {Object.keys(storeMap).join(', ')}
+          Available tests: {Object.keys(storeImportMap).join(', ')}
         </div>
       </div>
     );
@@ -311,7 +378,7 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
   }, [location.state, setStep]);
 
   useEffect(() => {
-    console.log('🔄 Step changed to:', step);
+      // Step changed to: ${step}
     
     if (step === 'questions') {
       const store = useTestStore.getState();
@@ -362,25 +429,16 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
   };
 
   const handleQuestionsComplete = async () => {
-    console.log('🎯 handleQuestionsComplete called');
-    
     try {
       await new Promise(resolve => setTimeout(resolve, 100));
       setError(null);
       
-      console.log('📊 Calculating score...');
       calculateScore();
       
       await new Promise(resolve => setTimeout(resolve, 50));
       
-      console.log('➡️ Transitioning to analyzing screen...');
       setStep('analyzing');
-      
-      const storeAfterSet = useTestStore.getState();
-      console.log('✅ Step set to:', storeAfterSet.step);
-      console.log('✅ Current step in component:', step);
     } catch (err) {
-      console.error('❌ Error in handleQuestionsComplete:', err);
       setError(err instanceof Error ? err.message : 'An error occurred');
       setStep('analyzing');
     }
@@ -388,36 +446,23 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
 
   const handleAnalyzingComplete = async () => {
     try {
-      console.log('📧 handleAnalyzingComplete called');
-      
       let store = useTestStore.getState();
       if (!store.resultLevel) {
-        console.log('⚠️ No resultLevel found, calculating score...');
         calculateScore();
         await new Promise(resolve => setTimeout(resolve, 200));
         store = useTestStore.getState();
       }
       
       const level = store.resultLevel || 'good';
-      console.log('📊 Result level:', level);
-      
       const result = resultContent[level];
       setResultData(result);
-      console.log('✅ Result data set for level:', level);
       
       await new Promise(resolve => setTimeout(resolve, 100));
       
-      console.log('➡️ Transitioning to email screen...');
       const storeInstance = useTestStore.getState();
       storeInstance.setStep('email');
       setStep('email');
-      
-      await new Promise(resolve => setTimeout(resolve, 50));
-      const storeAfterSet = useTestStore.getState();
-      console.log('✅ Step set to:', storeAfterSet.step);
-      console.log('✅ Component step:', step);
     } catch (err: any) {
-      console.error('❌ Error in handleAnalyzingComplete:', err);
       const result = resultContent['good'];
       setResultData(result);
       const storeInstance = useTestStore.getState();
@@ -614,7 +659,6 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
         </AnimatePresence>
       );
     default:
-      console.warn('⚠️ Unknown step:', step);
       if (!step) {
         setStep('landing');
         return (

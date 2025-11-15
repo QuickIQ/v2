@@ -71,7 +71,7 @@ function IQTestPage() {
     setSelectedAnswer(answerKey);
     
     // Save the answer (you can add logic to store answers here)
-    console.log(`Question ${currentQuestion} - selected:`, answerKey);
+    // Answer selection logged via store actions if needed
     
     // Automatically move to next question after a brief delay for visual feedback
     setTimeout(() => {

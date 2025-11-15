@@ -54,25 +54,25 @@ function PersonalityQuestionsPage({ questions, onComplete }: Props) {
 
     // Get current time from store
     let currentTime = usePersonalityTestStore.getState().timeRemaining;
-    console.log('🕐 Timer initialization, currentTime from store:', currentTime);
+    logger.debug('🕐 Timer initialization, currentTime from store:', currentTime);
     
     // If timer is invalid, set it to 15 minutes
     if (!currentTime || currentTime <= 0 || currentTime > 15 * 60 || isNaN(currentTime)) {
-      console.log('🕐 Timer invalid, setting to 15 minutes');
+      logger.debug('🕐 Timer invalid, setting to 15 minutes');
       currentTime = 15 * 60;
       setTimeRemaining(currentTime);
     } else {
-      console.log('✅ Timer already set to:', currentTime, 'seconds');
+      logger.debug('✅ Timer already set to:', currentTime, 'seconds');
     }
 
     // If timer is already at 0, complete the test
     if (currentTime <= 0) {
-      console.log('⏰ Timer already at 0, completing test');
+      logger.debug('⏰ Timer already at 0, completing test');
       onComplete();
       return;
     }
 
-    console.log('✅ Starting timer countdown from:', currentTime, 'seconds');
+    logger.debug('✅ Starting timer countdown from:', currentTime, 'seconds');
 
     // Start countdown interval immediately
     timerIntervalRef.current = setInterval(() => {
@@ -80,7 +80,7 @@ function PersonalityQuestionsPage({ questions, onComplete }: Props) {
       const storeTime = usePersonalityTestStore.getState().timeRemaining;
       
       if (!storeTime || storeTime <= 0 || isNaN(storeTime)) {
-        console.log('⚠️ Timer invalid in interval, stopping');
+        logger.debug('⚠️ Timer invalid in interval, stopping');
         if (timerIntervalRef.current) {
           clearInterval(timerIntervalRef.current);
           timerIntervalRef.current = null;
@@ -96,7 +96,7 @@ function PersonalityQuestionsPage({ questions, onComplete }: Props) {
       
       // If time reaches 0, complete the test
       if (newTime <= 0) {
-        console.log('⏰ Timer reached 0, completing test');
+        logger.debug('⏰ Timer reached 0, completing test');
         if (timerIntervalRef.current) {
           clearInterval(timerIntervalRef.current);
           timerIntervalRef.current = null;
@@ -106,7 +106,7 @@ function PersonalityQuestionsPage({ questions, onComplete }: Props) {
     }, 1000);
 
     return () => {
-      console.log('🧹 Cleaning up timer');
+      logger.debug('🧹 Cleaning up timer');
       if (timerIntervalRef.current) {
         clearInterval(timerIntervalRef.current);
         timerIntervalRef.current = null;
@@ -276,7 +276,8 @@ function PersonalityQuestionsPage({ questions, onComplete }: Props) {
           gap: '12px',
           flexWrap: 'wrap',
         }}>
-          {/* Developer Skip Button - TEMPORARY: Remove before production */}
+          {/* Developer Skip Button - Only visible in development */}
+          {((import.meta as any).env?.DEV || (import.meta as any).env?.MODE === 'development') && (
           <motion.button
             onClick={() => {
               // Auto-answer all remaining questions with first option (for developer testing)
@@ -319,6 +320,7 @@ function PersonalityQuestionsPage({ questions, onComplete }: Props) {
           >
             Skip to Q25
           </motion.button>
+          )}
 
           {/* Timer with pulse animation */}
           <motion.div

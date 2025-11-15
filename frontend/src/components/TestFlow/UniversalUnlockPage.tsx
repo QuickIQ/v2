@@ -3,8 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams, useLocation } from 'react-router-dom';
 import UniversalUnlockTemplate from './UniversalUnlockTemplate';
 import { getTestConfig } from '../../utils/testContentLoader';
-// Import storeMap from testPageFactory
-import { storeMap } from '../../utils/testPageFactory';
+import { getTestStore } from '../../utils/testPageFactory';
 import '../../App.css';
 
 interface UniversalUnlockPageProps {
@@ -89,8 +88,37 @@ export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnl
     }
   }
   
-  // Get store from storeMap
-  const useTestStore = storeMap[testId];
+  // Load store dynamically
+  const [useTestStore, setUseTestStore] = useState<any>(null);
+  const [storeLoading, setStoreLoading] = useState(true);
+  
+  useEffect(() => {
+    let isMounted = true;
+    
+    async function loadStore() {
+      try {
+        const store = await getTestStore(testId);
+        if (isMounted) {
+          setUseTestStore(() => store);
+          setStoreLoading(false);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          setStoreLoading(false);
+        }
+      }
+    }
+    
+    loadStore();
+    
+    return () => {
+      isMounted = false;
+    };
+  }, [testId]);
+  
+  if (storeLoading) {
+    return <LoadingFallback />;
+  }
   
   if (!useTestStore) {
     return (
@@ -140,7 +168,7 @@ export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnl
           }
         }
       } catch (e) {
-        console.error('Error loading from localStorage:', e);
+        // Error loading from localStorage (non-critical)
       }
     }
 
