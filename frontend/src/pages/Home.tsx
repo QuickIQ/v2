@@ -6,7 +6,7 @@ import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
-import { TrendingUp, Users, Zap } from 'lucide-react';
+import { Brain, TrendingUp, Users, Zap } from 'lucide-react';
 import { useMobile } from '../hooks/useMobile';
 import { useTestsCompletedCounter } from '../hooks/useTestsCompletedCounter';
 import { usePersonalityTestStore } from '../store/personalityTestStore';
