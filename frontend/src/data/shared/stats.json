@@ -1,0 +1,49 @@
+{
+  "stats": [
+    {
+      "icon": "Users",
+      "value": {
+        "en": "100K+",
+        "tr": "100K+"
+      },
+      "label": {
+        "en": "Active Users",
+        "tr": "Aktif Kullanıcı"
+      }
+    },
+    {
+      "icon": "Brain",
+      "value": {
+        "en": "40+",
+        "tr": "40+"
+      },
+      "label": {
+        "en": "Different Tests",
+        "tr": "Farklı Test"
+      }
+    },
+    {
+      "icon": "TrendingUp",
+      "value": {
+        "en": "98%",
+        "tr": "98%"
+      },
+      "label": {
+        "en": "Satisfaction",
+        "tr": "Memnuniyet"
+      }
+    },
+    {
+      "icon": "Zap",
+      "value": {
+        "en": "10min",
+        "tr": "10dk"
+      },
+      "label": {
+        "en": "Average Time",
+        "tr": "Ortalama Süre"
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,55 @@
+{
+  "categories": [
+    {
+      "id": "business",
+      "emoji": "🧠",
+      "title": {
+        "en": "Business – Career, Performance & Leadership Mastery",
+        "tr": "İş – Kariyer, Performans & Liderlik Ustalığı"
+      },
+      "color": "#4A6CFF",
+      "showCards": true
+    },
+    {
+      "id": "health",
+      "emoji": "🧬",
+      "title": {
+        "en": "Health – Mental Fitness, Cognitive Balance & Habit Strength",
+        "tr": "Sağlık – Zihinsel Fitness, Bilişsel Denge & Alışkanlık Gücü"
+      },
+      "color": "#A066FF",
+      "showCards": true
+    },
+    {
+      "id": "love",
+      "emoji": "❤️",
+      "title": {
+        "en": "Love – Romantic Dynamics & Emotional Bonding",
+        "tr": "Aşk – Romantik Dinamikler & Duygusal Bağlanma"
+      },
+      "color": "#FF5A8A",
+      "showCards": false
+    },
+    {
+      "id": "money",
+      "emoji": "💰",
+      "title": {
+        "en": "Money – Risk, Impulse & Money Behavior Patterns",
+        "tr": "Para – Risk, Dürtü & Para Davranış Kalıpları"
+      },
+      "color": "#32C26A",
+      "showCards": false
+    },
+    {
+      "id": "dark",
+      "emoji": "🖤",
+      "title": {
+        "en": "Dark – Shadow Traits, Manipulation & Inner Conflict Forces",
+        "tr": "Karanlık – Gölge Özellikler, Manipülasyon & İç Çatışma Güçleri"
+      },
+      "color": "#000000",
+      "showCards": false
+    }
+  ]
+}
+

@@ -1,0 +1,21 @@
+{
+  "personalityTypes": [
+    { "type": "INFP", "name": "Mediator", "emoji": "🌸" },
+    { "type": "ENFP", "name": "Campaigner", "emoji": "🔥" },
+    { "type": "INFJ", "name": "Advocate", "emoji": "🌙" },
+    { "type": "ENFJ", "name": "Protagonist", "emoji": "🌻" },
+    { "type": "INTJ", "name": "Architect", "emoji": "🧠" },
+    { "type": "ENTJ", "name": "Commander", "emoji": "⚔️" },
+    { "type": "INTP", "name": "Logician", "emoji": "💭" },
+    { "type": "ENTP", "name": "Debater", "emoji": "⚡" },
+    { "type": "ISFP", "name": "Adventurer", "emoji": "🎨" },
+    { "type": "ESFP", "name": "Entertainer", "emoji": "💃" },
+    { "type": "ISFJ", "name": "Defender", "emoji": "🌿" },
+    { "type": "ESFJ", "name": "Consul", "emoji": "🤝" },
+    { "type": "ISTP", "name": "Virtuoso", "emoji": "🛠️" },
+    { "type": "ESTP", "name": "Entrepreneur", "emoji": "🚀" },
+    { "type": "ISTJ", "name": "Logistician", "emoji": "📘" },
+    { "type": "ESTJ", "name": "Executive", "emoji": "🧩" }
+  ]
+}
+
