@@ -6,7 +6,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import PersonalityEmailPage from '../tests/personality/PersonalityEmailPage';
-import testPageConfig from './testPageConfig.json';
 
 // Import all stores dynamically
 import { useAutismTestStore } from '../store/autismTestStore';
@@ -172,22 +171,7 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
   
   // Get test config
   const testConfig = getTestConfig(testId);
-  const pageConfig = (testPageConfig as any).tests[testId];
   
-  if (!pageConfig) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-      }}>
-        <div className="error">Test configuration not found for: {testId}</div>
-      </div>
-    );
-  }
-
   // Get components and data from mappings
   const useTestStore = storeMap[testId];
   const resultContent = resultContentMap[testId];
@@ -203,7 +187,7 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
         background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       }}>
         <div className="error">
-          Test components not found for: {testId}
+          Test configuration not found for: {testId}
           <br />
           Available tests: {Object.keys(storeMap).join(', ')}
         </div>
