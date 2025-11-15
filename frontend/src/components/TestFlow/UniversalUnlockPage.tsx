@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import UniversalUnlockTemplate from './UniversalUnlockTemplate';
 import { getTestConfig } from '../../utils/testContentLoader';
+// Import storeMap from testPageFactory
+import { storeMap } from '../../utils/testPageFactory';
 import '../../App.css';
 
 interface UniversalUnlockPageProps {
-  testId: string;
-  useTestStore: any; // The specific Zustand store hook for the test
+  testId?: string; // Optional, can be derived from URL
 }
 
 function LoadingFallback() {
@@ -70,9 +71,43 @@ function NoResultFallback({ testId }: { testId: string }) {
   );
 }
 
-export default function UniversalUnlockPage({ testId, useTestStore }: UniversalUnlockPageProps) {
+export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnlockPageProps) {
   const { i18n } = useTranslation();
+  const location = useLocation();
   const { level: urlLevel } = useParams<{ level?: string }>();
+  
+  // Get testId from prop or derive from URL slug
+  let testId = testIdProp || '';
+  
+  if (!testId) {
+    // Extract slug from URL path (e.g., "/test/creative-thinking/unlock/excellent" -> "creative-thinking")
+    const pathMatch = location.pathname.match(/\/test\/([^/]+)/);
+    if (pathMatch) {
+      const slug = pathMatch[1];
+      const testConfig = getTestConfig(slug);
+      testId = testConfig?.id || slug;
+    }
+  }
+  
+  // Get store from storeMap
+  const useTestStore = storeMap[testId];
+  
+  if (!useTestStore) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="error">
+          Test store not found for: {testId}
+        </div>
+      </div>
+    );
+  }
+  
   const { resultLevel } = useTestStore();
   const [levelToLoad, setLevelToLoad] = useState<'excellent' | 'good' | 'developing' | null>(null);
   const [loading, setLoading] = useState(true);

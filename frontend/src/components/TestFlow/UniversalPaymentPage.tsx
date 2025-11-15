@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
@@ -8,11 +8,13 @@ import { Lock, Shield, CheckCircle, Star, ArrowDown, MessageSquare } from 'lucid
 import namesByCountryData from '../../data/shared/names-by-country.json';
 import countriesData from '../../data/shared/countries.json';
 import creativityTypesData from '../../data/shared/creativity-types.json';
+// Import storeMap from testPageFactory and getTestConfig
+import { storeMap } from '../../utils/testPageFactory';
+import { getTestConfig } from '../../utils/testContentLoader';
 import '../../App.css';
 
 interface UniversalPaymentPageProps {
-  testId: string;
-  useTestStore: any;
+  testId?: string; // Optional, can be derived from URL
 }
 
 // Recent Results Component
@@ -179,10 +181,44 @@ function RecentResults({ t, i18n, isMobile, testId }: { t: any; i18n: any; isMob
   );
 }
 
-export default function UniversalPaymentPage({ testId, useTestStore }: UniversalPaymentPageProps) {
+export default function UniversalPaymentPage({ testId: testIdProp }: UniversalPaymentPageProps) {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
+  const location = useLocation();
+  
+  // Get testId from prop or derive from URL slug
+  let testId = testIdProp || '';
+  
+  if (!testId) {
+    // Extract slug from URL path (e.g., "/test/creative-thinking/payment" -> "creative-thinking")
+    const pathMatch = location.pathname.match(/\/test\/([^/]+)/);
+    if (pathMatch) {
+      const slug = pathMatch[1];
+      const testConfig = getTestConfig(slug);
+      testId = testConfig?.id || slug;
+    }
+  }
+  
+  // Get store from storeMap
+  const useTestStore = storeMap[testId];
+  
+  if (!useTestStore) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="error">
+          Test store not found for: {testId}
+        </div>
+      </div>
+    );
+  }
+  
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {

@@ -79,8 +79,8 @@ import perfectionismQuestionsData from '../data/tests/perfectionism/questions.js
 import ambitionQuestionsData from '../data/tests/ambition/questions.json';
 import anxietyQuestionsData from '../data/tests/anxiety/questions.json';
 
-// Store mapping
-const storeMap: Record<string, any> = {
+// Store mapping - Export for use in UniversalPaymentPage and UniversalUnlockPage
+export const storeMap: Record<string, any> = {
   'autism': useAutismTestStore,
   'criticism': useCriticismTestStore,
   'problem-solving': useProblemSolvingTestStore,
