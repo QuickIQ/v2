@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "text": "I rely on data and facts when making important decisions instead of following my gut feeling.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I trust my intuition when I need to make a quick decision instead of analyzing all options.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 3,
+    "text": "I make decisions based on logical analysis of pros and cons instead of emotional responses.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I follow my first instinct when facing a choice instead of overthinking the situation.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "I research thoroughly before making significant decisions instead of acting impulsively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I feel confident making decisions based on my inner sense of what feels right instead of external data.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 7,
+    "text": "I create lists and compare options systematically when deciding instead of going with my initial feeling.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I trust my gut feeling even when the facts suggest otherwise instead of always following the data.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "I seek expert opinions and evidence before making important choices instead of relying solely on intuition.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I make decisions quickly based on what feels right in the moment instead of extensive planning.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 11,
+    "text": "I analyze potential outcomes and risks before deciding instead of acting on impulse.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I follow my heart when logic and emotion conflict instead of always choosing the rational option.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 13,
+    "text": "I use structured decision-making frameworks and tools instead of making choices spontaneously.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I make decisions based on how situations feel to me instead of what the numbers show.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 15,
+    "text": "I gather comprehensive information before making important decisions instead of trusting my instincts alone.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I make choices based on my values and what resonates with me instead of pure analytical reasoning.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 17,
+    "text": "I weigh all available evidence before deciding instead of making snap judgments.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I trust my inner voice when making decisions instead of requiring extensive analysis.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 19,
+    "text": "I make decisions based on objective criteria and measurable factors instead of subjective feelings.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I follow my instincts even when I cannot fully explain my reasoning instead of needing logical justification.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
+]
+

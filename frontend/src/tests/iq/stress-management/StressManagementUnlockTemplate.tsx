@@ -37,7 +37,7 @@ const FadeInCard = ({ children, delay = 0, className, style, disableHover = fals
       transition={{ duration: 0.5, delay, ease: 'easeOut' }}
       whileHover={disableHover ? {} : { 
         scale: 1.03,
-        boxShadow: '0 20px 60px rgba(255, 107, 53, 0.3)',
+        boxShadow: '0 20px 60px rgba(255, 105, 180, 0.3)',
         transition: { duration: 0.3 }
       }}
       style={style}
@@ -126,58 +126,32 @@ export default function StressManagementUnlockTemplate({ level, locale }: Stress
       key: 'insights',
       icon: config.sectionEmojis[1],
       title: currentLocale === 'tr' ? 'Temel İçgörüler' : 'Key Insights',
-      text: currentLocale === 'tr' 
-        ? 'Stres yönetimi kalıplarınız ve dayanıklılığınız hakkında en önemli bulgular:'
-        : 'The most important findings about your stress management patterns and resilience:',
+      text: '',
       insights: content.insights,
     },
     {
       key: 'strengths',
       icon: config.sectionEmojis[2],
       title: currentLocale === 'tr' ? 'Güçlü Yönleriniz' : 'Your Strengths',
-      text: content.sections?.strengths || (level === 'excellent'
-        ? (currentLocale === 'tr' 
-          ? 'Stres yönetimi konusunda olağanüstü yeteneklere sahipsiniz. İşte en güçlü yönleriniz:'
-          : 'You possess exceptional stress management abilities. Here are your strongest areas:')
-        : level === 'good'
-        ? (currentLocale === 'tr'
-          ? 'Stres yönetimi konusunda güçlü yetenekleriniz var. İşte öne çıkan güçlü yönleriniz:'
-          : 'You have strong stress management skills. Here are your standout strengths:')
-        : (currentLocale === 'tr'
-          ? 'Stres yönetimi potansiyeliniz gelişiyor. İşte güçlü yönleriniz:'
-          : 'Your stress management potential is developing. Here are your strengths:')),
+      text: content.sections?.strengths || '',
     },
     {
       key: 'growth',
       icon: config.sectionEmojis[3],
       title: currentLocale === 'tr' ? 'Gelişim Alanları' : 'Growth Areas',
-      text: content.sections?.growthAreas || (level === 'excellent'
-        ? (currentLocale === 'tr'
-          ? 'Mükemmel seviyede olsanız bile, stres yönetiminizi daha da geliştirebileceğiniz alanlar:'
-          : 'Even at an excellent level, areas where you can further enhance your stress management:')
-        : level === 'good'
-        ? (currentLocale === 'tr'
-          ? 'Stres yönetiminizi daha da artırmak için odaklanabileceğiniz alanlar:'
-          : 'Areas you can focus on to further improve your stress management:')
-        : (currentLocale === 'tr'
-          ? 'Stres yönetiminizi geliştirmek için pratik yapabileceğiniz alanlar:'
-          : 'Areas you can practice to develop your stress management abilities:')),
+      text: content.sections?.growthAreas || '',
     },
     {
       key: 'application',
       icon: config.sectionEmojis[4],
       title: currentLocale === 'tr' ? 'Pratik Uygulamalar' : 'Practical Applications',
-      text: content.sections?.practicalApplications || (currentLocale === 'tr'
-        ? 'Stres yönetiminizi günlük hayatta nasıl uygulayabileceğiniz:'
-        : 'How you can apply your stress management in daily life:'),
+      text: content.sections?.practicalApplications || '',
     },
     {
       key: 'future',
       icon: config.sectionEmojis[5],
       title: currentLocale === 'tr' ? 'Gelecek Potansiyeli' : 'Future Potential',
-      text: content.sections?.futurePotential || (currentLocale === 'tr'
-        ? 'Stres yönetiminizi geliştirmeye devam ederseniz neler başarabileceğiniz:'
-        : 'What you can achieve if you continue developing your stress management:'),
+      text: content.sections?.futurePotential || '',
     },
   ];
 
@@ -209,7 +183,7 @@ export default function StressManagementUnlockTemplate({ level, locale }: Stress
           <h2 style={{
             fontSize: isMobile ? '20px' : '24px',
             fontWeight: '800',
-            background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%)',
+            background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -273,7 +247,7 @@ export default function StressManagementUnlockTemplate({ level, locale }: Stress
                 style={{
                   fontSize: '48px',
                   display: 'inline-block',
-                filter: 'drop-shadow(0 2px 8px rgba(255, 107, 53, 0.4))',
+                filter: 'drop-shadow(0 2px 8px rgba(255, 105, 180, 0.4))',
                 }}
               >
               🌸
@@ -282,13 +256,13 @@ export default function StressManagementUnlockTemplate({ level, locale }: Stress
           <h1 style={{
             fontSize: isMobile ? '32px' : '42px',
             fontWeight: '900',
-            background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%)',
+            background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             marginBottom: '16px',
           }}>
-            Your Detailed Stress Management Result
+            Your Detailed Stress Management Report
           </h1>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',
@@ -333,7 +307,7 @@ export default function StressManagementUnlockTemplate({ level, locale }: Stress
           <h2 style={{
             fontSize: isMobile ? '24px' : '28px',
             fontWeight: '800',
-              color: '#FF6B35',
+              color: '#ff69b4',
             marginBottom: '12px',
           }}>
             {currentLocale === 'tr' ? 'Daha Fazlasını Keşfetmeye Hazır mısınız?' : 'Ready to Explore More?'}
@@ -354,7 +328,7 @@ export default function StressManagementUnlockTemplate({ level, locale }: Stress
             whileTap={{ scale: 0.98 }}
             style={{
               padding: isMobile ? '16px 32px' : '18px 40px',
-              background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%)',
+              background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
               border: 'none',
               borderRadius: '999px',
               color: 'white',

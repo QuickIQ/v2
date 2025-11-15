@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
 import { useTestsCompletedCounter } from '../../../hooks/useTestsCompletedCounter';
-import { Lock, Shield, CheckCircle, Star, ArrowDown } from 'lucide-react';
-import { useDepressionTestStore } from '../../../store/depressionTestStore';
+import { Lock, Shield, CheckCircle, Star, ArrowDown, HeartPulse } from 'lucide-react';
+import { useStressManagementTestStore } from '../../../store/stressManagementTestStore';
 import '../../../App.css';
 
 // Recent Results Component
@@ -197,7 +197,7 @@ function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boo
           marginBottom: '24px',
         }}
       >
-        {getTranslation('tests.depression.payment.recent_results', i18n.language === 'tr' ? 'Güncel Sonuçlar' : 'Recent Results')}
+        {getTranslation('tests.stressManagement.payment.recent_results', i18n.language === 'tr' ? 'Güncel Sonuçlar' : 'Recent Results')}
       </motion.h2>
       <div style={{
         maxWidth: '800px',
@@ -256,7 +256,7 @@ function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boo
   );
 }
 
-export default function DepressionPaymentPage() {
+export default function StressManagementPaymentPage() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
@@ -270,7 +270,7 @@ export default function DepressionPaymentPage() {
     window.addEventListener('resize', checkTablet);
     return () => window.removeEventListener('resize', checkTablet);
   }, []);
-  const { resultLevel, resultData } = useDepressionTestStore();
+  const { resultLevel, resultData } = useStressManagementTestStore();
   const [activeTab, setActiveTab] = useState<'card' | 'googlepay'>('card');
   const [processing, setProcessing] = useState(false);
   
@@ -376,7 +376,7 @@ export default function DepressionPaymentPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // On success, navigate to unlock
-      navigate('/test/depression/unlock');
+      navigate('/test/stress-management/unlock');
     } catch (error) {
       setProcessing(false);
       setToastMessage(getTranslation('payment.errors.failed', 'Payment failed. Please check your card info.'));
@@ -388,7 +388,7 @@ export default function DepressionPaymentPage() {
   const handleGooglePayClick = () => {
     setProcessing(true);
     setTimeout(() => {
-      navigate('/test/depression/unlock');
+      navigate('/test/stress-management/unlock');
     }, 1000);
   };
 
@@ -808,7 +808,7 @@ export default function DepressionPaymentPage() {
                 marginBottom: '8px',
                 textShadow: '0 2px 8px rgba(255, 105, 180, 0.3)',
               }}>
-                Your Inner Balance Journey
+                Your Detailed Stress Management Result
               </h2>
 
               {/* Decorative Line */}
@@ -837,11 +837,17 @@ export default function DepressionPaymentPage() {
                     ease: 'easeInOut',
                   }}
                   style={{
-                  fontSize: '18px',
-                    filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
+                    display: 'inline-flex',
+                    alignItems: 'center',
                   }}
                 >
-                  🌸
+                  <HeartPulse 
+                    size={18}
+                    style={{ 
+                      color: '#FF69B4',
+                      filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
+                    }}
+                  />
                 </motion.span>
                 <span style={{
                   flex: 1,
@@ -1314,7 +1320,7 @@ export default function DepressionPaymentPage() {
                 marginLeft: 'auto',
                 marginRight: 'auto',
               }}>
-                {getTranslation('tests.depression.payment.locked_subtext', 'Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.')}
+                {getTranslation('tests.stressManagement.payment.locked_subtext', 'Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.')}
               </p>
               <motion.button
                 onClick={() => {
@@ -1346,7 +1352,7 @@ export default function DepressionPaymentPage() {
                   gap: '8px',
                 }}
               >
-                🔓 {getTranslation('tests.depression.payment.unlock_button', 'Unlock Detailed Result')}
+                🔓 {getTranslation('tests.stressManagement.payment.unlock_button', 'Unlock Detailed Result')}
               </motion.button>
             </motion.div>
           </motion.div>
@@ -1449,7 +1455,7 @@ export default function DepressionPaymentPage() {
             textAlign: 'center',
             marginBottom: '32px',
           }}>
-            {getTranslation('tests.depression.payment.why_trust', i18n.language === 'tr' ? 'Neden QuickIQ\'ya Güvenmelisiniz?' : 'Why Trust QuickIQ?')}
+            {getTranslation('tests.stressManagement.payment.why_trust', i18n.language === 'tr' ? 'Neden QuickIQ\'ya Güvenmelisiniz?' : 'Why Trust QuickIQ?')}
           </h2>
           
           <div style={{
@@ -1461,18 +1467,18 @@ export default function DepressionPaymentPage() {
             {[
               {
                 icon: <Shield size={32} />,
-                title: getTranslation('tests.depression.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Yaratıcılık Analizi' : 'AI-Powered Creativity Analysis'),
-                desc: getTranslation('tests.depression.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla yaratıcı düşünme tarzınızın derinlemesine analizi.' : 'Deep analysis of your creative thinking style with advanced algorithms.'),
+                title: getTranslation('tests.stressManagement.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Yaratıcılık Analizi' : 'AI-Powered Creativity Analysis'),
+                desc: getTranslation('tests.stressManagement.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla yaratıcı düşünme tarzınızın derinlemesine analizi.' : 'Deep analysis of your creative thinking style with advanced algorithms.'),
               },
               {
                 icon: <CheckCircle size={32} />,
-                title: getTranslation('tests.depression.payment.trust_feature2_title', i18n.language === 'tr' ? 'Uygulanabilir İçgörüler' : 'Actionable Insights'),
-                desc: getTranslation('tests.depression.payment.trust_feature2_desc', i18n.language === 'tr' ? 'Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.' : 'Practical advice you can use in real life.'),
+                title: getTranslation('tests.stressManagement.payment.trust_feature2_title', i18n.language === 'tr' ? 'Uygulanabilir İçgörüler' : 'Actionable Insights'),
+                desc: getTranslation('tests.stressManagement.payment.trust_feature2_desc', i18n.language === 'tr' ? 'Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.' : 'Practical advice you can use in real life.'),
               },
               {
                 icon: <Lock size={32} />,
-                title: getTranslation('tests.depression.payment.trust_feature3_title', i18n.language === 'tr' ? 'Kişiselleştirilmiş Gelişim Planı' : 'Personalized Growth Plan'),
-                desc: getTranslation('tests.depression.payment.trust_feature3_desc', i18n.language === 'tr' ? 'Size özel hazırlanmış kapsamlı gelişim stratejisi.' : 'Comprehensive growth strategy tailored just for you.'),
+                title: getTranslation('tests.stressManagement.payment.trust_feature3_title', i18n.language === 'tr' ? 'Kişiselleştirilmiş Gelişim Planı' : 'Personalized Growth Plan'),
+                desc: getTranslation('tests.stressManagement.payment.trust_feature3_desc', i18n.language === 'tr' ? 'Size özel hazırlanmış kapsamlı gelişim stratejisi.' : 'Comprehensive growth strategy tailored just for you.'),
               },
             ].map((feature, index) => (
               <motion.div
@@ -1546,7 +1552,7 @@ export default function DepressionPaymentPage() {
             textAlign: 'center',
             marginBottom: '8px',
           }}>
-            {getTranslation('tests.depression.payment.reviews', i18n.language === 'tr' ? 'Yorumlar' : 'Reviews')}
+            {getTranslation('tests.stressManagement.payment.reviews', i18n.language === 'tr' ? 'Yorumlar' : 'Reviews')}
           </h2>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',
@@ -1554,7 +1560,7 @@ export default function DepressionPaymentPage() {
             textAlign: 'center',
             marginBottom: '32px',
           }}>
-            {getTranslation('tests.depression.payment.reviews_subtitle', i18n.language === 'tr' ? 'Mükemmel ⭐ 4.7 puan — 1769 yorum' : 'Excellent ⭐ 4.7 rating — 1769 reviews')}
+            {getTranslation('tests.stressManagement.payment.reviews_subtitle', i18n.language === 'tr' ? 'Mükemmel ⭐ 4.7 puan — 1769 yorum' : 'Excellent ⭐ 4.7 rating — 1769 reviews')}
           </p>
 
           <div style={{
@@ -1615,7 +1621,7 @@ export default function DepressionPaymentPage() {
                       fontWeight: '600',
                       marginBottom: '12px',
                     }}>
-                      {getTranslation('tests.depression.payment.verified_customer', i18n.language === 'tr' ? 'Doğrulanmış Müşteri' : 'Verified Customer')}
+                      {getTranslation('tests.stressManagement.payment.verified_customer', i18n.language === 'tr' ? 'Doğrulanmış Müşteri' : 'Verified Customer')}
                     </p>
                     <p style={{
                       fontSize: '14px',
@@ -3300,11 +3306,72 @@ export default function DepressionPaymentPage() {
           color: '#666',
           lineHeight: '1.6',
         }}>
-          {getTranslation('tests.depression.payment.footer', i18n.language === 'tr'
+          {getTranslation('tests.stressManagement.payment.footer', i18n.language === 'tr'
             ? 'Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur.'
             : 'You\'ll be redirected to your results after successful payment. Your data remains private.')}
         </p>
       </motion.div>
+
+      {/* Developer Shortcut Block */}
+      {process.env.NODE_ENV === 'development' && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          style={{
+            textAlign: 'center',
+            padding: '24px',
+            background: 'rgba(255, 193, 7, 0.1)',
+            borderRadius: '16px',
+            marginTop: '48px',
+            marginBottom: '32px',
+            border: '2px dashed rgba(255, 193, 7, 0.3)',
+          }}
+        >
+          <h3 style={{
+            fontSize: isMobile ? '18px' : '20px',
+            fontWeight: '700',
+            color: '#ff9800',
+            marginBottom: '16px',
+          }}>
+            🧠 Developer Result Shortcuts
+          </h3>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '12px',
+            justifyContent: 'center',
+          }}>
+            {['excellent', 'good', 'developing'].map((level) => (
+              <Link
+                key={level}
+                to={`/test/stress-management/unlock/${level}`}
+                style={{
+                  padding: '8px 16px',
+                  background: 'rgba(255, 193, 7, 0.2)',
+                  borderRadius: '8px',
+                  color: '#ff9800',
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  textDecoration: 'none',
+                  border: '1px solid rgba(255, 193, 7, 0.4)',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 193, 7, 0.3)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 193, 7, 0.2)';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                {level.charAt(0).toUpperCase() + level.slice(1)}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </main>
   );
 }

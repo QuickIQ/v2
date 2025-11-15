@@ -23,7 +23,7 @@ export function useDynamicTestTranslations() {
       const testName = pathSegments[testIndex + 1];
       
       // List of valid test names
-        const validTests = ['personality', 'iq', 'iqtest', 'focus', 'memory', 'creative-thinking', 'depression', 'multitasking', 'attention-span', 'memory-retention', 'anxiety', 'problem-solving', 'entrepreneur-mindset', 'risk-tolerance', 'strategic-thinking', 'time-management'];
+        const validTests = ['personality', 'iq', 'iqtest', 'focus', 'memory', 'creative-thinking', 'depression', 'multitasking', 'attention-span', 'memory-retention', 'anxiety', 'problem-solving', 'entrepreneur-mindset', 'risk-tolerance', 'strategic-thinking', 'time-management', 'decision-making', 'leadership-archetype', 'negotiation-skills', 'stress-management', 'team-player', 'success', 'perfectionism', 'ambition', 'criticism'];
       
       if (validTests.includes(testName)) {
         // Normalize test name (e.g., 'iqtest' -> 'iq', 'creative-thinking' -> 'creative-thinking')

@@ -67,12 +67,12 @@ const levelConfig: Record<'excellent' | 'good' | 'developing', {
   },
 };
 
-interface DepressionUnlockTemplateProps {
+interface StressManagementUnlockTemplateProps {
   level: 'excellent' | 'good' | 'developing';
   locale?: 'en' | 'tr';
 }
 
-export default function DepressionUnlockTemplate({ level, locale }: DepressionUnlockTemplateProps) {
+export default function StressManagementUnlockTemplate({ level, locale }: StressManagementUnlockTemplateProps) {
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ export default function DepressionUnlockTemplate({ level, locale }: DepressionUn
   
   // Get content from localization keys
   const getContent = () => {
-    const baseKey = `tests.depression.result.${level}`;
+    const baseKey = `tests.stressManagement.result.${level}`;
     return {
       title: t(`${baseKey}.title`) || '',
       summary: t(`${baseKey}.summary`) || '',
@@ -119,65 +119,39 @@ export default function DepressionUnlockTemplate({ level, locale }: DepressionUn
     {
       key: 'overview',
       icon: config.sectionEmojis[0],
-      title: currentLocale === 'tr' ? 'Depresyon Profiliniz' : 'Your Depression Profile',
+      title: currentLocale === 'tr' ? 'Stres Yönetimi Profiliniz' : 'Your Stress Management Profile',
       text: content.summary,
     },
     {
       key: 'insights',
       icon: config.sectionEmojis[1],
       title: currentLocale === 'tr' ? 'Temel İçgörüler' : 'Key Insights',
-      text: currentLocale === 'tr' 
-        ? 'Ruh hali kalıplarınız ve düşünce dengeniz hakkında en önemli bulgular:'
-        : 'The most important findings about your mood patterns and thought balance:',
+      text: '',
       insights: content.insights,
     },
     {
       key: 'strengths',
       icon: config.sectionEmojis[2],
       title: currentLocale === 'tr' ? 'Güçlü Yönleriniz' : 'Your Strengths',
-      text: content.sections?.strengths || (level === 'excellent'
-        ? (currentLocale === 'tr' 
-          ? 'Ruh hali dengeniz konusunda olağanüstü yeteneklere sahipsiniz. İşte en güçlü yönleriniz:'
-          : 'You possess exceptional mood balance abilities. Here are your strongest areas:')
-        : level === 'good'
-        ? (currentLocale === 'tr'
-          ? 'Ruh hali dengeniz konusunda güçlü yetenekleriniz var. İşte öne çıkan güçlü yönleriniz:'
-          : 'You have strong mood balance skills. Here are your standout strengths:')
-        : (currentLocale === 'tr'
-          ? 'Ruh hali dengeniz potansiyeliniz gelişiyor. İşte güçlü yönleriniz:'
-          : 'Your mood balance potential is developing. Here are your strengths:')),
+      text: content.sections?.strengths || '',
     },
     {
       key: 'growth',
       icon: config.sectionEmojis[3],
       title: currentLocale === 'tr' ? 'Gelişim Alanları' : 'Growth Areas',
-      text: content.sections?.growthAreas || (level === 'excellent'
-        ? (currentLocale === 'tr'
-          ? 'Mükemmel seviyede olsanız bile, ruh hali dengenizi daha da geliştirebileceğiniz alanlar:'
-          : 'Even at an excellent level, areas where you can further enhance your mood balance:')
-        : level === 'good'
-        ? (currentLocale === 'tr'
-          ? 'Ruh hali dengenizi daha da artırmak için odaklanabileceğiniz alanlar:'
-          : 'Areas you can focus on to further increase your mood balance:')
-        : (currentLocale === 'tr'
-          ? 'Ruh hali dengenizi geliştirmek için pratik yapabileceğiniz alanlar:'
-          : 'Areas you can practice to develop your mood balance abilities:')),
+      text: content.sections?.growthAreas || '',
     },
     {
       key: 'application',
       icon: config.sectionEmojis[4],
       title: currentLocale === 'tr' ? 'Pratik Uygulamalar' : 'Practical Applications',
-      text: content.sections?.practicalApplications || (currentLocale === 'tr'
-        ? 'Ruh hali dengenizi günlük hayatta nasıl koruyabileceğiniz:'
-        : 'How you can maintain your mood balance in daily life:'),
+      text: content.sections?.practicalApplications || '',
     },
     {
       key: 'future',
       icon: config.sectionEmojis[5],
       title: currentLocale === 'tr' ? 'Gelecek Potansiyeli' : 'Future Potential',
-      text: content.sections?.futurePotential || (currentLocale === 'tr'
-        ? 'Ruh hali dengenizi geliştirmeye devam ederseniz neler başarabileceğiniz:'
-        : 'What you can achieve if you continue developing your mood balance:'),
+      text: content.sections?.futurePotential || '',
     },
   ];
 
@@ -288,7 +262,7 @@ export default function DepressionUnlockTemplate({ level, locale }: DepressionUn
             backgroundClip: 'text',
             marginBottom: '16px',
           }}>
-            Your Detailed Depression Report
+            Your Detailed Stress Management Report
           </h1>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',

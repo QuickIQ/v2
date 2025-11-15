@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { useDepressionTestStore } from '../../../store/depressionTestStore';
-import DepressionUnlockTemplate from './DepressionUnlockTemplate';
+import { useLeadershipArchetypeTestStore } from '../../../store/leadershipArchetypeTestStore';
+import LeadershipArchetypeUnlockTemplate from './LeadershipArchetypeUnlockTemplate';
 import '../../../App.css';
 
 function LoadingFallback() {
@@ -62,10 +62,10 @@ function NoResultFallback() {
   );
 }
 
-export default function DepressionUnlockPage() {
+export default function LeadershipArchetypeUnlockPage() {
   const { i18n } = useTranslation();
   const { level: urlLevel } = useParams<{ level?: string }>();
-  const { resultLevel } = useDepressionTestStore();
+  const { resultLevel } = useLeadershipArchetypeTestStore();
   const [levelToLoad, setLevelToLoad] = useState<'excellent' | 'good' | 'developing' | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -85,7 +85,7 @@ export default function DepressionUnlockPage() {
     // Priority 3: Check localStorage if store doesn't have it
     if (!level) {
       try {
-        const saved = localStorage.getItem('depression-test-storage');
+        const saved = localStorage.getItem('leadership-archetype-test-storage');
         if (saved) {
           const parsed = JSON.parse(saved);
           // Zustand persist saves the partialized state directly
@@ -114,7 +114,7 @@ export default function DepressionUnlockPage() {
   const locale = (i18n.language || 'en').split('-')[0] as 'en' | 'tr';
 
   return (
-    <DepressionUnlockTemplate
+    <LeadershipArchetypeUnlockTemplate
       level={levelToLoad}
       locale={locale}
     />

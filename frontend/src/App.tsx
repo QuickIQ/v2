@@ -19,6 +19,7 @@ import EntrepreneurMindsetTestPage from './pages/EntrepreneurMindsetTestPage';
 import RiskToleranceTestPage from './pages/RiskToleranceTestPage';
 import StrategicThinkingTestPage from './pages/StrategicThinkingTestPage';
 import TimeManagementTestPage from './pages/TimeManagementTestPage';
+import DecisionMakingTestPage from './pages/DecisionMakingTestPage';
 import PaymentPage from './tests/personality/PaymentPage';
 import UnlockPage from './tests/personality/UnlockPage';
 import CreativeThinkingPaymentPage from './tests/iq/creative-thinking/CreativeThinkingPaymentPage';
@@ -43,6 +44,32 @@ import StrategicThinkingPaymentPage from './tests/iq/strategic-thinking/Strategi
 import StrategicThinkingUnlockPage from './tests/iq/strategic-thinking/StrategicThinkingUnlockPage';
 import TimeManagementPaymentPage from './tests/iq/time-management/TimeManagementPaymentPage';
 import TimeManagementUnlockPage from './tests/iq/time-management/TimeManagementUnlockPage';
+import DecisionMakingPaymentPage from './tests/iq/decision-making/DecisionMakingPaymentPage';
+import DecisionMakingUnlockPage from './tests/iq/decision-making/DecisionMakingUnlockPage';
+import LeadershipArchetypeTestPage from './pages/LeadershipArchetypeTestPage';
+import LeadershipArchetypePaymentPage from './tests/iq/leadership-archetype/LeadershipArchetypePaymentPage';
+import LeadershipArchetypeUnlockPage from './tests/iq/leadership-archetype/LeadershipArchetypeUnlockPage';
+import NegotiationSkillsTestPage from './pages/NegotiationSkillsTestPage';
+import NegotiationSkillsPaymentPage from './tests/iq/negotiation-skills/NegotiationSkillsPaymentPage';
+import NegotiationSkillsUnlockPage from './tests/iq/negotiation-skills/NegotiationSkillsUnlockPage';
+import StressManagementTestPage from './pages/StressManagementTestPage';
+import StressManagementPaymentPage from './tests/iq/stress-management/StressManagementPaymentPage';
+import StressManagementUnlockPage from './tests/iq/stress-management/StressManagementUnlockPage';
+import TeamPlayerTestPage from './pages/TeamPlayerTestPage';
+import TeamPlayerPaymentPage from './tests/iq/team-player/TeamPlayerPaymentPage';
+import TeamPlayerUnlockPage from './tests/iq/team-player/TeamPlayerUnlockPage';
+import SuccessTestPage from './pages/SuccessTestPage';
+import SuccessPaymentPage from './tests/iq/success/SuccessPaymentPage';
+import SuccessUnlockPage from './tests/iq/success/SuccessUnlockPage';
+import PerfectionismTestPage from './pages/PerfectionismTestPage';
+import PerfectionismPaymentPage from './tests/iq/perfectionism/PerfectionismPaymentPage';
+import PerfectionismUnlockPage from './tests/iq/perfectionism/PerfectionismUnlockPage';
+import AmbitionTestPage from './pages/AmbitionTestPage';
+import AmbitionPaymentPage from './tests/iq/ambition/AmbitionPaymentPage';
+import AmbitionUnlockPage from './tests/iq/ambition/AmbitionUnlockPage';
+import CriticismTestPage from './pages/CriticismTestPage';
+import CriticismPaymentPage from './tests/iq/criticism/CriticismPaymentPage';
+import CriticismUnlockPage from './tests/iq/criticism/CriticismUnlockPage';
 import { useDynamicTestTranslations } from './hooks/useDynamicTestTranslations';
 import './App.css';
 
@@ -106,6 +133,42 @@ function AppContent() {
         <Route path="/test/time-management/payment" element={<TimeManagementPaymentPage />} />
         <Route path="/test/time-management/unlock/:level" element={<TimeManagementUnlockPage />} />
         <Route path="/test/time-management/unlock" element={<TimeManagementUnlockPage />} />
+        <Route path="/test/decision-making" element={<DecisionMakingTestPage />} />
+        <Route path="/test/decision-making/payment" element={<DecisionMakingPaymentPage />} />
+        <Route path="/test/decision-making/unlock/:level" element={<DecisionMakingUnlockPage />} />
+        <Route path="/test/decision-making/unlock" element={<DecisionMakingUnlockPage />} />
+        <Route path="/test/leadership-archetype" element={<LeadershipArchetypeTestPage />} />
+        <Route path="/test/leadership-archetype/payment" element={<LeadershipArchetypePaymentPage />} />
+        <Route path="/test/leadership-archetype/unlock/:level" element={<LeadershipArchetypeUnlockPage />} />
+        <Route path="/test/leadership-archetype/unlock" element={<LeadershipArchetypeUnlockPage />} />
+        <Route path="/test/negotiation-skills" element={<NegotiationSkillsTestPage />} />
+        <Route path="/test/negotiation-skills/payment" element={<NegotiationSkillsPaymentPage />} />
+        <Route path="/test/negotiation-skills/unlock/:level" element={<NegotiationSkillsUnlockPage />} />
+        <Route path="/test/negotiation-skills/unlock" element={<NegotiationSkillsUnlockPage />} />
+        <Route path="/test/stress-management" element={<StressManagementTestPage />} />
+        <Route path="/test/stress-management/payment" element={<StressManagementPaymentPage />} />
+        <Route path="/test/stress-management/unlock/:level" element={<StressManagementUnlockPage />} />
+        <Route path="/test/stress-management/unlock" element={<StressManagementUnlockPage />} />
+        <Route path="/test/team-player" element={<TeamPlayerTestPage />} />
+        <Route path="/test/team-player/payment" element={<TeamPlayerPaymentPage />} />
+        <Route path="/test/team-player/unlock/:level" element={<TeamPlayerUnlockPage />} />
+        <Route path="/test/team-player/unlock" element={<TeamPlayerUnlockPage />} />
+        <Route path="/test/success" element={<SuccessTestPage />} />
+        <Route path="/test/success/payment" element={<SuccessPaymentPage />} />
+        <Route path="/test/success/unlock/:level" element={<SuccessUnlockPage />} />
+        <Route path="/test/success/unlock" element={<SuccessUnlockPage />} />
+        <Route path="/test/perfectionism" element={<PerfectionismTestPage />} />
+        <Route path="/test/perfectionism/payment" element={<PerfectionismPaymentPage />} />
+        <Route path="/test/perfectionism/unlock/:level" element={<PerfectionismUnlockPage />} />
+        <Route path="/test/perfectionism/unlock" element={<PerfectionismUnlockPage />} />
+        <Route path="/test/ambition" element={<AmbitionTestPage />} />
+        <Route path="/test/ambition/payment" element={<AmbitionPaymentPage />} />
+        <Route path="/test/ambition/unlock/:level" element={<AmbitionUnlockPage />} />
+        <Route path="/test/ambition/unlock" element={<AmbitionUnlockPage />} />
+        <Route path="/test/criticism" element={<CriticismTestPage />} />
+        <Route path="/test/criticism/payment" element={<CriticismPaymentPage />} />
+        <Route path="/test/criticism/unlock/:level" element={<CriticismUnlockPage />} />
+        <Route path="/test/criticism/unlock" element={<CriticismUnlockPage />} />
       </Routes>
     </>
   );

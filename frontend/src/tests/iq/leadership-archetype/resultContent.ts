@@ -1,4 +1,4 @@
-export interface DepressionResult {
+export interface LeadershipArchetypeResult {
   level: 'excellent' | 'good' | 'developing';
   title: string;
   summary: string;
@@ -11,41 +11,41 @@ export interface DepressionResult {
   };
 }
 
-export const resultContent: Record<'excellent' | 'good' | 'developing', DepressionResult> = {
+export const resultContent: Record<'excellent' | 'good' | 'developing', LeadershipArchetypeResult> = {
   excellent: {
     level: 'excellent',
-    title: '', // Will be filled via localization: tests.depression.result.excellent.title
-    summary: '', // Will be filled via localization: tests.depression.result.excellent.summary
-    insights: [], // Will be filled via localization: tests.depression.result.excellent.insights
+    title: '', // Will be filled via localization: tests.leadershipArchetype.result.excellent.title
+    summary: '', // Will be filled via localization: tests.leadershipArchetype.result.excellent.summary
+    insights: [], // Will be filled via localization: tests.leadershipArchetype.result.excellent.insights
     sections: {
-      strengths: '', // Will be filled via localization: tests.depression.result.excellent.strengths.text
-      growthAreas: '', // Will be filled via localization: tests.depression.result.excellent.growthAreas.text
-      practicalApplications: '', // Will be filled via localization: tests.depression.result.excellent.practicalApplications.text
-      futurePotential: '', // Will be filled via localization: tests.depression.result.excellent.futurePotential.text
+      strengths: '', // Will be filled via localization: tests.leadershipArchetype.result.excellent.strengths.text
+      growthAreas: '', // Will be filled via localization: tests.leadershipArchetype.result.excellent.growthAreas.text
+      practicalApplications: '', // Will be filled via localization: tests.leadershipArchetype.result.excellent.practicalApplications.text
+      futurePotential: '', // Will be filled via localization: tests.leadershipArchetype.result.excellent.futurePotential.text
     }
   },
   good: {
     level: 'good',
-    title: '', // Will be filled via localization: tests.depression.result.good.title
-    summary: '', // Will be filled via localization: tests.depression.result.good.summary
-    insights: [], // Will be filled via localization: tests.depression.result.good.insights
+    title: '', // Will be filled via localization: tests.leadershipArchetype.result.good.title
+    summary: '', // Will be filled via localization: tests.leadershipArchetype.result.good.summary
+    insights: [], // Will be filled via localization: tests.leadershipArchetype.result.good.insights
     sections: {
-      strengths: '', // Will be filled via localization: tests.depression.result.good.strengths.text
-      growthAreas: '', // Will be filled via localization: tests.depression.result.good.growthAreas.text
-      practicalApplications: '', // Will be filled via localization: tests.depression.result.good.practicalApplications.text
-      futurePotential: '', // Will be filled via localization: tests.depression.result.good.futurePotential.text
+      strengths: '', // Will be filled via localization: tests.leadershipArchetype.result.good.strengths.text
+      growthAreas: '', // Will be filled via localization: tests.leadershipArchetype.result.good.growthAreas.text
+      practicalApplications: '', // Will be filled via localization: tests.leadershipArchetype.result.good.practicalApplications.text
+      futurePotential: '', // Will be filled via localization: tests.leadershipArchetype.result.good.futurePotential.text
     }
   },
   developing: {
     level: 'developing',
-    title: '', // Will be filled via localization: tests.depression.result.developing.title
-    summary: '', // Will be filled via localization: tests.depression.result.developing.summary
-    insights: [], // Will be filled via localization: tests.depression.result.developing.insights
+    title: '', // Will be filled via localization: tests.leadershipArchetype.result.developing.title
+    summary: '', // Will be filled via localization: tests.leadershipArchetype.result.developing.summary
+    insights: [], // Will be filled via localization: tests.leadershipArchetype.result.developing.insights
     sections: {
-      strengths: '', // Will be filled via localization: tests.depression.result.developing.strengths.text
-      growthAreas: '', // Will be filled via localization: tests.depression.result.developing.growthAreas.text
-      practicalApplications: '', // Will be filled via localization: tests.depression.result.developing.practicalApplications.text
-      futurePotential: '', // Will be filled via localization: tests.depression.result.developing.futurePotential.text
+      strengths: '', // Will be filled via localization: tests.leadershipArchetype.result.developing.strengths.text
+      growthAreas: '', // Will be filled via localization: tests.leadershipArchetype.result.developing.growthAreas.text
+      practicalApplications: '', // Will be filled via localization: tests.leadershipArchetype.result.developing.practicalApplications.text
+      futurePotential: '', // Will be filled via localization: tests.leadershipArchetype.result.developing.futurePotential.text
     }
   }
 };

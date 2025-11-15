@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useDepressionTestStore } from '../store/depressionTestStore';
-import DepressionIntro from '../tests/iq/depression/index';
-import DepressionQuestionsPage from '../tests/iq/depression/QuestionsPage';
-import DepressionAnalyzingPage from '../tests/iq/depression/DepressionAnalyzingPage';
+import { useStressManagementTestStore } from '../store/stressManagementTestStore';
+import StressManagementIntro from '../tests/iq/stress-management/index';
+import StressManagementQuestionsPage from '../tests/iq/stress-management/QuestionsPage';
+import StressManagementAnalyzingPage from '../tests/iq/stress-management/StressManagementAnalyzingPage';
 import PersonalityEmailPage from '../tests/personality/PersonalityEmailPage';
-import { resultContent } from '../tests/iq/depression/resultContent';
-import questionsData from '../data/tests/depression/questions.json';
+import { resultContent } from '../tests/iq/stress-management/resultContent';
+import questionsData from '../data/tests/stress-management/questions.json';
 
-function DepressionTestPage() {
+function StressManagementTestPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
@@ -27,7 +27,7 @@ function DepressionTestPage() {
     calculateScore,
     setResultData,
     setEmail,
-  } = useDepressionTestStore();
+  } = useStressManagementTestStore();
 
   const [error, setError] = useState<string | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
@@ -42,7 +42,7 @@ function DepressionTestPage() {
       return;
     }
     
-    const store = useDepressionTestStore.getState();
+    const store = useStressManagementTestStore.getState();
     const storeStep = store.step;
     
     // Only reset to landing if we're actually starting fresh (no step set or landing)
@@ -57,7 +57,7 @@ function DepressionTestPage() {
     }
     
     try {
-      const storeQuestions = useDepressionTestStore.getState().questions;
+      const storeQuestions = useStressManagementTestStore.getState().questions;
       
       if (storeQuestions.length === 0 && questionsData && questionsData.length > 0) {
         setQuestions(questionsData as any);
@@ -81,7 +81,7 @@ function DepressionTestPage() {
     console.log('🔄 Step changed to:', step);
     
     if (step === 'questions') {
-      const store = useDepressionTestStore.getState();
+      const store = useStressManagementTestStore.getState();
       const storeQuestions = store.questions;
       
       if (storeQuestions.length === 0) {
@@ -103,7 +103,7 @@ function DepressionTestPage() {
   }, [step]);
 
   const handleStart = () => {
-    const storeQuestions = useDepressionTestStore.getState().questions;
+    const storeQuestions = useStressManagementTestStore.getState().questions;
     
     if (storeQuestions.length === 0) {
       if (questionsData && questionsData.length > 0) {
@@ -114,15 +114,15 @@ function DepressionTestPage() {
       }
     }
     
-    const store = useDepressionTestStore.getState();
+    const store = useStressManagementTestStore.getState();
     store.setCurrentQuestionIndex(0);
     
     const timerSeconds = 10 * 60; // 10 minutes
     store.setTimeRemaining(timerSeconds);
     
-    useDepressionTestStore.setState({ answers: [] });
-    useDepressionTestStore.setState({ totalScore: 0 });
-    useDepressionTestStore.setState({ resultLevel: null });
+    useStressManagementTestStore.setState({ answers: [] });
+    useStressManagementTestStore.setState({ totalScore: 0 });
+    useStressManagementTestStore.setState({ resultLevel: null });
     
     setStep('questions');
     setPhase('questions');
@@ -150,7 +150,7 @@ function DepressionTestPage() {
       setStep('analyzing');
       
       // Verify step was set
-      const storeAfterSet = useDepressionTestStore.getState();
+      const storeAfterSet = useStressManagementTestStore.getState();
       console.log('✅ Step set to:', storeAfterSet.step);
       console.log('✅ Current step in component:', step);
     } catch (err) {
@@ -166,13 +166,13 @@ function DepressionTestPage() {
       console.log('📧 handleAnalyzingComplete called');
       
       // Ensure score is calculated
-      let store = useDepressionTestStore.getState();
+      let store = useStressManagementTestStore.getState();
       if (!store.resultLevel) {
         console.log('⚠️ No resultLevel found, calculating score...');
         calculateScore();
         // Wait a bit for score calculation
         await new Promise(resolve => setTimeout(resolve, 200));
-        store = useDepressionTestStore.getState();
+        store = useStressManagementTestStore.getState();
       }
       
       const level = store.resultLevel || 'good';
@@ -188,7 +188,7 @@ function DepressionTestPage() {
       
       // Transition to email screen - use store's setStep directly
       console.log('➡️ Transitioning to email screen...');
-      const storeInstance = useDepressionTestStore.getState();
+      const storeInstance = useStressManagementTestStore.getState();
       storeInstance.setStep('email');
       
       // Also call the component's setStep for immediate update
@@ -196,7 +196,7 @@ function DepressionTestPage() {
       
       // Verify step was set
       await new Promise(resolve => setTimeout(resolve, 50));
-      const storeAfterSet = useDepressionTestStore.getState();
+      const storeAfterSet = useStressManagementTestStore.getState();
       console.log('✅ Step set to:', storeAfterSet.step);
       console.log('✅ Component step:', step);
     } catch (err: any) {
@@ -204,7 +204,7 @@ function DepressionTestPage() {
       // Even on error, proceed to email screen
       const result = resultContent['good'];
       setResultData(result);
-      const storeInstance = useDepressionTestStore.getState();
+      const storeInstance = useStressManagementTestStore.getState();
       storeInstance.setStep('email');
       setStep('email');
     }
@@ -218,22 +218,22 @@ function DepressionTestPage() {
     
     setEmail(emailValue);
     
-    const store = useDepressionTestStore.getState();
+    const store = useStressManagementTestStore.getState();
     if (!store.sessionToken) {
       const tempToken = `temp_${Date.now()}`;
       store.setSessionToken(tempToken);
     }
     
     // Navigate to payment page
-    navigate('/test/depression/payment');
+    navigate('/test/stress-management/payment');
   };
 
   useEffect(() => {
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-      const store = useDepressionTestStore.getState();
+      const store = useStressManagementTestStore.getState();
       if (store.step === 'questions' && store.answers.length > 0) {
         e.preventDefault();
-        e.returnValue = t('tests.depression.warnings.leave_page') || 'If you leave this page, your current test progress will be lost. Continue?';
+        e.returnValue = t('tests.stressManagement.warnings.leave_page') || 'If you leave this page, your current test progress will be lost. Continue?';
         return e.returnValue;
       }
     };
@@ -298,7 +298,7 @@ function DepressionTestPage() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <DepressionIntro onStart={handleStart} />
+          <StressManagementIntro onStart={handleStart} />
         </motion.div>
       </AnimatePresence>
     );
@@ -306,7 +306,7 @@ function DepressionTestPage() {
 
   switch (step) {
     case 'questions':
-      const currentQuestionsFromStore = useDepressionTestStore.getState().questions;
+      const currentQuestionsFromStore = useStressManagementTestStore.getState().questions;
       const questionsToUse = currentQuestionsFromStore.length > 0 ? currentQuestionsFromStore : questions;
       
       if (questionsToUse.length === 0) {
@@ -337,7 +337,7 @@ function DepressionTestPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <DepressionQuestionsPage
+            <StressManagementQuestionsPage
               questions={questionsToUse}
               onComplete={handleQuestionsComplete}
             />
@@ -354,7 +354,7 @@ function DepressionTestPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <DepressionAnalyzingPage onComplete={handleAnalyzingComplete} />
+            <StressManagementAnalyzingPage onComplete={handleAnalyzingComplete} />
           </motion.div>
         </AnimatePresence>
       );
@@ -420,11 +420,11 @@ function DepressionTestPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <DepressionAnalyzingPage onComplete={handleAnalyzingComplete} />
+            <StressManagementAnalyzingPage onComplete={handleAnalyzingComplete} />
           </motion.div>
         </AnimatePresence>
       );
   }
 }
 
-export default DepressionTestPage;
+export default StressManagementTestPage;

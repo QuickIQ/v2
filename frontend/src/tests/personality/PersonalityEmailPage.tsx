@@ -27,6 +27,19 @@ function PersonalityEmailPage({ onSubmit }: Props) {
     const domain = email.split('@')[1]?.toLowerCase();
     if (!domain) return false;
     
+    // Extract TLD (check last 1-2 parts for multi-part TLDs like .co.uk)
+    const parts = domain.split('.');
+    const lastPart = parts[parts.length - 1];
+    const secondLastPart = parts.length > 1 ? parts[parts.length - 2] : '';
+    const tld = secondLastPart ? `${secondLastPart}.${lastPart}` : lastPart;
+    const validTLDs = ['com', 'net', 'org', 'co', 'io', 'co.uk', 'co.tr', 'co.io'];
+    
+    // Check if TLD is valid (either exact match or ends with valid single TLD)
+    const isValidTLD = validTLDs.includes(tld) || validTLDs.includes(lastPart);
+    if (!isValidTLD) {
+      return false;
+    }
+    
     // List of valid email domains
     const validDomains = [
       'gmail.com', 'hotmail.com', 'hotmail.co.uk', 'hotmail.fr', 'hotmail.de', 'hotmail.es', 'hotmail.it',
@@ -35,7 +48,8 @@ function PersonalityEmailPage({ onSubmit }: Props) {
       'protonmail.com', 'proton.me',
       'live.com', 'live.co.uk', 'live.fr', 'live.de',
       'icloud.com', 'me.com', 'mac.com',
-      'aol.com', 'msn.com', 'ymail.com'
+      'aol.com', 'msn.com', 'ymail.com',
+      'yandex.com', 'yandex.ru', 'yandex.tr'
     ];
     
     // Check if domain is valid

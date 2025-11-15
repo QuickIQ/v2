@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useDepressionTestStore, DepressionQuestion, DepressionAnswer } from '../../../store/depressionTestStore';
+import { useLeadershipArchetypeTestStore, LeadershipArchetypeQuestion, LeadershipArchetypeAnswer } from '../../../store/leadershipArchetypeTestStore';
 import { useMobile } from '../../../hooks/useMobile';
 import { Clock } from 'lucide-react';
 import '../../../App.css';
 
 interface Props {
-  questions: DepressionQuestion[];
+  questions: LeadershipArchetypeQuestion[];
   onComplete: () => void;
 }
 
@@ -33,7 +33,7 @@ const glowColors = [
   'rgba(137, 220, 137, 0.5)', // Always - darker green glow
 ];
 
-function DepressionQuestionsPage({ questions, onComplete }: Props) {
+function LeadershipArchetypeQuestionsPage({ questions, onComplete }: Props) {
   const { t } = useTranslation();
   const isMobile = useMobile();
   const {
@@ -43,7 +43,7 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
     setCurrentQuestionIndex,
     addAnswer,
     setTimeRemaining,
-  } = useDepressionTestStore();
+  } = useLeadershipArchetypeTestStore();
 
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [autoAdvancing, setAutoAdvancing] = useState(false);
@@ -68,7 +68,7 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
       timerIntervalRef.current = null;
     }
 
-    let currentTime = useDepressionTestStore.getState().timeRemaining;
+    let currentTime = useLeadershipArchetypeTestStore.getState().timeRemaining;
     
     if (!currentTime || currentTime <= 0 || currentTime > 10 * 60 || isNaN(currentTime)) {
       currentTime = 10 * 60;
@@ -81,7 +81,7 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
     }
 
     timerIntervalRef.current = setInterval(() => {
-      const storeTime = useDepressionTestStore.getState().timeRemaining;
+      const storeTime = useLeadershipArchetypeTestStore.getState().timeRemaining;
       
       if (!storeTime || storeTime <= 0 || isNaN(storeTime)) {
         if (timerIntervalRef.current) {
@@ -131,7 +131,7 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
     // Reverse scoring is handled in calculateScore() in the store
     const baseScore = optionIndex + 1;
     
-    const answer: DepressionAnswer = {
+    const answer: LeadershipArchetypeAnswer = {
       question_id: currentQuestion.id,
       option_index: optionIndex,
       score: baseScore, // Store base score, reverse logic applied in calculateScore
@@ -203,7 +203,7 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
           textAlign: 'center',
         }}>
           <div style={{ color: '#e74c3c', marginBottom: '20px' }}>
-            {t('tests.depression.errors.load_questions') || 'Failed to load questions. Please try again.'}
+            {t('tests.leadershipArchetype.errors.load_questions') || 'Failed to load questions. Please try again.'}
           </div>
         </div>
       </div>
@@ -308,7 +308,7 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
                 textAlign: 'center',
               }}
             >
-              🌸
+              👑
             </motion.div>
 
             {/* Question Card */}
@@ -691,7 +691,7 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
                 fontWeight: '600',
                 color: '#1a1a1a',
               }}>
-                Depression Test
+                Leadership Archetype Test
               </div>
               
               <div style={{
@@ -780,5 +780,5 @@ function DepressionQuestionsPage({ questions, onComplete }: Props) {
   );
 }
 
-export default DepressionQuestionsPage;
+export default LeadershipArchetypeQuestionsPage;
 

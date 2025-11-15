@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useStressManagementTestStore, StressManagementQuestion, StressManagementAnswer } from '../../../store/stressManagementTestStore';
 import { useMobile } from '../../../hooks/useMobile';
-import { Clock } from 'lucide-react';
+import { Clock, HeartPulse } from 'lucide-react';
 import '../../../App.css';
 
 interface Props {
@@ -203,7 +203,7 @@ function StressManagementQuestionsPage({ questions, onComplete }: Props) {
           textAlign: 'center',
         }}>
           <div style={{ color: '#e74c3c', marginBottom: '20px' }}>
-              {t('tests.stressManagement.errors.load_questions') || 'Failed to load questions. Please try again.'}
+            {t('tests.stressManagement.errors.load_questions') || 'Failed to load questions. Please try again.'}
           </div>
         </div>
       </div>
@@ -240,7 +240,7 @@ function StressManagementQuestionsPage({ questions, onComplete }: Props) {
           transition={{ duration: 0.3 }}
           style={{
             height: '100%',
-            background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%)',
+            background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
           }}
         />
       </motion.div>
@@ -308,7 +308,13 @@ function StressManagementQuestionsPage({ questions, onComplete }: Props) {
                 textAlign: 'center',
               }}
             >
-              🌸
+              <HeartPulse 
+                size={isMobile ? 40 : 48}
+                style={{ 
+                  color: '#ff69b4',
+                  filter: 'drop-shadow(0 2px 8px rgba(255, 105, 180, 0.4))',
+                }}
+              />
             </motion.div>
 
             {/* Question Card */}

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
 import { useTestsCompletedCounter } from '../../../hooks/useTestsCompletedCounter';
-import { Lock, Shield, CheckCircle, Star, ArrowDown } from 'lucide-react';
+import { Lock, Shield, CheckCircle, Star, ArrowDown, HeartPulse } from 'lucide-react';
 import { useStressManagementTestStore } from '../../../store/stressManagementTestStore';
 import '../../../App.css';
 
@@ -478,7 +478,7 @@ export default function StressManagementPaymentPage() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       padding: isMobile ? '20px' : '40px',
       paddingTop: isMobile ? '100px' : '120px',
     }}>
@@ -660,7 +660,7 @@ export default function StressManagementPaymentPage() {
                 flexWrap: 'wrap',
               }}
             >
-              {getTranslation('tests.stressManagement.payment.header', 'Your Detailed Stress Management Result')}
+              Your Mind Holds More Than You Think
               <motion.div
                 animate={{
                   scale: [1, 1.2, 1],
@@ -777,10 +777,10 @@ export default function StressManagementPaymentPage() {
               background: '#ffffff',
               backdropFilter: 'blur(20px)',
               borderRadius: '32px',
-            boxShadow: '0 24px 80px rgba(255, 107, 53, 0.2), 0 0 0 1px rgba(255, 107, 53, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
+            boxShadow: '0 24px 80px rgba(255, 105, 180, 0.2), 0 0 0 1px rgba(255, 105, 180, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
               padding: isMobile ? '40px 28px' : '56px 48px',
               textAlign: 'center',
-            border: '1px solid rgba(255, 107, 53, 0.15)',
+            border: '1px solid rgba(255, 105, 180, 0.15)',
               overflow: 'hidden',
               cursor: 'default',
               transition: 'all 0.2s ease-out',
@@ -800,15 +800,15 @@ export default function StressManagementPaymentPage() {
               <h2 style={{
                 fontSize: isMobile ? '2rem' : '2.75rem',
                 fontWeight: '700',
-                background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 50%, #FF6B35 100%)',
+                background: 'linear-gradient(135deg, #FF69B4 0%, #FFB6C1 50%, #FF69B4 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 margin: 0,
                 marginBottom: '8px',
-                textShadow: '0 2px 8px rgba(255, 107, 53, 0.3)',
+                textShadow: '0 2px 8px rgba(255, 105, 180, 0.3)',
               }}>
-                Your Inner Balance Journey
+                Your Detailed Stress Management Result
               </h2>
 
               {/* Decorative Line */}
@@ -823,7 +823,7 @@ export default function StressManagementPaymentPage() {
                 <span style={{
                   flex: 1,
                   height: '2px',
-                  background: 'linear-gradient(90deg, transparent, #FF6B35, transparent)',
+                  background: 'linear-gradient(90deg, transparent, #FF69B4, transparent)',
                   maxWidth: '150px',
                 }} />
                 <motion.span
@@ -837,16 +837,22 @@ export default function StressManagementPaymentPage() {
                     ease: 'easeInOut',
                   }}
                   style={{
-                  fontSize: '18px',
-                    filter: 'drop-shadow(0 0 8px rgba(255, 107, 53, 0.8))',
+                    display: 'inline-flex',
+                    alignItems: 'center',
                   }}
                 >
-                  🌸
+                  <HeartPulse 
+                    size={18}
+                    style={{ 
+                      color: '#FF69B4',
+                      filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
+                    }}
+                  />
                 </motion.span>
                 <span style={{
                   flex: 1,
                   height: '2px',
-                  background: 'linear-gradient(90deg, transparent, #FF6B35, transparent)',
+                  background: 'linear-gradient(90deg, transparent, #FF69B4, transparent)',
                   maxWidth: '150px',
                 }} />
               </div>
@@ -916,7 +922,7 @@ export default function StressManagementPaymentPage() {
                         style={{
                           width: isTablet ? '240px' : '270px',
                           minHeight: isTablet ? '170px' : '180px',
-                            background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+                            background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                           borderRadius: '16px',
                             border: '1.5px solid rgba(255,105,180,0.15)',
                             boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
@@ -932,7 +938,7 @@ export default function StressManagementPaymentPage() {
                       >
                         {title && (
                           <h4 style={{
-                              color: '#FF6B35',
+                              color: '#FF69B4',
                             fontWeight: '600',
                             fontSize: '16px',
                             margin: '0 0 12px 0',
@@ -992,7 +998,7 @@ export default function StressManagementPaymentPage() {
                           style={{
                             width: isTablet ? '240px' : '270px',
                             minHeight: isTablet ? '170px' : '180px',
-                            background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+                            background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                             borderRadius: '16px',
                             border: '1.5px solid rgba(255,105,180,0.15)',
                             boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
@@ -1008,7 +1014,7 @@ export default function StressManagementPaymentPage() {
                         >
                           {title && (
                             <h4 style={{
-                              color: '#FF6B35',
+                              color: '#FF69B4',
                               fontWeight: '600',
                               fontSize: '16px',
                               margin: '0 0 12px 0',
@@ -1068,7 +1074,7 @@ export default function StressManagementPaymentPage() {
                           style={{
                             width: '270px',
                             minHeight: '180px',
-                            background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+                            background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                             borderRadius: '16px',
                             border: '1.5px solid rgba(255,105,180,0.15)',
                             boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
@@ -1084,7 +1090,7 @@ export default function StressManagementPaymentPage() {
                         >
                           {title && (
                             <h4 style={{
-                              color: '#FF6B35',
+                              color: '#FF69B4',
                               fontWeight: '600',
                               fontSize: '16px',
                               margin: '0 0 12px 0',
@@ -1147,7 +1153,7 @@ export default function StressManagementPaymentPage() {
                           width: '100%',
                           maxWidth: '300px',
                           minHeight: '170px',
-                          background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+                          background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                           borderRadius: '16px',
                           border: '1.5px solid rgba(255,105,180,0.15)',
                           boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
@@ -1163,7 +1169,7 @@ export default function StressManagementPaymentPage() {
                       >
                         {title && (
                           <h4 style={{
-                            color: '#FF6B35',
+                            color: '#FF69B4',
                             fontWeight: '600',
                             fontSize: '16px',
                             margin: '0 0 12px 0',
@@ -1204,18 +1210,18 @@ export default function StressManagementPaymentPage() {
                 style={{
                   width: '100%',
                   marginTop: '32px',
-                  background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+                  background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
                   borderRadius: '20px',
                   padding: isMobile ? '24px 20px' : '32px 28px',
-                  border: '2px solid rgba(255, 107, 53, 0.2)',
-                  boxShadow: '0 8px 32px rgba(255, 107, 53, 0.15)',
+                  border: '2px solid rgba(255, 105, 180, 0.2)',
+                  boxShadow: '0 8px 32px rgba(255, 105, 180, 0.15)',
                   textAlign: 'center',
                 }}
               >
                 <p style={{
                   fontSize: isMobile ? '15px' : '17px',
                   fontWeight: '700',
-                  color: '#FF6B35',
+                  color: '#FF69B4',
                   margin: 0,
                   lineHeight: '1.6',
                   display: 'flex',
@@ -1254,10 +1260,10 @@ export default function StressManagementPaymentPage() {
               background: '#ffffff',
               backdropFilter: 'blur(20px)',
               borderRadius: '32px',
-              boxShadow: '0 24px 80px rgba(255, 107, 53, 0.2), 0 0 0 1px rgba(255, 107, 53, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
+              boxShadow: '0 24px 80px rgba(255, 105, 180, 0.2), 0 0 0 1px rgba(255, 105, 180, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
               padding: isMobile ? '40px 28px' : '56px 48px',
               textAlign: 'center',
-              border: '1px solid rgba(255, 107, 53, 0.15)',
+              border: '1px solid rgba(255, 105, 180, 0.15)',
               overflow: 'hidden',
               cursor: 'default',
               transition: 'all 0.2s ease-out',
@@ -1270,17 +1276,17 @@ export default function StressManagementPaymentPage() {
               transition={{ delay: 0.5, duration: 1.2, ease: 'easeInOut' }}
               whileHover={{
                 scale: 1.02,
-                boxShadow: '0 0 40px rgba(255, 107, 53, 0.25)',
+                boxShadow: '0 0 40px rgba(255, 105, 180, 0.25)',
                 transition: { duration: 0.3 }
               }}
               style={{
                 padding: isMobile ? '24px' : '36px 24px',
-                background: 'linear-gradient(180deg, #FFF4E6 0%, #FFE8D6 100%)',
+                background: 'linear-gradient(180deg, #fff0f5 0%, #ffe4e1 100%)',
                 borderRadius: '22px',
-                  border: '2px dashed rgba(255, 107, 53, 0.25)',
+                border: '2px dashed rgba(255, 105, 180, 0.25)',
                 textAlign: 'center',
                 marginTop: '32px',
-                  boxShadow: '0 4px 25px rgba(255, 107, 53, 0.08)',
+                boxShadow: '0 4px 25px rgba(255, 105, 180, 0.08)',
                 position: 'relative',
                 transition: 'all 0.3s ease',
               }}
@@ -3281,85 +3287,6 @@ export default function StressManagementPaymentPage() {
         )}
       </AnimatePresence>
 
-      {/* Developer Shortcut Block */}
-      {process.env.NODE_ENV === 'development' && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          style={{
-            textAlign: 'center',
-            padding: '24px',
-            background: 'rgba(255, 107, 53, 0.1)',
-            borderRadius: '16px',
-            marginTop: '32px',
-            marginBottom: '32px',
-            border: '2px dashed rgba(255, 107, 53, 0.3)',
-          }}
-        >
-          <h3 style={{
-            fontSize: '18px',
-            fontWeight: '700',
-            color: '#FF6B35',
-            marginBottom: '16px',
-          }}>
-            ⚡ Developer Shortcuts
-          </h3>
-          <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '12px',
-            justifyContent: 'center',
-          }}>
-            <Link
-              to="/test/stress-management/unlock/excellent"
-              style={{
-                padding: '8px 16px',
-                background: 'rgba(255, 107, 53, 0.2)',
-                borderRadius: '8px',
-                color: '#FF6B35',
-                textDecoration: 'none',
-                fontWeight: '600',
-                fontSize: '14px',
-                border: '1px solid rgba(255, 107, 53, 0.3)',
-              }}
-            >
-              Excellent
-            </Link>
-            <Link
-              to="/test/stress-management/unlock/good"
-              style={{
-                padding: '8px 16px',
-                background: 'rgba(255, 107, 53, 0.2)',
-                borderRadius: '8px',
-                color: '#FF6B35',
-                textDecoration: 'none',
-                fontWeight: '600',
-                fontSize: '14px',
-                border: '1px solid rgba(255, 107, 53, 0.3)',
-              }}
-            >
-              Good
-            </Link>
-            <Link
-              to="/test/stress-management/unlock/developing"
-              style={{
-                padding: '8px 16px',
-                background: 'rgba(255, 107, 53, 0.2)',
-                borderRadius: '8px',
-                color: '#FF6B35',
-                textDecoration: 'none',
-                fontWeight: '600',
-                fontSize: '14px',
-                border: '1px solid rgba(255, 107, 53, 0.3)',
-              }}
-            >
-              Developing
-            </Link>
-          </div>
-        </motion.div>
-      )}
-
       {/* Footer */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -3384,6 +3311,67 @@ export default function StressManagementPaymentPage() {
             : 'You\'ll be redirected to your results after successful payment. Your data remains private.')}
         </p>
       </motion.div>
+
+      {/* Developer Shortcut Block */}
+      {process.env.NODE_ENV === 'development' && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          style={{
+            textAlign: 'center',
+            padding: '24px',
+            background: 'rgba(255, 193, 7, 0.1)',
+            borderRadius: '16px',
+            marginTop: '48px',
+            marginBottom: '32px',
+            border: '2px dashed rgba(255, 193, 7, 0.3)',
+          }}
+        >
+          <h3 style={{
+            fontSize: isMobile ? '18px' : '20px',
+            fontWeight: '700',
+            color: '#ff9800',
+            marginBottom: '16px',
+          }}>
+            🧠 Developer Result Shortcuts
+          </h3>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '12px',
+            justifyContent: 'center',
+          }}>
+            {['excellent', 'good', 'developing'].map((level) => (
+              <Link
+                key={level}
+                to={`/test/stress-management/unlock/${level}`}
+                style={{
+                  padding: '8px 16px',
+                  background: 'rgba(255, 193, 7, 0.2)',
+                  borderRadius: '8px',
+                  color: '#ff9800',
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  textDecoration: 'none',
+                  border: '1px solid rgba(255, 193, 7, 0.4)',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 193, 7, 0.3)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 193, 7, 0.2)';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                {level.charAt(0).toUpperCase() + level.slice(1)}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </main>
   );
 }

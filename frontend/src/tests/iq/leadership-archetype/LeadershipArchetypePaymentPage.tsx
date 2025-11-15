@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
 import { useTestsCompletedCounter } from '../../../hooks/useTestsCompletedCounter';
 import { Lock, Shield, CheckCircle, Star, ArrowDown } from 'lucide-react';
-import { useDepressionTestStore } from '../../../store/depressionTestStore';
+import { useLeadershipArchetypeTestStore } from '../../../store/leadershipArchetypeTestStore';
 import '../../../App.css';
 
 // Recent Results Component
@@ -93,9 +93,9 @@ const countries = [
   { flag: '🇪🇸', code: 'ES' }
 ];
 
-const creativityTypes = {
-  en: ['Innovative Mind', 'Adaptive Innovator', 'Emerging Innovator', 'Creative Visionary', 'Boundary Pusher', 'Idea Connector', 'Pattern Seeker', 'Solution Generator'],
-  tr: ['Yenilikçi Zihin', 'Uyarlanabilir Yenilikçi', 'Gelişen Yenilikçi', 'Yaratıcı Vizyoner', 'Sınır Zorlayıcı', 'Fikir Bağlayıcı', 'Desen Arayıcı', 'Çözüm Üretici']
+const leadershipTypes = {
+  en: ['Visionary Leader', 'Strategic Leader', 'Mentor Leader', 'Transformational Leader', 'Servant Leader', 'Charismatic Leader', 'Authentic Leader', 'Collaborative Leader'],
+  tr: ['Vizyoner Lider', 'Stratejik Lider', 'Mentor Lider', 'Dönüşümsel Lider', 'Hizmetkar Lider', 'Karizmatik Lider', 'Özgün Lider', 'İşbirlikçi Lider']
 };
 
 function randomShortName(fullName: string): string {
@@ -114,7 +114,7 @@ interface RecentResult {
 let recentlyShownNames = new Set<string>();
 
 function generateResults(locale: string): RecentResult[] {
-  const types = creativityTypes[locale as 'en' | 'tr'] || creativityTypes.en;
+    const types = leadershipTypes[locale as 'en' | 'tr'] || leadershipTypes.en;
   const results: RecentResult[] = [];
   const usedCombinations = new Set<string>();
   
@@ -197,7 +197,7 @@ function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boo
           marginBottom: '24px',
         }}
       >
-        {getTranslation('tests.depression.payment.recent_results', i18n.language === 'tr' ? 'Güncel Sonuçlar' : 'Recent Results')}
+        {getTranslation('tests.leadershipArchetype.payment.recent_results', i18n.language === 'tr' ? 'Güncel Sonuçlar' : 'Recent Results')}
       </motion.h2>
       <div style={{
         maxWidth: '800px',
@@ -256,7 +256,7 @@ function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boo
   );
 }
 
-export default function DepressionPaymentPage() {
+export default function LeadershipArchetypePaymentPage() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
@@ -270,7 +270,7 @@ export default function DepressionPaymentPage() {
     window.addEventListener('resize', checkTablet);
     return () => window.removeEventListener('resize', checkTablet);
   }, []);
-  const { resultLevel, resultData } = useDepressionTestStore();
+  const { resultLevel, resultData } = useLeadershipArchetypeTestStore();
   const [activeTab, setActiveTab] = useState<'card' | 'googlepay'>('card');
   const [processing, setProcessing] = useState(false);
   
@@ -376,7 +376,7 @@ export default function DepressionPaymentPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // On success, navigate to unlock
-      navigate('/test/depression/unlock');
+      navigate('/test/leadership-archetype/unlock');
     } catch (error) {
       setProcessing(false);
       setToastMessage(getTranslation('payment.errors.failed', 'Payment failed. Please check your card info.'));
@@ -388,7 +388,7 @@ export default function DepressionPaymentPage() {
   const handleGooglePayClick = () => {
     setProcessing(true);
     setTimeout(() => {
-      navigate('/test/depression/unlock');
+      navigate('/test/leadership-archetype/unlock');
     }, 1000);
   };
 
@@ -403,24 +403,24 @@ export default function DepressionPaymentPage() {
   const reviews = {
     en: [
       { name: 'Sarah M.', text: 'This test completely changed how I see myself. The insights are incredibly accurate.', city: 'New York, USA', time: '2 hours ago' },
-      { name: 'Michael K.', text: 'Worth every penny. The creativity analysis was spot-on and very detailed.', city: 'London, UK', time: '5 hours ago' },
-      { name: 'Emma L.', text: 'I finally understand my creative strengths and how to use them in my career. Highly recommend!', city: 'Toronto, Canada', time: '8 hours ago' },
-      { name: 'David R.', text: 'The most comprehensive creativity test I\'ve ever taken. The results were eye-opening.', city: 'Sydney, Australia', time: '12 hours ago' },
-      { name: 'Sophia T.', text: 'Amazing accuracy! Everything it said about my creative thinking was true. Great investment in self-discovery.', city: 'Berlin, Germany', time: '1 day ago' },
-      { name: 'James W.', text: 'The detailed report helped me understand my creative process better. Very insightful!', city: 'Los Angeles, USA', time: '2 days ago' },
+      { name: 'Michael K.', text: 'Worth every penny. The leadership analysis was spot-on and very detailed.', city: 'London, UK', time: '5 hours ago' },
+      { name: 'Emma L.', text: 'I finally understand my leadership style and how to use it in my career. Highly recommend!', city: 'Toronto, Canada', time: '8 hours ago' },
+      { name: 'David R.', text: 'The most comprehensive leadership test I\'ve ever taken. The results were eye-opening.', city: 'Sydney, Australia', time: '12 hours ago' },
+      { name: 'Sophia T.', text: 'Amazing accuracy! Everything it said about my leadership archetype was true. Great investment in self-discovery.', city: 'Berlin, Germany', time: '1 day ago' },
+      { name: 'James W.', text: 'The detailed report helped me understand my leadership approach better. Very insightful!', city: 'Los Angeles, USA', time: '2 days ago' },
       { name: 'Olivia H.', text: 'I was skeptical at first, but the results were spot-on. Highly recommend to everyone!', city: 'Chicago, USA', time: '3 days ago' },
-      { name: 'Noah B.', text: 'Best creativity test I\'ve taken. The career recommendations were exactly what I needed.', city: 'Miami, USA', time: '4 days ago' },
+      { name: 'Noah B.', text: 'Best leadership test I\'ve taken. The career recommendations were exactly what I needed.', city: 'Miami, USA', time: '4 days ago' },
       { name: 'Isabella S.', text: 'The analysis was incredibly detailed and accurate. It helped me understand myself better.', city: 'Seattle, USA', time: '5 days ago' },
     ],
     tr: [
       { name: 'Rüya G.', text: 'Hayata bakış açımı yeniden düşünmemi sağladı. Sonuçlar gerçekten çok doğruydu.', city: 'İzmir, Türkiye', time: '3 saat önce' },
       { name: 'Ahmet C.', text: 'Sadece bir testte bu kadar netlik. Her kuruşuna değer.', city: 'Ankara, Türkiye', time: '6 saat önce' },
-      { name: 'Abigail Y.', text: 'Her şey göz önünde bulundurulduğunda, buna değer. Yaratıcılık analizi çok detaylı.', city: 'İstanbul, Türkiye', time: '9 saat önce' },
-      { name: 'Mehmet D.', text: 'Yaratıcı güçlü yönlerimi ve nasıl kullanacağımı nihayet anladım. Kesinlikle tavsiye ederim!', city: 'Bursa, Türkiye', time: '1 gün önce' },
-      { name: 'Zeynep K.', text: 'Aldığım en kapsamlı yaratıcılık testi. Sonuçlar gerçekten göz açıcıydı.', city: 'Antalya, Türkiye', time: '2 gün önce' },
-      { name: 'Can Y.', text: 'Detaylı rapor yaratıcı sürecimi daha iyi anlamama yardımcı oldu. Çok içgörülü!', city: 'Gaziantep, Türkiye', time: '3 gün önce' },
+      { name: 'Abigail Y.', text: 'Her şey göz önünde bulundurulduğunda, buna değer. Liderlik analizi çok detaylı.', city: 'İstanbul, Türkiye', time: '9 saat önce' },
+      { name: 'Mehmet D.', text: 'Liderlik tarzımı ve nasıl kullanacağımı nihayet anladım. Kesinlikle tavsiye ederim!', city: 'Bursa, Türkiye', time: '1 gün önce' },
+      { name: 'Zeynep K.', text: 'Aldığım en kapsamlı liderlik testi. Sonuçlar gerçekten göz açıcıydı.', city: 'Antalya, Türkiye', time: '2 gün önce' },
+      { name: 'Can Y.', text: 'Detaylı rapor liderlik yaklaşımımı daha iyi anlamama yardımcı oldu. Çok içgörülü!', city: 'Gaziantep, Türkiye', time: '3 gün önce' },
       { name: 'Elif M.', text: 'Başta şüpheliydim ama sonuçlar çok doğruydu. Herkese kesinlikle tavsiye ederim!', city: 'Konya, Türkiye', time: '4 gün önce' },
-      { name: 'Burak A.', text: 'Aldığım en iyi yaratıcılık testi. Kariyer önerileri tam ihtiyacım olan şeydi.', city: 'Adana, Türkiye', time: '5 gün önce' },
+      { name: 'Burak A.', text: 'Aldığım en iyi liderlik testi. Kariyer önerileri tam ihtiyacım olan şeydi.', city: 'Adana, Türkiye', time: '5 gün önce' },
       { name: 'Selin N.', text: 'Analiz inanılmaz derecede detaylı ve doğruydu. Kendimi daha iyi anlamama yardımcı oldu.', city: 'Trabzon, Türkiye', time: '6 gün önce' },
     ]
   };
@@ -449,9 +449,9 @@ export default function DepressionPaymentPage() {
     if (resultData?.title) {
       return resultData.title;
     }
-    if (resultLevel === 'excellent') return 'Creative Thinker – The Innovative Mind';
-    if (resultLevel === 'good') return 'Creative Thinker – The Adaptive Innovator';
-    return 'Creative Thinker – The Emerging Innovator';
+    if (resultLevel === 'excellent') return 'Visionary Leader – The Strategic Architect';
+    if (resultLevel === 'good') return 'Strategic Leader – The Collaborative Mentor';
+    return 'Emerging Leader – The Developing Visionary';
   };
 
   const getResultEmojis = () => {
@@ -703,7 +703,7 @@ export default function DepressionPaymentPage() {
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif',
               }}
             >
-              Unlock your full creative potential — AI has analyzed your answers and crafted a detailed insight just for you.
+              Unlock your full leadership potential — AI has analyzed your answers and crafted a detailed insight just for you.
             </motion.p>
 
             {/* Main CTA Button */}
@@ -808,7 +808,7 @@ export default function DepressionPaymentPage() {
                 marginBottom: '8px',
                 textShadow: '0 2px 8px rgba(255, 105, 180, 0.3)',
               }}>
-                Your Inner Balance Journey
+                Your Detailed Leadership Archetype Result
               </h2>
 
               {/* Decorative Line */}
@@ -841,7 +841,7 @@ export default function DepressionPaymentPage() {
                     filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
                   }}
                 >
-                  🌸
+                  👑
                 </motion.span>
                 <span style={{
                   flex: 1,
@@ -1314,7 +1314,7 @@ export default function DepressionPaymentPage() {
                 marginLeft: 'auto',
                 marginRight: 'auto',
               }}>
-                {getTranslation('tests.depression.payment.locked_subtext', 'Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.')}
+                {getTranslation('tests.leadershipArchetype.payment.locked_subtext', 'Your personalized insight is waiting — Discover your leadership strengths, growth areas, and unique leadership archetype.')}
               </p>
               <motion.button
                 onClick={() => {
@@ -1346,7 +1346,7 @@ export default function DepressionPaymentPage() {
                   gap: '8px',
                 }}
               >
-                🔓 {getTranslation('tests.depression.payment.unlock_button', 'Unlock Detailed Result')}
+                🔓 {getTranslation('tests.leadershipArchetype.payment.unlock_button', 'Unlock Detailed Result')}
               </motion.button>
             </motion.div>
           </motion.div>
@@ -1449,7 +1449,7 @@ export default function DepressionPaymentPage() {
             textAlign: 'center',
             marginBottom: '32px',
           }}>
-            {getTranslation('tests.depression.payment.why_trust', i18n.language === 'tr' ? 'Neden QuickIQ\'ya Güvenmelisiniz?' : 'Why Trust QuickIQ?')}
+            {getTranslation('tests.leadershipArchetype.payment.why_trust', i18n.language === 'tr' ? 'Neden QuickIQ\'ya Güvenmelisiniz?' : 'Why Trust QuickIQ?')}
           </h2>
           
           <div style={{
@@ -1461,18 +1461,18 @@ export default function DepressionPaymentPage() {
             {[
               {
                 icon: <Shield size={32} />,
-                title: getTranslation('tests.depression.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Yaratıcılık Analizi' : 'AI-Powered Creativity Analysis'),
-                desc: getTranslation('tests.depression.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla yaratıcı düşünme tarzınızın derinlemesine analizi.' : 'Deep analysis of your creative thinking style with advanced algorithms.'),
+                title: getTranslation('tests.leadershipArchetype.payment.trust_feature1_title', i18n.language === 'tr' ? 'Yapay Zeka Destekli Liderlik Analizi' : 'AI-Powered Leadership Analysis'),
+                desc: getTranslation('tests.leadershipArchetype.payment.trust_feature1_desc', i18n.language === 'tr' ? 'Gelişmiş algoritmalarla liderlik tarzınızın ve arketipinizin derinlemesine analizi.' : 'Deep analysis of your leadership style and archetype with advanced algorithms.'),
               },
               {
                 icon: <CheckCircle size={32} />,
-                title: getTranslation('tests.depression.payment.trust_feature2_title', i18n.language === 'tr' ? 'Uygulanabilir İçgörüler' : 'Actionable Insights'),
-                desc: getTranslation('tests.depression.payment.trust_feature2_desc', i18n.language === 'tr' ? 'Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.' : 'Practical advice you can use in real life.'),
+                title: getTranslation('tests.leadershipArchetype.payment.trust_feature2_title', i18n.language === 'tr' ? 'Uygulanabilir İçgörüler' : 'Actionable Insights'),
+                desc: getTranslation('tests.leadershipArchetype.payment.trust_feature2_desc', i18n.language === 'tr' ? 'Gerçek hayatta kullanabileceğiniz pratik tavsiyeler.' : 'Practical advice you can use in real life.'),
               },
               {
                 icon: <Lock size={32} />,
-                title: getTranslation('tests.depression.payment.trust_feature3_title', i18n.language === 'tr' ? 'Kişiselleştirilmiş Gelişim Planı' : 'Personalized Growth Plan'),
-                desc: getTranslation('tests.depression.payment.trust_feature3_desc', i18n.language === 'tr' ? 'Size özel hazırlanmış kapsamlı gelişim stratejisi.' : 'Comprehensive growth strategy tailored just for you.'),
+                title: getTranslation('tests.leadershipArchetype.payment.trust_feature3_title', i18n.language === 'tr' ? 'Kişiselleştirilmiş Gelişim Planı' : 'Personalized Growth Plan'),
+                desc: getTranslation('tests.leadershipArchetype.payment.trust_feature3_desc', i18n.language === 'tr' ? 'Size özel hazırlanmış kapsamlı gelişim stratejisi.' : 'Comprehensive growth strategy tailored just for you.'),
               },
             ].map((feature, index) => (
               <motion.div
@@ -1546,7 +1546,7 @@ export default function DepressionPaymentPage() {
             textAlign: 'center',
             marginBottom: '8px',
           }}>
-            {getTranslation('tests.depression.payment.reviews', i18n.language === 'tr' ? 'Yorumlar' : 'Reviews')}
+            {getTranslation('tests.leadershipArchetype.payment.reviews', i18n.language === 'tr' ? 'Yorumlar' : 'Reviews')}
           </h2>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',
@@ -1554,7 +1554,7 @@ export default function DepressionPaymentPage() {
             textAlign: 'center',
             marginBottom: '32px',
           }}>
-            {getTranslation('tests.depression.payment.reviews_subtitle', i18n.language === 'tr' ? 'Mükemmel ⭐ 4.7 puan — 1769 yorum' : 'Excellent ⭐ 4.7 rating — 1769 reviews')}
+            {getTranslation('tests.leadershipArchetype.payment.reviews_subtitle', i18n.language === 'tr' ? 'Mükemmel ⭐ 4.7 puan — 1769 yorum' : 'Excellent ⭐ 4.7 rating — 1769 reviews')}
           </p>
 
           <div style={{
@@ -1615,7 +1615,7 @@ export default function DepressionPaymentPage() {
                       fontWeight: '600',
                       marginBottom: '12px',
                     }}>
-                      {getTranslation('tests.depression.payment.verified_customer', i18n.language === 'tr' ? 'Doğrulanmış Müşteri' : 'Verified Customer')}
+                      {getTranslation('tests.leadershipArchetype.payment.verified_customer', i18n.language === 'tr' ? 'Doğrulanmış Müşteri' : 'Verified Customer')}
                     </p>
                     <p style={{
                       fontSize: '14px',
@@ -3300,11 +3300,72 @@ export default function DepressionPaymentPage() {
           color: '#666',
           lineHeight: '1.6',
         }}>
-          {getTranslation('tests.depression.payment.footer', i18n.language === 'tr'
+          {getTranslation('tests.leadershipArchetype.payment.footer', i18n.language === 'tr'
             ? 'Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur.'
             : 'You\'ll be redirected to your results after successful payment. Your data remains private.')}
         </p>
       </motion.div>
+
+      {/* Developer Shortcut Block */}
+      {process.env.NODE_ENV === 'development' && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          style={{
+            textAlign: 'center',
+            padding: '24px',
+            background: 'rgba(255, 193, 7, 0.1)',
+            borderRadius: '16px',
+            marginTop: '48px',
+            marginBottom: '32px',
+            border: '2px dashed rgba(255, 193, 7, 0.3)',
+          }}
+        >
+          <h3 style={{
+            fontSize: isMobile ? '18px' : '20px',
+            fontWeight: '700',
+            color: '#ff9800',
+            marginBottom: '16px',
+          }}>
+            🧠 Developer Result Shortcuts
+          </h3>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '12px',
+            justifyContent: 'center',
+          }}>
+            {['excellent', 'good', 'developing'].map((level) => (
+              <Link
+                key={level}
+                to={`/test/leadership-archetype/unlock/${level}`}
+                style={{
+                  padding: '8px 16px',
+                  background: 'rgba(255, 193, 7, 0.2)',
+                  borderRadius: '8px',
+                  color: '#ff9800',
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  textDecoration: 'none',
+                  border: '1px solid rgba(255, 193, 7, 0.4)',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 193, 7, 0.3)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 193, 7, 0.2)';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                {level.charAt(0).toUpperCase() + level.slice(1)}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </main>
   );
 }

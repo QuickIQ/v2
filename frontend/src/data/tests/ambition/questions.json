@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "text": "I set goals that push me beyond my current comfort zone instead of staying within familiar limits.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I actively seek opportunities to advance my career or personal growth instead of waiting for them to come to me.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "I visualize achieving significant accomplishments in my future instead of accepting my current situation as permanent.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I invest time and effort in developing new skills that will help me reach higher levels instead of maintaining only current abilities.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "text": "I take calculated risks to pursue bigger opportunities instead of always choosing the safest path.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I feel energized and motivated when working toward challenging objectives instead of feeling overwhelmed or discouraged.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "I regularly review and adjust my plans to ensure I'm progressing toward my long-term vision instead of drifting without direction.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I seek feedback and mentorship from people who have achieved what I aspire to instead of working in isolation.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "text": "I prioritize activities that contribute to my long-term goals over immediate comfort or entertainment.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I feel dissatisfied with maintaining the status quo and actively work to improve my circumstances.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "I network and build relationships with people who can help me advance instead of limiting my connections to my current circle.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I view setbacks as learning opportunities that bring me closer to my goals instead of seeing them as reasons to give up.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I consistently push myself to exceed expectations rather than meeting only the minimum requirements.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I make decisions based on how they align with my long-term aspirations instead of choosing what feels easiest in the moment.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I actively research and explore paths to achieve higher levels of success in my field instead of accepting current limitations.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I feel a strong drive to accomplish something meaningful and significant in my lifetime.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I invest in my personal and professional development even when it requires sacrificing short-term comfort.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I set deadlines and milestones to track my progress toward ambitious goals instead of working without structure.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I feel excited and motivated when I think about the possibilities of what I could achieve instead of feeling anxious or overwhelmed.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I actively seek out challenges that will help me grow and advance instead of avoiding difficult situations.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  }
+]
+
+

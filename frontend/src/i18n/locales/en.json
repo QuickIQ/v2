@@ -274,6 +274,1095 @@
           }
         }
       },
+      "decisionMaking": {
+        "card": {
+          "title": "Decision Making",
+          "subtitle": "Do you make decisions with logic or intuition?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your decision-making style and approach...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Decision Making Test results below and explore how you approach decisions.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your decision-making style, strengths, and growth areas.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Decision Making Analysis",
+          "trust_feature1_desc": "Deep analysis of your decision-making style and approach with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "Secure payment powered by Stripe. Your information is encrypted and protected."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "leadershipArchetype": {
+        "card": {
+          "title": "Leadership Archetype",
+          "subtitle": "What is your leadership style: visionary, strategist, or mentor?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your leadership style and archetype...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Leadership Archetype Test results below and explore your leadership style.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your leadership archetype, strengths, and growth areas.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Leadership Analysis",
+          "trust_feature1_desc": "Deep analysis of your leadership style and archetype with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "negotiationSkills": {
+        "card": {
+          "title": "Negotiation Skills",
+          "subtitle": "Are you persuading or compromising?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your negotiation style and approach...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Negotiation Skills Test results below and explore your negotiation style.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your negotiation skills, strengths, and growth areas.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Negotiation Analysis",
+          "trust_feature1_desc": "Deep analysis of your negotiation style and approach with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "teamPlayer": {
+        "card": {
+          "title": "Team Player",
+          "subtitle": "What role are you in the team: leader, strategist, supporter?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your team player role and collaboration style...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Team Player Test results below and explore your collaboration patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your team player strengths, growth areas, and collaboration patterns.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Team Analysis",
+          "trust_feature1_desc": "Deep analysis of your team player role and collaboration style with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "success": {
+        "card": {
+          "title": "Success",
+          "subtitle": "Is success a goal or identity for you?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your success mindset and achievement patterns...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Success Test results below and explore your achievement patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your success mindset, growth areas, and achievement patterns.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Success Analysis",
+          "trust_feature1_desc": "Deep analysis of your success mindset and achievement patterns with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "perfectionism": {
+        "card": {
+          "title": "Perfectionism",
+          "subtitle": "Is perfectionism moving you forward or slowing you down?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your perfectionism patterns and achievement balance...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Perfectionism Test results below and explore your achievement patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your perfectionism patterns, growth areas, and achievement balance.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Perfectionism Analysis",
+          "trust_feature1_desc": "Deep analysis of your perfectionism patterns and achievement balance with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "ambition": {
+        "card": {
+          "title": "Ambition",
+          "subtitle": "How far are you really ready to go?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your ambition patterns and drive balance...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Ambition Test results below and explore your drive patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your ambition patterns, growth areas, and drive balance.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Ambition Analysis",
+          "trust_feature1_desc": "Deep analysis of your ambition patterns and drive balance with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "criticism": {
+        "card": {
+          "title": "Criticism",
+          "subtitle": "When criticized, do you get defensive or do you grow?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your criticism response patterns and growth mindset...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Criticism Test results below and explore your feedback response patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your criticism response patterns, growth areas, and feedback balance.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Criticism Analysis",
+          "trust_feature1_desc": "Deep analysis of your criticism response patterns and growth mindset with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
+      "stressManagement": {
+        "card": {
+          "title": "Stress Management",
+          "subtitle": "Does your performance increase under pressure, or do you freeze?"
+        },
+        "landing": {
+          "title": "Before You Begin",
+          "subtitle": "Answer honestly — this test is for your self-discovery, not for judgment.",
+          "description": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+          "reminder": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+          "questions": "Questions",
+          "minutes": "Minutes",
+          "startButton": "Continue"
+        },
+        "questions": {
+          "title": "Question {{current}} of {{total}}"
+        },
+        "calculating": {
+          "title": "Analyzing your stress management patterns and resilience...",
+          "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
+        },
+        "email": {
+          "email_label": "Email Address",
+          "email_placeholder": "your.email@example.com",
+          "email_required": "Please enter your email address.",
+          "email_invalid": "Please enter a valid email address with a recognized domain (e.g., gmail.com, hotmail.com).",
+          "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
+          "consent_required": "Please accept the Terms and Privacy Policy.",
+          "continue_button": "Continue",
+          "privacy": "Your data will remain private and never shared."
+        },
+        "payment": {
+          "intro": "Unlock your personalized Stress Management Test results below and explore your resilience patterns.",
+          "recent_results": "Recent Results",
+          "locked_subtext": "Your personalized insight is waiting — Discover your stress management strengths, growth areas, and resilience patterns.",
+          "unlock_button": "Unlock Detailed Result",
+          "why_trust": "Why Trust QuickIQ?",
+          "trust_feature1_title": "AI-Powered Stress Analysis",
+          "trust_feature1_desc": "Deep analysis of your stress management patterns and resilience with advanced algorithms.",
+          "trust_feature2_title": "Actionable Insights",
+          "trust_feature2_desc": "Practical advice you can use in real life.",
+          "trust_feature3_title": "Personalized Growth Plan",
+          "trust_feature3_desc": "Comprehensive growth strategy tailored just for you.",
+          "reviews": "Reviews",
+          "reviews_subtitle": "Excellent ⭐ 4.7 rating — 1769 reviews",
+          "verified_customer": "Verified Customer",
+          "footer": "You'll be redirected to your results after successful payment. Your data remains private."
+        },
+        "errors": {
+          "load_questions": "Failed to load questions. Please try again.",
+          "load_result": "Failed to load results. Please try again."
+        },
+        "warnings": {
+          "leave_page": "If you leave this page, your current test progress will be lost. Continue?"
+        },
+        "result": {
+          "excellent": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "good": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          },
+          "developing": {
+            "title": "",
+            "summary": "",
+            "insights": [],
+            "strengths": {
+              "title": "Your Strengths",
+              "text": ""
+            },
+            "growthAreas": {
+              "title": "Growth Areas",
+              "text": ""
+            },
+            "practicalApplications": {
+              "title": "Practical Applications",
+              "text": ""
+            },
+            "futurePotential": {
+              "title": "Future Potential",
+              "text": ""
+            }
+          }
+        }
+      },
       "depression": {
         "card": {
           "title": "Depression Test",

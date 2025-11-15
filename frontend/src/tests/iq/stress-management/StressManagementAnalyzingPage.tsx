@@ -141,7 +141,7 @@ function StressManagementAnalyzingPage({ onComplete }: Props) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -153,9 +153,9 @@ function StressManagementAnalyzingPage({ onComplete }: Props) {
       <motion.div
         animate={{
           background: [
-            'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
-            'linear-gradient(135deg, #FFE8D6 0%, #FFF4E6 100%)',
-            'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 100%)',
+            'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+            'linear-gradient(135deg, #FFF4F0 0%, #FBEAFF 100%)',
+            'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
           ],
         }}
         transition={{
@@ -462,11 +462,11 @@ function StressManagementAnalyzingPage({ onComplete }: Props) {
               }}>
                 {popupStep === 35
                   ? (i18n.language === 'tr'
-                      ? 'Baskı altında performansınız artar mı?'
-                      : 'Does your performance increase under pressure?')
+                      ? 'Kendinizi sürekli yorgun hissediyor musunuz?'
+                      : 'Do you constantly feel tired?')
                   : (i18n.language === 'tr'
-                      ? 'Stresli durumlarda donakalır mısınız?'
-                      : 'Do you freeze in stressful situations?')}
+                      ? 'Günlük aktivitelerden zevk almakta zorlanıyor musunuz?'
+                      : 'Do you struggle to find joy in daily activities?')}
               </p>
 
               {/* Buttons */}
@@ -506,7 +506,7 @@ function StressManagementAnalyzingPage({ onComplete }: Props) {
                     flex: 1,
                     minWidth: '120px',
                     padding: '12px 20px',
-                    background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%)',
+                    background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
                     border: 'none',
                     borderRadius: '12px',
                     color: 'white',

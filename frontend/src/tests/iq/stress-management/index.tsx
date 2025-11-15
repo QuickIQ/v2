@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
-import { Sparkles, Star } from 'lucide-react';
+import { Sparkles, HeartPulse } from 'lucide-react';
 import '../../../App.css';
 
 interface Props {
@@ -21,7 +21,7 @@ function StressManagementIntro({ onStart }: Props) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 50%, #FFF0E0 100%)',
+      background: 'linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)',
       paddingTop: isMobile ? '100px' : '120px',
       paddingBottom: isMobile ? '40px' : '48px',
       paddingLeft: isMobile ? '20px' : '40px',
@@ -38,10 +38,10 @@ function StressManagementIntro({ onStart }: Props) {
       <motion.div
         animate={{
           background: [
-            'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 50%, #FFF0E0 100%)',
-            'linear-gradient(135deg, #FFE8D6 0%, #FFF0E0 50%, #FFF4E6 100%)',
-            'linear-gradient(135deg, #FFF0E0 0%, #FFF4E6 50%, #FFE8D6 100%)',
-            'linear-gradient(135deg, #FFF4E6 0%, #FFE8D6 50%, #FFF0E0 100%)',
+            'linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)',
+            'linear-gradient(135deg, #FFE4E1 0%, #FFF8F0 50%, #FFF0F5 100%)',
+            'linear-gradient(135deg, #FFF8F0 0%, #FFF0F5 50%, #FFE4E1 100%)',
+            'linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)',
           ],
         }}
         transition={{
@@ -74,7 +74,7 @@ function StressManagementIntro({ onStart }: Props) {
             fontSize: isMobile ? '36px' : '48px',
             marginBottom: '16px',
             fontWeight: 'bold',
-            background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%)',
+            background: 'linear-gradient(135deg, #FF69B4 0%, #FFB6C1 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -102,7 +102,13 @@ function StressManagementIntro({ onStart }: Props) {
               alignItems: 'center',
             }}
           >
-            ⚡
+            <HeartPulse 
+              size={isMobile ? 32 : 40} 
+              style={{ 
+                color: '#FF69B4',
+                filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
+              }} 
+            />
           </motion.div>
         </motion.h1>
 
@@ -131,7 +137,7 @@ function StressManagementIntro({ onStart }: Props) {
           whileHover={{
             scale: 1.05,
             y: -10,
-            boxShadow: '0 16px 48px rgba(255, 107, 53, 0.3), 0 0 40px rgba(255, 255, 255, 0.5)',
+            boxShadow: '0 16px 48px rgba(255, 105, 180, 0.3), 0 0 40px rgba(255, 255, 255, 0.5)',
             transition: { duration: 0.15, ease: 'easeOut' }
           }}
           style={{
@@ -187,13 +193,13 @@ function StressManagementIntro({ onStart }: Props) {
           <div style={{
             flex: 1,
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(255, 105, 180, 0.3), transparent)',
           }} />
-          <Sparkles size={20} style={{ color: '#FF6B35', opacity: 0.6 }} />
+          <Sparkles size={20} style={{ color: '#ff69b4', opacity: 0.6 }} />
           <div style={{
             flex: 1,
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(255, 105, 180, 0.3), transparent)',
           }} />
         </motion.div>
 
@@ -218,13 +224,13 @@ function StressManagementIntro({ onStart }: Props) {
               WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '16px',
               padding: isMobile ? '24px' : '32px',
-              boxShadow: '0 4px 16px rgba(255, 107, 53, 0.15)',
+              boxShadow: '0 4px 16px rgba(255, 105, 180, 0.15)',
               border: '1px solid rgba(255, 255, 255, 0.3)',
               flex: 1,
               maxWidth: isMobile ? '100%' : '200px',
             }}
           >
-            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#FF6B35', marginBottom: '8px' }}>
+            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#ff69b4', marginBottom: '8px' }}>
               20
             </div>
             <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
@@ -239,13 +245,13 @@ function StressManagementIntro({ onStart }: Props) {
               WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '16px',
               padding: isMobile ? '24px' : '32px',
-              boxShadow: '0 4px 16px rgba(255, 107, 53, 0.15)',
+              boxShadow: '0 4px 16px rgba(255, 105, 180, 0.15)',
               border: '1px solid rgba(255, 255, 255, 0.3)',
               flex: 1,
               maxWidth: isMobile ? '100%' : '200px',
             }}
           >
-            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#FF6B35', marginBottom: '8px' }}>
+            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: '#ff69b4', marginBottom: '8px' }}>
               10
             </div>
             <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
@@ -274,20 +280,20 @@ function StressManagementIntro({ onStart }: Props) {
             whileHover={{ 
               scale: 1.15,
               y: -8,
-              boxShadow: '0 16px 50px rgba(255, 107, 53, 0.7), 0 0 60px rgba(255, 140, 66, 0.6), 0 0 80px rgba(255, 107, 53, 0.4)',
+              boxShadow: '0 16px 50px rgba(255, 105, 180, 0.7), 0 0 60px rgba(255, 182, 193, 0.6), 0 0 80px rgba(255, 105, 180, 0.4)',
               transition: { duration: 0.15, ease: 'easeOut' }
             }}
             whileTap={{ scale: 0.98 }}
             style={{
               fontSize: isMobile ? '18px' : '20px',
               padding: isMobile ? '18px 48px' : '20px 56px',
-              background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%)',
+              background: 'linear-gradient(135deg, #ff69b4 0%, #ffb6c1 100%)',
               border: 'none',
               borderRadius: '16px',
               color: 'white',
               fontWeight: 'bold',
               cursor: 'pointer',
-              boxShadow: '0 4px 20px rgba(255, 107, 53, 0.4)',
+              boxShadow: '0 4px 20px rgba(255, 105, 180, 0.4)',
               transition: 'all 0.15s ease-out',
               position: 'relative',
               overflow: 'hidden',
@@ -297,9 +303,9 @@ function StressManagementIntro({ onStart }: Props) {
             <motion.span
               animate={{
                 boxShadow: [
-                  '0 0 0 0 rgba(255, 107, 53, 0.7)',
-                  '0 0 0 10px rgba(255, 107, 53, 0)',
-                  '0 0 0 0 rgba(255, 107, 53, 0)',
+                  '0 0 0 0 rgba(255, 105, 180, 0.7)',
+                  '0 0 0 10px rgba(255, 105, 180, 0)',
+                  '0 0 0 0 rgba(255, 105, 180, 0)',
                 ],
               }}
               transition={{

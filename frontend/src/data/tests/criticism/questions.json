@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "text": "When someone criticizes my work, I immediately look for ways to improve instead of feeling attacked.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I ask clarifying questions when receiving feedback to better understand the criticism instead of dismissing it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "I view criticism as valuable information that helps me grow instead of seeing it as a personal attack.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I take time to reflect on feedback before responding instead of reacting defensively immediately.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "text": "I separate the criticism from my self-worth and focus on the specific behavior or outcome being addressed.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I actively seek feedback from others to identify areas for improvement instead of avoiding it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "I thank people for their feedback even when it's difficult to hear instead of becoming defensive.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I look for patterns in feedback from multiple sources to identify genuine areas for growth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "text": "I implement changes based on constructive criticism instead of ignoring or resisting feedback.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I feel curious rather than defensive when someone points out something I could improve.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "I consider the source and context of criticism to extract useful insights instead of dismissing it entirely.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I use criticism as motivation to improve my performance instead of letting it discourage me.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I remain calm and composed when receiving negative feedback instead of becoming emotional or reactive.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I focus on what I can learn from criticism rather than on defending my actions or decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I see criticism as an opportunity to strengthen relationships through open communication instead of creating distance.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I acknowledge valid points in criticism even when it's uncomfortable instead of finding excuses.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I use criticism to set specific goals for improvement instead of feeling defeated by it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I appreciate people who give me honest feedback because it helps me develop instead of avoiding them.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I reflect on past criticism to track my growth and improvement over time instead of forgetting it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I view criticism as a sign that others care about my development rather than as an attack on my character.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  }
+]
+
+

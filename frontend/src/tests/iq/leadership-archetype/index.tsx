@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
-import { Sparkles, Star } from 'lucide-react';
+import { Sparkles, Crown } from 'lucide-react';
 import '../../../App.css';
 
 interface Props {
   onStart: () => void;
 }
 
-function DepressionIntro({ onStart }: Props) {
+function LeadershipArchetypeIntro({ onStart }: Props) {
   const { t } = useTranslation();
   const isMobile = useMobile();
   
@@ -85,7 +85,7 @@ function DepressionIntro({ onStart }: Props) {
             gap: '12px',
           }}
         >
-          {getTranslation('tests.depression.landing.title', 'Before You Begin')}
+          {getTranslation('tests.leadershipArchetype.landing.title', 'Before You Begin')}
           <motion.div
             animate={{
               scale: [1, 1.2, 1],
@@ -102,12 +102,11 @@ function DepressionIntro({ onStart }: Props) {
               alignItems: 'center',
             }}
           >
-            <Star 
+            <Crown 
               size={isMobile ? 32 : 40} 
               style={{ 
                 color: '#FF69B4',
                 filter: 'drop-shadow(0 0 8px rgba(255, 105, 180, 0.8))',
-                fill: '#FF69B4',
               }} 
             />
           </motion.div>
@@ -127,7 +126,7 @@ function DepressionIntro({ onStart }: Props) {
             textAlign: 'center',
           }}
         >
-          {getTranslation('tests.depression.landing.subtitle', 'Answer honestly — this test is for your self-discovery, not for judgment.')}
+          {getTranslation('tests.leadershipArchetype.landing.subtitle', 'Answer honestly — this test is for your self-discovery, not for judgment.')}
         </motion.p>
 
         {/* Description Card */}
@@ -164,7 +163,7 @@ function DepressionIntro({ onStart }: Props) {
             margin: 0,
             marginBottom: '16px',
           }}>
-            {getTranslation('tests.depression.landing.description', 'Be as genuine as possible. Your responses are not stored or shared — they\'re only used to calculate your result.')}
+            {getTranslation('tests.leadershipArchetype.landing.description', 'Be as genuine as possible. Your responses are not stored or shared — they\'re only used to calculate your result.')}
           </p>
           <p style={{
             fontSize: isMobile ? '14px' : '16px',
@@ -174,7 +173,7 @@ function DepressionIntro({ onStart }: Props) {
             margin: 0,
             fontStyle: 'italic',
           }}>
-            {getTranslation('tests.depression.landing.reminder', 'You\'ll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.')}
+            {getTranslation('tests.leadershipArchetype.landing.reminder', 'You\'ll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.')}
           </p>
         </motion.div>
 
@@ -235,7 +234,7 @@ function DepressionIntro({ onStart }: Props) {
               20
             </div>
             <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
-              {getTranslation('tests.depression.landing.questions', 'Questions')}
+              {getTranslation('tests.leadershipArchetype.landing.questions', 'Questions')}
             </div>
           </motion.div>
           <motion.div
@@ -256,7 +255,7 @@ function DepressionIntro({ onStart }: Props) {
               10
             </div>
             <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
-              {getTranslation('tests.depression.landing.minutes', 'Minutes')}
+              {getTranslation('tests.leadershipArchetype.landing.minutes', 'Minutes')}
             </div>
           </motion.div>
         </motion.div>
@@ -325,7 +324,7 @@ function DepressionIntro({ onStart }: Props) {
                 pointerEvents: 'none',
               }}
             />
-            {getTranslation('tests.depression.landing.startButton', 'Continue')}
+            {getTranslation('tests.leadershipArchetype.landing.startButton', 'Continue')}
           </motion.button>
         </motion.div>
       </div>
@@ -333,5 +332,5 @@ function DepressionIntro({ onStart }: Props) {
   );
 }
 
-export default DepressionIntro;
+export default LeadershipArchetypeIntro;
 

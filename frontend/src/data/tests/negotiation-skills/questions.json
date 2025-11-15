@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "text": "I prepare thoroughly before entering negotiations instead of improvising on the spot.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I listen actively to understand the other party's needs instead of focusing only on my own goals.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "I find win-win solutions that benefit both parties instead of pursuing only my interests.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I remain calm and composed under pressure during negotiations instead of becoming emotional.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "text": "I ask clarifying questions to understand the other party's position instead of making assumptions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I can walk away from a deal if it doesn't meet my minimum requirements instead of accepting unfavorable terms.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "I build rapport and trust with the other party before discussing terms instead of jumping straight to demands.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I use objective criteria and data to support my position instead of relying solely on emotions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "text": "I can identify and address the other party's underlying concerns instead of focusing only on surface issues.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I make concessions strategically rather than giving in too quickly to avoid conflict.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "I communicate my needs clearly and assertively instead of being vague or passive.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I can read body language and non-verbal cues during negotiations instead of missing important signals.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I maintain my boundaries and don't compromise on core values instead of agreeing to anything to close a deal.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I can think creatively to find alternative solutions when negotiations stall instead of getting stuck.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I follow through on commitments made during negotiations instead of changing terms afterward.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I can handle objections and resistance without becoming defensive instead of taking criticism personally.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I know my BATNA (Best Alternative To Negotiated Agreement) before starting negotiations instead of negotiating blindly.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I can adapt my negotiation style to different situations and personalities instead of using the same approach always.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I document agreements clearly to avoid misunderstandings instead of relying on verbal commitments alone.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I view negotiations as collaborative problem-solving rather than competitive battles instead of seeing the other party as an adversary.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  }
+]
+
+

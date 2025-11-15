@@ -6,7 +6,7 @@ import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
-import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, Heart, Lock, Database, Lightbulb, Flower2, Target, MessageSquare, Puzzle, Briefcase, Compass, Timer } from 'lucide-react';
+import { Brain, Clock, HelpCircle, TrendingUp, Users, Zap, Heart, Lock, Database, Lightbulb, Flower2, Target, MessageSquare, Puzzle, Briefcase, Compass, Timer, Crown, Scale, UsersRound, HeartPulse, Trophy } from 'lucide-react';
 import { useMobile } from '../hooks/useMobile';
 import { useTestsCompletedCounter } from '../hooks/useTestsCompletedCounter';
 import { usePersonalityTestStore } from '../store/personalityTestStore';
@@ -2494,6 +2494,1325 @@ function Home() {
                 </div>
               </motion.div>
             </Link>
+
+            {/* Decision Making Test Card */}
+            <Link
+              to="/test/decision-making"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="decision-making-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E8F0FF 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(108, 99, 255, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
+                  borderColor: 'rgba(108, 99, 255, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ marginBottom: '24px' }}>
+                    <h3 style={{ 
+                      fontSize: isMobile ? '22.8px' : '30.4px', 
+                      marginBottom: isMobile ? '8px' : '12px', 
+                      fontWeight: '700', 
+                      color: '#1a1a1a',
+                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      flexWrap: 'wrap',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                      >
+                        <Scale 
+                          size={isMobile ? 28 : 36}
+                          style={{ 
+                            color: '#6c63ff',
+                            filter: 'drop-shadow(0 2px 8px rgba(108, 99, 255, 0.4))',
+                          }}
+                        />
+                      </motion.div>
+                      Decision Making
+                    </h3>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#6c63ff' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#6c63ff' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Kararlarını mantıkla mı, içgüdüyle mi alıyorsun?' : 'Do you make decisions with logic or intuition?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      marginTop: 'auto',
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(108, 99, 255, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(108, 99, 255, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Leadership Archetype Test Card */}
+            <Link
+              to="/test/leadership-archetype"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="leadership-archetype-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E8F0FF 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(108, 99, 255, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
+                  borderColor: 'rgba(108, 99, 255, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Crown 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#6c63ff',
+                            filter: 'drop-shadow(0 0 8px rgba(108, 99, 255, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#6c63ff',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Leadership Archetype
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#6c63ff' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#6c63ff' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Liderlik tarzın ne: vizyoner, stratejist, mentor mu?' : 'What is your leadership style: visionary, strategist, or mentor?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(108, 99, 255, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(108, 99, 255, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Negotiation Skills Test Card */}
+            <Link
+              to="/test/negotiation-skills"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="negotiation-skills-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E8F0FF 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(108, 99, 255, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)',
+                  borderColor: 'rgba(108, 99, 255, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <UsersRound 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#6c63ff',
+                            filter: 'drop-shadow(0 0 8px rgba(108, 99, 255, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#6c63ff',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Negotiation Skills
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#6c63ff' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#6c63ff' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'İkna mı ediyorsun, taviz mi veriyorsun?' : 'Are you persuading or compromising?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(108, 99, 255, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(108, 99, 255, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Stress Management Test Card */}
+            <Link
+              to="/test/stress-management"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="stress-management-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E8F5E9 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(76, 175, 80, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(76, 175, 80, 0.35), 0 0 0 1px rgba(76, 175, 80, 0.25), 0 0 80px rgba(129, 199, 132, 0.3)',
+                  borderColor: 'rgba(76, 175, 80, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(76, 175, 80, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <HeartPulse 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#4CAF50',
+                            filter: 'drop-shadow(0 0 8px rgba(76, 175, 80, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#4CAF50',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Stress Management
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#4CAF50' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#4CAF50' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Baskı altında performansın mı artar, yoksa donakalır mısın?' : 'Does your performance increase under pressure, or do you freeze?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: 'linear-gradient(135deg, #4CAF50 0%, #81C784 100%)',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(76, 175, 80, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(76, 175, 80, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Team Player Test Card */}
+            <Link
+              to="/test/team-player"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="team-player-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #FFF3E0 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(255, 152, 0, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(255, 152, 0, 0.35), 0 0 0 1px rgba(255, 152, 0, 0.25), 0 0 80px rgba(255, 183, 77, 0.3)',
+                  borderColor: 'rgba(255, 152, 0, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(255, 152, 0, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Users 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#FF9800',
+                            filter: 'drop-shadow(0 0 8px rgba(255, 152, 0, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#FF9800',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Team Player
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#FF9800' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#FF9800' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Takımda hangi roldesin: lider, stratejist, destekçi mi?' : 'What role are you in the team: leader, strategist, supporter?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: '#FF9800',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(255, 152, 0, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(255, 152, 0, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Success Test Card */}
+            <Link
+              to="/test/success"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="success-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #FFF9E6 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(255, 193, 7, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(255, 193, 7, 0.35), 0 0 0 1px rgba(255, 193, 7, 0.25), 0 0 80px rgba(255, 224, 130, 0.3)',
+                  borderColor: 'rgba(255, 193, 7, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(255, 193, 7, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Trophy 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#FFC107',
+                            filter: 'drop-shadow(0 0 8px rgba(255, 193, 7, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#FFC107',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Success
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#FFC107' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#FFC107' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Başarı senin için hedef mi, kimlik mi?' : 'Is success a goal or identity for you?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: '#FFC107',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(255, 193, 7, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(255, 193, 7, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Perfectionism Test Card */}
+            <Link
+              to="/test/perfectionism"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="perfectionism-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #F3E5F5 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(156, 39, 176, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(156, 39, 176, 0.35), 0 0 0 1px rgba(156, 39, 176, 0.25), 0 0 80px rgba(186, 104, 200, 0.3)',
+                  borderColor: 'rgba(156, 39, 176, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(156, 39, 176, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Target 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#9C27B0',
+                            filter: 'drop-shadow(0 0 8px rgba(156, 39, 176, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#9C27B0',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Perfectionism
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#9C27B0' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#9C27B0' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Mükemmeliyet seni ileri mi taşıyor yoksa yavaşlatıyor mu?' : 'Is perfectionism moving you forward or slowing you down?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: '#9C27B0',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(156, 39, 176, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(156, 39, 176, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Ambition Test Card */}
+            <Link
+              to="/test/ambition"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="ambition-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #FFF4E6 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(255, 87, 34, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(255, 87, 34, 0.35), 0 0 0 1px rgba(255, 87, 34, 0.25), 0 0 80px rgba(255, 152, 112, 0.3)',
+                  borderColor: 'rgba(255, 87, 34, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(255, 87, 34, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <TrendingUp 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#FF5722',
+                            filter: 'drop-shadow(0 0 8px rgba(255, 87, 34, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#FF5722',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Ambition
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#FF5722' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#FF5722' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Ne kadar ileri gitmeye gerçekten hazırsın?' : 'How far are you really ready to go?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: '#FF5722',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(255, 87, 34, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(255, 87, 34, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Criticism Test Card */}
+            <Link
+              to="/test/criticism"
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+            >
+              <motion.div
+                className="criticism-test-card"
+                style={{
+                  cursor: 'pointer',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #E3F2FD 100%)',
+                  borderRadius: isMobile ? '16px' : '24px',
+                  padding: isMobile ? '24px' : '32px',
+                  border: '2px solid rgba(33, 150, 243, 0.15)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  height: '100%',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                transition={{ duration: 0.15, ease: 'easeOut' }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.05,
+                  boxShadow: '0 24px 60px rgba(33, 150, 243, 0.35), 0 0 0 1px rgba(33, 150, 243, 0.25), 0 0 80px rgba(100, 181, 246, 0.3)',
+                  borderColor: 'rgba(33, 150, 243, 0.4)',
+                }}
+              >
+                {/* Glow Effect Background */}
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: '-50%',
+                    left: '-50%',
+                    width: '200%',
+                    height: '200%',
+                    background: 'radial-gradient(circle, rgba(33, 150, 243, 0.18) 0%, transparent 70%)',
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  transition={{ duration: 0.15 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '8px' : '12px',
+                      marginBottom: isMobile ? '8px' : '12px',
+                    }}>
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          repeatDelay: 2,
+                          ease: 'easeInOut'
+                        }}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <MessageSquare 
+                          size={isMobile ? 28 : 34}
+                          style={{ 
+                            color: '#2196F3',
+                            filter: 'drop-shadow(0 0 8px rgba(33, 150, 243, 0.8))',
+                          }}
+                        />
+                      </motion.div>
+                      <h4 style={{
+                        fontWeight: '600',
+                        fontSize: isMobile ? '22px' : '26px',
+                        color: '#2196F3',
+                        whiteSpace: 'nowrap',
+                        margin: 0,
+                      }}>
+                        Criticism
+                      </h4>
+                    </div>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '14px' : '16px', 
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: isMobile ? '6px' : '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '8px',
+                    }}>
+                      <HelpCircle size={isMobile ? 16 : 18} style={{ color: '#2196F3' }} />
+                      <span>20 soru</span>
+                      <span style={{ margin: '0 4px' }}>-</span>
+                      <Clock size={isMobile ? 16 : 18} style={{ color: '#2196F3' }} />
+                      <span>10 dakika</span>
+                    </p>
+                    <p style={{ 
+                      color: '#666', 
+                      fontSize: isMobile ? '13px' : '15px', 
+                      lineHeight: '1.5',
+                      marginTop: '8px',
+                      marginBottom: '16px',
+                    }}>
+                      {i18n.language === 'tr' ? 'Eleştirildiğinde savunmaya mı geçiyorsun yoksa büyüyor musun?' : 'When criticized, do you get defensive or do you grow?'}
+                    </p>
+                  </div>
+                  
+                  {/* Start Button */}
+                  <motion.button
+                    style={{
+                      padding: isMobile ? '12px 20px' : '14px 24px',
+                      background: '#2196F3',
+                      border: 'none',
+                      borderRadius: '12px',
+                      color: 'white',
+                      fontWeight: '600',
+                      fontSize: isMobile ? '14px' : '16px',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 16px rgba(33, 150, 243, 0.3)',
+                      transition: 'all 0.15s ease-out',
+                      width: 'fit-content',
+                      alignSelf: 'center',
+                      marginTop: 'auto',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: '0 6px 20px rgba(33, 150, 243, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {i18n.language === 'tr' ? 'Teste Başla' : 'Start Test'}
+                  </motion.button>
+                </div>
+              </motion.div>
+            </Link>
           </div>
 
           <h2 style={{
@@ -3591,6 +4910,494 @@ function Home() {
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.color = '#00CED1';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Decision Making Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.0 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(108, 99, 255, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Decision Making Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/decision-making/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#6c63ff',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#5b56f0';
+                          e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#6c63ff';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Perfectionism Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.7 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(156, 39, 176, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Perfectionism Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/perfectionism/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#9C27B0',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#7B1FA2';
+                          e.currentTarget.style.background = 'rgba(156, 39, 176, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#9C27B0';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Ambition Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.8 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(255, 87, 34, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Ambition Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/ambition/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#FF5722',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#E64A19';
+                          e.currentTarget.style.background = 'rgba(255, 87, 34, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#FF5722';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Criticism Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.9 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(33, 150, 243, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Criticism Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/criticism/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#2196F3',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#1976D2';
+                          e.currentTarget.style.background = 'rgba(33, 150, 243, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#2196F3';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Team Player Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.3 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(255, 152, 0, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Team Player Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/team-player/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#FF9800',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#F57C00';
+                          e.currentTarget.style.background = 'rgba(255, 152, 0, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#FF9800';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Success Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(255, 193, 7, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Success Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/success/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#FFC107',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#FFB300';
+                          e.currentTarget.style.background = 'rgba(255, 193, 7, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#FFC107';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Leadership Archetype Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.05 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(108, 99, 255, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Leadership Archetype Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/leadership-archetype/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#6c63ff',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#5b56f0';
+                          e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#6c63ff';
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        {level.charAt(0).toUpperCase() + level.slice(1)}
+                        <span style={{ fontSize: '12px', opacity: 0.7 }}>↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Stress Management Test */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  border: '1px solid rgba(76, 175, 80, 0.15)',
+                }}
+              >
+                <h4 style={{
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  marginBottom: '12px',
+                  color: '#444',
+                }}>
+                  Stress Management Test
+                </h4>
+                <ul style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}>
+                  {(['excellent', 'good', 'developing'] as const).map((level) => (
+                    <li key={level} style={{ margin: '8px 0' }}>
+                      <a
+                        href={`/test/stress-management/unlock/${level}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: 'none',
+                          color: '#4CAF50',
+                          fontWeight: '500',
+                          fontSize: '14px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          transition: 'all 0.2s ease',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = '#45a049';
+                          e.currentTarget.style.background = 'rgba(76, 175, 80, 0.1)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '#4CAF50';
                           e.currentTarget.style.background = 'transparent';
                         }}
                       >

@@ -9,7 +9,7 @@ interface Props {
   onComplete: () => void;
 }
 
-function DepressionAnalyzingPage({ onComplete }: Props) {
+function LeadershipArchetypeAnalyzingPage({ onComplete }: Props) {
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
   const { count: testCount, text: testsCompletedText, formattedCount } = useTestsCompletedCounter();
@@ -198,7 +198,7 @@ function DepressionAnalyzingPage({ onComplete }: Props) {
             textAlign: 'center',
           }}
         >
-          {getTranslation('tests.depression.calculating.title', 'Analyzing your depression patterns and thought balance...')}
+          {getTranslation('tests.leadershipArchetype.calculating.title', 'Analyzing your leadership style and archetype...')}
         </motion.h1>
 
         {/* Subtitle */}
@@ -213,7 +213,7 @@ function DepressionAnalyzingPage({ onComplete }: Props) {
             textAlign: 'center',
           }}
         >
-          {getTranslation('tests.depression.calculating.subtitle', 'Our AI is evaluating your responses. This will take a few seconds...')}
+          {getTranslation('tests.leadershipArchetype.calculating.subtitle', 'Our AI is evaluating your responses. This will take a few seconds...')}
         </motion.p>
 
         {/* Progress Bar */}
@@ -529,5 +529,5 @@ function DepressionAnalyzingPage({ onComplete }: Props) {
   );
 }
 
-export default DepressionAnalyzingPage;
+export default LeadershipArchetypeAnalyzingPage;
 

@@ -67,12 +67,12 @@ const levelConfig: Record<'excellent' | 'good' | 'developing', {
   },
 };
 
-interface DepressionUnlockTemplateProps {
+interface LeadershipArchetypeUnlockTemplateProps {
   level: 'excellent' | 'good' | 'developing';
   locale?: 'en' | 'tr';
 }
 
-export default function DepressionUnlockTemplate({ level, locale }: DepressionUnlockTemplateProps) {
+export default function LeadershipArchetypeUnlockTemplate({ level, locale }: LeadershipArchetypeUnlockTemplateProps) {
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ export default function DepressionUnlockTemplate({ level, locale }: DepressionUn
   
   // Get content from localization keys
   const getContent = () => {
-    const baseKey = `tests.depression.result.${level}`;
+    const baseKey = `tests.leadershipArchetype.result.${level}`;
     return {
       title: t(`${baseKey}.title`) || '',
       summary: t(`${baseKey}.summary`) || '',
@@ -119,7 +119,7 @@ export default function DepressionUnlockTemplate({ level, locale }: DepressionUn
     {
       key: 'overview',
       icon: config.sectionEmojis[0],
-      title: currentLocale === 'tr' ? 'Depresyon Profiliniz' : 'Your Depression Profile',
+      title: currentLocale === 'tr' ? 'Liderlik Arketipiniz' : 'Your Leadership Archetype Profile',
       text: content.summary,
     },
     {
@@ -288,7 +288,7 @@ export default function DepressionUnlockTemplate({ level, locale }: DepressionUn
             backgroundClip: 'text',
             marginBottom: '16px',
           }}>
-            Your Detailed Depression Report
+            Your Detailed Leadership Archetype Report
           </h1>
           <p style={{
             fontSize: isMobile ? '16px' : '18px',

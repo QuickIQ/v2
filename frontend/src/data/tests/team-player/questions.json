@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "text": "I actively contribute ideas and suggestions during team meetings instead of staying silent.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I support my teammates' decisions and help them succeed instead of competing against them.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "I take initiative to lead when the team needs direction instead of waiting for others to step up.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I listen actively to understand different perspectives before making team decisions instead of pushing my own agenda.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "text": "I help resolve conflicts between team members instead of avoiding difficult conversations.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I share credit for team successes with all members instead of taking individual recognition.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "I adapt my working style to complement my teammates' strengths instead of insisting on my own methods.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I provide constructive feedback to help teammates improve instead of criticizing or avoiding feedback.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "text": "I take on tasks that others find challenging to support the team instead of only doing what I prefer.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I communicate clearly and keep teammates informed about my progress instead of working in isolation.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "I help organize and coordinate team activities instead of leaving planning to others.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I celebrate my teammates' achievements and milestones instead of focusing only on my own goals.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I step back and let others lead when they have better expertise instead of always taking control.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I help teammates who are struggling with their tasks instead of focusing solely on my own work.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I build consensus and find common ground when team members disagree instead of taking sides.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I take responsibility for team failures and learn from mistakes instead of blaming others.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I share knowledge and resources with teammates instead of keeping information to myself.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I help create a positive and inclusive team environment instead of allowing negativity to spread.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I balance my individual goals with team objectives instead of prioritizing only my own interests.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I contribute strategic thinking and long-term planning to help the team succeed instead of focusing only on immediate tasks.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  }
+]
+
+
