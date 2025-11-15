@@ -1,147 +1,22 @@
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { createTestStore, TestQuestion, TestAnswer, TestState } from './testStoreFactory';
+import { getTestConfig } from '../utils/testContentLoader';
 
-export interface TeamPlayerQuestion {
-  id: number;
-  text: string;
-  options: string[]; // ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"]
-  reverse?: boolean; // If true, invert the score (8 - baseScore)
-}
+// Type aliases for backward compatibility
+export interface TeamPlayerQuestion extends TestQuestion {}
+export interface TeamPlayerAnswer extends TestAnswer {}
+export interface TeamPlayerTestState extends TestState<TeamPlayerQuestion, TeamPlayerAnswer> {}
 
-export interface TeamPlayerAnswer {
-  question_id: number;
-  option_index: number;
-  score: number; // 1-7 based on option index
-}
-
-export interface TeamPlayerTestState {
-  // Session
-  sessionToken: string | null;
-  timeRemaining: number; // seconds
-  timeStarted: Date | null;
-  
-  // Test data
-  questions: TeamPlayerQuestion[];
-  answers: TeamPlayerAnswer[];
-  currentQuestionIndex: number;
-  
-  // Score
-  totalScore: number;
-  resultLevel: 'excellent' | 'good' | 'developing' | null;
-  
-  // Results
-  resultData: any | null;
-  email: string;
-  
-  // Flow state
-  step: 'landing' | 'questions' | 'analyzing' | 'email' | 'payment' | 'unlock' | 'results';
-  
-  // Actions
-  setSessionToken: (token: string) => void;
-  setTimeRemaining: (seconds: number) => void;
-  setQuestions: (questions: TeamPlayerQuestion[]) => void;
-  setCurrentQuestionIndex: (index: number) => void;
-  addAnswer: (answer: TeamPlayerAnswer) => void;
-  calculateScore: () => void;
-  setResultData: (data: any) => void;
-  setEmail: (email: string) => void;
-  setStep: (step: TeamPlayerTestState['step']) => void;
-  reset: () => void;
-}
-
-const initialState = {
-  sessionToken: null,
-  timeRemaining: 10 * 60, // 10 minutes
-  timeStarted: null,
-  questions: [],
-  answers: [],
-  currentQuestionIndex: 0,
-  totalScore: 0,
-  resultLevel: null,
-  resultData: null,
-  email: '',
-  step: 'landing' as const,
+// Get config from test-config.json
+const testConfig = getTestConfig('team-player');
+const scoring = testConfig?.scoring || {
+  thresholds: { excellent: 101, good: 50, developing: 0 },
+  timeLimit: 600
 };
 
-export const useTeamPlayerTestStore = create<TeamPlayerTestState>()(
-  persist(
-    (set, get) => ({
-      ...initialState,
-      
-      setSessionToken: (token: string) => set({ sessionToken: token }),
-      
-      setTimeRemaining: (seconds: number) => set({ timeRemaining: seconds }),
-      
-      setQuestions: (questions: TeamPlayerQuestion[]) => set({ questions }),
-      
-      setCurrentQuestionIndex: (index: number) => set({ currentQuestionIndex: index }),
-      
-      addAnswer: (answer: TeamPlayerAnswer) => {
-        const currentAnswers = get().answers;
-        const filteredAnswers = currentAnswers.filter(a => a.question_id !== answer.question_id);
-        const newAnswers = [...filteredAnswers, answer];
-        
-        set({ answers: newAnswers });
-        
-        // Recalculate score
-        get().calculateScore();
-      },
-      
-      calculateScore: () => {
-        const answers = get().answers;
-        const questions = get().questions;
-        
-        // Calculate total score with reverse scoring logic
-        const totalScore = answers.reduce((sum, answer) => {
-          const question = questions.find(q => q.id === answer.question_id);
-          if (!question) return sum;
-          
-          // Base score: Never=1, Rarely=2, ..., Always=7 (optionIndex + 1)
-          let baseScore = answer.option_index + 1;
-          
-          // Apply reverse scoring if needed
-          if (question.reverse) {
-            baseScore = 8 - baseScore;
-          }
-          
-          return sum + baseScore;
-        }, 0);
-        
-        // Determine result level: 0-49 → Developing, 50-100 → Good, 101-140 → Excellent
-        let resultLevel: 'excellent' | 'good' | 'developing' = 'developing';
-        if (totalScore >= 101) {
-          resultLevel = 'excellent';
-        } else if (totalScore >= 50) {
-          resultLevel = 'good';
-        } else {
-          resultLevel = 'developing';
-        }
-        
-        set({ totalScore, resultLevel });
-      },
-      
-      setResultData: (data: any) => set({ resultData: data }),
-      
-      setEmail: (email: string) => set({ email }),
-      
-      setStep: (step: TeamPlayerTestState['step']) => set({ step }),
-      
-      reset: () => set(initialState),
-    }),
-    {
-      name: 'team-player-test-storage',
-      partialize: (state) => ({
-        sessionToken: state.sessionToken,
-        timeRemaining: state.timeRemaining,
-        answers: state.answers,
-        currentQuestionIndex: state.currentQuestionIndex,
-        totalScore: state.totalScore,
-        resultLevel: state.resultLevel,
-        email: state.email,
-        step: state.step,
-      }),
-    }
-  )
-);
-
-
+// Create store using factory
+export const useTeamPlayerTestStore = createTestStore<TeamPlayerQuestion, TeamPlayerAnswer>({
+  testId: 'team-player',
+  storageKey: 'team-player-test-storage',
+  timeLimit: scoring.timeLimit,
+  scoreThresholds: scoring.thresholds,
+});

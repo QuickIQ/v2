@@ -1,0 +1,802 @@
+{
+  "testName": "Problem Solving",
+  "testId": "problem-solving",
+  "icon": "🧩",
+  "iconComponent": "Puzzle",
+  
+  "colors": {
+    "primary": {
+      "main": "#00BCD4",
+      "light": "#4DD0E1",
+      "dark": "#0097A7",
+      "hex": {
+        "main": "rgb(0, 188, 212)",
+        "light": "rgb(77, 208, 225)",
+        "dark": "rgb(0, 151, 167)"
+      }
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 50%, #E0F7FA 100%)",
+        "animated": [
+          "linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 50%, #E0F7FA 100%)",
+          "linear-gradient(135deg, #B2EBF2 0%, #E0F7FA 50%, #B2EBF2 100%)",
+          "linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 50%, #E0F7FA 100%)"
+        ],
+        "colors": {
+          "start": "#E0F7FA",
+          "middle": "#B2EBF2",
+          "end": "#E0F7FA"
+        }
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
+        "colors": {
+          "start": "#FBEAFF",
+          "end": "#FFF4F0"
+        }
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
+          "linear-gradient(135deg, #FFF4F0 0%, #FBEAFF 100%)",
+          "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)"
+        ]
+      },
+      "card": {
+        "gradient": "linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%)",
+        "colors": {
+          "start": "#ffffff",
+          "end": "#e0f7fa"
+        }
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%)",
+      "border": "rgba(0, 188, 212, 0.15)",
+      "borderHover": "rgba(0, 188, 212, 0.4)",
+      "glow": {
+        "hover": "rgba(0, 188, 212, 0.18)",
+        "shadow": "0 24px 60px rgba(0, 188, 212, 0.35), 0 0 0 1px rgba(0, 188, 212, 0.25), 0 0 80px rgba(77, 208, 225, 0.3)"
+      }
+    },
+    "title": {
+      "gradient": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)",
+      "iconColor": "#00BCD4",
+      "iconShadow": "drop-shadow(0 0 8px rgba(0, 188, 212, 0.8))"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)",
+        "shadow": "0 4px 20px rgba(0, 188, 212, 0.4)",
+        "hoverShadow": "0 16px 50px rgba(0, 188, 212, 0.7), 0 0 60px rgba(77, 208, 225, 0.6), 0 0 80px rgba(0, 188, 212, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"]
+    },
+    "questionCard": {
+      "background": "linear-gradient(135deg, rgba(255, 252, 245, 0.98) 0%, rgba(255, 250, 240, 0.95) 100%)",
+      "border": "rgba(255, 200, 80, 0.3)",
+      "shadow": "0 8px 32px rgba(255, 200, 80, 0.18), 0 0 60px rgba(138, 43, 226, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9)"
+    },
+    "analyzing": {
+      "progressBar": {
+        "background": "#e0e0e0",
+        "fill": "linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)",
+        "shadow": "0 2px 8px rgba(108, 99, 255, 0.4)"
+      },
+      "card": {
+        "background": "rgba(255, 255, 255, 0.7)",
+        "border": "rgba(108, 99, 255, 0.2)",
+        "shadow": "0 20px 60px rgba(108, 99, 255, 0.15)"
+      },
+      "trustCard": {
+        "background": "rgba(255, 255, 255, 0.9)",
+        "border": "rgba(108, 99, 255, 0.2)",
+        "shadow": "0 4px 12px rgba(0, 0, 0, 0.08)"
+      },
+      "notification": {
+        "background": "rgba(108, 99, 255, 0.1)",
+        "border": "rgba(108, 99, 255, 0.2)",
+        "textGradient": "linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)"
+      }
+    }
+  },
+
+  "card": {
+    "title": {
+      "en": "Problem Solving",
+      "tr": "Problem Çözme"
+    },
+    "subtitle": {
+      "en": "How quickly can you find solutions in complex situations?",
+      "tr": "Karmaşık durumlarda ne kadar hızlı çözüm bulabiliyorsun?"
+    },
+    "info": {
+      "questions": 20,
+      "minutes": 10,
+      "questionsLabel": {
+        "en": "Questions",
+        "tr": "soru"
+      },
+      "minutesLabel": {
+        "en": "Minutes",
+        "tr": "dakika"
+      }
+    },
+    "startButton": {
+      "en": "Start Test",
+      "tr": "Teste Başla"
+    },
+    "styles": {
+      "borderRadius": {
+        "mobile": "16px",
+        "desktop": "24px"
+      },
+      "padding": {
+        "mobile": "24px",
+        "desktop": "32px"
+      },
+      "hover": {
+        "y": -15,
+        "scale": 1.05,
+        "transition": "0.15s cubic-bezier(0.34, 1.56, 0.64, 1)"
+      }
+    }
+  },
+
+  "landing": {
+    "title": {
+      "en": "Before You Begin",
+      "tr": "Başlamadan Önce"
+    },
+    "subtitle": {
+      "en": "Answer honestly — this test is for your self-discovery, not for judgment.",
+      "tr": "Dürüst cevap verin — bu test yargılamak için değil, kendinizi keşfetmeniz içindir."
+    },
+    "description": {
+      "en": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+      "tr": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız."
+    },
+    "infoCards": {
+      "questions": {
+        "value": 20,
+        "label": {
+          "en": "Questions",
+          "tr": "Soru"
+        }
+      },
+      "minutes": {
+        "value": 10,
+        "label": {
+          "en": "Minutes",
+          "tr": "Dakika"
+        }
+      }
+    },
+    "startButton": {
+      "en": "Continue",
+      "tr": "Devam Et"
+    },
+    "styles": {
+      "card": {
+        "background": "rgba(255, 255, 255, 0.7)",
+        "backdropFilter": "blur(10px)",
+        "borderRadius": "20px",
+        "padding": {
+          "mobile": "24px",
+          "desktop": "32px"
+        },
+        "boxShadow": "0 8px 32px rgba(0, 0, 0, 0.1)",
+        "border": "1px solid rgba(255, 255, 255, 0.3)",
+        "hover": {
+          "scale": 1.05,
+          "y": -10,
+          "boxShadow": "0 16px 48px rgba(0, 188, 212, 0.3), 0 0 40px rgba(255, 255, 255, 0.5)"
+        }
+      },
+      "infoCard": {
+        "background": "rgba(255, 255, 255, 0.8)",
+        "backdropFilter": "blur(10px)",
+        "borderRadius": "16px",
+        "boxShadow": "0 4px 16px rgba(0, 188, 212, 0.15)",
+        "border": "1px solid rgba(255, 255, 255, 0.3)"
+      }
+    }
+  },
+
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "timeLimitSeconds": 600,
+    "timeLimitMinutes": 10,
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "questionList": [
+      {
+        "id": 1,
+        "text": "I can quickly identify the root cause of a problem.",
+        "reverse": false
+      },
+      {
+        "id": 2,
+        "text": "I feel overwhelmed when faced with complex challenges.",
+        "reverse": true
+      },
+      {
+        "id": 3,
+        "text": "I break down complex problems into smaller, manageable parts.",
+        "reverse": false
+      },
+      {
+        "id": 4,
+        "text": "I struggle to find alternative solutions when my first approach fails.",
+        "reverse": true
+      },
+      {
+        "id": 5,
+        "text": "I analyze problems systematically before taking action.",
+        "reverse": false
+      },
+      {
+        "id": 6,
+        "text": "I get stuck when I don't immediately know the answer.",
+        "reverse": true
+      },
+      {
+        "id": 7,
+        "text": "I consider multiple perspectives when solving problems.",
+        "reverse": false
+      },
+      {
+        "id": 8,
+        "text": "I avoid difficult problems because they seem too challenging.",
+        "reverse": true
+      },
+      {
+        "id": 9,
+        "text": "I use creative thinking to find innovative solutions.",
+        "reverse": false
+      },
+      {
+        "id": 10,
+        "text": "I give up easily when a problem requires sustained effort.",
+        "reverse": true
+      },
+      {
+        "id": 11,
+        "text": "I learn from past mistakes to improve my problem-solving approach.",
+        "reverse": false
+      },
+      {
+        "id": 12,
+        "text": "I feel anxious when I need to make quick decisions under pressure.",
+        "reverse": true
+      },
+      {
+        "id": 13,
+        "text": "I can prioritize which problems need immediate attention.",
+        "reverse": false
+      },
+      {
+        "id": 14,
+        "text": "I struggle to see connections between different aspects of a problem.",
+        "reverse": true
+      },
+      {
+        "id": 15,
+        "text": "I remain calm and focused when solving difficult problems.",
+        "reverse": false
+      },
+      {
+        "id": 16,
+        "text": "I rely on others to solve problems for me instead of trying myself.",
+        "reverse": true
+      },
+      {
+        "id": 17,
+        "text": "I can adapt my problem-solving strategy when circumstances change.",
+        "reverse": false
+      },
+      {
+        "id": 18,
+        "text": "I feel discouraged when I encounter obstacles in problem-solving.",
+        "reverse": true
+      },
+      {
+        "id": 19,
+        "text": "I can think logically and systematically about problems.",
+        "reverse": false
+      },
+      {
+        "id": 20,
+        "text": "I avoid taking responsibility for solving problems.",
+        "reverse": true
+      }
+    ],
+    "styles": {
+      "pageBackground": "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
+      "progressBar": {
+        "background": "#e0e0e0",
+        "fill": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)",
+        "height": "6px"
+      },
+      "questionCard": {
+        "background": "linear-gradient(135deg, rgba(255, 252, 245, 0.98) 0%, rgba(255, 250, 240, 0.95) 100%)",
+        "borderRadius": "20px",
+        "border": "1px solid rgba(255, 200, 80, 0.3)",
+        "boxShadow": "0 8px 32px rgba(255, 200, 80, 0.18), 0 0 60px rgba(138, 43, 226, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9)",
+        "backdropFilter": "blur(10px)"
+      },
+      "questionIcon": "🧩",
+      "timer": {
+        "normal": {
+          "background": "linear-gradient(135deg, rgba(255, 252, 245, 0.98) 0%, rgba(255, 250, 240, 0.95) 100%)",
+          "border": "2px solid rgba(255, 200, 80, 0.35)",
+          "boxShadow": "0 2px 8px rgba(255, 200, 80, 0.18)"
+        },
+        "warning": {
+          "background": "rgba(231, 76, 60, 0.2)",
+          "border": "2px solid #e74c3c",
+          "boxShadow": "0 4px 20px rgba(231, 76, 60, 0.3)",
+          "threshold": 180
+        }
+      },
+      "navigationButtons": {
+        "previous": {
+          "background": "linear-gradient(135deg, rgba(255, 250, 240, 0.95) 0%, rgba(255, 245, 230, 0.98) 100%)",
+          "border": "1px solid rgba(255, 200, 80, 0.35)",
+          "color": "#1a1a1a",
+          "boxShadow": "0 2px 8px rgba(255, 200, 80, 0.25)"
+        },
+        "next": {
+          "background": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)",
+          "color": "white"
+        }
+      }
+    }
+  },
+
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your problem-solving patterns and solution strategies...",
+      "tr": "Problem çözme kalıplarınızı ve çözüm stratejilerinizi analiz ediyoruz..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses. This will take a few seconds...",
+      "tr": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+    },
+    "duration": 10,
+    "durationSeconds": 10,
+    "progressMilestones": [35, 70],
+    "popupQuestions": {
+      "35": {
+        "en": "What do you do when you encounter complex problems?",
+        "tr": "Karmaşık problemlerle karşılaştığınızda ne yaparsınız?"
+      },
+      "70": {
+        "en": "Do you struggle to find quick solutions?",
+        "tr": "Hızlı çözüm bulmakta zorlanıyor musunuz?"
+      }
+    },
+    "trustCards": [
+      {
+        "name": {
+          "en": "Sarah M.",
+          "tr": "Elif D."
+        },
+        "city": {
+          "en": "New York",
+          "tr": "İzmir"
+        },
+        "text": {
+          "en": "The results were surprisingly accurate, I learned so much about myself.",
+          "tr": "Sonuçlar şaşırtıcı derecede doğruydu, kendimi daha iyi tanıdım."
+        },
+        "stars": 5
+      },
+      {
+        "name": {
+          "en": "Michael R.",
+          "tr": "Ali C."
+        },
+        "city": {
+          "en": "London",
+          "tr": "Ankara"
+        },
+        "text": {
+          "en": "The analysis process was so smooth, the results were impressive.",
+          "tr": "Analiz süreci çok akıcıydı, sonuçlar etkileyici."
+        },
+        "stars": 5
+      },
+      {
+        "name": {
+          "en": "Emma L.",
+          "tr": "Deniz K."
+        },
+        "city": {
+          "en": "Toronto",
+          "tr": "İstanbul"
+        },
+        "text": {
+          "en": "A truly professionally prepared test.",
+          "tr": "Gerçekten profesyonelce hazırlanmış bir test."
+        },
+        "stars": 5
+      },
+      {
+        "name": {
+          "en": "James P.",
+          "tr": "Selin Y."
+        },
+        "city": {
+          "en": "Sydney",
+          "tr": "Antalya"
+        },
+        "text": {
+          "en": "My results guided me in my career planning.",
+          "tr": "Sonuçlarım kariyer planımda bana yön verdi."
+        },
+        "stars": 5
+      }
+    ],
+    "styles": {
+      "card": {
+        "background": "rgba(255, 255, 255, 0.7)",
+        "backdropFilter": "blur(10px)",
+        "borderRadius": "24px",
+        "boxShadow": "0 20px 60px rgba(108, 99, 255, 0.15)"
+      },
+      "progressBar": {
+        "background": "#e0e0e0",
+        "fill": "linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)",
+        "height": "12px",
+        "boxShadow": "inset 0 2px 4px rgba(0, 0, 0, 0.1)"
+      },
+      "popup": {
+        "overlay": "rgba(0, 0, 0, 0.4)",
+        "backdropFilter": "blur(4px)",
+        "card": {
+          "background": "white",
+          "borderRadius": "20px",
+          "boxShadow": "0 20px 60px rgba(0, 0, 0, 0.3)"
+        },
+        "button": {
+          "yes": {
+            "background": "#FFE4E1",
+            "color": "#333"
+          },
+          "no": {
+            "background": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)",
+            "color": "white"
+          }
+        }
+      }
+    }
+  },
+
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed results",
+      "tr": "Detaylı sonuçlarınızı almak için e-posta adresinizi girin"
+    },
+    "emailLabel": {
+      "en": "Email Address",
+      "tr": "E-posta Adresi"
+    },
+    "emailPlaceholder": {
+      "en": "your.email@example.com",
+      "tr": "ornek@email.com"
+    },
+    "consentText": {
+      "en": "I accept the \"Terms of Service\" and Privacy Policy.",
+      "tr": "\"Hizmet Şartları\" ve Gizlilik Politikası'nı kabul ediyorum."
+    },
+    "continueButton": {
+      "en": "Continue",
+      "tr": "Devam Et"
+    },
+    "privacyText": {
+      "en": "Your data will remain private and never shared.",
+      "tr": "Verileriniz gizli kalacak ve asla paylaşılmayacaktır."
+    }
+  },
+
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Problem Solving Test results below and explore your problem-solving patterns.",
+      "tr": "Aşağıda kişiselleştirilmiş Problem Çözme Testi sonuçlarınızın kilidini açın ve problem çözme kalıplarınızı keşfedin."
+    },
+    "recentResults": {
+      "en": "Recent Results",
+      "tr": "Güncel Sonuçlar"
+    },
+    "lockedSubtext": {
+      "en": "Your personalized insight is waiting — Discover your problem-solving patterns, solution strategies, and analytical thinking blueprint.",
+      "tr": "Kişiselleştirilmiş içgörünüz bekliyor — Problem çözme kalıplarınızı, çözüm stratejilerinizi ve analitik düşünme planınızı keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    },
+    "whyTrust": {
+      "en": "Why Trust QuickIQ?",
+      "tr": "Neden QuickIQ'ya Güvenmelisiniz?"
+    },
+    "trustFeatures": [
+      {
+        "title": {
+          "en": "AI-Powered Problem Solving Analysis",
+          "tr": "Yapay Zeka Destekli Problem Çözme Analizi"
+        },
+        "description": {
+          "en": "Deep analysis of your problem-solving patterns and solution strategies with advanced algorithms.",
+          "tr": "Gelişmiş algoritmalarla problem çözme kalıplarınızın ve çözüm stratejilerinizin derinlemesine analizi."
+        }
+      },
+      {
+        "title": {
+          "en": "Actionable Insights",
+          "tr": "Uygulanabilir İçgörüler"
+        },
+        "description": {
+          "en": "Practical advice you can use in real life.",
+          "tr": "Gerçek hayatta kullanabileceğiniz pratik tavsiyeler."
+        }
+      },
+      {
+        "title": {
+          "en": "Personalized Growth Plan",
+          "tr": "Kişiselleştirilmiş Gelişim Planı"
+        },
+        "description": {
+          "en": "Comprehensive growth strategy tailored just for you.",
+          "tr": "Size özel hazırlanmış kapsamlı gelişim stratejisi."
+        }
+      }
+    ],
+    "reviews": {
+      "title": {
+        "en": "Reviews",
+        "tr": "Yorumlar"
+      },
+      "subtitle": {
+        "en": "Excellent ⭐ 4.7 rating — 1769 reviews",
+        "tr": "Mükemmel ⭐ 4.7 puan — 1769 yorum"
+      },
+      "verifiedCustomer": {
+        "en": "Verified Customer",
+        "tr": "Doğrulanmış Müşteri"
+      }
+    },
+    "footer": {
+      "en": "You'll be redirected to your results after successful payment. Your data remains private.",
+      "tr": "Başarılı ödemeden sonra sonuçlarınıza yönlendirileceksiniz. Verileriniz gizli tutulur."
+    }
+  },
+
+  "results": {
+    "levels": ["excellent", "good", "developing"],
+    "structure": {
+      "excellent": {
+        "title": "",
+        "summary": "",
+        "insights": [],
+        "sections": {
+          "strengths": {
+            "title": {
+              "en": "Your Strengths",
+              "tr": "Güçlü Yönleriniz"
+            },
+            "text": ""
+          },
+          "growthAreas": {
+            "title": {
+              "en": "Growth Areas",
+              "tr": "Gelişim Alanları"
+            },
+            "text": ""
+          },
+          "practicalApplications": {
+            "title": {
+              "en": "Practical Applications",
+              "tr": "Pratik Uygulamalar"
+            },
+            "text": ""
+          },
+          "futurePotential": {
+            "title": {
+              "en": "Future Potential",
+              "tr": "Gelecek Potansiyeli"
+            },
+            "text": ""
+          }
+        }
+      },
+      "good": {
+        "title": "",
+        "summary": "",
+        "insights": [],
+        "sections": {
+          "strengths": {
+            "title": {
+              "en": "Your Strengths",
+              "tr": "Güçlü Yönleriniz"
+            },
+            "text": ""
+          },
+          "growthAreas": {
+            "title": {
+              "en": "Growth Areas",
+              "tr": "Gelişim Alanları"
+            },
+            "text": ""
+          },
+          "practicalApplications": {
+            "title": {
+              "en": "Practical Applications",
+              "tr": "Pratik Uygulamalar"
+            },
+            "text": ""
+          },
+          "futurePotential": {
+            "title": {
+              "en": "Future Potential",
+              "tr": "Gelecek Potansiyeli"
+            },
+            "text": ""
+          }
+        }
+      },
+      "developing": {
+        "title": "",
+        "summary": "",
+        "insights": [],
+        "sections": {
+          "strengths": {
+            "title": {
+              "en": "Your Strengths",
+              "tr": "Güçlü Yönleriniz"
+            },
+            "text": ""
+          },
+          "growthAreas": {
+            "title": {
+              "en": "Growth Areas",
+              "tr": "Gelişim Alanları"
+            },
+            "text": ""
+          },
+          "practicalApplications": {
+            "title": {
+              "en": "Practical Applications",
+              "tr": "Pratik Uygulamalar"
+            },
+            "text": ""
+          },
+          "futurePotential": {
+            "title": {
+              "en": "Future Potential",
+              "tr": "Gelecek Potansiyeli"
+            },
+            "text": ""
+          }
+        }
+      }
+    }
+  },
+
+  "differencesFromOtherTests": {
+    "primaryColor": {
+      "description": "Uses cyan/teal color scheme (#00BCD4) instead of other colors",
+      "color": "#00BCD4",
+      "name": "Cyan/Teal"
+    },
+    "icon": {
+      "description": "Uses Puzzle icon (🧩) instead of other icons",
+      "component": "Puzzle",
+      "emoji": "🧩"
+    },
+    "backgroundGradient": {
+      "landing": "Uses light cyan gradient (#E0F7FA to #B2EBF2)",
+      "questions": "Uses light purple-pink gradient (#FBEAFF to #FFF4F0)",
+      "analyzing": "Uses light purple-pink gradient (#FBEAFF to #FFF4F0)"
+    },
+    "cardStyle": {
+      "description": "Card uses white to light cyan gradient",
+      "gradient": "linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%)"
+    },
+    "questionCardStyle": {
+      "description": "Question card uses warm cream/beige tones",
+      "background": "linear-gradient(135deg, rgba(255, 252, 245, 0.98) 0%, rgba(255, 250, 240, 0.95) 100%)",
+      "border": "rgba(255, 200, 80, 0.3)"
+    },
+    "analyzingProgressBar": {
+      "description": "Uses purple gradient instead of primary color",
+      "gradient": "linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)"
+    },
+    "testSpecificContent": {
+      "title": "Problem Solving specific titles and descriptions",
+      "calculatingTitle": "Analyzing your problem-solving patterns and solution strategies...",
+      "popupQuestions": "Problem-solving specific questions at 35% and 70% milestones"
+    }
+  },
+
+  "animations": {
+    "icon": {
+      "scale": [1, 1.2, 1],
+      "opacity": [0.7, 1, 0.7],
+      "rotate": [0, 15, -15, 0],
+      "duration": 2,
+      "repeat": "Infinity"
+    },
+    "background": {
+      "landing": {
+        "duration": 8,
+        "repeat": "Infinity",
+        "ease": "easeInOut"
+      },
+      "analyzing": {
+        "duration": 3,
+        "repeat": "Infinity",
+        "ease": "easeInOut"
+      }
+    },
+    "cardHover": {
+      "y": -15,
+      "scale": 1.05,
+      "duration": 0.15,
+      "ease": "easeOut"
+    },
+    "buttonHover": {
+      "scale": 1.15,
+      "y": -8,
+      "duration": 0.15,
+      "ease": "easeOut"
+    }
+  },
+
+  "metadata": {
+    "testType": "IQ Test",
+    "category": "Cognitive",
+    "difficulty": "Medium",
+    "estimatedTime": "10 minutes",
+    "questionCount": 20,
+    "scoringMethod": "Reverse scoring for negative questions",
+    "resultLevels": 3,
+    "languages": ["en", "tr"]
+  }
+}
+

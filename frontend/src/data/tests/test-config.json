@@ -1,0 +1,732 @@
+{
+  "tests": [
+    {
+      "id": "iqtest",
+      "slug": "iqtest",
+      "name": {
+        "en": "IQ Test",
+        "tr": "IQ Testi"
+      },
+      "category": "Intelligence",
+      "icon": "Brain",
+      "iconEmoji": "🧠",
+      "questions": 25,
+      "minutes": 15,
+      "colors": {
+        "primary": "#6c63ff",
+        "light": "#9bc9ed",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%)",
+        "cardBorder": "rgba(108, 99, 255, 0.15)",
+        "cardHoverBorder": "rgba(108, 99, 255, 0.4)",
+        "cardGlow": "rgba(108, 99, 255, 0.18)",
+        "cardShadow": "0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)",
+        "titleGradient": "linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)"
+      }
+    },
+    {
+      "id": "personality",
+      "slug": "personality",
+      "name": {
+        "en": "Personality Test",
+        "tr": "Kişilik Testi"
+      },
+      "category": "Personality",
+      "icon": "Heart",
+      "iconEmoji": "❤️",
+      "questions": 30,
+      "minutes": 15,
+      "colors": {
+        "primary": "#ec4899",
+        "light": "#fb923c",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff5f8 100%)",
+        "cardBorder": "rgba(236, 72, 153, 0.15)",
+        "cardHoverBorder": "rgba(236, 72, 153, 0.4)",
+        "cardGlow": "rgba(236, 72, 153, 0.18)",
+        "cardShadow": "0 24px 60px rgba(236, 72, 153, 0.35), 0 0 0 1px rgba(236, 72, 153, 0.25), 0 0 80px rgba(251, 146, 60, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ec4899 0%, #fb923c 100%)",
+        "titleGradient": "linear-gradient(135deg, #ec4899 0%, #fb923c 100%)"
+      }
+    },
+    {
+      "id": "creative-thinking",
+      "slug": "creative-thinking",
+      "name": {
+        "en": "Creative Thinking",
+        "tr": "Yaratıcı Düşünme"
+      },
+      "category": "Business",
+      "icon": "Lightbulb",
+      "iconEmoji": "💡",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#6c63ff",
+        "light": "#9bc9ed",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%)",
+        "cardBorder": "rgba(108, 99, 255, 0.15)",
+        "cardHoverBorder": "rgba(108, 99, 255, 0.4)",
+        "cardGlow": "rgba(108, 99, 255, 0.18)",
+        "cardShadow": "0 24px 60px rgba(108, 99, 255, 0.35), 0 0 0 1px rgba(108, 99, 255, 0.25), 0 0 80px rgba(155, 201, 237, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)",
+        "titleGradient": "linear-gradient(135deg, #6c63ff 0%, #9bc9ed 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "problem-solving",
+      "slug": "problem-solving",
+      "name": {
+        "en": "Problem Solving",
+        "tr": "Problem Çözme"
+      },
+      "subtitle": {
+        "en": "How quickly can you find solutions in complex situations?",
+        "tr": "Karmaşık durumlarda ne kadar hızlı çözüm bulabiliyorsun?"
+      },
+      "category": "Business",
+      "icon": "Puzzle",
+      "iconEmoji": "🧩",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#00BCD4",
+        "light": "#4DD0E1",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%)",
+        "cardBorder": "rgba(0, 188, 212, 0.15)",
+        "cardHoverBorder": "rgba(0, 188, 212, 0.4)",
+        "cardGlow": "rgba(0, 188, 212, 0.18)",
+        "cardShadow": "0 24px 60px rgba(0, 188, 212, 0.35), 0 0 0 1px rgba(0, 188, 212, 0.25), 0 0 80px rgba(77, 208, 225, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)",
+        "titleGradient": "linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "multitasking",
+      "slug": "multitasking",
+      "name": {
+        "en": "Multitasking Efficiency",
+        "tr": "Çoklu Görev Verimliliği"
+      },
+      "category": "Business",
+      "icon": "Zap",
+      "iconEmoji": "⚡",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#6366f1",
+        "light": "#8b5cf6",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #eef2ff 100%)",
+        "cardBorder": "rgba(99, 102, 241, 0.15)",
+        "cardHoverBorder": "rgba(99, 102, 241, 0.4)",
+        "cardGlow": "rgba(99, 102, 241, 0.18)",
+        "cardShadow": "0 24px 60px rgba(99, 102, 241, 0.35), 0 0 0 1px rgba(99, 102, 241, 0.25), 0 0 80px rgba(139, 92, 246, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+        "titleGradient": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "attention-span",
+      "slug": "attention-span",
+      "name": {
+        "en": "Attention Span",
+        "tr": "Dikkat Süresi"
+      },
+      "category": "Business",
+      "icon": "Target",
+      "iconEmoji": "🎯",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "memory-retention",
+      "slug": "memory-retention",
+      "name": {
+        "en": "Memory Retention",
+        "tr": "Hafıza Tutma"
+      },
+      "category": "Business",
+      "icon": "Database",
+      "iconEmoji": "💾",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#8b5cf6",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(139, 92, 246, 0.15)",
+        "cardHoverBorder": "rgba(139, 92, 246, 0.4)",
+        "cardGlow": "rgba(139, 92, 246, 0.18)",
+        "cardShadow": "0 24px 60px rgba(139, 92, 246, 0.35), 0 0 0 1px rgba(139, 92, 246, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "entrepreneur-mindset",
+      "slug": "entrepreneur-mindset",
+      "name": {
+        "en": "Entrepreneur Mindset",
+        "tr": "Girişimci Zihniyeti"
+      },
+      "category": "Business",
+      "icon": "Briefcase",
+      "iconEmoji": "💼",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "risk-tolerance",
+      "slug": "risk-tolerance",
+      "name": {
+        "en": "Risk Tolerance",
+        "tr": "Risk Toleransı"
+      },
+      "category": "Business",
+      "icon": "TrendingUp",
+      "iconEmoji": "📈",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ef4444",
+        "light": "#f87171",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(239, 68, 68, 0.15)",
+        "cardHoverBorder": "rgba(239, 68, 68, 0.4)",
+        "cardGlow": "rgba(239, 68, 68, 0.18)",
+        "cardShadow": "0 24px 60px rgba(239, 68, 68, 0.35), 0 0 0 1px rgba(239, 68, 68, 0.25), 0 0 80px rgba(248, 113, 113, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ef4444 0%, #f87171 100%)",
+        "titleGradient": "linear-gradient(135deg, #ef4444 0%, #f87171 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "strategic-thinking",
+      "slug": "strategic-thinking",
+      "name": {
+        "en": "Strategic Thinking",
+        "tr": "Stratejik Düşünme"
+      },
+      "category": "Business",
+      "icon": "Compass",
+      "iconEmoji": "🧭",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#06b6d4",
+        "light": "#22d3ee",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+        "cardBorder": "rgba(6, 182, 212, 0.15)",
+        "cardHoverBorder": "rgba(6, 182, 212, 0.4)",
+        "cardGlow": "rgba(6, 182, 212, 0.18)",
+        "cardShadow": "0 24px 60px rgba(6, 182, 212, 0.35), 0 0 0 1px rgba(6, 182, 212, 0.25), 0 0 80px rgba(34, 211, 238, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%)",
+        "titleGradient": "linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "time-management",
+      "slug": "time-management",
+      "name": {
+        "en": "Time Management",
+        "tr": "Zaman Yönetimi"
+      },
+      "category": "Business",
+      "icon": "Timer",
+      "iconEmoji": "⏱️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#14b8a6",
+        "light": "#2dd4bf",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%)",
+        "cardBorder": "rgba(20, 184, 166, 0.15)",
+        "cardHoverBorder": "rgba(20, 184, 166, 0.4)",
+        "cardGlow": "rgba(20, 184, 166, 0.18)",
+        "cardShadow": "0 24px 60px rgba(20, 184, 166, 0.35), 0 0 0 1px rgba(20, 184, 166, 0.25), 0 0 80px rgba(45, 212, 191, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%)",
+        "titleGradient": "linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "decision-making",
+      "slug": "decision-making",
+      "name": {
+        "en": "Decision Making",
+        "tr": "Karar Verme"
+      },
+      "category": "Business",
+      "icon": "Scale",
+      "iconEmoji": "⚖️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#a855f7",
+        "light": "#c084fc",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(168, 85, 247, 0.15)",
+        "cardHoverBorder": "rgba(168, 85, 247, 0.4)",
+        "cardGlow": "rgba(168, 85, 247, 0.18)",
+        "cardShadow": "0 24px 60px rgba(168, 85, 247, 0.35), 0 0 0 1px rgba(168, 85, 247, 0.25), 0 0 80px rgba(192, 132, 252, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #a855f7 0%, #c084fc 100%)",
+        "titleGradient": "linear-gradient(135deg, #a855f7 0%, #c084fc 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "leadership-archetype",
+      "slug": "leadership-archetype",
+      "name": {
+        "en": "Leadership Archetype",
+        "tr": "Liderlik Arketipi"
+      },
+      "category": "Business",
+      "icon": "Crown",
+      "iconEmoji": "👑",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f97316",
+        "light": "#fb923c",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+        "cardBorder": "rgba(249, 115, 22, 0.15)",
+        "cardHoverBorder": "rgba(249, 115, 22, 0.4)",
+        "cardGlow": "rgba(249, 115, 22, 0.18)",
+        "cardShadow": "0 24px 60px rgba(249, 115, 22, 0.35), 0 0 0 1px rgba(249, 115, 22, 0.25), 0 0 80px rgba(251, 146, 60, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f97316 0%, #fb923c 100%)",
+        "titleGradient": "linear-gradient(135deg, #f97316 0%, #fb923c 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "negotiation-skills",
+      "slug": "negotiation-skills",
+      "name": {
+        "en": "Negotiation Skills",
+        "tr": "Müzakere Becerileri"
+      },
+      "category": "Business",
+      "icon": "MessageSquare",
+      "iconEmoji": "💬",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#3b82f6",
+        "light": "#60a5fa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #eff6ff 100%)",
+        "cardBorder": "rgba(59, 130, 246, 0.15)",
+        "cardHoverBorder": "rgba(59, 130, 246, 0.4)",
+        "cardGlow": "rgba(59, 130, 246, 0.18)",
+        "cardShadow": "0 24px 60px rgba(59, 130, 246, 0.35), 0 0 0 1px rgba(59, 130, 246, 0.25), 0 0 80px rgba(96, 165, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)",
+        "titleGradient": "linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "stress-management",
+      "slug": "stress-management",
+      "name": {
+        "en": "Stress Management",
+        "tr": "Stres Yönetimi"
+      },
+      "category": "Business",
+      "icon": "HeartPulse",
+      "iconEmoji": "💚",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#22c55e",
+        "light": "#4ade80",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%)",
+        "cardBorder": "rgba(34, 197, 94, 0.15)",
+        "cardHoverBorder": "rgba(34, 197, 94, 0.4)",
+        "cardGlow": "rgba(34, 197, 94, 0.18)",
+        "cardShadow": "0 24px 60px rgba(34, 197, 94, 0.35), 0 0 0 1px rgba(34, 197, 94, 0.25), 0 0 80px rgba(74, 222, 128, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #22c55e 0%, #4ade80 100%)",
+        "titleGradient": "linear-gradient(135deg, #22c55e 0%, #4ade80 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "team-player",
+      "slug": "team-player",
+      "name": {
+        "en": "Team Player",
+        "tr": "Takım Oyuncusu"
+      },
+      "category": "Business",
+      "icon": "UsersRound",
+      "iconEmoji": "👥",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0ea5e9",
+        "light": "#38bdf8",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%)",
+        "cardBorder": "rgba(14, 165, 233, 0.15)",
+        "cardHoverBorder": "rgba(14, 165, 233, 0.4)",
+        "cardGlow": "rgba(14, 165, 233, 0.18)",
+        "cardShadow": "0 24px 60px rgba(14, 165, 233, 0.35), 0 0 0 1px rgba(14, 165, 233, 0.25), 0 0 80px rgba(56, 189, 248, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)",
+        "titleGradient": "linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "success",
+      "slug": "success",
+      "name": {
+        "en": "Success",
+        "tr": "Başarı"
+      },
+      "category": "Business",
+      "icon": "Trophy",
+      "iconEmoji": "🏆",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#eab308",
+        "light": "#facc15",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fefce8 100%)",
+        "cardBorder": "rgba(234, 179, 8, 0.15)",
+        "cardHoverBorder": "rgba(234, 179, 8, 0.4)",
+        "cardGlow": "rgba(234, 179, 8, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 179, 8, 0.35), 0 0 0 1px rgba(234, 179, 8, 0.25), 0 0 80px rgba(250, 204, 21, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)",
+        "titleGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "perfectionism",
+      "slug": "perfectionism",
+      "name": {
+        "en": "Perfectionism",
+        "tr": "Mükemmeliyetçilik"
+      },
+      "category": "Business",
+      "icon": "Flower2",
+      "iconEmoji": "🌸",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ec4899",
+        "light": "#f472b6",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf2f8 100%)",
+        "cardBorder": "rgba(236, 72, 153, 0.15)",
+        "cardHoverBorder": "rgba(236, 72, 153, 0.4)",
+        "cardGlow": "rgba(236, 72, 153, 0.18)",
+        "cardShadow": "0 24px 60px rgba(236, 72, 153, 0.35), 0 0 0 1px rgba(236, 72, 153, 0.25), 0 0 80px rgba(244, 114, 182, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+        "titleGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "ambition",
+      "slug": "ambition",
+      "name": {
+        "en": "Ambition",
+        "tr": "Hırs"
+      },
+      "category": "Business",
+      "icon": "TrendingUp",
+      "iconEmoji": "📊",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#dc2626",
+        "light": "#ef4444",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(220, 38, 38, 0.15)",
+        "cardHoverBorder": "rgba(220, 38, 38, 0.4)",
+        "cardGlow": "rgba(220, 38, 38, 0.18)",
+        "cardShadow": "0 24px 60px rgba(220, 38, 38, 0.35), 0 0 0 1px rgba(220, 38, 38, 0.25), 0 0 80px rgba(239, 68, 68, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)",
+        "titleGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "criticism",
+      "slug": "criticism",
+      "name": {
+        "en": "Criticism",
+        "tr": "Eleştiri"
+      },
+      "category": "Business",
+      "icon": "MessageSquare",
+      "iconEmoji": "💭",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#7c3aed",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(124, 58, 237, 0.15)",
+        "cardHoverBorder": "rgba(124, 58, 237, 0.4)",
+        "cardGlow": "rgba(124, 58, 237, 0.18)",
+        "cardShadow": "0 24px 60px rgba(124, 58, 237, 0.35), 0 0 0 1px rgba(124, 58, 237, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "depression",
+      "slug": "depression",
+      "name": {
+        "en": "Depression",
+        "tr": "Depresyon"
+      },
+      "category": "Health",
+      "icon": "Heart",
+      "iconEmoji": "💙",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#3b82f6",
+        "light": "#60a5fa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #eff6ff 100%)",
+        "cardBorder": "rgba(59, 130, 246, 0.15)",
+        "cardHoverBorder": "rgba(59, 130, 246, 0.4)",
+        "cardGlow": "rgba(59, 130, 246, 0.18)",
+        "cardShadow": "0 24px 60px rgba(59, 130, 246, 0.35), 0 0 0 1px rgba(59, 130, 246, 0.25), 0 0 80px rgba(96, 165, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)",
+        "titleGradient": "linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "anxiety",
+      "slug": "anxiety",
+      "name": {
+        "en": "Anxiety",
+        "tr": "Anksiyete"
+      },
+      "category": "Health",
+      "icon": "HeartPulse",
+      "iconEmoji": "💜",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#a855f7",
+        "light": "#c084fc",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(168, 85, 247, 0.15)",
+        "cardHoverBorder": "rgba(168, 85, 247, 0.4)",
+        "cardGlow": "rgba(168, 85, 247, 0.18)",
+        "cardShadow": "0 24px 60px rgba(168, 85, 247, 0.35), 0 0 0 1px rgba(168, 85, 247, 0.25), 0 0 80px rgba(192, 132, 252, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #a855f7 0%, #c084fc 100%)",
+        "titleGradient": "linear-gradient(135deg, #a855f7 0%, #c084fc 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "autism",
+      "slug": "autism",
+      "name": {
+        "en": "Autism Test",
+        "tr": "Otizm Testi"
+      },
+      "subtitle": {
+        "en": "Discover insights about your cognitive and social patterns",
+        "tr": "Bilişsel ve sosyal kalıplarınız hakkında içgörüler keşfedin"
+      },
+      "category": "Health",
+      "icon": "Brain",
+      "iconEmoji": "🧩",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    }
+  ]
+}

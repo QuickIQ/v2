@@ -70,6 +70,9 @@ import AmbitionUnlockPage from './tests/iq/ambition/AmbitionUnlockPage';
 import CriticismTestPage from './pages/CriticismTestPage';
 import CriticismPaymentPage from './tests/iq/criticism/CriticismPaymentPage';
 import CriticismUnlockPage from './tests/iq/criticism/CriticismUnlockPage';
+import AutismTestPage from './pages/AutismTestPage';
+import AutismPaymentPage from './tests/iq/autism/AutismPaymentPage';
+import AutismUnlockPage from './tests/iq/autism/AutismUnlockPage';
 import { useDynamicTestTranslations } from './hooks/useDynamicTestTranslations';
 import './App.css';
 
@@ -169,6 +172,10 @@ function AppContent() {
         <Route path="/test/criticism/payment" element={<CriticismPaymentPage />} />
         <Route path="/test/criticism/unlock/:level" element={<CriticismUnlockPage />} />
         <Route path="/test/criticism/unlock" element={<CriticismUnlockPage />} />
+        <Route path="/test/autism" element={<AutismTestPage />} />
+        <Route path="/test/autism/payment" element={<AutismPaymentPage />} />
+        <Route path="/test/autism/unlock/:level" element={<AutismUnlockPage />} />
+        <Route path="/test/autism/unlock" element={<AutismUnlockPage />} />
       </Routes>
     </>
   );

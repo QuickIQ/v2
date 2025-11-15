@@ -1,0 +1,141 @@
+{
+  "testId": "leadership-archetype",
+  "colors": {
+    "primary": {
+      "main": "#f97316",
+      "light": "#fb923c"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)",
+          "linear-gradient(135deg, #FFE4E1 0%, #FFF8F0 50%, #FFF0F5 100%)",
+          "linear-gradient(135deg, #FFF8F0 0%, #FFF0F5 50%, #FFE4E1 100%)",
+          "linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFF8F0 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
+          "linear-gradient(135deg, #FFF4F0 0%, #FBEAFF 100%)",
+          "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+      "border": "rgba(249, 115, 22, 0.15)",
+      "borderHover": "rgba(249, 115, 22, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #f97316 0%, #fb923c 100%)",
+        "shadow": "0 4px 20px rgba(108, 99, 255, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #f97316 0%, #fb923c 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Before You Begin",
+      "tr": "Başlamadan Önce"
+    },
+    "subtitle": {
+      "en": "Answer honestly — this test is for your self-discovery, not for judgment.",
+      "tr": "Dürüst cevap verin — bu test yargılamak için değil, kendinizi keşfetmeniz içindir."
+    },
+    "description": {
+      "en": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
+      "tr": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız."
+    },
+    "startButton": {
+      "en": "Continue",
+      "tr": "Devam Et"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your responses...",
+      "tr": "Cevaplarınız analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses. This will take a few seconds...",
+      "tr": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed results",
+      "tr": "Detaylı sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized test results below.",
+      "tr": "Aşağıda kişiselleştirilmiş test sonuçlarınızın kilidini açın."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
