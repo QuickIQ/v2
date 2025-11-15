@@ -45,8 +45,13 @@ export function CategorySection() {
               marginBottom: isMobile ? '32px' : '48px',
             }}>
               {testConfigs
-                .filter(test => test.category === category.title.en.split('–')[0].trim() || 
-                                test.category === category.title.tr.split('–')[0].trim())
+                .filter(test => {
+                  const categoryNameEn = category.title.en.split('–')[0].trim();
+                  const categoryNameTr = category.title.tr.split('–')[0].trim();
+                  return test.category === categoryNameEn || 
+                         test.category === categoryNameTr ||
+                         test.category.toLowerCase() === category.id;
+                })
                 .map((test, index) => (
                   <TestCard key={test.id} test={test} index={index} />
                 ))}
