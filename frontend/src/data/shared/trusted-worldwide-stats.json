@@ -1,0 +1,93 @@
+{
+  "header": {
+    "title": {
+      "en": "Trusted Worldwide",
+      "tr": "Dünya Çapında Güvenilen"
+    },
+    "subtitle": {
+      "en": "Real users. Real results. Real trust.",
+      "tr": "Gerçek kullanıcılar. Gerçek sonuçlar. Gerçek güven."
+    }
+  },
+  "stats": [
+    {
+      "emoji": "🔥",
+      "key": "testsCompleted",
+      "title": {
+        "en": "{count} tests completed today",
+        "tr": "{count} test bugün tamamlandı"
+      },
+      "subtitle": {
+        "en": "Live data updated hourly",
+        "tr": "Canlı veri saatlik güncellenir"
+      },
+      "dynamic": true
+    },
+    {
+      "emoji": "🌍",
+      "key": "countries",
+      "title": {
+        "en": "Trusted by users from 80+ countries",
+        "tr": "80+ ülkeden kullanıcılar tarafından güveniliyor"
+      },
+      "subtitle": {
+        "en": "Global reach & growing",
+        "tr": "Küresel erişim ve büyüyor"
+      }
+    },
+    {
+      "emoji": "⭐",
+      "key": "rating",
+      "title": {
+        "en": "Rated 4.9/5 accuracy feedback",
+        "tr": "4.9/5 doğruluk geri bildirimi puanı"
+      },
+      "subtitle": {
+        "en": "Based on 12,800+ verified users",
+        "tr": "12,800+ doğrulanmış kullanıcıya dayanır"
+      }
+    },
+    {
+      "emoji": "🎯",
+      "key": "completionRate",
+      "title": {
+        "en": "92% completion rate across all tests",
+        "tr": "Tüm testlerde %92 tamamlanma oranı"
+      },
+      "subtitle": {
+        "en": "Users find our test flow smooth & reliable",
+        "tr": "Kullanıcılar test akışımızı sorunsuz ve güvenilir buluyor"
+      }
+    },
+    {
+      "emoji": "🌍",
+      "key": "activeUsers",
+      "title": {
+        "en": "Used by 120,000+ active users monthly",
+        "tr": "Aylık 120,000+ aktif kullanıcı tarafından kullanılıyor"
+      },
+      "subtitle": {
+        "en": "New users join every minute",
+        "tr": "Her dakika yeni kullanıcılar katılıyor"
+      }
+    },
+    {
+      "emoji": "🔐",
+      "key": "sslEncryption",
+      "title": {
+        "en": "Secured with 256-bit SSL & Stripe encryption",
+        "tr": "256-bit SSL ve Stripe şifreleme ile güvence altında"
+      },
+      "subtitle": {
+        "en": "Your data stays private, encrypted, and protected",
+        "tr": "Verileriniz gizli, şifrelenmiş ve korunur"
+      }
+    }
+  ],
+  "countryFlags": ["🇹🇷", "🇺🇸", "🇬🇧", "🇩🇪", "🇫🇷"],
+  "countryFlagsText": {
+    "en": "+184 other countries",
+    "tr": "+184 diğer ülke"
+  }
+}
+

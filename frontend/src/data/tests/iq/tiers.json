@@ -1,0 +1,53 @@
+{
+  "tiers": [
+    {
+      "minScore": 130,
+      "maxScore": 200,
+      "key": "excellent",
+      "color": "#27ae60",
+      "gradient": "linear-gradient(135deg, #27ae60 0%, #2ecc71 100%)",
+      "icon": "Trophy",
+      "messages": {
+        "tr": "Harika! Üstün zekaya sahipsiniz!",
+        "en": "Excellent! You have superior intelligence!"
+      }
+    },
+    {
+      "minScore": 115,
+      "maxScore": 129,
+      "key": "good",
+      "color": "#3498db",
+      "gradient": "linear-gradient(135deg, #3498db 0%, #2980b9 100%)",
+      "icon": "TrendingUp",
+      "messages": {
+        "tr": "Mükemmel! Yüksek zeka seviyesindesiniz!",
+        "en": "Great! You have high intelligence!"
+      }
+    },
+    {
+      "minScore": 85,
+      "maxScore": 114,
+      "key": "average",
+      "color": "#f39c12",
+      "gradient": "linear-gradient(135deg, #f39c12 0%, #e67e22 100%)",
+      "icon": "Brain",
+      "messages": {
+        "tr": "İyi! Normal zeka seviyesindesiniz!",
+        "en": "Good! You have average intelligence!"
+      }
+    },
+    {
+      "minScore": 0,
+      "maxScore": 84,
+      "key": "belowAverage",
+      "color": "#e74c3c",
+      "gradient": "linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)",
+      "icon": "Award",
+      "messages": {
+        "tr": "Değerlendirme tamamlandı.",
+        "en": "Assessment completed."
+      }
+    }
+  ]
+}
+

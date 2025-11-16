@@ -5,6 +5,8 @@ import { useMobile } from '../../hooks/useMobile';
 import { Sparkles } from 'lucide-react';
 import { loadTestContent, getTestConfig, TestContent } from '../../utils/testContentLoader';
 import * as LucideIcons from 'lucide-react';
+import { LoadingFallback } from '../ui/LoadingFallback';
+import { ErrorFallback } from '../ui/ErrorFallback';
 import '../../App.css';
 
 interface Props {
@@ -27,19 +29,15 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
       try {
         setLoading(true);
         setError(null);
-        console.log(`📦 Loading content for test: ${testId}`);
         const loadedContent = await loadTestContent(testId);
         if (!loadedContent) {
           const errorMsg = `Test content not found for: ${testId}`;
-          console.error(`❌ ${errorMsg}`);
           setError(errorMsg);
         } else {
-          console.log(`✅ Content loaded successfully for: ${testId}`);
           setContent(loadedContent);
         }
       } catch (err: any) {
         const errorMsg = `Failed to load content for ${testId}: ${err.message || err}`;
-        console.error(`❌ ${errorMsg}`, err);
         setError(errorMsg);
       } finally {
         setLoading(false);
@@ -49,49 +47,11 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
   }, [testId]);
 
   if (loading) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-      }}>
-        <div className="loading" style={{ fontSize: '18px', color: '#6c63ff' }}>
-          Loading...
-        </div>
-      </div>
-    );
+    return <LoadingFallback testId={testId} />;
   }
 
   if (error || !content) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-        padding: '40px',
-        textAlign: 'center',
-      }}>
-        <div style={{ fontSize: '24px', color: '#ff4444', marginBottom: '16px' }}>
-          ⚠️ Content Loading Error
-        </div>
-        <div style={{ fontSize: '16px', color: '#666', marginBottom: '8px' }}>
-          Test ID: <strong>{testId}</strong>
-        </div>
-        {error && (
-          <div style={{ fontSize: '14px', color: '#888', maxWidth: '600px' }}>
-            {error}
-          </div>
-        )}
-        <div style={{ fontSize: '14px', color: '#888', marginTop: '16px' }}>
-          Please check the browser console for more details.
-        </div>
-      </div>
-    );
+    return <ErrorFallback error={error} testId={testId} />;
   }
 
   const testConfig = getTestConfig(testId);

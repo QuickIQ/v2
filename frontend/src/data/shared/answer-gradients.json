@@ -1,0 +1,30 @@
+{
+  "gradients": [
+    "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+    "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+    "linear-gradient(135deg, #f7c59f, #fff2dc)",
+    "linear-gradient(135deg, #ffffff, #fefefe)",
+    "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+    "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+    "linear-gradient(135deg, #a4e8a4, #89dc89)"
+  ],
+  "glowColors": [
+    "rgba(248, 178, 178, 0.5)",
+    "rgba(245, 161, 161, 0.5)",
+    "rgba(247, 197, 159, 0.5)",
+    "rgba(255, 255, 255, 0.5)",
+    "rgba(200, 248, 200, 0.5)",
+    "rgba(164, 232, 164, 0.5)",
+    "rgba(137, 220, 137, 0.5)"
+  ],
+  "labels": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Neutral",
+    "Often",
+    "Usually",
+    "Always"
+  ]
+}
+

@@ -1,0 +1,31 @@
+{
+  "interpretations": {
+    "excellent": {
+      "en": "IQ skorunuz üstün zeka seviyesini göstermektedir. Mükemmel muhakeme yeteneğiniz, problem çözme becerileriniz ve entelektüel kapasiteniz olağanüstü seviyededir. Bu seviyedeki bireyler genellikle akademik başarı, yaratıcılık ve liderlik konularında öne çıkarlar.",
+      "tr": "IQ skorunuz üstün zeka seviyesini göstermektedir. Mükemmel muhakeme yeteneğiniz, problem çözme becerileriniz ve entelektüel kapasiteniz olağanüstü seviyededir. Bu seviyedeki bireyler genellikle akademik başarı, yaratıcılık ve liderlik konularında öne çıkarlar."
+    },
+    "good": {
+      "en": "IQ skorunuz ortalamanın üzerinde bir zeka seviyesini göstermektedir. Güçlü analitik düşünme ve öğrenme yetenekleriniz var. Bu seviyedeki bireyler genellikle karmaşık problemleri çözmede başarılıdır ve hızlı öğrenirler.",
+      "tr": "IQ skorunuz ortalamanın üzerinde bir zeka seviyesini göstermektedir. Güçlü analitik düşünme ve öğrenme yetenekleriniz var. Bu seviyedeki bireyler genellikle karmaşık problemleri çözmede başarılıdır ve hızlı öğrenirler."
+    },
+    "average": {
+      "en": "IQ skorunuz normal aralıkta yer almaktadır. Bu, genel nüfusun çoğunluğunda görülen tipik bilişsel işlevi temsil eder. Normal IQ seviyesine sahip bireyler günlük yaşam görevlerini başarıyla yerine getirir ve uygun eğitim ve çalışma ile mükemmel sonuçlar elde edebilirler.",
+      "tr": "IQ skorunuz normal aralıkta yer almaktadır. Bu, genel nüfusun çoğunluğunda görülen tipik bilişsel işlevi temsil eder. Normal IQ seviyesine sahip bireyler günlük yaşam görevlerini başarıyla yerine getirir ve uygun eğitim ve çalışma ile mükemmel sonuçlar elde edebilirler."
+    },
+    "belowAverage": {
+      "en": "IQ skorunuz değerlendirilmiştir. Daha detaylı değerlendirme için profesyonel bir psikolog veya uzmana danışmanız önerilir. Unutmayın ki IQ sadece zekanın bir yönüdür ve başarı birçok faktöre bağlıdır.",
+      "tr": "IQ skorunuz değerlendirilmiştir. Daha detaylı değerlendirme için profesyonel bir psikolog veya uzmana danışmanız önerilir. Unutmayın ki IQ sadece zekanın bir yönüdür ve başarı birçok faktöre bağlıdır."
+    }
+  },
+  "chartLabels": {
+    "en": {
+      "title": "IQ Distribution",
+      "yourScore": "Your Score: {score}"
+    },
+    "tr": {
+      "title": "IQ Dağılımı",
+      "yourScore": "Skorunuz: {score}"
+    }
+  }
+}
+

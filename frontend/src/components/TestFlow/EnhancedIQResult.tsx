@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Trophy, TrendingUp, Brain, Award } from 'lucide-react';
 import Confetti from 'react-confetti';
 import { useState, useEffect } from 'react';
+import iqTiersData from '../../data/tests/iq/tiers.json';
+import iqResultContent from '../../data/shared/iq-result-content.json';
 import '../../App.css';
 
 interface Props {
@@ -10,10 +12,19 @@ interface Props {
   result: any;
 }
 
+// Icon mapping for Lucide icons
+const iconMap: Record<string, React.ElementType> = {
+  Trophy,
+  TrendingUp,
+  Brain,
+  Award,
+};
+
 export function EnhancedIQResult({ score }: Props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showConfetti, setShowConfetti] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+  const language = (i18n.language || 'en').split('-')[0] as 'en' | 'tr';
 
   useEffect(() => {
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
@@ -24,33 +35,16 @@ export function EnhancedIQResult({ score }: Props) {
   }, [score]);
 
   const getTier = (score: number) => {
-    if (score >= 130) return { 
-      label: t('test.iq.excellent'), 
-      color: '#27ae60',
-      gradient: 'linear-gradient(135deg, #27ae60 0%, #2ecc71 100%)',
-      icon: Trophy,
-      message: 'Harika! Üstün zekaya sahipsiniz!'
-    };
-    if (score >= 115) return { 
-      label: t('test.iq.good'), 
-      color: '#3498db',
-      gradient: 'linear-gradient(135deg, #3498db 0%, #2980b9 100%)',
-      icon: TrendingUp,
-      message: 'Mükemmel! Yüksek zeka seviyesindesiniz!'
-    };
-    if (score >= 85) return { 
-      label: t('test.iq.average'), 
-      color: '#f39c12',
-      gradient: 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)',
-      icon: Brain,
-      message: 'İyi! Normal zeka seviyesindesiniz!'
-    };
-    return { 
-      label: t('test.iq.belowAverage'), 
-      color: '#e74c3c',
-      gradient: 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)',
-      icon: Award,
-      message: 'Değerlendirme tamamlandı.'
+    const tier = iqTiersData.tiers.find(
+      t => score >= t.minScore && score <= t.maxScore
+    ) || iqTiersData.tiers[iqTiersData.tiers.length - 1];
+    
+    return {
+      label: t(`test.iq.${tier.key}`),
+      color: tier.color,
+      gradient: tier.gradient,
+      icon: iconMap[tier.icon] || Trophy,
+      message: tier.messages[language] || tier.messages.en,
     };
   };
 
@@ -181,10 +175,13 @@ export function EnhancedIQResult({ score }: Props) {
               {t('test.iq.interpretation')}
             </h3>
             <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#666' }}>
-              {score >= 130 && 'IQ skorunuz üstün zeka seviyesini göstermektedir. Mükemmel muhakeme yeteneğiniz, problem çözme becerileriniz ve entelektüel kapasiteniz olağanüstü seviyededir. Bu seviyedeki bireyler genellikle akademik başarı, yaratıcılık ve liderlik konularında öne çıkarlar.'}
-              {score >= 115 && score < 130 && 'IQ skorunuz ortalamanın üzerinde bir zeka seviyesini göstermektedir. Güçlü analitik düşünme ve öğrenme yetenekleriniz var. Bu seviyedeki bireyler genellikle karmaşık problemleri çözmede başarılıdır ve hızlı öğrenirler.'}
-              {score >= 85 && score < 115 && 'IQ skorunuz normal aralıkta yer almaktadır. Bu, genel nüfusun çoğunluğunda görülen tipik bilişsel işlevi temsil eder. Normal IQ seviyesine sahip bireyler günlük yaşam görevlerini başarıyla yerine getirir ve uygun eğitim ve çalışma ile mükemmel sonuçlar elde edebilirler.'}
-              {score < 85 && 'IQ skorunuz değerlendirilmiştir. Daha detaylı değerlendirme için profesyonel bir psikolog veya uzmana danışmanız önerilir. Unutmayın ki IQ sadece zekanın bir yönüdür ve başarı birçok faktöre bağlıdır.'}
+              {(() => {
+                const interpretations = iqResultContent.interpretations as Record<string, { en: string; tr: string }>;
+                if (score >= 130) return interpretations.excellent[language] || interpretations.excellent.en;
+                if (score >= 115) return interpretations.good[language] || interpretations.good.en;
+                if (score >= 85) return interpretations.average[language] || interpretations.average.en;
+                return interpretations.belowAverage[language] || interpretations.belowAverage.en;
+              })()}
             </p>
           </motion.div>
 
@@ -202,7 +199,7 @@ export function EnhancedIQResult({ score }: Props) {
             }}
           >
             <h4 style={{ fontSize: '18px', marginBottom: '24px', color: '#333', fontWeight: '600' }}>
-              IQ Dağılımı
+              {iqResultContent.chartLabels[language]?.title || iqResultContent.chartLabels.en.title}
             </h4>
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-around', height: '200px' }}>
               {[
@@ -251,7 +248,7 @@ export function EnhancedIQResult({ score }: Props) {
               fontSize: '14px',
               color: '#666',
             }}>
-              Skorunuz: {score}
+              {(iqResultContent.chartLabels[language]?.yourScore || iqResultContent.chartLabels.en.yourScore).replace('{score}', score.toString())}
             </div>
           </motion.div>
         </motion.div>

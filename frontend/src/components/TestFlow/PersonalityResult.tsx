@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import personalityDescriptionsData from '../../data/tests/personality/descriptions.json';
 import '../../App.css';
 
 interface Props {
@@ -6,72 +7,8 @@ interface Props {
   result: any;
 }
 
-const personalityDescriptions: Record<string, any> = {
-  INTJ: {
-    name: 'Architect',
-    description: 'Imaginative and strategic thinkers, with a plan for everything.',
-  },
-  INTP: {
-    name: 'Logician',
-    description: 'Innovative inventors with an unquenchable thirst for knowledge.',
-  },
-  ENTJ: {
-    name: 'Commander',
-    description: 'Bold, imaginative and strong-willed leaders.',
-  },
-  ENTP: {
-    name: 'Debater',
-    description: 'Smart and curious thinkers who cannot resist an intellectual challenge.',
-  },
-  INFJ: {
-    name: 'Advocate',
-    description: 'Creative and insightful, inspired and independent perfectionists.',
-  },
-  INFP: {
-    name: 'Mediator',
-    description: 'Poetic, kind and altruistic people, always eager to help a good cause.',
-  },
-  ENFJ: {
-    name: 'Protagonist',
-    description: 'Charismatic and inspiring leaders, able to mesmerize their listeners.',
-  },
-  ENFP: {
-    name: 'Campaigner',
-    description: 'Enthusiastic, creative and sociable free spirits.',
-  },
-  ISTJ: {
-    name: 'Logistician',
-    description: 'Practical and fact-minded, reliable and responsible.',
-  },
-  ISFJ: {
-    name: 'Defender',
-    description: 'Very dedicated and warm protectors, always ready to defend their loved ones.',
-  },
-  ESTJ: {
-    name: 'Executive',
-    description: 'Excellent administrators, unsurpassed at managing things or people.',
-  },
-  ESFJ: {
-    name: 'Consul',
-    description: 'Extraordinarily caring, social and popular people, always eager to help.',
-  },
-  ISTP: {
-    name: 'Virtuoso',
-    description: 'Bold and practical experimenters, masters of all kinds of tools.',
-  },
-  ISFP: {
-    name: 'Adventurer',
-    description: 'Flexible and charming artists, always ready to explore new possibilities.',
-  },
-  ESTP: {
-    name: 'Entrepreneur',
-    description: 'Smart, energetic and perceptive people, true to the moment.',
-  },
-  ESFP: {
-    name: 'Entertainer',
-    description: 'Spontaneous, energetic and enthusiastic people – life is never boring around them.',
-  },
-};
+// Load personality descriptions from JSON
+const personalityDescriptions = personalityDescriptionsData.descriptions;
 
 function PersonalityResult({ type }: Props) {
   const { t } = useTranslation();

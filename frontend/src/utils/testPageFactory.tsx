@@ -119,209 +119,26 @@ const resultContentCache: Record<string, any> = {};
 const questionsDataCache: Record<string, any> = {};
 
 interface UniversalTestPageProps {
-  testId: string;
+  testId?: string; // Optional, can be derived from URL
 }
 
-export function UniversalTestPage({ testId }: UniversalTestPageProps) {
+// Inner component that uses the store hook (called after store is loaded)
+function UniversalTestPageContent({ 
+  testId, 
+  useTestStore, 
+  resultContent, 
+  questionsData 
+}: {
+  testId: string;
+  useTestStore: any;
+  resultContent: any;
+  questionsData: any;
+}) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   
-  const [error, setError] = useState<string | null>(null);
-  const [isInitialized, setIsInitialized] = useState(false);
-  const [phase, setPhase] = useState<'intro' | 'questions'>('intro');
-  
-  // Get test config
-  const testConfig = getTestConfig(testId);
-  
-  // Load store dynamically
-  const [useTestStore, setUseTestStore] = useState<any>(null);
-  const [storeLoading, setStoreLoading] = useState(true);
-  
-  useEffect(() => {
-    let isMounted = true;
-    
-    async function loadStore() {
-      try {
-        const store = await getTestStore(testId);
-        if (isMounted) {
-          setUseTestStore(() => store);
-          setStoreLoading(false);
-        }
-      } catch (err: any) {
-        if (isMounted) {
-          console.error(`Failed to load store for ${testId}:`, err);
-          setStoreLoading(false);
-        }
-      }
-    }
-    
-    loadStore();
-    
-    return () => {
-      isMounted = false;
-    };
-  }, [testId]);
-  
-  // State for dynamically loaded data
-  const [resultContent, setResultContent] = useState<any>(null);
-  const [questionsData, setQuestionsData] = useState<any>(null);
-  const [dataLoading, setDataLoading] = useState(true);
-  const [dataError, setDataError] = useState<string | null>(null);
-
-  // Load resultContent and questionsData dynamically
-  useEffect(() => {
-    let isMounted = true;
-    
-    async function loadData() {
-      if (!useTestStore) {
-        setDataError('Test store not found');
-        setDataLoading(false);
-        return;
-      }
-
-      try {
-        // Check cache first
-        let content = resultContentCache[testId];
-        let questions = questionsDataCache[testId];
-
-        // Load if not in cache
-        if (!content) {
-          content = await loadResultContent(testId);
-          if (content) {
-            resultContentCache[testId] = content;
-          }
-        }
-
-        if (!questions) {
-          questions = await loadQuestionsData(testId);
-          if (questions) {
-            questionsDataCache[testId] = questions;
-          }
-        }
-
-        if (isMounted) {
-          if (!content || !questions) {
-            setDataError(`Failed to load data for test: ${testId}`);
-          } else {
-            setResultContent(content);
-            setQuestionsData(questions);
-            setDataError(null);
-          }
-          setDataLoading(false);
-        }
-      } catch (err: any) {
-        if (isMounted) {
-          console.error('Error loading test data:', err);
-          setDataError(err.message || 'Failed to load test data');
-          setDataLoading(false);
-        }
-      }
-    }
-
-    loadData();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [testId, useTestStore]);
-
-  if (storeLoading) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-      }}>
-        <div className="loading" style={{ fontSize: '18px', color: '#10b981' }}>
-          {t('common.loading')}
-        </div>
-      </div>
-    );
-  }
-
-  if (!useTestStore) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-      }}>
-        <div className="error">
-          Test configuration not found for: {testId}
-          <br />
-          Available tests: {Object.keys(storeImportMap).join(', ')}
-        </div>
-      </div>
-    );
-  }
-
-  if (dataLoading) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-      }}>
-        <div className="loading" style={{ fontSize: '18px', color: '#10b981' }}>
-          {t('common.loading')}
-        </div>
-      </div>
-    );
-  }
-
-  if (dataError || !resultContent || !questionsData) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-        padding: '40px',
-      }}>
-        <div className="card" style={{
-          maxWidth: '600px',
-          padding: '40px',
-          textAlign: 'center',
-        }}>
-          <div className="error" style={{ marginBottom: '20px' }}>
-            {dataError || 'Failed to load test data'}
-          </div>
-          <button
-            className="btn btn-primary"
-            onClick={() => {
-              setDataError(null);
-              setDataLoading(true);
-              // Retry loading
-              loadResultContent(testId).then(content => {
-                if (content) {
-                  resultContentCache[testId] = content;
-                  setResultContent(content);
-                }
-              });
-              loadQuestionsData(testId).then(questions => {
-                if (questions) {
-                  questionsDataCache[testId] = questions;
-                  setQuestionsData(questions);
-                }
-                setDataLoading(false);
-              });
-            }}
-          >
-            {t('common.tryAgain')}
-          </button>
-        </div>
-      </div>
-    );
-  }
-
+  // Now safe to call useTestStore hook - it's guaranteed to be loaded
   const {
     step,
     questions,
@@ -334,6 +151,10 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
     setResultData,
     setEmail,
   } = useTestStore();
+
+  const [error, setError] = useState<string | null>(null);
+  const [isInitialized, setIsInitialized] = useState(false);
+  const [phase, setPhase] = useState<'intro' | 'questions'>('intro');
 
   // Initialize component - only run once on mount
   useEffect(() => {
@@ -378,8 +199,6 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
   }, [location.state, setStep]);
 
   useEffect(() => {
-      // Step changed to: ${step}
-    
     if (step === 'questions') {
       const store = useTestStore.getState();
       const storeQuestions = store.questions;
@@ -548,6 +367,8 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
     );
   }
 
+  const testConfig = getTestConfig(testId);
+
   if (step === 'landing' || phase === 'intro') {
     return (
       <AnimatePresence mode="wait">
@@ -694,3 +515,253 @@ export function UniversalTestPage({ testId }: UniversalTestPageProps) {
   }
 }
 
+// Main component that loads store and data, then renders content component
+export function UniversalTestPage({ testId: testIdProp }: UniversalTestPageProps) {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // All hooks must be called before any conditional returns
+  const [error, setError] = useState<string | null>(null);
+  
+  // Get testId from prop or derive from URL slug
+  let testId = testIdProp || '';
+  
+  if (!testId) {
+    // Extract slug from URL path (e.g., "/test/creative-thinking" -> "creative-thinking")
+    const pathMatch = location.pathname.match(/\/test\/([^/]+)/);
+    if (pathMatch) {
+      const slug = pathMatch[1];
+      const testConfig = getTestConfig(slug);
+      testId = testConfig?.id || slug;
+    }
+  }
+  
+  // Early return if testId is still missing (after hooks)
+  if (!testId) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+        padding: '40px',
+      }}>
+        <div className="error" style={{ textAlign: 'center' }}>
+          <h2>Test Not Found</h2>
+          <p>Unable to identify test from URL: {location.pathname}</p>
+          <button
+            className="btn btn-primary"
+            onClick={() => navigate('/')}
+            style={{ marginTop: '20px' }}
+          >
+            Go to Home
+          </button>
+        </div>
+      </div>
+    );
+  }
+  
+  // Load store dynamically
+  const [useTestStore, setUseTestStore] = useState<any>(null);
+  const [storeLoading, setStoreLoading] = useState(true);
+  
+  useEffect(() => {
+    let isMounted = true;
+    
+    async function loadStore() {
+      try {
+        const store = await getTestStore(testId);
+        if (isMounted) {
+          setUseTestStore(() => store);
+          setStoreLoading(false);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          console.error(`Failed to load store for ${testId}:`, err);
+          setError(`Failed to load store: ${err.message}`);
+          setStoreLoading(false);
+        }
+      }
+    }
+    
+    if (testId) {
+      loadStore();
+    }
+    
+    return () => {
+      isMounted = false;
+    };
+  }, [testId]);
+  
+  // State for dynamically loaded data
+  const [resultContent, setResultContent] = useState<any>(null);
+  const [questionsData, setQuestionsData] = useState<any>(null);
+  const [dataLoading, setDataLoading] = useState(true);
+  const [dataError, setDataError] = useState<string | null>(null);
+
+  // Load resultContent and questionsData dynamically
+  useEffect(() => {
+    let isMounted = true;
+    
+    async function loadData() {
+      if (!useTestStore) {
+        setDataError('Test store not found');
+        setDataLoading(false);
+        return;
+      }
+
+      try {
+        // Check cache first
+        let content = resultContentCache[testId];
+        let questions = questionsDataCache[testId];
+
+        // Load if not in cache
+        if (!content) {
+          content = await loadResultContent(testId);
+          if (content) {
+            resultContentCache[testId] = content;
+          }
+        }
+
+        if (!questions) {
+          questions = await loadQuestionsData(testId);
+          if (questions) {
+            questionsDataCache[testId] = questions;
+          }
+        }
+
+        if (isMounted) {
+          if (!content || !questions) {
+            setDataError(`Failed to load data for test: ${testId}`);
+          } else {
+            setResultContent(content);
+            setQuestionsData(questions);
+            setDataError(null);
+          }
+          setDataLoading(false);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          console.error('Error loading test data:', err);
+          setDataError(err.message || 'Failed to load test data');
+          setDataLoading(false);
+        }
+      }
+    }
+
+    loadData();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [testId, useTestStore]);
+
+  // All conditional returns AFTER all hooks
+  if (storeLoading) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#10b981' }}>
+          {t('common.loading')}
+        </div>
+      </div>
+    );
+  }
+
+  if (!useTestStore) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="error">
+          Test configuration not found for: {testId}
+          <br />
+          Available tests: {Object.keys(storeImportMap).join(', ')}
+        </div>
+      </div>
+    );
+  }
+
+  if (dataLoading) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="loading" style={{ fontSize: '18px', color: '#10b981' }}>
+          {t('common.loading')}
+        </div>
+      </div>
+    );
+  }
+
+  if (dataError || !resultContent || !questionsData) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+        padding: '40px',
+      }}>
+        <div className="card" style={{
+          maxWidth: '600px',
+          padding: '40px',
+          textAlign: 'center',
+        }}>
+          <div className="error" style={{ marginBottom: '20px' }}>
+            {dataError || 'Failed to load test data'}
+          </div>
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              setDataError(null);
+              setDataLoading(true);
+              // Retry loading
+              loadResultContent(testId).then(content => {
+                if (content) {
+                  resultContentCache[testId] = content;
+                  setResultContent(content);
+                }
+              });
+              loadQuestionsData(testId).then(questions => {
+                if (questions) {
+                  questionsDataCache[testId] = questions;
+                  setQuestionsData(questions);
+                }
+                setDataLoading(false);
+              });
+            }}
+          >
+            {t('common.tryAgain')}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // All data loaded, render content component (which will call useTestStore hook)
+  return (
+    <UniversalTestPageContent
+      testId={testId}
+      useTestStore={useTestStore}
+      resultContent={resultContent}
+      questionsData={questionsData}
+    />
+  );
+}

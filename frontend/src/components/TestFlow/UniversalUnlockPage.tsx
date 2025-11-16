@@ -3,27 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { useParams, useLocation } from 'react-router-dom';
 import UniversalUnlockTemplate from './UniversalUnlockTemplate';
 import { getTestConfig } from '../../utils/testContentLoader';
-import { getTestStore } from '../../utils/testPageFactory';
+import { useTestStore } from '../../hooks/useTestStore';
+import { LoadingFallback } from '../ui/LoadingFallback';
 import '../../App.css';
 
 interface UniversalUnlockPageProps {
   testId?: string; // Optional, can be derived from URL
-}
-
-function LoadingFallback() {
-  return (
-    <main style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
-      <div className="loading" style={{ fontSize: '18px', color: '#6c63ff' }}>
-        Loading your results...
-      </div>
-    </main>
-  );
 }
 
 function NoResultFallback({ testId }: { testId: string }) {
@@ -70,73 +55,19 @@ function NoResultFallback({ testId }: { testId: string }) {
   );
 }
 
-export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnlockPageProps) {
+// Inner component that uses the store hook (called after store is loaded)
+function UniversalUnlockPageContent({
+  testId,
+  useTestStoreHook,
+}: {
+  testId: string;
+  useTestStoreHook: any;
+}) {
   const { i18n } = useTranslation();
-  const location = useLocation();
   const { level: urlLevel } = useParams<{ level?: string }>();
   
-  // Get testId from prop or derive from URL slug
-  let testId = testIdProp || '';
-  
-  if (!testId) {
-    // Extract slug from URL path (e.g., "/test/creative-thinking/unlock/excellent" -> "creative-thinking")
-    const pathMatch = location.pathname.match(/\/test\/([^/]+)/);
-    if (pathMatch) {
-      const slug = pathMatch[1];
-      const testConfig = getTestConfig(slug);
-      testId = testConfig?.id || slug;
-    }
-  }
-  
-  // Load store dynamically
-  const [useTestStore, setUseTestStore] = useState<any>(null);
-  const [storeLoading, setStoreLoading] = useState(true);
-  
-  useEffect(() => {
-    let isMounted = true;
-    
-    async function loadStore() {
-      try {
-        const store = await getTestStore(testId);
-        if (isMounted) {
-          setUseTestStore(() => store);
-          setStoreLoading(false);
-        }
-      } catch (err: any) {
-        if (isMounted) {
-          setStoreLoading(false);
-        }
-      }
-    }
-    
-    loadStore();
-    
-    return () => {
-      isMounted = false;
-    };
-  }, [testId]);
-  
-  if (storeLoading) {
-    return <LoadingFallback />;
-  }
-  
-  if (!useTestStore) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
-      }}>
-        <div className="error">
-          Test store not found for: {testId}
-        </div>
-      </div>
-    );
-  }
-  
-  const { resultLevel } = useTestStore();
+  // Now safe to call useTestStoreHook hook - it's guaranteed to be loaded
+  const { resultLevel } = useTestStoreHook();
   const [levelToLoad, setLevelToLoad] = useState<'excellent' | 'good' | 'developing' | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -177,7 +108,7 @@ export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnl
   }, [resultLevel, urlLevel, storageKey]);
 
   if (loading) {
-    return <LoadingFallback />;
+    return <LoadingFallback message="Loading your results..." testId={testId} />;
   }
 
   if (!levelToLoad) {
@@ -192,6 +123,71 @@ export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnl
       testId={testId}
       level={levelToLoad}
       locale={locale}
+    />
+  );
+}
+
+export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnlockPageProps) {
+  const location = useLocation();
+  
+  // Get testId from prop or derive from URL slug
+  let testId = testIdProp || '';
+  
+  if (!testId) {
+    // Extract slug from URL path (e.g., "/test/creative-thinking/unlock/excellent" -> "creative-thinking")
+    const pathMatch = location.pathname.match(/\/test\/([^/]+)/);
+    if (pathMatch) {
+      const slug = pathMatch[1];
+      const testConfig = getTestConfig(slug);
+      testId = testConfig?.id || slug;
+    }
+  }
+  
+  // Early return if testId is still missing
+  if (!testId) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="error">
+          Test not found. Please check the URL.
+        </div>
+      </div>
+    );
+  }
+  
+  // Load store dynamically using hook
+  const { useTestStore: useTestStoreHook, loading: storeLoading, error: storeError } = useTestStore(testId);
+  
+  if (storeLoading) {
+    return <LoadingFallback message="Loading your results..." testId={testId} />;
+  }
+  
+  if (storeError || !useTestStoreHook) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
+      }}>
+        <div className="error">
+          {storeError || `Test store not found for: ${testId}`}
+        </div>
+      </div>
+    );
+  }
+  
+  // All data loaded, render content component (which will call useTestStoreHook hook)
+  return (
+    <UniversalUnlockPageContent
+      testId={testId}
+      useTestStoreHook={useTestStoreHook}
     />
   );
 }

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMobile } from '../../hooks/useMobile';
 import { useEffect, useRef, useState } from 'react';
 import { getTestConfig } from '../../utils/testContentLoader';
+import levelEmojisData from '../../data/shared/level-emojis.json';
 import '../../App.css';
 
 // FadeInCard component - animates once on first view, then stays static
@@ -48,24 +49,11 @@ const FadeInCard = ({ children, delay = 0, className, style, disableHover = fals
   );
 };
 
-// Emoji configurations for different result levels
-const levelConfig: Record<'excellent' | 'good' | 'developing', {
+// Load emoji configurations from JSON
+const levelConfig = levelEmojisData as Record<'excellent' | 'good' | 'developing', {
   heroEmojis: string[];
   sectionEmojis: string[];
-}> = {
-  excellent: {
-    heroEmojis: ['🌸', '✨', '💖'],
-    sectionEmojis: ['🌸', '🌺', '🌟', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭'],
-  },
-  good: {
-    heroEmojis: ['🌺', '🌟', '💫'],
-    sectionEmojis: ['🌺', '🌸', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭', '🌟'],
-  },
-  developing: {
-    heroEmojis: ['🌱', '📚', '🔍'],
-    sectionEmojis: ['🌱', '📚', '💪', '🔮', '🌍', '🎯', '💫', '🔬', '🎭', '🌟'],
-  },
-};
+}>;
 
 interface UniversalUnlockTemplateProps {
   testId: string;
@@ -93,7 +81,6 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
         const content = await import(`../../data/tests/results/${testId}.json`);
         setResultContent(content.default);
       } catch (error) {
-        console.error(`Failed to load result content for ${testId}:`, error);
         // Fallback to empty content structure
         setResultContent({
           [level]: {

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
 import { Clock, MessageSquare } from 'lucide-react';
 import { getTestConfig } from '../../utils/testContentLoader';
+import { AnswerButtonGrid } from './AnswerButtonGrid';
 import '../../App.css';
 
 interface UniversalQuestionsPageProps {
@@ -12,28 +13,6 @@ interface UniversalQuestionsPageProps {
   onComplete: () => void;
   useTestStore: any; // Store hook
 }
-
-// Soft pastel gradient colors for answer buttons (red to green scale)
-const answerGradients = [
-  'linear-gradient(135deg, #f8b2b2, #f5a1a1)', // Never - soft red
-  'linear-gradient(135deg, #f5a1a1, #f7c59f)', // Rarely - red to orange
-  'linear-gradient(135deg, #f7c59f, #fff2dc)', // Sometimes - orange to cream
-  'linear-gradient(135deg, #ffffff, #fefefe)', // Neutral - pure white
-  'linear-gradient(135deg, #f4ffe5, #c8f8c8)', // Often - cream to light green
-  'linear-gradient(135deg, #c8f8c8, #a4e8a4)', // Usually - light green to green
-  'linear-gradient(135deg, #a4e8a4, #89dc89)', // Always - green to darker green
-];
-
-// Glow colors for hover effect (matching each button's color)
-const glowColors = [
-  'rgba(248, 178, 178, 0.5)', // Never - soft red glow
-  'rgba(245, 161, 161, 0.5)', // Rarely - red-orange glow
-  'rgba(247, 197, 159, 0.5)', // Sometimes - orange glow
-  'rgba(255, 255, 255, 0.5)', // Neutral - white glow
-  'rgba(200, 248, 200, 0.5)', // Often - light green glow
-  'rgba(164, 232, 164, 0.5)', // Usually - green glow
-  'rgba(137, 220, 137, 0.5)', // Always - darker green glow
-];
 
 export default function UniversalQuestionsPage({ 
   testId, 
@@ -361,179 +340,12 @@ export default function UniversalQuestionsPage({
                 width: '100%',
                 marginTop: isMobile ? '48px' : '80px',
               }}>
-                {isMobile ? (
-                  <>
-                    <div style={{
-                      display: 'flex',
-                      gap: '10px',
-                      justifyContent: 'center',
-                      width: '100%',
-                    }}>
-                      {[4, 5, 6].map((originalIndex) => {
-                        const option = currentQuestion.options[originalIndex];
-                        return (
-                          <motion.button
-                            key={originalIndex}
-                            onClick={() => handleOptionSelect(originalIndex)}
-                            whileHover={!autoAdvancing ? { 
-                              y: -4,
-                              boxShadow: `0 0 12px ${glowColors[originalIndex]}, 0 4px 18px rgba(0,0,0,0.1)`,
-                              filter: 'brightness(1.06)',
-                              transition: { duration: 0.12, ease: 'easeOut' }
-                            } : {}}
-                            whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
-                            disabled={autoAdvancing}
-                            style={{
-                              padding: '10px 14px',
-                              border: 'none',
-                              borderRadius: '12px',
-                              background: answerGradients[originalIndex],
-                              cursor: autoAdvancing ? 'not-allowed' : 'pointer',
-                              textAlign: 'center',
-                              fontSize: '12px',
-                              fontWeight: '600',
-                              color: '#333',
-                              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-                              opacity: autoAdvancing ? 0.6 : 1,
-                              boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                              position: 'relative',
-                              zIndex: selectedOption === originalIndex ? 2 : 1,
-                              minWidth: '100px',
-                              flex: '1 1 0',
-                              whiteSpace: 'nowrap',
-                            }}
-                          >
-                            {option}
-                          </motion.button>
-                        );
-                      })}
-                    </div>
-                    
-                    <div style={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      width: '100%',
-                    }}>
-                      <motion.button
-                        key={3}
-                        onClick={() => handleOptionSelect(3)}
-                        whileHover={!autoAdvancing ? { 
-                          y: -4,
-                          boxShadow: `0 0 12px ${glowColors[3]}, 0 4px 18px rgba(0,0,0,0.1)`,
-                          filter: 'brightness(1.06)',
-                          transition: { duration: 0.12, ease: 'easeOut' }
-                        } : {}}
-                        whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
-                        disabled={autoAdvancing}
-                        style={{
-                          padding: '10px 14px',
-                          border: 'none',
-                          borderRadius: '12px',
-                          background: answerGradients[3],
-                          cursor: autoAdvancing ? 'not-allowed' : 'pointer',
-                          textAlign: 'center',
-                          fontSize: '12px',
-                          fontWeight: '600',
-                          color: '#333',
-                          transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-                          opacity: autoAdvancing ? 0.6 : 1,
-                          boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                          position: 'relative',
-                          zIndex: selectedOption === 3 ? 2 : 1,
-                          minWidth: '250px',
-                          maxWidth: '250px',
-                          whiteSpace: 'nowrap',
-                        }}
-                      >
-                        {currentQuestion.options[3]}
-                      </motion.button>
-                    </div>
-                    
-                    <div style={{
-                      display: 'flex',
-                      gap: '10px',
-                      justifyContent: 'center',
-                      width: '100%',
-                    }}>
-                      {[0, 1, 2].map((originalIndex) => {
-                        const option = currentQuestion.options[originalIndex];
-                        return (
-                          <motion.button
-                            key={originalIndex}
-                            onClick={() => handleOptionSelect(originalIndex)}
-                            whileHover={!autoAdvancing ? { 
-                              y: -4,
-                              boxShadow: `0 0 12px ${glowColors[originalIndex]}, 0 4px 18px rgba(0,0,0,0.1)`,
-                              filter: 'brightness(1.06)',
-                              transition: { duration: 0.12, ease: 'easeOut' }
-                            } : {}}
-                            whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
-                            disabled={autoAdvancing}
-                            style={{
-                              padding: '10px 14px',
-                              border: 'none',
-                              borderRadius: '12px',
-                              background: answerGradients[originalIndex],
-                              cursor: autoAdvancing ? 'not-allowed' : 'pointer',
-                              textAlign: 'center',
-                              fontSize: '12px',
-                              fontWeight: '600',
-                              color: '#333',
-                              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-                              opacity: autoAdvancing ? 0.6 : 1,
-                              boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                              position: 'relative',
-                              zIndex: selectedOption === originalIndex ? 2 : 1,
-                              minWidth: '100px',
-                              flex: '1 1 0',
-                              whiteSpace: 'nowrap',
-                            }}
-                          >
-                            {option}
-                          </motion.button>
-                        );
-                      })}
-                    </div>
-                  </>
-                ) : (
-                  currentQuestion.options.map((option: string, index: number) => {
-                    return (
-                      <motion.button
-                        key={index}
-                        onClick={() => handleOptionSelect(index)}
-                        whileHover={!autoAdvancing ? { 
-                          y: -4,
-                          boxShadow: `0 0 12px ${glowColors[index]}, 0 4px 18px rgba(0,0,0,0.1)`,
-                          filter: 'brightness(1.06)',
-                          transition: { duration: 0.12, ease: 'easeOut' }
-                        } : {}}
-                        whileTap={!autoAdvancing ? { scale: 0.98 } : {}}
-                        disabled={autoAdvancing}
-                        style={{
-                          padding: '12px 20px',
-                          border: 'none',
-                          borderRadius: '12px',
-                          background: answerGradients[index],
-                          cursor: autoAdvancing ? 'not-allowed' : 'pointer',
-                          textAlign: 'center',
-                          fontSize: '14px',
-                          fontWeight: '600',
-                          color: '#333',
-                          transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-                          opacity: autoAdvancing ? 0.6 : 1,
-                          boxShadow: '0 3px 10px rgba(0,0,0,0.08)',
-                          position: 'relative',
-                          zIndex: selectedOption === index ? 2 : 1,
-                          flex: '1 1 0',
-                          maxWidth: '150px',
-                          whiteSpace: 'nowrap',
-                        }}
-                      >
-                        {option}
-                      </motion.button>
-                    );
-                  })
-                )}
+                <AnswerButtonGrid
+                  options={currentQuestion.options}
+                  selectedOption={selectedOption}
+                  onSelect={handleOptionSelect}
+                  disabled={autoAdvancing}
+                />
               </div>
 
               <div style={{

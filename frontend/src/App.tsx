@@ -33,6 +33,13 @@ function AppContent() {
     test => test.id !== 'iqtest' && test.id !== 'personality'
   );
   
+  // Debug: Log routes being created
+  console.log('[App] Creating routes for universal tests:', universalTests.map(t => ({
+    id: t.id,
+    slug: t.slug,
+    path: `/test/${t.slug}`
+  })));
+  
   return (
     <>
       <Header />

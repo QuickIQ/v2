@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "badge": {
+      "en": "✨ AI-powered insight just for you",
+      "tr": "✨ Size özel yapay zeka destekli içgörü"
+    },
+    "title": {
+      "en": "Your Mind Holds More Than You Think",
+      "tr": "Zihniniz Düşündüğünüzden Daha Fazlasını Barındırıyor"
+    },
+    "subtitle": {
+      "en": "Unlock your full creative potential — AI has analyzed your answers and crafted a detailed insight just for you.",
+      "tr": "Yaratıcı potansiyelinizin tamamını açığa çıkarın — AI yanıtlarınızı analiz etti ve size özel detaylı bir içgörü hazırladı."
+    },
+    "ctaButton": {
+      "en": "Reveal My Hidden Potential",
+      "tr": "Gizli Potansiyelimi Açığa Çıkar"
+    }
+  },
+  "growingMind": {
+    "title": {
+      "en": "Your Detailed {testName} Result",
+      "tr": "Detaylı {testName} Sonucunuz"
+    },
+    "introCard": {
+      "title": {
+        "en": "THIS IS JUST AN INTRO!",
+        "tr": "BU SADECE BİR GİRİŞ!"
+      },
+      "description": {
+        "en": "YOU WILL SEE 100X MORE CONTENT WHEN YOU UNLOCK YOUR PERSONALIZED RESULT. IT'S CHEAPER THAN A COFFEE PRICE!☕",
+        "tr": "KİŞİSELLEŞTİRİLMİŞ SONUCUNUZU AÇTIĞINIZDA 100 KAT DAHA FAZLA İÇERİK GÖRECEKSİNİZ. BİR FİNCAN KAHVEDEN DAHA UCUZ!☕"
+      }
+    },
+    "lockedSection": {
+      "subtext": {
+        "en": "Your personalized insight is waiting — Discover your hidden strengths, creative growth zones, and unique thinking blueprint.",
+        "tr": "Kişiselleştirilmiş içgörünüz bekliyor — Gizli güçlü yönlerinizi, yaratıcı gelişim alanlarınızı ve benzersiz düşünce haritanızı keşfedin."
+      },
+      "button": {
+        "en": "🔓 Unlock Detailed Result",
+        "tr": "🔓 Detaylı Sonucu Aç"
+      }
+    }
+  },
+  "discoverCard": {
+    "text": {
+      "en": "Discover your mind, reveal your truth, unlock your potential, and transform yourself.",
+      "tr": "Zihninizi keşfedin, gerçeğinizi ortaya çıkarın, potansiyelinizi açığa çıkarın ve kendinizi dönüştürün."
+    }
+  },
+  "pricing": {
+    "amount": "$1.95",
+    "currency": "USD",
+    "trial": {
+      "days": 7,
+      "text": {
+        "en": "7-Day Trial • Cancel Anytime",
+        "tr": "7 Günlük Deneme • İstediğiniz Zaman İptal Edin"
+      },
+      "afterTrial": {
+        "en": "Then $39.90/month after the trial.",
+        "tr": "Deneme sonrası ayda $39.90."
+      }
+    }
+  },
+  "trustBadges": {
+    "verified": {
+      "en": "Verified by Stripe",
+      "tr": "Stripe tarafından doğrulandı"
+    },
+    "secure": {
+      "en": "Secure SSL",
+      "tr": "Güvenli SSL"
+    },
+    "refund": {
+      "en": "7-Day Refund Policy",
+      "tr": "7 Günlük İade Politikası"
+    }
+  }
+}
+

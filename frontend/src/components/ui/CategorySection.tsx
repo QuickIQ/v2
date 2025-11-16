@@ -37,11 +37,11 @@ export function CategorySection() {
           {category.showCards && (
             <div style={{
               display: 'grid',
-              gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
-              gap: isMobile ? '20px' : '10px',
+              gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+              gap: isMobile ? '12px' : '10px',
               maxWidth: 'none',
               margin: '0 auto',
-              padding: isMobile ? '0 20px' : '0 20px',
+              padding: isMobile ? '0' : '0',
               marginBottom: isMobile ? '32px' : '48px',
             }}>
               {testConfigs

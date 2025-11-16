@@ -68,7 +68,6 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
           border: `2px solid ${test.colors.cardBorder}`,
           position: 'relative',
           overflow: 'hidden',
-          transition: 'all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
           height: '100%',
           width: '100%',
           display: 'flex',
@@ -79,6 +78,14 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
           scale: 1.05,
           boxShadow: test.colors.cardShadow,
           borderColor: test.colors.cardHoverBorder,
+          transition: {
+            duration: 0.25,
+            ease: [0.34, 1.56, 0.64, 1],
+          },
+        }}
+        transition={{
+          duration: 0.2,
+          ease: 'easeOut',
         }}
       >
         {/* Glow Effect Background */}
@@ -92,15 +99,23 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
             background: `radial-gradient(circle, ${test.colors.cardGlow} 0%, transparent 70%)`,
             opacity: 0,
             pointerEvents: 'none',
-            transition: 'opacity 0.15s ease',
           }}
-          transition={{ duration: 0.15 }}
-          whileHover={{ opacity: 1 }}
+          transition={{ 
+            duration: 0.2,
+            ease: 'easeOut',
+          }}
+          whileHover={{ 
+            opacity: 1,
+            transition: {
+              duration: 0.2,
+              ease: 'easeIn',
+            },
+          }}
         />
         
         {/* Content */}
-        <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%' }}>
-          <div style={{ marginBottom: '24px' }}>
+        <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+          <div style={{ marginBottom: '24px', flexShrink: 0, minHeight: subtitle ? undefined : (isMobile ? '39px' : '45px') }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -111,6 +126,9 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
               WebkitUserSelect: 'none',
               MozUserSelect: 'none',
               msUserSelect: 'none',
+              minWidth: 0,
+              width: '100%',
+              height: isMobile ? '34px' : '42px',
             }}>
               <motion.div
                 animate={{
@@ -127,6 +145,7 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
+                  flexShrink: 0,
                 }}
               >
                 <IconComponent
@@ -143,6 +162,11 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
                 color: test.colors.primary,
                 whiteSpace: 'nowrap',
                 margin: 0,
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                maxWidth: '100%',
+                lineHeight: isMobile ? '22px' : '26px',
+                height: isMobile ? '22px' : '26px',
               }}>
                 {testName}
               </h4>
@@ -157,23 +181,40 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
               gap: isMobile ? '6px' : '8px',
               flexWrap: 'wrap',
               marginBottom: '8px',
+              marginTop: '8px',
+              height: isMobile ? '20px' : '22px',
+              lineHeight: isMobile ? '14px' : '16px',
             }}>
-              <HelpCircle size={isMobile ? 16 : 18} style={{ color: test.colors.primary }} />
+              <HelpCircle size={isMobile ? 16 : 18} style={{ color: test.colors.primary, flexShrink: 0 }} />
               <span>{test.questions} {language === 'tr' ? 'soru' : 'questions'}</span>
               <span style={{ margin: '0 4px' }}>-</span>
-              <Clock size={isMobile ? 16 : 18} style={{ color: test.colors.primary }} />
+              <Clock size={isMobile ? 16 : 18} style={{ color: test.colors.primary, flexShrink: 0 }} />
               <span>{test.minutes} {language === 'tr' ? 'dakika' : 'minutes'}</span>
             </p>
-            {subtitle && (
+            {subtitle ? (
               <p style={{ 
                 color: '#666', 
                 fontSize: isMobile ? '13px' : '15px', 
                 lineHeight: '1.5',
                 marginTop: '8px',
                 marginBottom: '16px',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+                minHeight: isMobile ? '39px' : '45px',
+                maxHeight: isMobile ? '39px' : '45px',
               }}>
                 {subtitle}
               </p>
+            ) : (
+              <div style={{ 
+                marginTop: '8px',
+                marginBottom: '16px',
+                minHeight: isMobile ? '39px' : '45px',
+                maxHeight: isMobile ? '39px' : '45px',
+              }} />
             )}
           </div>
           
@@ -193,6 +234,11 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
               transition: 'all 0.15s ease-out',
               width: 'fit-content',
               alignSelf: 'center',
+              flexShrink: 0,
+              height: isMobile ? '40px' : '48px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
             whileHover={{ 
               scale: 1.05,

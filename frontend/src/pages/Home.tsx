@@ -174,7 +174,7 @@ function Home() {
         </h2>
       </section>
 
-      <main className="container" style={{ paddingTop: '80px', paddingBottom: '80px', position: 'relative', zIndex: 1 }}>
+      <main style={{ paddingTop: '80px', paddingBottom: '80px', position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
         {/* Developer Control Panel - Only visible in development */}
         {((import.meta as any).env?.DEV || (import.meta as any).env?.MODE === 'development') && (
           <DeveloperControlPanel />
@@ -201,13 +201,13 @@ function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               style={{
                 display: 'grid',
-                gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-                gap: isMobile ? '20px' : '10px',
+                gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+                gap: isMobile ? '12px' : '10px',
                 maxWidth: 'none',
                 margin: '0 auto',
                 marginTop: isMobile ? '15vh' : 'clamp(500px, 25vh, 600px)',
                 marginBottom: isMobile ? '48px' : '64px',
-                padding: isMobile ? '0 20px' : '0 20px',
+                padding: isMobile ? '0' : '0',
               }}
             >
               <TestCard test={iqTestConfig} index={0} />
@@ -228,8 +228,11 @@ function Home() {
           style={{ 
             marginTop: isMobile ? '10vh' : 'clamp(300px, 20vh, 400px)',
             display: 'grid', 
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', 
-            gap: isMobile ? '20px' : '32px' 
+            gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', 
+            gap: isMobile ? '12px' : '10px',
+            maxWidth: 'none',
+            margin: '0 auto',
+            padding: 0,
           }}
         >
           {tests

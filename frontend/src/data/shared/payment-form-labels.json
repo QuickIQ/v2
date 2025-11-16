@@ -1,0 +1,107 @@
+{
+  "tabs": {
+    "card": {
+      "en": "🔒 Pay with Card",
+      "tr": "🔒 Kart ile Öde"
+    },
+    "googlepay": {
+      "en": "🪙 Pay with Google Pay",
+      "tr": "🪙 Google Pay ile Öde"
+    }
+  },
+  "fields": {
+    "cardNumber": {
+      "label": {
+        "en": "Card Number",
+        "tr": "Kart Numarası"
+      },
+      "placeholder": {
+        "en": "1234 5678 9012 3456",
+        "tr": "1234 5678 9012 3456"
+      }
+    },
+    "expiry": {
+      "label": {
+        "en": "Expiration Date",
+        "tr": "Son Kullanma Tarihi"
+      },
+      "placeholder": {
+        "en": "MM/YY",
+        "tr": "AA/YY"
+      }
+    },
+    "cvv": {
+      "label": {
+        "en": "CVC",
+        "tr": "CVC"
+      },
+      "placeholder": {
+        "en": "••••",
+        "tr": "••••"
+      }
+    },
+    "cardName": {
+      "label": {
+        "en": "Name on Card",
+        "tr": "Kart Üzerindeki İsim"
+      },
+      "placeholder": {
+        "en": "Full name",
+        "tr": "Tam ad"
+      }
+    },
+    "saveCard": {
+      "en": "Save card securely for faster checkout",
+      "tr": "Daha hızlı ödeme için kartı güvenli şekilde kaydet"
+    }
+  },
+  "messages": {
+    "secureCheckout": {
+      "en": "🔒 Secure checkout • SSL encrypted • Powered by Stripe",
+      "tr": "🔒 Güvenli ödeme • SSL şifreli • Stripe tarafından desteklenir"
+    },
+    "stripeSecured": {
+      "en": "🔒 Stripe-secured payment. We never store card information.",
+      "tr": "🔒 Stripe güvenli ödeme. Kart bilgilerinizi asla saklamıyoruz."
+    },
+    "completeTrial": {
+      "en": "Complete Your 7-Day Trial Securely",
+      "tr": "7 Günlük Denemenizi Güvenli Şekilde Tamamlayın"
+    },
+    "processing": {
+      "en": "Processing...",
+      "tr": "İşleniyor..."
+    },
+    "unlockResults": {
+      "en": "🔒 Unlock My Results Securely",
+      "tr": "🔒 Sonuçlarımı Güvenli Şekilde Aç"
+    }
+  },
+  "errors": {
+    "cardName": {
+      "en": "Cardholder name is required",
+      "tr": "Kart sahibi adı gereklidir"
+    },
+    "cardNumber": {
+      "en": "Invalid card number",
+      "tr": "Geçersiz kart numarası"
+    },
+    "expiry": {
+      "en": "Invalid expiration date",
+      "tr": "Geçersiz son kullanma tarihi"
+    },
+    "cvv": {
+      "en": "Invalid CVV",
+      "tr": "Geçersiz CVV"
+    },
+    "validation": {
+      "en": "Please check your card information",
+      "tr": "Lütfen kart bilgilerinizi kontrol edin"
+    },
+    "failed": {
+      "en": "Payment failed. Please check your card info.",
+      "tr": "Ödeme başarısız. Lütfen kart bilgilerinizi kontrol edin."
+    }
+  }
+}
+
