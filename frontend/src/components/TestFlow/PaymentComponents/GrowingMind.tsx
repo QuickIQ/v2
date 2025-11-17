@@ -17,6 +17,28 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
   const [isTablet, setIsTablet] = useState(false);
   const growingMindContent = paymentPageContent.growingMind;
 
+  // Calculate dynamic font size based on title length
+  const titleText = (growingMindContent.title[language] || growingMindContent.title.en).replace('{testName}', testName);
+  const titleLength = titleText.length;
+  
+  // Dynamic font size: longer titles get smaller font to fit on one line
+  const getTitleFontSize = () => {
+    // Use clamp for responsive sizing that adapts to container width
+    if (isMobile) {
+      // Mobile: smaller base, scales down more aggressively
+      if (titleLength <= 25) return 'clamp(1.5rem, 5vw, 1.75rem)';
+      if (titleLength <= 35) return 'clamp(1.25rem, 4.5vw, 1.5rem)';
+      if (titleLength <= 45) return 'clamp(1.1rem, 4vw, 1.25rem)';
+      return 'clamp(0.95rem, 3.5vw, 1.1rem)';
+    } else {
+      // Desktop: larger base, scales down more gradually
+      if (titleLength <= 25) return 'clamp(2rem, 3vw, 2.75rem)';
+      if (titleLength <= 35) return 'clamp(1.75rem, 2.8vw, 2.25rem)';
+      if (titleLength <= 45) return 'clamp(1.5rem, 2.5vw, 1.9rem)';
+      return 'clamp(1.3rem, 2.2vw, 1.6rem)';
+    }
+  };
+
   useEffect(() => {
     const checkTablet = () => {
       setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
@@ -64,13 +86,13 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
           transition: { duration: 0.15, ease: 'easeInOut' }
         }}
         style={{
-          width: isTablet ? '240px' : '270px',
-          minHeight: isTablet ? '170px' : '180px',
+          width: '100%',
+          minHeight: isMobile ? '160px' : (isTablet ? '170px' : '180px'),
           background: 'linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%)',
           borderRadius: '16px',
           border: '1.5px solid rgba(255,105,180,0.15)',
           boxShadow: '0 2px 10px rgba(255,105,180,0.1)',
-          padding: '18px 20px',
+          padding: isMobile ? '16px 14px' : '18px 20px',
           cursor: 'pointer',
           textAlign: 'center',
           display: 'flex',
@@ -132,6 +154,10 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
         overflow: 'hidden',
         cursor: 'default',
         transition: 'all 0.2s ease-out',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
       }}
     >
       <div style={{ position: 'relative', zIndex: 1 }}>
@@ -145,7 +171,7 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
         }}>
           {/* Title */}
           <h2 style={{
-            fontSize: isMobile ? '2rem' : '2.75rem',
+            fontSize: getTitleFontSize(),
             fontWeight: '700',
             background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 50%, #2196F3 100%)',
             WebkitBackgroundClip: 'text',
@@ -154,8 +180,13 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
             margin: 0,
             marginBottom: '8px',
             textShadow: '0 2px 8px rgba(33, 150, 243, 0.3)',
+            whiteSpace: 'nowrap',
+            overflow: 'visible',
+            textOverflow: 'clip',
+            maxWidth: '100%',
+            lineHeight: '1.2',
           }}>
-            {(growingMindContent.title[language] || growingMindContent.title.en).replace('{testName}', testName)}
+            {titleText}
           </h2>
 
           {/* Decorative Line */}
@@ -223,69 +254,34 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
             </motion.div>
           )}
 
-          {/* Symmetric 6-Card Layout */}
+          {/* 6-Card Layout: Desktop 3x2, Mobile 2x3 */}
           {!isMobile ? (
             <div style={{
               position: 'relative',
               width: '100%',
               minHeight: '400px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '26px',
-            }}>
-              {/* Top Row: 2 Cards */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
                 gap: isTablet ? '20px' : '26px',
-                width: '100%',
+              alignItems: 'stretch',
               }}>
-                {displayInsights.slice(0, 2).map((insight: string, index: number) =>
-                  renderInsightCard(insight, index, 0)
-                )}
-              </div>
-
-              {/* Middle Row: 2 Cards */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: isTablet ? '20px' : '26px',
-                width: '100%',
-              }}>
-                {displayInsights.slice(2, 4).map((insight: string, index: number) =>
-                  renderInsightCard(insight, index + 2, 1)
-                )}
-              </div>
-
-              {/* Bottom Row: 2 Cards */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: isTablet ? '20px' : '26px',
-                width: '100%',
-              }}>
-                {displayInsights.slice(4, 6).map((insight: string, index: number) =>
-                  renderInsightCard(insight, index + 4, 2)
-                )}
-              </div>
+              {displayInsights.slice(0, 6).map((insight: string, index: number) => {
+                const row = Math.floor(index / 3);
+                return renderInsightCard(insight, index, row);
+              })}
             </div>
           ) : (
-            // Mobile: Vertical Stack
+            // Mobile: 2 columns, 3 rows
             <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '18px',
               width: '100%',
             }}>
-              {displayInsights.slice(0, 6).map((insight: string, index: number) =>
-                renderInsightCard(insight, index, 0)
-              )}
+              {displayInsights.slice(0, 6).map((insight: string, index: number) => {
+                const row = Math.floor(index / 2);
+                return renderInsightCard(insight, index, row);
+              })}
             </div>
           )}
 
@@ -311,14 +307,9 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
               color: '#2196F3',
               margin: 0,
               lineHeight: '1.6',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              flexWrap: 'wrap',
+              textAlign: 'center',
             }}>
-              <span>{growingMindContent.introCard.title[language] || growingMindContent.introCard.title.en}</span>
-              <span style={{ fontSize: '20px' }}>☕</span>
+              {growingMindContent.introCard.title[language] || growingMindContent.introCard.title.en}
             </p>
             <p style={{
               fontSize: isMobile ? '14px' : '16px',
@@ -329,6 +320,52 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
             }}>
               {growingMindContent.introCard.description[language] || growingMindContent.introCard.description.en}
             </p>
+            
+            {/* Unlock Button */}
+            <motion.button
+              onClick={() => {
+                // On mobile, scroll directly to PaymentForm container (which contains "Pay with Card")
+                // On desktop, scroll to payment-section
+                const targetId = isMobile ? 'payment-form-container' : 'payment-section';
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                  // Mobile needs more offset to account for header
+                  // Desktop needs less offset
+                  const offset = isMobile ? 140 : 100;
+                  const elementPosition = targetElement.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              style={{
+                marginTop: '24px',
+                padding: isMobile ? '14px 28px' : '16px 36px',
+                background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
+                border: 'none',
+                borderRadius: '14px',
+                color: 'white',
+                fontWeight: '700',
+                fontSize: isMobile ? '15px' : '17px',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                boxShadow: '0 6px 20px rgba(33, 150, 243, 0.4)',
+                transition: 'all 0.2s ease',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif',
+              }}
+            >
+              <span>🔒</span>
+              <span>{language === 'tr' ? 'Kişiselleştirilmiş Sonucu Aç' : 'Unlock Personalized Result'}</span>
+            </motion.button>
           </motion.div>
         </div>
       </div>

@@ -9,10 +9,11 @@ import paymentFormLabelsData from '../../../data/shared/payment-form-labels.json
 interface PaymentFormProps {
   language: 'en' | 'tr';
   testId: string;
+  resultLevel?: 'excellent' | 'good' | 'developing' | null;
   onError?: (message: string) => void;
 }
 
-export function PaymentForm({ language, testId, onError }: PaymentFormProps) {
+export function PaymentForm({ language, testId, resultLevel, onError }: PaymentFormProps) {
   const navigate = useNavigate();
   const isMobile = useMobile();
   const paymentFormLabels = paymentFormLabelsData;
@@ -94,7 +95,9 @@ export function PaymentForm({ language, testId, onError }: PaymentFormProps) {
     
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
-      navigate(`/test/${testId}/unlock`);
+      // Redirect to specific tier unlock page based on result level
+      const tier = resultLevel || 'good'; // Default to 'good' if resultLevel is not available
+      navigate(`/test/${testId}/unlock/${tier}`);
     } catch (error) {
       setProcessing(false);
       const errorMsg = paymentFormLabels.errors.failed[language] || paymentFormLabels.errors.failed.en;
@@ -105,12 +108,15 @@ export function PaymentForm({ language, testId, onError }: PaymentFormProps) {
   const handleGooglePayClick = () => {
     setProcessing(true);
     setTimeout(() => {
-      navigate(`/test/${testId}/unlock`);
+      // Redirect to specific tier unlock page based on result level
+      const tier = resultLevel || 'good'; // Default to 'good' if resultLevel is not available
+      navigate(`/test/${testId}/unlock/${tier}`);
     }, 1000);
   };
 
   return (
     <motion.div
+      id="payment-form-container"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.1 }}
@@ -124,6 +130,10 @@ export function PaymentForm({ language, testId, onError }: PaymentFormProps) {
         overflow: 'hidden',
         fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         width: isMobile ? '100%' : '102%',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
       }}
     >
       {/* Glowing border effect */}

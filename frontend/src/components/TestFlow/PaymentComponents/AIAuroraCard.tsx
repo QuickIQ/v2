@@ -37,6 +37,10 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
         overflow: 'hidden',
         cursor: 'default',
         transition: 'all 0.4s ease',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
       }}
     >
       {/* Subtle Aurora Glow Overlay */}
@@ -234,9 +238,22 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
         {/* Main CTA Button */}
         <motion.button
           onClick={() => {
-            const paymentSection = document.getElementById('payment-section');
-            if (paymentSection) {
-              paymentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // On mobile, scroll directly to PaymentForm container (which contains "Pay with Card")
+            // On desktop, scroll to payment-section
+            const targetId = isMobile ? 'payment-form-container' : 'payment-section';
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+              // Mobile needs more offset to account for header
+              // Desktop needs less offset
+              const offset = isMobile ? 140 : 100;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
             }
           }}
           initial={{ opacity: 0, y: 10 }}

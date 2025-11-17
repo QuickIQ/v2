@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist, StateStorage } from 'zustand/middleware';
+import { calculateUniversalScore, type AnswerIndex, type ReverseFlag } from '../utils/universalScoring';
 
 // Generic interfaces for all tests
 export interface TestQuestion {
@@ -111,15 +112,94 @@ export function createTestStore<TQuestion extends TestQuestion, TAnswer extends 
           const answers = get().answers;
           const questions = get().questions;
           
-          // Calculate total score with reverse scoring logic
+          // Validate we have exactly 20 questions and answers
+          if (questions.length !== 20 || answers.length !== 20) {
+            console.warn(`Expected 20 questions and 20 answers, got ${questions.length} questions and ${answers.length} answers`);
+            // Still try to calculate with available data
+          }
+          
+          // Sort questions by ID to ensure correct order (1-20)
+          const sortedQuestions = [...questions].sort((a, b) => a.id - b.id);
+          
+          // Create a map of question_id to answer for quick lookup
+          const answerMap = new Map(answers.map(a => [a.question_id, a]));
+          
+          // Convert answers to format expected by universal scoring
+          // option_index is 0-based (0-6), we need 1-based (1-7)
+          const answerIndices: AnswerIndex[] = [];
+          const reverseFlags: ReverseFlag[] = [];
+          
+          // Process questions in order (1-20) to maintain correct positions
+          for (let i = 0; i < Math.min(20, sortedQuestions.length); i++) {
+            const question = sortedQuestions[i];
+            
+            if (!question) {
+              // Missing question - use default values but maintain position
+              answerIndices.push(4 as AnswerIndex); // Default to Neutral
+              reverseFlags.push(0);
+              continue;
+            }
+            
+            // Find answer for this question
+            const answer = answerMap.get(question.id);
+            
+            // Convert boolean reverse to 0/1 flag (always add this, even if answer is missing)
+            const reverseFlag: ReverseFlag = question.reverse === true || question.reverse === 1 ? 1 : 0;
+            reverseFlags.push(reverseFlag);
+            
+            // Process answer if available and valid
+            if (answer) {
+              // Convert 0-based option_index to 1-based AnswerIndex (1-7)
+              const answerIndex = (answer.option_index + 1) as AnswerIndex;
+              
+              if (answerIndex >= 1 && answerIndex <= 7) {
+                answerIndices.push(answerIndex);
+              } else {
+                // Invalid answer index - use default but maintain position
+                console.warn(`Invalid answer index: ${answerIndex} for question ${question.id}, using default (Neutral)`);
+                answerIndices.push(4 as AnswerIndex); // Default to Neutral
+              }
+            } else {
+              // Missing answer for this question - use default but maintain position
+              console.warn(`Missing answer for question ${question.id}, using default (Neutral)`);
+              answerIndices.push(4 as AnswerIndex); // Default to Neutral
+            }
+          }
+          
+          // Pad arrays to exactly 20 if needed (shouldn't happen with valid data)
+          while (answerIndices.length < 20) {
+            answerIndices.push(4 as AnswerIndex); // Default to Neutral
+          }
+          while (reverseFlags.length < 20) {
+            reverseFlags.push(0);
+          }
+          
+          // Use universal scoring function
+          try {
+            const result = calculateUniversalScore({
+              answers: answerIndices.slice(0, 20) as AnswerIndex[],
+              reverse: reverseFlags.slice(0, 20) as ReverseFlag[],
+            });
+            
+            // Map result tier to result level
+            // Universal scoring already determines tier based on:
+            // 0-70 = 'developing'
+            // 71-110 = 'good'
+            // 111-140 = 'excellent'
+            const resultLevel: ResultLevel = result.resultTier;
+            
+            set({ 
+              totalScore: result.totalScore, 
+              resultLevel 
+            });
+          } catch (error) {
+            console.error('Error calculating score with universal scoring:', error);
+            // Fallback to old calculation method if universal scoring fails
           const totalScore = answers.reduce((sum, answer) => {
             const question = questions.find(q => q.id === answer.question_id);
             if (!question) return sum;
             
-            // Base score: Never=1, Rarely=2, ..., Always=7 (optionIndex + 1)
             let baseScore = answer.option_index + 1;
-            
-            // Apply reverse scoring if needed
             if (question.reverse) {
               baseScore = 8 - baseScore;
             }
@@ -127,17 +207,15 @@ export function createTestStore<TQuestion extends TestQuestion, TAnswer extends 
             return sum + baseScore;
           }, 0);
           
-          // Determine result level based on thresholds
           let resultLevel: ResultLevel = 'developing';
           if (totalScore >= config.scoreThresholds.excellent) {
             resultLevel = 'excellent';
           } else if (totalScore >= config.scoreThresholds.good) {
             resultLevel = 'good';
-          } else {
-            resultLevel = 'developing';
           }
           
           set({ totalScore, resultLevel });
+          }
         },
         
         setResultData: (data: any) => set({ resultData: data }),

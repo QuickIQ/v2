@@ -70,6 +70,10 @@ export function SocialProof({ testId }: SocialProofProps) {
         transition={{ duration: 0.5, delay: 0.2 }}
         style={{
           marginBottom: isMobile ? '48px' : '64px',
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+          MozUserSelect: 'none',
+          msUserSelect: 'none',
         }}
       >
         <h2 style={{

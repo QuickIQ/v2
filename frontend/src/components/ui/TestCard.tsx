@@ -50,10 +50,28 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
   const testName = test.name[language] || test.name.en;
   const subtitle = test.subtitle?.[language] || test.subtitle?.en || '';
 
+  // Count words in title to adjust font size for mobile
+  const wordCount = testName.trim().split(/\s+/).length;
+  const isTwoWords = wordCount === 2;
+  
+  // Special case for IQ TEST - larger font size on mobile
+  const isIQTest = test.id === 'iqtest' || test.slug === 'iqtest';
+  
+  // Adjust font size based on word count for mobile
+  const titleFontSize = isMobile
+    ? (isIQTest ? '18px' : (isTwoWords ? '14px' : '20px')) // IQ TEST: 18px, Two words: 14px, Single word: 20px on mobile
+    : 'clamp(16px, 2vw, 26px)'; // Desktop uses responsive sizing
+
   return (
     <Link
       to={`/test/${test.slug}`}
-      style={{ textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', aspectRatio: '1.295' }}
+      style={{ 
+        textDecoration: 'none', 
+        color: 'inherit', 
+        display: 'block',
+        width: '100%',
+        height: '100%',
+      }}
     >
       <motion.div
         className={`${test.id}-test-card`}
@@ -67,11 +85,13 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
           padding: isMobile ? '24px' : '32px',
           border: `2px solid ${test.colors.cardBorder}`,
           position: 'relative',
-          overflow: 'hidden',
+          overflow: 'visible',
           height: '100%',
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
+          boxSizing: 'border-box',
+          transformOrigin: 'center center',
         }}
         whileHover={{
           y: -15,
@@ -99,6 +119,8 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
             background: `radial-gradient(circle, ${test.colors.cardGlow} 0%, transparent 70%)`,
             opacity: 0,
             pointerEvents: 'none',
+            zIndex: -10,
+            willChange: 'opacity',
           }}
           transition={{ 
             duration: 0.2,
@@ -114,8 +136,8 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
         />
         
         {/* Content */}
-        <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-          <div style={{ marginBottom: '24px', flexShrink: 0, minHeight: subtitle ? undefined : (isMobile ? '39px' : '45px') }}>
+        <div style={{ position: 'relative', zIndex: 100, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0, boxSizing: 'border-box', overflow: 'visible', isolation: 'isolate', pointerEvents: 'auto', willChange: 'transform' }}>
+          <div style={{ marginBottom: isMobile ? '12px' : '16px', flexShrink: 0, flexGrow: 0 }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -128,7 +150,8 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
               msUserSelect: 'none',
               minWidth: 0,
               width: '100%',
-              height: isMobile ? '34px' : '42px',
+              minHeight: isMobile ? '34px' : '42px',
+              overflow: 'visible',
             }}>
               <motion.div
                 animate={{
@@ -158,62 +181,77 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
               </motion.div>
               <h4 style={{
                 fontWeight: '600',
-                fontSize: isMobile ? '22px' : '26px',
+                fontSize: titleFontSize,
                 color: test.colors.primary,
                 whiteSpace: 'nowrap',
                 margin: 0,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
+                overflow: 'visible',
+                textOverflow: 'clip',
                 maxWidth: '100%',
-                lineHeight: isMobile ? '22px' : '26px',
-                height: isMobile ? '22px' : '26px',
+                minWidth: 0,
+                lineHeight: isMobile ? '1.2' : '1.2',
+                flex: '1 1 auto',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                position: 'relative',
+                zIndex: 101,
               }}>
                 {testName}
               </h4>
             </div>
             <p style={{ 
               color: '#666', 
-              fontSize: isMobile ? '14px' : '16px', 
+              fontSize: isMobile ? '11px' : '16px', 
               fontWeight: '600',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: isMobile ? '6px' : '8px',
-              flexWrap: 'wrap',
-              marginBottom: '8px',
-              marginTop: '8px',
-              height: isMobile ? '20px' : '22px',
-              lineHeight: isMobile ? '14px' : '16px',
+              gap: isMobile ? '3px' : '8px',
+              flexWrap: 'nowrap',
+              marginBottom: isMobile ? '6px' : '8px',
+              marginTop: isMobile ? '6px' : '8px',
+              height: isMobile ? '18px' : '22px',
+              lineHeight: isMobile ? '11px' : '16px',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              minWidth: 0,
+              textAlign: 'center',
             }}>
-              <HelpCircle size={isMobile ? 16 : 18} style={{ color: test.colors.primary, flexShrink: 0 }} />
-              <span>{test.questions} {language === 'tr' ? 'soru' : 'questions'}</span>
-              <span style={{ margin: '0 4px' }}>-</span>
-              <Clock size={isMobile ? 16 : 18} style={{ color: test.colors.primary, flexShrink: 0 }} />
-              <span>{test.minutes} {language === 'tr' ? 'dakika' : 'minutes'}</span>
+              <HelpCircle size={isMobile ? 12 : 18} style={{ color: test.colors.primary, flexShrink: 0 }} />
+              <span style={{ flexShrink: 0 }}>{test.questions} {language === 'tr' ? 'soru' : 'questions'}</span>
+              <span style={{ margin: '0 2px', flexShrink: 0 }}>-</span>
+              <Clock size={isMobile ? 12 : 18} style={{ color: test.colors.primary, flexShrink: 0 }} />
+              <span style={{ flexShrink: 0 }}>{test.minutes} {language === 'tr' ? 'dakika' : 'minutes'}</span>
             </p>
             {subtitle ? (
               <p style={{ 
                 color: '#666', 
-                fontSize: isMobile ? '13px' : '15px', 
-                lineHeight: '1.5',
-                marginTop: '8px',
-                marginBottom: '16px',
+                fontSize: isMobile ? '11px' : '15px', 
+                lineHeight: '1.4',
+                marginTop: isMobile ? '8px' : '8px',
+                marginBottom: 0,
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 display: '-webkit-box',
-                WebkitLineClamp: 2,
+                WebkitLineClamp: 3,
                 WebkitBoxOrient: 'vertical',
-                minHeight: isMobile ? '39px' : '45px',
-                maxHeight: isMobile ? '39px' : '45px',
+                flexShrink: 0,
+                flexGrow: 1,
+                textAlign: 'center',
+                padding: '0 2px',
+                wordWrap: 'break-word',
+                overflowWrap: 'break-word',
+                minHeight: isMobile ? '29px' : '45px',
               }}>
                 {subtitle}
               </p>
             ) : (
               <div style={{ 
-                marginTop: '8px',
-                marginBottom: '16px',
-                minHeight: isMobile ? '39px' : '45px',
-                maxHeight: isMobile ? '39px' : '45px',
+                marginTop: isMobile ? '8px' : '8px',
+                marginBottom: 0,
+                minHeight: isMobile ? '29px' : '45px',
+                flexShrink: 0,
+                flexGrow: 1,
               }} />
             )}
           </div>
@@ -235,10 +273,14 @@ export function TestCard({ test, index = 0 }: TestCardProps) {
               width: 'fit-content',
               alignSelf: 'center',
               flexShrink: 0,
+              flexGrow: 0,
               height: isMobile ? '40px' : '48px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              minHeight: isMobile ? '40px' : '48px',
+              position: 'relative',
+              zIndex: 101,
             }}
             whileHover={{ 
               scale: 1.05,

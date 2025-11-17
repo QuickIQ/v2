@@ -24,12 +24,12 @@
     },
     "introCard": {
       "title": {
-        "en": "THIS IS JUST AN INTRO!",
-        "tr": "BU SADECE BİR GİRİŞ!"
+        "en": "Your free summary shows only the surface. ☕️",
+        "tr": "Ücretsiz özetiniz sadece yüzeyi gösteriyor. ☕️"
       },
       "description": {
-        "en": "YOU WILL SEE 100X MORE CONTENT WHEN YOU UNLOCK YOUR PERSONALIZED RESULT. IT'S CHEAPER THAN A COFFEE PRICE!☕",
-        "tr": "KİŞİSELLEŞTİRİLMİŞ SONUCUNUZU AÇTIĞINIZDA 100 KAT DAHA FAZLA İÇERİK GÖRECEKSİNİZ. BİR FİNCAN KAHVEDEN DAHA UCUZ!☕"
+        "en": "Unlock your full personalized report — with behavioral patterns, risk markers, strengths, blind spots, and science-based guidance crafted specifically for you — all for less than a coffee.",
+        "tr": "Tam kişiselleştirilmiş raporunuzun kilidini açın — davranışsal kalıplar, risk işaretleri, güçlü yönler, kör noktalar ve size özel hazırlanmış bilimsel rehberlik — hepsi bir fincan kahveden daha az."
       }
     },
     "lockedSection": {

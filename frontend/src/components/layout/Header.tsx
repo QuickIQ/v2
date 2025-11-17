@@ -7,10 +7,39 @@ import { LogoCompact } from "../ui/Logo";
 export function Header() {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [testsMenuOpen, setTestsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const isMobile = useMobile();
   const isHomePage = location.pathname === '/';
+
+  const testCategories = [
+    { label: 'IQ TEST', targetId: 'iq-test-section' },
+    { label: '16 Personalities', targetId: 'personality-test-section' },
+    { label: 'Bussiness', targetId: 'business-section' },
+    { label: 'Health', targetId: 'health-section' },
+    { label: 'Love', targetId: 'love-section' },
+    { label: 'Money', targetId: 'money-section' },
+    { label: 'Dark', targetId: 'dark-section' },
+  ];
+
+  const handleTestCategoryClick = (targetId: string) => {
+    setTestsMenuOpen(false);
+    if (isHomePage) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
 
   useEffect(() => {
     let ticking = false;
@@ -36,6 +65,21 @@ export function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (!testsMenuOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('[data-tests-menu]')) {
+        setTestsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [testsMenuOpen]);
 
   return (
     <motion.header
@@ -141,13 +185,19 @@ export function Header() {
           >
             Ana Sayfa
           </Link>
-          <Link 
-            to="/tests" 
+          <div style={{ position: 'relative' }} data-tests-menu>
+            <button
+              onClick={() => setTestsMenuOpen(!testsMenuOpen)}
             style={{ 
+                background: 'transparent',
+                border: 'none',
               color: location.pathname === '/tests' ? '#6C63FF' : '#666',
               textDecoration: 'none', 
               fontWeight: location.pathname === '/tests' ? '600' : '400',
               transition: 'color 0.3s ease',
+                cursor: 'pointer',
+                fontSize: '14px',
+                padding: 0,
             }}
             onMouseEnter={(e) => {
               if (location.pathname !== '/tests') {
@@ -161,7 +211,70 @@ export function Header() {
             }}
           >
             Testler
-          </Link>
+            </button>
+            
+            {testsMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                style={{
+                  position: 'absolute',
+                  top: '100%',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  marginTop: '12px',
+                  background: 'rgba(255, 255, 255, 0.98)',
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
+                  borderRadius: '16px',
+                  padding: '16px',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+                  border: '1px solid rgba(108, 99, 255, 0.2)',
+                  minWidth: '200px',
+                  zIndex: 1000,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '8px',
+                }}
+                onMouseLeave={() => setTestsMenuOpen(false)}
+              >
+                {testCategories.map((category, index) => (
+                  <motion.button
+                    key={category.targetId}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.2, delay: index * 0.03 }}
+                    onClick={() => handleTestCategoryClick(category.targetId)}
+                    style={{
+                      padding: '12px 16px',
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      border: '1px solid rgba(108, 99, 255, 0.2)',
+                      borderRadius: '10px',
+                      color: '#6C63FF',
+                      fontWeight: '600',
+                      fontSize: '14px',
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                      transition: 'all 0.2s ease',
+                      width: '100%',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(108, 99, 255, 0.2)';
+                      e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = 'none';
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                    }}
+                  >
+                    {category.label}
+                  </motion.button>
+                ))}
+              </motion.div>
+            )}
+          </div>
         </nav>
       )}
     </motion.header>

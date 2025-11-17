@@ -68,6 +68,22 @@ const storeImportMap: Record<string, () => Promise<any>> = {
   'perfectionism': () => import('../store/perfectionismTestStore').then(m => m.usePerfectionismTestStore),
   'ambition': () => import('../store/ambitionTestStore').then(m => m.useAmbitionTestStore),
   'anxiety': () => import('../store/anxietyTestStore').then(m => m.useAnxietyTestStore),
+  'adhd': () => import('../store/adhdTestStore').then(m => m.useAdhdTestStore),
+  'borderline': () => import('../store/borderlineTestStore').then(m => m.useBorderlineTestStore),
+  'ocd': () => import('../store/ocdTestStore').then(m => m.useOcdTestStore),
+  'social-anxiety': () => import('../store/socialAnxietyTestStore').then(m => m.useSocialAnxietyTestStore),
+  'panic-disorder': () => import('../store/panicDisorderTestStore').then(m => m.usePanicDisorderTestStore),
+  'ptsd': () => import('../store/ptsdTestStore').then(m => m.usePtsdTestStore),
+  'narcissism': () => import('../store/narcissismTestStore').then(m => m.useNarcissismTestStore),
+  'antisocial-traits': () => import('../store/antisocialTraitsTestStore').then(m => m.useAntisocialTraitsTestStore),
+  'addiction': () => import('../store/addictionTestStore').then(m => m.useAddictionTestStore),
+  'burnout': () => import('../store/burnoutTestStore').then(m => m.useBurnoutTestStore),
+  'sleep-disorder': () => import('../store/sleepDisorderTestStore').then(m => m.useSleepDisorderTestStore),
+  'anger-control': () => import('../store/angerControlTestStore').then(m => m.useAngerControlTestStore),
+  'eating-behavior': () => import('../store/eatingBehaviorTestStore').then(m => m.useEatingBehaviorTestStore),
+  'health-anxiety': () => import('../store/healthAnxietyTestStore').then(m => m.useHealthAnxietyTestStore),
+  'relationship-test': () => import('../store/relationshipTestStore').then(m => m.useRelationshipTestStore),
+  'emotional-instability': () => import('../store/emotionalInstabilityTestStore').then(m => m.useEmotionalInstabilityTestStore),
 };
 
 /**

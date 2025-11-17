@@ -7,7 +7,12 @@ interface StatItemProps {
 
 export function StatItem({ emoji, title, subtitle, isMobile }: StatItemProps) {
   return (
-    <div>
+    <div style={{
+      userSelect: 'none',
+      WebkitUserSelect: 'none',
+      MozUserSelect: 'none',
+      msUserSelect: 'none',
+    }}>
       <div
         style={{
           display: 'flex',

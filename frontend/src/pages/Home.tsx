@@ -14,6 +14,7 @@ import { TestsCompletedCounter } from '../components/ui/TestsCompletedCounter';
 import { DiscoverYourMindCard } from '../components/ui/DiscoverYourMindCard';
 import { CategorySection } from '../components/ui/CategorySection';
 import { DeveloperControlPanel } from '../components/ui/DeveloperControlPanel';
+import { HomeCategories } from '../components/ui/HomeCategories';
 import '../App.css';
 
 function Home() {
@@ -154,9 +155,9 @@ function Home() {
           alt="Mystery Icon" 
           className="lookmagic-icon"
           onClick={() => {
-            const testsSection = document.getElementById('tests-section');
-            if (testsSection) {
-              testsSection.scrollIntoView({ behavior: 'smooth' });
+            const darkSection = document.getElementById('dark-section');
+            if (darkSection) {
+              darkSection.scrollIntoView({ behavior: 'smooth' });
             }
           }}
           style={{ cursor: 'pointer' }}
@@ -172,21 +173,17 @@ function Home() {
         >
           You should see what's inside of you!
         </h2>
+        <HomeCategories />
       </section>
 
-      <main style={{ paddingTop: '80px', paddingBottom: '80px', position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
-        {/* Developer Control Panel - Only visible in development */}
-        {((import.meta as any).env?.DEV || (import.meta as any).env?.MODE === 'development') && (
-          <DeveloperControlPanel />
-        )}
+      <main style={{ paddingTop: isMobile ? '10px' : '16px', paddingBottom: '80px', position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', paddingLeft: '20px', paddingRight: '20px' }}>
+        {/* Tests Completed Today */}
+        <TestsCompletedCounter />
 
         {/* Stats */}
         <StatsSection />
 
-        {/* Tests Completed Today */}
-        <TestsCompletedCounter />
-
-        {/* Test Cards - 3 cards in a row (IQ, Personality) */}
+        {/* Test Cards - IQ and Personality side by side */}
         {(() => {
           const iqTestConfig = getTestConfig('iqtest');
           const personalityTestConfig = getTestConfig('personality');
@@ -195,23 +192,31 @@ function Home() {
           
           return (
             <motion.div
-              id="cta-test-card"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               style={{
                 display: 'grid',
-                gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+                gridTemplateColumns: isMobile 
+                  ? 'repeat(2, minmax(0, 1fr))' 
+                  : 'repeat(2, minmax(0, 1fr))',
+                gridAutoRows: '1fr',
                 gap: isMobile ? '12px' : '10px',
                 maxWidth: 'none',
                 margin: '0 auto',
-                marginTop: isMobile ? '15vh' : 'clamp(500px, 25vh, 600px)',
+                marginTop: isMobile ? '32px' : '48px',
                 marginBottom: isMobile ? '48px' : '64px',
                 padding: isMobile ? '0' : '0',
+                alignItems: 'stretch',
+                justifyItems: 'stretch',
               }}
             >
+              <div id="iq-test-section">
               <TestCard test={iqTestConfig} index={0} />
+              </div>
+              <div id="personality-test-section">
               <TestCard test={personalityTestConfig} index={1} />
+              </div>
             </motion.div>
           );
         })()}
@@ -228,11 +233,16 @@ function Home() {
           style={{ 
             marginTop: isMobile ? '10vh' : 'clamp(300px, 20vh, 400px)',
             display: 'grid', 
-            gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', 
+            gridTemplateColumns: isMobile 
+              ? 'repeat(2, minmax(0, 1fr))' 
+              : 'repeat(3, minmax(0, 1fr))',
+            gridAutoRows: '1fr',
             gap: isMobile ? '12px' : '10px',
             maxWidth: 'none',
             margin: '0 auto',
             padding: 0,
+            alignItems: 'stretch',
+            justifyItems: 'stretch',
           }}
         >
           {tests
@@ -389,6 +399,11 @@ function Home() {
                 })}
             </div>
           </motion.section>
+        )}
+
+        {/* Developer Control Panel - Only visible in development */}
+        {((import.meta as any).env?.DEV || (import.meta as any).env?.MODE === 'development') && (
+          <DeveloperControlPanel />
         )}
       </main>
     </div>

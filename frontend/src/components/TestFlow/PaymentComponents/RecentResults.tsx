@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMobile } from '../../../hooks/useMobile';
@@ -9,6 +9,12 @@ import creativityTypesData from '../../../data/shared/creativity-types.json';
 const namesByCountry: Record<string, string[]> = namesByCountryData;
 const countries = countriesData;
 const creativityTypes = creativityTypesData;
+
+// Global state for Recent Results - shared across all instances
+let globalRecentResults: RecentResult[] | null = null;
+let globalResultsLanguage: string | null = null;
+let globalIntervalId: NodeJS.Timeout | null = null;
+let globalUpdateCallbacks: Set<(results: RecentResult[]) => void> = new Set();
 
 function randomShortName(fullName: string): string {
   const parts = fullName.split(' ');
@@ -25,10 +31,16 @@ interface RecentResult {
 // Track recently shown names to avoid repetition
 let recentlyShownNames = new Set<string>();
 
-function generateResults(locale: string): RecentResult[] {
+function generateResults(locale: string, previousResults?: RecentResult[]): RecentResult[] {
   const types = creativityTypes[locale as 'en' | 'tr'] || creativityTypes.en;
   const results: RecentResult[] = [];
   const usedCombinations = new Set<string>();
+  
+  // Create a set of previous names to avoid repetition
+  const previousNames = new Set<string>();
+  if (previousResults) {
+    previousResults.forEach(r => previousNames.add(r.name));
+  }
   
   // If we've shown too many names, reset the tracking (to allow some repetition after a while)
   if (recentlyShownNames.size > 100) {
@@ -42,8 +54,8 @@ function generateResults(locale: string): RecentResult[] {
     let attempts = 0;
     let result: RecentResult | null = null;
     
-    // Try to find a unique combination
-    while (attempts < 50 && !result) {
+    // Try to find a unique combination that's different from previous results
+    while (attempts < 100 && !result) {
       const country = shuffledCountries[Math.floor(Math.random() * shuffledCountries.length)];
       const countryNames = namesByCountry[country.code] || namesByCountry['US'];
       const name = countryNames[Math.floor(Math.random() * countryNames.length)];
@@ -53,8 +65,10 @@ function generateResults(locale: string): RecentResult[] {
       // Create a unique key for this combination
       const combinationKey = `${shortName}-${country.flag}-${type}`;
       
-      // Check if we've shown this exact name recently or this combination
-      if (!recentlyShownNames.has(shortName) && !usedCombinations.has(combinationKey)) {
+      // Check if we've shown this exact name recently, this combination, or if it's in previous results
+      if (!recentlyShownNames.has(shortName) && 
+          !usedCombinations.has(combinationKey) && 
+          !previousNames.has(shortName)) {
         result = { name: shortName, country: country.flag, type };
         recentlyShownNames.add(shortName);
         usedCombinations.add(combinationKey);
@@ -62,7 +76,24 @@ function generateResults(locale: string): RecentResult[] {
       attempts++;
     }
     
-    // If we couldn't find a unique one after many attempts, use any available
+    // If we couldn't find a unique one after many attempts, try without previous results check
+    if (!result) {
+      for (let fallbackAttempts = 0; fallbackAttempts < 50 && !result; fallbackAttempts++) {
+        const country = shuffledCountries[Math.floor(Math.random() * shuffledCountries.length)];
+        const countryNames = namesByCountry[country.code] || namesByCountry['US'];
+        const name = countryNames[Math.floor(Math.random() * countryNames.length)];
+        const shortName = randomShortName(name);
+        const type = types[Math.floor(Math.random() * types.length)];
+        const combinationKey = `${shortName}-${country.flag}-${type}`;
+        
+        if (!usedCombinations.has(combinationKey) && !previousNames.has(shortName)) {
+          result = { name: shortName, country: country.flag, type };
+          usedCombinations.add(combinationKey);
+        }
+      }
+    }
+    
+    // Last resort: use any available (should rarely happen)
     if (!result) {
       const country = shuffledCountries[Math.floor(Math.random() * shuffledCountries.length)];
       const countryNames = namesByCountry[country.code] || namesByCountry['US'];
@@ -89,7 +120,20 @@ export function RecentResults({ testId, t: tProp, i18n: i18nProp, isMobile: isMo
   const t = tProp || translation.t;
   const i18n = i18nProp || translation.i18n;
   const isMobile = isMobileProp !== undefined ? isMobileProp : useMobile();
-  const [results, setResults] = useState<RecentResult[]>(() => generateResults(i18n.language));
+  const language = i18n.language;
+  
+  // Initialize with global results if available and language matches
+  const [results, setResults] = useState<RecentResult[]>(() => {
+    if (globalRecentResults && globalResultsLanguage === language) {
+      return globalRecentResults;
+    }
+    const newResults = generateResults(language);
+    globalRecentResults = newResults;
+    globalResultsLanguage = language;
+    return newResults;
+  });
+
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Helper to get translation with fallback
   const getTranslation = (key: string, fallback: string) => {
@@ -97,18 +141,68 @@ export function RecentResults({ testId, t: tProp, i18n: i18nProp, isMobile: isMo
     return translation === key ? fallback : translation;
   };
 
+  // Update callback to notify all instances
+  const updateCallbackRef = useRef<(results: RecentResult[]) => void>((newResults) => {
+    setResults(newResults);
+  });
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setResults(generateResults(i18n.language));
-    }, 8000); // 8 seconds
-    return () => clearInterval(interval);
-  }, [i18n.language]);
+    updateCallbackRef.current = (newResults) => {
+      setResults(newResults);
+    };
+  }, [setResults]);
+
+  useEffect(() => {
+    // Register this component's update callback
+    globalUpdateCallbacks.add(updateCallbackRef.current);
+
+    // If language changed, regenerate results
+    if (globalResultsLanguage !== language) {
+      const newResults = generateResults(language);
+      globalRecentResults = newResults;
+      globalResultsLanguage = language;
+      setResults(newResults);
+      // Notify all other instances
+      globalUpdateCallbacks.forEach(callback => {
+        if (callback !== updateCallbackRef.current) {
+          callback(newResults);
+        }
+      });
+    }
+
+    // Set up global interval if not already set
+    if (!globalIntervalId) {
+      globalIntervalId = setInterval(() => {
+        if (globalRecentResults && globalResultsLanguage) {
+          const newResults = generateResults(globalResultsLanguage, globalRecentResults);
+          globalRecentResults = newResults;
+          // Notify all registered callbacks
+          globalUpdateCallbacks.forEach(callback => callback(newResults));
+        }
+      }, 10000); // 10 seconds
+    }
+
+    return () => {
+      // Unregister callback
+      globalUpdateCallbacks.delete(updateCallbackRef.current);
+      
+      // Clean up global interval if no more callbacks
+      if (globalUpdateCallbacks.size === 0 && globalIntervalId) {
+        clearInterval(globalIntervalId);
+        globalIntervalId = null;
+      }
+    };
+  }, [language]);
 
   return (
     <section style={{
       marginTop: isMobile ? '48px' : '64px',
       textAlign: 'center',
       padding: isMobile ? '0 20px' : '0',
+      userSelect: 'none',
+      WebkitUserSelect: 'none',
+      MozUserSelect: 'none',
+      msUserSelect: 'none',
     }}>
       <motion.h2
         initial={{ opacity: 0, y: -10 }}
@@ -138,7 +232,7 @@ export function RecentResults({ testId, t: tProp, i18n: i18nProp, isMobile: isMo
         <AnimatePresence mode="wait">
           {results.map((r, i) => (
             <motion.div
-              key={`${r.name}-${r.country}-${i}-${Date.now()}`}
+              key={`${r.name}-${r.country}-${r.type}-${i}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}

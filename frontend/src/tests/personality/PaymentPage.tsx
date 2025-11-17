@@ -5,144 +5,9 @@ import { useEffect, useState } from 'react';
 import { useMobile } from '../../hooks/useMobile';
 import { X, CreditCard, Lock, Shield, CheckCircle, Star } from 'lucide-react';
 import { usePersonalityTestStore } from '../../store/personalityTestStore';
+import { useTestsCompletedCounter } from '../../hooks/useTestsCompletedCounter';
+import { RecentResults } from '../../components/TestFlow/PaymentComponents/RecentResults';
 import '../../App.css';
-
-// Recent Results Component - Using shared JSON data
-import namesByCountryData from '../../data/shared/names-by-country.json';
-import countriesData from '../../data/shared/countries.json';
-import personalityTypesData from '../../data/shared/personality-types.json';
-
-const namesByCountry: Record<string, string[]> = namesByCountryData;
-const countries = countriesData;
-const personalityTypes = {
-  en: personalityTypesData.personalityTypes.map(p => p.name),
-  tr: personalityTypesData.personalityTypes.map(p => p.name), // TODO: Add TR translations if needed
-};
-
-function randomShortName(fullName: string): string {
-  const parts = fullName.split(' ');
-  if (parts.length < 2) return fullName;
-  return `${parts[0]} ${parts[1][0]}.`;
-}
-
-interface RecentResult {
-  name: string;
-  country: string;
-  type: string;
-}
-
-function generateResults(locale: string): RecentResult[] {
-  const types = personalityTypes[locale as 'en' | 'tr'] || personalityTypes.en;
-  const results: RecentResult[] = [];
-  const usedCombinations = new Set<string>();
-  
-  // Shuffle countries for variety
-  const shuffledCountries = [...countries].sort(() => Math.random() - 0.5);
-  
-  for (let i = 0; i < 8; i++) {
-    const country = shuffledCountries[Math.floor(Math.random() * shuffledCountries.length)];
-    const countryNames = namesByCountry[country.code] || namesByCountry['US'] || [];
-    const name = countryNames[Math.floor(Math.random() * countryNames.length)] || 'John Doe';
-    const type = types[Math.floor(Math.random() * types.length)];
-    const combinationKey = `${randomShortName(name)}-${country.flag}-${type}`;
-    
-    // Avoid exact duplicates
-    if (!usedCombinations.has(combinationKey)) {
-      results.push({ name: randomShortName(name), country: country.flag, type });
-      usedCombinations.add(combinationKey);
-    } else {
-      // If duplicate, try again with different combination
-      i--;
-    }
-  }
-  
-  return results;
-}
-
-function RecentResults({ t, i18n, isMobile }: { t: any; i18n: any; isMobile: boolean }) {
-  const [results, setResults] = useState<RecentResult[]>(() => generateResults(i18n.language));
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setResults(generateResults(i18n.language));
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [i18n.language]);
-
-  return (
-    <section style={{
-      marginTop: isMobile ? '48px' : '64px',
-      textAlign: 'center',
-      padding: isMobile ? '0 20px' : '0',
-    }}>
-      <motion.h2
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        style={{
-          fontSize: isMobile ? '24px' : '28px',
-          fontWeight: '700',
-          color: '#333',
-          marginBottom: '24px',
-        }}
-      >
-        {t('tests.personality.payment.recent_results') || (i18n.language === 'tr' ? 'Güncel Sonuçlar' : 'Recent Results')}
-      </motion.h2>
-      <div style={{
-        maxWidth: '800px',
-        margin: '0 auto',
-        background: 'rgba(255, 255, 255, 0.7)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        borderRadius: '24px',
-        boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15)',
-        padding: isMobile ? '20px' : '32px',
-        display: 'grid',
-        gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-        gap: '12px',
-      }}>
-        <AnimatePresence mode="wait">
-          {results.map((r, i) => (
-            <motion.div
-              key={`${r.name}-${r.country}-${i}-${Date.now()}`}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '12px 16px',
-                borderRadius: '16px',
-                background: i % 2 === 0 ? 'rgba(255, 255, 255, 0.6)' : 'rgba(255, 255, 255, 0.3)',
-              }}
-            >
-              <span style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontSize: isMobile ? '14px' : '15px',
-                color: '#333',
-                fontWeight: '500',
-              }}>
-                <span style={{ fontSize: '20px' }}>{r.country}</span>
-                {r.name}
-              </span>
-              <span style={{
-                fontSize: isMobile ? '12px' : '13px',
-                color: '#4A90E2',
-                fontWeight: '600',
-                textAlign: 'right',
-              }}>
-                {r.type}
-              </span>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
-    </section>
-  );
-}
 
 // Credit Card Modal Component
 function CreditCardModal({ isOpen, onClose, onSuccess, t, i18n, isMobile }: { 
@@ -502,62 +367,7 @@ export default function PaymentPage() {
   const isMobile = useMobile();
   const personalityResult = usePersonalityResult();
   const [showCardModal, setShowCardModal] = useState(false);
-  const [testCount, setTestCount] = useState(() => {
-    if (typeof window === 'undefined') return 8000;
-    const saved = localStorage.getItem('personalityTestsCount');
-    const savedTime = localStorage.getItem('personalityTestsTime');
-    const now = Date.now();
-    
-    if (saved && savedTime) {
-      const timeDiff = now - parseInt(savedTime);
-      if (timeDiff < 86400000) { // Less than 24 hours
-        return parseInt(saved);
-      }
-    }
-    
-    const newCount = Math.floor(7000 + Math.random() * 2000);
-    localStorage.setItem('personalityTestsCount', newCount.toString());
-    localStorage.setItem('personalityTestsTime', now.toString());
-    return newCount;
-  });
-
-  useEffect(() => {
-    const interval1 = setInterval(() => {
-      setTestCount((prev) => {
-        const newCount = prev + 1;
-        localStorage.setItem('personalityTestsCount', newCount.toString());
-        return newCount;
-      });
-    }, 60000); // Every 60 seconds
-
-    const interval2 = setInterval(() => {
-      setTestCount((prev) => {
-        const newCount = prev + 2;
-        localStorage.setItem('personalityTestsCount', newCount.toString());
-        return newCount;
-      });
-    }, 120000); // Every 120 seconds
-
-    // Check for daily reset
-    const checkReset = setInterval(() => {
-      const savedTime = localStorage.getItem('personalityTestsTime');
-      if (savedTime) {
-        const timeDiff = Date.now() - parseInt(savedTime);
-        if (timeDiff >= 86400000) { // 24 hours
-          const newCount = Math.floor(7000 + Math.random() * 2000);
-          setTestCount(newCount);
-          localStorage.setItem('personalityTestsCount', newCount.toString());
-          localStorage.setItem('personalityTestsTime', Date.now().toString());
-        }
-      }
-    }, 3600000); // Check every hour
-
-    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-      clearInterval(checkReset);
-    };
-  }, []);
+  const { count: testCount, formattedCount } = useTestsCompletedCounter();
 
   const handleGooglePay = () => {
     setTimeout(() => {
@@ -957,7 +767,7 @@ export default function PaymentPage() {
           >
             {t('tests.personality.payment.tests_completed') || (i18n.language === 'tr' 
               ? 'Bugün' 
-              : 'Today')} <span style={{ fontWeight: '700', color: '#E26B6B' }}>{testCount.toLocaleString()}</span> {t('tests.personality.payment.tests_completed_suffix') || (i18n.language === 'tr' 
+              : 'Today')} <span style={{ fontWeight: '700', color: '#E26B6B' }}>{formattedCount}</span> {t('tests.personality.payment.tests_completed_suffix') || (i18n.language === 'tr' 
               ? 'kişi testi tamamladı' 
               : 'people completed the test')}
           </motion.p>
@@ -1285,7 +1095,7 @@ export default function PaymentPage() {
         </motion.div>
 
         {/* Recent Results Section */}
-        <RecentResults t={t} i18n={i18n} isMobile={isMobile} />
+        <RecentResults testId="personality" t={t} i18n={i18n} isMobile={isMobile} />
       </div>
 
       {/* Credit Card Modal */}

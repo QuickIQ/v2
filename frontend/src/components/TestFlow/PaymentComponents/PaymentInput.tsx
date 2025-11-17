@@ -101,6 +101,10 @@ export function PaymentInput({
               ? '0 0 0 3px rgba(231, 76, 60, 0.1)'
               : 'inset 0 1px 3px rgba(0,0,0,0.08)',
             fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            userSelect: 'text',
+            WebkitUserSelect: 'text',
+            MozUserSelect: 'text',
+            msUserSelect: 'text',
           }}
           onFocus={handleFocus}
           onBlur={handleBlur}

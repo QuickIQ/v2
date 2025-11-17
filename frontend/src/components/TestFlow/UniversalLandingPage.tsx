@@ -372,7 +372,7 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
                 pointerEvents: 'none',
               }}
             />
-            {landing.startButton[language] || landing.startButton.en}
+            {language === 'tr' ? 'Devam Et' : 'Continue'}
           </motion.button>
         </motion.div>
       </div>

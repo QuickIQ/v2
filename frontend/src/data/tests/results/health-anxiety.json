@@ -1,0 +1,39 @@
+{
+  "excellent": {
+    "level": "excellent",
+    "title": "",
+    "summary": "",
+    "insights": [],
+    "sections": {
+      "strengths": "",
+      "growthAreas": "",
+      "practicalApplications": "",
+      "futurePotential": ""
+    }
+  },
+  "good": {
+    "level": "good",
+    "title": "",
+    "summary": "",
+    "insights": [],
+    "sections": {
+      "strengths": "",
+      "growthAreas": "",
+      "practicalApplications": "",
+      "futurePotential": ""
+    }
+  },
+  "developing": {
+    "level": "developing",
+    "title": "",
+    "summary": "",
+    "insights": [],
+    "sections": {
+      "strengths": "",
+      "growthAreas": "",
+      "practicalApplications": "",
+      "futurePotential": ""
+    }
+  }
+}
+

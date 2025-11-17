@@ -13,6 +13,10 @@ export function TrustPoints({ language }: TrustPointsProps) {
       display: 'flex',
       flexDirection: 'column',
       gap: '20px',
+      userSelect: 'none',
+      WebkitUserSelect: 'none',
+      MozUserSelect: 'none',
+      msUserSelect: 'none',
     }}>
       {trustPoints.map((point, index) => (
         <TrustPoint

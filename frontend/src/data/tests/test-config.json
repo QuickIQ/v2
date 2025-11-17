@@ -727,6 +727,582 @@
         },
         "timeLimit": 600
       }
+    },
+    {
+      "id": "adhd",
+      "slug": "adhd",
+      "name": {
+        "en": "ADHD Test",
+        "tr": "DEHB Testi"
+      },
+      "subtitle": {
+        "en": "Can't stay focused, or does your brain reject anything boring?",
+        "tr": "Odaklanamıyor musunuz, yoksa beyniniz sıkıcı şeyleri reddediyor mu?"
+      },
+      "category": "Health",
+      "icon": "Zap",
+      "iconEmoji": "⚡",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 101,
+          "good": 50,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "borderline",
+      "slug": "borderline",
+      "name": {
+        "en": "Borderline Test",
+        "tr": "Borderline Testi"
+      },
+      "subtitle": {
+        "en": "Intense emotions or high-voltage chaos wired into your personality?",
+        "tr": "Yoğun duygular mı yoksa kişiliğinize kazınmış yüksek voltajlı kaos mu?"
+      },
+      "category": "Health",
+      "icon": "Heart",
+      "iconEmoji": "💔",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ef4444",
+        "light": "#f87171",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(239, 68, 68, 0.15)",
+        "cardHoverBorder": "rgba(239, 68, 68, 0.4)",
+        "cardGlow": "rgba(239, 68, 68, 0.18)",
+        "cardShadow": "0 24px 60px rgba(239, 68, 68, 0.35), 0 0 0 1px rgba(239, 68, 68, 0.25), 0 0 80px rgba(248, 113, 113, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ef4444 0%, #f87171 100%)",
+        "titleGradient": "linear-gradient(135deg, #ef4444 0%, #f87171 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "ocd",
+      "slug": "ocd",
+      "name": {
+        "en": "OCD Test",
+        "tr": "OKB Testi"
+      },
+      "subtitle": {
+        "en": "Clean freak or secretly addicted to perfect control?",
+        "tr": "Titiz mi yoksa mükemmel kontrol bağımlısı mısınız?"
+      },
+      "category": "Health",
+      "icon": "Sparkles",
+      "iconEmoji": "✨",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#3b82f6",
+        "light": "#60a5fa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #eff6ff 100%)",
+        "cardBorder": "rgba(59, 130, 246, 0.15)",
+        "cardHoverBorder": "rgba(59, 130, 246, 0.4)",
+        "cardGlow": "rgba(59, 130, 246, 0.18)",
+        "cardShadow": "0 24px 60px rgba(59, 130, 246, 0.35), 0 0 0 1px rgba(59, 130, 246, 0.25), 0 0 80px rgba(96, 165, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)",
+        "titleGradient": "linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "social-anxiety",
+      "slug": "social-anxiety",
+      "name": {
+        "en": "Social Anxiety",
+        "tr": "Sosyal Kaygı"
+      },
+      "subtitle": {
+        "en": "Do people scare you, or does your mind create the audience?",
+        "tr": "İnsanlar sizi korkutuyor mu, yoksa zihniniz seyirci mi yaratıyor?"
+      },
+      "category": "Health",
+      "icon": "Users",
+      "iconEmoji": "😰",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "panic-disorder",
+      "slug": "panic-disorder",
+      "name": {
+        "en": "Panic Disorder",
+        "tr": "Panik Bozukluğu"
+      },
+      "subtitle": {
+        "en": "Heart in danger, or did your brain hit the panic button for fun?",
+        "tr": "Kalp tehlikede mi, yoksa beyniniz eğlence için panik butonuna mı bastı?"
+      },
+      "category": "Health",
+      "icon": "AlertCircle",
+      "iconEmoji": "🚨",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#dc2626",
+        "light": "#ef4444",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(220, 38, 38, 0.15)",
+        "cardHoverBorder": "rgba(220, 38, 38, 0.4)",
+        "cardGlow": "rgba(220, 38, 38, 0.18)",
+        "cardShadow": "0 24px 60px rgba(220, 38, 38, 0.35), 0 0 0 1px rgba(220, 38, 38, 0.25), 0 0 80px rgba(239, 68, 68, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)",
+        "titleGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "ptsd",
+      "slug": "ptsd",
+      "name": {
+        "en": "PTSD Test",
+        "tr": "TSSB Testi"
+      },
+      "subtitle": {
+        "en": "Haunted by the past, or replaying old pain like a broken loop?",
+        "tr": "Geçmiş tarafından takip ediliyor musunuz, yoksa eski acıyı kırık bir döngü gibi mi tekrarlıyorsunuz?"
+      },
+      "category": "Health",
+      "icon": "Ghost",
+      "iconEmoji": "👻",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#7c3aed",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(124, 58, 237, 0.15)",
+        "cardHoverBorder": "rgba(124, 58, 237, 0.4)",
+        "cardGlow": "rgba(124, 58, 237, 0.18)",
+        "cardShadow": "0 24px 60px rgba(124, 58, 237, 0.35), 0 0 0 1px rgba(124, 58, 237, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "narcissism",
+      "slug": "narcissism",
+      "name": {
+        "en": "Narcissism Test",
+        "tr": "Narsisizm Testi"
+      },
+      "subtitle": {
+        "en": "Strong confidence or main-character energy turned up too high?",
+        "tr": "Güçlü özgüven mi yoksa ana karakter enerjisi çok mu yüksek?"
+      },
+      "category": "Health",
+      "icon": "Crown",
+      "iconEmoji": "👑",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#eab308",
+        "light": "#facc15",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fefce8 100%)",
+        "cardBorder": "rgba(234, 179, 8, 0.15)",
+        "cardHoverBorder": "rgba(234, 179, 8, 0.4)",
+        "cardGlow": "rgba(234, 179, 8, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 179, 8, 0.35), 0 0 0 1px rgba(234, 179, 8, 0.25), 0 0 80px rgba(250, 204, 21, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)",
+        "titleGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "antisocial-traits",
+      "slug": "antisocial-traits",
+      "name": {
+        "en": "Antisocial Traits",
+        "tr": "Antisosyal Özellikler"
+      },
+      "subtitle": {
+        "en": "People annoy you, or rules were never meant for you?",
+        "tr": "İnsanlar sizi rahatsız mı ediyor, yoksa kurallar sizin için hiç mi yapılmadı?"
+      },
+      "category": "Health",
+      "icon": "Shield",
+      "iconEmoji": "🛡️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#475569",
+        "light": "#64748b",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%)",
+        "cardBorder": "rgba(71, 85, 105, 0.15)",
+        "cardHoverBorder": "rgba(71, 85, 105, 0.4)",
+        "cardGlow": "rgba(71, 85, 105, 0.18)",
+        "cardShadow": "0 24px 60px rgba(71, 85, 105, 0.35), 0 0 0 1px rgba(71, 85, 105, 0.25), 0 0 80px rgba(100, 116, 139, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #475569 0%, #64748b 100%)",
+        "titleGradient": "linear-gradient(135deg, #475569 0%, #64748b 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "addiction",
+      "slug": "addiction",
+      "name": {
+        "en": "Addiction Test",
+        "tr": "Bağımlılık Testi"
+      },
+      "subtitle": {
+        "en": "Dopamine seeker or reward-chasing machine?",
+        "tr": "Dopamin arayıcısı mı yoksa ödül kovalayan bir makine mi?"
+      },
+      "category": "Health",
+      "icon": "Zap",
+      "iconEmoji": "⚡",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ea580c",
+        "light": "#fb923c",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+        "cardBorder": "rgba(234, 88, 12, 0.15)",
+        "cardHoverBorder": "rgba(234, 88, 12, 0.4)",
+        "cardGlow": "rgba(234, 88, 12, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 88, 12, 0.35), 0 0 0 1px rgba(234, 88, 12, 0.25), 0 0 80px rgba(251, 146, 60, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+        "titleGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "burnout",
+      "slug": "burnout",
+      "name": {
+        "en": "Burnout Test",
+        "tr": "Tükenmişlik Testi"
+      },
+      "subtitle": {
+        "en": "Tired today, or chronically done with everything?",
+        "tr": "Bugün mü yorgunsunuz, yoksa her şeyden kronik olarak bıktınız mı?"
+      },
+      "category": "Health",
+      "icon": "Battery",
+      "iconEmoji": "🔋",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#d97706",
+        "light": "#f59e0b",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(217, 119, 6, 0.15)",
+        "cardHoverBorder": "rgba(217, 119, 6, 0.4)",
+        "cardGlow": "rgba(217, 119, 6, 0.18)",
+        "cardShadow": "0 24px 60px rgba(217, 119, 6, 0.35), 0 0 0 1px rgba(217, 119, 6, 0.25), 0 0 80px rgba(245, 158, 11, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+        "titleGradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "sleep-disorder",
+      "slug": "sleep-disorder",
+      "name": {
+        "en": "Sleep Disorder",
+        "tr": "Uyku Bozukluğu"
+      },
+      "subtitle": {
+        "en": "Can't sleep, or avoiding the next day emotionally?",
+        "tr": "Uyuyamıyor musunuz, yoksa bir sonraki günden duygusal olarak mı kaçınıyorsunuz?"
+      },
+      "category": "Health",
+      "icon": "Moon",
+      "iconEmoji": "🌙",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1e40af",
+        "light": "#3b82f6",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #eff6ff 100%)",
+        "cardBorder": "rgba(30, 64, 175, 0.15)",
+        "cardHoverBorder": "rgba(30, 64, 175, 0.4)",
+        "cardGlow": "rgba(30, 64, 175, 0.18)",
+        "cardShadow": "0 24px 60px rgba(30, 64, 175, 0.35), 0 0 0 1px rgba(30, 64, 175, 0.25), 0 0 80px rgba(59, 130, 246, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
+        "titleGradient": "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "anger-control",
+      "slug": "anger-control",
+      "name": {
+        "en": "Anger Control",
+        "tr": "Öfke Kontrolü"
+      },
+      "subtitle": {
+        "en": "Quick spark or a silent volcano with no off-switch?",
+        "tr": "Hızlı kıvılcım mı yoksa kapatma düğmesi olmayan sessiz bir yanardağ mı?"
+      },
+      "category": "Health",
+      "icon": "Flame",
+      "iconEmoji": "🔥",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#dc2626",
+        "light": "#ef4444",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(220, 38, 38, 0.15)",
+        "cardHoverBorder": "rgba(220, 38, 38, 0.4)",
+        "cardGlow": "rgba(220, 38, 38, 0.18)",
+        "cardShadow": "0 24px 60px rgba(220, 38, 38, 0.35), 0 0 0 1px rgba(220, 38, 38, 0.25), 0 0 80px rgba(239, 68, 68, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)",
+        "titleGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "eating-behavior",
+      "slug": "eating-behavior",
+      "name": {
+        "en": "Eating Behavior",
+        "tr": "Yeme Davranışı"
+      },
+      "subtitle": {
+        "en": "Real hunger or emotional hunger wearing a disguise?",
+        "tr": "Gerçek açlık mı yoksa kılık değiştirmiş duygusal açlık mı?"
+      },
+      "category": "Health",
+      "icon": "Utensils",
+      "iconEmoji": "🍽️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ec4899",
+        "light": "#f472b6",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf2f8 100%)",
+        "cardBorder": "rgba(236, 72, 153, 0.15)",
+        "cardHoverBorder": "rgba(236, 72, 153, 0.4)",
+        "cardGlow": "rgba(236, 72, 153, 0.18)",
+        "cardShadow": "0 24px 60px rgba(236, 72, 153, 0.35), 0 0 0 1px rgba(236, 72, 153, 0.25), 0 0 80px rgba(244, 114, 182, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+        "titleGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "health-anxiety",
+      "slug": "health-anxiety",
+      "name": {
+        "en": "Health Anxiety",
+        "tr": "Sağlık Kaygısı"
+      },
+      "subtitle": {
+        "en": "Actually sick, or did Google ruin your peace again?",
+        "tr": "Gerçekten hasta mısınız, yoksa Google huzurunuzu tekrar mı bozdu?"
+      },
+      "category": "Health",
+      "icon": "Search",
+      "iconEmoji": "🔍",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "relationship-test",
+      "slug": "relationship-test",
+      "name": {
+        "en": "Relationship Test",
+        "tr": "İlişki Testi"
+      },
+      "subtitle": {
+        "en": "Deep love or deep fear of being left alone?",
+        "tr": "Derin aşk mı yoksa yalnız kalma korkusu mu?"
+      },
+      "category": "Health",
+      "icon": "Heart",
+      "iconEmoji": "❤️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#e11d48",
+        "light": "#f43f5e",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff1f2 100%)",
+        "cardBorder": "rgba(225, 29, 72, 0.15)",
+        "cardHoverBorder": "rgba(225, 29, 72, 0.4)",
+        "cardGlow": "rgba(225, 29, 72, 0.18)",
+        "cardShadow": "0 24px 60px rgba(225, 29, 72, 0.35), 0 0 0 1px rgba(225, 29, 72, 0.25), 0 0 80px rgba(244, 63, 94, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)",
+        "titleGradient": "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "emotional-instability",
+      "slug": "emotional-instability",
+      "name": {
+        "en": "Emotional Instability",
+        "tr": "Duygusal Dengesizlik"
+      },
+      "subtitle": {
+        "en": "Sensitive soul or an internal weather system on turbo-mode?",
+        "tr": "Hassas bir ruh mu yoksa turbo modda çalışan bir iç hava durumu sistemi mi?"
+      },
+      "category": "Health",
+      "icon": "Cloud",
+      "iconEmoji": "☁️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#7c3aed",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(124, 58, 237, 0.15)",
+        "cardHoverBorder": "rgba(124, 58, 237, 0.4)",
+        "cardGlow": "rgba(124, 58, 237, 0.18)",
+        "cardShadow": "0 24px 60px rgba(124, 58, 237, 0.35), 0 0 0 1px rgba(124, 58, 237, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
     }
   ]
 }

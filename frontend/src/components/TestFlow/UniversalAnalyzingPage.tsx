@@ -22,8 +22,27 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
   const [progress, setProgress] = useState(0);
   const [animatedCount, setAnimatedCount] = useState(1);
   const [hasCompleted, setHasCompleted] = useState(false);
+  const [countAnimationFinished, setCountAnimationFinished] = useState(false);
   const countAnimationStarted = useRef(false);
-  const { count: targetCount } = useTestsCompletedCounter();
+  const { count: targetCount, formattedCount } = useTestsCompletedCounter();
+  const targetCountRef = useRef(targetCount);
+
+  // Update ref whenever targetCount changes (but don't restart animation)
+  useEffect(() => {
+    targetCountRef.current = targetCount;
+    // If animation already finished, just update the displayed count
+    if (countAnimationFinished) {
+      setAnimatedCount(targetCount);
+    }
+  }, [targetCount, countAnimationFinished]);
+
+  // Reset animation state ONLY when component mounts or testId changes (NOT when targetCount changes)
+  useEffect(() => {
+    countAnimationStarted.current = false;
+    setCountAnimationFinished(false);
+    setAnimatedCount(1);
+    targetCountRef.current = targetCount; // Reset ref as well
+  }, [testId]); // Removed targetCount from dependencies
 
   const [error, setError] = useState<string | null>(null);
 
@@ -49,34 +68,69 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
     loadContent();
   }, [testId]);
 
-  // Animate count from 1 to target in 2 seconds (only once)
+  // Animate count from 1 to target in 2 seconds (only once per testId)
+  // NOTE: targetCount is NOT in dependencies - we capture it when animation starts
+  // This prevents animation from restarting when targetCount updates
   useEffect(() => {
-    if (!content || !targetCount || targetCount <= 0) return;
-    if (countAnimationStarted.current) return;
+    if (!content) return;
+    // Wait for targetCount to be available, but don't restart animation if it changes
+    if (!targetCount || targetCount <= 0) return;
+    
+    // CRITICAL: Check if animation already started - if so, NEVER restart it
+    if (countAnimationStarted.current) {
+      return;
+    }
 
-    // Freeze the target count at animation start
-    const finalTarget = targetCount;
+    // Start animation (only once) - mark as started immediately to prevent re-triggers
     countAnimationStarted.current = true;
     setAnimatedCount(1);
+    setCountAnimationFinished(false);
+    const initialTarget = targetCount; // Capture current targetCount at animation start
+    targetCountRef.current = initialTarget; // Store initial value in ref
 
     const countDuration = 2000; // 2 seconds
     const countSteps = 60; // 60 steps for smooth animation
-    const countIncrement = (finalTarget - 1) / countSteps;
+    const startCount = 1;
     const countInterval = countDuration / countSteps;
 
-    let currentCount = 1;
+    let currentStep = 0;
     const countTimer = setInterval(() => {
-      currentCount += countIncrement;
-      if (currentCount >= finalTarget) {
-        setAnimatedCount(finalTarget);
+      currentStep++;
+      
+      // Use the initial target captured at animation start (don't update during animation)
+      const countIncrement = (initialTarget - startCount) / countSteps;
+      const currentCount = startCount + (countIncrement * currentStep);
+      
+      if (currentCount >= initialTarget || currentStep >= countSteps) {
+        // When animation finishes, use the initial target (animation should complete to the value it started with)
+        setAnimatedCount(initialTarget);
+        setCountAnimationFinished(true);
+        // After animation finishes, update to latest targetCount if it changed
+        // Use the ref which is updated by the separate useEffect
+        const latestTarget = targetCountRef.current;
+        if (latestTarget !== initialTarget) {
+          setAnimatedCount(latestTarget);
+        }
         clearInterval(countTimer);
       } else {
         setAnimatedCount(Math.floor(currentCount));
       }
     }, countInterval);
 
-    return () => clearInterval(countTimer);
-  }, [content, targetCount]);
+    return () => {
+      clearInterval(countTimer);
+      // Don't reset countAnimationStarted here - it should persist until testId changes
+    };
+  }, [content, testId]); // REMOVED targetCount from dependencies - animation starts once per test, using current targetCount value
+
+  // After animation finishes, sync with live targetCount updates (but don't restart animation)
+  useEffect(() => {
+    if (countAnimationFinished && targetCount && countAnimationStarted.current) {
+      // Only update if animation has already completed (smooth update, no restart)
+      setAnimatedCount(targetCount);
+      targetCountRef.current = targetCount; // Update ref as well
+    }
+  }, [countAnimationFinished, targetCount]);
 
   // Animate progress with ease-out
   useEffect(() => {
@@ -103,9 +157,9 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
         setProgress(100);
         setHasCompleted(true);
         // Immediately call onComplete when reaching 100%
-        if (onComplete) {
+          if (onComplete) {
           onComplete();
-        }
+          }
       }
     };
 
@@ -191,34 +245,34 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
             WebkitBoxOrient: 'vertical',
             overflow: 'hidden',
             maxHeight: isMobile ? '64px' : '72px',
-          }}
-        >
-          {analyzing.title[language] || analyzing.title.en}
-        </motion.h1>
+            }}
+          >
+            {analyzing.title[language] || analyzing.title.en}
+          </motion.h1>
 
-        {/* Subtitle */}
-        <motion.p
+          {/* Subtitle */}
+          <motion.p
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          style={{
+            style={{
             fontSize: isMobile ? '14px' : '16px',
             color: '#555',
             marginBottom: '24px',
             fontWeight: '500',
             lineHeight: '1.5',
             textAlign: 'center',
-          }}
-        >
-          {analyzing.subtitle[language] || analyzing.subtitle.en}
-        </motion.p>
+            }}
+          >
+            {analyzing.subtitle[language] || analyzing.subtitle.en}
+          </motion.p>
 
         {/* Progress Card */}
-        <motion.div
+            <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          style={{
+              style={{
             background: 'rgba(255, 255, 255, 0.85)',
             backdropFilter: 'blur(12px)',
             WebkitBackdropFilter: 'blur(12px)',
@@ -227,29 +281,29 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
             border: '1px solid rgba(255, 255, 255, 0.4)',
             marginBottom: '16px',
-          }}
-        >
-          {/* Progress Bar */}
-          <div style={{
-            width: '100%',
+              }}
+            >
+            {/* Progress Bar */}
+            <div style={{
+              width: '100%',
             height: '6px',
             background: colors.progressBar.background,
             borderRadius: '3px',
-            overflow: 'hidden',
+              overflow: 'hidden',
             marginBottom: '12px',
-          }}>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
+            }}>
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${progress}%` }}
               transition={{ duration: 0.1, ease: 'easeOut' }}
-              style={{
-                height: '100%',
-                background: colors.progressBar.fill,
+                style={{
+                  height: '100%',
+                  background: colors.progressBar.fill,
                 borderRadius: '3px',
                 boxShadow: `0 0 8px ${colors.primary.main}66`,
-              }}
-            />
-          </div>
+                }}
+              />
+            </div>
 
           {/* Progress Percentage */}
           <div style={{
@@ -262,31 +316,31 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
           </div>
 
           {/* Loading Animation */}
-          <motion.div
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
+            <motion.div
+              animate={{
+                rotate: 360,
+              }}
+              transition={{
               duration: 2,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
-            style={{
-              display: 'inline-block',
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+              style={{
+                display: 'inline-block',
               fontSize: isMobile ? '32px' : '36px',
               marginTop: '8px',
-            }}
-          >
-            ⚙️
-          </motion.div>
+              }}
+            >
+              ⚙️
+            </motion.div>
         </motion.div>
 
         {/* Today's Tests Completed Card */}
-        <motion.div
+            <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          style={{
+              style={{
             background: 'rgba(255, 255, 255, 0.7)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
@@ -294,55 +348,55 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
             borderRadius: '12px',
             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
-          }}
-        >
+              }}
+            >
           <p style={{
             fontSize: isMobile ? '12px' : '14px',
             color: '#666',
             margin: 0,
             lineHeight: '1.5',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
             gap: '6px',
-            flexWrap: 'wrap',
+                  flexWrap: 'wrap',
           }}>
             <span>{language === 'tr' ? 'Bugün' : 'Today'}</span>
-            <motion.span
-              key={animatedCount}
+                    <motion.span
+              key={countAnimationFinished ? targetCount : animatedCount}
               initial={{ scale: 1.2, y: -3 }}
               animate={{ scale: 1, y: 0 }}
-              transition={{ 
+                      transition={{ 
                 type: 'spring',
                 stiffness: 300,
                 damping: 20,
                 duration: 0.3
-              }}
-            >
-              <motion.span
+                      }}
+                    >
+                    <motion.span
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                 }}
-                transition={{
+                      transition={{ 
                   duration: 3,
                   repeat: Infinity,
                   ease: 'linear',
-                }}
-                style={{
+                      }}
+                      style={{
                   fontWeight: '800',
                   background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 20%, #8B5CF6 40%, #FF6B9D 60%, #FFC3D1 80%, #6C63FF 100%)',
                   backgroundSize: '200% 200%',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
                   fontSize: isMobile ? '20px' : '24px',
                   lineHeight: '1',
                   display: 'inline-block',
-                }}
-              >
-                {animatedCount.toLocaleString()}
+                      }}
+                    >
+                {countAnimationFinished ? targetCount.toLocaleString() : animatedCount.toLocaleString()}
               </motion.span>
-            </motion.span>
+                    </motion.span>
             <span>{language === 'tr' ? 'test tamamlandı!' : "test's completed!"}</span>
           </p>
         </motion.div>

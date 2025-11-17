@@ -63,6 +63,10 @@ function UniversalPaymentPageContent({
       background: 'linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)',
       padding: isMobile ? '20px' : '40px',
       paddingTop: isMobile ? '100px' : '120px',
+      userSelect: 'none',
+      WebkitUserSelect: 'none',
+      MozUserSelect: 'none',
+      msUserSelect: 'none',
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -79,116 +83,6 @@ function UniversalPaymentPageContent({
           resultData={resultData}
         />
 
-        {/* Result Preview Section */}
-        {resultLevel && resultData ? (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            style={{
-              position: 'relative',
-              maxWidth: '700px',
-              margin: '0 auto 48px',
-              background: '#ffffff',
-              backdropFilter: 'blur(20px)',
-              borderRadius: '32px',
-              boxShadow: '0 24px 80px rgba(33, 150, 243, 0.2), 0 0 0 1px rgba(33, 150, 243, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
-              padding: isMobile ? '40px 28px' : '56px 48px',
-              textAlign: 'center',
-              border: '1px solid rgba(33, 150, 243, 0.15)',
-              overflow: 'hidden',
-              cursor: 'default',
-              transition: 'all 0.2s ease-out',
-            }}
-          >
-            {/* Unlock Detailed Result Section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 1.2, ease: 'easeInOut' }}
-              whileHover={{
-                scale: 1.02,
-                boxShadow: '0 0 40px rgba(33, 150, 243, 0.25)',
-                transition: { duration: 0.3 }
-              }}
-              style={{
-                padding: isMobile ? '24px' : '36px 24px',
-                background: 'linear-gradient(180deg, #fff0f5 0%, #ffe4e1 100%)',
-                borderRadius: '22px',
-                border: '2px dashed rgba(33, 150, 243, 0.25)',
-                textAlign: 'center',
-                marginTop: '32px',
-                boxShadow: '0 4px 25px rgba(33, 150, 243, 0.08)',
-                position: 'relative',
-                transition: 'all 0.3s ease',
-              }}
-            >
-              <motion.div 
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0],
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatDelay: 1,
-                }}
-                style={{
-                  fontSize: '40px',
-                  marginBottom: '20px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                }}
-              >
-                🔒
-              </motion.div>
-              <p style={{
-                fontSize: isMobile ? '15px' : '16px',
-                color: '#444',
-                lineHeight: '1.6',
-                fontWeight: '500',
-                marginBottom: '24px',
-                maxWidth: '540px',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}>
-                {paymentPageContent.growingMind.lockedSection.subtext[language] || paymentPageContent.growingMind.lockedSection.subtext.en}
-              </p>
-              <motion.button
-                onClick={() => {
-                  const paymentSection = document.getElementById('payment-section');
-                  if (paymentSection) {
-                    paymentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                whileHover={{ 
-                  scale: 1.06,
-                  boxShadow: '0 10px 25px rgba(108, 99, 255, 0.45)',
-                  filter: 'brightness(1.1)',
-                  transition: { duration: 0.25, ease: 'easeInOut' }
-                }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '14px 34px',
-                  background: 'linear-gradient(90deg, #6C63FF 0%, #9E8DFF 100%)',
-                  border: 'none',
-                  borderRadius: '14px',
-                  color: 'white',
-                  fontWeight: '600',
-                  fontSize: isMobile ? '15px' : '17px',
-                  cursor: 'pointer',
-                  boxShadow: '0 6px 20px rgba(108, 99, 255, 0.3)',
-                  transition: 'all 0.25s ease-in-out',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                }}
-              >
-                {paymentPageContent.growingMind.lockedSection.button[language] || paymentPageContent.growingMind.lockedSection.button.en}
-              </motion.button>
-            </motion.div>
-          </motion.div>
-        ) : null}
 
         {/* Top Section */}
         <motion.div
@@ -435,6 +329,7 @@ function UniversalPaymentPageContent({
               <PaymentForm
                 language={language}
                 testId={testId}
+                resultLevel={resultLevel}
                 onError={handlePaymentError}
               />
             </div>

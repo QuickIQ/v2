@@ -25,6 +25,10 @@ export function PaymentFooter({ testId }: PaymentFooterProps) {
         borderRadius: '16px',
         marginTop: '64px',
         marginBottom: '32px',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
       }}
     >
       <p style={{

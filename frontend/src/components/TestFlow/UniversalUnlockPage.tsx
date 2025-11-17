@@ -143,7 +143,11 @@ export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnl
     }
   }
   
-  // Early return if testId is still missing
+  // IMPORTANT: Call hook unconditionally before any early returns (React Rules of Hooks)
+  // The hook can handle empty testId - it will set an error state
+  const { useTestStore: useTestStoreHook, loading: storeLoading, error: storeError } = useTestStore(testId);
+  
+  // Early return if testId is still missing (after hook call)
   if (!testId) {
     return (
       <div style={{
@@ -159,9 +163,6 @@ export default function UniversalUnlockPage({ testId: testIdProp }: UniversalUnl
       </div>
     );
   }
-  
-  // Load store dynamically using hook
-  const { useTestStore: useTestStoreHook, loading: storeLoading, error: storeError } = useTestStore(testId);
   
   if (storeLoading) {
     return <LoadingFallback message="Loading your results..." testId={testId} />;

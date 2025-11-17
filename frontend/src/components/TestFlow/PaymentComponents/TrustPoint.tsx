@@ -31,6 +31,10 @@ export function TrustPoint({ emoji, title, description, index }: TrustPointProps
         boxShadow: '0 4px 16px rgba(108, 99, 255, 0.1)',
         border: '1px solid rgba(108, 99, 255, 0.15)',
         position: 'relative',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
       }}
     >
       <div

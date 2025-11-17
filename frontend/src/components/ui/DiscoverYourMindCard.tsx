@@ -103,9 +103,9 @@ export function DiscoverYourMindCard() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
           style={{
-            fontSize: isMobile ? '18px' : '24px',
+            fontSize: isMobile ? 'clamp(12px, 3.2vw, 15px)' : '24px',
             fontWeight: '700',
-            lineHeight: '1.5',
+            lineHeight: isMobile ? '1.2' : '1.5',
             margin: 0,
             background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
             WebkitBackgroundClip: 'text',
@@ -114,7 +114,11 @@ export function DiscoverYourMindCard() {
             textShadow: '0 2px 20px rgba(108, 99, 255, 0.3)',
             position: 'relative',
             zIndex: 1,
-            letterSpacing: '0.3px',
+            letterSpacing: isMobile ? '0px' : '0.3px',
+            wordWrap: 'break-word',
+            overflowWrap: 'break-word',
+            overflow: 'visible',
+            textOverflow: 'clip',
           }}
         >
           Discover your mind, reveal your truth, unlock your potential, and transform yourself.

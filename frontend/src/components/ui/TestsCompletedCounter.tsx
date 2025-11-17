@@ -15,6 +15,7 @@ export function TestsCompletedCounter() {
       transition={{ duration: 0.6, delay: 0.4 }}
       style={{
         textAlign: 'center',
+        marginTop: 0,
         marginBottom: isMobile ? '32px' : '48px',
         padding: isMobile ? '0 20px' : '0',
       }}

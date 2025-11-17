@@ -54,6 +54,10 @@ export function Features({ testId }: FeaturesProps) {
       style={{
         marginTop: isMobile ? '48px' : '64px',
         marginBottom: isMobile ? '48px' : '64px',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
       }}
     >
       <h2 style={{

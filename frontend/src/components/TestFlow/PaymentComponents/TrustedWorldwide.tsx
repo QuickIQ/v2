@@ -30,6 +30,10 @@ export function TrustedWorldwide({ language }: TrustedWorldwideProps) {
         padding: isMobile ? '22px' : '32px 32px 38px 32px',
         position: 'relative',
         overflow: 'hidden',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+        MozUserSelect: 'none',
+        msUserSelect: 'none',
       }}
     >
       {/* Subtle top glow */}
