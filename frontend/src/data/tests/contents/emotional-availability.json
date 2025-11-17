@@ -1,0 +1,142 @@
+{
+  "testId": "emotional-availability",
+  "colors": {
+    "primary": {
+      "main": "#0891b2",
+      "light": "#06b6d4"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 50%, #A5F3FC 100%)",
+        "animated": [
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 50%, #A5F3FC 100%)",
+          "linear-gradient(135deg, #CFFAFE 0%, #A5F3FC 50%, #ECFEFF 100%)",
+          "linear-gradient(135deg, #A5F3FC 0%, #ECFEFF 50%, #CFFAFE 100%)",
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 50%, #A5F3FC 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)",
+        "animated": [
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)",
+          "linear-gradient(135deg, #CFFAFE 0%, #ECFEFF 100%)",
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+      "border": "rgba(8, 145, 178, 0.15)",
+      "borderHover": "rgba(8, 145, 178, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+        "shadow": "0 4px 20px rgba(8, 145, 178, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Emotional Availability Assessment",
+      "tr": "Duygusal Erişilebilirlik Değerlendirmesi"
+    },
+    "subtitle": {
+      "en": "Are you truly open, or just pretending to be?",
+      "tr": "Gerçekten açık mısınız, yoksa sadece öyle mi görünüyorsunuz?"
+    },
+    "description": {
+      "en": "This assessment helps identify your level of emotional availability and openness in relationships. Answer honestly for accurate insights about whether you're truly open or just pretending to be emotionally available.",
+      "tr": "Bu değerlendirme, ilişkilerde duygusal erişilebilirlik ve açıklık seviyenizi belirlemenize yardımcı olur. Gerçekten açık olup olmadığınız veya sadece duygusal olarak erişilebilir görünüp görünmediğiniz hakkında doğru içgörüler için dürüst cevap verin."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
+    },
+    "startButton": {
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your emotional availability and openness...",
+      "tr": "Duygusal erişilebilirliğiniz ve açıklığınız analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses to provide insights about your emotional availability and whether you're truly open in relationships.",
+      "tr": "Yapay zekamız, duygusal erişilebilirliğiniz ve ilişkilerde gerçekten açık olup olmadığınız hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Emotional Availability Assessment results below and explore detailed insights about your openness and emotional accessibility.",
+      "tr": "Aşağıda kişiselleştirilmiş Duygusal Erişilebilirlik Değerlendirmesi sonuçlarınızın kilidini açın ve açıklığınız ve duygusal erişilebilirliğiniz hakkında detaylı içgörüleri keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
+

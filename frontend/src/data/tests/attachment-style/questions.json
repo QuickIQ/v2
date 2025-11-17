@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "text": "I feel like I bond easily with others and form close emotional connections quickly.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I tend to avoid getting too close to others because I'm afraid of being hurt or rejected.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "I feel like I cling to my partner or close relationships, fearing they might leave me.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I tend to detach emotionally from relationships when things get too intense or complicated.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "text": "I feel comfortable with intimacy and can maintain close relationships without feeling overwhelmed.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 6,
+    "text": "I worry that my partner doesn't really love me or will abandon me.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "I prefer to keep relationships casual and avoid deep emotional commitments.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I feel like I need constant reassurance from my partner to feel secure in the relationship.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "text": "I can maintain healthy boundaries in relationships while still being emotionally connected.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 10,
+    "text": "I feel like I'm too dependent on my partner and can't function well without them.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "I can trust my partner and don't constantly worry about them leaving or betraying me.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 12,
+    "text": "I feel like I push people away when they try to get too close to me emotionally.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I can balance my need for closeness with my need for independence in relationships.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 14,
+    "text": "I feel anxious when my partner is away or when I don't know where they are.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I can form secure attachments and maintain healthy, stable relationships.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 16,
+    "text": "I feel like I'm always trying to avoid getting hurt, so I keep people at a distance.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I experience intense fear of abandonment and do everything I can to prevent my partner from leaving.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I feel like I detach emotionally when relationships become too demanding or stressful.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I can maintain my own identity and interests while being in a close relationship.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 20,
+    "text": "I feel secure in my relationships and don't constantly worry about how I bond, avoid, cling, or detach.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
+]
+

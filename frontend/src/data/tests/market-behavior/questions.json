@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "text": "I feel like I'm patient when making financial decisions under pressure.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 2,
+    "text": "I feel like I'm reactive when making financial decisions under pressure.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "I feel like I'm chaotic when making financial decisions under pressure.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I can identify whether I'm patient, reactive, or chaotic under pressure when making financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "I experience problems with financial decisions because I'm reactive or chaotic under pressure, not patient.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I can maintain patience when making financial decisions under pressure, avoiding reactive or chaotic behavior.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 7,
+    "text": "I feel like my market behavior is reactive or chaotic under pressure, which affects my financial decisions negatively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I can recognize whether I'm patient, reactive, or chaotic under pressure, and work to maintain patience in financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "I experience financial problems because I'm reactive or chaotic under pressure, rather than patient.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I can maintain patient market behavior under pressure, avoiding reactive or chaotic financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 11,
+    "text": "I feel like my market behavior is patient, reactive, or chaotic under pressure, and I can identify which it is.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 12,
+    "text": "I experience difficulty with financial decisions because I'm reactive or chaotic under pressure, not patient.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I can maintain patient market behavior under pressure, ensuring I'm not reactive or chaotic in financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 14,
+    "text": "I feel like my market behavior is reactive or chaotic under pressure, and this creates problems in my financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I can identify whether I'm patient, reactive, or chaotic under pressure, and work to maintain patience in market behavior.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 16,
+    "text": "I experience financial problems because my market behavior is reactive or chaotic under pressure, not patient.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I can maintain patient market behavior under pressure, avoiding reactive or chaotic financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 18,
+    "text": "I feel like my market behavior is patient, reactive, or chaotic under pressure, and this affects my financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I can recognize whether I'm patient, reactive, or chaotic under pressure, and maintain patient market behavior in financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 20,
+    "text": "I feel like I'm patient when making financial decisions under pressure, not reactive or chaotic.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
+]
+

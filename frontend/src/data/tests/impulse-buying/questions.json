@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "text": "I feel like emotions easily drain my wallet, causing me to make impulse purchases.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I can control my impulse buying, not letting emotions drain my wallet.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 3,
+    "text": "I can identify how easily emotions drain my wallet through impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 4,
+    "text": "I experience financial problems because emotions easily drain my wallet through impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "text": "I can maintain control over impulse buying, preventing emotions from draining my wallet.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 6,
+    "text": "I feel like emotions easily drain my wallet, and this affects my financial well-being negatively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "I can recognize how easily emotions drain my wallet, and work to control impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 8,
+    "text": "I experience financial problems because emotions easily drain my wallet through impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "text": "I can maintain control over impulse buying, ensuring emotions don't easily drain my wallet.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 10,
+    "text": "I feel like emotions easily drain my wallet, and this prevents me from controlling impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "I can identify how easily emotions drain my wallet, and work to control impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 12,
+    "text": "I experience financial problems because emotions easily drain my wallet through impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I can maintain control over impulse buying, preventing emotions from easily draining my wallet.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 14,
+    "text": "I feel like emotions easily drain my wallet, and this creates problems in my financial life.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I can recognize how easily emotions drain my wallet, and work to control impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 16,
+    "text": "I experience financial problems because emotions easily drain my wallet through impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I can maintain control over impulse buying, ensuring emotions don't easily drain my wallet.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 18,
+    "text": "I feel like emotions easily drain my wallet, and this affects my ability to control impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I can identify how easily emotions drain my wallet, and work to control impulse buying.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 20,
+    "text": "I can control my impulse buying, not letting emotions easily drain my wallet.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
+]
+

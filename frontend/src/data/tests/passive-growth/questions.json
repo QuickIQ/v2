@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "text": "I feel like I'm planting seeds for financial growth, actively investing and building wealth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 2,
+    "text": "I feel like I'm hoping money grows itself, passively expecting wealth without active effort.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "I can identify whether I'm planting seeds or hoping money grows itself for financial growth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 4,
+    "text": "I experience financial problems because I hope money grows itself rather than planting seeds.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "text": "I can maintain passive growth strategies that plant seeds rather than hoping money grows itself.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 6,
+    "text": "I feel like I hope money grows itself, not planting seeds, and this affects my financial growth negatively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "I can recognize whether I'm planting seeds or hoping money grows itself, and work to plant seeds actively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 8,
+    "text": "I experience financial problems because I hope money grows itself instead of planting seeds.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 9,
+    "text": "I can maintain passive growth strategies that plant seeds, not hoping money grows itself.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 10,
+    "text": "I feel like I hope money grows itself, and this prevents me from planting seeds for financial growth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "I can identify whether I'm planting seeds or hoping money grows itself, and work to plant seeds for growth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 12,
+    "text": "I experience financial problems because I hope money grows itself rather than planting seeds.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "text": "I can maintain passive growth strategies that plant seeds, ensuring I'm not hoping money grows itself.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 14,
+    "text": "I feel like I hope money grows itself, and this creates problems in my financial growth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I can recognize whether I'm planting seeds or hoping money grows itself, and work to plant seeds actively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 16,
+    "text": "I experience financial problems because I hope money grows itself instead of planting seeds.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 17,
+    "text": "I can maintain passive growth strategies that plant seeds, avoiding hoping money grows itself.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 18,
+    "text": "I feel like I hope money grows itself, and this affects my ability to plant seeds for financial growth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "I can identify whether I'm planting seeds or hoping money grows itself, and work to plant seeds for growth.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 20,
+    "text": "I feel like I'm planting seeds for financial growth, not hoping money grows itself.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
+]
+

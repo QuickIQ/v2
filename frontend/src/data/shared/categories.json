@@ -28,7 +28,7 @@
         "tr": "Aşk – Romantik Dinamikler & Duygusal Bağlanma"
       },
       "color": "#FF5A8A",
-      "showCards": false
+      "showCards": true
     },
     {
       "id": "money",
@@ -38,7 +38,7 @@
         "tr": "Para – Risk, Dürtü & Para Davranış Kalıpları"
       },
       "color": "#32C26A",
-      "showCards": false
+      "showCards": true
     },
     {
       "id": "dark",
@@ -48,7 +48,7 @@
         "tr": "Karanlık – Gölge Özellikler, Manipülasyon & İç Çatışma Güçleri"
       },
       "color": "#000000",
-      "showCards": false
+      "showCards": true
     }
   ]
 }

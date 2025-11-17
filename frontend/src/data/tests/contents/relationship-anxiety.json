@@ -1,0 +1,142 @@
+{
+  "testId": "relationship-anxiety",
+  "colors": {
+    "primary": {
+      "main": "#f59e0b",
+      "light": "#fbbf24"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%)",
+          "linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #FFFBEB 100%)",
+          "linear-gradient(135deg, #FDE68A 0%, #FFFBEB 50%, #FEF3C7 100%)",
+          "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)",
+          "linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%)",
+          "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+      "border": "rgba(245, 158, 11, 0.15)",
+      "borderHover": "rgba(245, 158, 11, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "shadow": "0 4px 20px rgba(245, 158, 11, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Relationship Anxiety Assessment",
+      "tr": "İlişki Kaygısı Değerlendirmesi"
+    },
+    "subtitle": {
+      "en": "Do you fear losing love, or fear receiving it?",
+      "tr": "Aşkı kaybetmekten mi korkuyorsunuz, yoksa almak mı?"
+    },
+    "description": {
+      "en": "This assessment helps identify relationship anxiety patterns and whether you fear losing love or fear receiving it. Answer honestly for accurate insights about your relationship fears and anxieties.",
+      "tr": "Bu değerlendirme, ilişki kaygısı kalıplarını ve aşkı kaybetmekten mi yoksa almak mı korktuğunuzu belirlemenize yardımcı olur. İlişki korkularınız ve kaygılarınız hakkında doğru içgörüler için dürüst cevap verin."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
+    },
+    "startButton": {
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your relationship anxiety and fear patterns...",
+      "tr": "İlişki kaygınız ve korku kalıplarınız analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses to provide insights about whether you fear losing love or fear receiving it.",
+      "tr": "Yapay zekamız, aşkı kaybetmekten mi yoksa almak mı korktuğunuz hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Relationship Anxiety Assessment results below and explore detailed insights about your relationship fears and anxieties.",
+      "tr": "Aşağıda kişiselleştirilmiş İlişki Kaygısı Değerlendirmesi sonuçlarınızın kilidini açın ve ilişki korkularınız ve kaygılarınız hakkında detaylı içgörüleri keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
+

@@ -2,45 +2,45 @@
   "testId": "risk-tolerance",
   "colors": {
     "primary": {
-      "main": "#ef4444",
-      "light": "#f87171"
+      "main": "#06b6d4",
+      "light": "#22d3ee"
     },
     "background": {
       "landing": {
-        "gradient": "linear-gradient(135deg, #FFF0F0 0%, #FFE8E8 50%, #FFF5F0 100%)",
+        "gradient": "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 50%, #A5F3FC 100%)",
         "animated": [
-          "linear-gradient(135deg, #FFF0F0 0%, #FFE8E8 50%, #FFF5F0 100%)",
-          "linear-gradient(135deg, #FFE8E8 0%, #FFF5F0 50%, #FFF0F0 100%)",
-          "linear-gradient(135deg, #FFF5F0 0%, #FFF0F0 50%, #FFE8E8 100%)",
-          "linear-gradient(135deg, #FFF0F0 0%, #FFE8E8 50%, #FFF5F0 100%)"
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 50%, #A5F3FC 100%)",
+          "linear-gradient(135deg, #CFFAFE 0%, #A5F3FC 50%, #ECFEFF 100%)",
+          "linear-gradient(135deg, #A5F3FC 0%, #ECFEFF 50%, #CFFAFE 100%)",
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 50%, #A5F3FC 100%)"
         ]
       },
       "questions": {
-        "gradient": "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)"
+        "gradient": "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)"
       },
       "analyzing": {
-        "gradient": "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
+        "gradient": "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)",
         "animated": [
-          "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)",
-          "linear-gradient(135deg, #FFF4F0 0%, #FBEAFF 100%)",
-          "linear-gradient(135deg, #FBEAFF 0%, #FFF4F0 100%)"
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)",
+          "linear-gradient(135deg, #CFFAFE 0%, #ECFEFF 100%)",
+          "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)"
         ]
       }
     },
     "card": {
-      "background": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
-      "border": "rgba(239, 68, 68, 0.15)",
-      "borderHover": "rgba(239, 68, 68, 0.4)"
+      "background": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+      "border": "rgba(6, 182, 212, 0.15)",
+      "borderHover": "rgba(6, 182, 212, 0.4)"
     },
     "button": {
       "primary": {
-        "gradient": "linear-gradient(135deg, #ef4444 0%, #f87171 100%)",
-        "shadow": "0 4px 20px rgba(108, 99, 255, 0.4)"
+        "gradient": "linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%)",
+        "shadow": "0 4px 20px rgba(6, 182, 212, 0.4)"
       }
     },
     "progressBar": {
       "background": "#e0e0e0",
-      "fill": "linear-gradient(135deg, #ef4444 0%, #f87171 100%)"
+      "fill": "linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%)"
     },
     "answerButtons": {
       "gradients": [
@@ -74,24 +74,24 @@
   },
   "landing": {
     "title": {
-      "en": "Before You Begin",
-      "tr": "Başlamadan Önce"
+      "en": "Risk Tolerance Assessment",
+      "tr": "Risk Toleransı Değerlendirmesi"
     },
     "subtitle": {
-      "en": "Answer honestly — this test is for your self-discovery, not for judgment.",
-      "tr": "Dürüst cevap verin — bu test yargılamak için değil, kendinizi keşfetmeniz içindir."
+      "en": "Do you play safe or bet on volatility?",
+      "tr": "Güvenli mi oynuyorsunuz, yoksa oynaklığa mı bahis yapıyorsunuz?"
     },
     "description": {
-      "en": "Be as genuine as possible. Your responses are not stored or shared — they're only used to calculate your result.",
-      "tr": "Mümkün olduğunca samimi olun. Cevaplarınız saklanmaz veya paylaşılmaz — sadece sonucunuzu hesaplamak için kullanılır."
+      "en": "This assessment helps identify your risk tolerance and whether you play safe or bet on volatility. Answer honestly for accurate insights about your financial risk-taking behavior and investment approach.",
+      "tr": "Bu değerlendirme, risk toleransınızı ve güvenli mi oynadığınızı yoksa oynaklığa mı bahis yaptığınızı belirlemenize yardımcı olur. Finansal risk alma davranışlarınız ve yatırım yaklaşımınız hakkında doğru içgörüler için dürüst cevap verin."
     },
     "reminder": {
-      "en": "You'll have 10 minutes to answer 20 questions. Take a deep breath and focus — this is your moment of reflection.",
-      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Derin bir nefes alın ve odaklanın — bu sizin yansıma anınız."
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
     },
     "startButton": {
-      "en": "Continue",
-      "tr": "Devam Et"
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
     }
   },
   "questions": {
@@ -109,12 +109,12 @@
   },
   "analyzing": {
     "title": {
-      "en": "Analyzing your responses...",
-      "tr": "Cevaplarınız analiz ediliyor..."
+      "en": "Analyzing your risk tolerance and financial behavior...",
+      "tr": "Risk toleransınız ve finansal davranışlarınız analiz ediliyor..."
     },
     "subtitle": {
-      "en": "Our AI is evaluating your responses. This will take a few seconds...",
-      "tr": "Yapay zekamız cevaplarınızı değerlendiriyor. Bu birkaç saniye sürecek..."
+      "en": "Our AI is evaluating your responses to provide insights about whether you play safe or bet on volatility.",
+      "tr": "Yapay zekamız, güvenli mi oynadığınız yoksa oynaklığa mı bahis yaptığınız hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
     },
     "duration": 10
   },
@@ -124,14 +124,14 @@
       "tr": "Sonuçlarınızı Alın"
     },
     "subtitle": {
-      "en": "Enter your email to receive your detailed results",
-      "tr": "Detaylı sonuçlarınızı almak için e-posta adresinizi girin"
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
     }
   },
   "payment": {
     "intro": {
-      "en": "Unlock your personalized test results below.",
-      "tr": "Aşağıda kişiselleştirilmiş test sonuçlarınızın kilidini açın."
+      "en": "Unlock your personalized Risk Tolerance Assessment results below and explore detailed insights about your financial risk-taking behavior and investment approach.",
+      "tr": "Aşağıda kişiselleştirilmiş Risk Toleransı Değerlendirmesi sonuçlarınızın kilidini açın ve finansal risk alma davranışlarınız ve yatırım yaklaşımınız hakkında detaylı içgörüleri keşfedin."
     },
     "unlockButton": {
       "en": "Unlock Detailed Result",

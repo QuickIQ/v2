@@ -1303,6 +1303,2202 @@
         },
         "timeLimit": 600
       }
+    },
+    {
+      "id": "attachment-style",
+      "slug": "attachment-style",
+      "name": {
+        "en": "Attachment Style",
+        "tr": "Bağlanma Stili"
+      },
+      "subtitle": {
+        "en": "How do you bond, avoid, cling, or detach?",
+        "tr": "Nasıl bağlanırsınız, kaçınır, yapışır veya kopar mısınız?"
+      },
+      "category": "Love",
+      "icon": "Heart",
+      "iconEmoji": "💜",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#d946ef",
+        "light": "#e879f9",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf4ff 100%)",
+        "cardBorder": "rgba(217, 70, 239, 0.15)",
+        "cardHoverBorder": "rgba(217, 70, 239, 0.4)",
+        "cardGlow": "rgba(217, 70, 239, 0.18)",
+        "cardShadow": "0 24px 60px rgba(217, 70, 239, 0.35), 0 0 0 1px rgba(217, 70, 239, 0.25), 0 0 80px rgba(232, 121, 249, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)",
+        "titleGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "trauma-patterns",
+      "slug": "trauma-patterns",
+      "name": {
+        "en": "Trauma Patterns",
+        "tr": "Travma Kalıpları"
+      },
+      "subtitle": {
+        "en": "Which wounds secretly shape your love life?",
+        "tr": "Hangi yaralar aşk hayatınızı gizlice şekillendiriyor?"
+      },
+      "category": "Love",
+      "icon": "AlertCircle",
+      "iconEmoji": "💔",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#991b1b",
+        "light": "#dc2626",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(153, 27, 27, 0.15)",
+        "cardHoverBorder": "rgba(153, 27, 27, 0.4)",
+        "cardGlow": "rgba(153, 27, 27, 0.18)",
+        "cardShadow": "0 24px 60px rgba(153, 27, 27, 0.35), 0 0 0 1px rgba(153, 27, 27, 0.25), 0 0 80px rgba(220, 38, 38, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 100%)",
+        "titleGradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "emotional-availability",
+      "slug": "emotional-availability",
+      "name": {
+        "en": "Emotional Availability",
+        "tr": "Duygusal Erişilebilirlik"
+      },
+      "subtitle": {
+        "en": "Are you truly open, or just pretending to be?",
+        "tr": "Gerçekten açık mısınız, yoksa sadece öyle mi görünüyorsunuz?"
+      },
+      "category": "Love",
+      "icon": "Heart",
+      "iconEmoji": "💙",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0891b2",
+        "light": "#06b6d4",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+        "cardBorder": "rgba(8, 145, 178, 0.15)",
+        "cardHoverBorder": "rgba(8, 145, 178, 0.4)",
+        "cardGlow": "rgba(8, 145, 178, 0.18)",
+        "cardShadow": "0 24px 60px rgba(8, 145, 178, 0.35), 0 0 0 1px rgba(8, 145, 178, 0.25), 0 0 80px rgba(6, 182, 212, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+        "titleGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "trust-issues",
+      "slug": "trust-issues",
+      "name": {
+        "en": "Trust Issues",
+        "tr": "Güven Sorunları"
+      },
+      "subtitle": {
+        "en": "Do you trust too fast, too slow, or never?",
+        "tr": "Çok hızlı mı, çok yavaş mı, yoksa hiç mi güveniyorsunuz?"
+      },
+      "category": "Love",
+      "icon": "Shield",
+      "iconEmoji": "🛡️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "conflict-style",
+      "slug": "conflict-style",
+      "name": {
+        "en": "Conflict Style",
+        "tr": "Çatışma Stili"
+      },
+      "subtitle": {
+        "en": "Do you fight fair, explode, or shut down?",
+        "tr": "Adil mi kavga edersiniz, patlar mısınız, yoksa kapanır mısınız?"
+      },
+      "category": "Love",
+      "icon": "Zap",
+      "iconEmoji": "⚡",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ea580c",
+        "light": "#fb923c",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+        "cardBorder": "rgba(234, 88, 12, 0.15)",
+        "cardHoverBorder": "rgba(234, 88, 12, 0.4)",
+        "cardGlow": "rgba(234, 88, 12, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 88, 12, 0.35), 0 0 0 1px rgba(234, 88, 12, 0.25), 0 0 80px rgba(251, 146, 60, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+        "titleGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "boundary-skills",
+      "slug": "boundary-skills",
+      "name": {
+        "en": "Boundary Skills",
+        "tr": "Sınır Becerileri"
+      },
+      "subtitle": {
+        "en": "Can you protect yourself without pushing people away?",
+        "tr": "İnsanları uzaklaştırmadan kendinizi koruyabilir misiniz?"
+      },
+      "category": "Love",
+      "icon": "Shield",
+      "iconEmoji": "🛡️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "jealousy-levels",
+      "slug": "jealousy-levels",
+      "name": {
+        "en": "Jealousy Levels",
+        "tr": "Kıskançlık Seviyeleri"
+      },
+      "subtitle": {
+        "en": "Is your jealousy normal, protective, or toxic?",
+        "tr": "Kıskançlığınız normal, koruyucu mu yoksa zehirli mi?"
+      },
+      "category": "Love",
+      "icon": "AlertCircle",
+      "iconEmoji": "⚠️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "intimacy-blocks",
+      "slug": "intimacy-blocks",
+      "name": {
+        "en": "Intimacy Blocks",
+        "tr": "Yakınlık Engelleri"
+      },
+      "subtitle": {
+        "en": "What stops you from feeling deeply connected?",
+        "tr": "Sizi derinden bağlı hissetmekten alıkoyan nedir?"
+      },
+      "category": "Love",
+      "icon": "Lock",
+      "iconEmoji": "🔒",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#8b5cf6",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(139, 92, 246, 0.15)",
+        "cardHoverBorder": "rgba(139, 92, 246, 0.4)",
+        "cardGlow": "rgba(139, 92, 246, 0.18)",
+        "cardShadow": "0 24px 60px rgba(139, 92, 246, 0.35), 0 0 0 1px rgba(139, 92, 246, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "love-language",
+      "slug": "love-language",
+      "name": {
+        "en": "Love Language",
+        "tr": "Aşk Dili"
+      },
+      "subtitle": {
+        "en": "How do you express and receive real affection?",
+        "tr": "Gerçek sevgiyi nasıl ifade eder ve alırsınız?"
+      },
+      "category": "Love",
+      "icon": "Heart",
+      "iconEmoji": "💕",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ec4899",
+        "light": "#f472b6",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf2f8 100%)",
+        "cardBorder": "rgba(236, 72, 153, 0.15)",
+        "cardHoverBorder": "rgba(236, 72, 153, 0.4)",
+        "cardGlow": "rgba(236, 72, 153, 0.18)",
+        "cardShadow": "0 24px 60px rgba(236, 72, 153, 0.35), 0 0 0 1px rgba(236, 72, 153, 0.25), 0 0 80px rgba(244, 114, 182, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+        "titleGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "sexual-chemistry",
+      "slug": "sexual-chemistry",
+      "name": {
+        "en": "Sexual Chemistry",
+        "tr": "Cinsel Kimya"
+      },
+      "subtitle": {
+        "en": "Is your attraction emotional, physical, or fading?",
+        "tr": "Çekiminiz duygusal mı, fiziksel mi, yoksa soluyor mu?"
+      },
+      "category": "Love",
+      "icon": "Flame",
+      "iconEmoji": "🔥",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#e11d48",
+        "light": "#f43f5e",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff1f2 100%)",
+        "cardBorder": "rgba(225, 29, 72, 0.15)",
+        "cardHoverBorder": "rgba(225, 29, 72, 0.4)",
+        "cardGlow": "rgba(225, 29, 72, 0.18)",
+        "cardShadow": "0 24px 60px rgba(225, 29, 72, 0.35), 0 0 0 1px rgba(225, 29, 72, 0.25), 0 0 80px rgba(244, 63, 94, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)",
+        "titleGradient": "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "compatibility-fit",
+      "slug": "compatibility-fit",
+      "name": {
+        "en": "Compatibility Fit",
+        "tr": "Uyumluluk Uyumu"
+      },
+      "subtitle": {
+        "en": "Are your core values aligned or silently clashing?",
+        "tr": "Temel değerleriniz uyumlu mu yoksa sessizce çatışıyor mu?"
+      },
+      "category": "Love",
+      "icon": "Heart",
+      "iconEmoji": "💞",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ec4899",
+        "light": "#f472b6",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf2f8 100%)",
+        "cardBorder": "rgba(236, 72, 153, 0.15)",
+        "cardHoverBorder": "rgba(236, 72, 153, 0.4)",
+        "cardGlow": "rgba(236, 72, 153, 0.18)",
+        "cardShadow": "0 24px 60px rgba(236, 72, 153, 0.35), 0 0 0 1px rgba(236, 72, 153, 0.25), 0 0 80px rgba(244, 114, 182, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+        "titleGradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "relationship-anxiety",
+      "slug": "relationship-anxiety",
+      "name": {
+        "en": "Relationship Anxiety",
+        "tr": "İlişki Kaygısı"
+      },
+      "subtitle": {
+        "en": "Do you fear losing love, or fear receiving it?",
+        "tr": "Aşkı kaybetmekten mi korkuyorsunuz, yoksa almak mı?"
+      },
+      "category": "Love",
+      "icon": "AlertCircle",
+      "iconEmoji": "😰",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "marriage-readiness",
+      "slug": "marriage-readiness",
+      "name": {
+        "en": "Marriage Readiness",
+        "tr": "Evlilik Hazırlığı"
+      },
+      "subtitle": {
+        "en": "Are you built for long-term partnership?",
+        "tr": "Uzun vadeli ortaklık için hazır mısınız?"
+      },
+      "category": "Love",
+      "icon": "Heart",
+      "iconEmoji": "💍",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#d946ef",
+        "light": "#e879f9",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf4ff 100%)",
+        "cardBorder": "rgba(217, 70, 239, 0.15)",
+        "cardHoverBorder": "rgba(217, 70, 239, 0.4)",
+        "cardGlow": "rgba(217, 70, 239, 0.18)",
+        "cardShadow": "0 24px 60px rgba(217, 70, 239, 0.35), 0 0 0 1px rgba(217, 70, 239, 0.25), 0 0 80px rgba(232, 121, 249, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)",
+        "titleGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "parenting-readiness",
+      "slug": "parenting-readiness",
+      "name": {
+        "en": "Parenting Readiness",
+        "tr": "Ebeveynlik Hazırlığı"
+      },
+      "subtitle": {
+        "en": "Are you emotionally prepared to raise a child?",
+        "tr": "Bir çocuk yetiştirmek için duygusal olarak hazır mısınız?"
+      },
+      "category": "Love",
+      "icon": "Baby",
+      "iconEmoji": "👶",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "co-parenting-dynamics",
+      "slug": "co-parenting-dynamics",
+      "name": {
+        "en": "Co-Parenting Dynamics",
+        "tr": "Ortak Ebeveynlik Dinamikleri"
+      },
+      "subtitle": {
+        "en": "Would you form a stable team or a chaotic one?",
+        "tr": "Kararlı bir takım mı yoksa kaotik bir takım mı oluşturursunuz?"
+      },
+      "category": "Love",
+      "icon": "Users",
+      "iconEmoji": "👨‍👩‍👧",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0891b2",
+        "light": "#06b6d4",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+        "cardBorder": "rgba(8, 145, 178, 0.15)",
+        "cardHoverBorder": "rgba(8, 145, 178, 0.4)",
+        "cardGlow": "rgba(8, 145, 178, 0.18)",
+        "cardShadow": "0 24px 60px rgba(8, 145, 178, 0.35), 0 0 0 1px rgba(8, 145, 178, 0.25), 0 0 80px rgba(6, 182, 212, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+        "titleGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "breakup-style",
+      "slug": "breakup-style",
+      "name": {
+        "en": "Breakup Style",
+        "tr": "Ayrılık Stili"
+      },
+      "subtitle": {
+        "en": "Do you detach cleanly or leave emotional debris?",
+        "tr": "Temiz bir şekilde mi koparsınız, yoksa duygusal enkaz mı bırakırsınız?"
+      },
+      "category": "Love",
+      "icon": "HeartBreak",
+      "iconEmoji": "💔",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#991b1b",
+        "light": "#dc2626",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(153, 27, 27, 0.15)",
+        "cardHoverBorder": "rgba(153, 27, 27, 0.4)",
+        "cardGlow": "rgba(153, 27, 27, 0.18)",
+        "cardShadow": "0 24px 60px rgba(153, 27, 27, 0.35), 0 0 0 1px rgba(153, 27, 27, 0.25), 0 0 80px rgba(220, 38, 38, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 100%)",
+        "titleGradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "closeness-need",
+      "slug": "closeness-need",
+      "name": {
+        "en": "Closeness Need",
+        "tr": "Yakınlık İhtiyacı"
+      },
+      "subtitle": {
+        "en": "Do you crave deep connection or distance?",
+        "tr": "Derin bağlantı mı yoksa mesafe mi arıyorsunuz?"
+      },
+      "category": "Love",
+      "icon": "Heart",
+      "iconEmoji": "💗",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#d946ef",
+        "light": "#e879f9",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf4ff 100%)",
+        "cardBorder": "rgba(217, 70, 239, 0.15)",
+        "cardHoverBorder": "rgba(217, 70, 239, 0.4)",
+        "cardGlow": "rgba(217, 70, 239, 0.18)",
+        "cardShadow": "0 24px 60px rgba(217, 70, 239, 0.35), 0 0 0 1px rgba(217, 70, 239, 0.25), 0 0 80px rgba(232, 121, 249, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)",
+        "titleGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "power-balance",
+      "slug": "power-balance",
+      "name": {
+        "en": "Power Balance",
+        "tr": "Güç Dengesi"
+      },
+      "subtitle": {
+        "en": "Is your relationship equal, dominant, or submissive?",
+        "tr": "İlişkiniz eşit mi, dominant mı, yoksa itaatkar mı?"
+      },
+      "category": "Love",
+      "icon": "Scale",
+      "iconEmoji": "⚖️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#7c3aed",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(124, 58, 237, 0.15)",
+        "cardHoverBorder": "rgba(124, 58, 237, 0.4)",
+        "cardGlow": "rgba(124, 58, 237, 0.18)",
+        "cardShadow": "0 24px 60px rgba(124, 58, 237, 0.35), 0 0 0 1px rgba(124, 58, 237, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "communication-flow",
+      "slug": "communication-flow",
+      "name": {
+        "en": "Communication Flow",
+        "tr": "İletişim Akışı"
+      },
+      "subtitle": {
+        "en": "Do you speak to connect or to defend?",
+        "tr": "Bağlanmak için mi yoksa savunmak için mi konuşursunuz?"
+      },
+      "category": "Love",
+      "icon": "MessageCircle",
+      "iconEmoji": "💬",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0891b2",
+        "light": "#06b6d4",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+        "cardBorder": "rgba(8, 145, 178, 0.15)",
+        "cardHoverBorder": "rgba(8, 145, 178, 0.4)",
+        "cardGlow": "rgba(8, 145, 178, 0.18)",
+        "cardShadow": "0 24px 60px rgba(8, 145, 178, 0.35), 0 0 0 1px rgba(8, 145, 178, 0.25), 0 0 80px rgba(6, 182, 212, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+        "titleGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "emotional-labor",
+      "slug": "emotional-labor",
+      "name": {
+        "en": "Emotional Labor",
+        "tr": "Duygusal Emek"
+      },
+      "subtitle": {
+        "en": "Are you carrying the relationship or avoiding the weight?",
+        "tr": "İlişkiyi siz mi taşıyorsunuz, yoksa yükten mi kaçınıyorsunuz?"
+      },
+      "category": "Love",
+      "icon": "Weight",
+      "iconEmoji": "⚖️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ea580c",
+        "light": "#fb923c",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+        "cardBorder": "rgba(234, 88, 12, 0.15)",
+        "cardHoverBorder": "rgba(234, 88, 12, 0.4)",
+        "cardGlow": "rgba(234, 88, 12, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 88, 12, 0.35), 0 0 0 1px rgba(234, 88, 12, 0.25), 0 0 80px rgba(251, 146, 60, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+        "titleGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "market-behavior",
+      "slug": "market-behavior",
+      "name": {
+        "en": "Market Behavior",
+        "tr": "Piyasa Davranışı"
+      },
+      "subtitle": {
+        "en": "Are you patient, reactive, or chaotic under pressure?",
+        "tr": "Baskı altında sabırlı, tepkisel mi yoksa kaotik misiniz?"
+      },
+      "category": "Money",
+      "icon": "TrendingUp",
+      "iconEmoji": "📈",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0891b2",
+        "light": "#06b6d4",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+        "cardBorder": "rgba(8, 145, 178, 0.15)",
+        "cardHoverBorder": "rgba(8, 145, 178, 0.4)",
+        "cardGlow": "rgba(8, 145, 178, 0.18)",
+        "cardShadow": "0 24px 60px rgba(8, 145, 178, 0.35), 0 0 0 1px rgba(8, 145, 178, 0.25), 0 0 80px rgba(6, 182, 212, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+        "titleGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "money-boundaries",
+      "slug": "money-boundaries",
+      "name": {
+        "en": "Money Boundaries",
+        "tr": "Para Sınırları"
+      },
+      "subtitle": {
+        "en": "Do you overshare, overgive, or overcommit financially?",
+        "tr": "Finansal olarak fazla mı paylaşıyorsunuz, fazla mı veriyorsunuz veya fazla mı taahhüt ediyorsunuz?"
+      },
+      "category": "Money",
+      "icon": "Shield",
+      "iconEmoji": "🛡️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "debt-patterns",
+      "slug": "debt-patterns",
+      "name": {
+        "en": "Debt Patterns",
+        "tr": "Borç Kalıpları"
+      },
+      "subtitle": {
+        "en": "Are you building stability or digging a hole?",
+        "tr": "İstikrar mı inşa ediyorsunuz, yoksa çukur mu kazıyorsunuz?"
+      },
+      "category": "Money",
+      "icon": "AlertTriangle",
+      "iconEmoji": "⚠️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#dc2626",
+        "light": "#ef4444",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(220, 38, 38, 0.15)",
+        "cardHoverBorder": "rgba(220, 38, 38, 0.4)",
+        "cardGlow": "rgba(220, 38, 38, 0.18)",
+        "cardShadow": "0 24px 60px rgba(220, 38, 38, 0.35), 0 0 0 1px rgba(220, 38, 38, 0.25), 0 0 80px rgba(239, 68, 68, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)",
+        "titleGradient": "linear-gradient(135deg, #dc2626 0%, #ef4444 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "savings-archetype",
+      "slug": "savings-archetype",
+      "name": {
+        "en": "Savings Archetype",
+        "tr": "Tasarruf Arketipi"
+      },
+      "subtitle": {
+        "en": "Are you a hoarder, planner, or spender?",
+        "tr": "Biriktirici, planlayıcı mı yoksa harcayıcı mısınız?"
+      },
+      "category": "Money",
+      "icon": "PiggyBank",
+      "iconEmoji": "🐷",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "return-expectations",
+      "slug": "return-expectations",
+      "name": {
+        "en": "Return Expectations",
+        "tr": "Getiri Beklentileri"
+      },
+      "subtitle": {
+        "en": "Do you aim for realistic gains or fantasy profits?",
+        "tr": "Gerçekçi kazançlar mı yoksa hayali karlar mı hedefliyorsunuz?"
+      },
+      "category": "Money",
+      "icon": "TrendingUp",
+      "iconEmoji": "💰",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#eab308",
+        "light": "#facc15",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fefce8 100%)",
+        "cardBorder": "rgba(234, 179, 8, 0.15)",
+        "cardHoverBorder": "rgba(234, 179, 8, 0.4)",
+        "cardGlow": "rgba(234, 179, 8, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 179, 8, 0.35), 0 0 0 1px rgba(234, 179, 8, 0.25), 0 0 80px rgba(250, 204, 21, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)",
+        "titleGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "entrepreneur-drive",
+      "slug": "entrepreneur-drive",
+      "name": {
+        "en": "Entrepreneur Drive",
+        "tr": "Girişimci Motivasyonu"
+      },
+      "subtitle": {
+        "en": "Are you wired to create income or wait for it?",
+        "tr": "Gelir yaratmak için mi yoksa beklemek için mi yapılandınız?"
+      },
+      "category": "Money",
+      "icon": "Rocket",
+      "iconEmoji": "🚀",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#d946ef",
+        "light": "#e879f9",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf4ff 100%)",
+        "cardBorder": "rgba(217, 70, 239, 0.15)",
+        "cardHoverBorder": "rgba(217, 70, 239, 0.4)",
+        "cardGlow": "rgba(217, 70, 239, 0.18)",
+        "cardShadow": "0 24px 60px rgba(217, 70, 239, 0.35), 0 0 0 1px rgba(217, 70, 239, 0.25), 0 0 80px rgba(232, 121, 249, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)",
+        "titleGradient": "linear-gradient(135deg, #d946ef 0%, #e879f9 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "sales-confidence",
+      "slug": "sales-confidence",
+      "name": {
+        "en": "Sales Confidence",
+        "tr": "Satış Güveni"
+      },
+      "subtitle": {
+        "en": "Can you sell value—or do you freeze when it matters?",
+        "tr": "Değer satabilir misiniz—yoksa önemli anlarda donup kalıyor musunuz?"
+      },
+      "category": "Money",
+      "icon": "Handshake",
+      "iconEmoji": "🤝",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0891b2",
+        "light": "#06b6d4",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+        "cardBorder": "rgba(8, 145, 178, 0.15)",
+        "cardHoverBorder": "rgba(8, 145, 178, 0.4)",
+        "cardGlow": "rgba(8, 145, 178, 0.18)",
+        "cardShadow": "0 24px 60px rgba(8, 145, 178, 0.35), 0 0 0 1px rgba(8, 145, 178, 0.25), 0 0 80px rgba(6, 182, 212, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+        "titleGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "passive-growth",
+      "slug": "passive-growth",
+      "name": {
+        "en": "Passive Growth",
+        "tr": "Pasif Büyüme"
+      },
+      "subtitle": {
+        "en": "Are you planting seeds or hoping money grows itself?",
+        "tr": "Tohum mu ekiyorsunuz, yoksa paranın kendiliğinden büyümesini mi umuyorsunuz?"
+      },
+      "category": "Money",
+      "icon": "Sprout",
+      "iconEmoji": "🌱",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "investment-style",
+      "slug": "investment-style",
+      "name": {
+        "en": "Investment Style",
+        "tr": "Yatırım Stili"
+      },
+      "subtitle": {
+        "en": "Are you a calculated investor or a gambler in disguise?",
+        "tr": "Hesaplı bir yatırımcı mısınız, yoksa kılık değiştirmiş bir kumarbaz mı?"
+      },
+      "category": "Money",
+      "icon": "TrendingUp",
+      "iconEmoji": "📈",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0891b2",
+        "light": "#06b6d4",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfeff 100%)",
+        "cardBorder": "rgba(8, 145, 178, 0.15)",
+        "cardHoverBorder": "rgba(8, 145, 178, 0.4)",
+        "cardGlow": "rgba(8, 145, 178, 0.18)",
+        "cardShadow": "0 24px 60px rgba(8, 145, 178, 0.35), 0 0 0 1px rgba(8, 145, 178, 0.25), 0 0 80px rgba(6, 182, 212, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)",
+        "titleGradient": "linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "profit-instinct",
+      "slug": "profit-instinct",
+      "name": {
+        "en": "Profit Instinct",
+        "tr": "Kar İçgüdüsü"
+      },
+      "subtitle": {
+        "en": "Do you spot money opportunities fast enough?",
+        "tr": "Para fırsatlarını yeterince hızlı fark ediyor musunuz?"
+      },
+      "category": "Money",
+      "icon": "DollarSign",
+      "iconEmoji": "💰",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#eab308",
+        "light": "#facc15",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fefce8 100%)",
+        "cardBorder": "rgba(234, 179, 8, 0.15)",
+        "cardHoverBorder": "rgba(234, 179, 8, 0.4)",
+        "cardGlow": "rgba(234, 179, 8, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 179, 8, 0.35), 0 0 0 1px rgba(234, 179, 8, 0.25), 0 0 80px rgba(250, 204, 21, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)",
+        "titleGradient": "linear-gradient(135deg, #eab308 0%, #facc15 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "financial-anxiety",
+      "slug": "financial-anxiety",
+      "name": {
+        "en": "Financial Anxiety",
+        "tr": "Finansal Kaygı"
+      },
+      "subtitle": {
+        "en": "Does money motivate you or secretly terrify you?",
+        "tr": "Para sizi motive mi ediyor, yoksa gizlice korkutuyor mu?"
+      },
+      "category": "Money",
+      "icon": "AlertCircle",
+      "iconEmoji": "😰",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#ea580c",
+        "light": "#fb923c",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+        "cardBorder": "rgba(234, 88, 12, 0.15)",
+        "cardHoverBorder": "rgba(234, 88, 12, 0.4)",
+        "cardGlow": "rgba(234, 88, 12, 0.18)",
+        "cardShadow": "0 24px 60px rgba(234, 88, 12, 0.35), 0 0 0 1px rgba(234, 88, 12, 0.25), 0 0 80px rgba(251, 146, 60, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+        "titleGradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "budget-control",
+      "slug": "budget-control",
+      "name": {
+        "en": "Budget Control",
+        "tr": "Bütçe Kontrolü"
+      },
+      "subtitle": {
+        "en": "Do you manage your money or does it manage you?",
+        "tr": "Paranızı siz mi yönetiyorsunuz, yoksa o mu sizi yönetiyor?"
+      },
+      "category": "Money",
+      "icon": "Wallet",
+      "iconEmoji": "💳",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "impulse-buying",
+      "slug": "impulse-buying",
+      "name": {
+        "en": "Impulse Buying",
+        "tr": "Dürtüsel Alışveriş"
+      },
+      "subtitle": {
+        "en": "How easily do emotions drain your wallet?",
+        "tr": "Duygular cüzdanınızı ne kadar kolay boşaltıyor?"
+      },
+      "category": "Money",
+      "icon": "ShoppingCart",
+      "iconEmoji": "🛒",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#e11d48",
+        "light": "#f43f5e",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff1f2 100%)",
+        "cardBorder": "rgba(225, 29, 72, 0.15)",
+        "cardHoverBorder": "rgba(225, 29, 72, 0.4)",
+        "cardGlow": "rgba(225, 29, 72, 0.18)",
+        "cardShadow": "0 24px 60px rgba(225, 29, 72, 0.35), 0 0 0 1px rgba(225, 29, 72, 0.25), 0 0 80px rgba(244, 63, 94, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)",
+        "titleGradient": "linear-gradient(135deg, #e11d48 0%, #f43f5e 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "tax-awareness",
+      "slug": "tax-awareness",
+      "name": {
+        "en": "Tax Awareness",
+        "tr": "Vergi Farkındalığı"
+      },
+      "subtitle": {
+        "en": "Do you understand the system or get eaten by it?",
+        "tr": "Sistemi anlıyor musunuz, yoksa sistem sizi mi yiyor?"
+      },
+      "category": "Money",
+      "icon": "FileText",
+      "iconEmoji": "📄",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#7c3aed",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(124, 58, 237, 0.15)",
+        "cardHoverBorder": "rgba(124, 58, 237, 0.4)",
+        "cardGlow": "rgba(124, 58, 237, 0.18)",
+        "cardShadow": "0 24px 60px rgba(124, 58, 237, 0.35), 0 0 0 1px rgba(124, 58, 237, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "spending-habits",
+      "slug": "spending-habits",
+      "name": {
+        "en": "Spending Habits",
+        "tr": "Harcama Alışkanlıkları"
+      },
+      "subtitle": {
+        "en": "Do you buy with logic, emotions, or impulse?",
+        "tr": "Mantıkla, duygularla mı yoksa dürtüyle mi alıyorsunuz?"
+      },
+      "category": "Money",
+      "icon": "ShoppingBag",
+      "iconEmoji": "🛍️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#8b5cf6",
+        "light": "#a78bfa",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(139, 92, 246, 0.15)",
+        "cardHoverBorder": "rgba(139, 92, 246, 0.4)",
+        "cardGlow": "rgba(139, 92, 246, 0.18)",
+        "cardShadow": "0 24px 60px rgba(139, 92, 246, 0.35), 0 0 0 1px rgba(139, 92, 246, 0.25), 0 0 80px rgba(167, 139, 250, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)",
+        "titleGradient": "linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "money-triggers",
+      "slug": "money-triggers",
+      "name": {
+        "en": "Money Triggers",
+        "tr": "Para Tetikleyicileri"
+      },
+      "subtitle": {
+        "en": "What makes you spend, save, or panic?",
+        "tr": "Sizi harcamaya, tasarrufa mı yoksa paniğe mi sürüklüyor?"
+      },
+      "category": "Money",
+      "icon": "Zap",
+      "iconEmoji": "⚡",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#f59e0b",
+        "light": "#fbbf24",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(245, 158, 11, 0.15)",
+        "cardHoverBorder": "rgba(245, 158, 11, 0.4)",
+        "cardGlow": "rgba(245, 158, 11, 0.18)",
+        "cardShadow": "0 24px 60px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.25), 0 0 80px rgba(251, 191, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+        "titleGradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "wealth-mindset",
+      "slug": "wealth-mindset",
+      "name": {
+        "en": "Wealth Mindset",
+        "tr": "Zenginlik Zihniyeti"
+      },
+      "subtitle": {
+        "en": "Do you think like the rich or the stressed?",
+        "tr": "Zenginler gibi mi yoksa stresli olanlar gibi mi düşünüyorsunuz?"
+      },
+      "category": "Money",
+      "icon": "Crown",
+      "iconEmoji": "👑",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#10b981",
+        "light": "#34d399",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+        "cardBorder": "rgba(16, 185, 129, 0.15)",
+        "cardHoverBorder": "rgba(16, 185, 129, 0.4)",
+        "cardGlow": "rgba(16, 185, 129, 0.18)",
+        "cardShadow": "0 24px 60px rgba(16, 185, 129, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.25), 0 0 80px rgba(52, 211, 153, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "titleGradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "income-strategy",
+      "slug": "income-strategy",
+      "name": {
+        "en": "Income Strategy",
+        "tr": "Gelir Stratejisi"
+      },
+      "subtitle": {
+        "en": "Are you built for active or passive earnings?",
+        "tr": "Aktif mi yoksa pasif kazançlar için mi yaratıldınız?"
+      },
+      "category": "Money",
+      "icon": "Briefcase",
+      "iconEmoji": "💼",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#6366f1",
+        "light": "#818cf8",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #eef2ff 100%)",
+        "cardBorder": "rgba(99, 102, 241, 0.15)",
+        "cardHoverBorder": "rgba(99, 102, 241, 0.4)",
+        "cardGlow": "rgba(99, 102, 241, 0.18)",
+        "cardShadow": "0 24px 60px rgba(99, 102, 241, 0.35), 0 0 0 1px rgba(99, 102, 241, 0.25), 0 0 80px rgba(129, 140, 248, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #6366f1 0%, #818cf8 100%)",
+        "titleGradient": "linear-gradient(135deg, #6366f1 0%, #818cf8 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "saving-discipline",
+      "slug": "saving-discipline",
+      "name": {
+        "en": "Saving Discipline",
+        "tr": "Tasarruf Disiplini"
+      },
+      "subtitle": {
+        "en": "Is your future self proud of you—or scared?",
+        "tr": "Gelecekteki benliğiniz sizinle gurur duyuyor mu—yoksa korkuyor mu?"
+      },
+      "category": "Money",
+      "icon": "PiggyBank",
+      "iconEmoji": "🐷",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#059669",
+        "light": "#10b981",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+        "cardBorder": "rgba(5, 150, 105, 0.15)",
+        "cardHoverBorder": "rgba(5, 150, 105, 0.4)",
+        "cardGlow": "rgba(5, 150, 105, 0.18)",
+        "cardShadow": "0 24px 60px rgba(5, 150, 105, 0.35), 0 0 0 1px rgba(5, 150, 105, 0.25), 0 0 80px rgba(16, 185, 129, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+        "titleGradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "perception-control",
+      "slug": "perception-control",
+      "name": {
+        "en": "Perception Control",
+        "tr": "Algı Kontrolü"
+      },
+      "subtitle": {
+        "en": "Can you reshape how people see situations, themselves, or you?",
+        "tr": "İnsanların durumları, kendilerini veya sizi nasıl gördüklerini yeniden şekillendirebilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "Eye",
+      "iconEmoji": "👁️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1e1b4b",
+        "light": "#312e81",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(30, 27, 75, 0.15)",
+        "cardHoverBorder": "rgba(30, 27, 75, 0.4)",
+        "cardGlow": "rgba(30, 27, 75, 0.18)",
+        "cardShadow": "0 24px 60px rgba(30, 27, 75, 0.35), 0 0 0 1px rgba(30, 27, 75, 0.25), 0 0 80px rgba(49, 46, 129, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)",
+        "titleGradient": "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "social-propaganda",
+      "slug": "social-propaganda",
+      "name": {
+        "en": "Social Propaganda",
+        "tr": "Sosyal Propaganda"
+      },
+      "subtitle": {
+        "en": "How effectively can you spread ideas, narratives, or influence groups?",
+        "tr": "Fikirleri, anlatıları veya grupları etkilemeyi ne kadar etkili yayabilirsiniz?"
+      },
+      "category": "Dark",
+      "icon": "Megaphone",
+      "iconEmoji": "📢",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1e293b",
+        "light": "#334155",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%)",
+        "cardBorder": "rgba(30, 41, 59, 0.15)",
+        "cardHoverBorder": "rgba(30, 41, 59, 0.4)",
+        "cardGlow": "rgba(30, 41, 59, 0.18)",
+        "cardShadow": "0 24px 60px rgba(30, 41, 59, 0.35), 0 0 0 1px rgba(30, 41, 59, 0.25), 0 0 80px rgba(51, 65, 85, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1e293b 0%, #334155 100%)",
+        "titleGradient": "linear-gradient(135deg, #1e293b 0%, #334155 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "emotional-exploit",
+      "slug": "emotional-exploit",
+      "name": {
+        "en": "Emotional Exploit",
+        "tr": "Duygusal Sömürü"
+      },
+      "subtitle": {
+        "en": "Do you weaponize feelings or protect from them?",
+        "tr": "Duyguları silah haline mi getiriyorsunuz, yoksa onlardan korunuyor musunuz?"
+      },
+      "category": "Dark",
+      "icon": "Heart",
+      "iconEmoji": "💔",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#7c2d12",
+        "light": "#9a3412",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+        "cardBorder": "rgba(124, 45, 18, 0.15)",
+        "cardHoverBorder": "rgba(124, 45, 18, 0.4)",
+        "cardGlow": "rgba(124, 45, 18, 0.18)",
+        "cardShadow": "0 24px 60px rgba(124, 45, 18, 0.35), 0 0 0 1px rgba(124, 45, 18, 0.25), 0 0 80px rgba(154, 52, 18, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #7c2d12 0%, #9a3412 100%)",
+        "titleGradient": "linear-gradient(135deg, #7c2d12 0%, #9a3412 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "shadow-intentions",
+      "slug": "shadow-intentions",
+      "name": {
+        "en": "Shadow Intentions",
+        "tr": "Gölge Niyetler"
+      },
+      "subtitle": {
+        "en": "Are your real motives visible or perfectly hidden?",
+        "tr": "Gerçek niyetleriniz görünür mü yoksa mükemmel şekilde gizli mi?"
+      },
+      "category": "Dark",
+      "icon": "Shield",
+      "iconEmoji": "🛡️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0f172a",
+        "light": "#1e293b",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)",
+        "cardBorder": "rgba(15, 23, 42, 0.15)",
+        "cardHoverBorder": "rgba(15, 23, 42, 0.4)",
+        "cardGlow": "rgba(15, 23, 42, 0.18)",
+        "cardShadow": "0 24px 60px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(15, 23, 42, 0.25), 0 0 80px rgba(30, 41, 59, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+        "titleGradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "compliance-hack",
+      "slug": "compliance-hack",
+      "name": {
+        "en": "Compliance Hack",
+        "tr": "Uyum Hilesi"
+      },
+      "subtitle": {
+        "en": "Can you make people agree faster than they realize?",
+        "tr": "İnsanların fark etmeden daha hızlı kabul etmelerini sağlayabilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "CheckCircle",
+      "iconEmoji": "✅",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#581c87",
+        "light": "#6b21a8",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(88, 28, 135, 0.15)",
+        "cardHoverBorder": "rgba(88, 28, 135, 0.4)",
+        "cardGlow": "rgba(88, 28, 135, 0.18)",
+        "cardShadow": "0 24px 60px rgba(88, 28, 135, 0.35), 0 0 0 1px rgba(88, 28, 135, 0.25), 0 0 80px rgba(107, 33, 168, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #581c87 0%, #6b21a8 100%)",
+        "titleGradient": "linear-gradient(135deg, #581c87 0%, #6b21a8 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "conflict-manipulation",
+      "slug": "conflict-manipulation",
+      "name": {
+        "en": "Conflict Manipulation",
+        "tr": "Çatışma Manipülasyonu"
+      },
+      "subtitle": {
+        "en": "Do you escalate, redirect, or tactically resolve fights?",
+        "tr": "Kavgaları tırmandırıyor, yönlendiriyor musunuz yoksa taktiksel olarak mı çözüyorsunuz?"
+      },
+      "category": "Dark",
+      "icon": "Swords",
+      "iconEmoji": "⚔️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#991b1b",
+        "light": "#b91c1c",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(153, 27, 27, 0.15)",
+        "cardHoverBorder": "rgba(153, 27, 27, 0.4)",
+        "cardGlow": "rgba(153, 27, 27, 0.18)",
+        "cardShadow": "0 24px 60px rgba(153, 27, 27, 0.35), 0 0 0 1px rgba(153, 27, 27, 0.25), 0 0 80px rgba(185, 28, 28, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #991b1b 0%, #b91c1c 100%)",
+        "titleGradient": "linear-gradient(135deg, #991b1b 0%, #b91c1c 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "social-engineering",
+      "slug": "social-engineering",
+      "name": {
+        "en": "Social Engineering",
+        "tr": "Sosyal Mühendislik"
+      },
+      "subtitle": {
+        "en": "Can you extract information without suspicion?",
+        "tr": "Şüphe uyandırmadan bilgi çıkarabilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "Key",
+      "iconEmoji": "🔑",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#422006",
+        "light": "#78350f",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)",
+        "cardBorder": "rgba(66, 32, 6, 0.15)",
+        "cardHoverBorder": "rgba(66, 32, 6, 0.4)",
+        "cardGlow": "rgba(66, 32, 6, 0.18)",
+        "cardShadow": "0 24px 60px rgba(66, 32, 6, 0.35), 0 0 0 1px rgba(66, 32, 6, 0.25), 0 0 80px rgba(120, 53, 15, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #422006 0%, #78350f 100%)",
+        "titleGradient": "linear-gradient(135deg, #422006 0%, #78350f 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "cognitive-pressure",
+      "slug": "cognitive-pressure",
+      "name": {
+        "en": "Cognitive Pressure",
+        "tr": "Bilişsel Baskı"
+      },
+      "subtitle": {
+        "en": "Do you overload minds to gain control?",
+        "tr": "Kontrol kazanmak için zihinleri aşırı yüklüyor musunuz?"
+      },
+      "category": "Dark",
+      "icon": "Brain",
+      "iconEmoji": "🧠",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1c1917",
+        "light": "#292524",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fafaf9 100%)",
+        "cardBorder": "rgba(28, 25, 23, 0.15)",
+        "cardHoverBorder": "rgba(28, 25, 23, 0.4)",
+        "cardGlow": "rgba(28, 25, 23, 0.18)",
+        "cardShadow": "0 24px 60px rgba(28, 25, 23, 0.35), 0 0 0 1px rgba(28, 25, 23, 0.25), 0 0 80px rgba(41, 37, 36, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1c1917 0%, #292524 100%)",
+        "titleGradient": "linear-gradient(135deg, #1c1917 0%, #292524 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "mind-control",
+      "slug": "mind-control",
+      "name": {
+        "en": "Mind Control",
+        "tr": "Zihin Kontrolü"
+      },
+      "subtitle": {
+        "en": "How much can you influence thought, emotion, and behavior?",
+        "tr": "Düşünce, duygu ve davranışları ne kadar etkileyebilirsiniz?"
+      },
+      "category": "Dark",
+      "icon": "Brain",
+      "iconEmoji": "🧠",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#0c0a09",
+        "light": "#1c1917",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fafaf9 100%)",
+        "cardBorder": "rgba(12, 10, 9, 0.15)",
+        "cardHoverBorder": "rgba(12, 10, 9, 0.4)",
+        "cardGlow": "rgba(12, 10, 9, 0.18)",
+        "cardShadow": "0 24px 60px rgba(12, 10, 9, 0.35), 0 0 0 1px rgba(12, 10, 9, 0.25), 0 0 80px rgba(28, 25, 23, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #0c0a09 0%, #1c1917 100%)",
+        "titleGradient": "linear-gradient(135deg, #0c0a09 0%, #1c1917 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "covert-influence",
+      "slug": "covert-influence",
+      "name": {
+        "en": "Covert Influence",
+        "tr": "Gizli Etki"
+      },
+      "subtitle": {
+        "en": "Can you shift decisions without people noticing?",
+        "tr": "İnsanların fark etmeden kararları değiştirebilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "EyeOff",
+      "iconEmoji": "👁️‍🗨️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1a1625",
+        "light": "#2d1b3d",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+        "cardBorder": "rgba(26, 22, 37, 0.15)",
+        "cardHoverBorder": "rgba(26, 22, 37, 0.4)",
+        "cardGlow": "rgba(26, 22, 37, 0.18)",
+        "cardShadow": "0 24px 60px rgba(26, 22, 37, 0.35), 0 0 0 1px rgba(26, 22, 37, 0.25), 0 0 80px rgba(45, 27, 61, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1a1625 0%, #2d1b3d 100%)",
+        "titleGradient": "linear-gradient(135deg, #1a1625 0%, #2d1b3d 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "hidden-manipulation",
+      "slug": "hidden-manipulation",
+      "name": {
+        "en": "Hidden Manipulation",
+        "tr": "Gizli Manipülasyon"
+      },
+      "subtitle": {
+        "en": "Do you bend outcomes with subtle psychological pressure?",
+        "tr": "Sonuçları ince psikolojik baskıyla bükebilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "Hand",
+      "iconEmoji": "✋",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#292524",
+        "light": "#3f3a37",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fafaf9 100%)",
+        "cardBorder": "rgba(41, 37, 36, 0.15)",
+        "cardHoverBorder": "rgba(41, 37, 36, 0.4)",
+        "cardGlow": "rgba(41, 37, 36, 0.18)",
+        "cardShadow": "0 24px 60px rgba(41, 37, 36, 0.35), 0 0 0 1px rgba(41, 37, 36, 0.25), 0 0 80px rgba(63, 58, 55, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #292524 0%, #3f3a37 100%)",
+        "titleGradient": "linear-gradient(135deg, #292524 0%, #3f3a37 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "obedience-trigger",
+      "slug": "obedience-trigger",
+      "name": {
+        "en": "Obedience Trigger",
+        "tr": "İtaat Tetikleyicisi"
+      },
+      "subtitle": {
+        "en": "What makes others comply with your requests?",
+        "tr": "Başkalarını isteklerinize uymaya ne zorlar?"
+      },
+      "category": "Dark",
+      "icon": "Target",
+      "iconEmoji": "🎯",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#3b1f1f",
+        "light": "#4a2525",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(59, 31, 31, 0.15)",
+        "cardHoverBorder": "rgba(59, 31, 31, 0.4)",
+        "cardGlow": "rgba(59, 31, 31, 0.18)",
+        "cardShadow": "0 24px 60px rgba(59, 31, 31, 0.35), 0 0 0 1px rgba(59, 31, 31, 0.25), 0 0 80px rgba(74, 37, 37, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #3b1f1f 0%, #4a2525 100%)",
+        "titleGradient": "linear-gradient(135deg, #3b1f1f 0%, #4a2525 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "truth-distortion",
+      "slug": "truth-distortion",
+      "name": {
+        "en": "Truth Distortion",
+        "tr": "Gerçek Çarpıtma"
+      },
+      "subtitle": {
+        "en": "How easily can you reshape reality for someone else?",
+        "tr": "Başkası için gerçekliği ne kadar kolay yeniden şekillendirebilirsiniz?"
+      },
+      "category": "Dark",
+      "icon": "Layers",
+      "iconEmoji": "🔀",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#2d1b3d",
+        "light": "#3d2a4d",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(45, 27, 61, 0.15)",
+        "cardHoverBorder": "rgba(45, 27, 61, 0.4)",
+        "cardGlow": "rgba(45, 27, 61, 0.18)",
+        "cardShadow": "0 24px 60px rgba(45, 27, 61, 0.35), 0 0 0 1px rgba(45, 27, 61, 0.25), 0 0 80px rgba(61, 42, 77, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #2d1b3d 0%, #3d2a4d 100%)",
+        "titleGradient": "linear-gradient(135deg, #2d1b3d 0%, #3d2a4d 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "lie-suppression",
+      "slug": "lie-suppression",
+      "name": {
+        "en": "Lie Suppression",
+        "tr": "Yalan Bastırma"
+      },
+      "subtitle": {
+        "en": "How good are you at hiding, masking, or redirecting truth?",
+        "tr": "Gerçeği gizleme, maskeleme veya yönlendirmede ne kadar iyisiniz?"
+      },
+      "category": "Dark",
+      "icon": "Lock",
+      "iconEmoji": "🔒",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1f2937",
+        "light": "#374151",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f9fafb 100%)",
+        "cardBorder": "rgba(31, 41, 55, 0.15)",
+        "cardHoverBorder": "rgba(31, 41, 55, 0.4)",
+        "cardGlow": "rgba(31, 41, 55, 0.18)",
+        "cardShadow": "0 24px 60px rgba(31, 41, 55, 0.35), 0 0 0 1px rgba(31, 41, 55, 0.25), 0 0 80px rgba(55, 65, 81, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
+        "titleGradient": "linear-gradient(135deg, #1f2937 0%, #374151 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "emotional-mask",
+      "slug": "emotional-mask",
+      "name": {
+        "en": "Emotional Mask",
+        "tr": "Duygusal Maske"
+      },
+      "subtitle": {
+        "en": "Do you show real feelings—or wear strategic ones?",
+        "tr": "Gerçek duyguları mı gösteriyorsunuz—yoksa stratejik olanları mı takıyorsunuz?"
+      },
+      "category": "Dark",
+      "icon": "Smile",
+      "iconEmoji": "🎭",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#451a03",
+        "light": "#5c2410",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)",
+        "cardBorder": "rgba(69, 26, 3, 0.15)",
+        "cardHoverBorder": "rgba(69, 26, 3, 0.4)",
+        "cardGlow": "rgba(69, 26, 3, 0.18)",
+        "cardShadow": "0 24px 60px rgba(69, 26, 3, 0.35), 0 0 0 1px rgba(69, 26, 3, 0.25), 0 0 80px rgba(92, 36, 16, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #451a03 0%, #5c2410 100%)",
+        "titleGradient": "linear-gradient(135deg, #451a03 0%, #5c2410 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "dual-persona",
+      "slug": "dual-persona",
+      "name": {
+        "en": "Dual Persona",
+        "tr": "Çift Kimlik"
+      },
+      "subtitle": {
+        "en": "Do you switch identities to fit your goals?",
+        "tr": "Hedeflerinize uymak için kimlikler değiştirir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "User",
+      "iconEmoji": "👤",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1a1a2e",
+        "light": "#2d2d44",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)",
+        "cardBorder": "rgba(26, 26, 46, 0.15)",
+        "cardHoverBorder": "rgba(26, 26, 46, 0.4)",
+        "cardGlow": "rgba(26, 26, 46, 0.18)",
+        "cardShadow": "0 24px 60px rgba(26, 26, 46, 0.35), 0 0 0 1px rgba(26, 26, 46, 0.25), 0 0 80px rgba(45, 45, 68, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%)",
+        "titleGradient": "linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "cold-strategy",
+      "slug": "cold-strategy",
+      "name": {
+        "en": "Cold Strategy",
+        "tr": "Soğuk Strateji"
+      },
+      "subtitle": {
+        "en": "Can you stay emotionally detached when needed?",
+        "tr": "Gerektiğinde duygusal olarak kopuk kalabilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "Snowflake",
+      "iconEmoji": "❄️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#2c3e50",
+        "light": "#34495e",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%)",
+        "cardBorder": "rgba(44, 62, 80, 0.15)",
+        "cardHoverBorder": "rgba(44, 62, 80, 0.4)",
+        "cardGlow": "rgba(44, 62, 80, 0.18)",
+        "cardShadow": "0 24px 60px rgba(44, 62, 80, 0.35), 0 0 0 1px rgba(44, 62, 80, 0.25), 0 0 80px rgba(52, 73, 94, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #2c3e50 0%, #34495e 100%)",
+        "titleGradient": "linear-gradient(135deg, #2c3e50 0%, #34495e 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "desire-control",
+      "slug": "desire-control",
+      "name": {
+        "en": "Desire Control",
+        "tr": "İstek Kontrolü"
+      },
+      "subtitle": {
+        "en": "Can you amplify or suppress someone's wants?",
+        "tr": "Birinin isteklerini artırabilir veya bastırabilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "Heart",
+      "iconEmoji": "💜",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#6a1b9a",
+        "light": "#7b1fa2",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(106, 27, 154, 0.15)",
+        "cardHoverBorder": "rgba(106, 27, 154, 0.4)",
+        "cardGlow": "rgba(106, 27, 154, 0.18)",
+        "cardShadow": "0 24px 60px rgba(106, 27, 154, 0.35), 0 0 0 1px rgba(106, 27, 154, 0.25), 0 0 80px rgba(123, 31, 162, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #6a1b9a 0%, #7b1fa2 100%)",
+        "titleGradient": "linear-gradient(135deg, #6a1b9a 0%, #7b1fa2 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "fear-leverage",
+      "slug": "fear-leverage",
+      "name": {
+        "en": "Fear Leverage",
+        "tr": "Korku Kaldıracı"
+      },
+      "subtitle": {
+        "en": "Do you use fear—yours or theirs—to gain advantage?",
+        "tr": "Avantaj kazanmak için korkuyu—sizinkini veya onlarınkini—kullanır mısınız?"
+      },
+      "category": "Dark",
+      "icon": "AlertTriangle",
+      "iconEmoji": "⚠️",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#8b0000",
+        "light": "#a00000",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
+        "cardBorder": "rgba(139, 0, 0, 0.15)",
+        "cardHoverBorder": "rgba(139, 0, 0, 0.4)",
+        "cardGlow": "rgba(139, 0, 0, 0.18)",
+        "cardShadow": "0 24px 60px rgba(139, 0, 0, 0.35), 0 0 0 1px rgba(139, 0, 0, 0.25), 0 0 80px rgba(160, 0, 0, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #8b0000 0%, #a00000 100%)",
+        "titleGradient": "linear-gradient(135deg, #8b0000 0%, #a00000 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "charm-weapon",
+      "slug": "charm-weapon",
+      "name": {
+        "en": "Charm Weapon",
+        "tr": "Cazibe Silahı"
+      },
+      "subtitle": {
+        "en": "How disarming is your charm when you want something?",
+        "tr": "Bir şey istediğinizde cazibeniz ne kadar etkisiz hale getiriyor?"
+      },
+      "category": "Dark",
+      "icon": "Sparkles",
+      "iconEmoji": "✨",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#c2185b",
+        "light": "#d81b60",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fdf2f8 100%)",
+        "cardBorder": "rgba(194, 24, 91, 0.15)",
+        "cardHoverBorder": "rgba(194, 24, 91, 0.4)",
+        "cardGlow": "rgba(194, 24, 91, 0.18)",
+        "cardShadow": "0 24px 60px rgba(194, 24, 91, 0.35), 0 0 0 1px rgba(194, 24, 91, 0.25), 0 0 80px rgba(216, 27, 96, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #c2185b 0%, #d81b60 100%)",
+        "titleGradient": "linear-gradient(135deg, #c2185b 0%, #d81b60 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "silent-dominance",
+      "slug": "silent-dominance",
+      "name": {
+        "en": "Silent Dominance",
+        "tr": "Sessiz Hakimiyet"
+      },
+      "subtitle": {
+        "en": "Do you control a room without raising your voice?",
+        "tr": "Sesinizi yükseltmeden bir odayı kontrol edebilir misiniz?"
+      },
+      "category": "Dark",
+      "icon": "VolumeX",
+      "iconEmoji": "🔇",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#1a1a1a",
+        "light": "#2d2d2d",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #fafafa 100%)",
+        "cardBorder": "rgba(26, 26, 26, 0.15)",
+        "cardHoverBorder": "rgba(26, 26, 26, 0.4)",
+        "cardGlow": "rgba(26, 26, 26, 0.18)",
+        "cardShadow": "0 24px 60px rgba(26, 26, 26, 0.35), 0 0 0 1px rgba(26, 26, 26, 0.25), 0 0 80px rgba(45, 45, 45, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
+        "titleGradient": "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
+    },
+    {
+      "id": "boundary-bending",
+      "slug": "boundary-bending",
+      "name": {
+        "en": "Boundary Bending",
+        "tr": "Sınır Bükme"
+      },
+      "subtitle": {
+        "en": "Do you push limits or subtly break them?",
+        "tr": "Sınırları iter misiniz yoksa ince bir şekilde kırar mısınız?"
+      },
+      "category": "Dark",
+      "icon": "Move",
+      "iconEmoji": "🔀",
+      "questions": 20,
+      "minutes": 10,
+      "colors": {
+        "primary": "#4a148c",
+        "light": "#6a1b9a",
+        "cardBackground": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+        "cardBorder": "rgba(74, 20, 140, 0.15)",
+        "cardHoverBorder": "rgba(74, 20, 140, 0.4)",
+        "cardGlow": "rgba(74, 20, 140, 0.18)",
+        "cardShadow": "0 24px 60px rgba(74, 20, 140, 0.35), 0 0 0 1px rgba(74, 20, 140, 0.25), 0 0 80px rgba(106, 27, 154, 0.3)",
+        "buttonGradient": "linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%)",
+        "titleGradient": "linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%)"
+      },
+      "scoring": {
+        "thresholds": {
+          "excellent": 111,
+          "good": 71,
+          "developing": 0
+        },
+        "timeLimit": 600
+      }
     }
   ]
 }

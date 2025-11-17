@@ -1,0 +1,142 @@
+{
+  "testId": "silent-dominance",
+  "colors": {
+    "primary": {
+      "main": "#1a1a1a",
+      "light": "#2d2d2d"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 50%, #E5E5E5 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 50%, #E5E5E5 100%)",
+          "linear-gradient(135deg, #F5F5F5 0%, #E5E5E5 50%, #FAFAFA 100%)",
+          "linear-gradient(135deg, #E5E5E5 0%, #FAFAFA 50%, #F5F5F5 100%)",
+          "linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 50%, #E5E5E5 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%)",
+          "linear-gradient(135deg, #F5F5F5 0%, #FAFAFA 100%)",
+          "linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #fafafa 100%)",
+      "border": "rgba(26, 26, 26, 0.15)",
+      "borderHover": "rgba(26, 26, 26, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
+        "shadow": "0 4px 20px rgba(26, 26, 26, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Silent Dominance Assessment",
+      "tr": "Sessiz Hakimiyet Değerlendirmesi"
+    },
+    "subtitle": {
+      "en": "Do you control a room without raising your voice?",
+      "tr": "Sesinizi yükseltmeden bir odayı kontrol edebilir misiniz?"
+    },
+    "description": {
+      "en": "This assessment helps identify your silent dominance abilities and whether you control a room without raising your voice. Answer honestly for accurate insights about your presence and control patterns.",
+      "tr": "Bu değerlendirme, sessiz hakimiyet yeteneklerinizi ve sesinizi yükseltmeden bir odayı kontrol edip edemediğinizi belirlemenize yardımcı olur. Varlığınız ve kontrol kalıplarınız hakkında doğru içgörüler için dürüst cevap verin."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
+    },
+    "startButton": {
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your silent dominance abilities and control patterns...",
+      "tr": "Sessiz hakimiyet yetenekleriniz ve kontrol kalıplarınız analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses to provide insights about whether you control a room without raising your voice.",
+      "tr": "Yapay zekamız, sesinizi yükseltmeden bir odayı kontrol edip edemediğiniz hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Silent Dominance Assessment results below and explore detailed insights about your presence and control patterns.",
+      "tr": "Aşağıda kişiselleştirilmiş Sessiz Hakimiyet Değerlendirmesi sonuçlarınızın kilidini açın ve varlığınız ve kontrol kalıplarınız hakkında detaylı içgörüleri keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
+

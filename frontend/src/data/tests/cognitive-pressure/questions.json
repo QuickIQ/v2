@@ -1,0 +1,22 @@
+[
+  {"id": 1, "text": "I can overload minds to gain control effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 2, "text": "I feel like I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 3, "text": "I can identify whether I can overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 4, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 5, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 6, "text": "I feel like I cannot overload minds, and this affects me negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 7, "text": "I can recognize whether I can overload minds, and work to improve my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 8, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 9, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 10, "text": "I feel like I cannot overload minds, and this prevents me from gaining control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 11, "text": "I can identify whether I can overload minds, and work to improve my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 12, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 13, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 14, "text": "I feel like I cannot overload minds, and this creates problems in my life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 15, "text": "I can recognize whether I can overload minds, and work to maintain my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 16, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 17, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 18, "text": "I feel like I cannot overload minds, and this affects my ability to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 19, "text": "I can identify whether I can overload minds, and work to improve my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 20, "text": "I feel like I can overload minds to gain control, maintaining effective cognitive pressure abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+]

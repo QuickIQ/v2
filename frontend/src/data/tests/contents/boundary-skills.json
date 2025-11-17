@@ -1,0 +1,142 @@
+{
+  "testId": "boundary-skills",
+  "colors": {
+    "primary": {
+      "main": "#10b981",
+      "light": "#34d399"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 50%, #A7F3D0 100%)",
+        "animated": [
+          "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 50%, #A7F3D0 100%)",
+          "linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 50%, #ECFDF5 100%)",
+          "linear-gradient(135deg, #A7F3D0 0%, #ECFDF5 50%, #D1FAE5 100%)",
+          "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 50%, #A7F3D0 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)",
+        "animated": [
+          "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)",
+          "linear-gradient(135deg, #D1FAE5 0%, #ECFDF5 100%)",
+          "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%)",
+      "border": "rgba(16, 185, 129, 0.15)",
+      "borderHover": "rgba(16, 185, 129, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "shadow": "0 4px 20px rgba(16, 185, 129, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #10b981 0%, #34d399 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Boundary Skills Assessment",
+      "tr": "Sınır Becerileri Değerlendirmesi"
+    },
+    "subtitle": {
+      "en": "Can you protect yourself without pushing people away?",
+      "tr": "İnsanları uzaklaştırmadan kendinizi koruyabilir misiniz?"
+    },
+    "description": {
+      "en": "This assessment helps identify your boundary skills and how you protect yourself in relationships. Answer honestly for accurate insights about whether you can maintain healthy boundaries without pushing people away.",
+      "tr": "Bu değerlendirme, sınır becerilerinizi ve ilişkilerde kendinizi nasıl koruduğunuzu belirlemenize yardımcı olur. İnsanları uzaklaştırmadan sağlıklı sınırlar koruyup koruyamadığınız hakkında doğru içgörüler için dürüst cevap verin."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
+    },
+    "startButton": {
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your boundary skills and relationship protection patterns...",
+      "tr": "Sınır becerileriniz ve ilişki koruma kalıplarınız analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses to provide insights about your boundary skills and how you protect yourself in relationships.",
+      "tr": "Yapay zekamız, sınır becerileriniz ve ilişkilerde kendinizi nasıl koruduğunuz hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Boundary Skills Assessment results below and explore detailed insights about your boundary skills and relationship protection patterns.",
+      "tr": "Aşağıda kişiselleştirilmiş Sınır Becerileri Değerlendirmesi sonuçlarınızın kilidini açın ve sınır becerileriniz ve ilişki koruma kalıplarınız hakkında detaylı içgörüleri keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
+

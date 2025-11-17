@@ -1,0 +1,22 @@
+[
+  {"id": 1, "text": "I feel like I'm built for active earnings, working actively to generate income.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 2, "text": "I feel like I'm built for passive earnings, creating income streams that work for me.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 3, "text": "I can identify whether I'm built for active or passive earnings.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 4, "text": "I experience financial problems because I'm not built for either active or passive earnings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 5, "text": "I can maintain an income strategy where I'm built for active or passive earnings.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 6, "text": "I feel like I'm not built for active or passive earnings, and this affects my financial well-being negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 7, "text": "I can recognize whether I'm built for active or passive earnings, and work to improve my income strategy.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 8, "text": "I experience financial problems because I'm not built for active or passive earnings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 9, "text": "I can maintain an income strategy where I'm built for active or passive earnings.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 10, "text": "I feel like I'm not built for active or passive earnings, and this prevents me from generating income effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 11, "text": "I can identify whether I'm built for active or passive earnings, and work to improve my income strategy.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 12, "text": "I experience financial problems because I'm not built for active or passive earnings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 13, "text": "I can maintain an income strategy where I'm built for active or passive earnings.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 14, "text": "I feel like I'm not built for active or passive earnings, and this creates problems in my financial life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 15, "text": "I can recognize whether I'm built for active or passive earnings, and work to maintain a healthy income strategy.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 16, "text": "I experience financial problems because I'm not built for active or passive earnings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 17, "text": "I can maintain an income strategy where I'm built for active or passive earnings.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 18, "text": "I feel like I'm not built for active or passive earnings, and this affects my ability to generate income effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 19, "text": "I can identify whether I'm built for active or passive earnings, and work to improve my income strategy.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 20, "text": "I feel like I'm built for active or passive earnings, maintaining a healthy income strategy.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+]

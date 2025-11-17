@@ -1,0 +1,22 @@
+[
+  {"id": 1, "text": "I can tactically resolve fights effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 2, "text": "I feel like I escalate or redirect fights rather than tactically resolve them.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 3, "text": "I can identify whether I escalate, redirect, or tactically resolve fights.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 4, "text": "I experience problems because I escalate or redirect fights rather than tactically resolve them.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 5, "text": "I can maintain conflict manipulation abilities where I tactically resolve fights.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 6, "text": "I feel like I escalate or redirect fights, and this affects me negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 7, "text": "I can recognize whether I escalate, redirect, or resolve fights, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 8, "text": "I experience problems because I escalate or redirect fights instead of tactically resolving them.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 9, "text": "I can maintain conflict manipulation abilities where I tactically resolve fights.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 10, "text": "I feel like I escalate or redirect fights, and this prevents me from gaining control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 11, "text": "I can identify whether I escalate, redirect, or resolve fights, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 12, "text": "I experience problems because I escalate or redirect fights rather than tactically resolve them.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 13, "text": "I can maintain conflict manipulation abilities where I tactically resolve fights.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 14, "text": "I feel like I escalate or redirect fights, and this creates problems in my life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 15, "text": "I can recognize whether I escalate, redirect, or resolve fights, and work to maintain my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 16, "text": "I experience problems because I escalate or redirect fights instead of tactically resolving them.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 17, "text": "I can maintain conflict manipulation abilities where I tactically resolve fights.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 18, "text": "I feel like I escalate or redirect fights, and this affects my ability to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 19, "text": "I can identify whether I escalate, redirect, or resolve fights, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 20, "text": "I feel like I can tactically resolve fights, not escalate or redirect them, maintaining effective conflict manipulation.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+]

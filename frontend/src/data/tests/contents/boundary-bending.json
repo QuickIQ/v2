@@ -1,0 +1,142 @@
+{
+  "testId": "boundary-bending",
+  "colors": {
+    "primary": {
+      "main": "#4a148c",
+      "light": "#6a1b9a"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 50%, #E9D5FF 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 50%, #E9D5FF 100%)",
+          "linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 50%, #FAF5FF 100%)",
+          "linear-gradient(135deg, #E9D5FF 0%, #FAF5FF 50%, #F3E8FF 100%)",
+          "linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 50%, #E9D5FF 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)",
+          "linear-gradient(135deg, #F3E8FF 0%, #FAF5FF 100%)",
+          "linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)",
+      "border": "rgba(74, 20, 140, 0.15)",
+      "borderHover": "rgba(74, 20, 140, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%)",
+        "shadow": "0 4px 20px rgba(74, 20, 140, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Boundary Bending Assessment",
+      "tr": "Sınır Bükme Değerlendirmesi"
+    },
+    "subtitle": {
+      "en": "Do you push limits or subtly break them?",
+      "tr": "Sınırları iter misiniz yoksa ince bir şekilde kırar mısınız?"
+    },
+    "description": {
+      "en": "This assessment helps identify your boundary bending abilities and whether you push limits or subtly break them. Answer honestly for accurate insights about your boundary manipulation and limit testing patterns.",
+      "tr": "Bu değerlendirme, sınır bükme yeteneklerinizi ve sınırları itip itmediğinizi veya ince bir şekilde kırıp kırmadığınızı belirlemenize yardımcı olur. Sınır manipülasyonu ve limit test etme kalıplarınız hakkında doğru içgörüler için dürüst cevap verin."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
+    },
+    "startButton": {
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your boundary bending abilities and limit testing patterns...",
+      "tr": "Sınır bükme yetenekleriniz ve limit test etme kalıplarınız analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses to provide insights about whether you push limits or subtly break them.",
+      "tr": "Yapay zekamız, sınırları itip itmediğiniz veya ince bir şekilde kırıp kırmadığınız hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Boundary Bending Assessment results below and explore detailed insights about your boundary manipulation and limit testing patterns.",
+      "tr": "Aşağıda kişiselleştirilmiş Sınır Bükme Değerlendirmesi sonuçlarınızın kilidini açın ve sınır manipülasyonu ve limit test etme kalıplarınız hakkında detaylı içgörüleri keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
+

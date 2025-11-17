@@ -1,0 +1,22 @@
+[
+  {"id": 1, "text": "I can amplify or suppress someone's wants effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 2, "text": "I feel like I cannot amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 3, "text": "I can identify whether I can amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 4, "text": "I experience problems because I cannot amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 5, "text": "I can maintain desire control abilities where I amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 6, "text": "I feel like I cannot control desires, and this affects me negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 7, "text": "I can recognize whether I can control desires, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 8, "text": "I experience problems because I cannot amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 9, "text": "I can maintain desire control abilities where I amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 10, "text": "I feel like I cannot control desires, and this prevents me from gaining influence.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 11, "text": "I can identify whether I can control desires, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 12, "text": "I experience problems because I cannot amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 13, "text": "I can maintain desire control abilities where I amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 14, "text": "I feel like I cannot control desires, and this creates problems in my life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 15, "text": "I can recognize whether I can control desires, and work to maintain my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 16, "text": "I experience problems because I cannot amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 17, "text": "I can maintain desire control abilities where I amplify or suppress someone's wants.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 18, "text": "I feel like I cannot control desires, and this affects my ability to gain influence.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 19, "text": "I can identify whether I can control desires, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 20, "text": "I feel like I can amplify or suppress someone's wants effectively, maintaining strong desire control abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+]

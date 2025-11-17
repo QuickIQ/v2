@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
 import { useTranslation } from 'react-i18next';
@@ -9,7 +10,24 @@ export function CategorySection() {
   const isMobile = useMobile();
   const { i18n } = useTranslation();
   const language = i18n.language as 'en' | 'tr';
-  const testConfigs = getAllTestConfigs();
+  
+  // Cache test configs - sadece bir kere hesapla
+  const testConfigs = useMemo(() => getAllTestConfigs(), []);
+  
+  // Her kategori için test'leri önceden hesapla - sadece testConfigs değiştiğinde yeniden hesapla
+  const testsByCategory = useMemo(() => {
+    const map: Record<string, typeof testConfigs> = {};
+    categoriesData.categories.forEach(category => {
+      const categoryNameEn = category.title.en.split('–')[0].trim();
+      const categoryNameTr = category.title.tr.split('–')[0].trim();
+      map[category.id] = testConfigs.filter(test => 
+        test.category === categoryNameEn || 
+        test.category === categoryNameTr ||
+        test.category.toLowerCase() === category.id
+      );
+    });
+    return map;
+  }, [testConfigs]);
 
   return (
     <motion.div
@@ -49,17 +67,9 @@ export function CategorySection() {
               alignItems: 'stretch',
               justifyItems: 'stretch',
             }}>
-              {testConfigs
-                .filter(test => {
-                  const categoryNameEn = category.title.en.split('–')[0].trim();
-                  const categoryNameTr = category.title.tr.split('–')[0].trim();
-                  return test.category === categoryNameEn || 
-                         test.category === categoryNameTr ||
-                         test.category.toLowerCase() === category.id;
-                })
-                .map((test, index) => (
-                  <TestCard key={test.id} test={test} index={index} />
-                ))}
+              {testsByCategory[category.id]?.map((test, index) => (
+                <TestCard key={test.id} test={test} index={index} />
+              ))}
             </div>
           )}
         </div>

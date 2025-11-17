@@ -1,0 +1,22 @@
+[
+  {"id": 1, "text": "I feel like I wear strategic feelings rather than show real ones.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 2, "text": "I feel like I show real feelings rather than wear strategic ones.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 3, "text": "I can identify whether I show real feelings or wear strategic ones.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 4, "text": "I experience problems because I show real feelings rather than wear strategic ones.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 5, "text": "I can maintain an emotional mask where I wear strategic feelings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 6, "text": "I feel like I show real feelings, and this affects me negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 7, "text": "I can recognize whether I show real feelings or wear strategic ones, and work to improve my mask.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 8, "text": "I experience problems because I show real feelings instead of wearing strategic ones.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 9, "text": "I can maintain an emotional mask where I wear strategic feelings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 10, "text": "I feel like I show real feelings, and this prevents me from maintaining control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 11, "text": "I can identify whether I show real feelings or wear strategic ones, and work to improve my mask.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 12, "text": "I experience problems because I show real feelings rather than wearing strategic ones.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 13, "text": "I can maintain an emotional mask where I wear strategic feelings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 14, "text": "I feel like I show real feelings, and this creates problems in my life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 15, "text": "I can recognize whether I show real feelings or wear strategic ones, and work to maintain my mask.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 16, "text": "I experience problems because I show real feelings instead of wearing strategic ones.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 17, "text": "I can maintain an emotional mask where I wear strategic feelings effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 18, "text": "I feel like I show real feelings, and this affects my ability to maintain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 19, "text": "I can identify whether I show real feelings or wear strategic ones, and work to improve my mask.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 20, "text": "I feel like I wear strategic feelings effectively, not showing real ones, maintaining a strong emotional mask.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+]

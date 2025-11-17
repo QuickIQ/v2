@@ -1,0 +1,142 @@
+{
+  "testId": "power-balance",
+  "colors": {
+    "primary": {
+      "main": "#7c3aed",
+      "light": "#a78bfa"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%)",
+        "animated": [
+          "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%)",
+          "linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 50%, #F5F3FF 100%)",
+          "linear-gradient(135deg, #DDD6FE 0%, #F5F3FF 50%, #EDE9FE 100%)",
+          "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%)",
+        "animated": [
+          "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%)",
+          "linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%)",
+          "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%)",
+      "border": "rgba(124, 58, 237, 0.15)",
+      "borderHover": "rgba(124, 58, 237, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+        "shadow": "0 4px 20px rgba(124, 58, 237, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Power Balance Assessment",
+      "tr": "Güç Dengesi Değerlendirmesi"
+    },
+    "subtitle": {
+      "en": "Is your relationship equal, dominant, or submissive?",
+      "tr": "İlişkiniz eşit mi, dominant mı, yoksa itaatkar mı?"
+    },
+    "description": {
+      "en": "This assessment helps identify the power balance in your relationships and whether they are equal, dominant, or submissive. Answer honestly for accurate insights about power dynamics and relationship balance.",
+      "tr": "Bu değerlendirme, ilişkilerinizdeki güç dengesini ve eşit, dominant mı yoksa itaatkar mı olduğunu belirlemenize yardımcı olur. Güç dinamikleri ve ilişki dengesi hakkında doğru içgörüler için dürüst cevap verin."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
+    },
+    "startButton": {
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your power balance and relationship dynamics...",
+      "tr": "Güç dengeniz ve ilişki dinamikleriniz analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses to provide insights about whether your relationship is equal, dominant, or submissive.",
+      "tr": "Yapay zekamız, ilişkinizin eşit, dominant mı yoksa itaatkar mı olduğu hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Power Balance Assessment results below and explore detailed insights about power dynamics and relationship balance.",
+      "tr": "Aşağıda kişiselleştirilmiş Güç Dengesi Değerlendirmesi sonuçlarınızın kilidini açın ve güç dinamikleri ve ilişki dengesi hakkında detaylı içgörüleri keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
+

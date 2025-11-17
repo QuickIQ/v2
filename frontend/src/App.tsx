@@ -33,12 +33,14 @@ function AppContent() {
     test => test.id !== 'iqtest' && test.id !== 'personality'
   );
   
-  // Debug: Log routes being created
-  console.log('[App] Creating routes for universal tests:', universalTests.map(t => ({
-    id: t.id,
-    slug: t.slug,
-    path: `/test/${t.slug}`
-  })));
+  // Debug: Log routes being created (only in development)
+  if (import.meta.env.DEV) {
+    console.log('[App] Creating routes for universal tests:', universalTests.map(t => ({
+      id: t.id,
+      slug: t.slug,
+      path: `/test/${t.slug}`
+    })));
+  }
   
   return (
     <>
@@ -90,7 +92,12 @@ function App() {
   return (
     <I18nextProvider i18n={i18n}>
       <Elements stripe={stripePromise}>
-        <Router>
+        <Router
+          future={{
+            v7_startTransition: true,
+            v7_relativeSplatPath: true,
+          }}
+        >
           <AppContent />
         </Router>
       </Elements>
@@ -99,4 +106,3 @@ function App() {
 }
 
 export default App;
-

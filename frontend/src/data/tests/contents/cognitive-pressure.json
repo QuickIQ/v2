@@ -1,0 +1,142 @@
+{
+  "testId": "cognitive-pressure",
+  "colors": {
+    "primary": {
+      "main": "#1c1917",
+      "light": "#292524"
+    },
+    "background": {
+      "landing": {
+        "gradient": "linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 50%, #E7E5E4 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 50%, #E7E5E4 100%)",
+          "linear-gradient(135deg, #F5F5F4 0%, #E7E5E4 50%, #FAFAF9 100%)",
+          "linear-gradient(135deg, #E7E5E4 0%, #FAFAF9 50%, #F5F5F4 100%)",
+          "linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 50%, #E7E5E4 100%)"
+        ]
+      },
+      "questions": {
+        "gradient": "linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 100%)"
+      },
+      "analyzing": {
+        "gradient": "linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 100%)",
+        "animated": [
+          "linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 100%)",
+          "linear-gradient(135deg, #F5F5F4 0%, #FAFAF9 100%)",
+          "linear-gradient(135deg, #FAFAF9 0%, #F5F5F4 100%)"
+        ]
+      }
+    },
+    "card": {
+      "background": "linear-gradient(135deg, #ffffff 0%, #fafaf9 100%)",
+      "border": "rgba(28, 25, 23, 0.15)",
+      "borderHover": "rgba(28, 25, 23, 0.4)"
+    },
+    "button": {
+      "primary": {
+        "gradient": "linear-gradient(135deg, #1c1917 0%, #292524 100%)",
+        "shadow": "0 4px 20px rgba(28, 25, 23, 0.4)"
+      }
+    },
+    "progressBar": {
+      "background": "#e0e0e0",
+      "fill": "linear-gradient(135deg, #1c1917 0%, #292524 100%)"
+    },
+    "answerButtons": {
+      "gradients": [
+        "linear-gradient(135deg, #f8b2b2, #f5a1a1)",
+        "linear-gradient(135deg, #f5a1a1, #f7c59f)",
+        "linear-gradient(135deg, #f7c59f, #fff2dc)",
+        "linear-gradient(135deg, #ffffff, #fefefe)",
+        "linear-gradient(135deg, #f4ffe5, #c8f8c8)",
+        "linear-gradient(135deg, #c8f8c8, #a4e8a4)",
+        "linear-gradient(135deg, #a4e8a4, #89dc89)"
+      ],
+      "glowColors": [
+        "rgba(248, 178, 178, 0.5)",
+        "rgba(245, 161, 161, 0.5)",
+        "rgba(247, 197, 159, 0.5)",
+        "rgba(255, 255, 255, 0.5)",
+        "rgba(200, 248, 200, 0.5)",
+        "rgba(164, 232, 164, 0.5)",
+        "rgba(137, 220, 137, 0.5)"
+      ],
+      "labels": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Neutral",
+        "Often",
+        "Usually",
+        "Always"
+      ]
+    }
+  },
+  "landing": {
+    "title": {
+      "en": "Cognitive Pressure Assessment",
+      "tr": "Bilişsel Baskı Değerlendirmesi"
+    },
+    "subtitle": {
+      "en": "Do you overload minds to gain control?",
+      "tr": "Kontrol kazanmak için zihinleri aşırı yüklüyor musunuz?"
+    },
+    "description": {
+      "en": "This assessment helps identify your cognitive pressure abilities and whether you overload minds to gain control. Answer honestly for accurate insights about your mental manipulation and control patterns.",
+      "tr": "Bu değerlendirme, bilişsel baskı yeteneklerinizi ve kontrol kazanmak için zihinleri aşırı yükleyip yüklemediğinizi belirlemenize yardımcı olur. Zihinsel manipülasyon ve kontrol kalıplarınız hakkında doğru içgörüler için dürüst cevap verin."
+    },
+    "reminder": {
+      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
+    },
+    "startButton": {
+      "en": "Start Assessment",
+      "tr": "Değerlendirmeye Başla"
+    }
+  },
+  "questions": {
+    "total": 20,
+    "timeLimit": 600,
+    "options": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Neutral",
+      "Often",
+      "Usually",
+      "Always"
+    ]
+  },
+  "analyzing": {
+    "title": {
+      "en": "Analyzing your cognitive pressure abilities and control patterns...",
+      "tr": "Bilişsel baskı yetenekleriniz ve kontrol kalıplarınız analiz ediliyor..."
+    },
+    "subtitle": {
+      "en": "Our AI is evaluating your responses to provide insights about whether you overload minds to gain control.",
+      "tr": "Yapay zekamız, kontrol kazanmak için zihinleri aşırı yükleyip yüklemediğiniz hakkında içgörüler sağlamak için cevaplarınızı değerlendiriyor."
+    },
+    "duration": 10
+  },
+  "email": {
+    "title": {
+      "en": "Get Your Results",
+      "tr": "Sonuçlarınızı Alın"
+    },
+    "subtitle": {
+      "en": "Enter your email to receive your detailed assessment results",
+      "tr": "Detaylı değerlendirme sonuçlarınızı almak için e-posta adresinizi girin"
+    }
+  },
+  "payment": {
+    "intro": {
+      "en": "Unlock your personalized Cognitive Pressure Assessment results below and explore detailed insights about your mental manipulation and control patterns.",
+      "tr": "Aşağıda kişiselleştirilmiş Bilişsel Baskı Değerlendirmesi sonuçlarınızın kilidini açın ve zihinsel manipülasyon ve kontrol kalıplarınız hakkında detaylı içgörüleri keşfedin."
+    },
+    "unlockButton": {
+      "en": "Unlock Detailed Result",
+      "tr": "Detaylı Sonucu Aç"
+    }
+  }
+}
+

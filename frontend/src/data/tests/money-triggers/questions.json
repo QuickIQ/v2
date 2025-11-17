@@ -1,0 +1,22 @@
+[
+  {"id": 1, "text": "I can identify what makes me spend, save, or panic with money.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 2, "text": "I feel like certain triggers make me spend money impulsively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 3, "text": "I feel like certain triggers make me save money effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 4, "text": "I feel like certain triggers make me panic about money.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 5, "text": "I experience financial problems because money triggers make me spend or panic rather than save.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 6, "text": "I can maintain control over money triggers, ensuring they make me save, not spend or panic.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 7, "text": "I feel like money triggers make me spend or panic, and this affects my financial well-being negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 8, "text": "I can recognize what makes me spend, save, or panic, and work to improve my money trigger responses.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 9, "text": "I experience financial problems because money triggers make me spend or panic instead of save.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 10, "text": "I can maintain control over money triggers, ensuring they make me save, not spend or panic.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 11, "text": "I feel like money triggers make me spend or panic, and this prevents me from saving effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 12, "text": "I can identify what makes me spend, save, or panic, and work to improve my money trigger responses.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 13, "text": "I experience financial problems because money triggers make me spend or panic rather than save.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 14, "text": "I can maintain control over money triggers, ensuring they make me save, not letting them make me spend or panic.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 15, "text": "I feel like money triggers make me spend or panic, and this creates problems in my financial life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 16, "text": "I can recognize what makes me spend, save, or panic, and work to maintain healthy money trigger responses.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 17, "text": "I experience financial problems because money triggers make me spend or panic instead of save.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 18, "text": "I can maintain control over money triggers, ensuring they make me save, avoiding spending or panicking.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
+  {"id": 19, "text": "I feel like money triggers make me spend or panic, and this affects my ability to save effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
+  {"id": 20, "text": "I feel like money triggers make me save effectively, not spend or panic, maintaining healthy financial responses.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+]

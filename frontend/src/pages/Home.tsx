@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { testApi } from '../services/api';
@@ -24,8 +24,19 @@ function Home() {
   const [error, setError] = useState<string | null>(null);
   const isMobile = useMobile();
   
-  // Get test configs for TestCard component
-  const testConfigs = getAllTestConfigs();
+  // Cache test configs - sadece bir kere hesapla
+  const testConfigs = useMemo(() => getAllTestConfigs(), []);
+  
+  // Cache filtered tests with configs - sadece tests değiştiğinde yeniden hesapla
+  const filteredTests = useMemo(() => {
+    return tests
+      .filter(test => test.slug !== 'iqtest' && test.slug !== 'personality')
+      .map(test => ({
+        test,
+        config: getTestConfig(test.slug)
+      }))
+      .filter(item => item.config !== undefined);
+  }, [tests]);
 
   useEffect(() => {
     const fetchTests = async () => {
@@ -245,21 +256,11 @@ function Home() {
             justifyItems: 'stretch',
           }}
         >
-          {tests
-            .filter(test => test.slug !== 'iqtest' && test.slug !== 'personality')
-            .map((test, idx) => {
-              // Test-config.json'dan config bul
-              const testConfig = getTestConfig(test.slug);
-              
-              // Eğer config bulunduysa TestCard kullan
-              if (testConfig) {
-                return <TestCard key={test.id} test={testConfig} index={idx} />;
-              }
-              
-              // Config bulunamadıysa, bu test muhtemelen API'den geliyor ve henüz test-config.json'da yok
-              // Bu durumda varsayılan bir config oluştur veya null döndür
-              return null;
-            })}
+          {filteredTests.map((item, idx) => {
+            // TypeScript guard - config zaten filter'da kontrol edildi ama type safety için
+            if (!item.config) return null;
+            return <TestCard key={item.test.id} test={item.config} index={idx} />;
+          })}
         </div>
 
         {tests.length === 0 && (

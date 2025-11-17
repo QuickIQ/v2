@@ -40,13 +40,24 @@ export function AnimatedBackground() {
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
-    // Sayfa içeriği değiştiğinde de güncelle
-    const observer = new MutationObserver(updateDimensions);
-    observer.observe(document.body, { childList: true, subtree: true });
+    
+    // MutationObserver'ı throttle et - her değişiklikte değil, debounce ile
+    let timeoutId: NodeJS.Timeout;
+    const observer = new MutationObserver(() => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(updateDimensions, 100); // 100ms debounce
+    });
+    
+    observer.observe(document.body, { 
+      childList: true, 
+      subtree: true,
+      attributes: false, // Sadece DOM yapısı değişikliklerini izle
+    });
 
     return () => {
       window.removeEventListener('resize', updateDimensions);
       observer.disconnect();
+      clearTimeout(timeoutId);
     };
   }, []);
 
