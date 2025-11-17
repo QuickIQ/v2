@@ -1,6 +1,6 @@
-import { memo } from 'react';
+import { memo, useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useMobile } from '../../hooks/useMobile';
 import { Clock, HelpCircle } from 'lucide-react';
@@ -44,6 +44,37 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
   const { i18n } = useTranslation();
   const isMobile = useMobile();
   const language = i18n.language as 'en' | 'tr';
+  const ref = useRef<HTMLDivElement>(null);
+  const hasAnimatedRef = useRef(false); // useRef kullan - layout değişikliklerinde korunur
+  const [hasAnimated, setHasAnimated] = useState(isMobile);
+  
+  // Mobilde animasyon yok - direkt görünür, desktop'ta useInView ile kontrol et
+  const isInView = useInView(ref, { once: true, margin: '0px', amount: 0.1 });
+  
+  // isMobile değiştiğinde hasAnimated'i güncelle - layout değişikliklerinde animasyon tekrarı önle
+  useEffect(() => {
+    if (isMobile) {
+      // Mobilde animasyon yok, direkt true yap
+      setHasAnimated(true);
+      hasAnimatedRef.current = true;
+    } else if (!hasAnimatedRef.current) {
+      // Desktop'a geçildiğinde, eğer daha önce animasyon geçirmediyse resetle
+      setHasAnimated(false);
+    }
+  }, [isMobile]);
+  
+  // Animasyonu sadece desktop'ta çalıştır - mobilde animasyon yok
+  useEffect(() => {
+    if (isMobile) return; // Mobilde animasyon yok
+    if (isInView && !hasAnimated && !hasAnimatedRef.current) {
+      // requestAnimationFrame ile smooth scroll sırasında animasyonu tetikle
+      const rafId = requestAnimationFrame(() => {
+        setHasAnimated(true);
+        hasAnimatedRef.current = true; // Kalıcı olarak işaretle
+      });
+      return () => cancelAnimationFrame(rafId);
+    }
+  }, [isInView, hasAnimated, isMobile]);
   
   // Get icon component dynamically
   const IconComponent = (LucideIcons as any)[test.icon] || LucideIcons.HelpCircle;
@@ -75,10 +106,12 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
       }}
     >
       <motion.div
+        ref={ref}
         className={`${test.id}-test-card`}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
+        layout={false}
+        initial={false}
+        animate={isMobile ? { opacity: 1, y: 0 } : (hasAnimated ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 })}
+        transition={isMobile ? { duration: 0 } : (hasAnimated ? { duration: 0.5, delay: index * 0.1 } : { duration: 0 })}
         style={{
           cursor: 'pointer',
           background: test.colors.cardBackground,
@@ -93,8 +126,10 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
           flexDirection: 'column',
           boxSizing: 'border-box',
           transformOrigin: 'center center',
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
         }}
-        whileHover={{
+        whileHover={isMobile ? {} : {
           y: -15,
           scale: 1.05,
           boxShadow: test.colors.cardShadow,
@@ -109,35 +144,36 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
           ease: 'easeOut',
         }}
       >
-        {/* Glow Effect Background */}
-        <motion.div
-          style={{
-            position: 'absolute',
-            top: '-50%',
-            left: '-50%',
-            width: '200%',
-            height: '200%',
-            background: `radial-gradient(circle, ${test.colors.cardGlow} 0%, transparent 70%)`,
-            opacity: 0,
-            pointerEvents: 'none',
-            zIndex: -10,
-            willChange: 'opacity',
-          }}
-          transition={{ 
-            duration: 0.2,
-            ease: 'easeOut',
-          }}
-          whileHover={{ 
-            opacity: 1,
-            transition: {
+        {/* Glow Effect Background - Sadece desktop'ta */}
+        {!isMobile && (
+          <motion.div
+            style={{
+              position: 'absolute',
+              top: '-50%',
+              left: '-50%',
+              width: '200%',
+              height: '200%',
+              background: `radial-gradient(circle, ${test.colors.cardGlow} 0%, transparent 70%)`,
+              opacity: 0,
+              pointerEvents: 'none',
+              zIndex: -10,
+            }}
+            transition={{ 
               duration: 0.2,
-              ease: 'easeIn',
-            },
-          }}
-        />
+              ease: 'easeOut',
+            }}
+            whileHover={{ 
+              opacity: 1,
+              transition: {
+                duration: 0.2,
+                ease: 'easeIn',
+              },
+            }}
+          />
+        )}
         
         {/* Content */}
-        <div style={{ position: 'relative', zIndex: 100, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0, boxSizing: 'border-box', overflow: 'visible', isolation: 'isolate', pointerEvents: 'auto', willChange: 'transform' }}>
+        <div style={{ position: 'relative', zIndex: 100, textAlign: 'center', display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0, boxSizing: 'border-box', overflow: 'visible', isolation: 'isolate', pointerEvents: 'auto' }}>
           <div style={{ marginBottom: isMobile ? '12px' : '16px', flexShrink: 0, flexGrow: 0 }}>
             <div style={{
               display: 'flex',
@@ -154,32 +190,46 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
               minHeight: isMobile ? '34px' : '42px',
               overflow: 'visible',
             }}>
-              <motion.div
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.7, 1, 0.7],
-                  rotate: [0, 15, -15, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatDelay: 1,
-                  ease: 'easeInOut',
-                }}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  flexShrink: 0,
-                }}
-              >
+              {isMobile ? (
+                // Mobilde statik icon - animasyon yok
                 <IconComponent
-                  size={isMobile ? 28 : 34}
+                  size={28}
                   style={{
                     color: test.colors.primary,
-                    filter: `drop-shadow(0 0 8px ${test.colors.primary}80)`,
                   }}
                 />
-              </motion.div>
+              ) : (
+                // Desktop'ta animasyonlu icon
+                <motion.div
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.7, 1, 0.7],
+                    rotate: [0, 15, -15, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                    ease: 'easeInOut',
+                  }}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    flexShrink: 0,
+                    willChange: 'transform, opacity',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                  }}
+                >
+                  <IconComponent
+                    size={34}
+                    style={{
+                      color: test.colors.primary,
+                      filter: `drop-shadow(0 0 8px ${test.colors.primary}80)`,
+                    }}
+                  />
+                </motion.div>
+              )}
               <h4 style={{
                 fontWeight: '600',
                 fontSize: titleFontSize,
@@ -269,7 +319,9 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
               fontWeight: '600',
               fontSize: isMobile ? '14px' : '16px',
               cursor: 'pointer',
-              boxShadow: `0 4px 16px ${test.colors.primary}4D`,
+              boxShadow: isMobile 
+                ? `0 2px 8px ${test.colors.primary}33` 
+                : `0 4px 16px ${test.colors.primary}4D`,
               transition: 'all 0.15s ease-out',
               width: 'fit-content',
               alignSelf: 'center',
@@ -283,11 +335,11 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
               position: 'relative',
               zIndex: 101,
             }}
-            whileHover={{ 
+            whileHover={isMobile ? {} : { 
               scale: 1.05,
               boxShadow: `0 6px 20px ${test.colors.primary}66`,
             }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={isMobile ? {} : { scale: 0.98 }}
           >
             {language === 'tr' ? 'Teste Başla' : 'Start Test'}
           </motion.button>
@@ -338,18 +390,16 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
     }
   }
   
-  // Colors objesi değiştiyse re-render yap
+  // Colors objesi değiştiyse re-render yap - sadece kritik renkleri kontrol et (performans için)
   const prevColors = prev.colors;
   const nextColors = next.colors;
   if (prevColors.primary !== nextColors.primary ||
-      prevColors.light !== nextColors.light ||
       prevColors.cardBackground !== nextColors.cardBackground ||
       prevColors.cardBorder !== nextColors.cardBorder ||
       prevColors.cardHoverBorder !== nextColors.cardHoverBorder ||
       prevColors.cardGlow !== nextColors.cardGlow ||
       prevColors.cardShadow !== nextColors.cardShadow ||
-      prevColors.buttonGradient !== nextColors.buttonGradient ||
-      prevColors.titleGradient !== nextColors.titleGradient) {
+      prevColors.buttonGradient !== nextColors.buttonGradient) {
     return false;
   }
   

@@ -114,7 +114,7 @@ export function SocialProof({ testId }: SocialProofProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + index * 0.1 }}
-              whileHover={{
+              whileHover={isMobile ? {} : {
                 scale: 1.05,
                 y: -8,
                 boxShadow: '0 12px 32px rgba(108, 99, 255, 0.25)',

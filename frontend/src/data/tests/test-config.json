@@ -55,6 +55,10 @@
         "en": "Creative Thinking",
         "tr": "Yaratıcı Düşünme"
       },
+      "subtitle": {
+        "en": "Can you generate unconventional solutions under pressure?",
+        "tr": "Baskı altında alışılmadık çözümler üretebiliyor musun?"
+      },
       "category": "Business",
       "icon": "Lightbulb",
       "iconEmoji": "💡",
@@ -123,6 +127,10 @@
         "en": "Multitasking Efficiency",
         "tr": "Çoklu Görev Verimliliği"
       },
+      "subtitle": {
+        "en": "How well do you operate when everything demands attention?",
+        "tr": "Her şey dikkat istediğinde ne kadar iyi çalışıyorsun?"
+      },
       "category": "Business",
       "icon": "Zap",
       "iconEmoji": "⚡",
@@ -154,6 +162,10 @@
       "name": {
         "en": "Attention Span",
         "tr": "Dikkat Süresi"
+      },
+      "subtitle": {
+        "en": "Can your mind stay locked in—or does it drift instantly?",
+        "tr": "Zihnin kilitlenip kalıyor mu—yoksa anında kayıyor mu?"
       },
       "category": "Business",
       "icon": "Target",
@@ -187,6 +199,10 @@
         "en": "Memory Retention",
         "tr": "Hafıza Tutma"
       },
+      "subtitle": {
+        "en": "How long can you keep important information sharp?",
+        "tr": "Önemli bilgileri ne kadar süre keskin tutabiliyorsun?"
+      },
       "category": "Business",
       "icon": "Database",
       "iconEmoji": "💾",
@@ -218,6 +234,10 @@
       "name": {
         "en": "Entrepreneur Mindset",
         "tr": "Girişimci Zihniyeti"
+      },
+      "subtitle": {
+        "en": "Are you wired for creation, opportunity, and bold moves?",
+        "tr": "Yaratıcılık, fırsat ve cesur hamleler için donatılmış mısın?"
       },
       "category": "Business",
       "icon": "Briefcase",
@@ -251,6 +271,10 @@
         "en": "Risk Tolerance",
         "tr": "Risk Toleransı"
       },
+      "subtitle": {
+        "en": "Do you play safe—or bet big when it matters?",
+        "tr": "Güvenli mi oynuyorsun—yoksa önemli olduğunda büyük mü bahis yapıyorsun?"
+      },
       "category": "Business",
       "icon": "TrendingUp",
       "iconEmoji": "📈",
@@ -282,6 +306,10 @@
       "name": {
         "en": "Strategic Thinking",
         "tr": "Stratejik Düşünme"
+      },
+      "subtitle": {
+        "en": "Can you see five moves ahead while others see one?",
+        "tr": "Başkaları bir hamle görürken sen beş hamle ilerisini görebiliyor musun?"
       },
       "category": "Business",
       "icon": "Compass",
@@ -315,6 +343,10 @@
         "en": "Time Management",
         "tr": "Zaman Yönetimi"
       },
+      "subtitle": {
+        "en": "Do you control your hours—or do they control you?",
+        "tr": "Saatlerini sen mi kontrol ediyorsun—yoksa onlar seni mi kontrol ediyor?"
+      },
       "category": "Business",
       "icon": "Timer",
       "iconEmoji": "⏱️",
@@ -346,6 +378,10 @@
       "name": {
         "en": "Decision Making",
         "tr": "Karar Verme"
+      },
+      "subtitle": {
+        "en": "Do you choose with clarity—or react from instinct?",
+        "tr": "Netlikle mi seçiyorsun—yoksa içgüdüden mi tepki veriyorsun?"
       },
       "category": "Business",
       "icon": "Scale",
@@ -379,6 +415,10 @@
         "en": "Leadership Archetype",
         "tr": "Liderlik Arketipi"
       },
+      "subtitle": {
+        "en": "What kind of leader emerges when pressure hits?",
+        "tr": "Baskı geldiğinde ne tür bir lider ortaya çıkıyor?"
+      },
       "category": "Business",
       "icon": "Crown",
       "iconEmoji": "👑",
@@ -410,6 +450,10 @@
       "name": {
         "en": "Negotiation Skills",
         "tr": "Müzakere Becerileri"
+      },
+      "subtitle": {
+        "en": "Can you bend outcomes in your favor effortlessly?",
+        "tr": "Sonuçları zahmetsizce lehine çevirebiliyor musun?"
       },
       "category": "Business",
       "icon": "MessageSquare",
@@ -443,6 +487,10 @@
         "en": "Stress Management",
         "tr": "Stres Yönetimi"
       },
+      "subtitle": {
+        "en": "Do you break under pressure—or perform even better?",
+        "tr": "Baskı altında mı kırılıyorsun—yoksa daha da iyi mi performans gösteriyorsun?"
+      },
       "category": "Business",
       "icon": "HeartPulse",
       "iconEmoji": "💚",
@@ -474,6 +522,10 @@
       "name": {
         "en": "Team Player",
         "tr": "Takım Oyuncusu"
+      },
+      "subtitle": {
+        "en": "Do you elevate the group or quietly dominate?",
+        "tr": "Grubu yükseltiyor musun yoksa sessizce mi hükmediyorsun?"
       },
       "category": "Business",
       "icon": "UsersRound",
@@ -507,6 +559,10 @@
         "en": "Success",
         "tr": "Başarı"
       },
+      "subtitle": {
+        "en": "Is achievement a habit for you—or a rare moment?",
+        "tr": "Başarı senin için bir alışkanlık mı—yoksa nadir bir an mı?"
+      },
       "category": "Business",
       "icon": "Trophy",
       "iconEmoji": "🏆",
@@ -538,6 +594,10 @@
       "name": {
         "en": "Perfectionism",
         "tr": "Mükemmeliyetçilik"
+      },
+      "subtitle": {
+        "en": "Does precision drive you—or slowly destroy you?",
+        "tr": "Hassasiyet seni motive mi ediyor—yoksa yavaşça mı yok ediyor?"
       },
       "category": "Business",
       "icon": "Flower2",
@@ -571,6 +631,10 @@
         "en": "Ambition",
         "tr": "Hırs"
       },
+      "subtitle": {
+        "en": "How far are you truly willing to climb?",
+        "tr": "Gerçekten ne kadar yükseğe tırmanmaya hazırsın?"
+      },
       "category": "Business",
       "icon": "TrendingUp",
       "iconEmoji": "📊",
@@ -602,6 +666,10 @@
       "name": {
         "en": "Criticism",
         "tr": "Eleştiri"
+      },
+      "subtitle": {
+        "en": "Do you grow from feedback—or defend your ego?",
+        "tr": "Geri bildirimden mi büyüyorsun—yoksa egonu mu savunuyorsun?"
       },
       "category": "Business",
       "icon": "MessageSquare",
@@ -635,6 +703,10 @@
         "en": "Depression",
         "tr": "Depresyon"
       },
+      "subtitle": {
+        "en": "Is your energy fading—or is your mind quietly collapsing?",
+        "tr": "Enerjin mi azalıyor—yoksa zihnin sessizce mi çöküyor?"
+      },
       "category": "Health",
       "icon": "Heart",
       "iconEmoji": "💙",
@@ -666,6 +738,10 @@
       "name": {
         "en": "Anxiety",
         "tr": "Anksiyete"
+      },
+      "subtitle": {
+        "en": "Do worries protect you—or imprison you?",
+        "tr": "Endişeler seni koruyor mu—yoksa hapsediyor mu?"
       },
       "category": "Health",
       "icon": "HeartPulse",

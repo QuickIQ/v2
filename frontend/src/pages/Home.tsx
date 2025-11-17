@@ -380,11 +380,11 @@ function Home() {
                                 borderRadius: '6px',
                                 cursor: 'pointer',
                               }}
-                              onMouseEnter={(e) => {
+                              onMouseEnter={isMobile ? undefined : (e) => {
                                 e.currentTarget.style.color = hoverColor;
                                 e.currentTarget.style.background = `${primaryColor}1A`;
                               }}
-                              onMouseLeave={(e) => {
+                              onMouseLeave={isMobile ? undefined : (e) => {
                                 e.currentTarget.style.color = primaryColor;
                                 e.currentTarget.style.background = 'transparent';
                               }}

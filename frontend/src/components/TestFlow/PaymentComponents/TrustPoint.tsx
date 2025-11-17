@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useMobile } from '../../../hooks/useMobile';
 
 interface TrustPointProps {
   emoji: string;
@@ -8,6 +9,8 @@ interface TrustPointProps {
 }
 
 export function TrustPoint({ emoji, title, description, index }: TrustPointProps) {
+  const isMobile = useMobile();
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -17,7 +20,7 @@ export function TrustPoint({ emoji, title, description, index }: TrustPointProps
         hover: { duration: 0.15, ease: 'easeOut' },
         default: { duration: 0.2, ease: 'easeIn' },
       }}
-      whileHover={{
+      whileHover={isMobile ? {} : {
         scale: 1.05,
         y: -8,
         zIndex: 10,
@@ -37,37 +40,74 @@ export function TrustPoint({ emoji, title, description, index }: TrustPointProps
         msUserSelect: 'none',
       }}
     >
-      <div
-        style={{
-          fontSize: '32px',
-          marginBottom: '12px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-        }}
-      >
-        {emoji}
-      </div>
-      <h4
-        style={{
-          fontSize: '16px',
-          fontWeight: '700',
-          color: '#333',
-          marginBottom: '8px',
-        }}
-      >
-        {title}
-      </h4>
-      <p
-        style={{
-          fontSize: '14px',
-          color: '#666',
-          lineHeight: '1.6',
-          margin: 0,
-        }}
-      >
-        {description}
-      </p>
+      {isMobile ? (
+        // Mobilde: İkon başlığın hemen solunda, birlikte ortalanmış
+        <div style={{
+          textAlign: 'center',
+        }}>
+          <h4
+            style={{
+              fontSize: '16px',
+              fontWeight: '700',
+              color: '#333',
+              marginBottom: '8px',
+              margin: '0 0 8px 0',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '8px',
+            }}
+          >
+            <span style={{ fontSize: '32px' }}>{emoji}</span>
+            {title}
+          </h4>
+          <p
+            style={{
+              fontSize: '14px',
+              color: '#666',
+              lineHeight: '1.6',
+              margin: 0,
+            }}
+          >
+            {description}
+          </p>
+        </div>
+      ) : (
+        // Desktop'ta: Mevcut layout (ikon üstte)
+        <>
+          <div
+            style={{
+              fontSize: '32px',
+              marginBottom: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            {emoji}
+          </div>
+          <h4
+            style={{
+              fontSize: '16px',
+              fontWeight: '700',
+              color: '#333',
+              marginBottom: '8px',
+            }}
+          >
+            {title}
+          </h4>
+          <p
+            style={{
+              fontSize: '14px',
+              color: '#666',
+              lineHeight: '1.6',
+              margin: 0,
+            }}
+          >
+            {description}
+          </p>
+        </>
+      )}
     </motion.div>
   );
 }

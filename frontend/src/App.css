@@ -308,6 +308,13 @@ body {
   transform: scale(1.05);
 }
 
+/* Remove hover effects on mobile */
+@media (max-width: 768px) {
+  .mystery-text:hover {
+    transform: none;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

@@ -75,15 +75,15 @@ export function HomeCategories() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={isMobile ? {} : { scale: 1.05 }}
+            whileTap={isMobile ? {} : { scale: 0.98 }}
             onClick={() => handleScroll(category.targetId)}
             style={buttonStyle}
-            onMouseEnter={(e) => {
+            onMouseEnter={isMobile ? undefined : (e) => {
               e.currentTarget.style.boxShadow = '0 4px 12px rgba(108, 99, 255, 0.2)';
               e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={isMobile ? undefined : (e) => {
               e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
               e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
             }}
@@ -108,15 +108,15 @@ export function HomeCategories() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.2 + index * 0.05 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={isMobile ? {} : { scale: 1.05 }}
+            whileTap={isMobile ? {} : { scale: 0.98 }}
             onClick={() => handleScroll(category.targetId)}
             style={buttonStyle}
-            onMouseEnter={(e) => {
+            onMouseEnter={isMobile ? undefined : (e) => {
               e.currentTarget.style.boxShadow = '0 4px 12px rgba(108, 99, 255, 0.2)';
               e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={isMobile ? undefined : (e) => {
               e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
               e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
             }}

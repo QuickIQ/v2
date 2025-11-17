@@ -6,6 +6,10 @@ import { useEffect } from 'react';
  */
 export function useLookmagicIconAnimation(dependencies: any[] = []) {
   useEffect(() => {
+    // Don't run on mobile devices
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) return;
+    
     const icon = document.querySelector('.lookmagic-icon') as HTMLElement;
     if (!icon) return;
 

@@ -78,7 +78,7 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
         initial={{ opacity: 0, y: rowOffset === 0 ? -20 : rowOffset === 1 ? 0 : 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: (rowOffset * 0.2) + (index % 2) * 0.1 + 0.1, duration: 0.4 }}
-        whileHover={{
+        whileHover={isMobile ? {} : {
           scale: 1.06,
           boxShadow: '0 0 25px rgba(255,105,180,0.4)',
           background: 'linear-gradient(135deg, #fff5f8 0%, #ffe8eb 100%)',
@@ -342,8 +342,8 @@ export function GrowingMind({ language, testName, resultLevel, resultData }: Gro
                   });
                 }
               }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={isMobile ? {} : { scale: 1.05 }}
+              whileTap={isMobile ? {} : { scale: 0.98 }}
               style={{
                 marginTop: '24px',
                 padding: isMobile ? '14px 28px' : '16px 36px',

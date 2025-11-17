@@ -181,11 +181,11 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
             font-size: 22px !important;
             filter: none !important;
           }
-          .pay-now-btn:hover {
+          ${!isMobile ? `.pay-now-btn:hover {
             transform: translateY(-2px) !important;
             filter: brightness(1.09) !important;
             box-shadow: 0 12px 28px rgba(120, 135, 255, 0.45) !important;
-          }
+          }` : ''}
           .pay-now-btn:active {
             transform: translateY(0px) !important;
             filter: brightness(0.97) !important;
@@ -225,8 +225,8 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
         }}>
           <motion.button
             onClick={() => setActiveTab('card')}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={isMobile ? {} : { scale: 1.02 }}
+            whileTap={isMobile ? {} : { scale: 0.98 }}
             style={{
               flex: 1,
               padding: '14px 20px',
@@ -253,8 +253,8 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
           </motion.button>
           <motion.button
             onClick={() => setActiveTab('googlepay')}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={isMobile ? {} : { scale: 1.02 }}
+            whileTap={isMobile ? {} : { scale: 0.98 }}
             style={{
               flex: 1,
               padding: '14px 20px',
@@ -441,8 +441,8 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
             <motion.button
               onClick={handleGooglePayClick}
               disabled={processing}
-              whileHover={!processing ? { scale: 1.02 } : {}}
-              whileTap={!processing ? { scale: 0.98 } : {}}
+              whileHover={isMobile || processing ? {} : { scale: 1.02 }}
+              whileTap={isMobile || processing ? {} : { scale: 0.98 }}
               style={{
                 width: '100%',
                 padding: '18px',

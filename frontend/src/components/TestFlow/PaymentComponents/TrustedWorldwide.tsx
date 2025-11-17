@@ -15,7 +15,7 @@ export function TrustedWorldwide({ language }: TrustedWorldwideProps) {
 
   return (
     <motion.div
-      whileHover={{
+      whileHover={isMobile ? {} : {
         y: -2,
         boxShadow: '0 8px 28px rgba(0,0,0,0.06)',
       }}

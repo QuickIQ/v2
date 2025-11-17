@@ -63,11 +63,22 @@ export function AnimatedBackground() {
 
   useEffect(() => {
     let ticking = false;
+    let lastScrollY = 0;
+    let rafId: number | null = null;
 
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = Math.abs(currentScrollY - lastScrollY);
+      
+      // Sadece önemli scroll değişikliklerinde güncelle (10px threshold - performans için)
+      if (scrollDelta < 10 && ticking) {
+        return;
+      }
+      
       if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setScrollY(window.scrollY);
+        rafId = window.requestAnimationFrame(() => {
+          setScrollY(currentScrollY);
+          lastScrollY = currentScrollY;
           ticking = false;
         });
         ticking = true;
@@ -77,7 +88,12 @@ export function AnimatedBackground() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId !== null) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
   }, []);
 
   // Tüm renk geçişlerini içeren uzun bir gradient oluştur
@@ -109,15 +125,17 @@ export function AnimatedBackground() {
     return `0% ${Math.max(0, Math.min(100, backgroundY))}%`;
   };
 
+  const backgroundPosition = getBackgroundPosition();
+
   return (
     <>
       <motion.div
         animate={{
-          backgroundPosition: getBackgroundPosition(),
+          backgroundPosition: backgroundPosition,
         }}
         transition={{
-          duration: 0.5,
-          ease: 'easeOut',
+          duration: 0.3,
+          ease: 'linear',
         }}
         style={{
           position: 'fixed',
@@ -128,8 +146,11 @@ export function AnimatedBackground() {
           zIndex: 0,
           background: fullGradient,
           backgroundSize: '100% 200%',
-          backgroundPosition: getBackgroundPosition(),
+          backgroundPosition: backgroundPosition,
           backgroundRepeat: 'no-repeat',
+          willChange: 'background-position',
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
         }}
       />
       {/* Additional overlay for extra softness and depth - opacity artırıldı */}

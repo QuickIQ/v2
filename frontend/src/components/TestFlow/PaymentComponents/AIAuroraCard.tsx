@@ -16,7 +16,7 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      whileHover={{
+      whileHover={isMobile ? {} : {
         y: -8,
         scale: 1.02,
         transition: { duration: 0.3 }
@@ -66,18 +66,19 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
       />
 
       {/* Shimmering Glow Pulse - Hover Effect */}
-      <motion.div
-        initial={{ x: '-100%', opacity: 0 }}
-        whileHover={{
-          x: '200%',
-          opacity: [0, 0.6, 0],
-          transition: {
-            duration: 1.2,
-            ease: 'easeInOut',
-            repeat: Infinity,
-            repeatDelay: 0.5,
-          }
-        }}
+      {!isMobile && (
+        <motion.div
+          initial={{ x: '-100%', opacity: 0 }}
+          whileHover={{
+            x: '200%',
+            opacity: [0, 0.6, 0],
+            transition: {
+              duration: 1.2,
+              ease: 'easeInOut',
+              repeat: Infinity,
+              repeatDelay: 0.5,
+            }
+          }}
         style={{
           position: 'absolute',
           top: 0,
@@ -89,7 +90,8 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
           zIndex: 1,
           pointerEvents: 'none',
         }}
-      />
+        />
+      )}
 
       {/* Slow Gradient Animation */}
       <motion.div
@@ -117,12 +119,13 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
       />
 
       {/* Brightening Overlay on Hover */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileHover={{
-          opacity: 0.15,
-          transition: { duration: 0.4, ease: 'easeOut' }
-        }}
+      {!isMobile && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileHover={{
+            opacity: 0.15,
+            transition: { duration: 0.4, ease: 'easeOut' }
+          }}
         style={{
           position: 'absolute',
           top: 0,
@@ -133,7 +136,8 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
           zIndex: 0,
           pointerEvents: 'none',
         }}
-      />
+        />
+      )}
 
       <div style={{
         position: 'relative',
@@ -259,12 +263,12 @@ export function AIAuroraCard({ language }: AIAuroraCardProps) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          whileHover={{
+          whileHover={isMobile ? {} : {
             scale: 1.1,
             boxShadow: '0 0 30px rgba(91,233,255,0.5)',
             transition: { duration: 0.3 }
           }}
-          whileTap={{ scale: 0.98 }}
+          whileTap={isMobile ? {} : { scale: 0.98 }}
           style={{
             position: 'relative',
             padding: '18px 42px',

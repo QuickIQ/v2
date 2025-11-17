@@ -9,7 +9,7 @@ export function DiscoverYourMindCard() {
       initial={{ opacity: 0, y: -20, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
-      whileHover={{
+      whileHover={isMobile ? {} : {
         scale: 1.02,
         y: -4,
         transition: { duration: 0.3, ease: 'easeOut' }

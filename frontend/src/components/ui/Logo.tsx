@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Brain } from 'lucide-react';
+import { useMobile } from '../../hooks/useMobile';
 
 interface LogoProps {
   size?: number;
@@ -9,6 +10,7 @@ interface LogoProps {
 }
 
 export function Logo({ size = 48, animated = true, showText = true, className = '' }: LogoProps) {
+  const isMobile = useMobile();
   const logoVariants = {
     initial: { scale: 1, rotate: 0 },
     hover: {
@@ -41,7 +43,7 @@ export function Logo({ size = 48, animated = true, showText = true, className = 
         justifyContent: 'center',
       }}
       variants={animated ? logoVariants : {}}
-      whileHover={animated ? "hover" : {}}
+      whileHover={isMobile || !animated ? {} : "hover"}
       initial="initial"
     >
       {/* Logo Icon */}
@@ -351,6 +353,8 @@ export function Logo({ size = 48, animated = true, showText = true, className = 
 
 // Compact version for smaller spaces
 export function LogoCompact({ size = 32 }: { size?: number }) {
+  const isMobile = useMobile();
+  
   return (
     <motion.div
       style={{
@@ -361,8 +365,8 @@ export function LogoCompact({ size = 32 }: { size?: number }) {
         alignItems: 'center',
         justifyContent: 'center',
       }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={isMobile ? {} : { scale: 1.1 }}
+      whileTap={isMobile ? {} : { scale: 0.95 }}
     >
       <div
         style={{
