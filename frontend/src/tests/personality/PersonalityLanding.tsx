@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Logo } from '../../components/ui/Logo';
+import { useMobile } from '../../hooks/useMobile';
 import '../../App.css';
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 
 function PersonalityLanding({ onStart }: Props) {
   const { t } = useTranslation();
+  const isMobile = useMobile();
 
   return (
     <div className="app">
@@ -63,29 +65,33 @@ function PersonalityLanding({ onStart }: Props) {
             transition={{ delay: 0.5 }}
             style={{ 
               display: 'flex', 
+              flexDirection: 'row', // Always row - side by side on mobile and desktop
               justifyContent: 'center', 
-              gap: '24px', 
-              marginBottom: '40px', 
-              flexWrap: 'wrap' 
+              gap: isMobile ? '12px' : '24px', 
+              marginBottom: '40px',
             }}
           >
             <div style={{ 
               background: 'rgba(236, 72, 153, 0.1)', 
-              padding: '16px 24px', 
+              padding: isMobile ? '16px 20px' : '16px 24px', 
               borderRadius: '12px',
-              border: '1px solid rgba(236, 72, 153, 0.2)'
+              border: '1px solid rgba(236, 72, 153, 0.2)',
+              flex: 1,
+              maxWidth: isMobile ? 'none' : '200px',
             }}>
-              <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#ec4899' }}>
+              <div style={{ fontSize: isMobile ? '16px' : '18px', fontWeight: 'bold', color: '#ec4899' }}>
                 {t('tests.personality.questions_count')}
               </div>
             </div>
             <div style={{ 
               background: 'rgba(236, 72, 153, 0.1)', 
-              padding: '16px 24px', 
+              padding: isMobile ? '16px 20px' : '16px 24px', 
               borderRadius: '12px',
-              border: '1px solid rgba(236, 72, 153, 0.2)'
+              border: '1px solid rgba(236, 72, 153, 0.2)',
+              flex: 1,
+              maxWidth: isMobile ? 'none' : '200px',
             }}>
-              <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#ec4899' }}>
+              <div style={{ fontSize: isMobile ? '16px' : '18px', fontWeight: 'bold', color: '#ec4899' }}>
                 {t('tests.personality.duration')}
               </div>
             </div>

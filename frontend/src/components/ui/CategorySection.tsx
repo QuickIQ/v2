@@ -34,6 +34,7 @@ export function CategorySection() {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.5 }}
+      layout={false}
       style={{
         marginTop: isMobile ? '32px' : '48px',
         marginBottom: isMobile ? '48px' : '64px',
@@ -61,7 +62,8 @@ export function CategorySection() {
               gridAutoRows: '1fr',
               gap: isMobile ? '12px' : '10px',
               maxWidth: 'none',
-              margin: '0 auto',
+              marginLeft: 'auto',
+              marginRight: 'auto',
               padding: isMobile ? '0' : '0',
               marginBottom: isMobile ? '32px' : '48px',
               alignItems: 'stretch',

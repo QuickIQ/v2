@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { useMemo } from 'react';
 import i18n from './i18n/config';
 import { Header } from './components/layout/Header';
 import Home from './pages/Home';
@@ -25,8 +26,8 @@ const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 
 function AppContent() {
   useDynamicTestTranslations();
   
-  // Get all test configs for dynamic route generation
-  const testConfigs = getAllTestConfigs();
+  // Get all test configs for dynamic route generation - cache with useMemo
+  const testConfigs = useMemo(() => getAllTestConfigs(), []);
   
   // Filter out special tests (IQ and Personality) - they use custom implementations
   const universalTests = testConfigs.filter(

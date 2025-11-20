@@ -86,7 +86,7 @@
       "tr": "Bu değerlendirme, çatışma manipülasyonu yeteneklerinizi ve kavgaları tırmandırıp tırmandırmadığınızı, yönlendirip yönlendirmediğinizi veya taktiksel olarak çözüp çözmediğinizi belirlemenize yardımcı olur. Çatışma yönetimi ve manipülasyon kalıplarınız hakkında doğru içgörüler için dürüst cevap verin."
     },
     "reminder": {
-      "en": "You'll have 10 minutes to answer 20 questions. Take your time and respond based on your typical experiences.",
+      "en": "(Every answer you give will shape your final results.)",
       "tr": "20 soruyu cevaplamak için 10 dakikanız olacak. Zamanınızı alın ve tipik deneyimlerinize göre cevap verin."
     },
     "startButton": {

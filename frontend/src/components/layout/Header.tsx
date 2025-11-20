@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { useMobile } from "../../hooks/useMobile";
 import { LogoCompact } from "../ui/Logo";
+import categoriesData from "../../data/shared/categories.json";
 
 export function Header() {
   const [visible, setVisible] = useState(true);
@@ -12,31 +14,44 @@ export function Header() {
   const navigate = useNavigate();
   const isMobile = useMobile();
   const isHomePage = location.pathname === '/';
+  const { i18n } = useTranslation();
+  const language = i18n.language as 'en' | 'tr';
 
-  const testCategories = [
-    { label: 'IQ TEST', targetId: 'iq-test-section' },
-    { label: '16 Personalities', targetId: 'personality-test-section' },
-    { label: 'Bussiness', targetId: 'business-section' },
-    { label: 'Health', targetId: 'health-section' },
-    { label: 'Love', targetId: 'love-section' },
-    { label: 'Money', targetId: 'money-section' },
-    { label: 'Dark', targetId: 'dark-section' },
-  ];
+  // Get 5 main categories from categories.json
+  const testCategories = useMemo(() => {
+    return categoriesData.categories
+      .filter(cat => ['business', 'health', 'love', 'money', 'dark'].includes(cat.id))
+      .map(cat => ({
+        id: cat.id,
+        label: cat.title[language] || cat.title.en,
+        emoji: cat.emoji,
+        color: cat.color,
+      }));
+  }, [language]);
 
-  const handleTestCategoryClick = (targetId: string) => {
+  const handleTestCategoryClick = (categoryId: string) => {
     setTestsMenuOpen(false);
     if (isHomePage) {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      // Dispatch custom event to trigger category selection in Home.tsx
+      window.dispatchEvent(new CustomEvent('selectCategory', { detail: { categoryId } }));
+      
+      // Scroll to category section after a short delay
+      setTimeout(() => {
+        const categorySection = document.querySelector('[data-category-section]');
+        if (categorySection) {
+          categorySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 200);
     } else {
       navigate('/');
       setTimeout(() => {
-        const element = document.getElementById(targetId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.dispatchEvent(new CustomEvent('selectCategory', { detail: { categoryId } }));
+        setTimeout(() => {
+          const categorySection = document.querySelector('[data-category-section]');
+          if (categorySection) {
+            categorySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 200);
       }, 100);
     }
   };
@@ -242,34 +257,38 @@ export function Header() {
               >
                 {testCategories.map((category, index) => (
                   <motion.button
-                    key={category.targetId}
+                    key={category.id}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.03 }}
-                    onClick={() => handleTestCategoryClick(category.targetId)}
+                    onClick={() => handleTestCategoryClick(category.id)}
                     style={{
                       padding: '12px 16px',
                       background: 'rgba(255, 255, 255, 0.9)',
-                      border: '1px solid rgba(108, 99, 255, 0.2)',
+                      border: `1px solid ${category.color}33`,
                       borderRadius: '10px',
-                      color: '#6C63FF',
+                      color: category.color,
                       fontWeight: '600',
                       fontSize: '14px',
                       cursor: 'pointer',
                       textAlign: 'left',
                       transition: 'all 0.2s ease',
                       width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(108, 99, 255, 0.2)';
-                      e.currentTarget.style.background = 'rgba(108, 99, 255, 0.1)';
+                      e.currentTarget.style.boxShadow = `0 4px 12px ${category.color}33`;
+                      e.currentTarget.style.background = `${category.color}15`;
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.boxShadow = 'none';
                       e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
                     }}
                   >
-                    {category.label}
+                    <span style={{ fontSize: '18px' }}>{category.emoji}</span>
+                    <span>{category.label.split('–')[0].trim()}</span>
                   </motion.button>
                 ))}
               </motion.div>

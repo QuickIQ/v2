@@ -66,7 +66,21 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
   const isMobile = useMobile();
   const navigate = useNavigate();
 
-  const currentLocale = (locale || i18n.language || 'en').split('-')[0] as 'en' | 'tr';
+  // Supported locales: 30 languages
+  const supportedLocales = ['en', 'es', 'de', 'fr', 'pt-br', 'it', 'nl', 'sv', 'no', 'tr', 'da', 'fi', 'ro', 'cs', 'sk', 'hu', 'pl', 'hr', 'sr-latn', 'id', 'tl', 'ms', 'et', 'lv', 'lt', 'sl', 'is', 'ga', 'eu', 'ca'] as const;
+  type SupportedLocale = typeof supportedLocales[number];
+  
+  // Get current locale, normalize to supported format
+  const getCurrentLocale = (): SupportedLocale => {
+    const rawLocale = (locale || i18n.language || 'en').toLowerCase();
+    // Handle pt-BR, sr-LATN etc.
+    if (rawLocale.startsWith('pt')) return 'pt-br';
+    if (rawLocale.startsWith('sr')) return 'sr-latn';
+    const baseLocale = rawLocale.split('-')[0];
+    return (supportedLocales.includes(baseLocale as SupportedLocale) ? baseLocale : 'en') as SupportedLocale;
+  };
+  
+  const currentLocale = getCurrentLocale();
   const config = levelConfig[level];
   const testConfig = getTestConfig(testId);
   const testName = testConfig?.name?.[currentLocale] || testId;
@@ -104,20 +118,40 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
     loadResultContent();
   }, [testId, level]);
 
+  // Helper function to get localized text
+  const getLocalizedText = (text: string | Record<string, string> | undefined, fallbackLocale: SupportedLocale = 'en'): string => {
+    if (!text) return '';
+    if (typeof text === 'string') return text; // Backward compatibility
+    if (typeof text === 'object') {
+      // Try current locale first, then fallback to 'en'
+      return text[currentLocale] || text[fallbackLocale] || Object.values(text)[0] || '';
+    }
+    return '';
+  };
+
   // Get content from JSON or translation keys
   const getContent = () => {
     // Try JSON first
     if (resultContent && resultContent[level]) {
+      const levelData = resultContent[level];
+      const sections = Array.isArray(levelData.sections) 
+        ? levelData.sections.map((section: any) => ({
+            icon: section.icon || '',
+            title: getLocalizedText(section.title),
+            text: getLocalizedText(section.text),
+            insights: Array.isArray(section.insights) 
+              ? section.insights.map((insight: any) => getLocalizedText(insight))
+              : [],
+          }))
+        : [];
+      
       return {
-        title: resultContent[level].title || '',
-        summary: resultContent[level].summary || '',
-        insights: resultContent[level].insights || [],
-        sections: {
-          strengths: resultContent[level].sections?.strengths || '',
-          growthAreas: resultContent[level].sections?.growthAreas || '',
-          practicalApplications: resultContent[level].sections?.practicalApplications || '',
-          futurePotential: resultContent[level].sections?.futurePotential || '',
-        }
+        title: getLocalizedText(levelData.title),
+        summary: getLocalizedText(levelData.summary),
+        insights: Array.isArray(levelData.insights)
+          ? levelData.insights.map((insight: any) => getLocalizedText(insight))
+          : [],
+        sections: sections,
       };
     }
 
@@ -127,12 +161,7 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
       title: t(`${baseKey}.title`) || '',
       summary: t(`${baseKey}.summary`) || '',
       insights: (t(`${baseKey}.insights`, { returnObjects: true }) as string[]) || [],
-      sections: {
-        strengths: t(`${baseKey}.strengths.text`) || '',
-        growthAreas: t(`${baseKey}.growthAreas.text`) || '',
-        practicalApplications: t(`${baseKey}.practicalApplications.text`) || '',
-        futurePotential: t(`${baseKey}.futurePotential.text`) || '',
-      }
+      sections: [],
     };
   };
 
@@ -140,12 +169,7 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
     title: '',
     summary: '',
     insights: [],
-    sections: {
-      strengths: '',
-      growthAreas: '',
-      practicalApplications: '',
-      futurePotential: ''
-    }
+    sections: []
   } : getContent();
 
   const scrollToTests = () => {
@@ -158,11 +182,19 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
     }, 100);
   };
 
-  // Card gradient variations
-  const cardGradients = [
-    'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 250, 255, 0.95) 100%)',
-    'linear-gradient(135deg, rgba(245, 245, 255, 0.95) 0%, rgba(240, 240, 255, 0.95) 100%)',
-    'linear-gradient(135deg, rgba(250, 240, 255, 0.95) 0%, rgba(245, 235, 255, 0.95) 100%)',
+  // Card background colors for 11 cards
+  const cardBackgrounds = [
+    '#EEF5FF',  // Card 1
+    '#F2F1FF',  // Card 2
+    '#F8F1FF',  // Card 3
+    '#FFF0FA',  // Card 4
+    '#FFFFFF',  // Card 5
+    '#EEF5FF',  // Card 6
+    '#F2F1FF',  // Card 7
+    '#F8F1FF',  // Card 8
+    '#FFF0FA',  // Card 9
+    '#FFFFFF',  // Card 10
+    '#2A2420',  // Card 11
   ];
 
   // Section titles - dynamic based on test name
@@ -197,82 +229,111 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
   };
 
   // Section titles and content based on level
-  const sections = [
-    {
-      key: 'overview',
-      icon: config.sectionEmojis[0],
-      title: getSectionTitle('overview'),
-      text: content.summary,
+  // Use sections from JSON if available, otherwise use empty sections
+  const sections = Array.isArray(content.sections) && content.sections.length > 0
+    ? content.sections.map((section: any, index: number) => ({
+        key: `section${index + 1}`,
+        icon: section.icon || '',
+        title: section.title || '',
+        text: section.text || '',
+        insights: section.insights || [],
+      }))
+    : [
+        {
+          key: 'section1',
+          icon: '',
+          title: '',
+          text: '',
+        },
+        {
+          key: 'section2',
+          icon: '',
+          title: '',
+          text: '',
+          insights: [],
+        },
+        {
+          key: 'section3',
+          icon: '',
+          title: '',
+          text: '',
+        },
+        {
+          key: 'section4',
+          icon: '',
+          title: '',
+          text: '',
     },
     {
-      key: 'insights',
-      icon: config.sectionEmojis[1],
-      title: getSectionTitle('insights'),
-      text: currentLocale === 'tr' 
-        ? 'Ruh hali kalıplarınız ve düşünce dengeniz hakkında en önemli bulgular:'
-        : 'The most important findings about your mood patterns and thought balance:',
-      insights: content.insights,
+          key: 'section5',
+          icon: '',
+          title: '',
+          text: '',
+        },
+        {
+          key: 'section6',
+          icon: '',
+          title: '',
+          text: '',
+        },
+        {
+          key: 'section7',
+          icon: '',
+          title: '',
+          text: '',
+        },
+        {
+          key: 'section8',
+          icon: '',
+          title: '',
+          text: '',
+        },
+        {
+          key: 'section9',
+          icon: '',
+          title: '',
+          text: '',
+        },
+        {
+          key: 'section10',
+          icon: '',
+          title: '',
+          text: '',
     },
     {
-      key: 'strengths',
-      icon: config.sectionEmojis[2],
-      title: getSectionTitle('strengths'),
-      text: content.sections?.strengths || (level === 'excellent'
-        ? (currentLocale === 'tr' 
-          ? 'Ruh hali dengeniz konusunda olağanüstü yeteneklere sahipsiniz. İşte en güçlü yönleriniz:'
-          : 'You possess exceptional mood balance abilities. Here are your strongest areas:')
-        : level === 'good'
-        ? (currentLocale === 'tr'
-          ? 'Ruh hali dengeniz konusunda güçlü yetenekleriniz var. İşte öne çıkan güçlü yönleriniz:'
-          : 'You have strong mood balance skills. Here are your standout strengths:')
-        : (currentLocale === 'tr'
-          ? 'Ruh hali dengeniz potansiyeliniz gelişiyor. İşte güçlü yönleriniz:'
-          : 'Your mood balance potential is developing. Here are your strengths:')),
-    },
-    {
-      key: 'growth',
-      icon: config.sectionEmojis[3],
-      title: getSectionTitle('growth'),
-      text: content.sections?.growthAreas || (level === 'excellent'
-        ? (currentLocale === 'tr'
-          ? 'Mükemmel seviyede olsanız bile, ruh hali dengenizi daha da geliştirebileceğiniz alanlar:'
-          : 'Even at an excellent level, areas where you can further enhance your mood balance:')
-        : level === 'good'
-        ? (currentLocale === 'tr'
-          ? 'Ruh hali dengenizi daha da artırmak için odaklanabileceğiniz alanlar:'
-          : 'Areas you can focus on to further increase your mood balance:')
-        : (currentLocale === 'tr'
-          ? 'Ruh hali dengenizi geliştirmek için pratik yapabileceğiniz alanlar:'
-          : 'Areas you can practice to develop your mood balance abilities:')),
-    },
-    {
-      key: 'application',
-      icon: config.sectionEmojis[4],
-      title: getSectionTitle('application'),
-      text: content.sections?.practicalApplications || (currentLocale === 'tr'
-        ? 'Ruh hali dengenizi günlük hayatta nasıl koruyabileceğiniz:'
-        : 'How you can maintain your mood balance in daily life:'),
-    },
-    {
-      key: 'future',
-      icon: config.sectionEmojis[5],
-      title: getSectionTitle('future'),
-      text: content.sections?.futurePotential || (currentLocale === 'tr'
-        ? 'Ruh hali dengenizi geliştirmeye devam ederseniz neler başarabileceğiniz:'
-        : 'What you can achieve if you continue developing your mood balance:'),
-    },
+          key: 'section11',
+          icon: '',
+          title: '',
+          text: '',
+        },
+      ];
+
+  // Soft, light title colors for each card
+  const titleColors = [
+    '#8B9DC3',  // Card 1 - Soft blue
+    '#A8A8D8',  // Card 2 - Soft purple
+    '#C8A8D8',  // Card 3 - Soft lavender
+    '#E8B8C8',  // Card 4 - Soft pink
+    '#B8C8D8',  // Card 5 - Soft blue-gray
+    '#8B9DC3',  // Card 6 - Soft blue
+    '#A8A8D8',  // Card 7 - Soft purple
+    '#C8A8D8',  // Card 8 - Soft lavender
+    '#E8B8C8',  // Card 9 - Soft pink
+    '#B8C8D8',  // Card 10 - Soft blue-gray
+    '#D4A574',  // Card 11 - Soft brown/tan
   ];
 
   // Render section card
   const renderSection = (section: typeof sections[0], index: number, delay: number) => {
-    const gradientIndex = index % 3;
+    const backgroundColor = cardBackgrounds[index] || cardBackgrounds[0];
+    const titleColor = titleColors[index] || titleColors[0];
 
     return (
       <FadeInCard
         key={section.key}
         delay={delay}
         style={{
-          background: cardGradients[gradientIndex],
+          background: backgroundColor,
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)',
           borderRadius: '32px',
@@ -281,37 +342,43 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
           border: '1px solid rgba(108, 99, 255, 0.2)',
         }}
       >
+        {/* İkon ve başlık - sadece varsa göster */}
+        {(section.icon || section.title) && (
         <div style={{
           display: 'flex',
           alignItems: 'center',
           gap: '12px',
-          marginBottom: '20px',
+            marginBottom: section.text ? '20px' : '0',
         }}>
+            {section.icon && (
           <span style={{ fontSize: '32px' }}>{section.icon}</span>
+            )}
+            {section.title && (
           <h2 style={{
             fontSize: isMobile ? '20px' : '24px',
-            fontWeight: '800',
-            background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
+                fontWeight: '700',
+                color: titleColor,
             margin: 0,
+                opacity: 0.85,
           }}>
             {section.title}
           </h2>
+            )}
         </div>
-        {section.key !== 'insights' && (
+        )}
+        
+        {section.text && (
           <div style={{ 
             color: '#555', 
             lineHeight: '1.8', 
             fontSize: '15px', 
             whiteSpace: 'pre-line',
-            marginBottom: '0',
+            marginBottom: section.insights && section.insights.length > 0 ? '20px' : '0',
           }}>
-            <p>{section.text}</p>
+            <p style={{ margin: 0 }}>{section.text}</p>
           </div>
         )}
-        {section.key === 'insights' && section.insights && section.insights.length > 0 && (
+        {section.insights && section.insights.length > 0 && (
           <div style={{ 
             color: '#555', 
             lineHeight: '1.8', 
@@ -380,6 +447,69 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
               {heroEmoji}
             </motion.div>
           </div>
+          {content.title ? (() => {
+            // Parse title: "DEVELOPING — Cognitive-Science Based Growth Plan (10 Titles + Guides)"
+            // Remove any leading icons/emojis
+            const cleanTitle = content.title.replace(/^[⭐🌟✨🎯💫🔮]\s*/, '');
+            
+            // Check if title contains "DEVELOPING", "GOOD", or "EXCELLENT" followed by — or -
+            const levelMatch = cleanTitle.match(/^(DEVELOPING|GOOD|EXCELLENT)\s*[—–-]\s*(.+)$/i);
+            
+            if (levelMatch) {
+              const levelText = levelMatch[1].toUpperCase();
+              const restText = levelMatch[2];
+              
+              // Color mapping for different levels
+              const levelColors: Record<string, string> = {
+                'DEVELOPING': '#10B981', // Green
+                'GOOD': '#3B82F6',       // Blue
+                'EXCELLENT': '#8B5CF6',  // Purple
+              };
+              
+              const levelColor = levelColors[levelText] || '#10B981';
+              
+              return (
+                <div style={{
+                  marginBottom: content.summary ? '12px' : '16px',
+                }}>
+                  <h1 style={{
+                    fontSize: isMobile ? '36px' : '48px',
+                    fontWeight: '900',
+                    color: levelColor,
+                    margin: 0,
+                    marginBottom: '8px',
+                    lineHeight: '1.2',
+                  }}>
+                    {levelText}
+                  </h1>
+                  <p style={{
+                    fontSize: isMobile ? '18px' : '22px',
+                    fontWeight: '600',
+                    color: '#666',
+                    margin: 0,
+                    lineHeight: '1.4',
+                  }}>
+                    {restText}
+                  </p>
+                </div>
+              );
+            }
+            
+            // Fallback: show title with gradient
+            return (
+              <h1 style={{
+                fontSize: isMobile ? '32px' : '42px',
+                fontWeight: '900',
+                background: 'linear-gradient(135deg, #2196F3 0%, #64B5F6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                marginBottom: content.summary ? '12px' : '16px',
+              }}>
+                {cleanTitle}
+              </h1>
+            );
+          })() : (
           <h1 style={{
             fontSize: isMobile ? '32px' : '42px',
             fontWeight: '900',
@@ -387,19 +517,23 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-            marginBottom: '16px',
+              marginBottom: content.summary ? '12px' : '16px',
           }}>
             {currentLocale === 'tr' 
               ? `Detaylı ${testName} Raporunuz`
               : `Your Detailed ${testName} Report`}
           </h1>
+          )}
+          {content.summary && (
           <p style={{
-            fontSize: isMobile ? '16px' : '18px',
+              fontSize: isMobile ? '14px' : '16px',
             color: '#666',
             lineHeight: '1.6',
+              opacity: 0.8,
           }}>
-            {content.title || ''}
+              {content.summary}
           </p>
+          )}
         </FadeInCard>
 
         {/* Section Cards */}

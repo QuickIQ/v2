@@ -258,51 +258,53 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
           transition={{ duration: 0.8, delay: 0.5 }}
           style={{
             display: 'flex',
-            flexDirection: isMobile ? 'column' : 'row',
+            flexDirection: 'row', // Always row - side by side on mobile and desktop
             justifyContent: 'center',
-            gap: '20px',
+            gap: isMobile ? '12px' : '20px',
             marginBottom: '40px',
           }}
         >
           <motion.div
-            whileHover={{ scale: 1.05, y: -5 }}
+            whileHover={isMobile ? {} : { scale: 1.05, y: -5 }}
             style={{
               background: 'rgba(255, 255, 255, 0.8)',
               backdropFilter: 'blur(10px)',
               WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '16px',
-              padding: isMobile ? '24px' : '32px',
+              padding: isMobile ? '20px 16px' : '32px',
               boxShadow: `0 4px 16px ${colors.primary.main}26`,
               border: '1px solid rgba(255, 255, 255, 0.3)',
               flex: 1,
-              maxWidth: isMobile ? '100%' : '200px',
+              minWidth: isMobile ? '0' : '200px',
+              maxWidth: isMobile ? 'none' : '200px',
             }}
           >
-            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: colors.primary.main, marginBottom: '8px' }}>
+            <div style={{ fontSize: isMobile ? '28px' : '48px', fontWeight: 'bold', color: colors.primary.main, marginBottom: '8px' }}>
               {questions.total}
             </div>
-            <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
+            <div style={{ fontSize: isMobile ? '13px' : '16px', color: '#666', fontWeight: '500' }}>
               {language === 'tr' ? 'Soru' : 'Questions'}
             </div>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 1.05, y: -5 }}
+            whileHover={isMobile ? {} : { scale: 1.05, y: -5 }}
             style={{
               background: 'rgba(255, 255, 255, 0.8)',
               backdropFilter: 'blur(10px)',
               WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '16px',
-              padding: isMobile ? '24px' : '32px',
+              padding: isMobile ? '20px 16px' : '32px',
               boxShadow: `0 4px 16px ${colors.primary.main}26`,
               border: '1px solid rgba(255, 255, 255, 0.3)',
               flex: 1,
-              maxWidth: isMobile ? '100%' : '200px',
+              minWidth: isMobile ? '0' : '200px',
+              maxWidth: isMobile ? 'none' : '200px',
             }}
           >
-            <div style={{ fontSize: isMobile ? '32px' : '48px', fontWeight: 'bold', color: colors.primary.main, marginBottom: '8px' }}>
+            <div style={{ fontSize: isMobile ? '28px' : '48px', fontWeight: 'bold', color: colors.primary.main, marginBottom: '8px' }}>
               {Math.floor(questions.timeLimit / 60)}
             </div>
-            <div style={{ fontSize: isMobile ? '14px' : '16px', color: '#666', fontWeight: '500' }}>
+            <div style={{ fontSize: isMobile ? '13px' : '16px', color: '#666', fontWeight: '500' }}>
               {language === 'tr' ? 'Dakika' : 'Minutes'}
             </div>
           </motion.div>

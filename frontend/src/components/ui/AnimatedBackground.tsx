@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
 
 // Renk geçişleri: açık mor -> mordan maviye -> maviden açık maviye -> açık maviden açık yeşile -> açık yeşilden açık sarıya -> açık sarıdan açık turuncuya -> açık turuncudan açık kırmızıya
 // Daha soft ve pastel tonlar - contrast düşürüldü
@@ -70,8 +69,8 @@ export function AnimatedBackground() {
       const currentScrollY = window.scrollY;
       const scrollDelta = Math.abs(currentScrollY - lastScrollY);
       
-      // Sadece önemli scroll değişikliklerinde güncelle (10px threshold - performans için)
-      if (scrollDelta < 10 && ticking) {
+      // Sadece önemli scroll değişikliklerinde güncelle (20px threshold - performans optimizasyonu)
+      if (scrollDelta < 20 && ticking) {
         return;
       }
       
@@ -126,17 +125,19 @@ export function AnimatedBackground() {
   };
 
   const backgroundPosition = getBackgroundPosition();
+  const backgroundRef = useRef<HTMLDivElement>(null);
+
+  // Direct DOM manipulation for better performance - no Framer Motion overhead
+  useEffect(() => {
+    if (backgroundRef.current) {
+      backgroundRef.current.style.backgroundPosition = backgroundPosition;
+    }
+  }, [backgroundPosition]);
 
   return (
     <>
-      <motion.div
-        animate={{
-          backgroundPosition: backgroundPosition,
-        }}
-        transition={{
-          duration: 0.3,
-          ease: 'linear',
-        }}
+      <div
+        ref={backgroundRef}
         style={{
           position: 'fixed',
           top: 0,
@@ -151,6 +152,7 @@ export function AnimatedBackground() {
           willChange: 'background-position',
           backfaceVisibility: 'hidden',
           WebkitBackfaceVisibility: 'hidden',
+          transition: 'background-position 0.3s linear',
         }}
       />
       {/* Additional overlay for extra softness and depth - opacity artırıldı */}

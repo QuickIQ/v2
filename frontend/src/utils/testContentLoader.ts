@@ -169,7 +169,36 @@ export async function loadTestContent(testId: string): Promise<TestContent | nul
 /**
  * Get test config by ID or slug
  */
-export function getTestConfig(idOrSlug: string) {
+export function getTestConfig(idOrSlug: string): {
+  id: string;
+  slug: string;
+  name: { en: string; tr: string };
+  subtitle?: { en: string; tr: string };
+  category: string;
+  icon: string;
+  iconEmoji: string;
+  questions: number;
+  minutes: number;
+  colors: {
+    primary: string;
+    light: string;
+    cardBackground: string;
+    cardBorder: string;
+    cardHoverBorder: string;
+    cardGlow: string;
+    cardShadow: string;
+    buttonGradient: string;
+    titleGradient: string;
+  };
+  scoring?: {
+    thresholds: {
+      excellent: number;
+      good: number;
+      developing: number;
+    };
+    timeLimit: number;
+  };
+} | undefined {
   return testConfig.tests.find(
     (test) => test.id === idOrSlug || test.slug === idOrSlug
   );

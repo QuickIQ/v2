@@ -7,6 +7,10 @@
         "en": "IQ Test",
         "tr": "IQ Testi"
       },
+      "subtitle": {
+        "en": "Prove you belong to the real intelligence class. The results never lie.",
+        "tr": "Prove you belong to the real intelligence class. The results never lie."
+      },
       "category": "Intelligence",
       "icon": "Brain",
       "iconEmoji": "🧠",
@@ -30,6 +34,10 @@
       "name": {
         "en": "Personality Test",
         "tr": "Kişilik Testi"
+      },
+      "subtitle": {
+        "en": "Are you the rare, strategic INTJ or the scattered, chaotic INFP? Uncover your strengths, blind spots, and true personality code.",
+        "tr": "Are you the rare, strategic INTJ or the scattered, chaotic INFP? Uncover your strengths, blind spots, and true personality code."
       },
       "category": "Personality",
       "icon": "Heart",
