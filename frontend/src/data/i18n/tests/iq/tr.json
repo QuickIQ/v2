@@ -1,0 +1,15 @@
+{
+  "tests": {
+    "iq": {
+      "landing": {
+        "title": "IQ Testi",
+        "subtitle": "Bilişsel yeteneklerinizi ölçün"
+      },
+      "questions": {
+        "title": "Soru {{current}} / {{total}}",
+        "time_remaining": "Kalan Süre"
+      }
+    }
+  }
+}
+

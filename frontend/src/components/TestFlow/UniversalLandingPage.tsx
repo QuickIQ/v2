@@ -2,12 +2,20 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, BookOpen, Clock } from 'lucide-react';
 import { loadTestContent, getTestConfig, TestContent } from '../../utils/testContentLoader';
 import * as LucideIcons from 'lucide-react';
 import { LoadingFallback } from '../ui/LoadingFallback';
 import { ErrorFallback } from '../ui/ErrorFallback';
 import '../../App.css';
+
+// Import landing images
+import creativeThinkingImage from '../../assets/images/landing/creative-thinking.svg';
+
+// Landing images mapping
+const landingImages: Record<string, string> = {
+  'creative-thinking': creativeThinkingImage,
+};
 
 interface Props {
   testId: string;
@@ -21,8 +29,18 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
   const language = i18n.language as 'en' | 'tr';
   const [content, setContent] = useState<TestContent | null>(null);
   const [loading, setLoading] = useState(true);
-
+  const [landingImage, setLandingImage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // Load landing image
+  useEffect(() => {
+    const image = landingImages[testId];
+    if (image) {
+      setLandingImage(image);
+    } else {
+      setLandingImage(null);
+    }
+  }, [testId]);
 
   useEffect(() => {
     async function loadContent() {
@@ -120,7 +138,7 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
           transition={{ duration: 0.6 }}
           style={{
             fontSize: isMobile ? '36px' : '48px',
-            marginBottom: '16px',
+            marginBottom: '10px',
             fontWeight: 'bold',
             background: colors.button.primary.gradient,
             WebkitBackgroundClip: 'text',
@@ -157,7 +175,7 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
               }} 
             />
           </motion.div>
-          {landing.title[language] || landing.title.en}
+          {testConfig?.name?.[language] || testConfig?.name?.en || testId}
         </motion.h1>
 
         {/* Subtitle */}
@@ -168,68 +186,65 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
           style={{
             fontSize: isMobile ? '18px' : '22px',
             color: '#555',
-            marginBottom: '32px',
+            marginBottom: '8px',
             fontWeight: '500',
             lineHeight: '1.5',
             textAlign: 'center',
           }}
         >
-          {landing.subtitle[language] || landing.subtitle.en}
+          {language === 'tr' 
+            ? 'Dürüst cevap verin, bu test yargılamak için değil, kendinizi keşfetmeniz içindir.'
+            : 'Answer honestly, this test is for your self-discovery, not for judgment.'}
         </motion.p>
 
-        {/* Description Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Reminder - below subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          whileHover={{
-            scale: 1.05,
-            y: -10,
-            boxShadow: `0 16px 48px ${colors.primary.main}4D, 0 0 40px rgba(255, 255, 255, 0.5)`,
-            transition: { duration: 0.15, ease: 'easeOut' }
-          }}
+          transition={{ duration: 0.6, delay: 0.15 }}
           style={{
-            background: 'rgba(255, 255, 255, 0.7)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            padding: isMobile ? '24px' : '32px',
-            borderRadius: '20px',
-            marginBottom: '24px',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-            border: '1px solid rgba(255, 255, 255, 0.3)',
-            cursor: 'pointer',
-            transition: 'all 0.15s ease-out',
-            position: 'relative',
-            zIndex: 1,
+            fontSize: isMobile ? '13px' : '15px',
+            color: '#666',
+            marginBottom: '32px',
+            lineHeight: '1.5',
+            textAlign: 'center',
+            fontStyle: 'italic',
           }}
         >
-          <p style={{
-            fontSize: isMobile ? '15px' : '17px',
-            color: '#555',
-            lineHeight: '1.7',
-            textAlign: 'center',
-            margin: 0,
-            marginBottom: '16px',
-          }}>
-            {landing.description[language] || landing.description.en}
-          </p>
-          <p style={{
-            fontSize: isMobile ? '14px' : '16px',
-            color: '#666',
-            lineHeight: '1.6',
-            textAlign: 'center',
-            margin: 0,
-            fontStyle: 'italic',
-          }}>
-            {landing.reminder[language] || landing.reminder.en}
-          </p>
-        </motion.div>
+          {landing.reminder[language] || landing.reminder.en}
+        </motion.p>
+
+        {/* Landing Image - SVG */}
+        {landingImage && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            style={{
+              marginBottom: '32px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={landingImage}
+              alt={`${testId} landing illustration`}
+              style={{
+                maxWidth: isMobile ? '280px' : '400px',
+                width: '100%',
+                height: 'auto',
+                filter: `drop-shadow(0 8px 16px ${colors.primary.main}33)`,
+              }}
+            />
+          </motion.div>
+        )}
 
         {/* Separator with icon */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: landingImage ? 0.6 : 0.4 }}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -255,60 +270,122 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: landingImage ? 0.8 : 0.5 }}
           style={{
             display: 'flex',
-            flexDirection: 'row', // Always row - side by side on mobile and desktop
+            flexDirection: 'row',
             justifyContent: 'center',
-            gap: isMobile ? '12px' : '20px',
-            marginBottom: '40px',
+            gap: isMobile ? '10px' : '16px',
+            marginBottom: '10px',
           }}
         >
           <motion.div
-            whileHover={isMobile ? {} : { scale: 1.05, y: -5 }}
+            whileHover={isMobile ? {} : { scale: 1.05, y: -3 }}
             style={{
-              background: 'rgba(255, 255, 255, 0.8)',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              borderRadius: '16px',
-              padding: isMobile ? '20px 16px' : '32px',
-              boxShadow: `0 4px 16px ${colors.primary.main}26`,
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              flex: 1,
-              minWidth: isMobile ? '0' : '200px',
-              maxWidth: isMobile ? 'none' : '200px',
+              background: 'rgba(255, 255, 255, 0.85)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              borderRadius: '12px',
+              padding: isMobile ? '12px 16px' : '16px 22px',
+              boxShadow: `0 2px 12px ${colors.primary.main}20, 0 0 0 1px ${colors.primary.main}15`,
+              border: `1px solid ${colors.primary.main}20`,
+              flex: '0 0 auto',
+              display: 'flex',
+              alignItems: 'center',
+              gap: isMobile ? '6px' : '8px',
+              transition: 'all 0.2s ease',
             }}
           >
-            <div style={{ fontSize: isMobile ? '28px' : '48px', fontWeight: 'bold', color: colors.primary.main, marginBottom: '8px' }}>
+            <span style={{ 
+              fontSize: isMobile ? '20px' : '26px', 
+              fontWeight: '700', 
+              color: colors.primary.main, 
+              lineHeight: '1',
+            }}>
               {questions.total}
-            </div>
-            <div style={{ fontSize: isMobile ? '13px' : '16px', color: '#666', fontWeight: '500' }}>
+            </span>
+            <span style={{ 
+              fontSize: isMobile ? '11px' : '13px', 
+              color: '#666', 
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px',
+            }}>
               {language === 'tr' ? 'Soru' : 'Questions'}
-            </div>
+            </span>
+            <BookOpen 
+              size={isMobile ? 14 : 16} 
+              style={{ 
+                color: colors.primary.main,
+                opacity: 0.6,
+                flexShrink: 0,
+                marginLeft: '2px',
+              }} 
+            />
           </motion.div>
           <motion.div
-            whileHover={isMobile ? {} : { scale: 1.05, y: -5 }}
+            whileHover={isMobile ? {} : { scale: 1.05, y: -3 }}
             style={{
-              background: 'rgba(255, 255, 255, 0.8)',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              borderRadius: '16px',
-              padding: isMobile ? '20px 16px' : '32px',
-              boxShadow: `0 4px 16px ${colors.primary.main}26`,
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              flex: 1,
-              minWidth: isMobile ? '0' : '200px',
-              maxWidth: isMobile ? 'none' : '200px',
+              background: 'rgba(255, 255, 255, 0.85)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              borderRadius: '12px',
+              padding: isMobile ? '12px 16px' : '16px 22px',
+              boxShadow: `0 2px 12px ${colors.primary.main}20, 0 0 0 1px ${colors.primary.main}15`,
+              border: `1px solid ${colors.primary.main}20`,
+              flex: '0 0 auto',
+              display: 'flex',
+              alignItems: 'center',
+              gap: isMobile ? '6px' : '8px',
+              transition: 'all 0.2s ease',
             }}
           >
-            <div style={{ fontSize: isMobile ? '28px' : '48px', fontWeight: 'bold', color: colors.primary.main, marginBottom: '8px' }}>
+            <span style={{ 
+              fontSize: isMobile ? '20px' : '26px', 
+              fontWeight: '700', 
+              color: colors.primary.main, 
+              lineHeight: '1',
+            }}>
               {Math.floor(questions.timeLimit / 60)}
-            </div>
-            <div style={{ fontSize: isMobile ? '13px' : '16px', color: '#666', fontWeight: '500' }}>
+            </span>
+            <span style={{ 
+              fontSize: isMobile ? '11px' : '13px', 
+              color: '#666', 
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px',
+            }}>
               {language === 'tr' ? 'Dakika' : 'Minutes'}
-            </div>
+            </span>
+            <Clock 
+              size={isMobile ? 14 : 16} 
+              style={{ 
+                color: colors.primary.main,
+                opacity: 0.6,
+                flexShrink: 0,
+                marginLeft: '2px',
+              }} 
+            />
           </motion.div>
         </motion.div>
+
+        {/* Privacy Notice - above button */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: landingImage ? 0.95 : 0.65 }}
+          style={{
+            fontSize: isMobile ? '12px' : '13px',
+            color: '#666',
+            marginBottom: '8px',
+            textAlign: 'center',
+            lineHeight: '1.4',
+          }}
+        >
+          {language === 'tr' 
+            ? 'Cevaplarınız saklanmaz veya paylaşılmaz.'
+            : 'Your responses are not stored or shared.'}
+        </motion.p>
 
         {/* Start Button */}
         <motion.div
@@ -316,7 +393,7 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
           animate={{ opacity: 1, scale: 1 }}
           transition={{ 
             duration: 0.6, 
-            delay: 0.7,
+            delay: landingImage ? 1.0 : 0.7,
             type: 'spring',
             stiffness: 200,
             damping: 15,

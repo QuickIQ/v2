@@ -1,0 +1,15 @@
+{
+  "tests": {
+    "iq": {
+      "landing": {
+        "title": "IQ Test",
+        "subtitle": "Measure your cognitive abilities"
+      },
+      "questions": {
+        "title": "Question {{current}} of {{total}}",
+        "time_remaining": "Time Remaining"
+      }
+    }
+  }
+}
+

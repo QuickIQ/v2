@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { usePersonalityTestStore, PersonalityQuestion, PersonalityAnswer } from '../../store/personalityTestStore';
 import { useMobile } from '../../hooks/useMobile';
 import { Clock } from 'lucide-react';
+import { logger } from '../../utils/logger';
 import '../../App.css';
 
 interface Props {

@@ -19,6 +19,142 @@ import Q2A4 from "../iqtestv2/Visual/Q2/Q2A4.svg";
 import Q2A5 from "../iqtestv2/Visual/Q2/Q2A5.svg";
 import Q2A6 from "../iqtestv2/Visual/Q2/Q2A6.svg";
 
+import Q3 from "../iqtestv2/Visual/Q3/Q3.svg";
+import Q3A1 from "../iqtestv2/Visual/Q3/Q3A1.svg";
+import Q3A2 from "../iqtestv2/Visual/Q3/Q3A2.svg";
+import Q3A3 from "../iqtestv2/Visual/Q3/Q3A3.svg";
+import Q3A4 from "../iqtestv2/Visual/Q3/Q3A4.svg";
+import Q3A5 from "../iqtestv2/Visual/Q3/Q3A5.svg";
+import Q3A6 from "../iqtestv2/Visual/Q3/Q3A6.svg";
+
+import Q4 from "../iqtestv2/Visual/Q4/Q4.svg";
+import Q4A1 from "../iqtestv2/Visual/Q4/Q4A1.svg";
+import Q4A2 from "../iqtestv2/Visual/Q4/Q4A2.svg";
+import Q4A3 from "../iqtestv2/Visual/Q4/Q4A3.svg";
+import Q4A4 from "../iqtestv2/Visual/Q4/Q4A4.svg";
+import Q4A5 from "../iqtestv2/Visual/Q4/Q4A5.svg";
+import Q4A6 from "../iqtestv2/Visual/Q4/Q4A6.svg";
+
+import Q5 from "../iqtestv2/Visual/Q5/Q5.svg";
+import Q5A1 from "../iqtestv2/Visual/Q5/Q5A1.svg";
+import Q5A2 from "../iqtestv2/Visual/Q5/Q5A2.svg";
+import Q5A3 from "../iqtestv2/Visual/Q5/Q5A3.svg";
+import Q5A4 from "../iqtestv2/Visual/Q5/Q5A4.svg";
+import Q5A5 from "../iqtestv2/Visual/Q5/Q5A5.svg";
+import Q5A6 from "../iqtestv2/Visual/Q5/Q5A6.svg";
+
+import Q6 from "../iqtestv2/Visual/Q6/Q6.svg";
+import Q6A1 from "../iqtestv2/Visual/Q6/Q6A1.svg";
+import Q6A2 from "../iqtestv2/Visual/Q6/Q6A2.svg";
+import Q6A3 from "../iqtestv2/Visual/Q6/Q6A3.svg";
+import Q6A4 from "../iqtestv2/Visual/Q6/Q6A4.svg";
+import Q6A5 from "../iqtestv2/Visual/Q6/Q6A5.svg";
+import Q6A6 from "../iqtestv2/Visual/Q6/Q6A6.svg";
+
+import Q7 from "../iqtestv2/Visual/Q7/Q7.svg";
+import Q7A1 from "../iqtestv2/Visual/Q7/Q7A1.svg";
+import Q7A2 from "../iqtestv2/Visual/Q7/Q7A2.svg";
+import Q7A3 from "../iqtestv2/Visual/Q7/Q7A3.svg";
+import Q7A4 from "../iqtestv2/Visual/Q7/Q7A4.svg";
+import Q7A5 from "../iqtestv2/Visual/Q7/Q7A5.svg";
+import Q7A6 from "../iqtestv2/Visual/Q7/Q7A6.svg";
+
+import Q8 from "../iqtestv2/Visual/Q8/Q8.svg";
+import Q8A1 from "../iqtestv2/Visual/Q8/Q8A1.svg";
+import Q8A2 from "../iqtestv2/Visual/Q8/Q8A2.svg";
+import Q8A3 from "../iqtestv2/Visual/Q8/Q8A3.svg";
+import Q8A4 from "../iqtestv2/Visual/Q8/Q8A4.svg";
+import Q8A5 from "../iqtestv2/Visual/Q8/Q8A5.svg";
+import Q8A6 from "../iqtestv2/Visual/Q8/Q8A6.svg";
+
+import Q9 from "../iqtestv2/Visual/Q9/Q9.svg";
+import Q9A1 from "../iqtestv2/Visual/Q9/Q9A1.svg";
+import Q9A2 from "../iqtestv2/Visual/Q9/Q9A2.svg";
+import Q9A3 from "../iqtestv2/Visual/Q9/Q9A3.svg";
+import Q9A4 from "../iqtestv2/Visual/Q9/Q9A4.svg";
+import Q9A5 from "../iqtestv2/Visual/Q9/Q9A5.svg";
+import Q9A6 from "../iqtestv2/Visual/Q9/Q9A6.svg";
+
+import Q10 from "../iqtestv2/Visual/Q10/Q10.svg";
+import Q10A1 from "../iqtestv2/Visual/Q10/Q10A1.svg";
+import Q10A2 from "../iqtestv2/Visual/Q10/Q10A2.svg";
+import Q10A3 from "../iqtestv2/Visual/Q10/Q10A3.svg";
+import Q10A4 from "../iqtestv2/Visual/Q10/Q10A4.svg";
+import Q10A5 from "../iqtestv2/Visual/Q10/Q10A5.svg";
+import Q10A6 from "../iqtestv2/Visual/Q10/Q10A6.svg";
+
+import Q11 from "../iqtestv2/Visual/Q11/Q11.svg";
+import Q11A1 from "../iqtestv2/Visual/Q11/Q11A1.svg";
+import Q11A2 from "../iqtestv2/Visual/Q11/Q11A2.svg";
+import Q11A3 from "../iqtestv2/Visual/Q11/Q11A3.svg";
+import Q11A4 from "../iqtestv2/Visual/Q11/Q11A4.svg";
+import Q11A5 from "../iqtestv2/Visual/Q11/Q11A5.svg";
+import Q11A6 from "../iqtestv2/Visual/Q11/Q11A6.svg";
+
+import Q12 from "../iqtestv2/Visual/Q12/Q12.svg";
+import Q12A1 from "../iqtestv2/Visual/Q12/Q12A1.svg";
+import Q12A2 from "../iqtestv2/Visual/Q12/Q12A2.svg";
+import Q12A3 from "../iqtestv2/Visual/Q12/Q12A3.svg";
+import Q12A4 from "../iqtestv2/Visual/Q12/Q12A4.svg";
+import Q12A5 from "../iqtestv2/Visual/Q12/Q12A5.svg";
+import Q12A6 from "../iqtestv2/Visual/Q12/Q12A6.svg";
+
+import Q13 from "../iqtestv2/Visual/Q13/Q13.svg";
+import Q13A1 from "../iqtestv2/Visual/Q13/Q13A1.svg";
+import Q13A2 from "../iqtestv2/Visual/Q13/Q13A2.svg";
+import Q13A3 from "../iqtestv2/Visual/Q13/Q13A3.svg";
+import Q13A4 from "../iqtestv2/Visual/Q13/Q13A4.svg";
+import Q13A5 from "../iqtestv2/Visual/Q13/Q13A5.svg";
+import Q13A6 from "../iqtestv2/Visual/Q13/Q13A6.svg";
+
+import Q14 from "../iqtestv2/Visual/Q14/Q14.svg";
+import Q14A1 from "../iqtestv2/Visual/Q14/Q14A1.svg";
+import Q14A2 from "../iqtestv2/Visual/Q14/Q14A2.svg";
+import Q14A3 from "../iqtestv2/Visual/Q14/Q14A3.svg";
+import Q14A4 from "../iqtestv2/Visual/Q14/Q14A4.svg";
+import Q14A5 from "../iqtestv2/Visual/Q14/Q14A5.svg";
+import Q14A6 from "../iqtestv2/Visual/Q14/Q14A6.svg";
+
+import Q15 from "../iqtestv2/Visual/Q15/Q15.svg";
+import Q15A1 from "../iqtestv2/Visual/Q15/Q15A1.svg";
+import Q15A2 from "../iqtestv2/Visual/Q15/Q15A2.svg";
+import Q15A3 from "../iqtestv2/Visual/Q15/Q15A3.svg";
+import Q15A4 from "../iqtestv2/Visual/Q15/Q15A4.svg";
+import Q15A5 from "../iqtestv2/Visual/Q15/Q15A5.svg";
+import Q15A6 from "../iqtestv2/Visual/Q15/Q15A6.svg";
+
+import Q16 from "../iqtestv2/Visual/Q16/Q16.svg";
+import Q16A1 from "../iqtestv2/Visual/Q16/Q16A1.svg";
+import Q16A2 from "../iqtestv2/Visual/Q16/Q16A2.svg";
+import Q16A3 from "../iqtestv2/Visual/Q16/Q16A3.svg";
+import Q16A4 from "../iqtestv2/Visual/Q16/Q16A4.svg";
+import Q16A5 from "../iqtestv2/Visual/Q16/Q16A5.svg";
+import Q16A6 from "../iqtestv2/Visual/Q16/Q16A6.svg";
+
+import Q17 from "../iqtestv2/Visual/Q17/Q17.svg";
+import Q17A1 from "../iqtestv2/Visual/Q17/Q17A1.svg";
+import Q17A2 from "../iqtestv2/Visual/Q17/Q17A2.svg";
+import Q17A3 from "../iqtestv2/Visual/Q17/Q17A3.svg";
+import Q17A4 from "../iqtestv2/Visual/Q17/Q17A4.svg";
+import Q17A5 from "../iqtestv2/Visual/Q17/Q17A5.svg";
+import Q17A6 from "../iqtestv2/Visual/Q17/Q17A6.svg";
+
+import Q18 from "../iqtestv2/Visual/Q18/Q18.svg";
+import Q18A1 from "../iqtestv2/Visual/Q18/Q18A1.svg";
+import Q18A2 from "../iqtestv2/Visual/Q18/Q18A2.svg";
+import Q18A3 from "../iqtestv2/Visual/Q18/Q18A3.svg";
+import Q18A4 from "../iqtestv2/Visual/Q18/Q18A4.svg";
+import Q18A5 from "../iqtestv2/Visual/Q18/Q18A5.svg";
+import Q18A6 from "../iqtestv2/Visual/Q18/Q18A6.svg";
+
+import Q19 from "../iqtestv2/Visual/Q19/Q19.svg";
+import Q19A1 from "../iqtestv2/Visual/Q19/Q19A1.svg";
+import Q19A2 from "../iqtestv2/Visual/Q19/Q19A2.svg";
+import Q19A3 from "../iqtestv2/Visual/Q19/Q19A3.svg";
+import Q19A4 from "../iqtestv2/Visual/Q19/Q19A4.svg";
+import Q19A5 from "../iqtestv2/Visual/Q19/Q19A5.svg";
+import Q19A6 from "../iqtestv2/Visual/Q19/Q19A6.svg";
+
 function IQTestPage() {
   const [currentQuestion, setCurrentQuestion] = useState(1); // Current question number
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -28,10 +164,9 @@ function IQTestPage() {
   // Dynamic question and answer mapping
   const getQuestionImage = (questionNum: number) => {
     const questionMap: { [key: number]: string } = {
-      1: Q1,
-      2: Q2,
-      // Add more questions here as they're added
-      // 3: Q3,
+      1: Q1, 2: Q2, 3: Q3, 4: Q4, 5: Q5, 6: Q6, 7: Q7, 8: Q8, 9: Q9,
+      10: Q10, 11: Q11, 12: Q12, 13: Q13, 14: Q14, 15: Q15, 16: Q16,
+      17: Q17, 18: Q18, 19: Q19
     };
     return questionMap[questionNum] || Q1;
   };
@@ -40,8 +175,23 @@ function IQTestPage() {
     const answerMap: { [key: number]: string[] } = {
       1: [Q1A1, Q1A2, Q1A3, Q1A4, Q1A5, Q1A6],
       2: [Q2A1, Q2A2, Q2A3, Q2A4, Q2A5, Q2A6],
-      // Add more questions here as they're added
-      // 3: [Q3A1, Q3A2, Q3A3, Q3A4, Q3A5, Q3A6],
+      3: [Q3A1, Q3A2, Q3A3, Q3A4, Q3A5, Q3A6],
+      4: [Q4A1, Q4A2, Q4A3, Q4A4, Q4A5, Q4A6],
+      5: [Q5A1, Q5A2, Q5A3, Q5A4, Q5A5, Q5A6],
+      6: [Q6A1, Q6A2, Q6A3, Q6A4, Q6A5, Q6A6],
+      7: [Q7A1, Q7A2, Q7A3, Q7A4, Q7A5, Q7A6],
+      8: [Q8A1, Q8A2, Q8A3, Q8A4, Q8A5, Q8A6],
+      9: [Q9A1, Q9A2, Q9A3, Q9A4, Q9A5, Q9A6],
+      10: [Q10A1, Q10A2, Q10A3, Q10A4, Q10A5, Q10A6],
+      11: [Q11A1, Q11A2, Q11A3, Q11A4, Q11A5, Q11A6],
+      12: [Q12A1, Q12A2, Q12A3, Q12A4, Q12A5, Q12A6],
+      13: [Q13A1, Q13A2, Q13A3, Q13A4, Q13A5, Q13A6],
+      14: [Q14A1, Q14A2, Q14A3, Q14A4, Q14A5, Q14A6],
+      15: [Q15A1, Q15A2, Q15A3, Q15A4, Q15A5, Q15A6],
+      16: [Q16A1, Q16A2, Q16A3, Q16A4, Q16A5, Q16A6],
+      17: [Q17A1, Q17A2, Q17A3, Q17A4, Q17A5, Q17A6],
+      18: [Q18A1, Q18A2, Q18A3, Q18A4, Q18A5, Q18A6],
+      19: [Q19A1, Q19A2, Q19A3, Q19A4, Q19A5, Q19A6],
     };
     return answerMap[questionNum] || [Q1A1, Q1A2, Q1A3, Q1A4, Q1A5, Q1A6];
   };
@@ -115,7 +265,7 @@ function IQTestPage() {
               fontWeight: '600',
               color: '#667eea',
             }}>
-              Question {currentQuestion} / 25
+              Question {currentQuestion} / 19
             </div>
             <div style={{
               fontSize: isMobile ? '36px' : '48px',
