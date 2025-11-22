@@ -10,11 +10,151 @@ import { ErrorFallback } from '../ui/ErrorFallback';
 import '../../App.css';
 
 // Import landing images
+import addictionImage from '../../assets/images/landing/addiction.svg';
+import adhdImage from '../../assets/images/landing/adhd.svg';
+import ambitionImage from '../../assets/images/landing/ambition.svg';
+import angerControlImage from '../../assets/images/landing/anger-control.svg';
+import antisocialTraitsImage from '../../assets/images/landing/antisocial-traits.svg';
+import anxietyImage from '../../assets/images/landing/anxiety.svg';
+import attachmentStyleImage from '../../assets/images/landing/attachment-style.svg';
+import attentionSpanImage from '../../assets/images/landing/attention-span.svg';
+import autismImage from '../../assets/images/landing/autism.svg';
+import borderlineImage from '../../assets/images/landing/borderline.svg';
+import boundarySkillsImage from '../../assets/images/landing/boundary-skills.svg';
+import breakupStyleImage from '../../assets/images/landing/breakup-style.svg';
+import budgetControlImage from '../../assets/images/landing/budget-control.svg';
+import burnoutImage from '../../assets/images/landing/burnout.svg';
+import closenessNeedImage from '../../assets/images/landing/closeness-need.svg';
+import coParentingDynamicsImage from '../../assets/images/landing/co-parenting-dynamics.svg';
+import communicationFlowImage from '../../assets/images/landing/communication-flow.svg';
+import compatibilityFitImage from '../../assets/images/landing/compatibility-fit.svg';
+import conflictStyleImage from '../../assets/images/landing/conflict-style.svg';
 import creativeThinkingImage from '../../assets/images/landing/creative-thinking.svg';
+import criticismImage from '../../assets/images/landing/criticism.svg';
+import debtPatternsImage from '../../assets/images/landing/debt-patterns.svg';
+import decisionMakingImage from '../../assets/images/landing/decision-making.svg';
+import depressionImage from '../../assets/images/landing/depression.svg';
+import eatingBehaviorImage from '../../assets/images/landing/eating-behavior.svg';
+import emotionalAvailabilityImage from '../../assets/images/landing/emotional-availability.svg';
+import emotionalInstabilityImage from '../../assets/images/landing/emotional-instability.svg';
+import emotionalLaborImage from '../../assets/images/landing/emotional-labor.svg';
+import entrepreneurDriveImage from '../../assets/images/landing/entrepreneur-drive.svg';
+import entrepreneurMindsetImage from '../../assets/images/landing/entrepreneur-mindset.svg';
+import financialAnxietyImage from '../../assets/images/landing/financial-anxiety.svg';
+import healthAnxietyImage from '../../assets/images/landing/health-anxiety.svg';
+import impulseBuyingImage from '../../assets/images/landing/impulse-buying.svg';
+import intimacyBlocksImage from '../../assets/images/landing/intimacy-blocks.svg';
+import investmentStyleImage from '../../assets/images/landing/investment-style.svg';
+import jealousyLevelsImage from '../../assets/images/landing/jealousy-levels.svg';
+import leadershipArchetypeImage from '../../assets/images/landing/leadership-archetype.svg';
+import loveLanguageImage from '../../assets/images/landing/love-language.svg';
+import marketBehaviorImage from '../../assets/images/landing/market-behavior.svg';
+import marriageReadinessImage from '../../assets/images/landing/marriage readiness.svg';
+import memoryRetentionImage from '../../assets/images/landing/memory-retention.svg';
+import moneyBoundariesImage from '../../assets/images/landing/money-boundaries.svg';
+import multitaskingImage from '../../assets/images/landing/multitasking.svg';
+import narcissismImage from '../../assets/images/landing/narcissism.svg';
+import negotiationSkillsImage from '../../assets/images/landing/negotiation-skills.svg';
+import ocdImage from '../../assets/images/landing/ocd.svg';
+import panicDisorderImage from '../../assets/images/landing/panic-disorder.svg';
+import parentingReadinessImage from '../../assets/images/landing/parenting-readiness.svg';
+import passiveGrowthImage from '../../assets/images/landing/passive-growth.svg';
+import perfectionismImage from '../../assets/images/landing/perfectionism.svg';
+import powerBalanceImage from '../../assets/images/landing/power-balance.svg';
+import problemSolvingImage from '../../assets/images/landing/problem-solving.svg';
+import profitInstinctImage from '../../assets/images/landing/profit-instinct.svg';
+import ptsdImage from '../../assets/images/landing/ptsd.svg';
+import relationshipAnxietyImage from '../../assets/images/landing/relationship-anxiety.svg';
+import relationshipTestImage from '../../assets/images/landing/relationship-test.svg';
+import returnExpectationsImage from '../../assets/images/landing/return-expectations.svg';
+import riskToleranceImage from '../../assets/images/landing/risk-tolerance.svg';
+import salesConfidenceImage from '../../assets/images/landing/sales-confidence.svg';
+import savingsArchetypeImage from '../../assets/images/landing/savings-archetype.svg';
+import sexualChemistryImage from '../../assets/images/landing/sexual-chemistry.svg';
+import sleepDisorderImage from '../../assets/images/landing/sleep-disorder.svg';
+import socialAnxietyImage from '../../assets/images/landing/social-anxiety.svg';
+import strategicThinkingImage from '../../assets/images/landing/strategic-thinking.svg';
+import stressManagementImage from '../../assets/images/landing/stress-management.svg';
+import successImage from '../../assets/images/landing/success.svg';
+import taxAwarenessImage from '../../assets/images/landing/tax-awareness.svg';
+import teamPlayerImage from '../../assets/images/landing/team-player.svg';
+import timeManagementImage from '../../assets/images/landing/time-management.svg';
+import traumaPatternsImage from '../../assets/images/landing/trauma-patterns.svg';
+import trustIssuesImage from '../../assets/images/landing/trust-issues.svg';
 
 // Landing images mapping
 const landingImages: Record<string, string> = {
+  'addiction': addictionImage,
+  'adhd': adhdImage,
+  'ambition': ambitionImage,
+  'anger-control': angerControlImage,
+  'antisocial-traits': antisocialTraitsImage,
+  'anxiety': anxietyImage,
+  'attachment-style': attachmentStyleImage,
+  'attention-span': attentionSpanImage,
+  'autism': autismImage,
+  'borderline': borderlineImage,
+  'boundary-skills': boundarySkillsImage,
+  'breakup-style': breakupStyleImage,
+  'budget-control': budgetControlImage,
+  'burnout': burnoutImage,
+  'closeness-need': closenessNeedImage,
+  'co-parenting-dynamics': coParentingDynamicsImage,
+  'communication-flow': communicationFlowImage,
+  'compatibility-fit': compatibilityFitImage,
+  'conflict-style': conflictStyleImage,
   'creative-thinking': creativeThinkingImage,
+  'criticism': criticismImage,
+  'debt-patterns': debtPatternsImage,
+  'decision-making': decisionMakingImage,
+  'depression': depressionImage,
+  'eating-behavior': eatingBehaviorImage,
+  'emotional-availability': emotionalAvailabilityImage,
+  'emotional-instability': emotionalInstabilityImage,
+  'emotional-labor': emotionalLaborImage,
+  'entrepreneur-drive': entrepreneurDriveImage,
+  'entrepreneur-mindset': entrepreneurMindsetImage,
+  'financial-anxiety': financialAnxietyImage,
+  'health-anxiety': healthAnxietyImage,
+  'impulse-buying': impulseBuyingImage,
+  'intimacy-blocks': intimacyBlocksImage,
+  'investment-style': investmentStyleImage,
+  'jealousy-levels': jealousyLevelsImage,
+  'leadership-archetype': leadershipArchetypeImage,
+  'love-language': loveLanguageImage,
+  'market-behavior': marketBehaviorImage,
+  'marriage-readiness': marriageReadinessImage,
+  'memory-retention': memoryRetentionImage,
+  'money-boundaries': moneyBoundariesImage,
+  'multitasking': multitaskingImage,
+  'narcissism': narcissismImage,
+  'negotiation-skills': negotiationSkillsImage,
+  'ocd': ocdImage,
+  'panic-disorder': panicDisorderImage,
+  'parenting-readiness': parentingReadinessImage,
+  'passive-growth': passiveGrowthImage,
+  'perfectionism': perfectionismImage,
+  'power-balance': powerBalanceImage,
+  'problem-solving': problemSolvingImage,
+  'profit-instinct': profitInstinctImage,
+  'ptsd': ptsdImage,
+  'relationship-anxiety': relationshipAnxietyImage,
+  'relationship-test': relationshipTestImage,
+  'return-expectations': returnExpectationsImage,
+  'risk-tolerance': riskToleranceImage,
+  'sales-confidence': salesConfidenceImage,
+  'savings-archetype': savingsArchetypeImage,
+  'sexual-chemistry': sexualChemistryImage,
+  'sleep-disorder': sleepDisorderImage,
+  'social-anxiety': socialAnxietyImage,
+  'strategic-thinking': strategicThinkingImage,
+  'stress-management': stressManagementImage,
+  'success': successImage,
+  'tax-awareness': taxAwarenessImage,
+  'team-player': teamPlayerImage,
+  'time-management': timeManagementImage,
+  'trauma-patterns': traumaPatternsImage,
+  'trust-issues': trustIssuesImage,
 };
 
 interface Props {
