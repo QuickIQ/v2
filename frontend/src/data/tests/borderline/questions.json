@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I experience intense and rapidly shifting emotions that can change within minutes or hours.",
+    "text": "When I feel emotional intensity rising, I notice it as a wave and I pause before it takes over.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I have a persistent fear of abandonment and go to great lengths to avoid real or imagined separation.",
+    "text": "I recognize the difference between emotion and truth, and I track the early stages of an emotional surge.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "My relationships are unstable, alternating between idealizing and devaluing people.",
+    "text": "When I feel my feelings shift direction fast, I see them as signals, not commands.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I have a distorted and unstable sense of self-image and identity.",
+    "text": "I let my emotional swings feel like absolute truth even when the situation is small.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I engage in impulsive behaviors that are potentially self-damaging, such as spending, sex, substance abuse, or reckless driving.",
+    "text": "I notice when I'm switching between closeness and distance quickly, and I choose balanced connection instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I have recurrent suicidal behaviors, gestures, threats, or self-mutilating behavior.",
+    "text": "When I recognize predictable triggers like silence or uncertainty, I prepare my response ahead of time.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I experience chronic feelings of emptiness and boredom.",
+    "text": "I see when my reactions belong to the pattern versus when they belong to the present moment.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I have difficulty controlling my anger and may have frequent displays of temper, physical fights, or sarcasm.",
+    "text": "I let fear of abandonment or losing control drive impulsive reactions without creating a pause.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I experience stress-related paranoid thoughts or severe dissociative symptoms.",
+    "text": "When I feel the urge to react fast, I wait and create a gap between feeling and action.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel like my emotions are on a roller coaster and I can't predict how I'll feel from one moment to the next.",
+    "text": "I recognize when I'm interpreting neutral signals as threats and I check the facts before reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I have stable and consistent relationships with others.",
+    "text": "When I notice emotional hooks pulling me into fear or anger, I step back instead of getting pulled in.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I feel secure in my identity and have a clear sense of who I am.",
+    "text": "I let my mind jump to worst-case scenarios and push me to act fast without separating feelings from facts.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I can maintain emotional stability even during stressful situations.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I have a strong and consistent sense of self-worth that doesn't depend on others' opinions.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I can handle rejection and abandonment without experiencing extreme emotional distress.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I often feel like I'm on an emotional roller coaster that I can't control.",
+    "text": "I notice when I'm taking things personally even when no harm was intended, and I respond with balance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "When I recognize my emotional patterns, I see them as learned responses I can update, not personal failures.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I see when my reactions are survival instincts versus when they're my true intention, and I choose accordingly.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let sudden changes or emotional distance activate old fears without preparing healthier responses.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I have a pattern of intense and unstable relationships that alternate between extremes.",
+    "text": "When I feel overwhelmed, I breathe slowly and ground myself before responding instead of exploding.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I struggle with a clear sense of who I am and my values seem to change frequently.",
+    "text": "I recognize when my mind reacts with all good or all bad, and I choose to hold balanced views instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I engage in self-destructive behaviors when I'm feeling emotional pain or emptiness.",
+    "text": "When I notice emotional flooding, I pause and label the feeling to gain distance from it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can maintain healthy boundaries in my relationships without fear of abandonment.",
+    "text": "I let emotional storms control my behavior without slowing down reactions or accessing logical thinking.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

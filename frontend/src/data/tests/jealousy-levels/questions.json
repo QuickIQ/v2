@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like my jealousy is normal and healthy in relationships.",
+    "text": "When I feel jealousy rising, I notice it and choose to understand what it's protecting instead of reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like my jealousy is protective, helping me maintain my relationship.",
+    "text": "During moments of comparison or insecurity, I pause and breathe before letting jealousy control my behavior.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like my jealousy is toxic and damaging to my relationships.",
+    "text": "When I notice jealousy thoughts, I recognize them and choose to question assumptions instead of believing them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I can manage my jealousy in healthy ways without it becoming toxic or controlling.",
+    "text": "I let jealousy become toxic and controlling, damaging my relationships and my own peace.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I experience intense jealousy that feels out of control and toxic.",
+    "text": "When I feel the urge to check or control my partner due to jealousy, I notice it and choose to trust instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I feel like my jealousy is normal and doesn't interfere with my relationships.",
+    "text": "I see when jealousy is based on fear rather than reality, and I choose to separate them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I use jealousy as a protective mechanism, but it sometimes becomes toxic or controlling.",
+    "text": "When I notice myself comparing or feeling threatened, I recognize it and choose to build self-worth instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I can recognize when my jealousy is normal, protective, or toxic.",
+    "text": "I let intense jealousy feel out of control and drive me to act in ways I later regret.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I feel like my jealousy is toxic and causes problems in my relationships.",
+    "text": "When I feel jealousy about someone else's attention or connection, I notice it and choose to communicate calmly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I can maintain healthy levels of jealousy that are normal and protective, not toxic.",
+    "text": "I recognize when jealousy comes from old wounds rather than the present situation, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I experience jealousy that feels protective but sometimes crosses into toxic territory.",
+    "text": "When I notice the pull to make accusations or test my partner, I recognize it and choose to trust instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I can manage my jealousy effectively, keeping it at normal, healthy levels.",
+    "text": "I let jealousy prevent me from managing my emotions healthily and maintaining trust in relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I feel like my jealousy is toxic and prevents me from having healthy relationships.",
+    "text": "When I feel threatened by someone else's presence or connection, I notice it and choose to address my insecurity instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I can distinguish between normal, protective jealousy and toxic jealousy.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I experience jealousy that is normal and protective, not toxic or controlling.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like my jealousy levels are toxic and interfere with my relationships.",
+    "text": "I see when jealousy is protecting something important, and I choose to address the underlying need directly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can manage my jealousy so it remains normal and protective, not toxic.",
+    "id": 15,
+    "text": "When I notice jealousy thoughts spiraling, I interrupt them early by staying grounded and questioning the story.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let jealousy control my behavior and prevent me from building healthy, secure relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I feel the urge to act on jealousy impulsively, I notice it and choose to wait and think clearly instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I experience jealousy that feels protective but often becomes toxic or controlling.",
+    "text": "I recognize when jealousy is based on imagination rather than evidence, and I choose to focus on reality instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can maintain healthy jealousy levels that are normal and protective, not toxic.",
+    "text": "When I notice jealousy patterns repeating, I recognize them and choose to break the cycle with awareness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like my jealousy is normal, protective, or toxic, and I can recognize which it is.",
+    "text": "I let jealousy become toxic and prevent me from managing it in healthy, constructive ways.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

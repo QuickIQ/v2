@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like my attraction to my partner is primarily emotional, based on deep connection and feelings.",
+    "text": "When I notice attraction fading, I recognize it and choose to nurture both emotional and physical connection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like my attraction to my partner is primarily physical, based on appearance and sexual chemistry.",
+    "text": "During moments of connection, I notice the chemistry and choose to stay present and engaged instead of taking it for granted.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like my attraction to my partner is fading or decreasing over time.",
+    "text": "When I feel the pull to focus only on physical or only on emotional attraction, I notice it and choose to balance both.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I can maintain strong sexual chemistry that combines both emotional and physical attraction.",
+    "text": "I let attraction fade or decrease over time without recognizing or addressing what's causing the change.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I feel like my attraction is emotional, physical, or fading, and I can identify which it is.",
+    "text": "When I notice chemistry rising, I stay present and let it build naturally instead of forcing or rushing it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 6,
-    "text": "I experience fading attraction that makes it difficult to maintain sexual chemistry in my relationship.",
+    "text": "I see when attraction is becoming one-dimensional, and I choose to cultivate both emotional and physical connection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can maintain strong sexual chemistry that balances emotional and physical attraction.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I feel like my attraction is primarily emotional, but the physical chemistry is fading.",
+    "text": "When I feel the urge to separate physical from emotional attraction, I notice it and choose to integrate them instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain healthy sexual chemistry that combines emotional connection with physical attraction.",
+    "id": 8,
+    "text": "I let attraction become primarily physical or primarily emotional without maintaining a balanced connection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice chemistry needs attention, I recognize it and choose to invest in keeping the connection alive.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like my attraction is fading, and this affects the sexual chemistry in my relationship.",
+    "text": "I recognize when attraction is shifting, and I choose to understand and address the underlying dynamics.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I experience strong sexual chemistry that combines both emotional and physical attraction.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I feel like my attraction is primarily physical, but the emotional connection is fading.",
+    "text": "When I feel the pull to let chemistry fade naturally, I notice it and choose to actively maintain it instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain sexual chemistry that balances emotional and physical attraction without fading.",
+    "id": 12,
+    "text": "I let fading attraction prevent me from maintaining strong chemistry that combines emotional and physical connection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice myself focusing on only one type of attraction, I recognize it and choose to develop both aspects.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my attraction is emotional, physical, or fading, and I struggle to maintain sexual chemistry.",
+    "text": "I see when chemistry needs both emotional depth and physical presence, and I choose to cultivate both.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can identify whether my attraction is emotional, physical, or fading, and work to maintain chemistry.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience fading attraction that makes it difficult to maintain sexual chemistry over time.",
+    "text": "When I feel the urge to take attraction for granted, I notice it and choose to actively nurture it instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain strong sexual chemistry that combines emotional connection with physical attraction.",
+    "id": 16,
+    "text": "I let attraction fade without identifying which aspect needs attention or how to maintain chemistry.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice chemistry building, I stay grounded and let it develop naturally instead of forcing intensity.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my attraction is emotional, physical, or fading, and this affects my relationship.",
+    "text": "I recognize when attraction needs both emotional and physical elements, and I choose to balance them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can maintain healthy sexual chemistry that balances emotional and physical attraction without fading.",
+    "text": "When I feel the pull to let chemistry drift, I notice it and choose to invest in keeping the connection strong.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I can identify whether my attraction is emotional, physical, or fading, and maintain strong sexual chemistry.",
+    "text": "I let not understanding my attraction patterns prevent me from maintaining strong sexual chemistry over time.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

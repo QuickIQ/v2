@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel tired and drained even after getting enough sleep instead of feeling refreshed.",
+    "text": "When I notice early signs of depression like mental fog or energy drops, I intervene before they become heavy burdens.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I lose interest in activities I used to enjoy instead of maintaining enthusiasm.",
+    "text": "I recognize the difference between emotional truth and actual truth when my mind shifts toward darker conclusions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel hopeful about the future instead of feeling pessimistic.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I have difficulty concentrating on tasks instead of staying focused.",
+    "text": "When I feel the weight in my thoughts or slowdown in my body, I see it as a signal my system needs support.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 4,
+    "text": "I let depression feel like a personal flaw without recognizing it as information about my inner system.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 5,
-    "text": "I feel worthless or guilty about things instead of maintaining self-worth.",
+    "text": "I notice when my mind exaggerates problems or predicts failure, and I challenge these thoughts with balanced thinking.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I experience changes in appetite or weight instead of maintaining stable eating habits.",
+    "text": "When I recognize emotional dips or motivation drops, I prepare for difficult days instead of being surprised by them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel restless or slowed down instead of maintaining normal energy levels.",
+    "text": "I see depression as a signal my inner system is overloaded, not as an identity that defines my self-worth.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I have trouble sleeping or sleep too much instead of maintaining regular sleep patterns.",
+    "text": "I let negative spirals pull me into isolation or avoidance without slowing the intensity or staying grounded.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I feel sad or empty most of the time instead of experiencing a range of emotions.",
+    "text": "When I feel heavy or overwhelmed, I breathe and ground myself instead of collapsing or withdrawing completely.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I find it hard to make decisions instead of feeling confident in my choices.",
+    "text": "I recognize when my thoughts drift into extremes, and I pause and redirect my attention to restore balance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I feel energetic and motivated instead of feeling drained.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I withdraw from social activities instead of maintaining connections with others.",
+    "text": "When I notice recurring thoughts that increase heaviness, I identify them and create space for improvement.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 12,
+    "text": "I let emotional hooks like certain people or environments drain my mood without creating boundaries to protect it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 13,
-    "text": "I have thoughts of self-harm or suicide instead of feeling safe and secure.",
+    "text": "I notice when I'm confusing who I am with what I feel, and I separate my identity from my emotions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I feel pleasure and satisfaction from daily activities instead of feeling numb.",
+    "text": "When I recognize cognitive distortions like catastrophizing or overgeneralizing, I question and correct them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I experience physical symptoms like headaches or body aches instead of feeling physically well.",
+    "text": "I see how sleep, stress, memories, or pressure affect my inner balance, and I adjust my environment accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I feel optimistic about my life instead of feeling hopeless.",
+    "text": "I let depression push me into self-criticism or isolation without choosing behaviors that support me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I have difficulty remembering things instead of maintaining clear memory.",
+    "text": "When I feel my motivation dropping, I create a low-energy plan with small steps that bring calm.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel irritable or angry over small matters instead of maintaining emotional balance.",
+    "text": "I recognize when my mind forgets past successes or focuses only on problems, and I restore balanced thinking.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel connected to others and supported instead of feeling isolated.",
+    "text": "When I notice depressive waves starting, I track their signals and manage them strategically instead of fearing them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like my mood is quietly collapsing instead of feeling stable and balanced.",
+    "text": "I let emotional fog or memory weakness interfere with my thinking without challenging distorted thoughts or restoring clarity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   }
 ]
-

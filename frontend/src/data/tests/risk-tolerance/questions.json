@@ -1,22 +1,122 @@
 [
-  {"id": 1, "text": "I feel like I play safe with my financial decisions, avoiding high-risk investments.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 2, "text": "I feel like I bet on volatility, taking high-risk financial decisions.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 3, "text": "I can identify whether I play safe or bet on volatility with my finances.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 4, "text": "I experience financial problems because I bet on volatility rather than playing safe.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 5, "text": "I can maintain a risk tolerance where I play safe, not betting on volatility.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 6, "text": "I feel like I bet on volatility, and this affects my financial well-being negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 7, "text": "I can recognize whether I play safe or bet on volatility, and work to improve my risk tolerance.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 8, "text": "I experience financial problems because I bet on volatility instead of playing safe.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 9, "text": "I can maintain a risk tolerance where I play safe, ensuring I don't bet on volatility.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 10, "text": "I feel like I bet on volatility, and this prevents me from playing safe.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 11, "text": "I can identify whether I play safe or bet on volatility, and work to improve my risk tolerance.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 12, "text": "I experience financial problems because I bet on volatility rather than playing safe.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 13, "text": "I can maintain a risk tolerance where I play safe, not betting on volatility.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 14, "text": "I feel like I bet on volatility, and this creates problems in my financial life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 15, "text": "I can recognize whether I play safe or bet on volatility, and work to maintain healthy risk tolerance.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 16, "text": "I experience financial problems because I bet on volatility instead of playing safe.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 17, "text": "I can maintain a risk tolerance where I play safe, avoiding betting on volatility.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 18, "text": "I feel like I bet on volatility, and this affects my ability to play safe.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 19, "text": "I can identify whether I play safe or bet on volatility, and work to improve my risk tolerance.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 20, "text": "I feel like I play safe with my finances, not betting on volatility, maintaining healthy risk tolerance.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+  {
+    "id": 1,
+    "text": "When I feel discomfort about risk, I notice whether it's fear, uncertainty, or a real financial issue.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "I recognize the difference between what my finances can handle and what my emotions can handle.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "When I connect risk to my goals and timeline, risk becomes meaningful instead of random.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I let panic or excitement drive my decisions during market movements, and I make emotional choices without waiting.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "When I feel an emotional spike about risk, I pause and wait before making any move.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I recognize how framing effects influence my perception of gains and losses, and I reframe to neutralize bias.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "When I understand what's at stake for each goal, I can determine how much temporary loss each goal can survive.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I confuse market movement with danger, and I react to every change without understanding my personal risk signature.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "When I separate surface emotion from true risk preference, I make clearer decisions about risk.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I recognize the difference between fear, market noise, and my stable long-term tolerance.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "When I map my risk capacity and risk tolerance together, I see where they differ and where work is needed.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I let short-term noise influence my long-term decisions, and I shrink my time horizon when emotions spike.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 13,
+    "text": "When I design risk around my goals, I understand that risk is about willingness to risk fewer future goals to achieve more.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I recognize when I'm making decisions based on emotion instead of logic, and I control the behavior gap.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I notice my personal reactions to gains, losses, and uncertainty, I learn about my true risk tolerance.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let framing effects control my perception, and I don't convert scenarios into real-life terms to see the actual impact.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 17,
+    "text": "When I understand my goals clearly, risk becomes clearer and less random.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I recognize when I need to regulate panic before it becomes action, and I manage my emotional liquidity.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "When I see risk as a strategic tool I can shape, I gain more control over my financial decisions.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I make decisions during emotional spikes without waiting, and I don't separate what I should do from what I feel like doing.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
 ]

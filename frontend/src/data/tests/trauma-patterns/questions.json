@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like past wounds secretly shape my love life and relationships.",
+    "text": "When I notice old patterns repeating in my relationships, I recognize them and choose to respond differently.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I notice that I repeat the same unhealthy relationship patterns from my past.",
+    "text": "During moments when past trauma is triggered, I notice the reaction and choose to stay present instead of reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like trauma from my past affects how I form and maintain relationships today.",
+    "text": "When I feel attracted to someone who reminds me of past hurts, I notice the pattern and choose healthier connections instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I find myself attracted to people who remind me of past hurts or trauma.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
-  },
-  {
-    "id": 5,
-    "text": "I can recognize and break free from trauma patterns that affect my relationships.",
+    "text": "I let past trauma patterns control my current relationships and prevent me from forming healthy connections.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice my reactions coming from old wounds, I recognize them and choose to respond from the present moment.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I'm reliving past trauma in my current relationships.",
+    "text": "I see when trauma responses are shaping my behavior, and I choose to break the cycle instead of repeating it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I have difficulty trusting people because of past wounds and trauma.",
+    "text": "When I feel the pull to repeat unhealthy relationship patterns, I notice it and choose a different path instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I feel like my past trauma makes it hard for me to form healthy, secure attachments.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
-  },
-  {
-    "id": 9,
-    "text": "I can form healthy relationships despite past trauma and wounds.",
+    "text": "I let past wounds secretly shape my love life and relationships without recognizing or addressing them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice trauma responses activating, I breathe and ground myself instead of letting them control my behavior.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I'm unconsciously recreating traumatic situations in my relationships.",
+    "text": "I recognize when my emotional reactions belong to the past rather than the present, and I choose to separate them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I have processed my past trauma and it no longer significantly affects my love life.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I notice that certain triggers from my past trauma cause problems in my current relationships.",
+    "text": "When I feel the urge to recreate familiar but unhealthy dynamics, I notice it and choose healthier patterns instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain healthy boundaries and avoid repeating trauma patterns in relationships.",
+    "id": 12,
+    "text": "I let trauma from my past prevent me from recognizing and breaking free from unhealthy relationship patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice myself projecting past experiences onto new relationships, I recognize it and choose to see what's actually happening.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my past wounds make me choose partners who are emotionally unavailable or unhealthy.",
+    "text": "I see when old survival strategies are no longer needed, and I choose to update them with healthier responses.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize trauma patterns and work to heal them so they don't affect my love life.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I'm stuck in cycles of trauma that repeat in my relationships.",
+    "text": "When I feel triggered by something that reminds me of past trauma, I notice it and choose to respond with awareness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 16,
+    "text": "I let trauma patterns from my past control how I form and maintain relationships today.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I have difficulty opening up in relationships because of past trauma and wounds.",
+    "text": "When I notice the cycle of trauma responses starting, I interrupt it early by staying grounded and present.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like my past trauma has shaped my love life in ways I don't fully understand.",
+    "text": "I recognize when my relationship choices are driven by trauma rather than genuine connection, and I choose differently.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify which wounds from my past are secretly shaping my love life.",
+    "text": "When I feel the pull to repeat familiar but painful patterns, I notice it and choose to create new, healthier ones instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I've healed from past trauma and can form healthy relationships without repeating old patterns.",
+    "text": "I let past trauma prevent me from recognizing when I'm repeating unhealthy relationship patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

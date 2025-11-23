@@ -1,122 +1,122 @@
 [
   {
     "id": 1,
-    "text": "When things don't go as planned, I blame myself instead of trying to fix the situation.",
+    "text": "When I notice patterns or connections between different ideas, I explore them to see where they lead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "When I experience a creative block, I completely disengage instead of forcing myself to continue.",
+    "text": "I recognize when my mind transitions from concept to insight, and I create space for this flow to happen.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "When solving problems, I use unconventional approaches instead of standard methods.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "When someone rejects my idea, I abandon it instead of refining it.",
+    "text": "When I feel stuck on a problem, I ask questions or explore alternatives instead of forcing the same approach.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I see connections between seemingly unrelated concepts instead of focusing on obvious connections.",
+    "id": 4,
+    "text": "I let interruptions break my creative flow without protecting my attention or creating focus zones.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "I notice when my thinking becomes rigid, and I introduce small disruptions or new perspectives to refresh it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
   },
   {
     "id": 6,
-    "text": "When brainstorming, I generate many wild ideas instead of focusing on practical ones.",
+    "text": "When I observe surprising or unusual details, I notice them and let them spark curiosity or new ideas.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I question conventional wisdom instead of accepting established methods.",
+    "text": "I recognize when my environment supports creative thinking versus when it increases cognitive load.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 8,
-    "text": "When creating something new, I discover it as I go instead of starting with a clear vision.",
+    "text": "I let my mind stay in familiar patterns without introducing novelty or exploring different domains.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I find inspiration in unexpected places instead of sticking to familiar sources.",
+    "text": "When I notice my associative thinking connecting unrelated fields, I follow those connections to see what emerges.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 10,
-    "text": "When my first solution fails, I quickly pivot instead of analyzing what went wrong.",
+    "text": "I recognize when I'm building variations or exploring alternatives versus when I'm stuck in one approach.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I combine ideas from different fields to create something unique instead of using ideas from a single field.",
+    "text": "When I feel my mind wandering in a productive way, I allow it instead of forcing immediate focus.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "When others say 'that won't work,' I see it as a challenge instead of a warning.",
+    "text": "I let self-monitoring or judgment interrupt my creative process without creating space for free exploration.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I enjoy exploring 'what if' scenarios even when they seem impractical instead of focusing only on practical scenarios.",
+    "text": "I notice when I can zoom out mentally and see the core patterns behind complex issues.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 14,
-    "text": "When stuck, I seek diverse perspectives instead of trusting my own judgment.",
+    "text": "When I recognize what triggers my best ideas, I create conditions that support those triggers.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I notice patterns others miss instead of focusing on what's immediately obvious.",
+    "text": "I see when my thinking needs abstraction versus when it needs concrete details, and I adjust accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 16,
-    "text": "When creating, I prioritize originality instead of effectiveness.",
+    "text": "I let my creativity stay unstructured without building routines or systems that make it more reliable.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I experiment with different approaches even when one seems sufficient instead of settling for what appears adequate.",
+    "text": "When I notice cause-effect relationships or similarities in different situations, I use them to generate new ideas.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 18,
-    "text": "When my idea conflicts with tradition, I stand firm instead of adapting it.",
+    "text": "I recognize when my mental flexibility is high versus when it's blocked, and I take steps to restore it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I see limitations as boundaries to respect instead of obstacles to overcome.",
+    "text": "When I feel curiosity or inspiration rising, I follow it and explore where it leads instead of dismissing it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "When inspiration strikes at inconvenient times, I let it pass instead of capturing it.",
+    "text": "I let my creative process remain random without documenting what works or building a repeatable system.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   }
 ]

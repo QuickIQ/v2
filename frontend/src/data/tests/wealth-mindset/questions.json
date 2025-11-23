@@ -1,22 +1,122 @@
 [
-  {"id": 1, "text": "I feel like I think like the rich, with a wealth-building mindset.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 2, "text": "I feel like I think like the stressed, with a scarcity mindset.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 3, "text": "I can identify whether I think like the rich or the stressed.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 4, "text": "I experience financial problems because I think like the stressed rather than the rich.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 5, "text": "I can maintain a wealth mindset where I think like the rich, not the stressed.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 6, "text": "I feel like I think like the stressed, and this affects my financial well-being negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 7, "text": "I can recognize whether I think like the rich or the stressed, and work to improve my wealth mindset.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 8, "text": "I experience financial problems because I think like the stressed instead of the rich.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 9, "text": "I can maintain a wealth mindset where I think like the rich, ensuring I don't think like the stressed.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 10, "text": "I feel like I think like the stressed, and this prevents me from thinking like the rich.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 11, "text": "I can identify whether I think like the rich or the stressed, and work to improve my wealth mindset.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 12, "text": "I experience financial problems because I think like the stressed rather than the rich.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 13, "text": "I can maintain a wealth mindset where I think like the rich, not thinking like the stressed.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 14, "text": "I feel like I think like the stressed, and this creates problems in my financial life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 15, "text": "I can recognize whether I think like the rich or the stressed, and work to maintain a healthy wealth mindset.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 16, "text": "I experience financial problems because I think like the stressed instead of the rich.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 17, "text": "I can maintain a wealth mindset where I think like the rich, avoiding thinking like the stressed.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 18, "text": "I feel like I think like the stressed, and this affects my ability to think like the rich.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 19, "text": "I can identify whether I think like the rich or the stressed, and work to improve my wealth mindset.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 20, "text": "I feel like I think like the rich, not the stressed, maintaining a healthy wealth mindset.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+  {
+    "id": 1,
+    "text": "When I notice old money patterns controlling me, I recognize them and choose to rewrite them with awareness instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "During moments when money triggers emotional reactions, I notice it and choose to respond with clarity instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "When I feel the pull to let fear control my money decisions, I notice it and choose to think strategically instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I let not being able to rewrite money patterns prevent me from building a wealth mindset and controlling money effectively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "When I notice myself thinking about money strategically, I recognize it and choose to maintain those wealth mindset patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I see when money decisions need clarity, and I choose to think ahead and plan strategically instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "When I feel the urge to let emotions control money, I notice it and choose to stay calm and think ahead instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I let not identifying wealth mindset patterns prevent me from controlling money and thinking strategically effectively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "When I notice wealth mindset working, I recognize it and choose to strengthen those strategic thinking patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I recognize when money triggers emotional reactions, and I choose to respond with clarity and think ahead instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "When I feel the pull to let old patterns control money, I notice it and choose to rewrite them with awareness instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I let problems from not building a wealth mindset prevent me from controlling money and thinking strategically.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 13,
+    "text": "When I notice strategic money thinking working, I recognize it and choose to strengthen those wealth mindset patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I see when money needs strategic thinking, and I choose to plan ahead and control decisions instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the urge to let fear control money decisions, I notice it and choose to think strategically instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let not being able to build a wealth mindset prevent me from controlling money and thinking strategically effectively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 17,
+    "text": "When I notice myself maintaining a wealth mindset, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I recognize when money patterns need rewriting, and I choose to build awareness and think strategically instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "When I feel the pull to let emotions control money, I notice it and choose to stay calm and think ahead instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I let not identifying wealth mindset abilities prevent me from controlling money and thinking strategically effectively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
 ]

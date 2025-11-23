@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I speak to connect with my partner in relationships.",
+    "text": "When I notice myself speaking to defend, I recognize it and choose to shift toward connection instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I speak to defend myself in relationships, rather than to connect.",
+    "text": "During moments when communication feels defensive, I notice it and choose to pause and reconnect instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I speak to connect or to defend in my relationships.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience communication problems because I speak to defend rather than to connect.",
+    "text": "When I feel the pull to defend myself, I notice it and choose to speak to connect and understand instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain communication flow by speaking to connect rather than to defend.",
+    "id": 4,
+    "text": "I let speaking to defend prevent me from maintaining communication flow and connecting with my partner.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice communication breaking down, I recognize it and choose to shift back to connection instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like my communication style involves speaking to defend, which prevents connection.",
+    "text": "I see when my communication style is defensive, and I choose to adjust it toward connection instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize my communication flow and work to speak to connect rather than to defend.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience relationship problems because I speak to defend rather than to connect.",
+    "text": "When I feel the urge to protect myself through words, I notice it and choose to open up and connect instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain healthy communication flow by speaking to connect, not to defend.",
+    "id": 8,
+    "text": "I let not identifying my communication style prevent me from speaking to connect rather than to defend.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice communication flowing well, I recognize it and choose to maintain that connection.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like my communication flow involves speaking to defend, which creates problems in my relationships.",
+    "text": "I recognize when defensive communication comes from fear rather than genuine need, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I speak to connect or to defend, and work to improve my communication flow.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience communication problems because I speak to defend rather than to connect with my partner.",
+    "text": "When I feel the pull to let communication become defensive, I notice it and choose to redirect toward connection instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain healthy communication flow by speaking to connect, avoiding defensive communication.",
+    "id": 12,
+    "text": "I let communication problems from defending prevent me from maintaining flow and connecting with my partner.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice myself speaking to connect, I recognize it and choose to strengthen that pattern.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my communication flow involves speaking to defend, and this prevents me from connecting with my partner.",
+    "text": "I see when communication needs to shift from defending to connecting, and I choose to make that shift.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize my communication flow and work to speak to connect rather than to defend.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience relationship problems because my communication flow involves speaking to defend rather than to connect.",
+    "text": "When I feel the urge to let defensive patterns control communication, I notice it and choose to break them instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain healthy communication flow by speaking to connect, not to defend, in my relationships.",
+    "id": 16,
+    "text": "I let speaking to defend prevent me from identifying and maintaining communication flow that connects.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice healthy communication patterns, I recognize them and choose to build on those habits.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my communication flow involves speaking to defend, and this creates problems in my relationships.",
+    "text": "I recognize when communication needs repair, and I choose to shift from defending to connecting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I speak to connect or to defend, and work to improve my communication flow.",
+    "text": "When I feel the pull to avoid shifting communication style, I notice it and choose to connect instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I speak to connect with my partner, not to defend, maintaining healthy communication flow.",
+    "text": "I let not identifying whether I speak to connect or defend prevent me from maintaining communication flow.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

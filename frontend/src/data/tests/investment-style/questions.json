@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm a calculated investor, making thoughtful and strategic investment decisions.",
+    "text": "When I notice investment opportunities, I recognize them and choose to analyze fundamentals and think long-term instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm a gambler in disguise, making risky investment decisions without proper analysis.",
+    "text": "During moments when markets feel uncertain, I notice it and choose to stay calm and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I'm a calculated investor or a gambler in disguise.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because I'm a gambler in disguise, not a calculated investor.",
+    "text": "When I feel the pull to react to market noise, I notice it and choose to focus on long-term value instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain a calculated investment style, avoiding gambling behavior in disguise.",
+    "id": 4,
+    "text": "I let not being able to analyze investments prevent me from thinking strategically and making long-term decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself thinking strategically about investments, I recognize it and choose to maintain those long-term patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like my investment style is that of a gambler in disguise, and this affects me negatively.",
+    "text": "I see when investments need analysis, and I choose to understand fundamentals and plan long-term instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I'm a calculated investor or a gambler in disguise, and work to maintain calculated investing.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because my investment style is that of a gambler in disguise, not a calculated investor.",
+    "text": "When I feel the urge to let emotions control investing, I notice it and choose to stay calm and think ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain a calculated investment style, ensuring I'm not a gambler in disguise.",
+    "id": 8,
+    "text": "I let not identifying investment opportunities prevent me from analyzing fundamentals and thinking long-term effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice strategic investing working, I recognize it and choose to strengthen those long-term patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I'm a gambler in disguise, and this prevents me from being a calculated investor.",
+    "text": "I recognize when markets feel uncertain, and I choose to stay calm and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I'm a calculated investor or a gambler in disguise, and work to improve my investment style.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because my investment style is that of a gambler in disguise rather than a calculated investor.",
+    "text": "When I feel the pull to chase market trends, I notice it and choose to focus on long-term value instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain a calculated investment style, not being a gambler in disguise, in my financial decisions.",
+    "id": 12,
+    "text": "I let problems from not analyzing investments prevent me from thinking strategically and making long-term decisions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice long-term investing working, I recognize it and choose to strengthen those strategic patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my investment style is that of a gambler in disguise, and this creates problems in my financial life.",
+    "text": "I see when investment decisions need strategy, and I choose to analyze fundamentals and think long-term instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I'm a calculated investor or a gambler in disguise, and work to maintain calculated investing.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because my investment style is that of a gambler in disguise instead of a calculated investor.",
+    "text": "When I feel the urge to react to market movements, I notice it and choose to stay calm and think ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain a calculated investment style, avoiding being a gambler in disguise.",
+    "id": 16,
+    "text": "I let not being able to think strategically prevent me from analyzing investments and making long-term decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining strategic investing, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my investment style is that of a gambler in disguise, and this affects my ability to be a calculated investor.",
+    "text": "I recognize when investments need long-term thinking, and I choose to analyze fundamentals and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I'm a calculated investor or a gambler in disguise, and work to improve my investment style.",
+    "text": "When I feel the pull to let market noise control decisions, I notice it and choose to focus on long-term value instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I'm a calculated investor, not a gambler in disguise, maintaining thoughtful investment decisions.",
+    "text": "I let not identifying investment style abilities prevent me from analyzing fundamentals and thinking long-term effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

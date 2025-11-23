@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm truly open and emotionally available in my relationships.",
+    "text": "When I notice my heart starting to close or emotional distance forming, I pause and notice what it protects.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm just pretending to be emotionally available, but I'm actually closed off.",
+    "text": "I recognize when fear, shame, or old stories pull me into silence or overthinking, and I respond with maturity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can share my true feelings and emotions with my partner without holding back.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I feel like I put up walls and keep people at an emotional distance, even when I appear open.",
+    "text": "When I feel my body trying to shut down, speed up, cling, or escape, I stay present and choose my response.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can be vulnerable and let others see my authentic self in relationships.",
+    "id": 4,
+    "text": "I let emotional distance feel like safety without recognizing it's a learned defense I can reshape.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "I notice when I'm pulling away inside even when I stay in the relationship outside, and I address it honestly.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I pretend to be open, but I'm actually emotionally unavailable or closed off.",
+    "text": "When I recognize my reactions come from old wounds versus the current moment, I separate them and respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can connect deeply with others and share meaningful emotional experiences.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I feel like I'm emotionally unavailable, even though I might appear open on the surface.",
+    "text": "I see the difference between emotional truth and actual truth when my mind creates negative stories.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can be present and emotionally engaged in my relationships without shutting down.",
+    "id": 8,
+    "text": "I let my nervous system react faster than my mind without using grounding techniques to stay present.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "When I feel strong emotions, I stay with them long enough to choose my action instead of over-texting or disappearing.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel like I'm truly open and don't need to pretend to be emotionally available.",
+    "text": "I recognize when I'm mistaking emotional chaos for emotional connection, and I choose what feels safe instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I have difficulty being vulnerable and sharing my true feelings with others.",
+    "text": "When I notice I'm confusing familiar with safe, I pause and ask whether this is excitement or old pain.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I can maintain emotional boundaries while still being open and available in relationships.",
+    "text": "I let one text, one tone, or one moment define the whole relationship without examining the situation with balance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I feel like I'm just pretending to be open, but I'm actually keeping people at a distance.",
+    "text": "I notice when I'm interpreting silence as rejection or oversharing as pressure, and I check the evidence instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I can be emotionally present and available without feeling overwhelmed or shutting down.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I feel like I'm truly open and don't need to pretend to be emotionally available.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I have difficulty letting others see my true emotions and feelings.",
+    "text": "When I recognize emotional hooks pulling me toward familiar pain, I gain distance and choose differently.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 15,
+    "text": "I see when I'm staying half-in and half-out emotionally, and I move toward full presence instead of protection.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let fear of closeness or being smothered control my behavior without preparing compassionate responses ahead of time.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I feel like I'm emotionally unavailable, even when I try to appear open and connected.",
+    "text": "When I feel the urge to chase attention but pull away when someone comes close, I recognize the pattern and address it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I can be authentic and genuine in my emotional connections without pretending.",
+    "text": "I recognize when I'm demanding partners fix my feelings versus when I'm soothing myself first.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel like I'm just pretending to be open, but I'm actually closed off emotionally.",
+    "text": "When I notice I'm confusing who I am with what I feel, I separate my identity from my emotions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can be truly open and emotionally available without pretending or putting up walls.",
+    "text": "I let old patterns take over as soon as I feel rejected or ignored without preparing how I'll respond with kindness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

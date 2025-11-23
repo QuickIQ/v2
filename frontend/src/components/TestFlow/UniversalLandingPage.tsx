@@ -49,7 +49,7 @@ import jealousyLevelsImage from '../../assets/images/landing/jealousy-levels.svg
 import leadershipArchetypeImage from '../../assets/images/landing/leadership-archetype.svg';
 import loveLanguageImage from '../../assets/images/landing/love-language.svg';
 import marketBehaviorImage from '../../assets/images/landing/market-behavior.svg';
-import marriageReadinessImage from '../../assets/images/landing/marriage readiness.svg';
+import marriageReadinessImage from '../../assets/images/landing/marriage-readiness.svg';
 import memoryRetentionImage from '../../assets/images/landing/memory-retention.svg';
 import moneyBoundariesImage from '../../assets/images/landing/money-boundaries.svg';
 import multitaskingImage from '../../assets/images/landing/multitasking.svg';
@@ -81,6 +81,33 @@ import teamPlayerImage from '../../assets/images/landing/team-player.svg';
 import timeManagementImage from '../../assets/images/landing/time-management.svg';
 import traumaPatternsImage from '../../assets/images/landing/trauma-patterns.svg';
 import trustIssuesImage from '../../assets/images/landing/trust-issues.svg';
+import cognitivePressureImage from '../../assets/images/landing/cognitive-pressure.svg';
+import coldStrategyImage from '../../assets/images/landing/cold-strategy.svg';
+import complianceHackImage from '../../assets/images/landing/compliance-hack.svg';
+import conflictManipulationImage from '../../assets/images/landing/conflict-manipulation.svg';
+import covertInfluenceImage from '../../assets/images/landing/covert-influence.svg';
+import dualPersonaImage from '../../assets/images/landing/dual-persona.svg';
+import emotionalExploitImage from '../../assets/images/landing/emotional-exploit.svg';
+import emotionalMaskImage from '../../assets/images/landing/emotional-mask.svg';
+import hiddenManipulationImage from '../../assets/images/landing/hidden-manipulation.svg';
+import incomeStrategyImage from '../../assets/images/landing/income-strategy.svg';
+import lieSuppressionImage from '../../assets/images/landing/lie-suppression.svg';
+import mindControlImage from '../../assets/images/landing/mind-control.svg';
+import moneyTriggersImage from '../../assets/images/landing/money-triggers.svg';
+import obedienceTriggerImage from '../../assets/images/landing/obedience-trigger.svg';
+import perceptionControlImage from '../../assets/images/landing/perception-control.svg';
+import savingDisciplineImage from '../../assets/images/landing/saving-discipline.svg';
+import shadowIntentionsImage from '../../assets/images/landing/shadow-intentions.svg';
+import socialEngineeringImage from '../../assets/images/landing/social-engineering.svg';
+import socialPropagandaImage from '../../assets/images/landing/social-propaganda.svg';
+import spendingHabitsImage from '../../assets/images/landing/spending-habits.svg';
+import truthDistortionImage from '../../assets/images/landing/truth-distortion.svg';
+import wealthMindsetImage from '../../assets/images/landing/wealth-mindset.svg';
+import desireControlImage from '../../assets/images/landing/desire-control.svg';
+import fearLeverageImage from '../../assets/images/landing/fear-leverage.svg';
+import charmWeaponImage from '../../assets/images/landing/charm-weapon.svg';
+import silentDominanceImage from '../../assets/images/landing/silent-dominance.svg';
+import boundaryBendingImage from '../../assets/images/landing/boundary-bending.svg';
 
 // Landing images mapping
 const landingImages: Record<string, string> = {
@@ -155,6 +182,33 @@ const landingImages: Record<string, string> = {
   'time-management': timeManagementImage,
   'trauma-patterns': traumaPatternsImage,
   'trust-issues': trustIssuesImage,
+  'cognitive-pressure': cognitivePressureImage,
+  'cold-strategy': coldStrategyImage,
+  'compliance-hack': complianceHackImage,
+  'conflict-manipulation': conflictManipulationImage,
+  'covert-influence': covertInfluenceImage,
+  'dual-persona': dualPersonaImage,
+  'emotional-exploit': emotionalExploitImage,
+  'emotional-mask': emotionalMaskImage,
+  'hidden-manipulation': hiddenManipulationImage,
+  'income-strategy': incomeStrategyImage,
+  'lie-suppression': lieSuppressionImage,
+  'mind-control': mindControlImage,
+  'money-triggers': moneyTriggersImage,
+  'obedience-trigger': obedienceTriggerImage,
+  'perception-control': perceptionControlImage,
+  'saving-discipline': savingDisciplineImage,
+  'shadow-intentions': shadowIntentionsImage,
+  'social-engineering': socialEngineeringImage,
+  'social-propaganda': socialPropagandaImage,
+  'spending-habits': spendingHabitsImage,
+  'truth-distortion': truthDistortionImage,
+  'wealth-mindset': wealthMindsetImage,
+  'desire-control': desireControlImage,
+  'fear-leverage': fearLeverageImage,
+  'charm-weapon': charmWeaponImage,
+  'silent-dominance': silentDominanceImage,
+  'boundary-bending': boundaryBendingImage,
 };
 
 interface Props {

@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm wired to create income, actively working to generate money.",
+    "text": "When I notice opportunities to create income, I recognize them and choose to actively work and generate instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I wait for income, passively expecting money to come to me.",
+    "text": "During moments when I could wait for income, I notice it and choose to create and work actively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I'm wired to create income or wait for it.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because I wait for income rather than creating it.",
+    "text": "When I feel the pull to wait passively for money, I notice it and choose to create income actively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain an entrepreneur drive that creates income rather than waiting for it.",
+    "id": 4,
+    "text": "I let not being able to create income prevent me from actively working to generate money instead of waiting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself waiting for income, I recognize it and choose to shift to creating and generating instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I wait for income, not creating it, and this affects my financial well-being negatively.",
+    "text": "I see when income needs to be created, and I choose to work actively and generate instead of waiting passively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I'm wired to create income or wait for it, and work to create income actively.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because I wait for income instead of creating it.",
+    "text": "When I feel the urge to expect money passively, I notice it and choose to create income actively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain an entrepreneur drive that creates income, not waiting for it.",
+    "id": 8,
+    "text": "I let not identifying income creation opportunities prevent me from actively working to generate money effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice myself creating income actively, I recognize it and choose to maintain those generating patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I wait for income, and this prevents me from creating income actively.",
+    "text": "I recognize when income comes from waiting rather than creating, and I choose to shift to active generation instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I'm wired to create income or wait for it, and work to develop entrepreneur drive.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because I wait for income rather than creating it.",
+    "text": "When I feel the pull to wait for money to come, I notice it and choose to create and work actively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain an entrepreneur drive that creates income, ensuring I'm not waiting for it.",
+    "id": 12,
+    "text": "I let problems from waiting for income prevent me from maintaining active income creation and generation.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice active income creation working, I recognize it and choose to strengthen those generating patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like I wait for income, and this creates problems in my financial life.",
+    "text": "I see when I need to generate income, and I choose to work actively and create instead of waiting passively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I'm wired to create income or wait for it, and work to create income actively.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because I wait for income instead of creating it.",
+    "text": "When I feel the urge to expect money passively, I notice it and choose to create income actively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain an entrepreneur drive that creates income, avoiding waiting for it.",
+    "id": 16,
+    "text": "I let not being able to create income prevent me from maintaining active work and generation instead of waiting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining active income creation, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like I wait for income, and this affects my ability to create income actively.",
+    "text": "I recognize when income needs to be created, and I choose to work actively and generate instead of waiting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I'm wired to create income or wait for it, and work to develop entrepreneur drive.",
+    "text": "When I feel the pull to wait passively for money, I notice it and choose to create income actively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I'm wired to create income, not wait for it, maintaining strong entrepreneur drive.",
+    "text": "I let not identifying income creation abilities prevent me from actively working to generate money instead of waiting effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

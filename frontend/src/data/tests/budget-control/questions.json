@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I manage my money effectively, controlling my budget and spending.",
+    "text": "When I notice spending urges, I recognize them and choose to control my budget and manage money instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like my money manages me, controlling my decisions and causing stress.",
+    "text": "During moments when money feels like it controls me, I notice it and choose to manage and control it instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I manage my money or it manages me.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because my money manages me rather than me managing it.",
+    "text": "When I feel the pull to let money manage my decisions, I notice it and choose to control my budget instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain budget control where I manage my money, not letting it manage me.",
+    "id": 4,
+    "text": "I let not being able to control my budget prevent me from managing money effectively instead of letting it manage me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice financial stress building, I recognize it and choose to manage money and control spending instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like my money manages me, and this affects my financial decisions negatively.",
+    "text": "I see when spending needs control, and I choose to manage my budget and track expenses instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I manage my money or it manages me, and work to maintain control.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because my money manages me instead of me managing it.",
+    "text": "When I feel the urge to let money control my choices, I notice it and choose to manage and budget instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain budget control where I manage my money, ensuring it doesn't manage me.",
+    "id": 8,
+    "text": "I let not identifying budget control patterns prevent me from managing money effectively instead of letting it manage me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice myself managing money well, I recognize it and choose to maintain those budget control patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like my money manages me, and this prevents me from having budget control.",
+    "text": "I recognize when money starts controlling me, and I choose to manage and control my budget instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I manage my money or it manages me, and work to improve budget control.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because my money manages me rather than me managing it.",
+    "text": "When I feel the pull to let spending control me, I notice it and choose to manage money and budget instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain budget control where I manage my money, not letting it manage me.",
+    "id": 12,
+    "text": "I let problems from not controlling my budget prevent me from managing money effectively instead of letting it manage me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice budget control working, I recognize it and choose to strengthen those money management patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my money manages me, and this creates problems in my financial life.",
+    "text": "I see when financial decisions need control, and I choose to manage my budget and track spending instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I manage my money or it manages me, and work to maintain budget control.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because my money manages me instead of me managing it.",
+    "text": "When I feel the urge to let money manage my life, I notice it and choose to control my budget instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain budget control where I manage my money, avoiding letting it manage me.",
+    "id": 16,
+    "text": "I let not being able to manage money prevent me from controlling my budget effectively instead of letting it manage me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining budget control, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my money manages me, and this affects my ability to have budget control.",
+    "text": "I recognize when spending needs management, and I choose to control my budget and track expenses instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I manage my money or it manages me, and work to improve budget control.",
+    "text": "When I feel the pull to let financial stress control me, I notice it and choose to manage money and budget instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I manage my money effectively, not letting it manage me, maintaining budget control.",
+    "text": "I let not identifying budget control abilities prevent me from managing money effectively instead of letting it manage me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

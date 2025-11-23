@@ -61,6 +61,86 @@ interface UniversalUnlockTemplateProps {
   locale?: 'en' | 'tr';
 }
 
+// Helper functions to generate context-appropriate content
+const generatePracticalMove = (testId: string, sectionTitle: string, level: string, locale: string): string => {
+  const testName = testId.toLowerCase();
+  
+  // Context-aware suggestions based on test type
+  if (testName.includes('parenting') || testName.includes('child')) {
+    return locale === 'tr' 
+      ? 'Günlük rutinlerinize küçük bir değişiklik ekleyin ve bunu bir hafta boyunca tutarlı bir şekilde uygulayın.'
+      : 'Add one small change to your daily routines and practice it consistently for a week.';
+  } else if (testName.includes('creativity') || testName.includes('creative')) {
+    return locale === 'tr'
+      ? 'Her gün 10 dakika yeni bir fikir veya çözüm üzerinde düşünün.'
+      : 'Spend 10 minutes each day exploring a new idea or solution.';
+  } else if (testName.includes('stress') || testName.includes('anxiety')) {
+    return locale === 'tr'
+      ? 'Günlük nefes egzersizleri veya kısa meditasyon seansları ekleyin.'
+      : 'Add daily breathing exercises or short meditation sessions.';
+  } else if (testName.includes('leadership') || testName.includes('team')) {
+    return locale === 'tr'
+      ? 'Bu hafta bir ekip üyesiyle daha derin bir bağlantı kurun.'
+      : 'Build a deeper connection with one team member this week.';
+  } else {
+    return locale === 'tr'
+      ? 'Bu seviyeye özel bir uygulama yapın ve sonuçları gözlemleyin.'
+      : 'Practice one specific action related to this level and observe the results.';
+  }
+};
+
+const generateWhatWillYouEarn = (testId: string, sectionTitle: string, level: string, locale: string): string => {
+  const testName = testId.toLowerCase();
+  
+  if (testName.includes('parenting') || testName.includes('child')) {
+    return locale === 'tr'
+      ? 'Daha sakin ve güvenli bir aile ortamı ile daha iyi iletişim.'
+      : 'A calmer family environment with better communication and emotional safety.';
+  } else if (testName.includes('creativity') || testName.includes('creative')) {
+    return locale === 'tr'
+      ? 'Daha geniş bir düşünce yelpazesi ve yeni çözüm yolları.'
+      : 'A broader range of thinking and new pathways to solutions.';
+  } else if (testName.includes('stress') || testName.includes('anxiety')) {
+    return locale === 'tr'
+      ? 'Daha düşük stres seviyeleri ve daha iyi duygusal denge.'
+      : 'Lower stress levels and improved emotional balance.';
+  } else if (testName.includes('leadership') || testName.includes('team')) {
+    return locale === 'tr'
+      ? 'Daha güçlü ekip bağları ve artan işbirliği.'
+      : 'Stronger team bonds and increased collaboration.';
+  } else {
+    return locale === 'tr'
+      ? 'Bu alanda daha fazla farkındalık ve pratik beceriler.'
+      : 'Greater awareness and practical skills in this area.';
+  }
+};
+
+const generateFunFact = (testId: string, sectionTitle: string, level: string, locale: string): string => {
+  const testName = testId.toLowerCase();
+  
+  if (testName.includes('parenting') || testName.includes('child')) {
+    return locale === 'tr'
+      ? 'Tutarlı rutinler çocuklarda davranış sorunlarını %70\'e kadar azaltabilir.'
+      : 'Consistent routines can reduce behavioral issues in children by up to 70%.';
+  } else if (testName.includes('creativity') || testName.includes('creative')) {
+    return locale === 'tr'
+      ? 'Günlük yaratıcı pratik, problem çözme hızını %60\'a kadar artırabilir.'
+      : 'Daily creative practice can increase problem-solving speed by up to 60%.';
+  } else if (testName.includes('stress') || testName.includes('anxiety')) {
+    return locale === 'tr'
+      ? 'Düzenli nefes egzersizleri kortizol seviyelerini %23 oranında düşürebilir.'
+      : 'Regular breathing exercises can reduce cortisol levels by up to 23%.';
+  } else if (testName.includes('leadership') || testName.includes('team')) {
+    return locale === 'tr'
+      ? 'Güçlü ekip bağları, üretkenliği %25\'e kadar artırabilir.'
+      : 'Strong team bonds can increase productivity by up to 25%.';
+  } else {
+    return locale === 'tr'
+      ? 'Küçük, tutarlı değişiklikler uzun vadede en büyük etkiyi yaratır.'
+      : 'Small, consistent changes create the biggest impact over time.';
+  }
+};
+
 export default function UniversalUnlockTemplate({ testId, level, locale }: UniversalUnlockTemplateProps) {
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
@@ -327,6 +407,13 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
   const renderSection = (section: typeof sections[0], index: number, delay: number) => {
     const backgroundColor = cardBackgrounds[index] || cardBackgrounds[0];
     const titleColor = titleColors[index] || titleColors[0];
+    
+    // Check if this is the Conclusion section (last card with dark background or title is exactly "Conclusion" or "Conclusion for X")
+    // Only check title match, not index, to avoid false positives like "Use the Premise–Conclusion Rule"
+    const isConclusion = section.title && /^Conclusion(\s+for\s+\w+)?$/i.test(section.title.trim());
+    const textColor = isConclusion ? '#FFFFFF' : '#555';
+    const headingTextColor = isConclusion ? '#FFFFFF' : '#555';
+    const titleTextColor = isConclusion ? '#FFD700' : titleColor;
 
     return (
       <FadeInCard
@@ -357,37 +444,114 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
           <h2 style={{
             fontSize: isMobile ? '20px' : '24px',
                 fontWeight: '700',
-                color: titleColor,
+                color: isConclusion ? '#FFD700' : titleTextColor,
             margin: 0,
-                opacity: 0.85,
+                opacity: isConclusion ? 1 : 0.85,
           }}>
-            {section.title}
+            {isConclusion ? 'Conclusion' : section.title}
           </h2>
             )}
         </div>
         )}
         
-        {section.text && (
-          <div style={{ 
-            color: '#555', 
-            lineHeight: '1.8', 
-            fontSize: '15px', 
-            whiteSpace: 'pre-line',
-            marginBottom: section.insights && section.insights.length > 0 ? '20px' : '0',
-          }}>
-            <p style={{ margin: 0 }}>{section.text}</p>
-          </div>
-        )}
+        {section.text && (() => {
+          // Parse text to identify special headings: "Practical Move:", "What will you earn:", "Fun Fact:"
+          let textToProcess = section.text;
+          const headingPattern = /^(Practical Move|What will you earn|Fun Fact|What Will You Earn|Final Punchline):/i;
+          
+          // Check if any of the required headings exist
+          const hasPracticalMove = /Practical Move:/i.test(textToProcess);
+          const hasWhatWillYouEarn = /What will you earn|What Will You Earn:/i.test(textToProcess);
+          const hasFunFact = /Fun Fact:/i.test(textToProcess);
+          
+          // If any heading is missing, add them at the end
+          if (!hasPracticalMove || !hasWhatWillYouEarn || !hasFunFact) {
+            const missingHeadings: string[] = [];
+            
+            if (!hasPracticalMove) {
+              // Generate context-appropriate content based on test and section
+              const practicalMoveContent = generatePracticalMove(testId, section.title || '', level, currentLocale);
+              missingHeadings.push(`Practical Move: ${practicalMoveContent}`);
+            }
+            
+            if (!hasWhatWillYouEarn) {
+              const whatWillYouEarnContent = generateWhatWillYouEarn(testId, section.title || '', level, currentLocale);
+              missingHeadings.push(`What will you earn: ${whatWillYouEarnContent}`);
+            }
+            
+            if (!hasFunFact) {
+              const funFactContent = generateFunFact(testId, section.title || '', level, currentLocale);
+              missingHeadings.push(`Fun Fact: ${funFactContent}`);
+            }
+            
+            // Add missing headings to the end of the text
+            if (missingHeadings.length > 0) {
+              textToProcess = textToProcess.trim() + '\n\n' + missingHeadings.join('\n');
+            }
+          }
+          
+          const lines = textToProcess.split('\n');
+          const processedLines = lines.map((line: string, idx: number) => {
+            // Check if line starts with special headings (case-insensitive)
+            const match = line.match(headingPattern);
+            
+            if (match) {
+              const headingText = match[0];
+              const restText = line.substring(match[0].length).trim();
+              
+              return (
+                <div key={idx} style={{ marginBottom: idx < lines.length - 1 ? '4px' : '0' }}>
+                  <span style={{
+                    fontWeight: '700',
+                    fontSize: '17px', // +2px from base 15px
+                    color: headingTextColor,
+                  }}>
+                    {headingText}
+                  </span>
+                  {restText && (
+                    <span style={{
+                      fontSize: '15px',
+                      color: textColor,
+                    }}>
+                      {' '}{restText}
+                    </span>
+                  )}
+                </div>
+              );
+            }
+            
+            // Regular line
+            return (
+              <div key={idx} style={{ 
+                marginBottom: idx < lines.length - 1 ? '4px' : '0',
+                fontSize: '15px',
+                color: textColor,
+              }}>
+                {line}
+              </div>
+            );
+          });
+          
+          return (
+            <div style={{ 
+              color: textColor, 
+              lineHeight: '1.4', 
+              marginBottom: section.insights && section.insights.length > 0 ? '20px' : '0',
+            }}>
+              {processedLines}
+            </div>
+          );
+        })()}
         {section.insights && section.insights.length > 0 && (
           <div style={{ 
-            color: '#555', 
+            color: textColor, 
             lineHeight: '1.8', 
             fontSize: '15px',
           }}>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {section.insights.map((insight: string, idx: number) => (
-                <li key={idx} style={{ marginBottom: '12px', paddingLeft: '24px', position: 'relative' }}>
-                  <span style={{ position: 'absolute', left: 0, color: '#2196F3' }}>•</span>
+                <li key={idx} style={{ marginBottom: '12px', paddingLeft: '24px', position: 'relative', color: textColor }}>
+                  <span style={{ position: 'absolute', left: 0, color: isConclusion ? '#FFFFFF' : '#2196F3' }}>•</span>
                   {insight}
                 </li>
               ))}

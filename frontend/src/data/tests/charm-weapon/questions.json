@@ -1,22 +1,122 @@
 [
-  {"id": 1, "text": "My charm is disarming when I want something effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 2, "text": "I feel like my charm is not disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 3, "text": "I can identify how disarming my charm is when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 4, "text": "I experience problems because my charm is not disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 5, "text": "I can maintain charm weapon abilities where my charm is disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 6, "text": "I feel like my charm is not disarming, and this affects me negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 7, "text": "I can recognize how disarming my charm is, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 8, "text": "I experience problems because my charm is not disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 9, "text": "I can maintain charm weapon abilities where my charm is disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 10, "text": "I feel like my charm is not disarming, and this prevents me from getting what I want.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 11, "text": "I can identify how disarming my charm is, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 12, "text": "I experience problems because my charm is not disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 13, "text": "I can maintain charm weapon abilities where my charm is disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 14, "text": "I feel like my charm is not disarming, and this creates problems in my life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 15, "text": "I can recognize how disarming my charm is, and work to maintain my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 16, "text": "I experience problems because my charm is not disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 17, "text": "I can maintain charm weapon abilities where my charm is disarming when I want something.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 18, "text": "I feel like my charm is not disarming, and this affects my ability to get what I want.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 19, "text": "I can identify how disarming my charm is, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 20, "text": "I feel like my charm is disarming when I want something effectively, maintaining strong charm weapon abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+  {
+    "id": 1,
+    "text": "When I want something, I notice how my charm affects others and choose to use it with awareness.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "During social interactions, I notice emotional signals and choose to respond with appropriate warmth or presence.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "When I feel the pull to use charm to influence, I notice it and choose to do so with intention and awareness.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I let my charm not being disarming prevent me from effectively influencing others when I want something.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "When I notice social dynamics shifting, I recognize them and choose to adjust my presence accordingly.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I see when my charm needs to be more disarming, and I choose to develop that ability with awareness.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "When I feel the urge to use charm without awareness, I notice it and choose to be intentional instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I let not identifying how disarming my charm is prevent me from improving my influence abilities.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "When I notice my charm working well, I recognize it and choose to maintain and refine those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I recognize when charm comes from manipulation rather than genuine presence, and I choose authenticity instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "When I feel the pull to use charm carelessly, I notice it and choose to use it with precision instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I let problems from charm not being disarming prevent me from maintaining effective influence abilities.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 13,
+    "text": "When I notice social signals, I observe them and choose to respond with appropriate charm and presence.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I see when my charm needs refinement, and I choose to develop it with awareness and intention.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the urge to let charm become automatic, I notice it and choose to stay present and intentional instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let not being able to use charm effectively prevent me from identifying and improving my influence abilities.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 17,
+    "text": "When I notice charm creating connection, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I recognize when charm needs to be more disarming, and I choose to develop that skill with awareness.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "When I feel the pull to ignore how my charm affects others, I notice it and choose to be aware instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I let not identifying my charm abilities prevent me from maintaining disarming influence when I want something.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
 ]

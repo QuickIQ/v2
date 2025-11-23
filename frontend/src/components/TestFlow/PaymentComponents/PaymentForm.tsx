@@ -352,6 +352,7 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
                 }
               }}
               error={errors.cardName}
+              maxLength={50}
             />
 
             {/* Save Card Checkbox */}
@@ -386,7 +387,7 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
               fontSize: '12px',
               color: '#888',
               textAlign: 'center',
-              marginBottom: '32px',
+              marginBottom: '8px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -579,7 +580,7 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: '32px',
+            marginTop: '12px',
             width: '100%',
           }}
         >

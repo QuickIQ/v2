@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm patient when making financial decisions under pressure.",
+    "text": "When I notice market behavior changing, I recognize it and choose to understand patterns and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm reactive when making financial decisions under pressure.",
+    "text": "During moments when markets feel uncertain, I notice it and choose to stay calm and analyze patterns instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I'm chaotic when making financial decisions under pressure.",
+    "text": "When I feel the pull to react to market noise, I notice it and choose to understand behavior and think ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I can identify whether I'm patient, reactive, or chaotic under pressure when making financial decisions.",
+    "text": "I let not being able to understand market behavior prevent me from analyzing patterns and thinking strategically effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I experience problems with financial decisions because I'm reactive or chaotic under pressure, not patient.",
+    "text": "When I notice myself analyzing markets strategically, I recognize it and choose to maintain those pattern-recognition habits.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I can maintain patience when making financial decisions under pressure, avoiding reactive or chaotic behavior.",
+    "text": "I see when market analysis is needed, and I choose to understand behavior and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel like my market behavior is reactive or chaotic under pressure, which affects my financial decisions negatively.",
+    "text": "When I feel the urge to react to market movements, I notice it and choose to stay calm and analyze patterns instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I can recognize whether I'm patient, reactive, or chaotic under pressure, and work to maintain patience in financial decisions.",
+    "text": "I let not identifying market patterns prevent me from understanding behavior and thinking strategically effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I experience financial problems because I'm reactive or chaotic under pressure, rather than patient.",
+    "text": "When I notice strategic market thinking working, I recognize it and choose to strengthen those analytical patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I can maintain patient market behavior under pressure, avoiding reactive or chaotic financial decisions.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 11,
-    "text": "I feel like my market behavior is patient, reactive, or chaotic under pressure, and I can identify which it is.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience difficulty with financial decisions because I'm reactive or chaotic under pressure, not patient.",
+    "text": "I recognize when markets feel uncertain, and I choose to stay calm and understand behavior instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain patient market behavior under pressure, ensuring I'm not reactive or chaotic in financial decisions.",
+    "id": 11,
+    "text": "When I feel the pull to react without understanding, I notice it and choose to analyze patterns and think ahead instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I let problems from not understanding behavior prevent me from analyzing patterns and thinking strategically.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice pattern recognition working, I recognize it and choose to strengthen those strategic patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my market behavior is reactive or chaotic under pressure, and this creates problems in my financial decisions.",
+    "text": "I see when market behavior needs analysis, and I choose to understand patterns and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can identify whether I'm patient, reactive, or chaotic under pressure, and work to maintain patience in market behavior.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because my market behavior is reactive or chaotic under pressure, not patient.",
+    "text": "When I feel the urge to let noise control decisions, I notice it and choose to stay calm and analyze behavior instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain patient market behavior under pressure, avoiding reactive or chaotic financial decisions.",
+    "id": 16,
+    "text": "I let not being able to analyze markets prevent me from understanding behavior and thinking strategically effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining market awareness, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my market behavior is patient, reactive, or chaotic under pressure, and this affects my financial decisions.",
+    "text": "I recognize when markets need strategic thinking, and I choose to understand behavior and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can recognize whether I'm patient, reactive, or chaotic under pressure, and maintain patient market behavior in financial decisions.",
+    "text": "When I feel the pull to react to market noise, I notice it and choose to analyze patterns and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I'm patient when making financial decisions under pressure, not reactive or chaotic.",
+    "text": "I let not identifying market behavior abilities prevent me from analyzing patterns and thinking strategically effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

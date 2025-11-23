@@ -1,125 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I can effectively switch between multiple tasks without losing focus.",
+    "text": "When I have multiple tasks, I choose one main task and hold it as my anchor before switching.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel overwhelmed when trying to handle several things at once.",
+    "text": "I recognize when it's time to switch tasks based on natural boundaries, not random impulses.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 3,
-    "text": "I can maintain quality while working on multiple projects simultaneously.",
+    "text": "When I switch between tasks, I freeze the context of the previous task so I can resume it easily later.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I lose track of details when juggling multiple responsibilities.",
+    "text": "I let multiple tasks compete for attention without choosing a main focus, and I switch randomly without structure.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I can prioritize effectively when multiple tasks compete for my attention.",
+    "text": "When I notice cognitive load building up, I reduce friction and clear my workspace before continuing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I make more mistakes when trying to do several things at the same time.",
+    "text": "I recognize the difference between tasks that need immediate attention and tasks that can wait.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I can efficiently manage my time across different activities.",
+    "text": "When I group tasks by similar mental modes, switching becomes smoother and faster.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I feel stressed when I have to handle multiple deadlines.",
+    "text": "I let interruptions pull me away from my main task without pausing to decide if they need attention now or later.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I can quickly adapt when switching from one task to another.",
+    "text": "When I predict potential bottlenecks before they appear, I stay ahead of problems and switch more efficiently.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I struggle to complete tasks when I'm working on multiple things.",
+    "text": "I recognize when my cognitive bandwidth is getting full, and I manage it like a limited resource.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I can maintain focus on important details while multitasking.",
+    "text": "When I create task loops with clear patterns like focus, check, switch, and reset, multitasking becomes predictable.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I find it difficult to keep track of multiple ongoing projects.",
+    "text": "I try to handle too many active tasks at once without limiting myself, and I overload my mental capacity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I can effectively delegate and coordinate multiple tasks.",
+    "text": "When I assign each task a clear home or category, I reduce switching cost and maintain better organization.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I feel mentally exhausted after handling several tasks in a short time.",
+    "text": "I recognize when switching too early or too late is affecting my efficiency, and I adjust my timing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I can maintain productivity when switching between different types of work.",
+    "text": "When I work in focused blocks with controlled switching windows, I match my natural cognitive cycles.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I forget important information when managing multiple responsibilities.",
+    "text": "I let hidden friction like clutter, notifications, or unclear goals drain my attention without addressing them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I can efficiently organize my workflow when handling multiple priorities.",
+    "text": "When I separate tasks by mode, I avoid conflicts between thinking, execution, and communication tasks.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel anxious when I have too many things to manage at once.",
+    "text": "I recognize when my task state is messy before switching, and I clean it up to make resumption easier.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I can maintain high performance standards across multiple concurrent tasks.",
+    "text": "When I limit myself to a maximum of two active tasks, I prevent cognitive overload and maintain clarity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I struggle to give adequate attention to each task when multitasking.",
+    "text": "I switch tasks without freezing context or reducing cognitive load, and I struggle to resume previous tasks.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-
-
-

@@ -337,12 +337,12 @@ export function Logo({ size = 48, animated = true, showText = true, className = 
                 color: '#666',
                 fontWeight: '400',
                 letterSpacing: '1px',
-                textTransform: 'uppercase',
+                textTransform: 'none',
                 marginTop: '6px',
                 display: 'block',
               }}
             >
-              Intelligence Test
+              Intelligence & Mental Health
             </motion.span>
           )}
         </motion.div>

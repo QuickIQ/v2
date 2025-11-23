@@ -1,22 +1,122 @@
 [
-  {"id": 1, "text": "I can switch identities to fit my goals effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 2, "text": "I feel like I cannot switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 3, "text": "I can identify whether I can switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 4, "text": "I experience problems because I cannot switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 5, "text": "I can maintain dual persona abilities where I switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 6, "text": "I feel like I cannot switch identities, and this affects me negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 7, "text": "I can recognize whether I can switch identities, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 8, "text": "I experience problems because I cannot switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 9, "text": "I can maintain dual persona abilities where I switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 10, "text": "I feel like I cannot switch identities, and this prevents me from achieving my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 11, "text": "I can identify whether I can switch identities, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 12, "text": "I experience problems because I cannot switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 13, "text": "I can maintain dual persona abilities where I switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 14, "text": "I feel like I cannot switch identities, and this creates problems in my life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 15, "text": "I can recognize whether I can switch identities, and work to maintain my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 16, "text": "I experience problems because I cannot switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 17, "text": "I can maintain dual persona abilities where I switch identities to fit my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 18, "text": "I feel like I cannot switch identities, and this affects my ability to achieve my goals.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 19, "text": "I can identify whether I can switch identities, and work to improve my abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 20, "text": "I feel like I can switch identities to fit my goals effectively, maintaining strong dual persona abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+  {
+    "id": 1,
+    "text": "When I notice myself shifting between different versions of myself, I recognize it and choose to do so with awareness.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "During moments when context changes, I notice it and choose to adapt my presence intentionally instead of reacting automatically.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "When I feel the pull to switch personas unconsciously, I notice it and choose to do so with intention instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I let not being able to switch identities prevent me from adapting to different situations and achieving my goals.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "When I notice different versions of myself appearing, I recognize them and choose to use each mode intentionally.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I see when I need to adapt my persona to fit a situation, and I choose to do so with awareness and control.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "When I feel the urge to let context control my behavior, I notice it and choose to select my mode instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I let not identifying persona switching abilities prevent me from adapting to different situations effectively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "When I notice myself choosing the right persona for a situation, I recognize it and choose to maintain that awareness.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I recognize when persona shifts come from hooks rather than choice, and I choose to take control instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "When I feel the pull to let emotions hijack my persona, I notice it and choose to stay in control instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I let problems from not switching identities prevent me from maintaining dual persona abilities and adapting.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 13,
+    "text": "When I notice intentional persona switching working, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I see when I need to prepare my persona before entering a situation, and I choose to do so with forethought.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the urge to let persona shifts happen automatically, I notice it and choose to control them instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let not being able to switch identities prevent me from identifying and improving dual persona abilities.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 17,
+    "text": "When I notice controlled persona adaptation, I recognize it and choose to maintain those intentional patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I recognize when persona switching needs to be strategic, and I choose to do so with awareness and intention.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "When I feel the pull to let context force persona changes, I notice it and choose to select my mode instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I let not identifying persona abilities prevent me from switching identities to fit goals effectively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
 ]

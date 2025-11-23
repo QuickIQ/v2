@@ -475,3 +475,45 @@ body {
   animation-fill-mode: both;
 }
 
+/* Mobile Answer Options Grid Layout (600px and below) */
+@media (max-width: 600px) {
+  .answers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "always never"
+      "usually rarely"
+      "often sometimes"
+      "neutral neutral";
+    gap: 10px;
+  }
+
+  .answer-always { 
+    grid-area: always; 
+  }
+
+  .answer-never { 
+    grid-area: never; 
+  }
+
+  .answer-usually { 
+    grid-area: usually; 
+  }
+
+  .answer-rarely { 
+    grid-area: rarely; 
+  }
+
+  .answer-often { 
+    grid-area: often; 
+  }
+
+  .answer-sometimes { 
+    grid-area: sometimes; 
+  }
+
+  .answer-neutral { 
+    grid-area: neutral; 
+  }
+}
+

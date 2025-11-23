@@ -81,6 +81,7 @@ export function TrustPoint({ emoji, title, description, index }: TrustPointProps
               marginBottom: '12px',
               display: 'flex',
               alignItems: 'center',
+              justifyContent: 'center',
               gap: '8px',
             }}
           >
@@ -92,6 +93,7 @@ export function TrustPoint({ emoji, title, description, index }: TrustPointProps
               fontWeight: '700',
               color: '#333',
               marginBottom: '8px',
+              textAlign: 'center',
             }}
           >
             {title}
@@ -102,6 +104,7 @@ export function TrustPoint({ emoji, title, description, index }: TrustPointProps
               color: '#666',
               lineHeight: '1.6',
               margin: 0,
+              textAlign: 'center',
             }}
           >
             {description}

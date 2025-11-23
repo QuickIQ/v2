@@ -1,22 +1,122 @@
 [
-  {"id": 1, "text": "I can overload minds to gain control effectively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 2, "text": "I feel like I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 3, "text": "I can identify whether I can overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 4, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 5, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 6, "text": "I feel like I cannot overload minds, and this affects me negatively.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 7, "text": "I can recognize whether I can overload minds, and work to improve my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 8, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 9, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 10, "text": "I feel like I cannot overload minds, and this prevents me from gaining control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 11, "text": "I can identify whether I can overload minds, and work to improve my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 12, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 13, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 14, "text": "I feel like I cannot overload minds, and this creates problems in my life.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 15, "text": "I can recognize whether I can overload minds, and work to maintain my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 16, "text": "I experience problems because I cannot overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 17, "text": "I can maintain cognitive pressure abilities where I overload minds to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 18, "text": "I feel like I cannot overload minds, and this affects my ability to gain control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": false},
-  {"id": 19, "text": "I can identify whether I can overload minds, and work to improve my control.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true},
-  {"id": 20, "text": "I feel like I can overload minds to gain control, maintaining effective cognitive pressure abilities.", "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"], "reverse": true}
+  {
+    "id": 1,
+    "text": "When I notice my mind getting overloaded, I recognize it and choose to pause and protect my mental energy instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "text": "During moments when stimulation is too high, I notice it and choose to reduce input and rest instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "text": "When I feel the pull to keep scrolling or consuming content, I notice it and choose to stop and rest instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "text": "I let not being able to identify cognitive overload prevent me from protecting my mental resources.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "text": "When I notice signs of mental exhaustion, I recognize them and choose to rest and recover instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "text": "I see when my brain needs a break from stimulation, and I choose to create quiet zones instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 7,
+    "text": "When I feel the urge to keep consuming content, I notice it and choose to pause and protect my mind instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "text": "I let not identifying cognitive pressure prevent me from maintaining protection over my mental resources.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "text": "When I notice myself managing stimulation well, I recognize it and choose to maintain those protective patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "text": "I recognize when overload is happening, and I choose to reduce input and protect my cognitive resources.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "text": "When I feel the pull to let digital hooks control my attention, I notice it and choose to break free instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 12,
+    "text": "I let problems from not identifying overload prevent me from maintaining protection over my mental energy.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 13,
+    "text": "When I notice protective awareness working, I recognize it and choose to strengthen those management patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "text": "I see when my mind needs protection from overload, and I choose to create boundaries and rest instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the urge to let stimulation continue, I notice it and choose to pause and recover instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let not being able to identify cognitive pressure prevent me from maintaining protection over my mental resources.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
+    "id": 17,
+    "text": "When I notice myself maintaining mental balance, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "text": "I recognize when overload is building, and I choose to reduce stimulation and protect my mind instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "text": "When I feel the pull to let digital content drain my energy, I notice it and choose to protect my resources instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 20,
+    "text": "I let not identifying cognitive pressure abilities prevent me from protecting my mental resources effectively.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  }
 ]

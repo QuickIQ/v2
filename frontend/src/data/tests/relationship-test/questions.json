@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like my relationships are based on deep love, or deep fear of being left alone.",
+    "text": "When I feel worry about my relationship, I notice the fear and choose to communicate calmly instead of reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I worry excessively about my partner leaving me or abandoning me.",
+    "text": "During moments of doubt, I pause and check whether my concern comes from the present or from old patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I need constant reassurance from my partner to feel secure in the relationship.",
+    "text": "When I feel the need for reassurance, I notice it and choose to build inner security instead of seeking external validation.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I have difficulty trusting my partner and often suspect they might leave or cheat on me.",
+    "text": "I let fear of abandonment or being left alone control my behavior and create insecurity in my relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I feel like I'm too dependent on my partner and can't function well without them.",
+    "text": "When I notice trust issues rising, I recognize them and choose to address them directly instead of letting suspicion grow.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I engage in behaviors to prevent my partner from leaving, even if they're unhealthy or controlling.",
+    "text": "I see when my dependency on my partner is unhealthy, and I choose to build independence and self-reliance instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel intense anxiety or panic when I think about being alone or single.",
+    "text": "When I feel the urge to check or control my partner, I notice it and choose to trust and let go instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I have difficulty maintaining my own identity and interests outside of my relationship.",
+    "text": "I let relationship anxiety drive me to seek constant reassurance or create unnecessary conflict.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I feel like I'm in relationships primarily to avoid being alone, rather than for genuine connection.",
+    "text": "When I notice emotional shifts in the relationship, I observe them calmly and choose to communicate with clarity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I experience intense emotional reactions when my partner shows any sign of distance or disinterest.",
+    "text": "I recognize when my reactions come from old wounds rather than the present moment, and I choose to respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can maintain healthy independence and identity within my relationships.",
+    "text": "When I feel the pull to test my partner's commitment, I notice it and choose to trust the relationship instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I feel secure in my relationships and don't constantly worry about being abandoned.",
+    "text": "I let insecurity or fear of being alone prevent me from building healthy, balanced relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I can trust my partner and don't need constant reassurance to feel secure.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I can be comfortable alone and don't feel like I need a relationship to be happy or complete.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I can maintain healthy boundaries and independence while still being close to my partner.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I'm in relationships because I'm afraid of being alone, not because of genuine love.",
+    "text": "When I notice myself overthinking the relationship, I recognize it and choose to stay present instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "I see when my relationship patterns are based on fear rather than love, and I choose to shift toward security.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the urge to cling or become too dependent, I notice it and choose to maintain my own identity.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let relationship fears or past hurts control how I behave and prevent me from being fully present.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I have difficulty ending relationships, even when they're unhealthy, because I'm afraid of being alone.",
+    "text": "When I sense emotional distance, I notice it and choose to communicate openly instead of withdrawing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like my fear of abandonment drives my relationship behaviors more than love does.",
+    "text": "I recognize when I'm projecting past relationship issues onto the present, and I choose to see what's actually happening.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I experience intense anxiety when I'm not in a relationship or when I think about being single.",
+    "text": "When I feel the pull to seek constant validation, I notice it and choose to build self-worth from within instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can form relationships based on genuine love and connection, not fear of being alone.",
+    "text": "I let relationship anxiety or fear of abandonment prevent me from experiencing deep, secure connections.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

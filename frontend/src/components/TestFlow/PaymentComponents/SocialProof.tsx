@@ -224,7 +224,7 @@ export function SocialProof({ testId }: SocialProofProps) {
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    marginBottom: '12px',
+                    marginBottom: '-5px',
                   }}>
                     <h4 style={{
                       fontSize: '18px',

@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm built for long-term partnership and marriage.",
+    "text": "When I notice doubts about long-term partnership, I recognize them and choose to understand what they're telling me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I have doubts about whether I'm built for long-term partnership.",
+    "text": "During moments when commitment feels challenging, I notice my resistance and choose to address it honestly instead of avoiding it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can commit to long-term partnership and maintain a healthy marriage.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I feel like I'm not built for long-term partnership and struggle with commitment.",
+    "text": "When I feel the pull to avoid long-term commitment, I notice it and choose to explore what's behind it instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can identify whether I'm built for long-term partnership and marriage readiness.",
+    "id": 4,
+    "text": "I let doubts about partnership prevent me from committing to long-term relationships and maintaining healthy marriage.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice readiness for marriage, I recognize it and choose to build the skills needed for long-term partnership.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I experience doubts about my marriage readiness and whether I'm built for long-term partnership.",
+    "text": "I see when I'm struggling with commitment, and I choose to understand and work through the underlying fears.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can maintain long-term partnership and build a successful marriage.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I feel like I'm not built for long-term partnership, and this affects my marriage readiness.",
+    "text": "When I feel the urge to run from long-term partnership, I notice it and choose to face what's causing the fear.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can assess my marriage readiness and whether I'm built for long-term partnership.",
+    "id": 8,
+    "text": "I let not being built for partnership prevent me from identifying and developing readiness for long-term commitment.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice readiness building, I recognize it and choose to prepare myself for the responsibilities of marriage.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I have concerns about my marriage readiness and whether I'm built for long-term partnership.",
+    "text": "I recognize when commitment fears are based on old patterns rather than present reality, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can build and maintain long-term partnership, demonstrating marriage readiness.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I feel like I'm not built for long-term partnership, and this prevents me from being ready for marriage.",
+    "text": "When I feel the pull to avoid marriage readiness, I notice it and choose to assess my readiness honestly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain marriage readiness and demonstrate that I'm built for long-term partnership.",
+    "id": 12,
+    "text": "I let struggle with commitment prevent me from building the capacity for long-term partnership and healthy marriage.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice patterns that support long-term partnership, I recognize them and choose to strengthen them.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I experience doubts about whether I'm built for long-term partnership and marriage.",
+    "text": "I see when I'm ready for marriage, and I choose to build the emotional and practical foundation needed.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can identify my marriage readiness and whether I'm built for long-term partnership.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I'm not built for long-term partnership, and this affects my marriage readiness negatively.",
+    "text": "When I feel the urge to avoid assessing my readiness, I notice it and choose to face the question honestly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain marriage readiness and build successful long-term partnerships.",
+    "id": 16,
+    "text": "I let doubts about being built for partnership prevent me from committing to and maintaining long-term relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice readiness for long-term commitment, I recognize it and choose to develop the skills for healthy marriage.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I have concerns about my ability to maintain long-term partnership and marriage readiness.",
+    "text": "I recognize when commitment struggles come from fear rather than genuine incompatibility, and I choose to work through them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can assess whether I'm built for long-term partnership and maintain marriage readiness.",
+    "text": "When I feel the pull to avoid long-term partnership, I notice it and choose to understand and address the underlying issues.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I'm built for long-term partnership and have good marriage readiness.",
+    "text": "I let not identifying my readiness prevent me from committing to long-term partnership and maintaining healthy marriage.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

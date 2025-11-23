@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I can sell value effectively when it matters.",
+    "text": "When I notice sales opportunities, I recognize them and choose to approach with confidence and clarity instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I freeze when it matters, unable to sell value effectively.",
+    "text": "During moments when selling feels challenging, I notice it and choose to stay calm and guide with confidence instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I can sell value or freeze when it matters.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience problems with sales because I freeze when it matters, unable to sell value.",
+    "text": "When I feel the pull to let fear control selling, I notice it and choose to stay confident and guide instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain sales confidence that allows me to sell value when it matters, without freezing.",
+    "id": 4,
+    "text": "I let not being able to approach sales prevent me from selling with confidence and clarity effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself selling confidently, I recognize it and choose to maintain those clear patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I freeze when it matters, and this prevents me from selling value effectively.",
+    "text": "I see when sales situations need confidence, and I choose to approach with clarity and guide instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I can sell value or freeze when it matters, and work to maintain sales confidence.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience sales problems because I freeze when it matters instead of selling value.",
+    "text": "When I feel the urge to let uncertainty control selling, I notice it and choose to stay confident and clear instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain sales confidence that allows me to sell value when it matters, not freezing.",
+    "id": 8,
+    "text": "I let not identifying sales opportunities prevent me from approaching with confidence and selling effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice sales confidence working, I recognize it and choose to strengthen those clear patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I freeze when it matters, and this affects my ability to sell value effectively.",
+    "text": "I recognize when selling feels challenging, and I choose to stay calm and guide with confidence instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I can sell value or freeze when it matters, and work to improve sales confidence.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience sales problems because I freeze when it matters rather than selling value.",
+    "text": "When I feel the pull to avoid sales situations, I notice it and choose to approach with confidence instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain sales confidence that allows me to sell value when it matters, avoiding freezing.",
+    "id": 12,
+    "text": "I let problems from not approaching sales prevent me from selling with confidence and clarity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice confident selling working, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like I freeze when it matters, and this creates problems in my sales performance.",
+    "text": "I see when sales need confidence, and I choose to approach with clarity and guide effectively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I can sell value or freeze when it matters, and work to maintain sales confidence.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience sales problems because I freeze when it matters instead of selling value effectively.",
+    "text": "When I feel the urge to let fear control selling, I notice it and choose to stay confident and clear instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain sales confidence that allows me to sell value when it matters, not freezing.",
+    "id": 16,
+    "text": "I let not being able to stay confident prevent me from approaching sales and selling effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining sales confidence, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like I freeze when it matters, and this affects my sales confidence and ability to sell value.",
+    "text": "I recognize when sales situations need confidence, and I choose to approach with clarity and guide instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I can sell value or freeze when it matters, and work to improve sales confidence.",
+    "text": "When I feel the pull to let uncertainty control selling, I notice it and choose to stay confident and guide instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I can sell value effectively when it matters, without freezing.",
+    "text": "I let not identifying sales confidence abilities prevent me from approaching and selling with clarity effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

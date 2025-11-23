@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I have difficulty falling asleep, even when I'm physically tired.",
+    "text": "When I prepare for bed, I notice my thoughts and choose to let them go instead of engaging with them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm avoiding the next day emotionally by staying awake.",
+    "text": "During evenings, I create a calm routine that helps my body and mind transition into rest mode.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I wake up frequently during the night and have trouble falling back asleep.",
+    "text": "When I feel anxious about sleep, I notice the worry and choose to breathe and relax instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I wake up too early in the morning and can't get back to sleep.",
+    "text": "I let racing thoughts or worries keep me awake long after I want to sleep.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I feel anxious or worried when I think about going to bed.",
+    "text": "When I wake up during the night, I notice the wakefulness and choose to stay calm instead of worrying about it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I can't sleep because my mind is racing with thoughts about the day or the future.",
+    "text": "I recognize when my mind is avoiding the next day by staying awake, and I choose to face it with rest instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel like I'm avoiding sleep because I don't want to face the next day.",
+    "text": "When I feel the urge to stay up late, I notice the pattern and choose to honor my sleep schedule instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I experience poor sleep quality and wake up feeling unrested even after sleeping.",
+    "text": "I let stress or unresolved emotions from the day disrupt my ability to fall asleep or stay asleep.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I have irregular sleep patterns and my sleep schedule changes frequently.",
+    "text": "When I notice difficulty falling asleep, I stay calm and let my body relax instead of forcing sleep.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel like I can't sleep because I'm emotionally overwhelmed or stressed.",
+    "text": "I see when screens or stimulation are keeping me awake, and I choose to disconnect and wind down instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can fall asleep easily and maintain restful sleep throughout the night.",
+    "text": "When I wake up too early, I notice it and choose to rest quietly instead of worrying about lost sleep.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I wake up feeling refreshed and energized after a good night's sleep.",
+    "text": "I let irregular sleep schedules or poor bedtime habits control my rest and daily energy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I have a consistent sleep schedule and can maintain healthy sleep habits.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I can relax and unwind before bed without feeling anxious about the next day.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I feel emotionally prepared to face each new day without avoiding sleep.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I can't sleep because I'm dreading what tomorrow will bring.",
+    "text": "When I feel tension in my body at bedtime, I notice it and use breathing or relaxation to release it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "I recognize when my mind is overthinking at night, and I choose to redirect my attention to rest instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I notice my sleep quality affecting my mood or focus, I adjust my habits to support better rest.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let anxiety about not sleeping well create more stress and make sleep problems worse.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I experience sleep disturbances that interfere with my daily functioning.",
+    "text": "When I feel the pull to stay up working or scrolling, I notice it and choose to protect my sleep time instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like my sleep problems are related to emotional avoidance or stress.",
+    "text": "I see when my daily rhythm is disrupting my sleep, and I choose to create more consistent patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I have difficulty maintaining a regular sleep schedule due to emotional or psychological factors.",
+    "text": "When I notice my body needs rest, I honor that need instead of pushing through exhaustion.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can manage my sleep effectively and don't experience persistent sleep problems.",
+    "text": "I let poor sleep habits or lack of routine prevent me from getting the rest I need.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

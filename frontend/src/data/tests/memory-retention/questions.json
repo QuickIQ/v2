@@ -1,125 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I can remember names of people I meet for a long time.",
+    "text": "When I'm about to learn something new, I notice my mental state and prepare my mind to store it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I forget important information shortly after learning it.",
+    "text": "I recognize the core idea I need to remember before I get lost in details.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 3,
-    "text": "I can recall details from conversations that happened weeks ago.",
+    "text": "When I learn something, I imagine the future moment when I'll need to recall it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I struggle to remember facts I studied recently.",
+    "text": "I let my mind drift or get distracted while taking in new information, and I don't notice when my attention wanders.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I can retain information from books or articles I read months ago.",
+    "text": "When I notice my attention slipping, I bring it back to focus before continuing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I frequently need to re-read information to remember it.",
+    "text": "I recognize when stress, fatigue, or emotional state are affecting my ability to remember.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I can remember specific dates and events from my past accurately.",
+    "text": "When I organize new information, I place it into clear mental structures so I can find it later.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I forget where I put things shortly after placing them.",
+    "text": "I try to remember everything at once without filtering what matters, and I lose information under pressure or speed.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I can recall information from presentations or lectures without notes.",
+    "text": "When I feel my cognitive energy dropping, I take a break and reset before continuing to learn.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I lose track of what I was supposed to remember.",
+    "text": "I recognize the difference between information that matters and information that's just noise.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I can remember phone numbers or addresses without writing them down.",
+    "text": "When I connect new knowledge to things I already know, I create stronger memory anchors.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I forget instructions shortly after receiving them.",
+    "text": "I let emotions or impulses hijack my focus while learning, and I don't regulate my internal state during input.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I can retain complex information over extended periods.",
+    "text": "When I notice information entering my mind, I consciously register it and tag it as important.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I need frequent reminders to remember important tasks.",
+    "text": "I recognize when my memory feels unstable and I need to strengthen my mental structure.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I can remember details from movies or stories I experienced long ago.",
+    "text": "When I convert abstract ideas into simple mental pictures, I remember them more easily.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I forget passwords or codes I don't use regularly.",
+    "text": "I let large amounts of information overwhelm me without breaking it into manageable pieces.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I can recall information from training sessions or courses I completed.",
+    "text": "When I create clear pathways for future recall, my brain automatically holds on to the information.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I struggle to remember information I learned yesterday.",
+    "text": "I recognize when my internal environment is not ready for learning, and I prepare it first.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I can retain information from multiple sources simultaneously.",
+    "text": "When I pair new information with what I already know, I build stable memory links.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I forget important details from recent conversations.",
+    "text": "I try to remember after I've already read something, and I don't prepare my mind before taking in new information.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-
-
-

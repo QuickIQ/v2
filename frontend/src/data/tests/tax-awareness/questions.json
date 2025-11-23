@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I understand the tax system and how it works.",
+    "text": "When I notice tax costs in purchases, I recognize them and choose to calculate and understand the full cost instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I get eaten by the tax system, not understanding how it works.",
+    "text": "During moments when making financial decisions, I notice it and choose to consider tax impact and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I understand the system or get eaten by it.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because I get eaten by the tax system rather than understanding it.",
+    "text": "When I feel the pull to ignore tax costs, I notice it and choose to calculate and understand them instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain tax awareness that allows me to understand the system, not get eaten by it.",
+    "id": 4,
+    "text": "I let not being able to understand tax costs prevent me from calculating and planning financial decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself calculating tax costs, I recognize it and choose to maintain those awareness patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I get eaten by the tax system, and this affects my financial well-being negatively.",
+    "text": "I see when financial decisions need tax awareness, and I choose to calculate and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I understand the system or get eaten by it, and work to improve tax awareness.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because I get eaten by the tax system instead of understanding it.",
+    "text": "When I feel the urge to ignore tax impact, I notice it and choose to calculate and understand costs instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain tax awareness that allows me to understand the system, not get eaten by it.",
+    "id": 8,
+    "text": "I let not identifying tax costs prevent me from calculating and planning financial decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice tax awareness working, I recognize it and choose to strengthen those calculation patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I get eaten by the tax system, and this prevents me from understanding how it works.",
+    "text": "I recognize when purchases include hidden tax costs, and I choose to calculate and understand them instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I understand the system or get eaten by it, and work to improve tax awareness.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because I get eaten by the tax system rather than understanding it.",
+    "text": "When I feel the pull to ignore tax impact, I notice it and choose to calculate and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain tax awareness that ensures I understand the system, not get eaten by it.",
+    "id": 12,
+    "text": "I let problems from not understanding tax costs prevent me from calculating and planning financial decisions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice myself maintaining tax awareness, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like I get eaten by the tax system, and this creates problems in my financial life.",
+    "text": "I see when financial decisions need tax calculation, and I choose to understand and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I understand the system or get eaten by it, and work to improve tax awareness.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because I get eaten by the tax system instead of understanding it.",
+    "text": "When I feel the urge to ignore tax costs, I notice it and choose to calculate and understand impact instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain tax awareness that allows me to understand the system, avoiding getting eaten by it.",
+    "id": 16,
+    "text": "I let not being able to calculate tax costs prevent me from understanding and planning financial decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice tax calculation working, I recognize it and choose to strengthen those awareness patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like I get eaten by the tax system, and this affects my ability to understand how it works.",
+    "text": "I recognize when financial decisions need tax awareness, and I choose to calculate and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I understand the system or get eaten by it, and work to improve tax awareness.",
+    "text": "When I feel the pull to ignore tax impact in decisions, I notice it and choose to calculate and understand instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I understand the tax system, not getting eaten by it, maintaining good tax awareness.",
+    "text": "I let not identifying tax awareness abilities prevent me from calculating and planning financial decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

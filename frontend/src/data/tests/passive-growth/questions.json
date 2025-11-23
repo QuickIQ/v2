@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm planting seeds for financial growth, actively investing and building wealth.",
+    "text": "When I notice opportunities for passive income, I recognize them and choose to build systems and automate instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm hoping money grows itself, passively expecting wealth without active effort.",
+    "text": "During moments when income depends on my daily effort, I notice it and choose to build automated systems instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I'm planting seeds or hoping money grows itself for financial growth.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because I hope money grows itself rather than planting seeds.",
+    "text": "When I feel the pull to work manually for income, I notice it and choose to build passive systems instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain passive growth strategies that plant seeds rather than hoping money grows itself.",
+    "id": 4,
+    "text": "I let not being able to build passive systems prevent me from creating automated income and growing assets effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself building passive systems, I recognize it and choose to maintain those automated patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I hope money grows itself, not planting seeds, and this affects my financial growth negatively.",
+    "text": "I see when income needs automation, and I choose to build systems that grow independently instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I'm planting seeds or hoping money grows itself, and work to plant seeds actively.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because I hope money grows itself instead of planting seeds.",
+    "text": "When I feel the urge to keep working manually, I notice it and choose to build passive systems instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain passive growth strategies that plant seeds, not hoping money grows itself.",
+    "id": 8,
+    "text": "I let not identifying passive opportunities prevent me from building automated systems and growing assets effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice passive growth working, I recognize it and choose to strengthen those automated patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I hope money grows itself, and this prevents me from planting seeds for financial growth.",
+    "text": "I recognize when income depends on effort, and I choose to build automated systems instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I'm planting seeds or hoping money grows itself, and work to plant seeds for growth.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because I hope money grows itself rather than planting seeds.",
+    "text": "When I feel the pull to work for income daily, I notice it and choose to build passive systems instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain passive growth strategies that plant seeds, ensuring I'm not hoping money grows itself.",
+    "id": 12,
+    "text": "I let problems from not building passive systems prevent me from creating automated income and growing assets.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice automated income working, I recognize it and choose to strengthen those passive growth patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like I hope money grows itself, and this creates problems in my financial growth.",
+    "text": "I see when passive growth is needed, and I choose to build systems that automate and grow independently instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I'm planting seeds or hoping money grows itself, and work to plant seeds actively.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because I hope money grows itself instead of planting seeds.",
+    "text": "When I feel the urge to keep income manual, I notice it and choose to build automated systems instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain passive growth strategies that plant seeds, avoiding hoping money grows itself.",
+    "id": 16,
+    "text": "I let not being able to automate systems prevent me from building passive income and growing assets effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining passive growth, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like I hope money grows itself, and this affects my ability to plant seeds for financial growth.",
+    "text": "I recognize when income needs automation, and I choose to build passive systems that grow independently instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I'm planting seeds or hoping money grows itself, and work to plant seeds for growth.",
+    "text": "When I feel the pull to work manually for income, I notice it and choose to build automated systems instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I'm planting seeds for financial growth, not hoping money grows itself.",
+    "text": "I let not identifying passive growth abilities prevent me from building automated systems and growing assets effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

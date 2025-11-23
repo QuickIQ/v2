@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I find it difficult to stay focused on tasks that don't interest me.",
+    "text": "Before starting a task, I notice whether my mind feels fast, foggy, wired, calm, or scattered.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I can hyperfocus on activities I enjoy for hours without noticing time passing.",
+    "text": "When my attention drifts, I recognize what triggered the shift before I react.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I frequently lose or misplace important items like keys, phone, or wallet.",
+    "text": "I pause long enough to imagine the next three steps before I begin acting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I struggle to follow through on tasks and often leave things unfinished.",
+    "text": "I start tasks without predicting what will happen next or considering the sequence.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I feel restless and have difficulty sitting still for long periods.",
+    "text": "When emotions spike quickly, I pause and breathe before my focus scatters.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I often interrupt others or finish their sentences because I can't wait my turn.",
+    "text": "I notice when my brain seeks stimulation and I choose to stay with the task anyway.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I have trouble organizing tasks and activities, even when I know what needs to be done.",
+    "text": "When my mind jumps between ideas, I see the pattern and guide it back to direction.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I easily get distracted by external stimuli or my own thoughts.",
+    "text": "I switch tasks impulsively without recognizing that I'm seeking stimulation or escape.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I forget daily activities like appointments, deadlines, or returning calls.",
+    "text": "I notice when boring tasks feel physically painful and I use short breaks to manage it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel like my brain rejects anything boring or uninteresting.",
+    "text": "When ideas flood in faster than I can organize them, I write them down to free my mind.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can maintain focus and attention on tasks that require sustained mental effort.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I often fidget, tap, or move around when I need to sit still.",
+    "text": "I recognize when my working memory feels overloaded and I offload thoughts to external systems.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 12,
+    "text": "I rely only on memory instead of using tools or systems to support my thinking.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 13,
-    "text": "I struggle with time management and often underestimate how long tasks will take.",
+    "text": "When a task feels meaningless, I connect it to something that excites or challenges me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I have difficulty waiting in lines or for my turn in conversations.",
+    "text": "I notice when my intensity needs direction instead of suppression.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I make careless mistakes in work or school tasks, even when I know the material.",
+    "text": "When my thoughts move faster than the world around me, I slow down just enough to see the sequence.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I feel overwhelmed when I have multiple tasks or responsibilities to manage.",
+    "text": "I treat my fast brain as a personal failure instead of understanding it needs structure.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 17,
-    "text": "I have difficulty following instructions, especially if they are lengthy or complex.",
+    "text": "When I feel scattered, I step away briefly and reset my breathing before continuing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I often start multiple projects but struggle to complete them.",
+    "text": "I notice when my mind processes in a non-linear way and I adjust my approach accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel like my mind is constantly racing with thoughts and ideas.",
+    "text": "When emotional spikes hit, I separate the stimulus from my action and give myself a micro-pause.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can easily maintain attention during meetings, lectures, or long conversations.",
+    "text": "I expect myself to just try harder instead of building systems that match my brain's wiring.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

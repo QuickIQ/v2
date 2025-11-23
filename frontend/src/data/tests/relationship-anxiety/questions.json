@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I fear losing love in my relationships.",
+    "text": "When I feel fear about losing love, I notice it and choose to build security instead of letting anxiety control me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I fear receiving love, even when it's offered to me.",
+    "text": "During moments when love is offered, I notice any resistance and choose to receive it with openness instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can accept and receive love without fear or anxiety.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience anxiety about losing love, which affects my relationships.",
+    "text": "When I feel anxiety rising about the relationship, I pause and breathe before letting fear drive my behavior.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain relationships without constantly fearing that I'll lose love.",
+    "id": 4,
+    "text": "I let fear of losing love create constant anxiety that affects my relationships and my peace.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice fear of receiving love, I recognize it and choose to open up gradually instead of shutting down.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I fear receiving love, and this prevents me from fully accepting it.",
+    "text": "I see when relationship anxiety is based on old fears rather than present reality, and I choose to separate them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can identify whether I fear losing love or fear receiving it, and work to address these fears.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience relationship anxiety because I fear losing love or fear receiving it.",
+    "text": "When I feel the pull to test or push away love, I notice it and choose to trust and stay present instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain healthy relationships without fearing losing love or receiving it.",
+    "id": 8,
+    "text": "I let fear of receiving love prevent me from accepting and experiencing deep connection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice anxiety about the relationship, I recognize it and choose to address it calmly instead of reacting.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like my relationship anxiety is driven by fear of losing love or fear of receiving it.",
+    "text": "I recognize when my fear comes from past experiences rather than the current relationship, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can recognize my relationship anxiety and whether I fear losing love or receiving it.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience significant anxiety in relationships because I fear losing love or fear receiving it.",
+    "text": "When I feel the urge to protect myself from love, I notice it and choose to let love in gradually instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain relationships without relationship anxiety about losing or receiving love.",
+    "id": 12,
+    "text": "I let relationship anxiety prevent me from maintaining connections without constantly fearing I'll lose love.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice worry about the relationship escalating, I interrupt it early by staying grounded and present.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like I fear losing love, or fear receiving it, and this creates problems in my relationships.",
+    "text": "I see when fear is blocking me from accepting love, and I choose to work through the fear instead of avoiding it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can identify whether I fear losing love or fear receiving it, and work to overcome these fears.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience relationship anxiety that stems from fear of losing love or fear of receiving it.",
+    "text": "When I feel the pull to sabotage love due to fear, I notice it and choose to nurture the connection instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain healthy relationships without relationship anxiety about losing or receiving love.",
+    "id": 16,
+    "text": "I let fear of losing or receiving love control my behavior and prevent me from experiencing secure relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice anxiety about love, I pause and check whether it's coming from now or from old patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my relationship anxiety is caused by fear of losing love or fear of receiving it.",
+    "text": "I recognize when I'm pushing love away due to fear, and I choose to stay open and receive it instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can recognize whether I fear losing love or fear receiving it, and maintain healthy relationships despite these fears.",
+    "text": "When I feel the urge to protect myself from vulnerability, I notice it and choose to trust gradually instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I can maintain relationships without relationship anxiety, whether I fear losing love or fear receiving it.",
+    "text": "I let relationship anxiety prevent me from accepting and receiving love without fear or constant worry.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

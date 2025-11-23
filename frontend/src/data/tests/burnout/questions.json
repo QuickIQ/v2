@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel emotionally exhausted and drained, even after a good night's sleep.",
+    "text": "When I notice early signs of burnout like mental fog or emotional withdrawal, I intervene before it becomes collapse.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm chronically done with everything and have lost interest in activities I used to enjoy.",
+    "text": "I recognize the difference between healthy pressure and destructive overload, and I adjust accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I'm just tired today, but this feeling has been persistent for weeks or months.",
+    "text": "When I feel my energy shrinking or my focus weakening, I see it as a signal to rest, not push harder.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I have reduced professional efficacy and feel like I'm not performing as well as I used to.",
+    "text": "I let constant pressure accumulate without recognizing it as a pattern that needs release.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I feel cynical, detached, or negative about my work, relationships, or life in general.",
+    "text": "I notice when I'm confusing stress with productivity or exhaustion with dedication, and I correct it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I have difficulty concentrating or making decisions because I'm so exhausted.",
+    "text": "When I recognize my body sending signals of tension or tiredness, I listen and respond instead of ignoring them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel like I have nothing left to give and can't handle any more responsibilities.",
+    "text": "I see burnout as a system problem shaped by long-term imbalance, not a personal failure.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I experience physical symptoms like headaches, muscle tension, or sleep problems due to chronic stress.",
+    "text": "I let rising demands and shrinking energy continue without planning recovery windows or adjusting my pace.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I feel like I'm working harder but accomplishing less than before.",
+    "text": "When I feel the urge to push through exhaustion, I pause and choose rest instead of survival mode.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I have lost my sense of purpose or meaning in my work and personal life.",
+    "text": "I recognize when I'm planning around fantasy instead of reality, and I adjust to my real capacity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I feel energized and motivated in my daily activities and work.",
+    "text": "When I notice I'm saying yes too quickly or underestimating tasks, I pause and consider the energy cost.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I can maintain a healthy work-life balance and don't feel overwhelmed.",
+    "text": "I let responsibility without boundaries become self-destruction without separating my worth from my workload.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I feel satisfied and fulfilled with my work and personal accomplishments.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I can manage stress effectively and don't feel chronically exhausted.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I maintain enthusiasm and interest in activities I enjoy.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I'm running on empty and have no energy left for anything.",
+    "text": "I notice when I'm pushing from fear instead of purpose, and I choose clarity over panic.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "When I recognize my cognitive energy is limited, I protect it deliberately instead of treating it as infinite.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "I see when my pace is driven by urgency instead of intention, and I slow down to regain control.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let emotional hooks like obligation or fear of failure keep me trapped without recognizing their power.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I have become increasingly irritable or impatient with others due to chronic exhaustion.",
+    "text": "When I feel overwhelmed, I breathe and reset before continuing instead of working longer automatically.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like I'm just going through the motions without any real engagement or passion.",
+    "text": "I recognize when I'm matching the chaos around me, and I shape my own pace to protect my inner balance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I experience persistent feelings of hopelessness or helplessness about my situation.",
+    "text": "When I notice tasks that drain me fastest, I reduce them or create conditions that help my mind recover.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can recover from stress and maintain my energy levels with proper rest and self-care.",
+    "text": "I let accumulated stress that has never been released continue without creating space for rest or recovery.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

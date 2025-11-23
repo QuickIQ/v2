@@ -1,128 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I set goals that push me beyond my current comfort zone instead of staying within familiar limits.",
+    "text": "I notice the difference between what I want and what I'm actually committed to doing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I actively seek opportunities to advance my career or personal growth instead of waiting for them to come to me.",
+    "text": "When I feel a strong pull toward bigger goals, I see whether it's excitement or real intention.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I visualize achieving significant accomplishments in my future instead of accepting my current situation as permanent.",
+    "text": "Before starting something new, I break it into clear steps instead of just visualizing the end result.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I invest time and effort in developing new skills that will help me reach higher levels instead of maintaining only current abilities.",
+    "text": "I let my ambition scatter across too many directions without focusing on what truly matters.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I take calculated risks to pursue bigger opportunities instead of always choosing the safest path.",
+    "text": "When motivation feels low, I act anyway instead of waiting for inspiration to return.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I feel energized and motivated when working toward challenging objectives instead of feeling overwhelmed or discouraged.",
+    "text": "I recognize when I'm confusing desire with action and I shift toward commitment.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I regularly review and adjust my plans to ensure I'm progressing toward my long-term vision instead of drifting without direction.",
+    "text": "When obstacles appear, I stay steady and continue instead of letting my mood dictate progress.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I seek feedback and mentorship from people who have achieved what I aspire to instead of working in isolation.",
+    "text": "I wait for excitement to return before taking action on my goals.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I prioritize activities that contribute to my long-term goals over immediate comfort or entertainment.",
+    "text": "I notice when my ambition competes with doubt or fear and I choose to move forward anyway.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel dissatisfied with maintaining the status quo and actively work to improve my circumstances.",
+    "text": "When I imagine the future, I also consider the cost and trade-offs behind my choices.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I network and build relationships with people who can help me advance instead of limiting my connections to my current circle.",
+    "text": "I see when my habits or thoughts are sabotaging my momentum and I adjust my approach.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I view setbacks as learning opportunities that bring me closer to my goals instead of seeing them as reasons to give up.",
+    "text": "I let my energy fluctuate based on mood instead of building consistent discipline.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 13,
-    "text": "I consistently push myself to exceed expectations rather than meeting only the minimum requirements.",
+    "text": "I understand the difference between fantasy and direction, and I choose the path with real weight.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I make decisions based on how they align with my long-term aspirations instead of choosing what feels easiest in the moment.",
+    "text": "When I feel hesitation, I recognize whether it's fear of failure or a real signal to pause.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I actively research and explore paths to achieve higher levels of success in my field instead of accepting current limitations.",
+    "text": "I notice when my ambition is aligned with my values versus when it's simply noise.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I feel a strong drive to accomplish something meaningful and significant in my lifetime.",
+    "text": "I treat ambition as just energy without giving it shape, discipline, or clarity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 17,
-    "text": "I invest in my personal and professional development even when it requires sacrificing short-term comfort.",
+    "text": "When my drive feels strong, I channel it into structure and systems instead of letting it scatter.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I set deadlines and milestones to track my progress toward ambitious goals instead of working without structure.",
+    "text": "I notice when I say 'I want' but don't follow with 'I will' and I shift toward commitment.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel excited and motivated when I think about the possibilities of what I could achieve instead of feeling anxious or overwhelmed.",
+    "text": "When the path becomes slow or uncomfortable, I stay anchored to my deeper purpose.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I actively seek out challenges that will help me grow and advance instead of avoiding difficult situations.",
+    "text": "I let ambition become emotional instead of structural, turning it into stress rather than progress.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   }
 ]
-
-
-
-
-
-

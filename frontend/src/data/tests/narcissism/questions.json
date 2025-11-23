@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I believe I am special and unique and should only associate with other special or high-status people.",
+    "text": "When I receive criticism, I notice my defensive reaction and choose to listen and learn instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I require excessive admiration and validation from others to feel good about myself.",
+    "text": "During conversations, I focus on understanding the other person's perspective instead of steering attention back to myself.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I have a grandiose sense of self-importance and believe I'm better than others.",
+    "text": "When I feel the urge to prove my superiority or specialness, I notice the pattern and choose humility instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I feel like I have main-character energy and the world revolves around me.",
+    "text": "I let my need for admiration and validation control my behavior and relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I lack empathy and have difficulty understanding or caring about others' feelings.",
+    "text": "When I notice myself comparing myself to others, I recognize it and choose to focus on my own growth instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I exploit others to achieve my own goals without feeling guilty.",
+    "text": "I see when my mind is protecting my image or ego, and I choose to be vulnerable and authentic instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel envious of others or believe others are envious of me.",
+    "text": "When I feel entitled to special treatment, I notice the expectation and choose to treat others as equals instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I show arrogant or haughty behaviors and attitudes.",
+    "text": "I let grandiose thoughts about my importance or superiority control how I interact with others.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I have fantasies of unlimited success, power, brilliance, beauty, or ideal love.",
+    "text": "When I notice difficulty understanding others' feelings, I pause and try to see their perspective with empathy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel entitled to special treatment and expect others to comply with my expectations.",
+    "text": "I recognize when I'm using others for my own gain, and I choose to build genuine connections instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can appreciate others' achievements and feel genuinely happy for their success.",
+    "text": "When I feel the pull to dominate conversations or situations, I notice it and choose to share space with others.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I treat others with respect and consideration, valuing their feelings and perspectives.",
+    "text": "I let envy or resentment toward others' success drive my behavior and affect my relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I have a realistic and balanced view of my strengths and weaknesses.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I can accept criticism and feedback without feeling personally attacked.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I feel comfortable with others receiving attention and don't need to be the center of attention.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like my confidence and self-importance are turned up too high.",
+    "text": "When I sense the urge to maintain a perfect image, I notice the pressure and choose authenticity instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "I see when my mind is dismissing others' needs or feelings, and I choose to listen and validate them instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the need to be the center of attention, I notice the urge and choose to share the spotlight instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let arrogance or feelings of superiority control how I treat others and view myself.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I struggle to maintain healthy relationships because I prioritize my own needs over others.",
+    "text": "When I notice myself reacting defensively to feedback, I pause and choose to receive it with openness instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like I deserve special privileges and shouldn't have to follow the same rules as others.",
+    "text": "I recognize when my self-worth depends on external validation, and I choose to build inner confidence instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I have difficulty accepting that others might be more talented, successful, or attractive than me.",
+    "text": "When I feel the pull to exploit or use others for personal gain, I notice it and choose mutual respect instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can maintain healthy self-esteem without needing constant external validation.",
+    "text": "I let my need to feel special or unique prevent me from connecting genuinely with others.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I rely on data and facts when making important decisions instead of following my gut feeling.",
+    "text": "When I notice emotions trying to influence my decisions, I recognize it and choose to use logic and facts instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I trust my intuition when I need to make a quick decision instead of analyzing all options.",
+    "text": "During moments when I need to make important choices, I notice my state and choose to think clearly and analyze instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 3,
-    "text": "I make decisions based on logical analysis of pros and cons instead of emotional responses.",
+    "text": "When I feel the pull to decide impulsively, I notice it and choose to pause and think ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I follow my first instinct when facing a choice instead of overthinking the situation.",
+    "text": "I let not being able to think ahead prevent me from making decisions based on long-term outcomes.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I research thoroughly before making significant decisions instead of acting impulsively.",
+    "text": "When I notice decision fatigue building, I recognize it and choose to rest and decide later instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I feel confident making decisions based on my inner sense of what feels right instead of external data.",
+    "text": "I see when choices need careful analysis, and I choose to research and think before deciding instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I create lists and compare options systematically when deciding instead of going with my initial feeling.",
+    "text": "When I feel the urge to let social pressure control my choices, I notice it and choose to think independently instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I trust my gut feeling even when the facts suggest otherwise instead of always following the data.",
+    "text": "I let not identifying decision patterns prevent me from making choices based on logic and facts effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I seek expert opinions and evidence before making important choices instead of relying solely on intuition.",
+    "text": "When I notice myself making good decisions, I recognize it and choose to maintain those analytical patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I make decisions quickly based on what feels right in the moment instead of extensive planning.",
+    "text": "I recognize when choices come from emotion rather than logic, and I choose to analyze and think instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I analyze potential outcomes and risks before deciding instead of acting on impulse.",
+    "text": "When I feel the pull to decide without considering consequences, I notice it and choose to think ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I follow my heart when logic and emotion conflict instead of always choosing the rational option.",
+    "text": "I let problems from not thinking ahead prevent me from making decisions based on long-term outcomes.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I use structured decision-making frameworks and tools instead of making choices spontaneously.",
+    "text": "When I notice strategic decision-making working, I recognize it and choose to strengthen those patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I make decisions based on how situations feel to me instead of what the numbers show.",
+    "text": "I see when decisions need research, and I choose to gather facts and analyze before choosing instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I gather comprehensive information before making important decisions instead of trusting my instincts alone.",
+    "text": "When I feel the urge to let fatigue control my choices, I notice it and choose to rest and decide later instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I make choices based on my values and what resonates with me instead of pure analytical reasoning.",
+    "text": "I let not being able to analyze decisions prevent me from making choices based on logic and facts.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I weigh all available evidence before deciding instead of making snap judgments.",
+    "text": "When I notice myself maintaining clarity in decisions, I recognize it and choose to strengthen those patterns.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I trust my inner voice when making decisions instead of requiring extensive analysis.",
+    "text": "I recognize when decisions need careful thought, and I choose to pause and analyze instead of rushing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I make decisions based on objective criteria and measurable factors instead of subjective feelings.",
+    "text": "When I feel the pull to let impulses control my choices, I notice it and choose to think and analyze instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I follow my instincts even when I cannot fully explain my reasoning instead of needing logical justification.",
+    "text": "I let not identifying decision-making patterns prevent me from making choices based on long-term outcomes effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

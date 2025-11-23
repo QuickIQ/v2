@@ -1,128 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I spend excessive time perfecting details that others might not notice instead of moving forward efficiently.",
+    "text": "When I notice my standards becoming too strict, I recognize the difference between high quality and impossible expectations.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I struggle to complete tasks because I keep finding ways to improve them instead of accepting good enough.",
+    "text": "I recognize when the urge to polish something is improving the result versus only reducing my anxiety.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel anxious when my work doesn't meet my own high standards instead of feeling satisfied with progress.",
+    "text": "When I feel pressure to make everything flawless, I pause and choose progress over perfection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I delay starting projects because I want everything to be perfect from the beginning instead of beginning with a draft.",
+    "text": "I let small mistakes feel bigger than they are, and I freeze or delay tasks because anything less than perfect feels like failure.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I criticize my own work harshly even when others praise it instead of accepting positive feedback.",
+    "text": "When I notice myself restarting or overthinking details, I step back and accept that good work moves me forward.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I redo tasks multiple times to achieve perfection instead of moving on after acceptable quality.",
+    "text": "I recognize when perfectionistic tension is rising, and I redirect my mind before it spirals into frustration.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I avoid sharing my work until it's flawless instead of seeking feedback early in the process.",
+    "text": "When I plan tasks, I design plans that real life can support instead of ideal versions that drain motivation.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I set unrealistic standards for myself that are difficult to achieve instead of setting achievable goals.",
+    "text": "I let comparison, expectations from others, or fear of disappointing people trigger my perfectionism, and I connect my performance to my self-worth.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I feel like a failure when I make mistakes instead of viewing errors as learning opportunities.",
+    "text": "When I feel the urge to fix everything, I pause and choose consistent action instead of emotional spikes.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I compare my work to the best examples I can find instead of comparing it to my own previous efforts.",
+    "text": "I recognize when I'm spending too much mental energy on details that don't matter, and I redirect my attention.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I spend more time planning than executing because I want the perfect approach instead of starting and adapting.",
+    "text": "When I notice myself checking or reviewing endlessly, I accept that 85% quality is enough for some tasks.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I feel stressed when I can't control every aspect of a project instead of accepting some uncertainty.",
+    "text": "I let fear-based thinking consume my cognitive energy, and I overthink details that don't actually move me forward.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 13,
-    "text": "I struggle to delegate because I believe only I can do things perfectly instead of trusting others.",
+    "text": "When I feel tension rising from perfectionistic pressure, I breathe and continue moving forward anyway.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I focus on minor flaws that others don't notice instead of appreciating the overall quality of my work.",
+    "text": "I recognize the difference between excellence that pushes me forward and perfectionism that keeps me stuck.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I procrastinate on important tasks because I'm waiting for the perfect conditions instead of starting with what I have.",
+    "text": "When I break tasks into small, manageable steps, I prevent my brain from panicking and start producing instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I feel dissatisfied with completed projects because they could always be better instead of celebrating achievements.",
+    "text": "I let impossible expectations create pressure, delays, and emotional fatigue without recognizing the hidden cost.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 17,
-    "text": "I avoid trying new things because I might not excel immediately instead of embracing the learning process.",
+    "text": "When I notice perfectionistic hooks like external validation or fear of judgment, I unhook myself and remember my value isn't based on flawlessness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I spend excessive time on formatting and presentation instead of focusing on content quality.",
+    "text": "I recognize when I'm trying to control everything instead of directing what truly matters.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel like I'm never doing enough even when I've accomplished a lot instead of recognizing my efforts.",
+    "text": "When I choose excellence over pressure, I maintain calm focus and a more confident pace.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I believe that anything less than perfect is unacceptable instead of valuing progress and improvement.",
+    "text": "I let perfectionism turn details into battles, and I criticize myself when something isn't perfect instead of accepting progress.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   }
 ]
-
-
-
-
-
-

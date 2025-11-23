@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I trust too fast, giving my trust to people before I really know them.",
+    "text": "When I notice suspicious thoughts appearing, I ask myself whether I have proof or if this is just fear.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I trust too slow, taking a very long time to trust people even when they've proven themselves.",
+    "text": "I recognize the difference between real intuition and fear-based imagination, and I don't confuse suspicion with protection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I never trust people, no matter how much they've proven themselves to me.",
+    "text": "When I feel triggered, I pause and calm my body before judging the situation or reacting from panic.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I can trust people at an appropriate pace, neither too fast nor too slow.",
+    "text": "I let my mind build stories faster than reality unfolds, and I react to every trigger as if it means danger without checking facts.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I have difficulty trusting people because of past betrayals or hurts.",
+    "text": "When I recognize my emotional hooks like late replies or changed plans, I see them as signals pointing to old wounds, not current danger.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I feel like I give my trust too easily, even to people who haven't earned it.",
+    "text": "I recognize when I'm doubting someone not because of what they did today, but because of what someone else did years ago.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can build trust gradually and appropriately in relationships.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I feel like I never fully trust anyone, even people I've known for a long time.",
+    "text": "When I feel jealousy or insecurity rising, I pause and ask if my action will build trust or break it before speaking.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can trust people who have proven themselves trustworthy over time.",
+    "id": 8,
+    "text": "I let every feeling become a fact, and I check, question, or overthink obsessively without separating my partner's actions from my past wounds.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I understand that trust is built with strategy, I choose questions that open connection instead of accusations that close it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like my trust issues prevent me from forming close, meaningful relationships.",
+    "text": "I recognize when I'm in constant detective mode instead of partner mode, and I shift from scanning for danger to building safety.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can balance being cautious with being open to trusting others.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I feel like I trust too fast, too slow, or never, and I can't find a healthy middle ground.",
+    "text": "When I trace my reactions back to their emotional roots, I understand my patterns instead of blaming the present moment.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can trust people appropriately based on their actions and behavior, not just their words.",
+    "id": 12,
+    "text": "I let my nervous system overreact to small delays or busy days, and I treat every trigger as an emergency without pausing to think.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I reduce the mental load I waste on imagining worst-case scenarios, I free energy for logic, empathy, and understanding.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I have difficulty trusting people because I'm afraid of being hurt or betrayed again.",
+    "text": "I recognize that a trigger is not a command, and I create emotional space to choose connection instead of reaction.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can maintain healthy trust in relationships without being overly trusting or completely closed off.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I trust too fast, too slow, or never, and this causes problems in my relationships.",
+    "text": "When I understand that what I want most is reassurance, not proof, I act in ways that keep relationships warm instead of tense.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can recognize when someone is trustworthy and build trust at an appropriate pace.",
+    "id": 16,
+    "text": "I let fear try to keep me safe but often keep me stuck, and I don't separate my old triggers from my current reality.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I can feel intense emotions without becoming them, I guide my feelings with skill instead of letting them dominate me.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my trust issues make it impossible for me to fully trust anyone.",
+    "text": "I recognize when I'm acting from fear instead of values, and I choose responses that match what I want, not my wounds.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can work through my trust issues and learn to trust appropriately in relationships.",
+    "text": "When I understand that trust issues are a pattern, not my full identity, I can stop obeying fear like a law and start leading it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I can trust people at a healthy pace, neither too fast, too slow, nor never.",
+    "text": "I let my reactions reflect my wounds instead of my wisdom, and I don't create safety from within instead of chasing control.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

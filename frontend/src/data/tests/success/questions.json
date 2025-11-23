@@ -1,128 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I define my self-worth primarily through my achievements and accomplishments instead of my character or relationships.",
+    "text": "When I notice habits or patterns that slow my progress, I identify them and define replacement behaviors.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I set new goals immediately after achieving previous ones instead of taking time to appreciate what I've accomplished.",
+    "text": "I recognize the difference between motion and progress, and I focus on what moves me forward instead of just being busy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel anxious or restless when I'm not actively working toward a specific goal instead of feeling comfortable with downtime.",
+    "text": "When I plan my days, I think ahead about challenges and prepare solutions before problems arrive.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I compare my achievements to others' accomplishments to measure my progress instead of focusing on my own journey.",
+    "text": "I let temporary feelings influence permanent decisions, and I lose progress to confusion, hesitation, or distraction.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I view success as a destination I need to reach instead of an ongoing process of growth and learning.",
+    "text": "When I notice moments of self-sabotage through hesitation or perfectionism, I address them instead of ignoring them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I feel like a failure when I don't meet my own high standards instead of accepting setbacks as part of learning.",
+    "text": "I recognize when I'm avoiding hard tasks or when distractions pull me off the path, and I redirect my focus.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I prioritize external recognition and validation over internal satisfaction from my work instead of valuing both equally.",
+    "text": "When I protect my mental energy and organize my day with intention, my productivity becomes smoother and more sustainable.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I struggle to enjoy the present moment because I'm always focused on future achievements instead of being present.",
+    "text": "I let stress, frustration, or doubt push me off my path without managing them, and I treat small setbacks as personal failures.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I believe my identity is tied to what I achieve rather than who I am as a person instead of seeing them as separate.",
+    "text": "When I understand what I'm trying to achieve, preserve, avoid, and eliminate, I gain clarity that stops chaos.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel incomplete or inadequate when I'm not actively pursuing a goal instead of feeling whole regardless of achievements.",
+    "text": "I recognize the hidden costs behind decisions and notice the small daily leaks that drain my potential.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I measure my progress by checking off completed tasks and milestones instead of reflecting on personal growth.",
+    "text": "When I build internal systems with visual progress, small wins, and meaningful reminders, I stay aligned with my goals even on low-energy days.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I feel pressure to maintain a certain level of achievement to preserve my self-image instead of feeling secure regardless.",
+    "text": "I confuse movement with achievement, and I waste energy on what doesn't matter instead of building a life that supports my long-term mission.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 13,
-    "text": "I see success as something I need to prove to others rather than something I experience for myself instead of both.",
+    "text": "When I think several moves ahead and prepare for both the path and the resistance, I transform success from a dream into a structured path.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I struggle to celebrate my wins because I immediately focus on the next challenge instead of fully appreciating achievements.",
+    "text": "I recognize when I need to pause and reset before continuing, and I manage my emotional state with discipline.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I believe that achieving more will finally make me feel successful instead of feeling successful in the present moment.",
+    "text": "When I design my environment, schedule, and relationships to make progress easier, I build a roadmap anchored in realism and vision.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I feel like I'm not enough when I'm not actively working toward something instead of feeling complete as I am.",
+    "text": "I let everything feel urgent yet nothing feel important, and I react to life instead of anticipating challenges and opportunities.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 17,
-    "text": "I tie my happiness to reaching specific goals rather than finding joy in the journey instead of experiencing both.",
+    "text": "When I understand that success is about avoiding losses and eliminating harmful habits, not just gaining new things, I build a stronger foundation.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like my worth increases with each achievement instead of believing my worth is constant regardless of outcomes.",
+    "text": "I recognize when I'm relying on luck or motivation instead of building systems, and I shift toward intentional progress.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I define myself by my accomplishments in conversations instead of sharing who I am beyond achievements.",
+    "text": "When I maintain consistency during tough days, not just easy ones, I turn my ambition into a strategic system.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I believe success is a fixed state I need to reach rather than a continuous process of becoming instead of seeing it as both.",
+    "text": "I let my mind become a critic instead of an ally, and I don't protect my thinking power or organize my days to support success.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   }
 ]
-
-
-
-
-
-

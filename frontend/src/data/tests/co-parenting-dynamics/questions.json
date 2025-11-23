@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I would form a stable team with my partner for co-parenting.",
+    "text": "When I notice concerns about co-parenting dynamics, I recognize them and choose to address them constructively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I have concerns about whether we would form a stable team or a chaotic one for co-parenting.",
+    "text": "During moments when co-parenting feels chaotic, I notice the tension and choose to work toward stability instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether we would form a stable team or a chaotic one for co-parenting.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I feel like we would form a chaotic team for co-parenting, not a stable one.",
+    "text": "When I feel the pull to react emotionally during co-parenting, I notice it and choose to stay calm and clear instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can work with my partner to form a stable co-parenting team.",
+    "id": 4,
+    "text": "I let co-parenting dynamics become chaotic and prevent us from forming a stable team.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice patterns that support stable co-parenting, I recognize them and choose to strengthen them.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I experience concerns about our co-parenting dynamics and whether we'd form a stable or chaotic team.",
+    "text": "I see when co-parenting needs attention, and I choose to work together to build stability instead of letting chaos grow.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can assess our co-parenting dynamics and work to form a stable team rather than a chaotic one.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I feel like our co-parenting dynamics would be chaotic, not stable, and this concerns me.",
+    "text": "When I feel the urge to let old relationship patterns affect co-parenting, I notice it and choose to separate them instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain stable co-parenting dynamics and form a stable team with my partner.",
+    "id": 8,
+    "text": "I let concerns about team stability prevent me from identifying and working toward stable co-parenting dynamics.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice co-parenting communication becoming tense, I pause and choose to respond with clarity instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I have doubts about whether we would form a stable team or a chaotic one for co-parenting.",
+    "text": "I recognize when co-parenting challenges come from old patterns rather than present needs, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify our co-parenting dynamics and work to ensure we form a stable team, not a chaotic one.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I feel like our co-parenting dynamics would be chaotic, and this prevents us from forming a stable team.",
+    "text": "When I feel the pull to avoid working on co-parenting, I notice it and choose to address issues directly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain stable co-parenting dynamics and form a stable team with my partner.",
+    "id": 12,
+    "text": "I let chaotic dynamics prevent me from working with my partner to form a stable co-parenting team.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice stability building in co-parenting, I recognize it and choose to maintain and strengthen it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I experience concerns about our co-parenting dynamics and whether we'd form a stable or chaotic team.",
+    "text": "I see when co-parenting needs better communication, and I choose to work together to improve it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can assess whether we would form a stable team or a chaotic one for co-parenting, and work to improve dynamics.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like our co-parenting dynamics would be chaotic, not stable, and this affects our ability to co-parent effectively.",
+    "text": "When I feel the urge to let conflict affect co-parenting, I notice it and choose to prioritize stability instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain stable co-parenting dynamics and form a stable team rather than a chaotic one.",
+    "id": 16,
+    "text": "I let not identifying team dynamics prevent me from forming a stable co-parenting team.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice co-parenting working well, I recognize it and choose to build on those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I have concerns about our co-parenting dynamics and whether we'd form a stable or chaotic team.",
+    "text": "I recognize when co-parenting struggles come from communication issues, and I choose to address them constructively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify our co-parenting dynamics and work to form a stable team, not a chaotic one.",
+    "text": "When I feel the pull to let personal feelings interfere with co-parenting, I notice it and choose to separate them instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like we would form a stable team for co-parenting, not a chaotic one.",
+    "text": "I let concerns about team stability prevent me from working together to form a stable co-parenting dynamic.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I can express real affection in ways that my partner understands and appreciates.",
+    "text": "When I want to show affection, I notice how my partner receives love and choose to express it in ways they understand.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I can receive real affection and feel loved when my partner expresses it in their way.",
+    "text": "During moments when my partner shows love, I notice their way of expressing it and choose to receive it with appreciation.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I don't know how to express or receive real affection effectively.",
+    "text": "When I feel love for someone, I recognize their love language and choose to express it in a way that truly lands.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I understand my love language and how I express and receive real affection.",
+    "text": "I let confusion about love languages prevent me from expressing or receiving affection effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I feel like my partner doesn't understand how I express and receive real affection.",
+    "text": "When I notice my partner doesn't feel loved, I pause and consider their love language instead of assuming they understand mine.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I can communicate my love language and how I express and receive real affection.",
+    "text": "I see when I'm expressing love in my own way instead of my partner's way, and I choose to adapt my expression.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I struggle to express real affection in ways that my partner can understand and appreciate.",
+    "text": "When I feel disconnected, I notice whether we're speaking different love languages and choose to bridge the gap.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I can receive real affection and feel loved when it's expressed in my love language.",
+    "text": "I let misunderstanding about how I express and receive affection create distance in my relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I feel like I don't know how to express or receive real affection, and this affects my relationships.",
+    "text": "When I notice my partner showing love in their way, I recognize it and choose to feel it even if it's different from mine.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I can express and receive real affection effectively in my relationships.",
+    "text": "I recognize when affection isn't landing, and I choose to learn and adapt to the other person's love language.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I have difficulty understanding how I express and receive real affection.",
+    "text": "When I feel the urge to show love only in my preferred way, I notice it and choose to express it in theirs too.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I can identify my love language and how I express and receive real affection.",
+    "text": "I let not knowing how to express or receive affection effectively prevent me from feeling deeply connected.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I feel like my partner and I don't understand each other's ways of expressing and receiving real affection.",
+    "text": "When I notice my love language differs from my partner's, I recognize it and choose to learn and speak both languages.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I can express real affection in ways that align with my love language and my partner's needs.",
+    "text": "I see when affection is being expressed but not received, and I choose to understand and adjust my approach.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I struggle to receive real affection because I don't understand my love language.",
+    "text": "When I feel love but struggle to express it, I notice the gap and choose to learn effective ways to communicate it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I can express and receive real affection effectively, understanding my love language.",
+    "text": "I let confusion about love languages prevent me from understanding how I express and receive real affection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I feel like I don't know how to express or receive real affection, and this creates problems in my relationships.",
+    "text": "When I notice my partner's way of showing love, I observe and learn their language instead of expecting them to use mine.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I can understand how I express and receive real affection and communicate this to my partner.",
+    "text": "I recognize when I'm not feeling loved because of a language mismatch, and I choose to communicate my needs clearly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I have difficulty expressing and receiving real affection because I don't understand my love language.",
+    "text": "When I feel the pull to only receive love in my preferred way, I notice it and choose to appreciate other expressions too.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can express and receive real affection effectively, understanding how I give and receive love.",
+    "text": "I let not understanding my love language prevent me from expressing and receiving affection effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

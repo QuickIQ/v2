@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I spot money opportunities fast enough to capitalize on them.",
+    "text": "When I notice profit opportunities, I recognize them and choose to understand the system and create value instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I miss money opportunities because I don't spot them fast enough.",
+    "text": "During moments when money flow slows, I notice it and choose to identify bottlenecks and improve flow instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I spot money opportunities fast enough or miss them.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because I don't spot money opportunities fast enough.",
+    "text": "When I feel the pull to react to surface problems, I notice it and choose to understand the system underneath instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain a profit instinct that allows me to spot money opportunities fast enough.",
+    "id": 4,
+    "text": "I let not being able to understand profit systems prevent me from identifying opportunities and creating value effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself thinking strategically about profit, I recognize it and choose to maintain those system-thinking patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I miss money opportunities because I don't spot them fast enough, and this affects me negatively.",
+    "text": "I see when profit needs improvement, and I choose to identify bottlenecks and increase flow instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I spot money opportunities fast enough, and work to improve my profit instinct.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because I don't spot money opportunities fast enough.",
+    "text": "When I feel the urge to focus on surface problems, I notice it and choose to understand the system underneath instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain a profit instinct that allows me to spot money opportunities fast enough.",
+    "id": 8,
+    "text": "I let not identifying profit opportunities prevent me from understanding systems and creating value effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice profit thinking working, I recognize it and choose to strengthen those strategic patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I don't spot money opportunities fast enough, and this prevents me from capitalizing on them.",
+    "text": "I recognize when money flow needs improvement, and I choose to identify bottlenecks and increase flow instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I spot money opportunities fast enough, and work to develop my profit instinct.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because I don't spot money opportunities fast enough.",
+    "text": "When I feel the pull to react without understanding, I notice it and choose to understand the system first instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain a profit instinct that ensures I spot money opportunities fast enough.",
+    "id": 12,
+    "text": "I let problems from not understanding systems prevent me from identifying profit opportunities and creating value.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice strategic profit thinking working, I recognize it and choose to strengthen those system patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like I don't spot money opportunities fast enough, and this creates problems in my financial life.",
+    "text": "I see when profit opportunities appear, and I choose to understand the system and create value instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I spot money opportunities fast enough, and work to improve my profit instinct.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because I don't spot money opportunities fast enough.",
+    "text": "When I feel the urge to focus on symptoms, I notice it and choose to understand the root system instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain a profit instinct that allows me to spot money opportunities fast enough.",
+    "id": 16,
+    "text": "I let not being able to identify bottlenecks prevent me from understanding systems and creating profit effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining profit instinct, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like I don't spot money opportunities fast enough, and this affects my ability to capitalize on them.",
+    "text": "I recognize when profit needs strategic thinking, and I choose to understand systems and identify opportunities instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I spot money opportunities fast enough, and work to develop my profit instinct.",
+    "text": "When I feel the pull to react to problems, I notice it and choose to understand the underlying system instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I spot money opportunities fast enough, maintaining a strong profit instinct.",
+    "text": "I let not identifying profit instinct abilities prevent me from understanding systems and creating value effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

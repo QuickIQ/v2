@@ -1,128 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I prepare thoroughly before entering negotiations instead of improvising on the spot.",
+    "text": "When I enter a negotiation, I notice the emotional state of the other party and adjust my approach accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I listen actively to understand the other party's needs instead of focusing only on my own goals.",
+    "text": "I recognize the difference between what people say and what they truly mean, and I read the signals beneath the surface.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I find win-win solutions that benefit both parties instead of pursuing only my interests.",
+    "text": "When I feel pressure or tension rising, I pause and slow my pace before responding.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I remain calm and composed under pressure during negotiations instead of becoming emotional.",
+    "text": "I let emotions guide my decisions during negotiations, and I react impulsively without thinking through the consequences.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I ask clarifying questions to understand the other party's position instead of making assumptions.",
+    "text": "When I prepare for a negotiation, I map out different scenarios and plan responses for each one.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I can walk away from a deal if it doesn't meet my minimum requirements instead of accepting unfavorable terms.",
+    "text": "I recognize what the other party values most, and I shape my offers to align with their interests.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I build rapport and trust with the other party before discussing terms instead of jumping straight to demands.",
+    "text": "When I notice hidden motives or fears, I use them as information to guide my strategy rather than react to them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I use objective criteria and data to support my position instead of relying solely on emotions.",
+    "text": "I enter negotiations without clear goals or limits, and I let the other side push me into decisions I later regret.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I can identify and address the other party's underlying concerns instead of focusing only on surface issues.",
+    "text": "When I use silence intentionally, I create space for the other party to reveal information or reconsider their position.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I make concessions strategically rather than giving in too quickly to avoid conflict.",
+    "text": "I recognize when attacks or pressure are tactics, and I don't take them personally.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I communicate my needs clearly and assertively instead of being vague or passive.",
+    "text": "When I understand power dynamics and leverage points, I position myself more strategically.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I can read body language and non-verbal cues during negotiations instead of missing important signals.",
+    "text": "I let assumptions guide my negotiation instead of gathering facts, and I negotiate with guesses rather than data.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 13,
-    "text": "I maintain my boundaries and don't compromise on core values instead of agreeing to anything to close a deal.",
+    "text": "When I control my tone, breathing, and pace even under pressure, I maintain psychological advantage.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I can think creatively to find alternative solutions when negotiations stall instead of getting stuck.",
+    "text": "I recognize when I need to step back and observe the full picture before making a move.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I follow through on commitments made during negotiations instead of changing terms afterward.",
+    "text": "When I anticipate objections before they appear, I prepare layered responses that weaken resistance quietly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I can handle objections and resistance without becoming defensive instead of taking criticism personally.",
+    "text": "I let the moment choose me instead of choosing my moments, and I react from ego rather than strategy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 17,
-    "text": "I know my BATNA (Best Alternative To Negotiated Agreement) before starting negotiations instead of negotiating blindly.",
+    "text": "When I identify what the other party fears, wants, and may hide, I gain clearer insight into their position.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I can adapt my negotiation style to different situations and personalities instead of using the same approach always.",
+    "text": "I recognize the value of patience and understand that silence can be more powerful than arguments.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I document agreements clearly to avoid misunderstandings instead of relying on verbal commitments alone.",
+    "text": "When I create hooks that make saying yes easier for the other party, negotiations become more cooperative.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I view negotiations as collaborative problem-solving rather than competitive battles instead of seeing the other party as an adversary.",
+    "text": "I negotiate without understanding the other side's incentives or history, and I enter conversations blind.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   }
 ]
-
-
-
-
-
-

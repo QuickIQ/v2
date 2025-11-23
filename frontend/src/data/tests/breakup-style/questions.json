@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I detach cleanly from relationships when they end, without leaving emotional debris.",
+    "text": "When a relationship ends, I notice my emotional response and choose to process it cleanly instead of leaving debris.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I leave emotional debris when relationships end, making it hard to move on cleanly.",
+    "text": "During moments after a breakup, I notice any emotional debris and choose to address it instead of letting it linger.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify my breakup style and whether I detach cleanly or leave emotional debris.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience difficulty moving on from relationships because I leave emotional debris.",
+    "text": "When I feel the pull to hold onto a relationship that's ended, I notice it and choose to detach cleanly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can end relationships cleanly and detach without leaving emotional debris.",
+    "id": 4,
+    "text": "I let emotional debris from breakups prevent me from moving on cleanly and detaching from relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice difficulty moving on, I recognize it and choose to process the breakup fully instead of avoiding it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like my breakup style involves leaving emotional debris that affects me and my ex-partner.",
+    "text": "I see when I'm leaving emotional debris, and I choose to clean it up and detach fully instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize my breakup style and work to detach cleanly without leaving emotional debris.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience problems moving on from relationships because I leave emotional debris instead of detaching cleanly.",
+    "text": "When I feel the urge to stay connected to a past relationship, I notice it and choose to let go completely instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain a breakup style that involves detaching cleanly without leaving emotional debris.",
+    "id": 8,
+    "text": "I let not identifying my breakup style prevent me from ending relationships cleanly and detaching without debris.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice patterns of emotional debris, I recognize them and choose to break the cycle with awareness.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I leave emotional debris when relationships end, and this affects my ability to move on.",
+    "text": "I recognize when breakup struggles come from not processing fully, and I choose to address them directly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I detach cleanly or leave emotional debris, and work to improve my breakup style.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience difficulty with breakups because I leave emotional debris instead of detaching cleanly.",
+    "text": "When I feel the pull to avoid processing a breakup, I notice it and choose to face it fully instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain a breakup style that involves clean detachment without leaving emotional debris.",
+    "id": 12,
+    "text": "I let leaving emotional debris prevent me from moving on cleanly and ending relationships with clarity.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice clean detachment happening, I recognize it and choose to maintain that clarity.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my breakup style involves leaving emotional debris, and this creates problems for me and my ex-partner.",
+    "text": "I see when I need to process a breakup more fully, and I choose to do the work instead of leaving debris.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize my breakup style and work to detach cleanly, avoiding leaving emotional debris.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience problems after breakups because I leave emotional debris instead of detaching cleanly.",
+    "text": "When I feel the urge to hold onto past relationships, I notice it and choose to detach completely instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain a breakup style that involves clean detachment without leaving emotional debris.",
+    "id": 16,
+    "text": "I let difficulty moving on prevent me from ending relationships cleanly and detaching without emotional debris.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice clean breakup patterns, I recognize them and choose to strengthen those habits.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like I leave emotional debris when relationships end, and this prevents me from moving on cleanly.",
+    "text": "I recognize when emotional debris is blocking my ability to move on, and I choose to clear it instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I detach cleanly or leave emotional debris, and work to improve my breakup style.",
+    "text": "When I feel the pull to leave emotional debris, I notice it and choose to process the breakup fully instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I detach cleanly from relationships without leaving emotional debris.",
+    "text": "I let not identifying my breakup style prevent me from ending relationships cleanly and detaching without debris.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

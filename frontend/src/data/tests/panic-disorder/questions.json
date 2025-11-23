@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I experience sudden, intense episodes of fear or panic that come on without warning.",
+    "text": "When I feel sudden fear rising, I notice it as a false alarm and breathe slowly to calm my body.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "During panic attacks, I feel like my heart is racing or I'm having a heart attack.",
+    "text": "During moments of physical intensity, I recognize the sensations as normal body responses, not real danger.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I'm losing control or going crazy during panic episodes.",
+    "text": "When my heart starts racing, I pause and breathe deeply instead of letting fear take over.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I experience physical symptoms like chest pain, shortness of breath, or dizziness during panic attacks.",
+    "text": "I let physical symptoms like chest pain or dizziness convince me that something dangerous is happening.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I worry constantly about having another panic attack.",
+    "text": "When I sense the pattern starting—fear, physical rush, panic—I interrupt it early by staying still and breathing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I avoid places or situations where I've had panic attacks before.",
+    "text": "I recognize when my mind is catastrophizing body sensations, and I choose a calmer interpretation instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel like my brain hits the panic button for no apparent reason.",
+    "text": "When I feel the urge to escape or avoid a situation, I notice the fear and choose to stay present instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "During panic attacks, I feel like I'm going to die or something terrible is about to happen.",
+    "text": "I let worry about having another panic attack control my choices and limit my daily activities.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I experience tingling sensations, numbness, or chills during panic episodes.",
+    "text": "When I notice shortness of breath or dizziness, I breathe slowly and ground myself instead of panicking.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel disconnected from reality or like things around me aren't real during panic attacks.",
+    "text": "I see when my mind is interpreting normal body sensations as threats, and I choose to observe them without reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can manage my anxiety and don't experience sudden panic episodes.",
+    "text": "When I feel the pull to worry about losing control, I notice the thought and let it pass without engaging with it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I feel calm and in control even in stressful situations.",
+    "text": "I let fear of going crazy or losing control drive me into avoidance or escape behaviors.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I don't worry about having panic attacks or losing control.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I can distinguish between real danger and anxiety-induced physical symptoms.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I feel confident that I can handle unexpected stressful situations without panicking.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like my body is in danger even when there's no real threat present.",
+    "text": "When I sense the early warning signs of panic, I prepare my breathing and stay grounded instead of escalating the fear.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "I recognize when my body is reacting to a false alarm, and I respond with calm instead of urgency.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel sudden fear without a clear reason, I notice it as the pattern and breathe through it instead of fighting it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let panic symptoms feel like emergencies that require immediate escape or medical attention.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I experience panic attacks that seem to come out of nowhere, even when I'm relaxed.",
+    "text": "When I notice the cycle of fear feeding physical symptoms, I interrupt it by slowing my breathing and staying present.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I avoid activities or situations that might trigger a panic attack.",
+    "text": "I see when my mind is creating worst-case scenarios about my body, and I choose a simpler, more realistic view.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel like my panic attacks are unpredictable and I can't control when they happen.",
+    "text": "When I feel the urge to check my body for symptoms, I notice the pattern and redirect my attention outward instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can recognize and manage my physical anxiety symptoms without them escalating into panic.",
+    "text": "I let fear of panic attacks prevent me from entering situations or doing things I want to do.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

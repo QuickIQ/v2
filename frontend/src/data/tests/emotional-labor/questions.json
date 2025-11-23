@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm carrying the relationship, doing most of the emotional labor.",
+    "text": "When I notice myself carrying most of the emotional labor, I recognize it and choose to share it more equally instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm avoiding the weight of emotional labor, leaving it to my partner.",
+    "text": "During moments when I avoid emotional labor, I notice it and choose to step up and share the weight instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can share emotional labor equally with my partner, not carrying it all or avoiding it.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience relationship problems because I'm carrying the relationship or avoiding the weight of emotional labor.",
+    "text": "When I feel the pull to take on all emotional work, I notice it and choose to balance it with my partner instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can identify whether I'm carrying the relationship or avoiding the weight, and work to balance emotional labor.",
+    "id": 4,
+    "text": "I let carrying the relationship or avoiding emotional labor prevent me from sharing it equally with my partner.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice emotional labor imbalance, I recognize it and choose to address it and find balance instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I'm carrying the relationship, doing all the emotional labor while my partner avoids it.",
+    "text": "I see when I'm doing too much or too little emotional work, and I choose to adjust the balance accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can maintain balanced emotional labor in my relationship, not carrying it all or avoiding it.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience relationship problems because I'm carrying the relationship or avoiding the weight of emotional labor.",
+    "text": "When I feel the urge to let my partner handle all emotional labor, I notice it and choose to share it instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can recognize whether I'm carrying the relationship or avoiding the weight, and work to balance emotional labor.",
+    "id": 8,
+    "text": "I let not identifying emotional labor patterns prevent me from sharing it equally and balancing the relationship.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice balanced emotional labor, I recognize it and choose to maintain that equal sharing.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I'm avoiding the weight of emotional labor, leaving my partner to carry the relationship.",
+    "text": "I recognize when emotional labor imbalance comes from old patterns rather than present needs, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can share emotional labor equally with my partner, avoiding carrying it all or avoiding it completely.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience relationship problems because I'm carrying the relationship or avoiding the weight of emotional labor.",
+    "text": "When I feel the pull to let emotional labor become one-sided, I notice it and choose to restore balance instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain balanced emotional labor in my relationship, not carrying it all or avoiding the weight.",
+    "id": 12,
+    "text": "I let problems from emotional labor imbalance prevent me from identifying and sharing it equally with my partner.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice myself taking on too much emotional work, I recognize it and choose to set boundaries instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like I'm carrying the relationship or avoiding the weight, and this creates problems in my relationship.",
+    "text": "I see when emotional labor is shared well, and I choose to recognize and maintain that balance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can identify whether I'm carrying the relationship or avoiding the weight, and work to balance emotional labor.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience relationship problems because I'm carrying the relationship or avoiding the weight of emotional labor.",
+    "text": "When I feel the urge to avoid addressing emotional labor imbalance, I notice it and choose to face it directly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain balanced emotional labor in my relationship, sharing it equally rather than carrying it all or avoiding it.",
+    "id": 16,
+    "text": "I let carrying or avoiding emotional labor prevent me from identifying and balancing it equally in relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice healthy emotional labor patterns, I recognize them and choose to strengthen those habits.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like I'm carrying the relationship or avoiding the weight, and this affects my relationship negatively.",
+    "text": "I recognize when emotional labor needs adjustment, and I choose to work together to share it more equally.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can recognize whether I'm carrying the relationship or avoiding the weight, and work to balance emotional labor.",
+    "text": "When I feel the pull to let emotional labor become unbalanced, I notice it and choose to restore equality instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I can share emotional labor equally with my partner, not carrying the relationship or avoiding the weight.",
+    "text": "I let not identifying whether I'm carrying or avoiding emotional labor prevent me from sharing it equally.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

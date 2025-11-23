@@ -91,7 +91,7 @@
     }
   },
   "pricing": {
-    "amount": "$1.95",
+    "amount": "$0.99",
     "currency": "USD",
     "trial": {
       "days": 7,
@@ -100,8 +100,8 @@
         "tr": "7 Günlük Deneme • İstediğiniz Zaman İptal Edin"
       },
       "afterTrial": {
-        "en": "Then $39.90/month after the trial.",
-        "tr": "Deneme sonrası ayda $39.90."
+        "en": "Then $29.99/month after the trial.",
+        "tr": "Deneme sonrası ayda $29.99."
       }
     }
   },

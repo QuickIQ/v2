@@ -199,20 +199,20 @@ function Home() {
         padding: isMobile ? '20px 10px 20px 10px' : '40px 20px 40px 20px',
         color: 'white',
         textAlign: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}>
-        <div className="container">
-          <div
-            className="logo-container-fade-in"
-            style={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center',
-              marginBottom: isMobile ? '16px' : '20px',
-              marginLeft: isMobile ? '0' : '-60px',
-            }}
-          >
-            <Logo size={isMobile ? 60 : 80} animated={true} showText={true} />
-          </div>
+        <div
+          className="logo-container-fade-in"
+          style={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Logo size={isMobile ? 60 : 80} animated={true} showText={true} />
         </div>
       </header>
 

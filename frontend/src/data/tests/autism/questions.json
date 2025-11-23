@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I find it easy to understand social cues and body language.",
+    "text": "When I feel overstimulated, I notice what triggered it and I step away before it becomes overwhelming.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I prefer routines and get anxious when plans change unexpectedly.",
+    "text": "I recognize when my mind processes more information than others and I protect my energy accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I have intense interests in specific topics that I can talk about for hours.",
+    "text": "When unexpected shifts disrupt my internal structure, I pause and create a clear route to follow.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I find it difficult to maintain eye contact during conversations.",
+    "text": "I let sensory triggers or social pressure overwhelm me without recognizing the early signs of shutdown.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I notice small details that others often miss.",
+    "text": "I notice when my reactions are amplified signals versus when they're true overreactions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I struggle to understand sarcasm or jokes that rely on context.",
+    "text": "When I sense tension rising, I pause and breathe to slow my nervous system before it peaks.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel overwhelmed in noisy or crowded environments.",
+    "text": "I recognize what drains me versus what fuels me, and I make choices based on this knowledge.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I prefer to communicate directly and literally rather than using metaphors.",
+    "text": "I let too many inputs drain my cognitive resources without protecting my mental energy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I have difficulty understanding other people's emotions or perspectives.",
+    "text": "When I notice details intensely, I see it as a strength and use it instead of fighting it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I engage in repetitive behaviors or movements when stressed or excited.",
+    "text": "I recognize when my pattern-based thinking is disrupted and I create predictability to reduce stress.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I find it easy to make small talk and chat casually with others.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I have a strong need for sameness and consistency in my daily life.",
+    "text": "When I feel my nervous system processing more data, I ground myself through physical anchors or breathing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 12,
+    "text": "I let social situations drain me without preparing my mind or environment ahead of time.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 13,
-    "text": "I can focus intensely on tasks that interest me for extended periods.",
+    "text": "I notice when my deep focus abilities are available versus when they're collapsed by too many demands.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I struggle to understand unspoken social rules or expectations.",
+    "text": "When I recognize my sensory triggers, I create environments that support my brain instead of fighting it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I am sensitive to certain textures, sounds, lights, or smells.",
+    "text": "I see when my emotional spikes come from amplified signals and I guide them before they explode.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I find it challenging to start or maintain conversations.",
+    "text": "I let sudden changes or pattern breaks increase stress without creating mental maps to reduce chaos.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 17,
-    "text": "I prefer to work alone rather than in groups.",
+    "text": "When I feel overloaded, I place my feet firmly and breathe slowly to calm my internal world.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I take things very literally and have difficulty understanding implied meanings.",
+    "text": "I recognize when my strong interests are engines that recharge me versus distractions to fight.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I have difficulty recognizing when someone is bored or wants to change the topic.",
+    "text": "When I notice my mind works in patterns, I use this system instead of fighting against it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel more comfortable with structured activities than spontaneous ones.",
+    "text": "I let my unique operating system feel like a fault instead of understanding how to use it strategically.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   }
 ]
-

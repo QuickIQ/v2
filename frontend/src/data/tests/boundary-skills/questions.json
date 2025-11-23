@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I can protect myself without pushing people away in relationships.",
+    "text": "When I feel discomfort or pressure, I notice which boundary is being pushed and I treat it as data.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I have difficulty setting boundaries because I'm afraid of pushing people away.",
+    "text": "I recognize what drains me versus what strengthens me, and I make choices based on this awareness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can maintain healthy boundaries while still being close and connected to others.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I feel like I push people away when I try to protect myself or set boundaries.",
+    "text": "When I sense a line is getting crossed, I act before resentment builds or emotional tension rises.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can say no and set limits without feeling guilty or worrying about pushing people away.",
+    "id": 4,
+    "text": "I let people take too much of my time or emotional space without recognizing the early signs.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "I notice when I'm saying yes too quickly and I pause to check what I really need.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I struggle to protect myself because I don't want to hurt others or push them away.",
+    "text": "When I recognize my physical, emotional, or mental space is being taken, I set clear limits.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can communicate my boundaries clearly and respectfully without pushing people away.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I feel like my attempts to protect myself always end up pushing people away.",
+    "text": "I see boundaries as guidelines that keep relationships clean and safe, not walls that push people away.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can balance protecting myself with maintaining close, healthy relationships.",
+    "id": 8,
+    "text": "I let guilt, fear of disappointing, or pressure to help control my decisions without recognizing the hook.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I feel the urge to people-please, I pause and choose my response instead of falling into old habits.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I have difficulty protecting myself because I'm afraid it will push people away.",
+    "text": "I recognize when my body sends stress signals before my mind fully understands, and I honor them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can set boundaries that protect me while still allowing for intimacy and connection.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I feel like I can't protect myself without pushing people away or damaging relationships.",
+    "text": "Before entering situations, I prepare my limits in advance so I don't react in frustration.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain healthy boundaries that protect me without isolating myself or pushing others away.",
+    "id": 12,
+    "text": "I let constant interruptions or others' urgency drain my clarity without protecting my mental energy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When someone pushes my limit, I reinforce it with clear, firm language instead of exploding or withdrawing.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I struggle to protect myself because I worry that setting boundaries will push people away.",
+    "text": "I recognize when I'm apologizing for my limits and I stop carrying emotional weight that belongs to others.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can protect myself effectively while maintaining close, meaningful relationships.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I have to choose between protecting myself and keeping people close.",
+    "text": "When I notice patterns of people who drain me or push my limits, I set boundaries to protect my energy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can set clear boundaries that protect me without pushing people away or creating distance.",
+    "id": 16,
+    "text": "I let emotional hooks like guilt or fear of rejection pull me away from my boundaries without disconnecting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I feel pressured, I breathe and respond calmly instead of collapsing or losing control.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I have difficulty protecting myself because I'm afraid it will push people away or end relationships.",
+    "text": "I recognize when I'm giving mental access to people who bring negativity, and I become more selective.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can protect myself and maintain healthy boundaries without pushing people away.",
+    "text": "When I notice I'm treating my attention like a bottomless supply, I protect it as a valuable resource.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I can protect myself without pushing people away, maintaining healthy relationships.",
+    "text": "I let unclear limits create frustration without planning boundaries in advance or communicating them clearly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

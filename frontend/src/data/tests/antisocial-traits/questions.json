@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I disregard and violate the rights of others without feeling remorse.",
+    "text": "When I feel misunderstood or restricted, I notice the urge to pull away before I act on it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like rules were never meant for me and I can break them without consequences.",
+    "text": "I recognize the difference between strength and self-sabotage when I want to push back or resist.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I lie, deceive, or manipulate others for personal gain or pleasure.",
+    "text": "Before acting in high-pressure moments, I pause to see whether it's power or fear driving my reaction.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I feel like people annoy me and I have little patience for others' needs or feelings.",
+    "text": "I let my desire for autonomy become conflict with others without recognizing the protective instinct behind it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I act impulsively without considering the consequences for myself or others.",
+    "text": "When I feel the urge to shut people out or take shortcuts, I pause and choose my response instead of reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I have a history of aggressive or violent behavior toward others or animals.",
+    "text": "I notice when my fast judgment protects me from weakness versus when it creates unnecessary distance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I show a consistent lack of remorse for hurting others or causing harm.",
+    "text": "When I recognize emotional hooks like disrespect or control attempts, I respond to the situation, not the spike.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I feel indifferent to the suffering of others and don't feel empathy.",
+    "text": "I react instantly to pressure without pausing to see whether my reaction supports my long-term goals.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I engage in illegal activities or behaviors that could harm others.",
+    "text": "I notice when my emotional detachment keeps me safe versus when it limits my opportunities.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel like I'm above the law and don't need to follow social norms or rules.",
+    "text": "When frustration rises, I recognize the sensation early and channel it toward what matters instead of exploding.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I respect others' rights and boundaries and feel empathy for their experiences.",
+    "text": "I see when my independence shifts from defensive to strategic, choosing influence over resistance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I follow rules and social norms because I understand their importance for society.",
+    "text": "I let my impatience with rules or slow people control my behavior without considering the consequences.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I feel genuine remorse when I hurt others or cause harm.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I can control my impulses and consider consequences before acting.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I value honesty and integrity in my interactions with others.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I can get away with anything and don't need to face consequences.",
+    "text": "When I feel pulled into reactive behavior, I name the hook and create distance before responding.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "I notice when I'm assuming others will limit my autonomy and I choose to respond instead of defend.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I recognize the silent cost of impulsive actions, I choose conscious direction over instant reaction.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let my fear of being controlled drive my decisions without understanding the protective instinct behind it.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I enjoy manipulating or deceiving others for my own benefit.",
+    "text": "When I feel the urge to dismiss feedback or withdraw, I stay present and choose my response deliberately.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I have difficulty maintaining relationships because I don't care about others' feelings.",
+    "text": "I notice when my sharp instinct protects me versus when it creates conflict that weakens my position.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel like I'm entitled to take what I want without considering others.",
+    "text": "When I recognize patterns that make me react before thinking, I pause and choose behavior that supports my goals.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can work cooperatively with others and respect their boundaries and needs.",
+    "text": "I let my low tolerance for rules or others' limitations control my actions without considering long-term impact.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I fight fair in relationships, addressing issues directly and respectfully.",
+    "text": "When conflict arises, I notice my emotional response and choose to stay calm and communicate clearly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I explode during conflicts, losing control of my emotions and saying things I regret.",
+    "text": "During disagreements, I pause and breathe before responding instead of reacting immediately.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I shut down during conflicts, withdrawing and refusing to engage or communicate.",
+    "text": "When I feel the urge to explode or lose control, I notice it and choose to regulate my emotions instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I can handle disagreements constructively without exploding or shutting down.",
+    "text": "I let conflicts cause me to explode, lose control, or say things I later regret.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I feel like I fight fair, but sometimes I still explode or shut down when things get too intense.",
+    "text": "When I notice myself shutting down or withdrawing, I recognize it and choose to engage constructively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I can communicate my needs and concerns during conflicts without becoming aggressive or defensive.",
+    "text": "I see when my conflict style is unhelpful, and I choose to address issues directly and respectfully instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel like I explode during conflicts, raising my voice and saying hurtful things.",
+    "text": "When I feel triggered during conflict, I notice it and choose to slow down and respond thoughtfully instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I can stay present and engaged during conflicts without shutting down or withdrawing.",
+    "text": "I let conflicts cause me to shut down, withdraw, or refuse to communicate.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I feel like I shut down during conflicts, becoming silent and refusing to talk about the issue.",
+    "text": "When I notice the real issue behind a conflict, I address it directly instead of getting stuck on surface problems.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I can resolve conflicts through open communication and mutual understanding.",
+    "text": "I recognize when my reactions come from old patterns, and I choose to respond from the present moment instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I feel like my conflict style (fighting fair, exploding, or shutting down) affects my relationships negatively.",
+    "text": "When I feel the pull to attack or defend during conflict, I notice it and choose to listen and understand instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I can manage my emotions during conflicts and avoid exploding or shutting down.",
+    "text": "I let conflict intensity cause me to lose emotional control and damage relationships.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I feel like I explode during conflicts, and this damages my relationships.",
+    "text": "When I notice myself avoiding conflict, I recognize it and choose to address issues constructively instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I can fight fair during conflicts, addressing issues directly and respectfully.",
+    "text": "I see when conflicts are about deeper needs rather than surface issues, and I address the root cause.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I feel like I shut down during conflicts, and this prevents me from resolving issues with my partner.",
+    "text": "When I feel the urge to win or be right, I notice it and choose to focus on understanding and resolution instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I can engage in healthy conflict resolution without exploding or shutting down.",
+    "text": "I let my conflict style prevent me from handling disagreements constructively and finding solutions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I feel like I need to work on my conflict style because I either explode or shut down too often.",
+    "text": "When I notice tension rising, I pause and choose my response intentionally instead of reacting automatically.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I can fight fair during conflicts, maintaining respect and open communication.",
+    "text": "I recognize when I'm fighting unfairly, and I choose to address issues with respect and clarity instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel like my conflict style (fighting fair, exploding, or shutting down) is a problem in my relationships.",
+    "text": "When I feel the pull to escalate conflict, I notice it and choose to de-escalate and find common ground instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can handle conflicts effectively by fighting fair, without exploding or shutting down.",
+    "text": "I let my conflict responses prevent me from communicating effectively and resolving disagreements.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

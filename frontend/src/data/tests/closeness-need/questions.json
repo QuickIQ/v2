@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I crave deep connection in relationships.",
+    "text": "When I notice my need for closeness, I recognize it and choose to balance it with healthy distance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I crave distance in relationships, preferring to keep people at arm's length.",
+    "text": "During moments when I crave deep connection, I notice the intensity and choose to express it appropriately.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can balance my need for closeness with my need for distance in relationships.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience conflict between craving deep connection and craving distance.",
+    "text": "When I feel the pull to keep people at arm's length, I notice it and choose to understand what's behind it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can identify my closeness needs and whether I crave deep connection or distance.",
+    "id": 4,
+    "text": "I let conflict between craving connection and craving distance prevent me from balancing closeness needs.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice tension between closeness and distance, I recognize it and choose to find balance instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like I crave deep connection, but this sometimes conflicts with my need for distance.",
+    "text": "I see when my closeness needs are out of balance, and I choose to adjust them with awareness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can maintain healthy relationships by balancing my need for closeness with my need for distance.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience difficulty in relationships because I crave deep connection or distance, but not both.",
+    "text": "When I feel the urge to push people away, I notice it and choose to understand the need for distance instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can recognize my closeness needs and work to balance deep connection with appropriate distance.",
+    "id": 8,
+    "text": "I let not identifying my closeness needs prevent me from balancing connection with healthy distance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice myself craving too much closeness, I recognize it and choose to give space instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like my closeness needs (craving deep connection or distance) affect my relationships negatively.",
+    "text": "I recognize when my need for distance comes from fear rather than genuine preference, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I crave deep connection or distance, and maintain healthy relationships.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience relationship problems because I crave deep connection or distance, but struggle to balance both.",
+    "text": "When I feel the pull to avoid closeness, I notice it and choose to understand and address the underlying need.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain healthy relationships by understanding my closeness needs and whether I crave deep connection or distance.",
+    "id": 12,
+    "text": "I let craving deep connection or distance prevent me from identifying and balancing my closeness needs.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice balance between closeness and distance, I recognize it and choose to maintain that equilibrium.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my closeness needs (craving deep connection or distance) create problems in my relationships.",
+    "text": "I see when my closeness needs are healthy, and I choose to honor both connection and space appropriately.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize my closeness needs and work to balance deep connection with appropriate distance.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience difficulty in relationships because I crave deep connection or distance, but can't find a healthy balance.",
+    "text": "When I feel the urge to let closeness needs control me, I notice it and choose to balance them instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain healthy relationships by balancing my need for closeness (deep connection or distance) appropriately.",
+    "id": 16,
+    "text": "I let conflict between connection and distance prevent me from balancing my need for closeness with healthy space.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice my closeness needs shifting, I recognize it and choose to adjust the balance accordingly.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my closeness needs (craving deep connection or distance) interfere with my ability to have healthy relationships.",
+    "text": "I recognize when I need both closeness and distance, and I choose to honor both needs appropriately.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I crave deep connection or distance, and maintain healthy relationships with appropriate closeness.",
+    "text": "When I feel the pull to let closeness needs become extreme, I notice it and choose to find middle ground instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I can balance my closeness needs, whether I crave deep connection or distance, in healthy ways.",
+    "text": "I let not identifying my closeness needs prevent me from balancing deep connection with healthy distance.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

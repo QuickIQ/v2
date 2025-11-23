@@ -137,14 +137,35 @@ export function CategoryStarLayout({ selectedCategory, onCategorySelect }: Categ
             >
               <span className="category-star-emoji">{category.emoji}</span>
               <span className="category-star-title-uppercase">{title}</span>
-              {description && (
-                <span 
-                  className="category-star-description"
-                  style={category.id === 'dark' ? { color: '#FFFFFF', opacity: 0.95 } : undefined}
-                >
-                  {description}
-                </span>
-              )}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onCategorySelect(category.id);
+                }}
+                style={{
+                  marginTop: '8px',
+                  padding: '10px 20px',
+                  borderRadius: '8px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(255, 255, 255, 0.5)',
+                  color: category.id === 'dark' ? '#000000' : theme.titleColor,
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 1)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                Take a Quiz
+              </button>
             </button>
           );
         })}
@@ -211,14 +232,35 @@ export function CategoryStarLayout({ selectedCategory, onCategorySelect }: Categ
           >
             <span className="category-star-emoji">{category.emoji}</span>
             <span className="category-star-title-uppercase">{title}</span>
-            {description && (
-              <span 
-                className="category-star-description"
-                style={category.id === 'dark' ? { color: '#E8E8E8', opacity: 0.9 } : undefined}
-              >
-                {description}
-              </span>
-            )}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onCategorySelect(category.id);
+              }}
+              style={{
+                marginTop: '8px',
+                padding: '10px 20px',
+                borderRadius: '8px',
+                background: 'rgba(255, 255, 255, 0.9)',
+                border: '1px solid rgba(255, 255, 255, 0.5)',
+                color: category.id === 'dark' ? '#000000' : theme.titleColor,
+                fontWeight: '600',
+                fontSize: '14px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 1)';
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
+            >
+              Take a Quiz
+            </button>
           </button>
         );
       })}

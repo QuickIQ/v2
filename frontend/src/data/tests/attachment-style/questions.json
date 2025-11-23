@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I bond easily with others and form close emotional connections quickly.",
+    "text": "When I feel emotional shifts in relationships, I notice whether the reaction belongs to the present or comes from old conditioning.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I tend to avoid getting too close to others because I'm afraid of being hurt or rejected.",
+    "text": "I recognize when I'm chasing, withdrawing, or testing people versus when I'm choosing healthy connection.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I feel like I cling to my partner or close relationships, fearing they might leave me.",
+    "text": "When I feel activated in a relationship, I pause to see what I'm really fearing before I react.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I tend to detach emotionally from relationships when things get too intense or complicated.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
-  },
-  {
-    "id": 5,
-    "text": "I feel comfortable with intimacy and can maintain close relationships without feeling overwhelmed.",
+    "text": "I let fear of abandonment or rejection drive my choices without recognizing it's a learned pattern.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "I notice when I'm taking distance personally and I separate present reality from old memories.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I worry that my partner doesn't really love me or will abandon me.",
+    "text": "When I recognize emotional hooks forming, I pause and choose a different direction instead of following them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I prefer to keep relationships casual and avoid deep emotional commitments.",
+    "text": "I see when my reactions come from protection versus intention, and I respond with wisdom instead of instinct.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I feel like I need constant reassurance from my partner to feel secure in the relationship.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
-  },
-  {
-    "id": 9,
-    "text": "I can maintain healthy boundaries in relationships while still being emotionally connected.",
+    "text": "I let old emotional loops control my behavior without understanding they're learned patterns I can update.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I feel overwhelmed, I calm my nervous system and stay grounded instead of collapsing or escaping.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like I'm too dependent on my partner and can't function well without them.",
+    "text": "I notice when I'm idealizing someone too quickly or shutting down, and I choose balanced connection instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can trust my partner and don't constantly worry about them leaving or betraying me.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I feel like I push people away when they try to get too close to me emotionally.",
+    "text": "When I recognize predictable triggers like silence or distance, I prepare healthier responses ahead of time.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can balance my need for closeness with my need for independence in relationships.",
+    "id": 12,
+    "text": "I let my mind jump to negative interpretations without challenging assumptions or separating fact from story.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "I notice when I'm reading silence as danger and I choose to respond to what's actually happening.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel anxious when my partner is away or when I don't know where they are.",
+    "text": "When I feel the urge to chase or people-please, I recognize it's a hook and I choose a different response.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can form secure attachments and maintain healthy, stable relationships.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I'm always trying to avoid getting hurt, so I keep people at a distance.",
+    "text": "I see when my attachment patterns are protective habits versus when they limit healthy closeness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 16,
+    "text": "I let emotional storms control my behavior without regulating my nervous system or creating space to choose.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I experience intense fear of abandonment and do everything I can to prevent my partner from leaving.",
+    "text": "When I notice I'm assuming others will leave, I challenge the thought and stay connected instead of withdrawing.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like I detach emotionally when relationships become too demanding or stressful.",
+    "text": "I recognize when my reactions are shaped by early experiences versus what's true in the present moment.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can maintain my own identity and interests while being in a close relationship.",
+    "text": "When I feel the pull to react from fear, I slow down and choose connection instead of panic or withdrawal.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel secure in my relationships and don't constantly worry about how I bond, avoid, cling, or detach.",
+    "text": "I let my attachment system narrow my perspective without expanding my thinking beyond fear-driven stories.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

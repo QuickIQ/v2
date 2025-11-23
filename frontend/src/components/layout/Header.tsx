@@ -149,7 +149,7 @@ export function Header() {
             >
           <LogoCompact size={32} />
         </motion.div>
-        <div>
+        <div style={{ textAlign: 'center' }}>
           <h1 style={{
             fontSize: isMobile ? '16px' : '18px',
             fontWeight: '600',
@@ -167,7 +167,7 @@ export function Header() {
             margin: '-2px 0 0 0',
             fontWeight: '400',
           }}>
-            Intelligence Test
+            Intelligence & Mental Health
           </p>
               </div>
             </div>

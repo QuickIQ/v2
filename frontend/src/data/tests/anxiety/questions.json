@@ -1,125 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel calm and relaxed in most situations.",
+    "text": "When my thoughts begin to speed up, I notice the pattern before it becomes overwhelming.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I worry excessively about things that might go wrong.",
+    "text": "I recognize the difference between fear that protects me and fear that misleads me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 3,
-    "text": "I can manage stressful situations without feeling overwhelmed.",
+    "text": "When I feel my chest tighten or attention narrow, I pause and breathe before reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I experience physical symptoms like rapid heartbeat or sweating when anxious.",
+    "text": "I let my mind jump to danger even when no danger exists, treating anxiety as reality.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 5,
-    "text": "I can control my anxious thoughts effectively.",
+    "text": "I notice when my thoughts spiral into worst-case scenarios and I choose to slow them down.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I avoid situations that make me feel anxious.",
+    "text": "When anxiety rises, I see it as a signal system that needs new rules, not a personal flaw.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 7,
-    "text": "I feel confident in my ability to handle unexpected challenges.",
+    "text": "Before entering situations where stress may appear, I prepare my mind with intention.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I have trouble sleeping due to worry or anxiety.",
+    "text": "I accept anxious thoughts as truth without questioning or challenging them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 9,
-    "text": "I can focus on tasks without being distracted by anxious thoughts.",
+    "text": "I notice when my body's tension fuels my mind's panic and I calm my body to calm my thoughts.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel restless or on edge frequently.",
+    "text": "When I recognize emotional hooks that pull me into fear, I detach instead of following them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 11,
-    "text": "I use healthy coping strategies when I feel anxious.",
+    "text": "I separate real threats from imagined ones instead of treating all fears as equal.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 12,
-    "text": "I experience panic or intense fear in certain situations.",
+    "text": "I let anxiety control my reactions without pausing to observe or understand what triggered it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I feel in control of my emotions most of the time.",
+    "text": "When my mind exaggerates danger, I challenge the thought and choose more realistic interpretations.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 14,
-    "text": "I worry about things that are unlikely to happen.",
+    "text": "I notice when my brain narrows focus into fear and I consciously widen my perspective.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 15,
-    "text": "I can relax and unwind easily after a stressful day.",
+    "text": "When I feel pulled into panic, I recognize it's an old pattern and I choose not to follow it.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 16,
-    "text": "I feel tense or nervous in social situations.",
+    "text": "I treat anxiety as a surprise that overwhelms me instead of something I can observe and manage.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 17,
-    "text": "I trust my ability to handle difficult situations.",
+    "text": "When racing thoughts appear, I slow my breathing and ground myself instead of letting them spiral.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I have difficulty making decisions due to worry.",
+    "text": "I notice when my mind is repeating old fears and I recognize they have no value in the present.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 19,
-    "text": "I feel peaceful and content in my daily life.",
+    "text": "When I see anxiety patterns forming, I interrupt them before they grow into storms.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I experience anxiety that interferes with my daily activities.",
+    "text": "I let my thoughts push me around without using my mind as a tool for clarity and calm.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-
-
-

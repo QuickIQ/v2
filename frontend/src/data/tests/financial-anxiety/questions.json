@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like money motivates me, driving me to achieve financial goals.",
+    "text": "When I notice financial anxiety rising, I recognize it and choose to understand the cause and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like money secretly terrifies me, causing anxiety and fear.",
+    "text": "During moments when money feels uncertain, I notice it and choose to stay calm and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether money motivates me or secretly terrifies me.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because money secretly terrifies me rather than motivating me.",
+    "text": "When I feel the pull to let fear control financial decisions, I notice it and choose to stay calm and plan instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain a relationship with money where it motivates me, not terrifies me.",
+    "id": 4,
+    "text": "I let not being able to understand financial anxiety prevent me from staying calm and planning ahead effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself staying calm about money, I recognize it and choose to maintain those strategic patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like money secretly terrifies me, and this affects my financial decisions negatively.",
+    "text": "I see when financial uncertainty appears, and I choose to understand causes and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether money motivates me or terrifies me, and work to maintain motivation.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because money secretly terrifies me instead of motivating me.",
+    "text": "When I feel the urge to let anxiety control money decisions, I notice it and choose to stay calm and think instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain a relationship with money where it motivates me, not secretly terrifies me.",
+    "id": 8,
+    "text": "I let not identifying anxiety causes prevent me from staying calm and planning financial decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice calm financial thinking working, I recognize it and choose to strengthen those strategic patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like money secretly terrifies me, and this prevents me from being motivated by it.",
+    "text": "I recognize when financial anxiety rises, and I choose to understand causes and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether money motivates me or terrifies me, and work to maintain financial motivation.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because money secretly terrifies me rather than motivating me.",
+    "text": "When I feel the pull to let fear control money, I notice it and choose to stay calm and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain a relationship with money where it motivates me, ensuring it doesn't secretly terrify me.",
+    "id": 12,
+    "text": "I let problems from not understanding anxiety prevent me from staying calm and planning financial decisions.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice strategic financial planning working, I recognize it and choose to strengthen those calm patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like money secretly terrifies me, and this creates problems in my financial life.",
+    "text": "I see when money feels uncertain, and I choose to understand causes and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether money motivates me or terrifies me, and work to maintain financial motivation.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because money secretly terrifies me instead of motivating me.",
+    "text": "When I feel the urge to let anxiety control decisions, I notice it and choose to stay calm and plan instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain a relationship with money where it motivates me, avoiding being secretly terrified by it.",
+    "id": 16,
+    "text": "I let not being able to stay calm prevent me from understanding anxiety and planning financial decisions effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining calm about money, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like money secretly terrifies me, and this affects my ability to be motivated by it.",
+    "text": "I recognize when financial uncertainty appears, and I choose to understand causes and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether money motivates me or terrifies me, and work to maintain financial motivation.",
+    "text": "When I feel the pull to let fear drive financial decisions, I notice it and choose to stay calm and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like money motivates me, not secretly terrifies me, driving me to achieve financial goals.",
+    "text": "I let not identifying financial anxiety abilities prevent me from staying calm and planning ahead effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

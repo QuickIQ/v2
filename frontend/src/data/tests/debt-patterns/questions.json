@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm building financial stability through my debt management.",
+    "text": "When I notice debt patterns forming, I recognize them and choose to understand causes and plan strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 2,
-    "text": "I feel like I'm digging a financial hole through my debt patterns.",
+    "text": "During moments when debt feels overwhelming, I notice it and choose to understand the pattern and think ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I can identify whether I'm building stability or digging a hole through my debt patterns.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 4,
-    "text": "I experience financial problems because I'm digging a hole rather than building stability through debt.",
+    "text": "When I feel the pull to ignore debt patterns, I notice it and choose to understand causes and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 5,
-    "text": "I can maintain debt patterns that build stability rather than dig a hole.",
+    "id": 4,
+    "text": "I let not being able to understand debt patterns prevent me from managing debt and planning strategically effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 5,
+    "text": "When I notice myself managing debt strategically, I recognize it and choose to maintain those planning patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 6,
-    "text": "I feel like my debt patterns are digging a hole, not building stability, and this affects me negatively.",
+    "text": "I see when debt needs management, and I choose to understand patterns and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I can recognize whether I'm building stability or digging a hole through debt, and work to build stability.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 8,
-    "text": "I experience financial problems because my debt patterns are digging a hole instead of building stability.",
+    "text": "When I feel the urge to let debt control me, I notice it and choose to understand causes and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 9,
-    "text": "I can maintain debt patterns that build financial stability, avoiding digging a hole.",
+    "id": 8,
+    "text": "I let not identifying debt patterns prevent me from understanding causes and managing debt effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 9,
+    "text": "When I notice strategic debt management working, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 10,
-    "text": "I feel like my debt patterns are digging a financial hole, and this prevents me from building stability.",
+    "text": "I recognize when debt patterns appear, and I choose to understand causes and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can identify whether I'm building stability or digging a hole through debt, and work to improve my debt patterns.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 12,
-    "text": "I experience financial problems because my debt patterns are digging a hole rather than building stability.",
+    "text": "When I feel the pull to ignore debt, I notice it and choose to understand patterns and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 13,
-    "text": "I can maintain debt patterns that build stability, not dig a hole, in my financial life.",
+    "id": 12,
+    "text": "I let problems from not understanding patterns prevent me from managing debt and planning strategically.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 13,
+    "text": "When I notice debt planning working, I recognize it and choose to strengthen those strategic patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 14,
-    "text": "I feel like my debt patterns are digging a financial hole, and this creates problems in my financial stability.",
+    "text": "I see when debt needs understanding, and I choose to analyze patterns and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 15,
-    "text": "I can recognize whether I'm building stability or digging a hole through debt, and work to build financial stability.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I experience financial problems because my debt patterns are digging a hole instead of building stability.",
+    "text": "When I feel the urge to let debt overwhelm me, I notice it and choose to understand causes and think ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
-    "id": 17,
-    "text": "I can maintain debt patterns that build financial stability, avoiding digging a hole.",
+    "id": 16,
+    "text": "I let not being able to manage debt prevent me from understanding patterns and planning strategically effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
+    "id": 17,
+    "text": "When I notice myself maintaining debt awareness, I recognize it and choose to strengthen those patterns.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
     "id": 18,
-    "text": "I feel like my debt patterns are digging a financial hole, and this affects my ability to build stability.",
+    "text": "I recognize when debt needs strategic thinking, and I choose to understand patterns and plan ahead instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I can identify whether I'm building stability or digging a hole through debt, and work to improve my financial stability.",
+    "text": "When I feel the pull to ignore debt causes, I notice it and choose to understand patterns and think strategically instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 20,
-    "text": "I feel like I'm building financial stability through my debt patterns, not digging a hole.",
+    "text": "I let not identifying debt pattern abilities prevent me from understanding causes and managing debt effectively.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

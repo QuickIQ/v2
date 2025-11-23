@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm eating because of real hunger or because of emotional hunger wearing a disguise.",
+    "text": "When I feel the urge to eat, I pause and notice whether it's physical hunger or emotional hunger.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I eat when I'm stressed, anxious, sad, or experiencing other strong emotions.",
+    "text": "During stressful moments, I notice the pull to eat and choose to address the emotion directly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I have difficulty distinguishing between physical hunger and emotional hunger.",
+    "text": "When I feel sad or anxious, I recognize the emotion and choose healthy ways to cope instead of turning to food.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I use food to comfort myself or to cope with difficult feelings.",
+    "text": "I let emotional hunger or stress drive me to eat even when I'm not physically hungry.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I eat even when I'm not physically hungry, just because food is available or I'm bored.",
+    "text": "When I notice myself eating out of boredom, I recognize the pattern and choose a different activity instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I feel guilty, ashamed, or anxious after eating, especially after emotional eating episodes.",
+    "text": "I see when my mind is using food to comfort or distract me, and I choose to face the feeling directly instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I eat in secret or hide my eating behaviors from others.",
+    "text": "When I feel a craving, I pause and check if my body actually needs food or if it's an emotional response.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I feel like I have no control over my eating, especially when I'm emotional.",
+    "text": "I let food availability or convenience control my eating choices instead of listening to my body's needs.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I eat large amounts of food quickly, especially when I'm feeling emotional.",
+    "text": "When I notice the urge to eat for comfort, I recognize it and choose to sit with the emotion instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel like food is my primary way of dealing with stress or negative emotions.",
+    "text": "I recognize when my eating is driven by emotions rather than physical need, and I choose to address the root cause.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can recognize when I'm physically hungry versus emotionally hungry.",
+    "text": "When I feel the pull to eat after a difficult moment, I notice it and choose to process the feeling first.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I have a healthy relationship with food and don't use it to cope with emotions.",
+    "text": "I let stress or difficult emotions automatically trigger eating without checking if I'm actually hungry.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I can stop eating when I'm full and don't continue eating for emotional reasons.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I have healthy coping strategies for dealing with stress and emotions that don't involve food.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I can enjoy food without feeling guilty or anxious about my eating choices.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I'm constantly thinking about food or my next meal, especially when stressed.",
+    "text": "When I notice myself eating mindlessly, I pause and bring my attention back to the present moment.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "I see when my eating patterns are connected to my emotional state, and I choose to address both separately.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the urge to eat when food is just available, I check in with my body's actual hunger signals first.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let emotional eating patterns control my relationship with food and my ability to manage feelings.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I eat to fill an emotional void or to avoid dealing with difficult feelings.",
+    "text": "When I notice difficulty distinguishing between hunger types, I pause and use my body's signals to guide me.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like my eating behaviors are out of control and I can't stop even when I want to.",
+    "text": "I recognize when eating is a response to emotional discomfort, and I choose to feel the emotion instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I use food as a reward or to celebrate, but also to comfort myself when I'm feeling down.",
+    "text": "When I feel the pull to use food as a reward or comfort, I notice it and choose healthier ways to meet that need.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can maintain a balanced approach to eating that isn't driven primarily by emotions.",
+    "text": "I let emotional eating habits prevent me from developing healthier ways to cope with stress or difficult feelings.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-

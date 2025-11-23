@@ -1,123 +1,122 @@
 [
   {
     "id": 1,
-    "text": "I feel like I'm actually sick, or did Google ruin my peace again by showing me symptoms.",
+    "text": "When I notice a body sensation, I pause and recognize it as normal instead of immediately assuming it's a sign of illness.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 2,
-    "text": "I frequently worry about having a serious illness, even when doctors tell me I'm healthy.",
+    "text": "During moments of worry about my health, I notice the anxiety and choose to breathe and stay calm instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 3,
-    "text": "I search online for symptoms and medical information, which increases my anxiety about my health.",
+    "text": "When I feel the urge to search online for symptoms, I recognize it as anxiety and choose to redirect my attention instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 4,
-    "text": "I interpret normal bodily sensations as signs of serious illness.",
+    "text": "I let normal body sensations convince me that I have a serious illness or medical problem.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 5,
-    "text": "I frequently check my body for signs of illness or abnormalities.",
+    "text": "When I notice myself checking my body repeatedly, I recognize the pattern and choose to stop and redirect instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 6,
-    "text": "I seek reassurance from doctors, family, or friends about my health, but the reassurance doesn't last long.",
+    "text": "I see when my mind is catastrophizing a small symptom, and I choose a more realistic interpretation instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 7,
-    "text": "I avoid medical appointments or health-related information because I'm afraid of what I might learn.",
+    "text": "When I feel worry about my health rising, I notice it as anxiety and choose to observe it without reacting.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 8,
-    "text": "I feel anxious or panicked when I notice any physical symptom, no matter how minor.",
+    "text": "I let health anxiety drive me to excessive checking, searching, or worrying even when doctors say I'm healthy.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": false
+    "reverse": true
   },
   {
     "id": 9,
-    "text": "I have difficulty accepting that I'm healthy, even after medical tests show no problems.",
+    "text": "When I notice the pull to interpret every sensation as dangerous, I recognize it and choose to trust my body instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 10,
-    "text": "I feel like my health anxiety is ruining my peace and quality of life.",
+    "text": "I recognize when my mind is confusing anxiety with real medical symptoms, and I choose to separate them.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 11,
-    "text": "I can trust my body's signals and don't immediately assume the worst about my health.",
+    "text": "When I feel the urge to seek reassurance about my health, I notice it and choose to sit with the uncertainty instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
+    "reverse": false
   },
   {
     "id": 12,
-    "text": "I can read about health information without becoming excessively anxious or worried.",
+    "text": "I let fear of serious illness control my thoughts and prevent me from living normally.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   },
   {
     "id": 13,
-    "text": "I accept medical reassurance and don't continue to worry excessively about my health.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 14,
-    "text": "I can distinguish between normal bodily sensations and actual symptoms that need medical attention.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 15,
-    "text": "I maintain a balanced perspective on my health without excessive worry or anxiety.",
-    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
-    "reverse": true
-  },
-  {
-    "id": 16,
-    "text": "I feel like I'm constantly monitoring my body for signs of illness.",
+    "text": "When I notice myself worrying about health even after reassurance, I recognize the pattern and choose to let it go.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
+    "id": 14,
+    "text": "I see when my mind is treating normal discomfort as a medical emergency, and I choose a calmer perspective instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 15,
+    "text": "When I feel the pull to research symptoms or medical information, I notice it and choose to redirect my focus instead.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "text": "I let health anxiety create excessive worry and checking behaviors that interfere with my daily life.",
+    "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
+    "reverse": true
+  },
+  {
     "id": 17,
-    "text": "I experience significant distress or anxiety related to my health concerns.",
+    "text": "When I notice the cycle of worry starting—sensation, fear, checking—I interrupt it early by staying calm.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 18,
-    "text": "I feel like my health anxiety interferes with my daily life, work, or relationships.",
+    "text": "I recognize when my body sensations are caused by anxiety rather than actual illness, and I respond accordingly.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 19,
-    "text": "I have difficulty focusing on other things because I'm so worried about my health.",
+    "text": "When I feel the urge to check my body for abnormalities, I notice it and choose to trust my body instead.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": false
   },
   {
     "id": 20,
-    "text": "I can maintain peace of mind about my health without excessive worry or anxiety.",
+    "text": "I let health anxiety prevent me from trusting my body or accepting reassurance from medical professionals.",
     "options": ["Never", "Rarely", "Sometimes", "Neutral", "Often", "Usually", "Always"],
     "reverse": true
   }
 ]
-
