@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
+import { useRipple } from '../../hooks/useRipple';
 import { Sparkles, BookOpen, Clock } from 'lucide-react';
 import { loadTestContent, getTestConfig, TestContent } from '../../utils/testContentLoader';
 import * as LucideIcons from 'lucide-react';
@@ -221,6 +222,10 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
   const { i18n } = useTranslation();
   const isMobile = useMobile();
   const language = i18n.language as 'en' | 'tr';
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const { ripples, createRipple, color, scale, transition } = useRipple({
+    buttonRef,
+  });
   const [content, setContent] = useState<TestContent | null>(null);
   const [loading, setLoading] = useState(true);
   const [landingImage, setLandingImage] = useState<string | null>(null);
@@ -597,7 +602,12 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
           }}
         >
           <motion.button
-            onClick={onStart}
+            ref={buttonRef}
+            className="ripple-container"
+            onClick={(e) => {
+              createRipple(e);
+              onStart();
+            }}
             whileHover={{ 
               scale: 1.15,
               y: -8,
@@ -621,6 +631,25 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
               zIndex: 2,
             }}
           >
+            {ripples.map((ripple) => (
+              <motion.span
+                key={ripple.id}
+                initial={{ scale: 0, opacity: 0.6 }}
+                animate={{ scale, opacity: 0 }}
+                transition={transition}
+                style={{
+                  position: 'absolute',
+                  top: ripple.y - ripple.size / 2,
+                  left: ripple.x - ripple.size / 2,
+                  width: `${ripple.size}px`,
+                  height: `${ripple.size}px`,
+                  borderRadius: '50%',
+                  backgroundColor: color,
+                  pointerEvents: 'none',
+                  zIndex: 9999,
+                }}
+              />
+            ))}
             <motion.span
               animate={{
                 boxShadow: [

@@ -1,7 +1,9 @@
-import { memo } from 'react';
+import { memo, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useMobile } from '../../hooks/useMobile';
+import { useRipple } from '../../hooks/useRipple';
 import { Clock, HelpCircle } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
 import './TestCard.css';
@@ -44,6 +46,10 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
   const { i18n } = useTranslation();
   const isMobile = useMobile();
   const language = i18n.language as 'en' | 'tr';
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const { ripples, createRipple, color, scale, transition } = useRipple({
+    buttonRef,
+  });
   
   // Get icon component dynamically
   const IconComponent = (LucideIcons as any)[test.icon] || LucideIcons.HelpCircle;
@@ -233,7 +239,8 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
           
           {/* Start Button */}
           <button
-            className="test-card-button"
+            className="test-card-button ripple-container"
+            onClick={createRipple}
             style={{
               marginTop: 'auto',
               padding: isMobile ? '12px 20px' : '14px 24px',
@@ -261,6 +268,25 @@ export const TestCard = memo(function TestCard({ test, index = 0 }: TestCardProp
               '--button-shadow': `${test.colors.primary}66`,
             } as React.CSSProperties}
           >
+            {ripples.map((ripple) => (
+              <motion.span
+                key={ripple.id}
+                initial={{ scale: 0, opacity: 0.6 }}
+                animate={{ scale, opacity: 0 }}
+                transition={transition}
+                style={{
+                  position: 'absolute',
+                  top: ripple.y - ripple.size / 2,
+                  left: ripple.x - ripple.size / 2,
+                  width: `${ripple.size}px`,
+                  height: `${ripple.size}px`,
+                  borderRadius: '50%',
+                  backgroundColor: color,
+                  pointerEvents: 'none',
+                  zIndex: 9999,
+                }}
+              />
+            ))}
             {language === 'tr' ? 'Teste Başla' : 'Start Test'}
           </button>
         </div>

@@ -405,12 +405,16 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
 
   // Render section card
   const renderSection = (section: typeof sections[0], index: number, delay: number) => {
-    const backgroundColor = cardBackgrounds[index] || cardBackgrounds[0];
     const titleColor = titleColors[index] || titleColors[0];
     
-    // Check if this is the Conclusion section (last card with dark background or title is exactly "Conclusion" or "Conclusion for X")
+    // Check if this is the Conclusion section (title starts with "Conclusion" followed by optional text)
     // Only check title match, not index, to avoid false positives like "Use the Premise–Conclusion Rule"
-    const isConclusion = section.title && /^Conclusion(\s+for\s+\w+)?$/i.test(section.title.trim());
+    const titleStr = typeof section.title === 'string' ? section.title : (section.title?.en || section.title?.[currentLocale] || '');
+    // Match "Conclusion", "Conclusion:", "Conclusion —", "Conclusion for X", etc.
+    const isConclusion = titleStr && /^Conclusion\s*[:—\-–]?/i.test(titleStr.trim()) && !titleStr.match(/Premise[—\-–]Conclusion/i);
+    
+    // Use dark background for Conclusion, otherwise use card background
+    const backgroundColor = isConclusion ? '#2A2420' : (cardBackgrounds[index] || cardBackgrounds[0]);
     const textColor = isConclusion ? '#FFFFFF' : '#555';
     const headingTextColor = isConclusion ? '#FFFFFF' : '#555';
     const titleTextColor = isConclusion ? '#FFD700' : titleColor;

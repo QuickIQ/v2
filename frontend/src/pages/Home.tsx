@@ -1,10 +1,12 @@
 import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { testApi } from '../services/api';
 import { Test } from '../types';
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
 import { useMobile } from '../hooks/useMobile';
+import { useRipple } from '../hooks/useRipple';
 import { getAllTestConfigs, getTestConfig } from '../utils/testContentLoader';
 import { StatsSection } from '../components/ui/StatsSection';
 import { TestsCompletedCounter } from '../components/ui/TestsCompletedCounter';
@@ -30,6 +32,10 @@ function Home() {
   const [showDeveloperControlPanel, setShowDeveloperControlPanel] = useState(false); // Toggle for developer control panel
   const isMobile = useMobile();
   const categoryRef = useRef<HTMLDivElement>(null); // Ref for scrolling to tests section
+  const developerShortcutsButtonRef = useRef<HTMLButtonElement>(null);
+  const developerControlPanelButtonRef = useRef<HTMLButtonElement>(null);
+  const developerShortcutsRipple = useRipple({ buttonRef: developerShortcutsButtonRef });
+  const developerControlPanelRipple = useRipple({ buttonRef: developerControlPanelButtonRef });
   
   // Cache test configs - sadece bir kere hesapla
   const testConfigs = useMemo(() => getAllTestConfigs(), []);
@@ -272,7 +278,12 @@ function Home() {
           <div style={{ marginTop: '64px' }}>
             {/* Toggle Button */}
             <button
-              onClick={() => setShowDeveloperShortcuts(prev => !prev)}
+              ref={developerShortcutsButtonRef}
+              className="ripple-container"
+              onClick={(e) => {
+                developerShortcutsRipple.createRipple(e);
+                setShowDeveloperShortcuts(prev => !prev);
+              }}
               style={{
                 width: '100%',
                 padding: isMobile ? '16px 20px' : '20px 24px',
@@ -293,6 +304,7 @@ function Home() {
                 boxShadow: showDeveloperShortcuts 
                   ? '0 4px 12px rgba(108, 99, 255, 0.3)'
                   : '0 2px 8px rgba(0, 0, 0, 0.08)',
+                position: 'relative',
               }}
               onMouseEnter={(e) => {
                 if (!isMobile && !showDeveloperShortcuts) {
@@ -307,6 +319,25 @@ function Home() {
                 }
               }}
             >
+              {developerShortcutsRipple.ripples.map((ripple) => (
+                <motion.span
+                  key={ripple.id}
+                  initial={{ scale: 0, opacity: 0.6 }}
+                  animate={{ scale: developerShortcutsRipple.scale, opacity: 0 }}
+                  transition={developerShortcutsRipple.transition}
+                  style={{
+                    position: 'absolute',
+                    top: ripple.y - ripple.size / 2,
+                    left: ripple.x - ripple.size / 2,
+                    width: `${ripple.size}px`,
+                    height: `${ripple.size}px`,
+                    borderRadius: '50%',
+                    backgroundColor: developerShortcutsRipple.color,
+                    pointerEvents: 'none',
+                    zIndex: 9999,
+                  }}
+                />
+              ))}
               <span>🧠</span>
               <span>Developer Result Shortcuts</span>
               <span style={{ 
@@ -411,7 +442,12 @@ function Home() {
           <div style={{ marginTop: '64px' }}>
             {/* Toggle Button */}
             <button
-              onClick={() => setShowDeveloperControlPanel(prev => !prev)}
+              ref={developerControlPanelButtonRef}
+              className="ripple-container"
+              onClick={(e) => {
+                developerControlPanelRipple.createRipple(e);
+                setShowDeveloperControlPanel(prev => !prev);
+              }}
               style={{
                 width: '100%',
                 padding: isMobile ? '16px 20px' : '20px 24px',
@@ -432,6 +468,7 @@ function Home() {
                 boxShadow: showDeveloperControlPanel 
                   ? '0 4px 12px rgba(108, 99, 255, 0.3)'
                   : '0 2px 8px rgba(0, 0, 0, 0.08)',
+                position: 'relative',
               }}
               onMouseEnter={(e) => {
                 if (!isMobile && !showDeveloperControlPanel) {
@@ -446,6 +483,25 @@ function Home() {
                 }
               }}
             >
+              {developerControlPanelRipple.ripples.map((ripple) => (
+                <motion.span
+                  key={ripple.id}
+                  initial={{ scale: 0, opacity: 0.6 }}
+                  animate={{ scale: developerControlPanelRipple.scale, opacity: 0 }}
+                  transition={developerControlPanelRipple.transition}
+                  style={{
+                    position: 'absolute',
+                    top: ripple.y - ripple.size / 2,
+                    left: ripple.x - ripple.size / 2,
+                    width: `${ripple.size}px`,
+                    height: `${ripple.size}px`,
+                    borderRadius: '50%',
+                    backgroundColor: developerControlPanelRipple.color,
+                    pointerEvents: 'none',
+                    zIndex: 9999,
+                  }}
+                />
+              ))}
               <span>⚙️</span>
               <span>Personality Unlock Pages Control Panel</span>
               <span style={{ 

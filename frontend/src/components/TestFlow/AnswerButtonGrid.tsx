@@ -1,5 +1,7 @@
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
+import { useRipple } from '../../hooks/useRipple';
 import answerGradientsData from '../../data/shared/answer-gradients.json';
 
 interface AnswerButtonGridProps {
@@ -12,6 +14,84 @@ interface AnswerButtonGridProps {
 // Load answer gradients and glow colors from JSON
 const answerGradients = answerGradientsData.gradients;
 const glowColors = answerGradientsData.glowColors;
+
+interface AnswerButtonProps {
+  option: string;
+  index: number;
+  isSelected: boolean;
+  disabled: boolean;
+  onSelect: (index: number) => void;
+  isMobile: boolean;
+}
+
+function AnswerButton({ option, index, isSelected, disabled, onSelect, isMobile }: AnswerButtonProps) {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const { ripples, createRipple, color, scale, transition } = useRipple({
+    buttonRef,
+  });
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!disabled) {
+      createRipple(e);
+      onSelect(index);
+    }
+  };
+
+  return (
+    <motion.button
+      ref={buttonRef}
+      className={`answer-option ripple-container ${isMobile ? `answer-${['never', 'rarely', 'sometimes', 'neutral', 'often', 'usually', 'always'][index]}` : ''}`}
+      onClick={handleClick}
+      whileHover={!disabled ? { 
+        y: -4,
+        boxShadow: `0 0 12px ${glowColors[index] || glowColors[0]}, 0 4px 18px rgba(0,0,0,0.1)`,
+        filter: 'brightness(1.06)',
+        transition: { duration: 0.12, ease: 'easeOut' }
+      } : {}}
+      whileTap={!disabled ? { scale: 0.98 } : {}}
+      disabled={disabled}
+      style={{
+        padding: isMobile ? '10px 14px' : '12px 20px',
+        border: 'none',
+        borderRadius: '12px',
+        background: answerGradients[index] || answerGradients[0],
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        textAlign: 'center',
+        fontSize: isMobile ? '12px' : '14px',
+        fontWeight: '600',
+        color: '#333',
+        transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
+        opacity: disabled ? 0.6 : 1,
+        boxShadow: isSelected ? `0 0 12px ${glowColors[index] || glowColors[0]}, 0 4px 18px rgba(0,0,0,0.1)` : (isMobile ? '0 2px 6px rgba(0,0,0,0.06)' : '0 3px 10px rgba(0,0,0,0.08)'),
+        position: 'relative',
+        zIndex: isSelected ? 2 : 1,
+        whiteSpace: 'nowrap',
+        ...(isMobile ? {} : { flex: '1 1 0', maxWidth: '150px' }),
+      }}
+    >
+      {ripples.map((ripple) => (
+        <motion.span
+          key={ripple.id}
+          initial={{ scale: 0, opacity: 0.6 }}
+          animate={{ scale, opacity: 0 }}
+          transition={transition}
+          style={{
+            position: 'absolute',
+            top: ripple.y - ripple.size / 2,
+            left: ripple.x - ripple.size / 2,
+            width: `${ripple.size}px`,
+            height: `${ripple.size}px`,
+            borderRadius: '50%',
+            backgroundColor: color,
+            pointerEvents: 'none',
+            zIndex: 9999,
+          }}
+        />
+      ))}
+      {option}
+    </motion.button>
+  );
+}
 
 export function AnswerButtonGrid({ options, selectedOption, onSelect, disabled = false }: AnswerButtonGridProps) {
   const isMobile = useMobile(600);
@@ -39,247 +119,86 @@ export function AnswerButtonGrid({ options, selectedOption, onSelect, disabled =
       >
         {/* Always (index 6) */}
         {options[6] && (
-          <motion.button
-            className="answer-option answer-always"
-            onClick={() => handleOptionSelect(6)}
-            whileHover={!disabled ? { 
-              y: -4,
-              boxShadow: `0 0 12px ${glowColors[6]}, 0 4px 18px rgba(0,0,0,0.1)`,
-              filter: 'brightness(1.06)',
-              transition: { duration: 0.12, ease: 'easeOut' }
-            } : {}}
-            whileTap={!disabled ? { scale: 0.98 } : {}}
+          <AnswerButton
+            option={options[6]}
+            index={6}
+            isSelected={selectedOption === 6}
             disabled={disabled}
-            style={{
-              padding: '10px 14px',
-              border: 'none',
-              borderRadius: '12px',
-              background: answerGradients[6] || answerGradients[0],
-              cursor: disabled ? 'not-allowed' : 'pointer',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#333',
-              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-              opacity: disabled ? 0.6 : 1,
-              boxShadow: selectedOption === 6 ? `0 0 12px ${glowColors[6]}, 0 4px 18px rgba(0,0,0,0.1)` : '0 2px 6px rgba(0,0,0,0.06)',
-              position: 'relative',
-              zIndex: selectedOption === 6 ? 2 : 1,
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {options[6]}
-          </motion.button>
+            onSelect={handleOptionSelect}
+            isMobile={true}
+          />
         )}
 
         {/* Never (index 0) */}
         {options[0] && (
-          <motion.button
-            className="answer-option answer-never"
-            onClick={() => handleOptionSelect(0)}
-            whileHover={!disabled ? { 
-              y: -4,
-              boxShadow: `0 0 12px ${glowColors[0]}, 0 4px 18px rgba(0,0,0,0.1)`,
-              filter: 'brightness(1.06)',
-              transition: { duration: 0.12, ease: 'easeOut' }
-            } : {}}
-            whileTap={!disabled ? { scale: 0.98 } : {}}
+          <AnswerButton
+            option={options[0]}
+            index={0}
+            isSelected={selectedOption === 0}
             disabled={disabled}
-            style={{
-              padding: '10px 14px',
-              border: 'none',
-              borderRadius: '12px',
-              background: answerGradients[0] || answerGradients[0],
-              cursor: disabled ? 'not-allowed' : 'pointer',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#333',
-              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-              opacity: disabled ? 0.6 : 1,
-              boxShadow: selectedOption === 0 ? `0 0 12px ${glowColors[0]}, 0 4px 18px rgba(0,0,0,0.1)` : '0 2px 6px rgba(0,0,0,0.06)',
-              position: 'relative',
-              zIndex: selectedOption === 0 ? 2 : 1,
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {options[0]}
-          </motion.button>
+            onSelect={handleOptionSelect}
+            isMobile={true}
+          />
         )}
 
         {/* Usually (index 5) */}
         {options[5] && (
-          <motion.button
-            className="answer-option answer-usually"
-            onClick={() => handleOptionSelect(5)}
-            whileHover={!disabled ? { 
-              y: -4,
-              boxShadow: `0 0 12px ${glowColors[5]}, 0 4px 18px rgba(0,0,0,0.1)`,
-              filter: 'brightness(1.06)',
-              transition: { duration: 0.12, ease: 'easeOut' }
-            } : {}}
-            whileTap={!disabled ? { scale: 0.98 } : {}}
+          <AnswerButton
+            option={options[5]}
+            index={5}
+            isSelected={selectedOption === 5}
             disabled={disabled}
-            style={{
-              padding: '10px 14px',
-              border: 'none',
-              borderRadius: '12px',
-              background: answerGradients[5] || answerGradients[0],
-              cursor: disabled ? 'not-allowed' : 'pointer',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#333',
-              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-              opacity: disabled ? 0.6 : 1,
-              boxShadow: selectedOption === 5 ? `0 0 12px ${glowColors[5]}, 0 4px 18px rgba(0,0,0,0.1)` : '0 2px 6px rgba(0,0,0,0.06)',
-              position: 'relative',
-              zIndex: selectedOption === 5 ? 2 : 1,
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {options[5]}
-          </motion.button>
+            onSelect={handleOptionSelect}
+            isMobile={true}
+          />
         )}
 
         {/* Rarely (index 1) */}
         {options[1] && (
-          <motion.button
-            className="answer-option answer-rarely"
-            onClick={() => handleOptionSelect(1)}
-            whileHover={!disabled ? { 
-              y: -4,
-              boxShadow: `0 0 12px ${glowColors[1]}, 0 4px 18px rgba(0,0,0,0.1)`,
-              filter: 'brightness(1.06)',
-              transition: { duration: 0.12, ease: 'easeOut' }
-            } : {}}
-            whileTap={!disabled ? { scale: 0.98 } : {}}
+          <AnswerButton
+            option={options[1]}
+            index={1}
+            isSelected={selectedOption === 1}
             disabled={disabled}
-            style={{
-              padding: '10px 14px',
-              border: 'none',
-              borderRadius: '12px',
-              background: answerGradients[1] || answerGradients[0],
-              cursor: disabled ? 'not-allowed' : 'pointer',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#333',
-              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-              opacity: disabled ? 0.6 : 1,
-              boxShadow: selectedOption === 1 ? `0 0 12px ${glowColors[1]}, 0 4px 18px rgba(0,0,0,0.1)` : '0 2px 6px rgba(0,0,0,0.06)',
-              position: 'relative',
-              zIndex: selectedOption === 1 ? 2 : 1,
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {options[1]}
-          </motion.button>
+            onSelect={handleOptionSelect}
+            isMobile={true}
+          />
         )}
 
         {/* Often (index 4) */}
         {options[4] && (
-          <motion.button
-            className="answer-option answer-often"
-            onClick={() => handleOptionSelect(4)}
-            whileHover={!disabled ? { 
-              y: -4,
-              boxShadow: `0 0 12px ${glowColors[4]}, 0 4px 18px rgba(0,0,0,0.1)`,
-              filter: 'brightness(1.06)',
-              transition: { duration: 0.12, ease: 'easeOut' }
-            } : {}}
-            whileTap={!disabled ? { scale: 0.98 } : {}}
+          <AnswerButton
+            option={options[4]}
+            index={4}
+            isSelected={selectedOption === 4}
             disabled={disabled}
-            style={{
-              padding: '10px 14px',
-              border: 'none',
-              borderRadius: '12px',
-              background: answerGradients[4] || answerGradients[0],
-              cursor: disabled ? 'not-allowed' : 'pointer',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#333',
-              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-              opacity: disabled ? 0.6 : 1,
-              boxShadow: selectedOption === 4 ? `0 0 12px ${glowColors[4]}, 0 4px 18px rgba(0,0,0,0.1)` : '0 2px 6px rgba(0,0,0,0.06)',
-              position: 'relative',
-              zIndex: selectedOption === 4 ? 2 : 1,
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {options[4]}
-          </motion.button>
+            onSelect={handleOptionSelect}
+            isMobile={true}
+          />
         )}
 
         {/* Sometimes (index 2) */}
         {options[2] && (
-          <motion.button
-            className="answer-option answer-sometimes"
-            onClick={() => handleOptionSelect(2)}
-            whileHover={!disabled ? { 
-              y: -4,
-              boxShadow: `0 0 12px ${glowColors[2]}, 0 4px 18px rgba(0,0,0,0.1)`,
-              filter: 'brightness(1.06)',
-              transition: { duration: 0.12, ease: 'easeOut' }
-            } : {}}
-            whileTap={!disabled ? { scale: 0.98 } : {}}
+          <AnswerButton
+            option={options[2]}
+            index={2}
+            isSelected={selectedOption === 2}
             disabled={disabled}
-            style={{
-              padding: '10px 14px',
-              border: 'none',
-              borderRadius: '12px',
-              background: answerGradients[2] || answerGradients[0],
-              cursor: disabled ? 'not-allowed' : 'pointer',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#333',
-              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-              opacity: disabled ? 0.6 : 1,
-              boxShadow: selectedOption === 2 ? `0 0 12px ${glowColors[2]}, 0 4px 18px rgba(0,0,0,0.1)` : '0 2px 6px rgba(0,0,0,0.06)',
-              position: 'relative',
-              zIndex: selectedOption === 2 ? 2 : 1,
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {options[2]}
-          </motion.button>
+            onSelect={handleOptionSelect}
+            isMobile={true}
+          />
         )}
 
         {/* Neutral (index 3) */}
         {options[3] && (
-          <motion.button
-            className="answer-option answer-neutral"
-            onClick={() => handleOptionSelect(3)}
-            whileHover={!disabled ? { 
-              y: -4,
-              boxShadow: `0 0 12px ${glowColors[3]}, 0 4px 18px rgba(0,0,0,0.1)`,
-              filter: 'brightness(1.06)',
-              transition: { duration: 0.12, ease: 'easeOut' }
-            } : {}}
-            whileTap={!disabled ? { scale: 0.98 } : {}}
+          <AnswerButton
+            option={options[3]}
+            index={3}
+            isSelected={selectedOption === 3}
             disabled={disabled}
-            style={{
-              padding: '10px 14px',
-              border: 'none',
-              borderRadius: '12px',
-              background: answerGradients[3] || answerGradients[0],
-              cursor: disabled ? 'not-allowed' : 'pointer',
-              textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#333',
-              transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-              opacity: disabled ? 0.6 : 1,
-              boxShadow: selectedOption === 3 ? `0 0 12px ${glowColors[3]}, 0 4px 18px rgba(0,0,0,0.1)` : '0 2px 6px rgba(0,0,0,0.06)',
-              position: 'relative',
-              zIndex: selectedOption === 3 ? 2 : 1,
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {options[3]}
-          </motion.button>
+            onSelect={handleOptionSelect}
+            isMobile={true}
+          />
         )}
       </div>
     );
@@ -289,39 +208,15 @@ export function AnswerButtonGrid({ options, selectedOption, onSelect, disabled =
   return (
     <>
       {options.map((option: string, index: number) => (
-        <motion.button
+        <AnswerButton
           key={index}
-          onClick={() => handleOptionSelect(index)}
-          whileHover={!disabled ? { 
-            y: -4,
-            boxShadow: `0 0 12px ${glowColors[index] || glowColors[0]}, 0 4px 18px rgba(0,0,0,0.1)`,
-            filter: 'brightness(1.06)',
-            transition: { duration: 0.12, ease: 'easeOut' }
-          } : {}}
-          whileTap={!disabled ? { scale: 0.98 } : {}}
+          option={option}
+          index={index}
+          isSelected={selectedOption === index}
           disabled={disabled}
-          style={{
-            padding: '12px 20px',
-            border: 'none',
-            borderRadius: '12px',
-            background: answerGradients[index] || answerGradients[0],
-            cursor: disabled ? 'not-allowed' : 'pointer',
-            textAlign: 'center',
-            fontSize: '14px',
-            fontWeight: '600',
-            color: '#333',
-            transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out',
-            opacity: disabled ? 0.6 : 1,
-            boxShadow: '0 3px 10px rgba(0,0,0,0.08)',
-            position: 'relative',
-            zIndex: selectedOption === index ? 2 : 1,
-            flex: '1 1 0',
-            maxWidth: '150px',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          {option}
-        </motion.button>
+          onSelect={handleOptionSelect}
+          isMobile={false}
+        />
       ))}
     </>
   );

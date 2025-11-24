@@ -181,6 +181,7 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
   
   const [barProgresses, setBarProgresses] = useState([0, 0, 0, 0, 0, 0]);
   const [activeBarIndex, setActiveBarIndex] = useState(0);
+  const [analyzingDots, setAnalyzingDots] = useState(0); // 0, 1, 2, 3 for dots animation
 
   // Calculate progress for any bar with milestones
   const calculateBarProgress = (timeInBar: number, milestones: Array<{ progress: number; pause: number }>): number => {
@@ -217,6 +218,17 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
     
     return progressPercent;
   };
+
+  // Animate "ANALYZING" dots (0, 1, 2, 3 dots cycling)
+  useEffect(() => {
+    if (!content || hasCompleted) return;
+    
+    const dotsInterval = setInterval(() => {
+      setAnalyzingDots((prev) => (prev + 1) % 4); // Cycle 0, 1, 2, 3
+    }, 500); // Change every 500ms
+    
+    return () => clearInterval(dotsInterval);
+  }, [content, hasCompleted]);
 
   // Animate progress with 6 circular bars
   useEffect(() => {
@@ -379,6 +391,41 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
               height: '100%',
               background: 'transparent', // Transparent background
             }}>
+              {/* "ANALYZING" text in center of hexagon */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%',
+                  pointerEvents: 'none',
+                  zIndex: 10,
+                }}
+              >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  style={{
+                    fontSize: isMobile ? '18px' : '22px',
+                    fontWeight: '700',
+                    color: colors.primary.main || '#6C63FF',
+                    textAlign: 'center',
+                    textTransform: 'uppercase',
+                    letterSpacing: '2px',
+                    whiteSpace: 'nowrap',
+                    margin: 0,
+                    padding: 0,
+                  }}
+                >
+                  ANALYZING{'.'.repeat(analyzingDots)}
+                </motion.div>
+              </div>
           {['Patterns', 'Signals', 'Tendencies', 'Level', 'Results', 'Personalizing'].map((label, index) => {
             const barProgress = barProgresses[index];
             const isActive = activeBarIndex === index;
@@ -615,13 +662,13 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
               style={{
-            background: 'rgba(255, 255, 255, 0.7)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            padding: isMobile ? '16px' : '20px',
-            borderRadius: '12px',
-            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
-            border: '1px solid rgba(255, 255, 255, 0.3)',
+            background: 'rgba(255, 255, 255, 0.85)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            padding: isMobile ? '12px 16px' : '14px 18px',
+            borderRadius: '16px',
+            boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04)',
+            border: '1px solid rgba(255, 255, 255, 0.5)',
               }}
             >
           <p style={{

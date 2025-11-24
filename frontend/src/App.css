@@ -517,3 +517,27 @@ body {
   }
 }
 
+/* Ripple Effect Styles */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  opacity: 0.5;
+  transform: scale(0);
+  animation: ripple-animation 600ms ease-out forwards;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(var(--ripple-scale, 4));
+    opacity: 0;
+  }
+}
+

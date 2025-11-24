@@ -1,7 +1,9 @@
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
 import { useTranslation } from 'react-i18next';
+import { useRipple } from '../../hooks/useRipple';
 import categoriesData from '../../data/shared/categories.json';
 import { getAllTestConfigs } from '../../utils/testContentLoader';
 import './CategoryStarLayout.css';
@@ -25,6 +27,76 @@ const PENTAGON_POSITIONS = [
 
 // Distance from center (radius) - increased for better spacing
 const RADIUS = 260; // pixels from center (increased from 180px)
+
+// Take a Quiz Button Component with Ripple
+interface TakeQuizButtonProps {
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  titleColor: string;
+  categoryId: string;
+}
+
+function TakeQuizButton({ onClick, titleColor, categoryId }: TakeQuizButtonProps) {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const { ripples, createRipple, color, duration, scale, transition } = useRipple({
+    buttonRef,
+  });
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    createRipple(e);
+    onClick(e);
+  };
+
+  return (
+    <button
+      ref={buttonRef}
+      className="ripple-container"
+      onClick={handleClick}
+      style={{
+        marginTop: '8px',
+        padding: '10px 20px',
+        borderRadius: '8px',
+        background: 'rgba(255, 255, 255, 0.9)',
+        border: '1px solid rgba(255, 255, 255, 0.5)',
+        color: categoryId === 'dark' ? '#000000' : titleColor,
+        fontWeight: '600',
+        fontSize: '14px',
+        cursor: 'pointer',
+        transition: 'all 0.2s ease',
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+        position: 'relative',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = 'rgba(255, 255, 255, 1)';
+        e.currentTarget.style.transform = 'scale(1.05)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+        e.currentTarget.style.transform = 'scale(1)';
+      }}
+    >
+      {ripples.map((ripple) => (
+        <motion.span
+          key={ripple.id}
+          initial={{ scale: 0, opacity: 0.6 }}
+          animate={{ scale, opacity: 0 }}
+          transition={transition}
+          style={{
+            position: 'absolute',
+            top: ripple.y - ripple.size / 2,
+            left: ripple.x - ripple.size / 2,
+            width: `${ripple.size}px`,
+            height: `${ripple.size}px`,
+            borderRadius: '50%',
+            backgroundColor: color,
+            pointerEvents: 'none',
+            zIndex: 9999,
+          }}
+        />
+      ))}
+      Take a Quiz
+    </button>
+  );
+}
 
 export function CategoryStarLayout({ selectedCategory, onCategorySelect }: CategoryStarLayoutProps) {
   const isMobile = useMobile();
@@ -124,7 +196,7 @@ export function CategoryStarLayout({ selectedCategory, onCategorySelect }: Categ
           const { title, description } = parseCategoryText(categoryText);
           
           return (
-            <button
+            <div
               key={category.id}
               onClick={() => onCategorySelect(category.id)}
               className={`category-star-card-mobile ${isActive ? 'active' : ''}`}
@@ -133,40 +205,20 @@ export function CategoryStarLayout({ selectedCategory, onCategorySelect }: Categ
                 borderColor: theme.border,
                 '--card-glow': theme.glow,
                 '--title-color': theme.titleColor,
+                cursor: 'pointer',
               } as React.CSSProperties}
             >
               <span className="category-star-emoji">{category.emoji}</span>
               <span className="category-star-title-uppercase">{title}</span>
-              <button
+              <TakeQuizButton
                 onClick={(e) => {
                   e.stopPropagation();
                   onCategorySelect(category.id);
                 }}
-                style={{
-                  marginTop: '8px',
-                  padding: '10px 20px',
-                  borderRadius: '8px',
-                  background: 'rgba(255, 255, 255, 0.9)',
-                  border: '1px solid rgba(255, 255, 255, 0.5)',
-                  color: category.id === 'dark' ? '#000000' : theme.titleColor,
-                  fontWeight: '600',
-                  fontSize: '14px',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 1)';
-                  e.currentTarget.style.transform = 'scale(1.05)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
-                  e.currentTarget.style.transform = 'scale(1)';
-                }}
-              >
-                Take a Quiz
-              </button>
-            </button>
+                titleColor={theme.titleColor}
+                categoryId={category.id}
+              />
+            </div>
           );
         })}
       </div>
@@ -216,7 +268,7 @@ export function CategoryStarLayout({ selectedCategory, onCategorySelect }: Categ
         const { title, description } = parseCategoryText(categoryText);
         
         return (
-          <button
+          <div
             key={category.id}
             onClick={() => onCategorySelect(category.id)}
             className={`category-star-card ${isActive ? 'active' : ''}`}
@@ -228,40 +280,20 @@ export function CategoryStarLayout({ selectedCategory, onCategorySelect }: Categ
               borderColor: theme.border,
               '--card-glow': theme.glow,
               '--title-color': theme.titleColor,
+              cursor: 'pointer',
             } as React.CSSProperties}
           >
             <span className="category-star-emoji">{category.emoji}</span>
             <span className="category-star-title-uppercase">{title}</span>
-            <button
+            <TakeQuizButton
               onClick={(e) => {
                 e.stopPropagation();
                 onCategorySelect(category.id);
               }}
-              style={{
-                marginTop: '8px',
-                padding: '10px 20px',
-                borderRadius: '8px',
-                background: 'rgba(255, 255, 255, 0.9)',
-                border: '1px solid rgba(255, 255, 255, 0.5)',
-                color: category.id === 'dark' ? '#000000' : theme.titleColor,
-                fontWeight: '600',
-                fontSize: '14px',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 1)';
-                e.currentTarget.style.transform = 'scale(1.05)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
-                e.currentTarget.style.transform = 'scale(1)';
-              }}
-            >
-              Take a Quiz
-            </button>
-          </button>
+              titleColor={theme.titleColor}
+              categoryId={category.id}
+            />
+          </div>
         );
       })}
     </div>
