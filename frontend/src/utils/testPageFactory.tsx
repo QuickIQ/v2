@@ -224,10 +224,14 @@ function UniversalTestPageContent({
     setStep,
     setQuestions,
     setTimeRemaining,
-    calculateScore,
+    submitAnswers,
     setResultData,
     setEmail,
   } = useTestStore();
+  
+  // Get test slug for API calls
+  const testConfigForSlug = getTestConfig(testId);
+  const testSlug = testConfigForSlug?.slug || testId;
 
   const [error, setError] = useState<string | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
@@ -329,12 +333,14 @@ function UniversalTestPageContent({
       await new Promise(resolve => setTimeout(resolve, 100));
       setError(null);
       
-      calculateScore();
+      // Submit answers to backend for scoring
+      await submitAnswers(testSlug, 'en'); // TODO: Use actual language from i18n
       
       await new Promise(resolve => setTimeout(resolve, 50));
       
       setStep('analyzing');
     } catch (err) {
+      console.error('Error submitting answers:', err);
       setError(err instanceof Error ? err.message : 'An error occurred');
       setStep('analyzing');
     }
@@ -344,7 +350,8 @@ function UniversalTestPageContent({
     try {
       let store = useTestStore.getState();
       if (!store.resultLevel) {
-        calculateScore();
+        // Submit answers if not already submitted
+        await submitAnswers(testSlug, 'en'); // TODO: Use actual language from i18n
         await new Promise(resolve => setTimeout(resolve, 200));
         store = useTestStore.getState();
       }
@@ -359,6 +366,7 @@ function UniversalTestPageContent({
       storeInstance.setStep('email');
       setStep('email');
     } catch (err: any) {
+      console.error('Error in handleAnalyzingComplete:', err);
       const result = resultContent['good'];
       setResultData(result);
       const storeInstance = useTestStore.getState();
@@ -444,7 +452,7 @@ function UniversalTestPageContent({
     );
   }
 
-  const testConfig = getTestConfig(testId);
+  const testConfigForDisplay = getTestConfig(testId);
 
   if (step === 'landing' || phase === 'intro') {
     return (
@@ -459,7 +467,7 @@ function UniversalTestPageContent({
           <UniversalLandingPage 
             testId={testId} 
             onStart={handleStart}
-            iconName={testConfig?.icon}
+            iconName={testConfigForDisplay?.icon}
           />
         </motion.div>
       </AnimatePresence>

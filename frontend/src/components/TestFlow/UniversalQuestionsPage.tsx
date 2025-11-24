@@ -114,9 +114,28 @@ export default function UniversalQuestionsPage({
     
     const baseScore = optionIndex + 1;
     
+    // Try to get option_key from question options if available
+    // Backend questions have options array with key field
+    let option_key: string | undefined;
+    if (currentQuestion.options && Array.isArray(currentQuestion.options)) {
+      const option = currentQuestion.options[optionIndex];
+      if (option && typeof option === 'object' && 'key' in option) {
+        option_key = option.key;
+      } else if (typeof option === 'string') {
+        // If options is array of strings, generate key
+        option_key = `option_${optionIndex + 1}`;
+      }
+    }
+    
+    // Fallback: generate key from index
+    if (!option_key) {
+      option_key = `option_${optionIndex + 1}`;
+    }
+    
     const answer = {
       question_id: currentQuestion.id,
       option_index: optionIndex,
+      option_key,
       score: baseScore,
     };
 

@@ -2,7 +2,8 @@ import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { testApi } from '../services/api';
-import { Test } from '../types';
+import type { Test as TestFromAPI } from '../features/tests';
+import { Test } from '../types'; // Keep old type for compatibility
 import { AnimatedBackground } from '../components/ui/AnimatedBackground';
 import { Logo } from '../components/ui/Logo';
 import { useMobile } from '../hooks/useMobile';
@@ -45,6 +46,19 @@ function Home() {
       try {
         const data = await testApi.getAll('en');
         
+        // Convert API Test format to old Test format for compatibility
+        const convertedData: Test[] = data.map((test: TestFromAPI) => ({
+          id: test.id,
+          name: test.name,
+          slug: test.slug,
+          category: test.category || undefined,
+          enabled: test.enabled,
+          default_language: test.defaultLanguage,
+          is_premium: test.isPremium,
+          price_cents: test.priceCents,
+          test_type: test.testType === 'custom' ? 'standard' : test.testType,
+        }));
+        
         // Get IQ and Personality test configs from test-config.json
         const iqTestConfig = getTestConfig('iqtest');
         const personalityTestConfig = getTestConfig('personality');
@@ -81,7 +95,7 @@ function Home() {
             translated_name: personalityTestConfig.name.tr || personalityTestConfig.name.en,
           });
         }
-        setTests([...specialTests, ...data]);
+        setTests([...specialTests, ...convertedData]);
       } catch (err: any) {
         setError(err.message || t('common.error'));
       } finally {
