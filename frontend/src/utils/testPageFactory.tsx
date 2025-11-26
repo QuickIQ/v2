@@ -334,14 +334,21 @@ function UniversalTestPageContent({
       setError(null);
       
       // Submit answers to backend for scoring
-      await submitAnswers(testSlug, 'en'); // TODO: Use actual language from i18n
+      try {
+        await submitAnswers(testSlug, 'en'); // TODO: Use actual language from i18n
+      } catch (submitError: any) {
+        console.error('Error submitting answers in handleQuestionsComplete:', submitError);
+        // Continue to analyzing page even if submit fails
+        // The analyzing page will retry submission
+      }
       
       await new Promise(resolve => setTimeout(resolve, 50));
       
       setStep('analyzing');
     } catch (err) {
-      console.error('Error submitting answers:', err);
+      console.error('Error in handleQuestionsComplete:', err);
       setError(err instanceof Error ? err.message : 'An error occurred');
+      // Always proceed to analyzing page
       setStep('analyzing');
     }
   };
@@ -349,15 +356,22 @@ function UniversalTestPageContent({
   const handleAnalyzingComplete = async () => {
     try {
       let store = useTestStore.getState();
-      if (!store.resultLevel) {
-        // Submit answers if not already submitted
-        await submitAnswers(testSlug, 'en'); // TODO: Use actual language from i18n
-        await new Promise(resolve => setTimeout(resolve, 200));
-        store = useTestStore.getState();
+      
+      // Always try to submit if we have answers but no resultLevel
+      if (!store.resultLevel && store.answers.length > 0) {
+        try {
+          await submitAnswers(testSlug, 'en'); // TODO: Use actual language from i18n
+          await new Promise(resolve => setTimeout(resolve, 200));
+          store = useTestStore.getState();
+        } catch (submitError: any) {
+          console.error('Error submitting answers in handleAnalyzingComplete:', submitError);
+          // Continue with fallback even if submit fails
+        }
       }
       
+      // Use resultLevel from store, or fallback to 'good'
       const level = store.resultLevel || 'good';
-      const result = resultContent[level];
+      const result = resultContent[level] || resultContent['good'];
       setResultData(result);
       
       await new Promise(resolve => setTimeout(resolve, 100));
@@ -367,6 +381,7 @@ function UniversalTestPageContent({
       setStep('email');
     } catch (err: any) {
       console.error('Error in handleAnalyzingComplete:', err);
+      // Fallback: use 'good' result and continue flow
       const result = resultContent['good'];
       setResultData(result);
       const storeInstance = useTestStore.getState();

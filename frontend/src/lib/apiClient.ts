@@ -3,8 +3,11 @@ import axios, { AxiosInstance } from 'axios';
 /**
  * Base API Client
  * Centralized Axios instance for all API calls
+ * In development, use relative path to leverage Vite proxy
+ * In production, use full URL from env or default
  */
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 
+  (import.meta.env.DEV ? '/api' : 'http://localhost:5000/api');
 
 export const apiClient: AxiosInstance = axios.create({
   baseURL: API_URL,

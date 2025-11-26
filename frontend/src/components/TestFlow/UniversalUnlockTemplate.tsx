@@ -59,6 +59,9 @@ interface UniversalUnlockTemplateProps {
   testId: string;
   level: 'excellent' | 'good' | 'developing';
   locale?: 'en' | 'tr';
+  customLevelKey?: string; // For IQ test levels (level1, level2, etc.)
+  score?: number; // For IQ test score display
+  rarity?: string; // For IQ test rarity display (e.g., "Top %65–99")
 }
 
 // Helper functions to generate context-appropriate content
@@ -141,7 +144,7 @@ const generateFunFact = (testId: string, sectionTitle: string, level: string, lo
   }
 };
 
-export default function UniversalUnlockTemplate({ testId, level, locale }: UniversalUnlockTemplateProps) {
+export default function UniversalUnlockTemplate({ testId, level, locale, customLevelKey, score, rarity }: UniversalUnlockTemplateProps) {
   const { t, i18n } = useTranslation();
   const isMobile = useMobile();
   const navigate = useNavigate();
@@ -211,9 +214,10 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
 
   // Get content from JSON or translation keys
   const getContent = () => {
-    // Try JSON first
-    if (resultContent && resultContent[level]) {
-      const levelData = resultContent[level];
+    // Try JSON first - use customLevelKey if provided, otherwise use level
+    const levelKey = customLevelKey || level;
+    if (resultContent && resultContent[levelKey]) {
+      const levelData = resultContent[levelKey];
       const sections = Array.isArray(levelData.sections) 
         ? levelData.sections.map((section: any) => ({
             icon: section.icon || '',
@@ -589,6 +593,41 @@ export default function UniversalUnlockTemplate({ testId, level, locale }: Unive
             marginBottom: isMobile ? '40px' : '56px',
           }}
         >
+          {/* IQ Score and Rarity Display (only for IQ test) */}
+          {testId === 'iqtest' && score !== undefined && (
+            <div style={{
+              marginBottom: '32px',
+            }}>
+              <div style={{
+                fontSize: isMobile ? '48px' : '64px',
+                fontWeight: '700',
+                background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 50%, #8B5CF6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                lineHeight: '1',
+                marginBottom: '8px',
+              }}>
+                {score}
+              </div>
+              {rarity && (
+                <div style={{
+                  fontSize: isMobile ? '16px' : '18px',
+                  color: '#666',
+                  fontWeight: '500',
+                  marginBottom: '16px',
+                }}>
+                  Global Rarity: {rarity}
+                </div>
+              )}
+              <div style={{
+                width: '100%',
+                height: '1px',
+                background: 'linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.3), transparent)',
+                marginBottom: '24px',
+              }} />
+            </div>
+          )}
           <div style={{
             display: 'flex',
             justifyContent: 'center',

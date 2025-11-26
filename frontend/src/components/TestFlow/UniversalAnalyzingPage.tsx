@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../hooks/useMobile';
@@ -7,6 +7,73 @@ import { LoadingFallback } from '../ui/LoadingFallback';
 import { ErrorFallback } from '../ui/ErrorFallback';
 import { useTestsCompletedCounter } from '../../hooks/useTestsCompletedCounter';
 import '../../App.css';
+
+/**
+ * Güvenli renk parse fonksiyonu
+ * Tüm formatları handle eder: hex, rgb, rgba, gradient string
+ */
+function extractBaseColor(
+  progressBarFill: string | undefined,
+  primaryMain: string | undefined,
+  fallback: string = '#6C63FF'
+): string {
+  try {
+    // 1. progressBarFill yoksa primaryMain kullan
+    if (!progressBarFill) {
+      return primaryMain || fallback;
+    }
+
+    // 2. Gradient string'den hex çıkar
+    if (progressBarFill.includes('linear-gradient') || progressBarFill.includes('gradient')) {
+      // 6 haneli hex (#RRGGBB)
+      const hex6Match = progressBarFill.match(/#([0-9A-Fa-f]{6})\b/);
+      if (hex6Match) {
+        return hex6Match[0];
+      }
+      
+      // 3 haneli hex (#RGB)
+      const hex3Match = progressBarFill.match(/#([0-9A-Fa-f]{3})\b/);
+      if (hex3Match) {
+        const r = hex3Match[1][0];
+        const g = hex3Match[1][1];
+        const b = hex3Match[1][2];
+        return `#${r}${r}${g}${g}${b}${b}`;
+      }
+      
+      // RGB/RGBA formatı
+      const rgbMatch = progressBarFill.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+      if (rgbMatch) {
+        const r = parseInt(rgbMatch[1], 10).toString(16).padStart(2, '0');
+        const g = parseInt(rgbMatch[2], 10).toString(16).padStart(2, '0');
+        const b = parseInt(rgbMatch[3], 10).toString(16).padStart(2, '0');
+        return `#${r}${g}${b}`;
+      }
+    }
+
+    // 3. Direkt hex kontrolü
+    if (progressBarFill.startsWith('#')) {
+      // 3 haneli hex'i 6 haneliye çevir
+      if (progressBarFill.length === 4) {
+        const r = progressBarFill[1];
+        const g = progressBarFill[2];
+        const b = progressBarFill[3];
+        return `#${r}${r}${g}${g}${b}${b}`;
+      }
+      // 6 haneli hex geçerli mi kontrol et
+      if (progressBarFill.length === 7 && /^#[0-9A-Fa-f]{6}$/.test(progressBarFill)) {
+        return progressBarFill;
+      }
+    }
+
+    // 4. Fallback
+    return primaryMain || fallback;
+  } catch (error) {
+    console.warn('Color extraction failed, using fallback:', error);
+    return primaryMain || fallback;
+  }
+}
+
+
 
 interface Props {
   testId: string;
@@ -19,12 +86,12 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
   const language = i18n.language as 'en' | 'tr';
   const [content, setContent] = useState<TestContent | null>(null);
   const [loading, setLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
+  const [, setProgress] = useState(0);
   const [animatedCount, setAnimatedCount] = useState(1);
   const [hasCompleted, setHasCompleted] = useState(false);
   const [countAnimationFinished, setCountAnimationFinished] = useState(false);
   const countAnimationStarted = useRef(false);
-  const { count: targetCount, formattedCount } = useTestsCompletedCounter();
+  const { count: targetCount } = useTestsCompletedCounter();
   const targetCountRef = useRef(targetCount);
 
   // Update ref whenever targetCount changes (but don't restart animation)
@@ -35,6 +102,17 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
       setAnimatedCount(targetCount);
     }
   }, [targetCount, countAnimationFinished]);
+
+  // Hide scrollbar on analyzing page
+  useEffect(() => {
+    document.body.classList.add('landing-page-no-scrollbar');
+    document.documentElement.classList.add('landing-page-no-scrollbar');
+    
+    return () => {
+      document.body.classList.remove('landing-page-no-scrollbar');
+      document.documentElement.classList.remove('landing-page-no-scrollbar');
+    };
+  }, []);
 
   // Reset animation state ONLY when component mounts or testId changes (NOT when targetCount changes)
   useEffect(() => {
@@ -133,102 +211,19 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
   }, [countAnimationFinished, targetCount]);
 
   // 6 bars configuration
-  // Each bar: 4 seconds total (1.5s active + 2.5s pause)
-  const BAR_DURATION = 4000; // 4 seconds per bar
-  const ACTIVE_TIME = 1500; // 1.5 seconds active animation
-  const TOTAL_PAUSE_TIME = 2500; // 2.5 seconds total pause time
-  const TOTAL_DURATION = BAR_DURATION * 6; // 24 seconds total
-  
-  // Generate random milestones for each bar
-  const generateRandomMilestones = (): Array<{ progress: number; pause: number }> => {
-    const milestones: Array<{ progress: number; pause: number }> = [];
-    const pauseOptions = [200, 250, 300, 350, 400]; // Possible pause durations
-    let totalPause = 0;
-    let lastProgress = 1;
-    
-    // Generate 6-10 random milestones
-    const numMilestones = 6 + Math.floor(Math.random() * 5);
-    
-    while (totalPause < TOTAL_PAUSE_TIME && lastProgress < 99) {
-      const progress = lastProgress + Math.random() * (99 - lastProgress) * 0.3; // Random progress between last and 99
-      const pause = pauseOptions[Math.floor(Math.random() * pauseOptions.length)];
-      
-      if (totalPause + pause <= TOTAL_PAUSE_TIME) {
-        milestones.push({ progress: Math.min(progress, 98), pause });
-        totalPause += pause;
-        lastProgress = progress;
-      } else {
-        // Add remaining pause time to last milestone if needed
-        if (milestones.length > 0) {
-          milestones[milestones.length - 1].pause += TOTAL_PAUSE_TIME - totalPause;
-        }
-        break;
-      }
-    }
-    
-    return milestones.sort((a, b) => a.progress - b.progress);
-  };
-  
-  // Generate milestones for each bar (memoized per testId)
-  const [barMilestones] = useState(() => [
-    generateRandomMilestones(),
-    generateRandomMilestones(),
-    generateRandomMilestones(),
-    generateRandomMilestones(),
-    generateRandomMilestones(),
-    generateRandomMilestones(),
-  ]);
+  // Each bar: 3 seconds to fill from 0% to 100% (no pauses)
+  const BAR_DURATION = 3000; // 3 seconds per bar
+  const TOTAL_DURATION = BAR_DURATION * 6; // 18 seconds total
   
   const [barProgresses, setBarProgresses] = useState([0, 0, 0, 0, 0, 0]);
   const [activeBarIndex, setActiveBarIndex] = useState(0);
-  const [analyzingDots, setAnalyzingDots] = useState(0); // 0, 1, 2, 3 for dots animation
 
-  // Calculate progress for any bar with milestones
-  const calculateBarProgress = (timeInBar: number, milestones: Array<{ progress: number; pause: number }>): number => {
-    let adjustedTime = timeInBar;
-    let totalPauseSoFar = 0;
-    
-    // Calculate how much pause time has passed
-    for (let i = 0; i < milestones.length; i++) {
-      const milestone = milestones[i];
-      const progressAtMilestone = (milestone.progress / 100) * ACTIVE_TIME;
-      const pauseTimeBeforeMilestone = milestones.slice(0, i).reduce((sum, m) => sum + m.pause, 0);
-      const timeToReachMilestone = progressAtMilestone + pauseTimeBeforeMilestone;
-      
-      if (timeInBar >= timeToReachMilestone) {
-        const pauseEndTime = timeToReachMilestone + milestone.pause;
-        if (timeInBar < pauseEndTime) {
-          // We're paused at this milestone - return milestone progress
-          return milestone.progress;
-        } else {
-          // Past this milestone, add its pause time
-          totalPauseSoFar += milestone.pause;
-        }
-      } else {
-        break;
-      }
-    }
-    
-    // Adjust time by subtracting accumulated pause time
-    adjustedTime = timeInBar - totalPauseSoFar;
-    
-    // Calculate progress (1% to 100%)
-    const progress = Math.min(adjustedTime / ACTIVE_TIME, 1);
-    const progressPercent = Math.max(1, Math.min(100, 1 + (progress * 99)));
-    
-    return progressPercent;
+  // Calculate progress for any bar (simple linear progress, no pauses)
+  const calculateBarProgress = (timeInBar: number): number => {
+    // Simple linear progress from 0% to 100%
+    const progress = Math.min(timeInBar / BAR_DURATION, 1);
+    return Math.max(0, Math.min(100, progress * 100));
   };
-
-  // Animate "ANALYZING" dots (0, 1, 2, 3 dots cycling)
-  useEffect(() => {
-    if (!content || hasCompleted) return;
-    
-    const dotsInterval = setInterval(() => {
-      setAnalyzingDots((prev) => (prev + 1) % 4); // Cycle 0, 1, 2, 3
-    }, 500); // Change every 500ms
-    
-    return () => clearInterval(dotsInterval);
-  }, [content, hasCompleted]);
 
   // Animate progress with 6 circular bars
   useEffect(() => {
@@ -251,8 +246,8 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
           // Previous bars are fully filled
           progresses[i] = 100;
         } else if (i === barIndex) {
-          // Current bar: calculate with milestones
-          progresses[i] = calculateBarProgress(timeInCurrentBar, barMilestones[i]);
+          // Current bar: calculate simple linear progress (no pauses)
+          progresses[i] = calculateBarProgress(timeInCurrentBar);
         } else {
           // Future bars are empty
           progresses[i] = 0;
@@ -282,6 +277,20 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
     return () => cancelAnimationFrame(animationFrame);
   }, [content, onComplete, hasCompleted]);
 
+  // ✅ Hook'lar conditional return'lardan ÖNCE - React Rules of Hooks
+  const baseColor = useMemo(() => {
+    if (!content?.colors) {
+      return '#6C63FF'; // Fallback
+    }
+    return extractBaseColor(
+      content.colors.progressBar?.fill,
+      content.colors.primary?.main,
+      '#6C63FF'
+    );
+  }, [content?.colors?.progressBar?.fill, content?.colors?.primary?.main]);
+
+
+  // ✅ Şimdi conditional return'lar
   if (loading) {
     return <LoadingFallback testId={testId} />;
   }
@@ -290,8 +299,8 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
     return <ErrorFallback error={error} testId={testId} />;
   }
 
+  // ✅ Artık content garantili olarak var
   const colors = content.colors;
-  const analyzing = content.analyzing;
 
   const animatedGradients = colors.background.analyzing.animated || [
     colors.background.analyzing.gradient,
@@ -346,9 +355,10 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
           transition={{ duration: 0.6 }}
           style={{
             fontSize: isMobile ? '22px' : '26px',
-            marginBottom: isMobile ? '60px' : '80px',
+            marginBottom: isMobile ? '120px' : '80px',
+            marginTop: isMobile ? '-20px' : '0px',
             fontWeight: '700',
-            color: colors.primary.main || '#6C63FF',
+            color: baseColor,
             textAlign: 'center',
             lineHeight: '1.3',
             textTransform: 'uppercase',
@@ -414,27 +424,66 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
                   style={{
                     fontSize: isMobile ? '18px' : '22px',
                     fontWeight: '700',
-                    color: colors.primary.main || '#6C63FF',
+                    color: baseColor,
                     textAlign: 'center',
                     textTransform: 'uppercase',
                     letterSpacing: '2px',
                     whiteSpace: 'nowrap',
                     margin: 0,
                     padding: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
                   }}
                 >
-                  ANALYZING{'.'.repeat(analyzingDots)}
+                  <span>ANALYZING</span>
+                  {/* Loading bars animation */}
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'flex-end',
+                    width: isMobile ? '24px' : '28px',
+                    height: isMobile ? '16px' : '18px',
+                    gap: '3px',
+                  }}>
+                    {[0, 1, 2].map((index) => (
+                      <div
+                        key={index}
+                        style={{
+                          width: isMobile ? '6px' : '7px',
+                          height: '100%',
+                          backgroundColor: '#E0E0E0',
+                          borderRadius: '4px',
+                          boxShadow: 'inset 0 0 2px rgba(0, 0, 0, 0.2)',
+                          position: 'relative',
+                          overflow: 'hidden',
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '30%',
+                            background: `linear-gradient(to top, ${baseColor}, ${baseColor}dd)`,
+                            animation: `loadingBar 1.8s infinite`,
+                            animationDelay: `${index * 0.2}s`,
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               </div>
           {['Patterns', 'Signals', 'Tendencies', 'Level', 'Results', 'Personalizing'].map((label, index) => {
             const barProgress = barProgresses[index];
             const isActive = activeBarIndex === index;
-            const radius = isMobile ? 50 : 60;
+            const radius = isMobile ? 58 : 60; // Increased mobile radius from 50 to 58
             const circumference = 2 * Math.PI * radius;
-            const strokeDashoffset = circumference - (barProgress / 100) * circumference;
             
             // Hexagon positions (6 points around a circle) - with gap for mobile
-            const hexRadius = isMobile ? 160 : 180; // Distance from center (increased for gap)
+            const hexRadius = isMobile ? 170 : 180; // Increased mobile distance to accommodate larger circles
             const angle = (index * 60 - 90) * (Math.PI / 180); // Start from top, 60° apart
             const x = Math.cos(angle) * hexRadius;
             const y = Math.sin(angle) * hexRadius;
@@ -456,168 +505,89 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
                 {/* Circular Progress Bar */}
                 <div style={{ 
                   position: 'relative', 
-                  width: isMobile ? '120px' : '140px', 
-                  height: isMobile ? '120px' : '140px',
-                  background: 'transparent', // Transparent background
+                  width: isMobile ? '140px' : '140px', // Increased mobile from 120px to 140px
+                  height: isMobile ? '140px' : '140px', // Increased mobile from 120px to 140px
+                  background: 'transparent',
                 }}>
+                  {/* Inner wrapper for percentage text */}
+                  <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    textAlign: 'center',
+                    transform: 'translateY(30%)',
+                    zIndex: 2,
+                  }}>
+                    <div style={{
+                      fontSize: isMobile ? '20px' : '20px', // Increased mobile font size
+                      fontWeight: '300',
+                      marginTop: '5px',
+                      marginBottom: '10px',
+                      color: baseColor,
+                    }}>
+                      {Math.round(barProgress)}%
+                    </div>
+                  </div>
+                  
+                  {/* SVG Progress Bar */}
                   <svg
-                    width={isMobile ? 120 : 140}
-                    height={isMobile ? 120 : 140}
+                    className="r-progress-bar"
+                    width={isMobile ? 140 : 140} // Increased mobile from 120 to 140
+                    height={isMobile ? 140 : 140} // Increased mobile from 120 to 140
+                    viewBox="0 0 200 200"
                     style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
                       transform: 'rotate(-90deg)',
                     }}
                   >
-                    <defs>
-                      {/* Gradient for progress stroke - smooth, flowing effect */}
-                      <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor={colors.progressBar.fill || colors.primary.main || '#6C63FF'} stopOpacity="1" />
-                        <stop offset="12.5%" stopColor={colors.primary.main || '#7B7FFF'} stopOpacity="0.95" />
-                        <stop offset="25%" stopColor={colors.progressBar.fill || colors.primary.main || '#8B9FFF'} stopOpacity="0.9" />
-                        <stop offset="37.5%" stopColor={colors.progressBar.fill || colors.primary.main || '#9bc9ed'} stopOpacity="0.85" />
-                        <stop offset="50%" stopColor={colors.progressBar.fill || colors.primary.main || '#A8D5F0'} stopOpacity="0.8" />
-                        <stop offset="62.5%" stopColor={colors.progressBar.fill || colors.primary.main || '#B0D5F0'} stopOpacity="0.75" />
-                        <stop offset="75%" stopColor={colors.progressBar.fill || colors.primary.main || '#B8D8F2'} stopOpacity="0.7" />
-                        <stop offset="87.5%" stopColor={colors.progressBar.fill || colors.primary.main || '#C0DCF5'} stopOpacity="0.65" />
-                        <stop offset="100%" stopColor={colors.progressBar.fill || colors.primary.main || '#C8E0F5'} stopOpacity="0.6" />
-                      </linearGradient>
-                      {/* Glow filter for active bar */}
-                      <filter id={`glow-${index}`}>
-                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                        <feMerge>
-                          <feMergeNode in="coloredBlur"/>
-                          <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                      </filter>
-                      {/* Radial gradient for soft glow */}
-                      <radialGradient id={`radial-glow-${index}`} cx="50%" cy="50%">
-                        <stop offset="0%" stopColor={colors.progressBar.fill || colors.primary.main || '#6C63FF'} stopOpacity="0.8" />
-                        <stop offset="100%" stopColor={colors.progressBar.fill || colors.primary.main || '#6C63FF'} stopOpacity="0" />
-                      </radialGradient>
-                    </defs>
                     {/* Background circle */}
                     <circle
-                      cx={isMobile ? 60 : 70}
-                      cy={isMobile ? 60 : 70}
                       r={radius}
-                      fill="none"
-                      stroke={colors.progressBar.background || '#E5E7EB'}
-                      strokeWidth="12"
-                      opacity="0.3"
-                    />
-                    {/* Outer glow circle (soft, animated) */}
-                    {isActive && barProgress > 0 && (
-                      <motion.circle
-                        cx={isMobile ? 60 : 70}
-                        cy={isMobile ? 60 : 70}
-                        r={radius + 3}
-                        fill="none"
-                        stroke={colors.progressBar.fill || colors.primary.main || '#6C63FF'}
-                        strokeWidth="3"
-                        strokeDasharray={circumference}
-                        strokeDashoffset={strokeDashoffset}
-                        strokeLinecap="round"
-                        initial={{ strokeDashoffset: circumference, opacity: 0 }}
-                        animate={{ 
-                          strokeDashoffset,
-                          opacity: [0.3, 0.5, 0.3],
-                        }}
-                        transition={{ 
-                          strokeDashoffset: { duration: 0.1, ease: 'easeOut' },
-                          opacity: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
-                        }}
-                        style={{
-                          filter: `blur(6px)`,
-                        }}
-                      />
-                    )}
-                    {/* Main progress circle with gradient - the beam effect */}
-                    <motion.circle
-                      cx={isMobile ? 60 : 70}
-                      cy={isMobile ? 60 : 70}
-                      r={radius}
-                      fill="none"
-                      stroke={`url(#gradient-${index})`}
-                      strokeWidth="14"
+                      cx="100"
+                      cy="100"
+                      fill="transparent"
                       strokeDasharray={circumference}
-                      strokeDashoffset={strokeDashoffset}
-                      strokeLinecap="round"
-                      initial={{ strokeDashoffset: circumference }}
-                      animate={{ strokeDashoffset }}
-                      transition={{ duration: 0.1, ease: 'easeOut' }}
+                      strokeDashoffset="0"
+                      stroke={colors.progressBar.background || '#607d8b'}
+                      strokeWidth="20"
                       style={{
-                        filter: isActive && barProgress > 0 
-                          ? `drop-shadow(0 0 16px ${colors.primary.main || '#6C63FF'}AA) drop-shadow(0 0 8px ${colors.primary.main || '#6C63FF'}66)` 
-                          : 'none',
+                        strokeDashoffset: 0,
                       }}
                     />
-                    {/* Animated beam trail - moving light effect */}
-                    {isActive && barProgress > 2 && (
-                      <motion.circle
-                        cx={isMobile ? 60 : 70}
-                        cy={isMobile ? 60 : 70}
-                        r={radius}
-                        fill="none"
-                        stroke={colors.progressBar.fill || colors.primary.main || '#6C63FF'}
-                        strokeWidth="16"
-                        strokeDasharray={`${circumference * 0.08} ${circumference}`}
-                        strokeDashoffset={strokeDashoffset - (circumference * 0.04)}
-                        strokeLinecap="round"
-                        initial={{ opacity: 0 }}
-                        animate={{ 
-                          opacity: [0.8, 1, 0.8],
-                          strokeDashoffset: strokeDashoffset - (circumference * 0.04),
-                        }}
-                        transition={{ 
-                          opacity: { duration: 1, repeat: Infinity, ease: 'easeInOut' },
-                          strokeDashoffset: { duration: 0.1, ease: 'easeOut' }
-                        }}
-                        style={{
-                          filter: `blur(2px)`,
-                        }}
-                      />
-                    )}
+                    {/* Progress circle */}
+                    <circle
+                      className="bar"
+                      r={radius}
+                      cx="100"
+                      cy="100"
+                      fill="transparent"
+                      strokeDasharray={circumference}
+                      strokeDashoffset={((100 - barProgress) / 100) * circumference}
+                      stroke={baseColor}
+                      strokeWidth="20"
+                      strokeLinecap="round"
+                    />
                   </svg>
-                  {/* Percentage text in center - always perfectly centered, never moves */}
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      fontSize: isMobile ? '18px' : '20px',
-                      fontWeight: '700',
-                      color: colors.primary.main || '#6C63FF',
-                      textAlign: 'center',
-                      lineHeight: '1',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      width: 'auto',
-                      height: 'auto',
-                      margin: 0,
-                      padding: 0,
-                      pointerEvents: 'none',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {Math.round(barProgress)}%
-                  </div>
                 </div>
                 
                 {/* Label text above circle (curved) - closer to circle and more curved */}
                 <div
                   style={{
                     position: 'absolute',
-                    top: isMobile ? '-12px' : '-16px',
+                    top: '2px',
                     left: '50%',
                     transform: 'translateX(-50%)',
                     width: isMobile ? '150px' : '170px',
-                    height: isMobile ? '35px' : '40px',
+                    height: isMobile ? '32px' : '36px',
                   }}
                 >
                   <svg
                     width={isMobile ? 150 : 170}
-                    height={isMobile ? 35 : 40}
+                    height={isMobile ? 32 : 36}
                     style={{
                       overflow: 'visible',
                     }}
@@ -625,14 +595,14 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
                     <defs>
                       <path
                         id={`arc-path-${index}`}
-                        d={`M ${isMobile ? 5 : 8},${isMobile ? 25 : 28} A ${isMobile ? 70 : 80},${isMobile ? 30 : 35} 0 0,1 ${isMobile ? 145 : 162},${isMobile ? 25 : 28}`}
+                        d={`M ${isMobile ? 5 : 8},${isMobile ? 22 : 24} Q ${isMobile ? 75 : 85},${isMobile ? -8 : -10} ${isMobile ? 145 : 162},${isMobile ? 22 : 24}`}
                         fill="none"
                       />
                     </defs>
                     <text
                       fontSize={isMobile ? '12px' : '14px'}
                       fontWeight="700"
-                      fill={isActive ? colors.primary.main || '#6C63FF' : '#888'}
+                      fill={isActive ? baseColor : '#888'}
                       style={{
                         transition: 'fill 0.3s ease',
                         textTransform: 'uppercase',
@@ -657,69 +627,193 @@ export default function UniversalAnalyzingPage({ testId, onComplete }: Props) {
         </motion.div>
 
         {/* Today's Tests Completed Card */}
-            <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-              style={{
-            background: 'rgba(255, 255, 255, 0.85)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            padding: isMobile ? '12px 16px' : '14px 18px',
-            borderRadius: '16px',
-            boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04)',
-            border: '1px solid rgba(255, 255, 255, 0.5)',
-              }}
-            >
+          style={{
+            background: 'rgba(255, 255, 255, 0.9)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            padding: isMobile ? '8px 12px' : '10px 14px',
+            borderRadius: '20px',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02)',
+            border: '1px solid rgba(255, 255, 255, 0.6)',
+            marginBottom: '8px',
+          }}
+        >
           <p style={{
-            fontSize: isMobile ? '12px' : '14px',
+            fontSize: isMobile ? '11px' : '12px',
             color: '#666',
             margin: 0,
-            lineHeight: '1.5',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-            gap: '6px',
-                  flexWrap: 'wrap',
+            lineHeight: '1.4',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '4px',
+            flexWrap: 'wrap',
           }}>
             <span>{language === 'tr' ? 'Bugün' : 'Today'}</span>
-                    <motion.span
+            <motion.span
               key={countAnimationFinished ? targetCount : animatedCount}
               initial={{ scale: 1.2, y: -3 }}
               animate={{ scale: 1, y: 0 }}
-                      transition={{ 
+              transition={{ 
                 type: 'spring',
                 stiffness: 300,
                 damping: 20,
                 duration: 0.3
-                      }}
-                    >
-                    <motion.span
+              }}
+            >
+              <motion.span
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                 }}
-                      transition={{ 
+                transition={{ 
                   duration: 3,
                   repeat: Infinity,
                   ease: 'linear',
-                      }}
-                      style={{
+                }}
+                style={{
                   fontWeight: '800',
                   background: 'linear-gradient(135deg, #6C63FF 0%, #9bc9ed 20%, #8B5CF6 40%, #FF6B9D 60%, #FFC3D1 80%, #6C63FF 100%)',
                   backgroundSize: '200% 200%',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
-                  fontSize: isMobile ? '20px' : '24px',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  fontSize: isMobile ? '16px' : '18px',
                   lineHeight: '1',
                   display: 'inline-block',
-                      }}
-                    >
+                }}
+              >
                 {countAnimationFinished ? targetCount.toLocaleString() : animatedCount.toLocaleString()}
               </motion.span>
-                    </motion.span>
+            </motion.span>
             <span>{language === 'tr' ? 'test tamamlandı!' : "test's completed!"}</span>
           </p>
+        </motion.div>
+
+        {/* Trust/Review Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          style={{
+            background: 'rgba(255, 255, 255, 0.9)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            padding: isMobile ? '-12px 12px' : '-12px 14px',
+            borderRadius: '20px',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02)',
+            border: '1px solid rgba(255, 255, 255, 0.6)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: isMobile ? '3px' : '4px',
+          }}
+        >
+          {/* Excellent Text and Stars - Yan yana */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: isMobile ? '6px' : '8px',
+            justifyContent: 'center',
+          }}>
+            {/* Excellent Text */}
+            <div style={{
+              fontSize: isMobile ? '12px' : '13px',
+              fontWeight: '700',
+              color: '#4A5568',
+              margin: 0,
+            }}>
+              {language === 'tr' ? 'Mükemmel' : 'Excellent'}
+            </div>
+
+            {/* Stars */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '2px',
+            }}>
+            {[1, 2, 3, 4, 5].map((star) => {
+              const rating = 4.8;
+              const filled = star <= Math.floor(rating);
+              const partial = star === Math.ceil(rating) && rating % 1 !== 0;
+              const fillPercentage = partial ? (rating % 1) * 100 : filled ? 100 : 0;
+
+              return (
+                <motion.div
+                  key={star}
+                  whileHover={{ 
+                    scale: 1.15, 
+                    rotate: 8,
+                    transition: { duration: 0.2, ease: 'easeOut' }
+                  }}
+                  style={{
+                    position: 'relative',
+                    width: isMobile ? '12px' : '14px',
+                    height: isMobile ? '12px' : '14px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {/* Background star (unfilled) */}
+                  <svg
+                    width={isMobile ? '12' : '14'}
+                    height={isMobile ? '12' : '14'}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                    }}
+                  >
+                    <path
+                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      fill="#E5E7EB"
+                      stroke="#E5E7EB"
+                      strokeWidth="1"
+                    />
+                  </svg>
+                  {/* Filled star (yellow) */}
+                  <svg
+                    width={isMobile ? '12' : '14'}
+                    height={isMobile ? '12' : '14'}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      clipPath: partial ? `inset(0 ${100 - fillPercentage}% 0 0)` : 'none',
+                    }}
+                  >
+                    <path
+                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                      fill="#FBBF24"
+                      stroke="#F59E0B"
+                      strokeWidth="1"
+                    />
+                  </svg>
+                </motion.div>
+              );
+            })}
+            </div>
+          </div>
+
+          {/* Rating Text */}
+          <div style={{
+            fontSize: isMobile ? '10px' : '11px',
+            color: '#666',
+            margin: 0,
+            textAlign: 'center',
+            lineHeight: '1.3',
+          }}>
+            <span style={{ fontWeight: '600', color: '#4A5568' }}>4.8</span>{' '}
+            {language === 'tr' 
+              ? '27 000 değerlendirmeye göre' 
+              : 'based on 27 000 reviews'}
+          </div>
         </motion.div>
       </div>
     </div>

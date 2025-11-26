@@ -11,16 +11,21 @@ export class PostgresTestRepository implements ITestRepository {
   constructor(private readonly pool: Pool) {}
 
   async findAll(languageCode: LanguageCode): Promise<Test[]> {
-    const result = await this.pool.query(
-      `SELECT t.*, 
-        (SELECT value FROM translations WHERE key = t.name AND language_code = $1) as translated_name
-       FROM tests t 
-       WHERE enabled = true 
-       ORDER BY t.order_index, t.id`,
-      [languageCode.toString()]
-    );
+    try {
+      const result = await this.pool.query(
+        `SELECT t.*, 
+          (SELECT value FROM translations WHERE key = t.name AND language_code = $1) as translated_name
+         FROM tests t 
+         WHERE enabled = true 
+         ORDER BY t.order_index, t.id`,
+        [languageCode.toString()]
+      );
 
-    return result.rows.map(row => this.mapRowToTest(row));
+      return result.rows.map(row => this.mapRowToTest(row));
+    } catch (error: any) {
+      // Re-throw with more context for controller to handle
+      throw new Error(`Failed to fetch tests: ${error.message}`);
+    }
   }
 
   async findBySlug(slug: TestSlug, languageCode: LanguageCode): Promise<Test | null> {

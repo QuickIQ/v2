@@ -26,8 +26,19 @@ export class TestController {
       res.json(tests);
     } catch (error: any) {
       // If database error, return empty array instead of crashing
-      if (error.code === 'ECONNREFUSED' || error.code === '42P01' || error.message?.includes('relation') || error.message?.includes('does not exist')) {
-        console.warn('Database not connected, returning empty array:', error.message);
+      const errorMessage = error.message || '';
+      const errorCode = error.code || '';
+      
+      if (
+        errorCode === 'ECONNREFUSED' || 
+        errorCode === '42P01' || 
+        errorCode === 'ENOTFOUND' ||
+        errorMessage.includes('relation') || 
+        errorMessage.includes('does not exist') ||
+        errorMessage.includes('connect') ||
+        errorMessage.includes('timeout')
+      ) {
+        console.warn('⚠️ Database not connected, returning empty array:', errorMessage);
         res.json([]);
         return;
       }

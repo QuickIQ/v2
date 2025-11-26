@@ -20,15 +20,17 @@
         "subtitle": "Yapay zekamız yanıtlarınızı değerlendiriyor. Bu işlem birkaç saniye sürecektir..."
       },
       "email": {
-        "title": "Sonuçlarınızı Alın",
+        "title": "Kişiselleştirilmiş planınıza erişmek için e-posta adresinizi girin.",
         "subtitle": "Kişilik analizinizi anında almak için e-posta adresinizi girin.",
         "email_label": "E-posta Adresi",
-        "email_placeholder": "ornek@email.com",
+        "email_placeholder": "Email adresinizi giriniz",
         "accept_consent": "\"Hizmet Şartları\" ve Gizlilik Politikasını kabul ediyorum.",
         "continue_button": "Devam Et",
         "email_required": "Lütfen geçerli bir e-posta adresi girin",
         "consent_required": "Lütfen Hizmet Şartları ve Gizlilik Politikasını kabul edin.",
-        "privacy": "Verileriniz gizli tutulur, üçüncü kişilerle paylaşılmaz."
+        "privacy": "Verileriniz gizli tutulur, üçüncü kişilerle paylaşılmaz.",
+        "privacy_message": "E-posta adresiniz asla paylaşılmayacak veya başka bir amaç için kullanılmayacak ve güvenliği ile gizliliği %100 korunmaktadır.",
+        "explore_button": "Sonucunuzu Görün"
       },
       "payment": {
         "heading": "Kişilik Tipiniz Hazır",

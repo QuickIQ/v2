@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
@@ -15,10 +15,42 @@ import UnlockPage from './tests/personality/UnlockPage';
 import { UniversalTestPage } from './utils/testPageFactory';
 import UniversalPaymentPage from './components/TestFlow/UniversalPaymentPage';
 import UniversalUnlockPage from './components/TestFlow/UniversalUnlockPage';
+import UniversalAnalyzingPage from './components/TestFlow/UniversalAnalyzingPage';
+import PersonalityEmailPage from './tests/personality/PersonalityEmailPage';
+import IQTestCheckoutPage from './pages/iqtest/IQTestCheckoutPage';
+import IQTestResultsPage from './pages/iqtest/results/IQTestResultsPage';
 // Utils
 import { getAllTestConfigs } from './utils/testContentLoader';
 import { useDynamicTestTranslations } from './hooks/useDynamicTestTranslations';
 import './App.css';
+
+// IQ Test Analyzing Page wrapper
+function IQTestAnalyzingPage() {
+  const navigate = useNavigate();
+  return (
+    <UniversalAnalyzingPage 
+      testId="iqtest" 
+      onComplete={() => {
+        // Score is already stored in sessionStorage from IQTestPage
+        navigate('/test/iqtest/email');
+      }} 
+    />
+  );
+}
+
+// IQ Test Email Page wrapper
+function IQTestEmailPage() {
+  const navigate = useNavigate();
+  const handleEmailSubmit = (email: string, acceptedTerms: boolean, acceptedPrivacy: boolean) => {
+    // Handle email submission for IQ test
+    console.log('IQ Test email submitted:', email);
+    // Store email in sessionStorage
+    sessionStorage.setItem('iqtest_email', email);
+    // Navigate to checkout (universal payment page for IQ test)
+    navigate('/test/iqtest/checkout');
+  };
+  return <PersonalityEmailPage onSubmit={handleEmailSubmit} />;
+}
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || '');
 
@@ -51,6 +83,30 @@ function AppContent() {
         
         {/* Special tests with custom implementations */}
         <Route path="/test/iqtest" element={<IQTestPage />} />
+        <Route 
+          path="/test/iqtest/analyzing" 
+          element={
+            <IQTestAnalyzingPage />
+          } 
+        />
+        <Route 
+          path="/test/iqtest/email" 
+          element={
+            <IQTestEmailPage />
+          } 
+        />
+        <Route 
+          path="/test/iqtest/checkout" 
+          element={
+            <IQTestCheckoutPage />
+          } 
+        />
+        <Route 
+          path="/test/iqtest/results" 
+          element={
+            <IQTestResultsPage />
+          } 
+        />
         <Route path="/test/personality" element={<PersonalityTestPage />} />
         <Route path="/test/personality/payment" element={<PaymentPage />} />
         <Route path="/test/personality/unlock" element={<UnlockPage />} />

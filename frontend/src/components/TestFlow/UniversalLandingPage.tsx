@@ -263,6 +263,19 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
     loadContent();
   }, [testId]);
 
+  // Hide scrollbar on landing pages when content fits
+  useEffect(() => {
+    // Add class to body and html to hide scrollbar but allow scrolling if needed
+    document.body.classList.add('landing-page-no-scrollbar');
+    document.documentElement.classList.add('landing-page-no-scrollbar');
+    
+    return () => {
+      // Remove class when component unmounts
+      document.body.classList.remove('landing-page-no-scrollbar');
+      document.documentElement.classList.remove('landing-page-no-scrollbar');
+    };
+  }, []);
+
   if (loading) {
     return <LoadingFallback testId={testId} />;
   }
@@ -290,7 +303,7 @@ export default function UniversalLandingPage({ testId, onStart, iconName }: Prop
     <div style={{
       minHeight: '100vh',
       background: colors.background.landing.gradient,
-      paddingTop: isMobile ? '100px' : '120px',
+      paddingTop: isMobile ? '40px' : '50px',
       paddingBottom: isMobile ? '40px' : '48px',
       paddingLeft: isMobile ? '20px' : '40px',
       paddingRight: isMobile ? '20px' : '40px',

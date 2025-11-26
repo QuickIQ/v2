@@ -20,15 +20,17 @@
         "subtitle": "Our AI is evaluating your responses. This will take a few seconds..."
       },
       "email": {
-        "title": "Get Your Results",
+        "title": "Enter your email to access your personalized plan.",
         "subtitle": "Enter your email to instantly receive your personality insights.",
         "email_label": "Email Address",
-        "email_placeholder": "your.email@example.com",
+        "email_placeholder": "Enter your email",
         "accept_consent": "I accept the \"Terms of Service\" and Privacy Policy.",
         "continue_button": "Continue",
         "email_required": "Please enter a valid email address",
         "consent_required": "Please accept the Terms and Privacy Policy.",
-        "privacy": "Your data will remain private and never shared."
+        "privacy": "Your data will remain private and never shared.",
+        "privacy_message": "Your email will never be shared or used for any other purpose, and its security and privacy are 100% protected.",
+        "explore_button": "See your Result"
       },
       "payment": {
         "heading": "Your Personality Type is Ready",

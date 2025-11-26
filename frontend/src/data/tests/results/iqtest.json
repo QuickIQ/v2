@@ -1,0 +1,677 @@
+{
+  "level1": {
+    "level": "developing",
+    "title": {
+      "en": "Developing Logic – Cognitive Ability",
+      "tr": "Gelişen Mantık – Bilişsel Yetenek"
+    },
+    "summary": {
+      "en": "This level shows that your thinking system is growing, but still forming its structure.",
+      "tr": "Bu seviye, düşünme sisteminizin büyüdüğünü ancak hala yapısını oluşturduğunu gösterir."
+    },
+    "insights": [],
+    "sections": [
+      {
+        "icon": "🧠",
+        "title": {
+          "en": "Awareness",
+          "tr": "Farkındalık"
+        },
+        "text": {
+          "en": "Your mind notices patterns, but sometimes misses the deeper connection behind them. In this stage, thinking feels inconsistent—sometimes sharp, sometimes blurry—because your brain is still building solid logic pathways. You may react to information fast instead of slowing down to fully understand it. Small distractions can interrupt your reasoning flow, making conclusions feel unstable. But this level is full of potential: the foundation of logical thinking is present, and clarity increases when pressure is low. You improve quickly when information is simple and visual. You are not struggling; you are shaping your cognitive system.\n\nPractical Move: Speak your thought process out loud for every small decision.\n\nWhat will you earn: Sharper mental clarity and cleaner reasoning.\n\nFun Fact: Talking out loud activates the same regions used in high-level reasoning.",
+          "tr": "Zihniniz desenleri fark eder, ancak bazen arkalarındaki derin bağlantıyı kaçırır. Bu aşamada, düşünme tutarsız hissettirir—bazen keskin, bazen bulanık—çünkü beyniniz hala sağlam mantık yolları inşa ediyor. Bilgiyi tam olarak anlamak için yavaşlamak yerine hızlı tepki verebilirsiniz. Küçük dikkat dağıtıcılar mantık akışınızı kesebilir, sonuçları kararsız hissettirir. Ancak bu seviye potansiyelle dolu: mantıksal düşünmenin temeli mevcut ve baskı düşük olduğunda netlik artar. Bilgi basit ve görsel olduğunda hızla gelişirsiniz. Mücadele etmiyorsunuz; bilişsel sisteminizi şekillendiriyorsunuz.\n\nPratik Adım: Her küçük karar için düşünce sürecinizi yüksek sesle söyleyin.\n\nNe kazanacaksınız: Daha keskin zihinsel netlik ve daha temiz mantık.\n\nİlginç Bilgi: Yüksek sesle konuşmak, üst düzey mantıkta kullanılan aynı bölgeleri aktive eder."
+        }
+      },
+      {
+        "icon": "🔮",
+        "title": {
+          "en": "Forethought",
+          "tr": "Öngörü"
+        },
+        "text": {
+          "en": "Your planning ability is developing, but still inconsistent when tasks feel complex. Your brain prefers short-term clarity over long-term structure, which makes early steps easier but later steps confusing. You may start tasks quickly without mapping the consequences, leading to extra work. But once you understand the endpoint, your motivation rises fast. You learn best when plans are broken into small, visual steps. Forethought is not your weakness—it's your unused superpower waiting to be trained.\n\nPractical Move: Before any task, write the final desired outcome in one sentence.\n\nWhat will you earn: Faster decisions, fewer mistakes, smoother task flow.\n\nFun Fact: Humans think 2–3× clearer when writing the end goal first.",
+          "tr": "Planlama yeteneğiniz gelişiyor, ancak görevler karmaşık hissettiğinde hala tutarsız. Beyniniz uzun vadeli yapı yerine kısa vadeli netliği tercih eder, bu da erken adımları kolaylaştırır ancak sonraki adımları kafa karıştırıcı yapar. Sonuçları haritalamadan görevlere hızlı başlayabilirsiniz, bu da ekstra işe yol açar. Ancak bitiş noktasını anladığınızda motivasyonunuz hızla yükselir. Planlar küçük, görsel adımlara bölündüğünde en iyi öğrenirsiniz. Öngörü zayıflığınız değil—eğitilmeyi bekleyen kullanılmamış süper gücünüzdür.\n\nPratik Adım: Herhangi bir görevden önce, son istenen sonucu bir cümlede yazın.\n\nNe kazanacaksınız: Daha hızlı kararlar, daha az hata, daha akıcı görev akışı.\n\nİlginç Bilgi: İnsanlar son hedefi önce yazdıklarında 2-3 kat daha net düşünürler."
+        }
+      },
+      {
+        "icon": "⚖️",
+        "title": {
+          "en": "Self-Regulation",
+          "tr": "Öz Düzenleme"
+        },
+        "text": {
+          "en": "Your mind accelerates quickly but struggles to stabilize during mental pressure. Emotional spikes—stress, boredom, urgency—can shift your attention away from logic. This doesn't mean lack of discipline; it means your cognitive filters are not yet trained. When the environment is stable, you think well; when chaotic, you lose accuracy. Building micro-routines can dramatically strengthen your internal control.\n\nPractical Move: Add a 10-second pause before every important choice.\n\nWhat will you earn: Greater mental control and fewer impulsive errors.\n\nFun Fact: A 10-second pause reduces cognitive impulsivity by up to 40%.",
+          "tr": "Zihniniz hızla hızlanır ancak zihinsel baskı sırasında stabilize olmakta zorlanır. Duygusal zirveler—stres, sıkıntı, aciliyet—dikkatinizi mantıktan uzaklaştırabilir. Bu disiplin eksikliği anlamına gelmez; bilişsel filtrelerinizin henüz eğitilmediği anlamına gelir. Ortam stabil olduğunda iyi düşünürsünüz; kaotik olduğunda doğruluğu kaybedersiniz. Mikro rutinler oluşturmak iç kontrolünüzü önemli ölçüde güçlendirebilir.\n\nPratik Adım: Her önemli seçimden önce 10 saniyelik bir duraklama ekleyin.\n\nNe kazanacaksınız: Daha büyük zihinsel kontrol ve daha az dürtüsel hata.\n\nİlginç Bilgi: 10 saniyelik bir duraklama bilişsel dürtüselliği %40'a kadar azaltır."
+        }
+      },
+      {
+        "icon": "💾",
+        "title": {
+          "en": "Cognitive Resources",
+          "tr": "Bilişsel Kaynaklar"
+        },
+        "text": {
+          "en": "Your working memory is building but not optimized. You can handle information in small clusters, but larger or multi-layered data exhausts your processing system. This is normal at this stage—your brain has the hardware but not yet the software efficiency. You understand best through simple visuals, examples, and step-by-step logic. Strengthening short-term retention will dramatically lift your IQ curve.\n\nPractical Move: Convert every complex idea into a 3-bullet summary.\n\nWhat will you earn: Stronger memory and faster comprehension.\n\nFun Fact: The brain remembers grouped information 7× better.",
+          "tr": "Çalışma belleğiniz gelişiyor ancak optimize edilmemiş. Küçük kümeler halinde bilgiyi işleyebilirsiniz, ancak daha büyük veya çok katmanlı veriler işleme sisteminizi yorar. Bu aşamada normal—beyninizin donanımı var ancak henüz yazılım verimliliği yok. Basit görseller, örnekler ve adım adım mantık yoluyla en iyi anlarsınız. Kısa vadeli tutmayı güçlendirmek IQ eğrinizi önemli ölçüde yükseltecektir.\n\nPratik Adım: Her karmaşık fikri 3 maddelik bir özete dönüştürün.\n\nNe kazanacaksınız: Daha güçlü hafıza ve daha hızlı kavrama.\n\nİlginç Bilgi: Beyin gruplandırılmış bilgiyi 7 kat daha iyi hatırlar."
+        }
+      },
+      {
+        "icon": "🎣",
+        "title": {
+          "en": "Hooks",
+          "tr": "Kancalar"
+        },
+        "text": {
+          "en": "Your attention is easily captured by emotion, novelty, and speed. This makes you learn fast when something excites you but lose focus when stimulation drops. Hooks currently control you more than you control them. But with structure, this high sensitivity becomes a huge advantage—because people at this level often process emotional cues faster than others.\n\nPractical Move: Use color coding or visual cues for anything important.\n\nWhat will you earn: Higher focus and faster decision anchoring.\n\nFun Fact: Color increases attention retention by up to 82%.",
+          "tr": "Dikkatiniz kolayca duygu, yenilik ve hız tarafından yakalanır. Bu, bir şey sizi heyecanlandırdığında hızlı öğrenmenizi sağlar ancak uyarım düştüğünde odak kaybedersiniz. Kancalar şu anda sizden daha çok sizi kontrol ediyor. Ancak yapıyla, bu yüksek hassasiyet büyük bir avantaj haline gelir—çünkü bu seviyedeki insanlar genellikle duygusal ipuçlarını diğerlerinden daha hızlı işlerler.\n\nPratik Adım: Önemli her şey için renk kodlaması veya görsel ipuçları kullanın.\n\nNe kazanacaksınız: Daha yüksek odak ve daha hızlı karar sabitleme.\n\nİlginç Bilgi: Renk dikkat tutma oranını %82'ye kadar artırır."
+        }
+      },
+      {
+        "icon": "🎵",
+        "title": {
+          "en": "Rhythm",
+          "tr": "Ritim"
+        },
+        "text": {
+          "en": "Your brain works in bursts. You perform well in short cycles but lose consistency in long mental tasks. This is a rhythm issue, not an intelligence issue. Once your brain warms up, performance improves—but restarting is difficult. Building a steady cognitive rhythm is the key upgrade.\n\nPractical Move: Use 20-minute work blocks with 5-minute resets.\n\nWhat will you earn: Longer focus endurance and smoother mental flow.\n\nFun Fact: The human brain peaks in 20-minute cognitive waves.",
+          "tr": "Beyniniz patlamalar halinde çalışır. Kısa döngülerde iyi performans gösterirsiniz ancak uzun zihinsel görevlerde tutarlılığı kaybedersiniz. Bu bir ritim sorunu, zeka sorunu değil. Beyniniz ısındığında performans iyileşir—ancak yeniden başlamak zordur. Düzenli bir bilişsel ritim oluşturmak ana yükseltmedir.\n\nPratik Adım: 5 dakikalık sıfırlamalarla 20 dakikalık çalışma blokları kullanın.\n\nNe kazanacaksınız: Daha uzun odak dayanıklılığı ve daha akıcı zihinsel akış.\n\nİlginç Bilgi: İnsan beyni 20 dakikalık bilişsel dalgalarda zirve yapar."
+        }
+      },
+      {
+        "icon": "🔍",
+        "title": {
+          "en": "Pattern Recognition",
+          "tr": "Desen Tanıma"
+        },
+        "text": {
+          "en": "You recognize simple patterns well but may struggle with deeper, abstract relationships. This is because your brain currently processes surface-level details first before connecting them. Once trained, this becomes one of the easiest abilities to strengthen.\n\nPractical Move: Practice finding 3 similarities between any two things.\n\nWhat will you earn: Stronger abstraction and faster problem solving.\n\nFun Fact: Pattern recognition is the #1 skill that predicts rising IQ.",
+          "tr": "Basit desenleri iyi tanırsınız ancak daha derin, soyut ilişkilerle mücadele edebilirsiniz. Bunun nedeni beyninizin şu anda bunları bağlamadan önce yüzey seviyesi detayları işlemesidir. Eğitildikten sonra, bu güçlendirmesi en kolay yeteneklerden biri haline gelir.\n\nPratik Adım: Herhangi iki şey arasında 3 benzerlik bulma pratiği yapın.\n\nNe kazanacaksınız: Daha güçlü soyutlama ve daha hızlı problem çözme.\n\nİlginç Bilgi: Desen tanıma, yükselen IQ'yu tahmin eden #1 beceridir."
+        }
+      },
+      {
+        "icon": "✂️",
+        "title": {
+          "en": "Simplification",
+          "tr": "Sadeleştirme"
+        },
+        "text": {
+          "en": "You sometimes overcomplicate easy tasks because clarity comes late in the process. This creates unnecessary cognitive load. But when something is explained simply, you understand instantly. This shows your brain thrives on structured simplicity.\n\nPractical Move: Reduce every problem to one sentence before solving it.\n\nWhat will you earn: Faster reasoning and easier decision-making.\n\nFun Fact: One-sentence framing reduces mental load by 60%.",
+          "tr": "Bazen kolay görevleri gereğinden fazla karmaşıklaştırırsınız çünkü netlik süreçte geç gelir. Bu gereksiz bilişsel yük yaratır. Ancak bir şey basitçe açıklandığında anında anlarsınız. Bu, beyninizin yapılandırılmış basitlikte geliştiğini gösterir.\n\nPratik Adım: Her problemi çözmeden önce bir cümleye indirgeyin.\n\nNe kazanacaksınız: Daha hızlı mantık ve daha kolay karar verme.\n\nİlginç Bilgi: Tek cümle çerçeveleme zihinsel yükü %60 azaltır."
+        }
+      },
+      {
+        "icon": "🎁",
+        "title": {
+          "en": "Incentive Mapping",
+          "tr": "Teşvik Haritalama"
+        },
+        "text": {
+          "en": "Your motivation increases sharply when there is immediate reward. Long-term incentives feel distant and less engaging. This affects consistency, not capability. Turning long tasks into small rewarded checkpoints transforms performance at this level.\n\nPractical Move: Attach a small reward to every completed step.\n\nWhat will you earn: Stronger consistency and higher productivity.\n\nFun Fact: Small rewards release dopamine equal to medium achievements.",
+          "tr": "Anında ödül olduğunda motivasyonunuz keskin bir şekilde artar. Uzun vadeli teşvikler uzak ve daha az ilgi çekici hissettirir. Bu tutarlılığı etkiler, yeteneği değil. Uzun görevleri küçük ödüllü kontrol noktalarına dönüştürmek bu seviyedeki performansı dönüştürür.\n\nPratik Adım: Her tamamlanan adıma küçük bir ödül ekleyin.\n\nNe kazanacaksınız: Daha güçlü tutarlılık ve daha yüksek verimlilik.\n\nİlginç Bilgi: Küçük ödüller orta başarılara eşit dopamin salgılar."
+        }
+      },
+      {
+        "icon": "🌱",
+        "title": {
+          "en": "Growth and Transformation",
+          "tr": "Büyüme ve Dönüşüm"
+        },
+        "text": {
+          "en": "You are in the most flexible IQ phase—your intelligence increases the fastest here. Developing Logic is not a limitation; it is the high-growth stage. Your cognitive wiring responds quickly to training, structure, visuals, and repetition. People in this tier often show the biggest improvement over months.\n\nPractical Move: Train 10 minutes of logic puzzles daily.\n\nWhat will you earn: Noticeable IQ growth within weeks.\n\nFun Fact: Logic training increases fluid intelligence by up to 12%.",
+          "tr": "En esnek IQ aşamasındasınız—zekanız burada en hızlı artar. Gelişen Mantık bir sınırlama değildir; yüksek büyüme aşamasıdır. Bilişsel bağlantılarınız eğitime, yapıya, görsellere ve tekrara hızla yanıt verir. Bu seviyedeki insanlar genellikle aylar içinde en büyük iyileşmeyi gösterirler.\n\nPratik Adım: Günlük 10 dakika mantık bulmacası eğitimi yapın.\n\nNe kazanacaksınız: Haftalar içinde fark edilir IQ büyümesi.\n\nİlginç Bilgi: Mantık eğitimi akıcı zekayı %12'ye kadar artırır."
+        }
+      },
+      {
+        "icon": "✨",
+        "title": {
+          "en": "Conclusion",
+          "tr": "Sonuç"
+        },
+        "text": {
+          "en": "This score places you in a developing but rapidly improving cognitive tier. Your mind is not fixed—it is rising, reshaping, and gaining clarity with each structured habit. With discipline and the right tools, your growth curve can outperform higher scorers who do not train. Your journey is just beginning, and your potential is far bigger than your current score.\n\nYour brain is not defined by where you started, but by how fast you evolve.",
+          "tr": "Bu skor sizi gelişen ancak hızla iyileşen bir bilişsel seviyeye yerleştirir. Zihniniz sabit değil—her yapılandırılmış alışkanlıkla yükseliyor, yeniden şekilleniyor ve netlik kazanıyor. Disiplin ve doğru araçlarla, büyüme eğriniz eğitim yapmayan daha yüksek skorluları geride bırakabilir. Yolculuğunuz yeni başlıyor ve potansiyeliniz mevcut skorunuzdan çok daha büyük.\n\nBeyniniz başladığınız yerle değil, ne kadar hızlı evrildiğinizle tanımlanır."
+        }
+      }
+    ]
+  },
+  "level2": {
+    "level": "developing",
+    "title": {
+      "en": "Emerging Reasoning – Cognitive Ability",
+      "tr": "Gelişen Mantık – Bilişsel Yetenek"
+    },
+    "summary": {
+      "en": "Your reasoning skills are awakening and moving toward stable, structured analytical thinking.",
+      "tr": "Mantık becerileriniz uyanıyor ve istikrarlı, yapılandırılmış analitik düşünmeye doğru ilerliyor."
+    },
+    "insights": [],
+    "sections": [
+      {
+        "icon": "🧠",
+        "title": {
+          "en": "Awareness",
+          "tr": "Farkındalık"
+        },
+        "text": {
+          "en": "Your awareness is becoming sharper and more organized. You can identify the key elements of a situation faster than before, and your ability to compare differences is noticeably improving. You still occasionally jump to conclusions, but it happens less often because your mind has begun valuing accuracy over speed. At this stage, you're learning to zoom out before zooming in, which gives you clearer understanding. You notice when something \"feels off,\" even if you cannot fully explain why yet. This is a sign that your internal logic system is activating.\n\nPractical Move: Before reacting, ask yourself: \"What is the real cause here?\"\n\nWhat will you earn: Cleaner judgment and fewer emotional mistakes.\n\nFun Fact: The brain improves awareness by 15% when you simply pause before responding.",
+          "tr": "Farkındalığınız daha keskin ve düzenli hale geliyor. Bir durumun temel unsurlarını önceden daha hızlı belirleyebilirsiniz ve farkları karşılaştırma yeteneğiniz belirgin şekilde iyileşiyor. Hala ara sıra sonuçlara atlıyorsunuz, ancak zihniniz doğruluğu hızdan daha çok değer vermeye başladığı için bu daha az oluyor. Bu aşamada, yakınlaştırmadan önce uzaklaştırmayı öğreniyorsunuz, bu da size daha net bir anlayış veriyor. Bir şeyin \"yanlış hissettirdiğini\" fark ediyorsunuz, henüz nedenini tam olarak açıklayamasanız bile. Bu, iç mantık sisteminizin aktif hale geldiğinin bir işaretidir.\n\nPratik Adım: Tepki vermeden önce kendinize sorun: \"Buradaki gerçek neden nedir?\"\n\nNe kazanacaksınız: Daha temiz yargı ve daha az duygusal hata.\n\nİlginç Bilgi: Beyin, yanıt vermeden önce sadece durakladığınızda farkındalığı %15 artırır."
+        }
+      },
+      {
+        "icon": "🔮",
+        "title": {
+          "en": "Forethought",
+          "tr": "Öngörü"
+        },
+        "text": {
+          "en": "Your planning ability is evolving from reactive to semi-strategic. You now think one or two steps ahead naturally, especially when something matters to you. However, long-term structure still feels heavy. You operate best when goals are clear and broken into smaller pieces. Your mind likes to understand the direction before committing to the journey. When forethought becomes intentional, your execution sharpens dramatically.\n\nPractical Move: Write the next 2 steps before starting any task.\n\nWhat will you earn: Smoother planning and faster task completion.\n\nFun Fact: Even a 2-step micro-plan boosts task success by almost 50%.",
+          "tr": "Planlama yeteneğiniz tepkiselden yarı stratejik hale evriliyor. Artık doğal olarak bir veya iki adım önünü düşünüyorsunuz, özellikle bir şey sizin için önemliyse. Ancak uzun vadeli yapı hala ağır hissediyor. Hedefler net ve küçük parçalara bölündüğünde en iyi çalışırsınız. Zihniniz yolculuğa başlamadan önce yönü anlamayı sever. Öngörü kasıtlı hale geldiğinde, uygulamanız önemli ölçüde keskinleşir.\n\nPratik Adım: Herhangi bir göreve başlamadan önce sonraki 2 adımı yazın.\n\nNe kazanacaksınız: Daha akıcı planlama ve daha hızlı görev tamamlama.\n\nİlginç Bilgi: Sadece 2 adımlık bir mikro plan bile görev başarısını neredeyse %50 artırır."
+        }
+      },
+      {
+        "icon": "⚖️",
+        "title": {
+          "en": "Self-Regulation",
+          "tr": "Öz Düzenleme"
+        },
+        "text": {
+          "en": "Your emotional control is strengthening. You can stay calm longer and recover faster when under pressure. But certain triggers—criticism, urgency, confusion—still interrupt your reasoning flow. The good news is that your brain now understands the difference between emotional reaction and logical response. Your power lies in recognizing the moment you switch modes. With consistent practice, emotional noise will lose its influence on your focus.\n\nPractical Move: Label your emotional state before making decisions.\n\nWhat will you earn: Higher accuracy and better long-term choices.\n\nFun Fact: Labeling emotions reduces their intensity by 20–35%.",
+          "tr": "Duygusal kontrolünüz güçleniyor. Daha uzun süre sakin kalabilir ve baskı altındayken daha hızlı toparlanabilirsiniz. Ancak belirli tetikleyiciler—eleştiri, aciliyet, kafa karışıklığı—hala mantık akışınızı kesiyor. İyi haber şu ki, beyniniz artık duygusal tepki ile mantıksal yanıt arasındaki farkı anlıyor. Gücünüz mod değiştirdiğiniz anı tanımakta yatıyor. Tutarlı pratikle, duygusal gürültü odak üzerindeki etkisini kaybedecek.\n\nPratik Adım: Karar vermeden önce duygusal durumunuzu etiketleyin.\n\nNe kazanacaksınız: Daha yüksek doğruluk ve daha iyi uzun vadeli seçimler.\n\nİlginç Bilgi: Duyguları etiketlemek yoğunluklarını %20-35 azaltır."
+        }
+      },
+      {
+        "icon": "💾",
+        "title": {
+          "en": "Cognitive Resources",
+          "tr": "Bilişsel Kaynaklar"
+        },
+        "text": {
+          "en": "Your working memory is stronger and more stable compared to Level 1. You can hold more information in your mind and connect it with past knowledge. However, when information becomes too abstract or too layered, your processing speed drops slightly. This is normal during the transition toward advanced reasoning. You thrive when information is structured, visual, or categorized.\n\nPractical Move: Use a simple mind map for any complex idea.\n\nWhat will you earn: Faster understanding and deeper retention.\n\nFun Fact: Mind maps increase memory recall by up to 32%.",
+          "tr": "Çalışma belleğiniz Level 1'e kıyasla daha güçlü ve daha stabil. Zihninizde daha fazla bilgi tutabilir ve bunu geçmiş bilgilerle bağlayabilirsiniz. Ancak bilgi çok soyut veya çok katmanlı hale geldiğinde, işleme hızınız hafifçe düşer. Bu, gelişmiş mantığa geçiş sırasında normaldir. Bilgi yapılandırılmış, görsel veya kategorize edilmiş olduğunda gelişirsiniz.\n\nPratik Adım: Herhangi bir karmaşık fikir için basit bir zihin haritası kullanın.\n\nNe kazanacaksınız: Daha hızlı anlayış ve daha derin tutma.\n\nİlginç Bilgi: Zihin haritaları hafıza geri çağırma oranını %32'ye kadar artırır."
+        }
+      },
+      {
+        "icon": "🎣",
+        "title": {
+          "en": "Hooks",
+          "tr": "Kancalar"
+        },
+        "text": {
+          "en": "Your attention is improving and becoming less controlled by external triggers. You still respond quickly to novelty and motion, but now you're able to redirect your focus back to the task more easily. You learn effectively when something captures your curiosity, and you can maintain focus longer once you understand the purpose behind the task.\n\nPractical Move: Add one curiosity trigger to every task (a question, a \"why,\" or a visual).\n\nWhat will you earn: Longer attention span and fewer focus drops.\n\nFun Fact: Curiosity increases dopamine spikes similar to small rewards.",
+          "tr": "Dikkatiniz iyileşiyor ve dış tetikleyiciler tarafından daha az kontrol ediliyor. Hala yeniliğe ve harekete hızlı tepki veriyorsunuz, ancak artık odaklanmanızı göreve daha kolay geri yönlendirebiliyorsunuz. Bir şey merakınızı yakaladığında etkili öğrenirsiniz ve görevin arkasındaki amacı anladığınızda daha uzun süre odaklanabilirsiniz.\n\nPratik Adım: Her göreve bir merak tetikleyicisi ekleyin (bir soru, bir \"neden\" veya bir görsel).\n\nNe kazanacaksınız: Daha uzun dikkat süresi ve daha az odak kaybı.\n\nİlginç Bilgi: Merak, küçük ödüllere benzer şekilde dopamin artışlarını artırır."
+        }
+      },
+      {
+        "icon": "🎵",
+        "title": {
+          "en": "Rhythm",
+          "tr": "Ritim"
+        },
+        "text": {
+          "en": "Your mental rhythm is shifting from burst-based performance to steady flow. You work best in medium-sized focus blocks—long enough for progress but short enough to avoid burnout. Consistency is starting to become your advantage. Once your brain locks into a rhythm, you can hold focus longer than you think.\n\nPractical Move: Use 30-minute work cycles with a 5-minute reset.\n\nWhat will you earn: Stronger consistency and better energy management.\n\nFun Fact: Most people's peak cognitive rhythm forms at around 28–32 minutes.",
+          "tr": "Zihinsel ritminiz patlama tabanlı performanstan istikrarlı akışa geçiyor. Orta büyüklükteki odak bloklarında en iyi çalışırsınız—ilerleme için yeterince uzun ama tükenmişliği önlemek için yeterince kısa. Tutarlılık avantajınız olmaya başlıyor. Beyniniz bir ritme kilitlendiğinde, düşündüğünüzden daha uzun süre odaklanabilirsiniz.\n\nPratik Adım: 5 dakikalık sıfırlamalarla 30 dakikalık çalışma döngüleri kullanın.\n\nNe kazanacaksınız: Daha güçlü tutarlılık ve daha iyi enerji yönetimi.\n\nİlginç Bilgi: Çoğu insanın zirve bilişsel ritmi yaklaşık 28-32 dakikada oluşur."
+        }
+      },
+      {
+        "icon": "🔍",
+        "title": {
+          "en": "Pattern Recognition",
+          "tr": "Desen Tanıma"
+        },
+        "text": {
+          "en": "You are developing a more refined eye for patterns. Simple patterns are easy for you, and moderate ones are becoming clearer. You're beginning to detect relationships that are less obvious, such as trends, emotional signals, or cause-effect loops. You might not always articulate patterns yet, but you feel them intuitively.\n\nPractical Move: Practice predicting the \"next step\" in everyday situations.\n\nWhat will you earn: Faster thinking and stronger cognitive flexibility.\n\nFun Fact: Prediction-based thinking multiplies pattern recognition speed.",
+          "tr": "Desenler için daha gelişmiş bir göz geliştiriyorsunuz. Basit desenler sizin için kolay ve orta düzeydekiler daha net hale geliyor. Eğilimler, duygusal sinyaller veya neden-sonuç döngüleri gibi daha az belirgin ilişkileri tespit etmeye başlıyorsunuz. Henüz desenleri her zaman ifade edemeyebilirsiniz, ancak sezgisel olarak hissediyorsunuz.\n\nPratik Adım: Günlük durumlarda \"sonraki adımı\" tahmin etme pratiği yapın.\n\nNe kazanacaksınız: Daha hızlı düşünme ve daha güçlü bilişsel esneklik.\n\nİlginç Bilgi: Tahmin tabanlı düşünme desen tanıma hızını çoğaltır."
+        }
+      },
+      {
+        "icon": "✂️",
+        "title": {
+          "en": "Simplification",
+          "tr": "Sadeleştirme"
+        },
+        "text": {
+          "en": "You now understand that complexity often hides a simple core. Your mind has started searching for the \"main idea\" behind things, even if you don't always land on it immediately. This level's challenge is not overcomplication, but verifying assumptions. Once trained, simplification becomes a major strength for you.\n\nPractical Move: Ask: \"What is the simplest explanation that fits the facts?\"\n\nWhat will you earn: Clearer thinking and faster solutions.\n\nFun Fact: Simplification reduces cognitive fatigue by nearly half.",
+          "tr": "Artık karmaşıklığın genellikle basit bir özü gizlediğini anlıyorsunuz. Zihniniz şeylerin arkasındaki \"ana fikri\" aramaya başladı, hemen bulamasanız bile. Bu seviyenin zorluğu gereğinden fazla karmaşıklaştırma değil, varsayımları doğrulamaktır. Eğitildikten sonra, sadeleştirme sizin için büyük bir güç haline gelir.\n\nPratik Adım: Sorun: \"Gerçeklere uyan en basit açıklama nedir?\"\n\nNe kazanacaksınız: Daha net düşünme ve daha hızlı çözümler.\n\nİlginç Bilgi: Sadeleştirme bilişsel yorgunluğu neredeyse yarı yarıya azaltır."
+        }
+      },
+      {
+        "icon": "🎁",
+        "title": {
+          "en": "Incentive Mapping",
+          "tr": "Teşvik Haritalama"
+        },
+        "text": {
+          "en": "You respond well to both short-term and mid-term rewards, and your motivation system is starting to balance itself. Long-term incentives still feel distant, but they no longer feel impossible. You perform best when your tasks have meaning, clarity, and checkpoints.\n\nPractical Move: Break big goals into 3 checkpoints with small rewards.\n\nWhat will you earn: Higher discipline and stronger follow-through.\n\nFun Fact: Rewarded checkpoints improve task completion by 76%.",
+          "tr": "Hem kısa vadeli hem de orta vadeli ödüllere iyi yanıt veriyorsunuz ve motivasyon sisteminiz kendini dengelemeye başlıyor. Uzun vadeli teşvikler hala uzak hissediyor, ancak artık imkansız hissettirmiyorlar. Görevlerinizin anlamı, netliği ve kontrol noktaları olduğunda en iyi performans gösterirsiniz.\n\nPratik Adım: Büyük hedefleri küçük ödüllerle 3 kontrol noktasına bölün.\n\nNe kazanacaksınız: Daha yüksek disiplin ve daha güçlü takip.\n\nİlginç Bilgi: Ödüllü kontrol noktaları görev tamamlama oranını %76 artırır."
+        }
+      },
+      {
+        "icon": "🌱",
+        "title": {
+          "en": "Growth and Transformation",
+          "tr": "Büyüme ve Dönüşüm"
+        },
+        "text": {
+          "en": "You are entering the stage where improvements become visible quickly. Emerging Reasoning is a powerful phase—your brain is bridging intuition with structured logic. Once you stabilize your thinking habits, your reasoning speed and accuracy will rise sharply. The path to higher IQ tiers is now open and reachable.\n\nPractical Move: Train with 5–10 minutes of logical puzzles daily.\n\nWhat will you earn: Noticeable IQ gains in a short time.\n\nFun Fact: Even 5 minutes of daily logic training increases fluid intelligence.",
+          "tr": "İyileşmelerin hızla görünür hale geldiği aşamaya giriyorsunuz. Gelişen Mantık güçlü bir aşamadır—beyniniz sezgiyi yapılandırılmış mantıkla köprü kuruyor. Düşünme alışkanlıklarınızı stabilize ettiğinizde, mantık hızınız ve doğruluğunuz keskin bir şekilde yükselecek. Daha yüksek IQ seviyelerine giden yol artık açık ve ulaşılabilir.\n\nPratik Adım: Günlük 5-10 dakika mantık bulmacası ile eğitim yapın.\n\nNe kazanacaksınız: Kısa sürede fark edilir IQ kazanımları.\n\nİlginç Bilgi: Günlük sadece 5 dakikalık mantık eğitimi bile akıcı zekayı artırır."
+        }
+      },
+      {
+        "icon": "✨",
+        "title": {
+          "en": "Conclusion",
+          "tr": "Sonuç"
+        },
+        "text": {
+          "en": "This IQ range places you in a promising growth zone where your reasoning is rising and stabilizing. You have the foundation for strong analytical thinking, and your improvement speed is higher than average. With a bit more discipline and structure, you can climb into the higher tiers of cognitive performance. Your intelligence is not fixed—it is evolving every month.\n\nYou are standing at the doorway of advanced reasoning. Step through it.",
+          "tr": "Bu IQ aralığı sizi mantığınızın yükseldiği ve stabilize olduğu umut verici bir büyüme bölgesine yerleştirir. Güçlü analitik düşünme için temeliniz var ve iyileşme hızınız ortalamanın üzerinde. Biraz daha disiplin ve yapıyla, bilişsel performansın daha yüksek seviyelerine tırmanabilirsiniz. Zekanız sabit değil—her ay evriliyor.\n\nGelişmiş mantığın kapısında duruyorsunuz. İçeri adım atın."
+        }
+      }
+    ]
+  },
+  "level3": {
+    "level": "good",
+    "title": {
+      "en": "Strong Analytical Mind – Cognitive Ability",
+      "tr": "Güçlü Analitik Zihin – Bilişsel Yetenek"
+    },
+    "summary": {
+      "en": "You think clearly, solve problems faster than most people, and understand complex ideas with stable logic.",
+      "tr": "Net düşünüyorsunuz, çoğu insandan daha hızlı problem çözüyorsunuz ve karmaşık fikirleri istikrarlı mantıkla anlıyorsunuz."
+    },
+    "insights": [],
+    "sections": [
+      {
+        "icon": "🧠",
+        "title": {
+          "en": "Awareness",
+          "tr": "Farkındalık"
+        },
+        "text": {
+          "en": "Your awareness is highly active and structured. You quickly notice patterns, inconsistencies, and hidden details that many people overlook. Your mind scans situations automatically, identifying what matters and discarding what is noise. You can separate emotion from information with growing accuracy, which gives you a strong advantage in decision-making. You understand not only what is happening but also why it matters. At this level, the clarity of your perception becomes one of your strongest tools.\n\nPractical Move: Whenever you observe something, ask: \"What is the key signal here?\"\n\nWhat will you earn: Faster insight and sharper understanding.\n\nFun Fact: People with strong awareness reduce decision errors by up to 40%.",
+          "tr": "Farkındalığınız oldukça aktif ve yapılandırılmış. Çoğu insanın gözden kaçırdığı desenleri, tutarsızlıkları ve gizli detayları hızla fark ediyorsunuz. Zihniniz durumları otomatik olarak tarar, önemli olanı belirler ve gürültüyü atar. Duyguyu bilgiden artan bir doğrulukla ayırabilirsiniz, bu da karar vermede güçlü bir avantaj sağlar. Sadece ne olduğunu değil, neden önemli olduğunu da anlıyorsunuz. Bu seviyede, algınızın netliği en güçlü araçlarınızdan biri haline gelir.\n\nPratik Adım: Bir şeyi gözlemlediğinizde sorun: \"Buradaki ana sinyal nedir?\"\n\nNe kazanacaksınız: Daha hızlı içgörü ve daha keskin anlayış.\n\nİlginç Bilgi: Güçlü farkındalığa sahip insanlar karar hatalarını %40'a kadar azaltır."
+        }
+      },
+      {
+        "icon": "🔮",
+        "title": {
+          "en": "Forethought",
+          "tr": "Öngörü"
+        },
+        "text": {
+          "en": "Your mind naturally plans ahead. You can see consequences, map choices, and predict outcomes with solid accuracy. Unlike earlier levels, you no longer react—you anticipate. You think in branches, not straight lines, and this ability allows you to avoid many common mistakes. Forethought becomes your quiet superpower: you can prepare for problems before they appear.\n\nPractical Move: Predict the outcome of your actions with a simple \"If I do this → Then this happens\" chain.\n\nWhat will you earn: Stronger control over your future results.\n\nFun Fact: Anticipation skills activate the same neural pathways used in high-level strategic thinking.",
+          "tr": "Zihniniz doğal olarak ileriyi planlar. Sonuçları görebilir, seçenekleri haritalayabilir ve sağlam bir doğrulukla sonuçları tahmin edebilirsiniz. Önceki seviyelerden farklı olarak, artık tepki vermiyorsunuz—öngörüyorsunuz. Düz çizgilerde değil, dallarda düşünüyorsunuz ve bu yetenek birçok yaygın hatayı önlemenize olanak tanır. Öngörü sessiz süper gücünüz haline gelir: problemler ortaya çıkmadan önce hazırlanabilirsiniz.\n\nPratik Adım: Eylemlerinizin sonucunu basit bir \"Bunu yaparsam → Bu olur\" zinciri ile tahmin edin.\n\nNe kazanacaksınız: Gelecekteki sonuçlarınız üzerinde daha güçlü kontrol.\n\nİlginç Bilgi: Öngörü becerileri, üst düzey stratejik düşünmede kullanılan aynı sinir yollarını aktive eder."
+        }
+      },
+      {
+        "icon": "⚖️",
+        "title": {
+          "en": "Self-Regulation",
+          "tr": "Öz Düzenleme"
+        },
+        "text": {
+          "en": "Your emotional control is stable. Stress still affects you, but not in a way that destroys your clarity. You can slow yourself down, think cleanly, and hold your reasoning even when pressure rises. This stability helps you make logical decisions when others panic. The main challenge here is not losing focus due to overthinking—your brain is active, so it needs regular resets.\n\nPractical Move: When stressed, take 30 seconds to breathe and name the problem logically.\n\nWhat will you earn: Calm clarity during difficult moments.\n\nFun Fact: A 30-second reset can restore up to 20% of your reasoning capacity.",
+          "tr": "Duygusal kontrolünüz stabil. Stres sizi hala etkiler, ancak netliğinizi yok edecek şekilde değil. Kendinizi yavaşlatabilir, temiz düşünebilir ve baskı arttığında bile mantığınızı koruyabilirsiniz. Bu istikrar, diğerleri paniklerken mantıksal kararlar vermenize yardımcı olur. Buradaki ana zorluk, aşırı düşünmeden dolayı odak kaybetmemek—beyniniz aktif, bu yüzden düzenli sıfırlamalara ihtiyaç duyuyor.\n\nPratik Adım: Stresli olduğunuzda, 30 saniye nefes alın ve sorunu mantıksal olarak adlandırın.\n\nNe kazanacaksınız: Zor anlarda sakin netlik.\n\nİlginç Bilgi: 30 saniyelik bir sıfırlama mantık kapasitenizin %20'sine kadarını geri yükleyebilir."
+        }
+      },
+      {
+        "icon": "💾",
+        "title": {
+          "en": "Cognitive Resources",
+          "tr": "Bilişsel Kaynaklar"
+        },
+        "text": {
+          "en": "Your working memory is strong. You can hold multiple ideas in your mind and connect them logically. Your problem-solving speed accelerates when information is structured, but you can also handle moderately chaotic data. You learn faster, remember longer, and process deeper. The only weakness is cognitive overload when you absorb too much at once, but this is easily managed with structure.\n\nPractical Move: Sort new information into 3 categories: essential, useful, optional.\n\nWhat will you earn: Higher retention and faster learning.\n\nFun Fact: Categorization boosts memory performance by up to 50%.",
+          "tr": "Çalışma belleğiniz güçlü. Zihninizde birden fazla fikri tutabilir ve bunları mantıksal olarak bağlayabilirsiniz. Bilgi yapılandırılmış olduğunda problem çözme hızınız hızlanır, ancak orta düzeyde kaotik verileri de işleyebilirsiniz. Daha hızlı öğrenir, daha uzun hatırlar ve daha derin işlersiniz. Tek zayıflık, bir anda çok fazla şeyi emdiğinizde bilişsel aşırı yükleme, ancak bu yapıyla kolayca yönetilir.\n\nPratik Adım: Yeni bilgileri 3 kategoriye ayırın: temel, yararlı, isteğe bağlı.\n\nNe kazanacaksınız: Daha yüksek tutma ve daha hızlı öğrenme.\n\nİlginç Bilgi: Kategorilere ayırma hafıza performansını %50'ye kadar artırır."
+        }
+      },
+      {
+        "icon": "🎣",
+        "title": {
+          "en": "Hooks",
+          "tr": "Kancalar"
+        },
+        "text": {
+          "en": "Your mind can lock into tasks quickly once something captures your interest. Curiosity is one of your strongest drivers. You engage deeply with ideas that challenge you, and this ability leads to quick progress in new skills. The key is learning to ignite interest even in tasks that feel less exciting.\n\nPractical Move: Turn any task into a small challenge or prediction game.\n\nWhat will you earn: Longer focus and stronger engagement.\n\nFun Fact: Curiosity increases information retention almost as much as rewards.",
+          "tr": "Zihniniz bir şey ilginizi çektiğinde görevlere hızla kilitlenebilir. Merak en güçlü itici güçlerinizden biridir. Sizi zorlayan fikirlerle derinlemesine ilgilenirsiniz ve bu yetenek yeni becerilerde hızlı ilerlemeye yol açar. Anahtar, daha az heyecan verici görünen görevlerde bile ilgiyi ateşlemeyi öğrenmektir.\n\nPratik Adım: Herhangi bir görevi küçük bir meydan okuma veya tahmin oyununa dönüştürün.\n\nNe kazanacaksınız: Daha uzun odak ve daha güçlü ilgi.\n\nİlginç Bilgi: Merak, bilgi tutma oranını ödüller kadar artırır."
+        }
+      },
+      {
+        "icon": "🎵",
+        "title": {
+          "en": "Rhythm",
+          "tr": "Ritim"
+        },
+        "text": {
+          "en": "Your cognitive rhythm is stable and productive. You can maintain long focus sessions and return to flow quickly after interruptions. Your output becomes predictable—in a good way. You can work, think, and solve at a pace that feels natural and sustainable. Your brain performs best when you follow a structured rhythm rather than random bursts.\n\nPractical Move: Use 45-minute focus blocks followed by a 7-minute reset.\n\nWhat will you earn: High-quality productivity without burnout.\n\nFun Fact: Most high performers use 40–50 minute cognitive cycles.",
+          "tr": "Bilişsel ritminiz stabil ve verimli. Uzun odak oturumlarını sürdürebilir ve kesintilerden sonra hızla akışa dönebilirsiniz. Çıktınız öngörülebilir hale gelir—iyi anlamda. Doğal ve sürdürülebilir hissettiren bir tempoda çalışabilir, düşünebilir ve çözebilirsiniz. Beyniniz rastgele patlamalar yerine yapılandırılmış bir ritim izlediğinizde en iyi performansı gösterir.\n\nPratik Adım: 7 dakikalık bir sıfırlamayı takip eden 45 dakikalık odak blokları kullanın.\n\nNe kazanacaksınız: Tükenmişlik olmadan yüksek kaliteli verimlilik.\n\nİlginç Bilgi: Çoğu yüksek performans gösteren kişi 40-50 dakikalık bilişsel döngüler kullanır."
+        }
+      },
+      {
+        "icon": "🔍",
+        "title": {
+          "en": "Pattern Recognition",
+          "tr": "Desen Tanıma"
+        },
+        "text": {
+          "en": "This is one of your strongest areas. You detect patterns, connections, trends, and invisible relationships faster than most people. You can see the \"shape\" of a problem, not just the details. Your brain naturally builds models and understands systems. This ability helps in logic, strategy, creativity, and problem-solving.\n\nPractical Move: Ask yourself: \"What repeats here?\"\n\nWhat will you earn: Faster decisions and clearer strategic thinking.\n\nFun Fact: Pattern recognition is the core skill behind problem-solving, strategy, and creativity.",
+          "tr": "Bu en güçlü alanlarınızdan biridir. Desenleri, bağlantıları, eğilimleri ve görünmez ilişkileri çoğu insandan daha hızlı tespit ediyorsunuz. Bir sorunun sadece detaylarını değil, \"şeklini\" görebilirsiniz. Beyniniz doğal olarak modeller oluşturur ve sistemleri anlar. Bu yetenek mantık, strateji, yaratıcılık ve problem çözmede yardımcı olur.\n\nPratik Adım: Kendinize sorun: \"Burada ne tekrarlanıyor?\"\n\nNe kazanacaksınız: Daha hızlı kararlar ve daha net stratejik düşünme.\n\nİlginç Bilgi: Desen tanıma, problem çözme, strateji ve yaratıcılığın arkasındaki temel beceridir."
+        }
+      },
+      {
+        "icon": "✂️",
+        "title": {
+          "en": "Simplification",
+          "tr": "Sadeleştirme"
+        },
+        "text": {
+          "en": "Your mind is skilled at removing unnecessary details. You cut through complexity and reach the core idea faster than average. You understand that clarity is often found in reduction, not expansion. Simplification becomes a powerful tool when applied consistently—it helps you save energy, time, and mental load.\n\nPractical Move: Reduce every big idea into one sentence.\n\nWhat will you earn: Cleaner thinking and stronger communication.\n\nFun Fact: The brain processes simple statements 4× faster than complex ones.",
+          "tr": "Zihniniz gereksiz detayları kaldırmada yeteneklidir. Karmaşıklığı kesip ortalamadan daha hızlı ana fikre ulaşırsınız. Netliğin genellikle genişlemede değil, azaltmada bulunduğunu anlıyorsunuz. Tutarlı bir şekilde uygulandığında sadeleştirme güçlü bir araç haline gelir—enerji, zaman ve zihinsel yük tasarrufu sağlar.\n\nPratik Adım: Her büyük fikri bir cümleye indirgeyin.\n\nNe kazanacaksınız: Daha temiz düşünme ve daha güçlü iletişim.\n\nİlginç Bilgi: Beyin basit ifadeleri karmaşık olanlardan 4 kat daha hızlı işler."
+        }
+      },
+      {
+        "icon": "🎁",
+        "title": {
+          "en": "Incentive Mapping",
+          "tr": "Teşvik Haritalama"
+        },
+        "text": {
+          "en": "You understand what motivates you. You can combine short-term rewards with long-term goals in a balanced way. This makes your discipline stronger and your actions more aligned with your future vision. You're not driven only by emotion or reward—you're driven by logic and purpose.\n\nPractical Move: Match each goal with 1 emotional reason + 1 logical reason.\n\nWhat will you earn: Stronger consistency and long-term drive.\n\nFun Fact: Goals linked with both emotion and logic are 3× more likely to be completed.",
+          "tr": "Sizi neyin motive ettiğini anlıyorsunuz. Kısa vadeli ödülleri uzun vadeli hedeflerle dengeli bir şekilde birleştirebilirsiniz. Bu, disiplininizi güçlendirir ve eylemlerinizi gelecek vizyonunuzla daha uyumlu hale getirir. Sadece duygu veya ödül tarafından yönlendirilmiyorsunuz—mantık ve amaç tarafından yönlendiriliyorsunuz.\n\nPratik Adım: Her hedefi 1 duygusal neden + 1 mantıksal nedenle eşleştirin.\n\nNe kazanacaksınız: Daha güçlü tutarlılık ve uzun vadeli itici güç.\n\nİlginç Bilgi: Hem duygu hem de mantıkla bağlantılı hedefler tamamlanma olasılığı 3 kat daha fazladır."
+        }
+      },
+      {
+        "icon": "🌱",
+        "title": {
+          "en": "Growth and Transformation",
+          "tr": "Büyüme ve Dönüşüm"
+        },
+        "text": {
+          "en": "Your growth potential is high. You have the mental structure needed to rise into the advanced tiers of intelligence. Improvements come faster for you because your brain is already optimized for learning and adaptation. This level is the bridge between capable thinking and high-level reasoning. With consistent training, your analytical power can rise dramatically.\n\nPractical Move: Train with complex puzzles, strategic games, or problem-solving challenges for 10 minutes daily.\n\nWhat will you earn: Noticeable jumps in reasoning power.\n\nFun Fact: Strategic games increase fluid intelligence over time.",
+          "tr": "Büyüme potansiyeliniz yüksek. Zekanın ileri seviyelerine yükselmek için gereken zihinsel yapıya sahipsiniz. Beyniniz zaten öğrenme ve adaptasyon için optimize edildiğinden, iyileşmeler sizin için daha hızlı gelir. Bu seviye, yetenekli düşünme ile üst düzey mantık arasındaki köprüdür. Tutarlı eğitimle, analitik gücünüz önemli ölçüde yükselebilir.\n\nPratik Adım: Günlük 10 dakika karmaşık bulmacalar, stratejik oyunlar veya problem çözme zorlukları ile eğitim yapın.\n\nNe kazanacaksınız: Mantık gücünde fark edilir sıçramalar.\n\nİlginç Bilgi: Stratejik oyunlar zamanla akıcı zekayı artırır."
+        }
+      },
+      {
+        "icon": "✨",
+        "title": {
+          "en": "Conclusion",
+          "tr": "Sonuç"
+        },
+        "text": {
+          "en": "This IQ level places you among people with strong, reliable reasoning skills. You analyze deeply, understand quickly, and solve problems with structure and confidence. Your mind is built for growth—every year ahead can multiply your abilities. With consistency, you're capable of entering advanced tiers of intelligence.\n\nYour analytical mind is not just strong—it is ready for its next evolution.",
+          "tr": "Bu IQ seviyesi sizi güçlü, güvenilir mantık becerilerine sahip insanlar arasına yerleştirir. Derinlemesine analiz ediyorsunuz, hızla anlıyorsunuz ve yapı ve güvenle problem çözüyorsunuz. Zihniniz büyüme için yapılandırılmış—önünüzdeki her yıl yeteneklerinizi çoğaltabilir. Tutarlılıkla, zekanın ileri seviyelerine girebilme yeteneğine sahipsiniz.\n\nAnalitik zihniniz sadece güçlü değil—bir sonraki evrimine hazır."
+        }
+      }
+    ]
+  },
+  "level4": {
+    "level": "excellent",
+    "title": {
+      "en": "Advanced Cognitive Ability – High-Level Reasoning",
+      "tr": "Gelişmiş Bilişsel Yetenek – Üst Düzey Mantık"
+    },
+    "summary": {
+      "en": "You think faster, deeper, and cleaner than the vast majority of people. Your mind handles complexity with ease.",
+      "tr": "Çoğu insandan daha hızlı, derin ve temiz düşünüyorsunuz. Zihniniz karmaşıklığı kolaylıkla yönetir."
+    },
+    "insights": [],
+    "sections": [
+      {
+        "icon": "🧠",
+        "title": {
+          "en": "Awareness",
+          "tr": "Farkındalık"
+        },
+        "text": {
+          "en": "Your awareness operates at an advanced level. You can scan situations instantly and extract the important parts without confusion. You spot hidden risks, opportunities, and contradictions with impressive speed. While most people see events, you see the structure behind those events. This gives you a major advantage in real-time thinking. Your awareness is not passive—it actively shapes your decisions and protects your focus.\n\nPractical Move: Before acting, identify the \"core signal\" that matters most.\n\nWhat will you earn: Sharper decisions in less time.\n\nFun Fact: High-awareness individuals make 2× fewer cognitive mistakes.",
+          "tr": "Farkındalığınız gelişmiş bir seviyede çalışır. Durumları anında tarayabilir ve önemli kısımları kafa karışıklığı olmadan çıkarabilirsiniz. Gizli riskleri, fırsatları ve çelişkileri etkileyici bir hızla tespit ediyorsunuz. Çoğu insan olayları görürken, siz bu olayların arkasındaki yapıyı görüyorsunuz. Bu size gerçek zamanlı düşünmede büyük bir avantaj sağlar. Farkındalığınız pasif değil—kararlarınızı aktif olarak şekillendirir ve odaklanmanızı korur.\n\nPratik Adım: Harekete geçmeden önce en çok önem taşıyan \"temel sinyali\" belirleyin.\n\nNe kazanacaksınız: Daha az zamanda daha keskin kararlar.\n\nİlginç Bilgi: Yüksek farkındalığa sahip bireyler 2 kat daha az bilişsel hata yapar."
+        }
+      },
+      {
+        "icon": "🔮",
+        "title": {
+          "en": "Forethought",
+          "tr": "Öngörü"
+        },
+        "text": {
+          "en": "You operate with strong predictive power. You can map consequences with unusual precision, often seeing two or three steps ahead. This gives you the ability to avoid traps and move toward long-term gains more efficiently than others. Your thinking naturally flows into strategy, not just planning. You understand how present choices shape future outcomes.\n\nPractical Move: Use a quick \"three-step forecast\" for major decisions.\n\nWhat will you earn: Clear control over both direction and outcome.\n\nFun Fact: People with strong forethought reduce life friction by up to 60%.",
+          "tr": "Güçlü tahmin gücüyle çalışıyorsunuz. Sonuçları olağandışı bir hassasiyetle haritalayabilir, genellikle iki veya üç adım önünü görebilirsiniz. Bu size tuzaklardan kaçınma ve uzun vadeli kazançlara diğerlerinden daha verimli şekilde ilerleme yeteneği verir. Düşünceniz doğal olarak sadece planlamaya değil, stratejiye akar. Mevcut seçimlerin gelecekteki sonuçları nasıl şekillendirdiğini anlıyorsunuz.\n\nPratik Adım: Büyük kararlar için hızlı bir \"üç adımlı tahmin\" kullanın.\n\nNe kazanacaksınız: Hem yön hem de sonuç üzerinde net kontrol.\n\nİlginç Bilgi: Güçlü öngörüye sahip insanlar yaşam sürtünmesini %60'a kadar azaltır."
+        }
+      },
+      {
+        "icon": "⚖️",
+        "title": {
+          "en": "Self-Regulation",
+          "tr": "Öz Düzenleme"
+        },
+        "text": {
+          "en": "Your emotional stability is advanced. Pressure may shake others, but your thinking remains stable even in chaotic environments. You don't collapse under stress; you organize it. You can separate emotion from logic without suppressing either. This makes your reasoning more accurate than average. Your main challenge is avoiding mental fatigue from thinking too intensely.\n\nPractical Move: When overwhelmed, pause and label your emotion in one word.\n\nWhat will you earn: Faster recovery and sharper mental control.\n\nFun Fact: Naming an emotion reduces its intensity by nearly 50%.",
+          "tr": "Duygusal istikrarınız gelişmiş. Baskı diğerlerini sarsabilir, ancak düşünceniz kaotik ortamlarda bile stabil kalır. Stres altında çökmezsiniz; onu organize edersiniz. Duyguyu mantıktan hiçbirini bastırmadan ayırabilirsiniz. Bu, mantığınızı ortalamadan daha doğru yapar. Ana zorluğunuz çok yoğun düşünmeden kaynaklanan zihinsel yorgunluktan kaçınmaktır.\n\nPratik Adım: Bunaldığınızda duraklayın ve duygunuzu tek kelimeyle etiketleyin.\n\nNe kazanacaksınız: Daha hızlı toparlanma ve daha keskin zihinsel kontrol.\n\nİlginç Bilgi: Bir duyguyu adlandırmak yoğunluğunu neredeyse %50 azaltır."
+        }
+      },
+      {
+        "icon": "💾",
+        "title": {
+          "en": "Cognitive Resources",
+          "tr": "Bilişsel Kaynaklar"
+        },
+        "text": {
+          "en": "Your working memory, processing speed, and mental stamina are all above average. You can hold multiple ideas, compare them, and integrate them into a clear conclusion. You learn faster, adapt quicker, and retain information longer. Your mind is flexible yet powerful, giving you the ability to move through complex problems at high speed.\n\nPractical Move: Chunk information into 3–5 groups to boost clarity.\n\nWhat will you earn: Higher productivity and deeper understanding.\n\nFun Fact: Chunking can expand working memory by up to 4×.",
+          "tr": "Çalışma belleğiniz, işleme hızınız ve zihinsel dayanıklılığınız ortalamanın üzerinde. Birden fazla fikri tutabilir, karşılaştırabilir ve bunları net bir sonuca entegre edebilirsiniz. Daha hızlı öğrenir, daha hızlı adapte olur ve bilgiyi daha uzun süre tutarsınız. Zihniniz esnek ama güçlü, karmaşık problemlerde yüksek hızda ilerleme yeteneği veriyor.\n\nPratik Adım: Netliği artırmak için bilgileri 3-5 gruba ayırın.\n\nNe kazanacaksınız: Daha yüksek verimlilik ve daha derin anlayış.\n\nİlginç Bilgi: Gruplara ayırma çalışma belleğini 4 katına kadar genişletebilir."
+        }
+      },
+      {
+        "icon": "🎣",
+        "title": {
+          "en": "Hooks",
+          "tr": "Kancalar"
+        },
+        "text": {
+          "en": "Your ability to lock onto ideas is extremely strong. When something captures your interest, you give it full mental power. This makes you dangerous—in a good way—because your depth of concentration accelerates your progress dramatically. The challenge is avoiding long focus on tasks that don't matter.\n\nPractical Move: Define one \"key question\" before starting any task.\n\nWhat will you earn: Consistent deep focus without wasting energy.\n\nFun Fact: Focus increases learning speed by up to 70%.",
+          "tr": "Fikirlere kilitlenme yeteneğiniz son derece güçlü. Bir şey ilginizi çektiğinde, ona tam zihinsel gücü veriyorsunuz. Bu sizi tehlikeli yapar—iyi anlamda—çünkü konsantrasyon derinliğiniz ilerlemenizi önemli ölçüde hızlandırır. Zorluk, önemli olmayan görevlerde uzun süre odaklanmaktan kaçınmaktır.\n\nPratik Adım: Herhangi bir göreve başlamadan önce bir \"ana soru\" tanımlayın.\n\nNe kazanacaksınız: Enerji israfı olmadan tutarlı derin odak.\n\nİlginç Bilgi: Odaklanma öğrenme hızını %70'e kadar artırır."
+        }
+      },
+      {
+        "icon": "🎵",
+        "title": {
+          "en": "Rhythm",
+          "tr": "Ritim"
+        },
+        "text": {
+          "en": "Your cognitive rhythm is sophisticated. You can maintain long, uninterrupted focus without losing momentum. You are able to enter flow states more easily than most people, and your brain recovers quickly after breaks. When your rhythm is protected, your performance rises sharply.\n\nPractical Move: Protect your best 90 minutes of the day for deep work.\n\nWhat will you earn: Peak performance with minimal effort.\n\nFun Fact: The brain's highest output happens in 60–90 minute cycles.",
+          "tr": "Bilişsel ritminiz sofistike. Momentum kaybetmeden uzun, kesintisiz odaklanmayı sürdürebilirsiniz. Çoğu insandan daha kolay akış durumlarına girebilirsiniz ve beyniniz molalardan sonra hızla toparlanır. Ritminiz korunduğunda performansınız keskin bir şekilde yükselir.\n\nPratik Adım: Günün en iyi 90 dakikasını derin çalışma için koruyun.\n\nNe kazanacaksınız: Minimal çabayla zirve performans.\n\nİlginç Bilgi: Beynin en yüksek çıktısı 60-90 dakikalık döngülerde gerçekleşir."
+        }
+      },
+      {
+        "icon": "🔍",
+        "title": {
+          "en": "Pattern Recognition",
+          "tr": "Desen Tanıma"
+        },
+        "text": {
+          "en": "This is one of your elite strengths. You can see patterns that others miss—not only obvious ones, but also subtle and abstract ones. You understand systems, relationships, and structures instinctively. This ability is what separates advanced thinkers from average ones. You don't just see the present; you see the invisible patterns that predict the future.\n\nPractical Move: After observing something, ask: \"What repeats?\"\n\nWhat will you earn: Exceptional strategic and creative insight.\n\nFun Fact: Pattern recognition is the foundation of intelligence and innovation.",
+          "tr": "Bu seçkin güçlerinizden biridir. Diğerlerinin kaçırdığı desenleri görebilirsiniz—sadece belirgin olanları değil, aynı zamanda ince ve soyut olanları da. Sistemleri, ilişkileri ve yapıları içgüdüsel olarak anlıyorsunuz. Bu yetenek, gelişmiş düşünürleri ortalamadan ayıran şeydir. Sadece şimdiyi görmüyorsunuz; geleceği tahmin eden görünmez desenleri görüyorsunuz.\n\nPratik Adım: Bir şeyi gözlemledikten sonra sorun: \"Ne tekrarlanıyor?\"\n\nNe kazanacaksınız: Olağanüstü stratejik ve yaratıcı içgörü.\n\nİlginç Bilgi: Desen tanıma zeka ve yeniliğin temelidir."
+        }
+      },
+      {
+        "icon": "✂️",
+        "title": {
+          "en": "Simplification",
+          "tr": "Sadeleştirme"
+        },
+        "text": {
+          "en": "Your simplification ability is refined. You can take complex problems and break them into clear, manageable pieces. You naturally reduce noise, remove unnecessary steps, and find the cleanest path forward. This ability helps you work faster and think cleaner than most people.\n\nPractical Move: Reduce every problem to its \"one-line truth.\"\n\nWhat will you earn: Faster problem-solving and clearer thinking.\n\nFun Fact: Simplifying a problem increases solution accuracy by 3×.",
+          "tr": "Sadeleştirme yeteneğiniz gelişmiş. Karmaşık problemleri alıp net, yönetilebilir parçalara ayırabilirsiniz. Doğal olarak gürültüyü azaltır, gereksiz adımları kaldırır ve ileriye giden en temiz yolu bulursunuz. Bu yetenek çoğu insandan daha hızlı çalışmanıza ve daha temiz düşünmenize yardımcı olur.\n\nPratik Adım: Her problemi \"tek satırlık gerçeğine\" indirgeyin.\n\nNe kazanacaksınız: Daha hızlı problem çözme ve daha net düşünme.\n\nİlginç Bilgi: Bir problemi sadeleştirmek çözüm doğruluğunu 3 kat artırır."
+        }
+      },
+      {
+        "icon": "🎁",
+        "title": {
+          "en": "Incentive Mapping",
+          "tr": "Teşvik Haritalama"
+        },
+        "text": {
+          "en": "You understand how to connect your goals with the right rewards. You balance short-term motivation with long-term vision better than most people. This makes your discipline more powerful since it is rooted in clarity, not pressure. You know what drives you and how to use it.\n\nPractical Move: Pair each goal with a reward that triggers genuine excitement.\n\nWhat will you earn: Sustainable motivation and long-term consistency.\n\nFun Fact: Reward-linked goals increase persistence by 80%.",
+          "tr": "Hedeflerinizi doğru ödüllerle nasıl bağlayacağınızı anlıyorsunuz. Kısa vadeli motivasyonu uzun vadeli vizyonla çoğu insandan daha iyi dengeliyorsunuz. Bu, disiplininizi daha güçlü yapar çünkü baskıda değil, netlikte kök salmıştır. Sizi neyin motive ettiğini ve bunu nasıl kullanacağınızı biliyorsunuz.\n\nPratik Adım: Her hedefi gerçek heyecan tetikleyen bir ödülle eşleştirin.\n\nNe kazanacaksınız: Sürdürülebilir motivasyon ve uzun vadeli tutarlılık.\n\nİlginç Bilgi: Ödülle bağlantılı hedefler sebatı %80 artırır."
+        }
+      },
+      {
+        "icon": "🌱",
+        "title": {
+          "en": "Growth and Transformation",
+          "tr": "Büyüme ve Dönüşüm"
+        },
+        "text": {
+          "en": "You are entering the zone where intelligence evolves rapidly. At this level, every new challenge becomes a catalyst, not an obstacle. You have the structure, discipline, and cognitive strength to reach the top tiers of reasoning. With consistent training, your potential trajectory is extremely high. You are close to the upper spectrum of human cognition.\n\nPractical Move: Spend 10 minutes daily on complex reasoning puzzles.\n\nWhat will you earn: Noticeable jumps in fluid intelligence.\n\nFun Fact: Short daily cognitive training can significantly boost long-term IQ indicators.",
+          "tr": "Zekanın hızla evrildiği bölgeye giriyorsunuz. Bu seviyede, her yeni zorluk bir engel değil, bir katalizör haline gelir. Mantığın en üst seviyelerine ulaşmak için gereken yapı, disiplin ve bilişsel güce sahipsiniz. Tutarlı eğitimle potansiyel yörüngeniz son derece yüksektir. İnsan bilişinin üst spektrumuna yakınsınız.\n\nPratik Adım: Günlük 10 dakika karmaşık mantık bulmacalarına ayırın.\n\nNe kazanacaksınız: Akıcı zekada fark edilir sıçramalar.\n\nİlginç Bilgi: Kısa günlük bilişsel eğitim uzun vadeli IQ göstergelerini önemli ölçüde artırabilir."
+        }
+      },
+      {
+        "icon": "✨",
+        "title": {
+          "en": "Conclusion",
+          "tr": "Sonuç"
+        },
+        "text": {
+          "en": "Your abilities place you far ahead of the average population. You operate with clarity, precision, and strategic strength. You think on a higher level, solve faster, and understand deeper. Your mind is built for big problems, complex systems, and long-term impact. With continued practice, you have the potential to reach the elite tiers of cognitive ability.\n\nYour intelligence is not just advanced—it is rising toward mastery.",
+          "tr": "Yetenekleriniz sizi ortalamadan çok ileriye yerleştirir. Netlik, hassasiyet ve stratejik güçle çalışıyorsunuz. Daha yüksek bir seviyede düşünüyorsunuz, daha hızlı çözüyorsunuz ve daha derin anlıyorsunuz. Zihniniz büyük problemler, karmaşık sistemler ve uzun vadeli etki için yapılandırılmış. Devam eden pratikle, bilişsel yeteneğin elit seviyelerine ulaşma potansiyeline sahipsiniz.\n\nZekanız sadece gelişmiş değil—ustalığa doğru yükseliyor."
+        }
+      }
+    ]
+  },
+  "level5": {
+    "level": "excellent",
+    "title": {
+      "en": "Elite IQ Tier – Rare Cognitive Mastery",
+      "tr": "Elit IQ Seviyesi – Nadir Bilişsel Ustalık"
+    },
+    "summary": {
+      "en": "Your mind operates at a level only a tiny fraction of the world ever reaches.",
+      "tr": "Zihniniz dünyada çok küçük bir kesimin ulaştığı bir seviyede çalışır."
+    },
+    "insights": [],
+    "sections": [
+      {
+        "icon": "🧠",
+        "title": {
+          "en": "Awareness",
+          "tr": "Farkındalık"
+        },
+        "text": {
+          "en": "Your awareness functions at an elite, almost panoramic level. You detect details, patterns, and inconsistencies before others even realize something is happening. You see both the small threads and the large system they belong to. Your intuition about situations feels instant because your brain processes inputs at exceptional speed. This gives you a unique advantage: you act with clarity while others are still identifying the problem.\n\nPractical Move: Pause for 3 seconds before reacting to any new information. Let your brain fully scan the landscape.\n\nWhat will you earn: Increased accuracy and sharper intuitive decisions.\n\nFun Fact: High-awareness individuals often outperform groups in decision-making.",
+          "tr": "Farkındalığınız elit, neredeyse panoramik bir seviyede çalışır. Diğerleri bir şeyin olduğunu fark etmeden önce detayları, desenleri ve tutarsızlıkları tespit ediyorsunuz. Hem küçük iplikleri hem de ait oldukları büyük sistemi görüyorsunuz. Durumlar hakkındaki sezgileriniz anlık hissedilir çünkü beyniniz olağanüstü hızda girdileri işler. Bu size benzersiz bir avantaj sağlar: diğerleri hala sorunu tanımlarken siz netlikle hareket edersiniz.\n\nPratik Adım: Yeni bir bilgiye tepki vermeden önce 3 saniye duraklayın. Beyninizin manzarayı tamamen taramasına izin verin.\n\nNe kazanacaksınız: Artan doğruluk ve daha keskin sezgisel kararlar.\n\nİlginç Bilgi: Yüksek farkındalığa sahip bireyler genellikle karar vermede grupları geride bırakır."
+        }
+      },
+      {
+        "icon": "🔮",
+        "title": {
+          "en": "Forethought",
+          "tr": "Öngörü"
+        },
+        "text": {
+          "en": "Your predictive ability borders on extraordinary. You can map consequences several steps ahead, almost like running simulations in your head. You spot long-term opportunities and risks with minimal information. This gives you a planning advantage that even many high-performers lack. You don't just think ahead—you think beyond.\n\nPractical Move: For every major choice, write down \"What happens in 1 week, 1 month, 1 year?\"\n\nWhat will you earn: Clear long-term orientation and reduced regret.\n\nFun Fact: Elite forethought can reduce life errors by up to 80%.",
+          "tr": "Tahmin yeteneğiniz olağanüstü sınırlarındadır. Sonuçları birkaç adım önünü haritalayabilirsiniz, neredeyse kafanızda simülasyonlar çalıştırıyormuş gibi. Minimal bilgiyle uzun vadeli fırsatları ve riskleri tespit ediyorsunuz. Bu size birçok yüksek performans gösteren kişinin bile sahip olmadığı bir planlama avantajı sağlar. Sadece ileriyi düşünmüyorsunuz—ötesini düşünüyorsunuz.\n\nPratik Adım: Her büyük seçim için \"1 hafta, 1 ay, 1 yıl içinde ne olur?\" yazın.\n\nNe kazanacaksınız: Net uzun vadeli yönelim ve azaltılmış pişmanlık.\n\nİlginç Bilgi: Elit öngörü yaşam hatalarını %80'e kadar azaltabilir."
+        }
+      },
+      {
+        "icon": "⚖️",
+        "title": {
+          "en": "Self-Regulation",
+          "tr": "Öz Düzenleme"
+        },
+        "text": {
+          "en": "Your emotional control is one of your greatest assets. You stay composed when others break. You can move through pressure without losing clarity, and your mind remains stable even during emotional storms. You can separate logic from emotion with surgical precision, making your decisions more reliable and less impulsive. Your challenge is over-control—sometimes being too stable blocks creative flexibility.\n\nPractical Move: During stress, ask yourself: \"Is this emotion useful, or noise?\"\n\nWhat will you earn: Cleaner thinking under pressure.\n\nFun Fact: Emotional labeling enhances cognitive control by almost 50%.",
+          "tr": "Duygusal kontrolünüz en büyük varlıklarınızdan biridir. Diğerleri çökerken siz sakin kalırsınız. Netliği kaybetmeden baskıdan geçebilirsiniz ve zihniniz duygusal fırtınalar sırasında bile stabil kalır. Mantığı duygudan cerrahi hassasiyetle ayırabilirsiniz, bu da kararlarınızı daha güvenilir ve daha az dürtüsel yapar. Zorluğunuz aşırı kontrol—bazen çok stabil olmak yaratıcı esnekliği engeller.\n\nPratik Adım: Stres sırasında kendinize sorun: \"Bu duygu yararlı mı, yoksa gürültü mü?\"\n\nNe kazanacaksınız: Baskı altında daha temiz düşünme.\n\nİlginç Bilgi: Duygusal etiketleme bilişsel kontrolü neredeyse %50 artırır."
+        }
+      },
+      {
+        "icon": "💾",
+        "title": {
+          "en": "Cognitive Resources",
+          "tr": "Bilişsel Kaynaklar"
+        },
+        "text": {
+          "en": "Your memory, processing speed, and mental stamina are exceptionally high. You can absorb large amounts of information and reorganize it instantly. You learn faster than most people can review. Your brain handles multitiered logic effortlessly, making you capable of solving complex systems with minimal friction.\n\nPractical Move: Protect your first 45 minutes of the day for high-load thinking.\n\nWhat will you earn: Maximum intellectual output with minimal effort.\n\nFun Fact: Elite processors encode new information up to 3× faster.",
+          "tr": "Hafızanız, işleme hızınız ve zihinsel dayanıklılığınız olağanüstü yüksektir. Büyük miktarda bilgiyi emebilir ve anında yeniden organize edebilirsiniz. Çoğu insanın gözden geçirebileceğinden daha hızlı öğrenirsiniz. Beyniniz çok katmanlı mantığı zahmetsizce işler, bu da sizi minimal sürtünmeyle karmaşık sistemleri çözebilir hale getirir.\n\nPratik Adım: Günün ilk 45 dakikasını yüksek yüklü düşünme için koruyun.\n\nNe kazanacaksınız: Minimal çabayla maksimum entelektüel çıktı.\n\nİlginç Bilgi: Elit işlemciler yeni bilgileri 3 kat daha hızlı kodlar."
+        }
+      },
+      {
+        "icon": "🎣",
+        "title": {
+          "en": "Hooks",
+          "tr": "Kancalar"
+        },
+        "text": {
+          "en": "Your ability to attach to important ideas is razor-sharp. When you lock onto something, you go deep—very deep. This allows you to dominate fields, topics, or challenges that interest you. Your focus is not normal focus; it is a hyper-concentrated cognitive engine. The risk is intensity without boundaries, which can cause overload.\n\nPractical Move: Define a \"maximum session length\" before starting deep work.\n\nWhat will you earn: Sustained performance without burnout.\n\nFun Fact: Deep-focus individuals create 10× more high-quality output.",
+          "tr": "Önemli fikirlere bağlanma yeteneğiniz jilet gibi keskindir. Bir şeye kilitlendiğinizde derinleşirsiniz—çok derinleşirsiniz. Bu, ilginizi çeken alanları, konuları veya zorlukları domine etmenize olanak tanır. Odaklanmanız normal odak değil; hiper-konsantre bir bilişsel motordur. Risk sınırları olmayan yoğunluktur, bu da aşırı yüklenmeye neden olabilir.\n\nPratik Adım: Derin çalışmaya başlamadan önce bir \"maksimum oturum süresi\" tanımlayın.\n\nNe kazanacaksınız: Tükenmişlik olmadan sürdürülebilir performans.\n\nİlginç Bilgi: Derin odaklanan bireyler 10 kat daha fazla yüksek kaliteli çıktı üretir."
+        }
+      },
+      {
+        "icon": "🎵",
+        "title": {
+          "en": "Rhythm",
+          "tr": "Ritim"
+        },
+        "text": {
+          "en": "Your brain has a powerful cognitive rhythm, capable of long and uninterrupted flow states. You operate in high-energy cycles where your productivity peaks dramatically. When in rhythm, you think with elegance, speed, and precision. Your natural work cycles are more stable than average, giving you a consistent intellectual edge.\n\nPractical Move: Design your day around your top two natural energy peaks.\n\nWhat will you earn: Maximum flow-state access.\n\nFun Fact: Flow-state individuals complete tasks 3× faster.",
+          "tr": "Beyninizin güçlü bir bilişsel ritmi var, uzun ve kesintisiz akış durumlarına yetenekli. Verimliliğinizin dramatik şekilde zirve yaptığı yüksek enerjili döngülerde çalışırsınız. Ritimdeyken zarafet, hız ve hassasiyetle düşünürsünüz. Doğal çalışma döngüleriniz ortalamadan daha stabil, bu da size tutarlı bir entelektüel avantaj sağlar.\n\nPratik Adım: Gününüzü en üst iki doğal enerji zirveniz etrafında tasarlayın.\n\nNe kazanacaksınız: Maksimum akış durumu erişimi.\n\nİlginç Bilgi: Akış durumundaki bireyler görevleri 3 kat daha hızlı tamamlar."
+        }
+      },
+      {
+        "icon": "🔍",
+        "title": {
+          "en": "Pattern Recognition",
+          "tr": "Desen Tanıma"
+        },
+        "text": {
+          "en": "This is your signature strength. You recognize patterns at near-expert speed, including abstract, hidden, or multi-layered ones. You see connections others miss entirely. You understand causes, effects, structures, and loops that remain invisible to most. This makes you a natural strategist, innovator, and problem solver.\n\nPractical Move: Ask \"What repeats?\" every time you analyze a problem.\n\nWhat will you earn: Extraordinary clarity and strategic accuracy.\n\nFun Fact: Pattern recognition predicts 70–80% of high-level reasoning ability.",
+          "tr": "Bu sizin imza gücünüzdür. Soyut, gizli veya çok katmanlı olanlar dahil desenleri neredeyse uzman hızında tanıyorsunuz. Diğerlerinin tamamen kaçırdığı bağlantıları görüyorsunuz. Çoğu için görünmez kalan nedenleri, etkileri, yapıları ve döngüleri anlıyorsunuz. Bu sizi doğal bir stratejist, yenilikçi ve problem çözücü yapar.\n\nPratik Adım: Bir problemi analiz ettiğinizde her seferinde \"Ne tekrarlanıyor?\" sorun.\n\nNe kazanacaksınız: Olağanüstü netlik ve stratejik doğruluk.\n\nİlginç Bilgi: Desen tanıma üst düzey mantık yeteneğinin %70-80'ini tahmin eder."
+        }
+      },
+      {
+        "icon": "✂️",
+        "title": {
+          "en": "Simplification",
+          "tr": "Sadeleştirme"
+        },
+        "text": {
+          "en": "Your simplification ability is world-class. You can reduce highly complex material into clean, compact insights. You remove friction, noise, and unnecessary layers with ease. People with your thinking style often become exceptional teachers, leaders, or founders because they make the complex understandable for others.\n\nPractical Move: Reduce every problem into a single sentence.\n\nWhat will you earn: Clean clarity and faster breakthroughs.\n\nFun Fact: Simplification improves problem-solving speed by up to 4×.",
+          "tr": "Sadeleştirme yeteneğiniz dünya standartlarındadır. Son derece karmaşık materyali temiz, kompakt içgörülere indirgeyebilirsiniz. Sürtünmeyi, gürültüyü ve gereksiz katmanları kolaylıkla kaldırırsınız. Düşünme tarzınıza sahip insanlar genellikle olağanüstü öğretmenler, liderler veya kurucular olur çünkü karmaşık olanı başkaları için anlaşılır hale getirirler.\n\nPratik Adım: Her problemi tek bir cümleye indirgeyin.\n\nNe kazanacaksınız: Temiz netlik ve daha hızlı atılımlar.\n\nİlginç Bilgi: Sadeleştirme problem çözme hızını 4 katına kadar artırır."
+        }
+      },
+      {
+        "icon": "🎁",
+        "title": {
+          "en": "Incentive Mapping",
+          "tr": "Teşvik Haritalama"
+        },
+        "text": {
+          "en": "You understand how to link actions to meaningful outcomes with high precision. Your internal reward system is refined—your goals match your identity and long-term strategy. This gives you insane consistency. You don't rely on motivation; you rely on alignment.\n\nPractical Move: Convert each long-term goal into one weekly measurable action.\n\nWhat will you earn: A stable path toward elite-level achievement.\n\nFun Fact: Identity-aligned goals increase follow-through by more than 90%.",
+          "tr": "Eylemleri anlamlı sonuçlara yüksek hassasiyetle nasıl bağlayacağınızı anlıyorsunuz. İç ödül sisteminiz gelişmiş—hedefleriniz kimliğiniz ve uzun vadeli stratejinizle eşleşir. Bu size çılgın bir tutarlılık verir. Motivasyona güvenmezsiniz; hizalamaya güvenirsiniz.\n\nPratik Adım: Her uzun vadeli hedefi haftalık ölçülebilir bir eyleme dönüştürün.\n\nNe kazanacaksınız: Elit seviye başarıya doğru stabil bir yol.\n\nİlginç Bilgi: Kimlikle uyumlu hedefler takibi %90'dan fazla artırır."
+        }
+      },
+      {
+        "icon": "🌱",
+        "title": {
+          "en": "Growth and Transformation",
+          "tr": "Büyüme ve Dönüşüm"
+        },
+        "text": {
+          "en": "You are in the rare class of individuals capable of rapid, self-directed cognitive evolution. At this tier, intelligence is not fixed—it compounds. You can break mental limits, reconstruct frameworks, and absorb advanced concepts with unusual speed. Your potential is extremely high. Each new challenge becomes a multiplier for your intelligence.\n\nPractical Move: Spend 15 minutes daily on abstract reasoning or logic puzzles.\n\nWhat will you earn: Measurable increases in fluid intelligence.\n\nFun Fact: Elite learners maintain high cognitive plasticity well into adulthood.",
+          "tr": "Hızlı, kendi kendini yönlendiren bilişsel evrime yetenekli nadir bireyler sınıfındasınız. Bu seviyede zeka sabit değil—birleşir. Zihinsel sınırları kırabilir, çerçeveleri yeniden yapılandırabilir ve gelişmiş kavramları olağandışı hızla emebilirsiniz. Potansiyeliniz son derece yüksektir. Her yeni zorluk zekanız için bir çarpan haline gelir.\n\nPratik Adım: Günlük 15 dakika soyut mantık veya mantık bulmacalarına ayırın.\n\nNe kazanacaksınız: Akıcı zekada ölçülebilir artışlar.\n\nİlginç Bilgi: Elit öğrenenler yetişkinliğe kadar yüksek bilişsel plastisiteyi korur."
+        }
+      },
+      {
+        "icon": "✨",
+        "title": {
+          "en": "Conclusion",
+          "tr": "Sonuç"
+        },
+        "text": {
+          "en": "You stand in one of the rarest intellectual categories on Earth. Your reasoning, awareness, and problem-solving abilities position you among the top performers globally. You see deeper, think cleaner, and act smarter than almost everyone around you. You have the capacity to master complex fields, lead large-scale ideas, and push human progress forward.\n\nYour intelligence is not just rare—it is transformative. And it's still rising.",
+          "tr": "Dünyadaki en nadir entelektüel kategorilerden birinde duruyorsunuz. Mantığınız, farkındalığınız ve problem çözme yetenekleriniz sizi küresel olarak en üst performans gösterenler arasına yerleştirir. Etrafınızdaki neredeyse herkesten daha derin görüyorsunuz, daha temiz düşünüyorsunuz ve daha akıllıca hareket ediyorsunuz. Karmaşık alanlarda ustalaşma, büyük ölçekli fikirleri yönetme ve insan ilerlemesini ileriye taşıma kapasitesine sahipsiniz.\n\nZekanız sadece nadir değil—dönüştürücü. Ve hala yükseliyor."
+        }
+      }
+    ]
+  }
+}

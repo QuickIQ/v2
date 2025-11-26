@@ -254,26 +254,22 @@ function Home() {
           <div
             className="test-cards-container-fade-in"
             style={{
-              display: 'grid',
-              gridTemplateColumns: isMobile 
-                ? 'repeat(2, minmax(0, 1fr))' 
-                : 'repeat(2, minmax(0, 1fr))',
-              gridAutoRows: '1fr',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
               gap: isMobile ? '12px' : '10px',
-              maxWidth: 'none',
+              maxWidth: isMobile ? 'none' : '1200px',
               marginLeft: 'auto',
               marginRight: 'auto',
               marginTop: isMobile ? '32px' : '48px',
-              marginBottom: isMobile ? '48px' : '64px',
-              padding: isMobile ? '0' : '0',
-              alignItems: 'stretch',
-              justifyItems: 'stretch',
+              marginBottom: 0,
+              padding: isMobile ? '0' : '0 20px',
             }}
           >
-            <div id="iq-test-section">
+            <div id="iq-test-section" style={{ flex: '0 1 auto' }}>
               <TestCard test={iqTestConfig} index={0} />
             </div>
-            <div id="personality-test-section">
+            <div id="personality-test-section" style={{ flex: '0 1 auto' }}>
               <TestCard test={personalityTestConfig} index={1} />
             </div>
           </div>

@@ -37,6 +37,146 @@ body {
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
+/* Hide scrollbar on landing pages */
+body.landing-page-no-scrollbar::-webkit-scrollbar,
+html.landing-page-no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body.landing-page-no-scrollbar,
+html.landing-page-no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-y: auto; /* Allow scrolling but hide scrollbar */
+}
+
+/* 3D Card Styles for IQ Test */
+.iq-test-3d-wrap {
+  position: relative;
+  perspective: 600px;
+  height: 100%;
+  width: 100%;
+  overflow: visible !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  contain: layout style paint;
+  isolation: isolate;
+}
+
+.iq-test-card-shadow {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
+  position: absolute;
+  border-radius: 10px;
+  top: 10px;
+  left: calc(50% + 12px);
+  transform: translateX(-50%) translateY(12px) translateZ(40px) scale(0.5, 0.5);
+  background: #B3B3B3;
+  box-shadow: 0 0 30px 10px #aaa;
+  pointer-events: none;
+  transform-origin: center center;
+}
+
+.iq-test-card {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+  position: relative;
+  border-radius: 10px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  will-change: transform;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  overflow: visible !important;
+  contain: none;
+}
+
+@media (max-width: 768px) {
+  .iq-test-card-shadow,
+  .iq-test-card {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+  }
+}
+
+.iq-test-card-shine {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: 1;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+}
+
+
+.iq-test-card-front {
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.iq-test-card-title,
+.iq-test-card-subtitle {
+  position: absolute;
+  color: #FFF;
+  transform-style: preserve-3d;
+}
+
+.iq-test-card-title {
+  font-weight: 700;
+  text-align: left;
+  left: 30px;
+  bottom: 140px;
+  font-size: 35px;
+  line-height: 30px;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.65);
+  transform: translateZ(0px);
+  overflow: hidden;
+  margin: 0;
+  width: 80%;
+}
+
+.iq-test-card-subtitle {
+  font-weight: normal;
+  text-align: left;
+  left: 30px;
+  width: 80%;
+  bottom: 80px;
+  font-size: 25px;
+  line-height: 20px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+  transform: translateZ(0px);
+}
+
+.iq-test-question-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -539,5 +679,28 @@ body {
     transform: scale(var(--ripple-scale, 4));
     opacity: 0;
   }
+}
+
+/* Loading Bar Animation for ANALYZING */
+@keyframes loadingBar {
+  0% { 
+    height: 30%; 
+  }
+  40%, 70% { 
+    height: 100%; 
+  }
+  100% { 
+    height: 30%; 
+  }
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
 }
 

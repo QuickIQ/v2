@@ -18,8 +18,8 @@ export const env = {
   STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || '',
   STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET || '',
 
-  // CORS
-  CORS_ORIGIN: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  // CORS - Support multiple origins (comma-separated)
+  CORS_ORIGIN: process.env.CORS_ORIGIN || 'http://localhost:3000,http://localhost:5173,http://localhost:5174',
 };
 
 // Validate required environment variables

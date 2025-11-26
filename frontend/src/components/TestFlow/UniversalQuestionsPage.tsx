@@ -48,6 +48,17 @@ export default function UniversalQuestionsPage({
     setQuestionKey(currentQuestionIndex);
   }, [currentQuestionIndex, currentAnswer]);
 
+  // Hide scrollbar on questions page
+  useEffect(() => {
+    document.body.classList.add('landing-page-no-scrollbar');
+    document.documentElement.classList.add('landing-page-no-scrollbar');
+    
+    return () => {
+      document.body.classList.remove('landing-page-no-scrollbar');
+      document.documentElement.classList.remove('landing-page-no-scrollbar');
+    };
+  }, []);
+
   useEffect(() => {
     if (timerIntervalRef.current) {
       clearInterval(timerIntervalRef.current);

@@ -16,7 +16,7 @@ export function Header() {
   const isHomePage = location.pathname === '/';
   const { i18n } = useTranslation();
   const language = i18n.language as 'en' | 'tr';
-
+  
   // Get 5 main categories from categories.json
   const testCategories = useMemo(() => {
     return categoriesData.categories
@@ -95,6 +95,18 @@ export function Header() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [testsMenuOpen]);
+
+  // Hide header on Universal landing pages (test landing pages)
+  const isUniversalLandingPage = location.pathname.startsWith('/test/') && 
+    !location.pathname.includes('/payment') && 
+    !location.pathname.includes('/checkout') && 
+    !location.pathname.includes('/unlock') && 
+    !location.pathname.includes('/questions') && 
+    !location.pathname.includes('/analyzing');
+  
+  if (isUniversalLandingPage) {
+    return null;
+  }
 
   return (
     <motion.header

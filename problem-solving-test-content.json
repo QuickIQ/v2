@@ -517,8 +517,8 @@
       "tr": "E-posta Adresi"
     },
     "emailPlaceholder": {
-      "en": "your.email@example.com",
-      "tr": "ornek@email.com"
+      "en": "Enter your email",
+      "tr": "Email adresinizi giriniz"
     },
     "consentText": {
       "en": "I accept the \"Terms of Service\" and Privacy Policy.",

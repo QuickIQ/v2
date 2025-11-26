@@ -132,17 +132,25 @@ export function createTestStore<TQuestion extends TestQuestion, TAnswer extends 
           const answers = get().answers;
           const email = get().email;
           
+          // Validate we have answers
+          if (!answers || answers.length === 0) {
+            console.warn('No answers to submit');
+            throw new Error('No answers to submit');
+          }
+          
           // Convert answers to backend format
-          // Need to get option_key from questions
           const questions = get().questions;
           const backendAnswers = answers.map(answer => {
             const question = questions.find(q => q.id === answer.question_id);
             // Try to get option_key from question options, or use fallback
             let option_key = answer.option_key;
             if (!option_key && question && question.options && question.options[answer.option_index]) {
-              // If question has options array, try to extract key
-              // This is a fallback - ideally option_key should be set when answer is added
-              option_key = `option_${answer.option_index + 1}`;
+              const option = question.options[answer.option_index];
+              if (option && typeof option === 'object' && 'key' in option) {
+                option_key = option.key;
+              } else {
+                option_key = `option_${answer.option_index + 1}`;
+              }
             }
             return {
               question_id: answer.question_id,
@@ -150,32 +158,54 @@ export function createTestStore<TQuestion extends TestQuestion, TAnswer extends 
             };
           });
           
-          // Submit to backend
-          const response = await testApi.submitAnswers(testSlug, {
-            answers: backendAnswers,
-            email: email || undefined,
-          }, lang);
-          
-          // Map backend tier to frontend resultLevel
-          let resultLevel: ResultLevel = 'developing';
-          const tier = response.result.tier?.toLowerCase();
-          if (tier === 'excellent' || tier === 'exceptional') {
-            resultLevel = 'excellent';
-          } else if (tier === 'good' || tier === 'above_average') {
-            resultLevel = 'good';
-          } else {
-            resultLevel = 'developing';
+          try {
+            // Submit to backend
+            const response = await testApi.submitAnswers(testSlug, {
+              answers: backendAnswers,
+              email: email || undefined,
+            }, lang);
+            
+            // Map backend tier to frontend resultLevel
+            let resultLevel: ResultLevel = 'good'; // Default fallback
+            const tier = response.result?.tier?.toLowerCase() || '';
+            
+            if (tier === 'excellent' || tier === 'exceptional') {
+              resultLevel = 'excellent';
+            } else if (tier === 'good' || tier === 'above_average') {
+              resultLevel = 'good';
+            } else if (tier === 'under_development' || tier === 'developing') {
+              resultLevel = 'developing';
+            } else {
+              // If tier is empty or unknown, use score-based fallback
+              const score = response.score || 0;
+              // Assuming max score is around 140 (20 questions * 7 points)
+              if (score >= 112) { // ~80% of 140
+                resultLevel = 'excellent';
+              } else if (score >= 70) { // ~50% of 140
+                resultLevel = 'good';
+              } else {
+                resultLevel = 'developing';
+              }
+            }
+            
+            // Update store with results
+            set({
+              sessionId: response.sessionId,
+              totalScore: response.score,
+              resultLevel,
+              resultData: response.result,
+            });
+            
+            return response;
+          } catch (error: any) {
+            console.error('Error submitting answers:', error);
+            // Fallback: set default resultLevel so flow can continue
+            set({
+              resultLevel: 'good', // Default fallback
+              totalScore: 0,
+            });
+            throw error; // Re-throw so caller can handle
           }
-          
-          // Update store with results
-          set({
-            sessionId: response.sessionId,
-            totalScore: response.score,
-            resultLevel,
-            resultData: response.result,
-          });
-          
-          return response;
         },
         
         setResultData: (data: any) => set({ resultData: data }),

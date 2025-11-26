@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { useMobile } from '../../hooks/useMobile';
+import mailImage from '../../assets/images/landing/email/mail.svg';
 import '../../App.css';
 
 interface Props {
@@ -10,11 +11,21 @@ interface Props {
 }
 
 function PersonalityEmailPage({ onSubmit }: Props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const isMobile = useMobile();
   const [email, setEmail] = useState('');
-  const [consent, setConsent] = useState(false);
   const [error, setError] = useState('');
+
+  // Hide scrollbar on email page
+  useEffect(() => {
+    document.body.classList.add('landing-page-no-scrollbar');
+    document.documentElement.classList.add('landing-page-no-scrollbar');
+    
+    return () => {
+      document.body.classList.remove('landing-page-no-scrollbar');
+      document.documentElement.classList.remove('landing-page-no-scrollbar');
+    };
+  }, []);
 
   const isValidEmail = (email: string) => {
     // Basic email format check
@@ -74,195 +85,125 @@ function PersonalityEmailPage({ onSubmit }: Props) {
       return;
     }
 
-    if (!consent) {
-      setError(t('tests.personality.email.consent_required') || 'Please accept the Terms and Privacy Policy.');
-      return;
-    }
-
-    onSubmit(email, consent, consent);
+    // Auto-accept consent since checkbox is removed
+    onSubmit(email, true, true);
   };
 
-  const allChecked = email && consent && isValidEmail(email);
+  const allChecked = email && isValidEmail(email);
 
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #FFF4F0 0%, #FBEAFF 100%)',
+      background: '#E8D5FF', // Light purple/lavender background
       display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       padding: isMobile ? '20px' : '40px',
       position: 'relative',
     }}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        whileHover={{
-          boxShadow: '0 24px 80px rgba(108, 99, 255, 0.25), 0 0 40px rgba(255, 143, 163, 0.2)',
-          transition: { duration: 0.3 }
-        }}
-        style={{
-          maxWidth: '500px',
-          width: '100%',
-          background: 'rgba(255, 255, 255, 0.7)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          borderRadius: '24px',
-          padding: isMobile ? '30px 20px' : '40px',
-          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15)',
-          transition: 'all 0.3s ease',
-          cursor: 'default',
-        }}
-      >
+      <div style={{
+        maxWidth: '500px',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '20px',
+      }}>
+        {/* Mail SVG Image */}
+        <motion.img
+          src={mailImage}
+          alt="Email illustration"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0 }}
+          style={{
+            width: isMobile ? '174px' : '218px',
+            height: 'auto',
+            margin: '0 auto',
+            marginBottom: isMobile ? '-6px' : '-2px',
+          }}
+        />
+
         {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           style={{
-            fontSize: isMobile ? '28px' : '36px',
-            fontWeight: 'bold',
-            marginBottom: '12px',
-            background: 'linear-gradient(135deg, #FF8FA3 0%, #FFC078 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
+            fontSize: isMobile ? '24px' : '32px',
+            fontWeight: '700',
+            color: '#4A148C', // Dark purple/indigo
+            marginBottom: '0',
             textAlign: 'center',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '12px',
-            flexWrap: 'wrap',
+            lineHeight: '1.3',
           }}
         >
-          See the Science Behind Your Personality
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.7, 1, 0.7],
-              rotate: [0, 15, -15, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-            }}
-          >
-            <Star 
-              size={isMobile ? 28 : 36} 
-              style={{ 
-                color: '#FFD700',
-                filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.8))',
-                fill: '#FFD700',
-              }} 
-            />
-          </motion.div>
+          {t('tests.personality.email.title') || 'Enter your email to access your personalized plan.'}
         </motion.h1>
 
-        {/* Subtitle */}
-        <motion.p
+        {/* Email Input */}
+        <motion.input
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          style={{
-            fontSize: isMobile ? '14px' : '16px',
-            color: '#666',
-            marginBottom: '32px',
-            textAlign: 'center',
-            lineHeight: '1.6',
+          type="email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            setError(''); // Clear error on input
           }}
-        >
-          Instantly receive your personalized insights and start unlocking your true potential.
-        </motion.p>
+          placeholder={t('tests.personality.email.email_placeholder') || 'your.email@example.com'}
+          style={{
+            width: '100%',
+            padding: isMobile ? '16px' : '18px',
+            border: error && !isValidEmail(email) ? '2px solid #e74c3c' : '2px solid transparent',
+            borderRadius: '12px',
+            fontSize: isMobile ? '16px' : '18px',
+            outline: 'none',
+            transition: 'all 0.3s ease',
+            backgroundColor: 'white',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+          }}
+          onFocus={(e) => {
+            e.target.style.borderColor = '#4A148C';
+            e.target.style.boxShadow = '0 0 0 3px rgba(74, 20, 140, 0.1)';
+          }}
+          onBlur={(e) => {
+            e.target.style.borderColor = 'transparent';
+            e.target.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+          }}
+        />
 
-        {/* Email Input */}
+        {/* Privacy/Safety Banner */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          style={{ marginBottom: '20px' }}
-        >
-          <label style={{
-            display: 'block',
-            textAlign: 'left',
-            fontSize: '14px',
-            fontWeight: '600',
-            color: '#333',
-            marginBottom: '8px',
-          }}>
-            {t('tests.personality.email.email_label') || 'Email Address'}
-          </label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-              setError(''); // Clear error on input
-            }}
-            placeholder={t('tests.personality.email.email_placeholder') || 'your.email@example.com'}
-            style={{
-              width: '100%',
-              padding: '14px 16px',
-              border: error && !isValidEmail(email) ? '2px solid #e74c3c' : '2px solid #e0e0e0',
-              borderRadius: '12px',
-              fontSize: '16px',
-              outline: 'none',
-              transition: 'all 0.3s ease',
-              backgroundColor: 'white',
-            }}
-            onFocus={(e) => {
-              e.target.style.borderColor = '#FF8FA3';
-              e.target.style.boxShadow = '0 0 0 3px rgba(255, 143, 163, 0.1)';
-            }}
-            onBlur={(e) => {
-              e.target.style.borderColor = '#e0e0e0';
-              e.target.style.boxShadow = 'none';
-            }}
-          />
-        </motion.div>
-
-        {/* Consent Checkbox */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          style={{ marginBottom: '24px' }}
-        >
-          <div style={{
+          style={{
             display: 'flex',
-            alignItems: 'flex-start',
+            alignItems: 'center',
             gap: '12px',
+            padding: isMobile ? '12px 16px' : '14px 18px',
+            background: '#D4B5FF', // Lighter purple background
+            borderRadius: '12px',
+            border: 'none',
+          }}
+        >
+          <Lock 
+            size={isMobile ? 18 : 20} 
+            style={{ 
+              color: '#4A148C',
+              flexShrink: 0,
+            }} 
+          />
+          <p style={{
+            fontSize: isMobile ? '13px' : '14px',
+            color: '#333',
+            margin: 0,
+            lineHeight: '1.5',
           }}>
-            <input
-              type="checkbox"
-              checked={consent}
-              onChange={(e) => {
-                setConsent(e.target.checked);
-                setError(''); // Clear error on change
-              }}
-              style={{
-                width: '20px',
-                height: '20px',
-                marginTop: '2px',
-                cursor: 'pointer',
-                accentColor: '#FF8FA3',
-              }}
-            />
-            <label style={{
-              fontSize: '14px',
-              color: '#555',
-              lineHeight: '1.5',
-              cursor: 'pointer',
-              flex: 1,
-            }}>
-              {t('tests.personality.email.accept_consent') || 'I accept the "Terms of Service" and Privacy Policy.'}
-            </label>
-          </div>
+            {t('tests.personality.email.privacy_message') || 'Your email will never be shared or used for any other purpose, and its security and privacy are 100% protected.'}
+          </p>
         </motion.div>
 
         {/* Error Message */}
@@ -275,7 +216,6 @@ function PersonalityEmailPage({ onSubmit }: Props) {
               background: 'rgba(231, 76, 60, 0.1)',
               border: '1px solid rgba(231, 76, 60, 0.3)',
               borderRadius: '8px',
-              marginBottom: '20px',
             }}
           >
             <p style={{
@@ -293,49 +233,33 @@ function PersonalityEmailPage({ onSubmit }: Props) {
         <motion.button
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           onClick={handleSubmit}
           disabled={!allChecked}
           whileHover={allChecked ? { scale: 1.02 } : {}}
           whileTap={allChecked ? { scale: 0.98 } : {}}
           style={{
-            width: '100%',
-            padding: '16px',
-            borderRadius: '12px',
+            width: 'auto',
+            maxWidth: isMobile ? '80%' : '70%',
+            padding: isMobile ? '16px 32px' : '18px 40px',
+            borderRadius: '9999px',
             border: 'none',
-            fontSize: '16px',
+            fontSize: isMobile ? '16px' : '18px',
             fontWeight: '600',
             color: 'white',
             cursor: allChecked ? 'pointer' : 'not-allowed',
-            background: allChecked
-              ? 'linear-gradient(135deg, #FF8FA3 0%, #FFC078 100%)'
-              : '#e0e0e0',
+            background: allChecked ? '#10B981' : '#9CA3AF', // Green when enabled, gray when disabled
             transition: 'all 0.3s ease',
             boxShadow: allChecked
-              ? '0 4px 16px rgba(255, 143, 163, 0.3)'
+              ? '0 4px 12px rgba(16, 185, 129, 0.3)'
               : 'none',
             opacity: allChecked ? 1 : 0.6,
+            margin: '0 auto',
           }}
         >
-          {t('tests.personality.email.continue_button') || 'Continue'}
+          {t('tests.personality.email.explore_button') || 'See your Result'}
         </motion.button>
-
-        {/* Privacy Note */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          style={{
-            fontSize: '12px',
-            color: '#888',
-            marginTop: '20px',
-            textAlign: 'center',
-            lineHeight: '1.5',
-          }}
-        >
-          {t('tests.personality.email.privacy') || 'Your data will remain private and never shared.'}
-        </motion.p>
-      </motion.div>
+      </div>
     </div>
   );
 }

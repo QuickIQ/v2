@@ -4,6 +4,7 @@ import { ITestSessionRepository } from '../../domain/repositories/ITestSessionRe
 import { ScoringService } from '../../domain/services/ScoringService';
 import { TestSlug } from '../../domain/value-objects/TestSlug';
 import { LanguageCode } from '../../domain/value-objects/LanguageCode';
+import { Score } from '../../domain/value-objects/Score';
 import { Answer } from '../../domain/entities/TestSession';
 import { SubmitAnswersRequestDTO, SubmitAnswersResponseDTO } from '../dto/TestDTO';
 
@@ -43,11 +44,44 @@ export class SubmitAnswersUseCase {
     }));
 
     // Calculate score
-    const scoringResult = await this.scoringService.calculateResult(
-      test,
-      questions,
-      domainAnswers
-    );
+    let scoringResult;
+    try {
+      scoringResult = await this.scoringService.calculateResult(
+        test,
+        questions,
+        domainAnswers
+      );
+    } catch (error: any) {
+      // If scoring fails (e.g., database not connected), use fallback
+      console.warn('Scoring service failed, using fallback:', error.message);
+      const fallbackScoreValue = domainAnswers.reduce((sum, answer) => {
+        const question = questions.find(q => q.id === answer.question_id);
+        if (!question) return sum;
+        const option = question.getOptionByKey(answer.option_key);
+        return sum + (option?.points || 0);
+      }, 0);
+      
+      // Determine tier from score (fallback logic)
+      let fallbackTier: 'excellent' | 'good' | 'under_development' = 'good';
+      const maxPossibleScore = questions.length * 7; // Assuming max 7 points per question
+      const percentage = maxPossibleScore > 0 ? (fallbackScoreValue / maxPossibleScore) * 100 : 50;
+      if (percentage >= 80) {
+        fallbackTier = 'excellent';
+      } else if (percentage >= 50) {
+        fallbackTier = 'good';
+      } else {
+        fallbackTier = 'under_development';
+      }
+      
+      scoringResult = {
+        rawScore: new Score(fallbackScoreValue),
+        iqScore: undefined,
+        categoryScores: undefined,
+        resultTier: null,
+        resultData: { tier: fallbackTier },
+        resultTierId: null,
+      };
+    }
 
     // Determine payment status
     const paymentStatus = test.requiresPayment() ? 'pending' : 'not_required';
@@ -66,13 +100,14 @@ export class SubmitAnswersUseCase {
       scoringResult.categoryScores || null
     );
 
-    // Build response
+    // Build response - handle case where resultTier is null
+    const tier = scoringResult.resultTier?.tier || scoringResult.resultData?.tier || 'good';
     const resultData: any = {
       id: scoringResult.resultTier?.id || 0,
       testId: test.id,
-      minScore: scoringResult.resultTier?.minScore.getValue() || 0,
-      maxScore: scoringResult.resultTier?.maxScore.getValue() || 0,
-      tier: scoringResult.resultTier?.tier || '',
+      minScore: scoringResult.resultTier?.minScore?.getValue() || 0,
+      maxScore: scoringResult.resultTier?.maxScore?.getValue() || 0,
+      tier: tier,
       resultTextKey: scoringResult.resultTier?.resultTextKey || '',
       imageRef: scoringResult.resultTier?.imageRef || null,
       score: scoringResult.rawScore.getValue(),

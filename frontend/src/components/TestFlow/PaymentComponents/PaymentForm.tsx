@@ -11,9 +11,10 @@ interface PaymentFormProps {
   testId: string;
   resultLevel?: 'excellent' | 'good' | 'developing' | null;
   onError?: (message: string) => void;
+  onSuccess?: () => void;
 }
 
-export function PaymentForm({ language, testId, resultLevel, onError }: PaymentFormProps) {
+export function PaymentForm({ language, testId, resultLevel, onError, onSuccess }: PaymentFormProps) {
   const navigate = useNavigate();
   const isMobile = useMobile();
   const paymentFormLabels = paymentFormLabelsData;
@@ -95,9 +96,14 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
     
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
-      // Redirect to specific tier unlock page based on result level
-      const tier = resultLevel || 'good'; // Default to 'good' if resultLevel is not available
-      navigate(`/test/${testId}/unlock/${tier}`);
+      // If onSuccess callback is provided, use it (for custom navigation like IQ test)
+      if (onSuccess) {
+        onSuccess();
+      } else {
+        // Default behavior: Redirect to specific tier unlock page based on result level
+        const tier = resultLevel || 'good'; // Default to 'good' if resultLevel is not available
+        navigate(`/test/${testId}/unlock/${tier}`);
+      }
     } catch (error) {
       setProcessing(false);
       const errorMsg = paymentFormLabels.errors.failed[language] || paymentFormLabels.errors.failed.en;
@@ -108,9 +114,14 @@ export function PaymentForm({ language, testId, resultLevel, onError }: PaymentF
   const handleGooglePayClick = () => {
     setProcessing(true);
     setTimeout(() => {
-      // Redirect to specific tier unlock page based on result level
-      const tier = resultLevel || 'good'; // Default to 'good' if resultLevel is not available
-      navigate(`/test/${testId}/unlock/${tier}`);
+      // If onSuccess callback is provided, use it (for custom navigation like IQ test)
+      if (onSuccess) {
+        onSuccess();
+      } else {
+        // Default behavior: Redirect to specific tier unlock page based on result level
+        const tier = resultLevel || 'good'; // Default to 'good' if resultLevel is not available
+        navigate(`/test/${testId}/unlock/${tier}`);
+      }
     }, 1000);
   };
 
